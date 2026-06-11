@@ -458,7 +458,6 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
 
     const sortedRows = [...rows.values()].sort((a, b) => a.sort.localeCompare(b.sort));
-    const COL_WIDTH = 56;
 
     const inner = document.createElement('div');
     inner.className = 'gitgraph-inner';
@@ -474,14 +473,21 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
       const track = document.createElement('div');
       track.className = 'gitgraph-track';
-      track.style.minWidth = `${4 * COL_WIDTH + 48}px`;
+
+      const lanes = TIMELINE_BRANCHES.map((branch) => {
+        const lane = document.createElement('div');
+        lane.className = 'gitgraph-lane';
+        lane.dataset.branch = branch.id;
+        return lane;
+      });
 
       row.events.forEach((ev) => {
         const col = BRANCH_COL[ev.branch] ?? 0;
+        const lane = lanes[col];
+        if (!lane) return;
 
         const node = document.createElement('div');
         node.className = 'gitgraph-node';
-        node.style.setProperty('--col-offset', String(col));
         node.dataset.branch = ev.branch;
 
         const dot = document.createElement('div');
@@ -491,13 +497,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         const label = document.createElement('div');
         label.className = 'gitgraph-label';
         const approxTag = ev.approx ? ' <span style="color:var(--text-muted)">~</span>' : '';
-        label.innerHTML = `<strong>${ev.id}</strong>${approxTag}${ev.title}`;
+        label.innerHTML = `<strong>${ev.id}</strong>${approxTag} ${ev.title}`;
 
         node.appendChild(dot);
         node.appendChild(label);
-        track.appendChild(node);
+        lane.appendChild(node);
       });
 
+      lanes.forEach((lane) => track.appendChild(lane));
       rowEl.appendChild(dateEl);
       rowEl.appendChild(track);
       inner.appendChild(rowEl);
