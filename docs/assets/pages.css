@@ -16,11 +16,18 @@
   --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  /* Gitgraph branch colors */
+  /* Gitgraph branch colors — IPO cluster */
   --branch-grok: #2563eb;
   --branch-colossus: #16a34a;
   --branch-terrafab: #d97706;
   --branch-spacex: #7c3aed;
+  /* Portfolio lanes */
+  --branch-tesla: #dc2626;
+  --branch-spacex-ops: #6366f1;
+  --branch-x-corp: #171717;
+  --branch-neuralink: #0891b2;
+  --branch-boring: #78716c;
+  --branch-openai: #059669;
   --branch-main: #525252;
 }
 
@@ -202,6 +209,23 @@ main {
   padding-top: 0.5rem;
 }
 
+.timeline-subheading {
+  margin: 2.5rem 0 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.timeline-sublead {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.gitgraph + .timeline-subheading {
+  margin-top: 2.5rem;
+}
+
 .timeline-legend {
   display: flex;
   flex-wrap: wrap;
@@ -250,6 +274,10 @@ main {
   margin: 0 auto;
 }
 
+.gitgraph[data-lanes="6"] .gitgraph-inner {
+  min-width: 980px;
+}
+
 .gitgraph-row {
   display: grid;
   grid-template-columns: 76px 1fr;
@@ -273,10 +301,19 @@ main {
 .gitgraph-track {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(152px, 1fr));
+  grid-template-columns: repeat(var(--timeline-lanes, 4), minmax(140px, 1fr));
   gap: 0 1.25rem;
   align-items: start;
   padding-top: 0.15rem;
+}
+
+.gitgraph[data-lanes="4"] .gitgraph-track {
+  grid-template-columns: repeat(4, minmax(152px, 1fr));
+}
+
+.gitgraph[data-lanes="6"] .gitgraph-track {
+  grid-template-columns: repeat(6, minmax(128px, 1fr));
+  gap: 0 0.875rem;
 }
 
 /* Dedicated vertical lane per branch */
@@ -302,6 +339,12 @@ main {
 .gitgraph-lane[data-branch="colossus"] { --lane-color: var(--branch-colossus); }
 .gitgraph-lane[data-branch="terrafab"] { --lane-color: var(--branch-terrafab); }
 .gitgraph-lane[data-branch="spacex"] { --lane-color: var(--branch-spacex); }
+.gitgraph-lane[data-branch="tesla"] { --lane-color: var(--branch-tesla); }
+.gitgraph-lane[data-branch="spacex-ops"] { --lane-color: var(--branch-spacex-ops); }
+.gitgraph-lane[data-branch="x-corp"] { --lane-color: var(--branch-x-corp); }
+.gitgraph-lane[data-branch="neuralink"] { --lane-color: var(--branch-neuralink); }
+.gitgraph-lane[data-branch="boring"] { --lane-color: var(--branch-boring); }
+.gitgraph-lane[data-branch="openai"] { --lane-color: var(--branch-openai); }
 
 .gitgraph-row:last-child .gitgraph-lane::before {
   bottom: 50%;
@@ -332,6 +375,12 @@ main {
 .gitgraph-dot.branch-colossus { background: var(--branch-colossus); box-shadow: 0 0 0 1px var(--branch-colossus); }
 .gitgraph-dot.branch-terrafab { background: var(--branch-terrafab); box-shadow: 0 0 0 1px var(--branch-terrafab); }
 .gitgraph-dot.branch-spacex { background: var(--branch-spacex); box-shadow: 0 0 0 1px var(--branch-spacex); }
+.gitgraph-dot.branch-tesla { background: var(--branch-tesla); box-shadow: 0 0 0 1px var(--branch-tesla); }
+.gitgraph-dot.branch-spacex-ops { background: var(--branch-spacex-ops); box-shadow: 0 0 0 1px var(--branch-spacex-ops); }
+.gitgraph-dot.branch-x-corp { background: var(--branch-x-corp); box-shadow: 0 0 0 1px var(--branch-x-corp); }
+.gitgraph-dot.branch-neuralink { background: var(--branch-neuralink); box-shadow: 0 0 0 1px var(--branch-neuralink); }
+.gitgraph-dot.branch-boring { background: var(--branch-boring); box-shadow: 0 0 0 1px var(--branch-boring); }
+.gitgraph-dot.branch-openai { background: var(--branch-openai); box-shadow: 0 0 0 1px var(--branch-openai); }
 .gitgraph-dot.branch-main { background: var(--branch-main); box-shadow: 0 0 0 1px var(--branch-main); }
 
 .gitgraph-dot.is-merge::after {
@@ -387,6 +436,12 @@ main {
 .gitgraph-connectors path.branch-colossus { stroke: var(--branch-colossus); opacity: 0.5; }
 .gitgraph-connectors path.branch-terrafab { stroke: var(--branch-terrafab); opacity: 0.5; }
 .gitgraph-connectors path.branch-spacex { stroke: var(--branch-spacex); opacity: 0.5; }
+.gitgraph-connectors path.branch-tesla { stroke: var(--branch-tesla); opacity: 0.5; }
+.gitgraph-connectors path.branch-spacex-ops { stroke: var(--branch-spacex-ops); opacity: 0.5; }
+.gitgraph-connectors path.branch-x-corp { stroke: var(--branch-x-corp); opacity: 0.5; }
+.gitgraph-connectors path.branch-neuralink { stroke: var(--branch-neuralink); opacity: 0.5; }
+.gitgraph-connectors path.branch-boring { stroke: var(--branch-boring); opacity: 0.5; }
+.gitgraph-connectors path.branch-openai { stroke: var(--branch-openai); opacity: 0.5; }
 .gitgraph-connectors path.branch-main { stroke: var(--branch-main); opacity: 0.4; }
 
 /* Quick start */
@@ -673,13 +728,18 @@ h3.subheading {
   .option-grid { grid-template-columns: 1fr; }
   .site-nav { gap: 0.25rem 1rem; }
   .gitgraph-inner { min-width: 680px; }
+  .gitgraph[data-lanes="6"] .gitgraph-inner { min-width: 860px; }
   .gitgraph-row {
     grid-template-columns: 64px 1fr;
     gap: 0.75rem;
   }
-  .gitgraph-track {
+  .gitgraph[data-lanes="4"] .gitgraph-track {
     grid-template-columns: repeat(4, minmax(132px, 1fr));
     gap: 0 0.75rem;
+  }
+  .gitgraph[data-lanes="6"] .gitgraph-track {
+    grid-template-columns: repeat(6, minmax(112px, 1fr));
+    gap: 0 0.5rem;
   }
   .gitgraph-label { font-size: 0.625rem; }
 }
