@@ -53,19 +53,45 @@
 
     <section id="timeline" class="section timeline-section">
       <span class="section-label">Public timeline</span>
-      <h2>Colossus · Terrafab · Grok · SpaceX IPO</h2>
-      <p class="section-lead">
-        xAI cluster and IPO roadshow — fixed four-lane gitgraph. Dates are approximate (~) where sources differ. Stock and valuation labels are public snapshots, not financial advice.
+      <h2 id="timeline-heading">Public timeline</h2>
+      <p class="section-lead" id="timeline-lead">
+        xAI cluster and IPO roadshow, plus Elon portfolio ventures — switch sections, then drill into a single company for expanded milestones. Dates are approximate (~) where sources differ.
       </p>
-      <div class="timeline-legend" id="timeline-legend" aria-label="IPO cluster branch legend"></div>
-      <div id="gitgraph" class="gitgraph" data-lanes="4" role="img" aria-label="Vertical gitgraph of xAI Colossus Terafab and SpaceX IPO milestones"></div>
 
-      <h3 class="timeline-subheading">Elon portfolio · ventures</h3>
-      <p class="section-lead timeline-sublead">
-        Tesla, SpaceX operations, X Corp, Neuralink, Boring Company, and OpenAI history — six dedicated lanes, sparse early milestones through June 2026.
-      </p>
-      <div class="timeline-legend" id="timeline-legend-portfolio" aria-label="Portfolio branch legend"></div>
-      <div id="gitgraph-portfolio" class="gitgraph gitgraph-portfolio" data-lanes="6" role="img" aria-label="Vertical gitgraph of Elon Musk portfolio company milestones"></div>
+      <div class="timeline-tabs" id="timeline-tabs">
+        <div class="timeline-tab-nav">
+          <button type="button" class="timeline-tab-arrow" id="timeline-tab-prev" aria-label="Previous timeline section" disabled>
+            <span aria-hidden="true">←</span>
+          </button>
+          <div class="timeline-tab-list" role="tablist" aria-label="Timeline sections">
+            <button type="button" role="tab" class="timeline-tab-btn active" id="timeline-tab-cluster" aria-selected="true" aria-controls="timeline-panel-cluster" data-tab="cluster">
+              Colossus · Terrafab · Grok · IPO
+            </button>
+            <button type="button" role="tab" class="timeline-tab-btn" id="timeline-tab-portfolio" aria-selected="false" aria-controls="timeline-panel-portfolio" data-tab="portfolio" tabindex="-1">
+              Elon portfolio · ventures
+            </button>
+          </div>
+          <button type="button" class="timeline-tab-arrow" id="timeline-tab-next" aria-label="Next timeline section">
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="timeline-tab-panels">
+          <div role="tabpanel" class="timeline-tab-panel active" id="timeline-panel-cluster" aria-labelledby="timeline-tab-cluster" data-tab="cluster">
+            <div class="timeline-company-pills" role="tablist" aria-label="IPO cluster companies" data-group="cluster"></div>
+            <div class="timeline-legend" id="timeline-legend" aria-label="IPO cluster branch legend"></div>
+            <div id="gitgraph-cluster" class="gitgraph" data-lanes="4" role="img" aria-label="Vertical gitgraph of xAI Colossus Terafab and SpaceX IPO milestones"></div>
+            <div id="timeline-drilldown-cluster" class="timeline-drilldown" hidden></div>
+          </div>
+
+          <div role="tabpanel" class="timeline-tab-panel" id="timeline-panel-portfolio" aria-labelledby="timeline-tab-portfolio" data-tab="portfolio" hidden>
+            <div class="timeline-company-pills" role="tablist" aria-label="Portfolio companies" data-group="portfolio"></div>
+            <div class="timeline-legend" id="timeline-legend-portfolio" aria-label="Portfolio branch legend"></div>
+            <div id="gitgraph-portfolio" class="gitgraph gitgraph-portfolio" data-lanes="6" role="img" aria-label="Vertical gitgraph of Elon Musk portfolio company milestones"></div>
+            <div id="timeline-drilldown-portfolio" class="timeline-drilldown" hidden></div>
+          </div>
+        </div>
+      </div>
 
       <p class="timeline-disclaimer">
         Public timeline — sourced from press releases, SEC filings, S-1/S-1A, and public announcements. Stock prices and valuations are point-in-time snapshots only. Not financial advice.

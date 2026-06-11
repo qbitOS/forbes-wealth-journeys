@@ -497,18 +497,167 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     { sort: '2026-06', date: 'Jun 11 2026', branch: 'tesla', id: 'tsla-snapshot', title: 'TSLA ~$394 · SpaceX rotation', approx: true },
   ];
 
-  function renderTimelineGitgraph({ branches, events, containerId, legendId }) {
+  /** Extra drill-down milestones per branch (merged with base events in single-company view). */
+  const TIMELINE_DRILLDOWN_EVENTS = {
+    grok: [
+      { sort: '2023-07', date: 'Jul 2023', branch: 'grok', id: 'team-assembled', title: 'Core team from DeepMind · OpenAI · Tesla', approx: true, drilldown: true },
+      { sort: '2024-01', date: 'Jan 2024', branch: 'grok', id: 'grok-api', title: 'Grok API beta for developers', approx: true, drilldown: true },
+      { sort: '2024-10', date: 'Oct 2024', branch: 'grok', id: 'grok-vision', title: 'Grok vision · image understanding', approx: false, drilldown: true },
+      { sort: '2025-01', date: 'Jan 2025', branch: 'grok', id: 'grok-studio', title: 'Grok Studio workspace preview', approx: true, drilldown: true },
+      { sort: '2025-05', date: 'May 2025', branch: 'grok', id: 'grok-voice', title: 'Grok Voice mode on iOS/Android', approx: false, drilldown: true },
+      { sort: '2025-09', date: 'Sep 2025', branch: 'grok', id: 'grok-code', title: 'Grok Code · IDE integration beta', approx: false, drilldown: true },
+      { sort: '2026-03', date: 'Mar 2026', branch: 'grok', id: 'supergrok-tier', title: 'SuperGrok subscription tier · Imagine bundle', approx: false, drilldown: true },
+    ],
+    colossus: [
+      { sort: '2024-04', date: 'Apr 2024', branch: 'colossus', id: 'memphis-permit', title: 'Memphis site permits filed', approx: true, drilldown: true },
+      { sort: '2024-07', date: 'Jul 2024', branch: 'colossus', id: 'h100-rack', title: 'First H100 racks energized', approx: true, drilldown: true },
+      { sort: '2024-10', date: 'Oct 2024', branch: 'colossus', id: 'liquid-cooling', title: 'Liquid cooling loop at scale', approx: true, drilldown: true },
+      { sort: '2025-01', date: 'Jan 2025', branch: 'colossus', id: '50k-gpus', title: '50K GPU milestone', approx: true, drilldown: true },
+      { sort: '2025-06', date: 'Jun 2025', branch: 'colossus', id: 'b200-order', title: 'B200 / GB200 expansion orders', approx: true, drilldown: true },
+      { sort: '2025-09', date: 'Sep 2025', branch: 'colossus', id: 'grid-interconnect', title: '1 GW grid interconnect approved', approx: true, drilldown: true },
+      { sort: '2026-04', date: 'Apr 2026', branch: 'colossus', id: 'colossus-2-pour', title: 'Colossus 2 concrete pour · Grimes County', approx: true, drilldown: true },
+    ],
+    terrafab: [
+      { sort: '2026-03', date: 'Mar 2026', branch: 'terrafab', id: 'austin-proto', title: 'Austin prototype line announced', approx: false, drilldown: true },
+      { sort: '2026-04', date: 'Apr 2026', branch: 'terrafab', id: '18a-pilot', title: 'Intel 18A pilot wafers scheduled', approx: true, drilldown: true },
+      { sort: '2026-05', date: 'May 2026', branch: 'terrafab', id: 'grimes-site', title: 'Grimes County fab site selection', approx: true, drilldown: true },
+      { sort: '2026-06', date: 'Jun 2026', branch: 'terrafab', id: 'phase-1-cap', title: 'Phase 1 · 20K wafer/mo target', approx: true, drilldown: true },
+    ],
+    spacex: [
+      { sort: '2026-02', date: 'Feb 2026', branch: 'spacex', id: 'xai-board', title: 'xAI board seats restructured post-merge', approx: true, drilldown: true },
+      { sort: '2026-04', date: 'Apr 2026', branch: 'spacex', id: 'bank-syndicate', title: 'IPO bank syndicate formed', approx: true, drilldown: true },
+      { sort: '2026-05', date: 'May 2026', branch: 'spacex', id: 's-1-amend', title: 'S-1/A amendment · revenue breakout', approx: false, drilldown: true },
+      { sort: '2026-06', date: 'Jun 2026', branch: 'spacex', id: 'retail-allocation', title: 'Retail allocation · direct listing hybrid', approx: true, drilldown: true },
+      { sort: '2026-06', date: 'Jun 2026', branch: 'spacex', id: 'lockup-terms', title: '180-day insider lockup disclosed', approx: false, drilldown: true },
+    ],
+    tesla: [
+      { sort: '2012-06', date: 'Jun 2012', branch: 'tesla', id: 'model-s-deliver', title: 'Model S deliveries begin', approx: false, drilldown: true },
+      { sort: '2017-07', date: 'Jul 2017', branch: 'tesla', id: 'model-3-ramp', title: 'Model 3 production ramp', approx: false, drilldown: true },
+      { sort: '2020-12', date: 'Dec 2020', branch: 'tesla', id: 'sp500-inclusion', title: 'S&P 500 inclusion', approx: false, drilldown: true },
+      { sort: '2023-03', date: 'Mar 2023', branch: 'tesla', id: 'master-plan-3', title: 'Master Plan Part 3 published', approx: false, drilldown: true },
+      { sort: '2024-10', date: 'Oct 2024', branch: 'tesla', id: 'cybercab-reveal', title: 'Cybercab · Robovan reveal', approx: false, drilldown: true },
+      { sort: '2025-06', date: 'Jun 2025', branch: 'tesla', id: 'optimus-gen2', title: 'Optimus Gen 2 factory trials', approx: true, drilldown: true },
+    ],
+    'spacex-ops': [
+      { sort: '2020-05', date: 'May 2020', branch: 'spacex-ops', id: 'crew-demo', title: 'Crew Dragon Demo-2 · NASA', approx: false, drilldown: true },
+      { sort: '2021-09', date: 'Sep 2021', branch: 'spacex-ops', id: 'inspiration4', title: 'Inspiration4 all-civilian orbit', approx: false, drilldown: true },
+      { sort: '2023-04', date: 'Apr 2023', branch: 'spacex-ops', id: 'starship-ift1-boom', title: 'IFT-1 · rapid unplanned disassembly', approx: false, drilldown: true },
+      { sort: '2024-03', date: 'Mar 2024', branch: 'spacex-ops', id: 'ift3-success', title: 'IFT-3 · full ascent profile', approx: false, drilldown: true },
+      { sort: '2025-03', date: 'Mar 2025', branch: 'spacex-ops', id: 'ift10-catch', title: 'IFT-10 · booster catch attempt', approx: false, drilldown: true },
+      { sort: '2026-01', date: 'Jan 2026', branch: 'spacex-ops', id: 'starlink-v3', title: 'Starlink V3 satellites deployed', approx: true, drilldown: true },
+    ],
+    'x-corp': [
+      { sort: '2022-04', date: 'Apr 2022', branch: 'x-corp', id: 'poison-pill', title: 'Twitter poison pill adopted', approx: false, drilldown: true },
+      { sort: '2022-07', date: 'Jul 2022', branch: 'x-corp', id: 'terminate-suit', title: 'Termination suit · Delaware Chancery', approx: false, drilldown: true },
+      { sort: '2023-07', date: 'Jul 2023', branch: 'x-corp', id: 'x-payments', title: 'X Payments LLC incorporated', approx: true, drilldown: true },
+      { sort: '2024-08', date: 'Aug 2024', branch: 'x-corp', id: 'grok-on-x', title: 'Grok embedded in X app globally', approx: false, drilldown: true },
+      { sort: '2025-01', date: 'Jan 2025', branch: 'x-corp', id: 'x-tv', title: 'X TV streaming beta', approx: true, drilldown: true },
+    ],
+    neuralink: [
+      { sort: '2019-07', date: 'Jul 2019', branch: 'neuralink', id: 'n1-chip', title: 'N1 chip unveiled · pig demo', approx: false, drilldown: true },
+      { sort: '2021-04', date: 'Apr 2021', branch: 'neuralink', id: 'monkey-pong', title: 'Pager monkey plays Pong', approx: false, drilldown: true },
+      { sort: '2023-05', date: 'May 2023', branch: 'neuralink', id: 'fda-ide', title: 'FDA IDE for PRIME study', approx: false, drilldown: true },
+      { sort: '2024-05', date: 'May 2024', branch: 'neuralink', id: 'second-patient', title: 'Second PRIME participant implanted', approx: false, drilldown: true },
+      { sort: '2025-11', date: 'Nov 2025', branch: 'neuralink', id: 'telepathy-trial', title: 'Telepathy trial · 10-site expansion', approx: true, drilldown: true },
+    ],
+    boring: [
+      { sort: '2018-05', date: 'May 2018', branch: 'boring', id: 'la-demo', title: 'LA demo tunnel concept', approx: false, drilldown: true },
+      { sort: '2020-05', date: 'May 2020', branch: 'boring', id: 'lvcc-phase1', title: 'LVCC Loop Phase 1 opens', approx: false, drilldown: true },
+      { sort: '2023-11', date: 'Nov 2023', branch: 'boring', id: 'vegas-expansion', title: 'Vegas Loop expansion approved', approx: false, drilldown: true },
+      { sort: '2025-08', date: 'Aug 2025', branch: 'boring', id: 'prufrock-v4', title: 'Prufrock V4 TBM deployed', approx: true, drilldown: true },
+    ],
+    openai: [
+      { sort: '2015-12', date: 'Dec 2015', branch: 'openai', id: 'nonprofit-launch', title: 'OpenAI nonprofit launched', approx: false, drilldown: true },
+      { sort: '2018-06', date: 'Jun 2018', branch: 'openai', id: 'dota-5v5', title: 'OpenAI Five beats pro Dota team', approx: false, drilldown: true },
+      { sort: '2019-02', date: 'Feb 2019', branch: 'openai', id: 'gpt-2-cautious', title: 'GPT-2 staged release', approx: false, drilldown: true },
+      { sort: '2020-06', date: 'Jun 2020', branch: 'openai', id: 'gpt-3-api', title: 'GPT-3 API private beta', approx: false, drilldown: true },
+    ],
+  };
+
+  const TIMELINE_SECTIONS = [
+    {
+      id: 'cluster',
+      label: 'Colossus · Terrafab · Grok · IPO',
+      shortLabel: 'IPO cluster',
+      heading: 'Colossus · Terrafab · Grok · SpaceX IPO',
+      lead: 'xAI cluster and IPO roadshow — four-lane gitgraph. Select a company pill to expand vertical drill-down milestones.',
+      branches: TIMELINE_CLUSTER_BRANCHES,
+      events: TIMELINE_CLUSTER_EVENTS,
+      gitgraphId: 'gitgraph-cluster',
+      legendId: 'timeline-legend',
+      drilldownId: 'timeline-drilldown-cluster',
+      activityGroupId: 'cluster',
+    },
+    {
+      id: 'portfolio',
+      label: 'Elon portfolio · ventures',
+      shortLabel: 'Portfolio',
+      heading: 'Elon portfolio · ventures',
+      lead: 'Tesla, SpaceX operations, X Corp, Neuralink, Boring Company, and OpenAI — six lanes through June 2026. Drill into one company for full vertical history.',
+      branches: TIMELINE_PORTFOLIO_BRANCHES,
+      events: TIMELINE_PORTFOLIO_EVENTS,
+      gitgraphId: 'gitgraph-portfolio',
+      legendId: 'timeline-legend-portfolio',
+      drilldownId: 'timeline-drilldown-portfolio',
+      activityGroupId: 'portfolio',
+    },
+  ];
+
+  const timelineState = {
+    tabIndex: 0,
+    branchFocus: { cluster: 'all', portfolio: 'all' },
+  };
+
+  function mergeBranchEvents(baseEvents, branchId) {
+    const drill = TIMELINE_DRILLDOWN_EVENTS[branchId] || [];
+    const merged = [...baseEvents.filter((e) => e.branch === branchId), ...drill];
+    return merged.sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
+  }
+
+  function renderDrilldownList(events, branchId, container) {
+    if (!container) return;
+    const color = getBranchCssColor(branchId);
+    container.hidden = false;
+    container.innerHTML = `
+      <header class="timeline-drilldown-header">
+        <span class="timeline-drilldown-swatch" style="background:${color}"></span>
+        <h3 class="timeline-drilldown-title">${branchId} · expanded timeline</h3>
+        <span class="timeline-drilldown-count">${events.length} milestones</span>
+      </header>
+      <ol class="timeline-drilldown-list">
+        ${events.map((ev) => {
+          const approx = ev.approx ? ' <span class="activity-event-approx">~</span>' : '';
+          const tag = ev.drilldown ? ' <span class="timeline-drilldown-tag">detail</span>' : '';
+          const mergeCls = ev.merge ? ' is-merge' : '';
+          return `<li class="timeline-drilldown-item${mergeCls}">
+            <span class="timeline-drilldown-dot branch-${ev.branch}"></span>
+            <div class="timeline-drilldown-body">
+              <time class="timeline-drilldown-date">${ev.date}</time>
+              <span class="timeline-drilldown-id">${ev.id}</span>${approx}${tag}
+              <p class="timeline-drilldown-desc">${ev.title}</p>
+            </div>
+          </li>`;
+        }).join('')}
+      </ol>`;
+  }
+
+  function renderTimelineGitgraph({ branches, events, containerId, legendId, singleBranch }) {
     const container = document.getElementById(containerId);
     const legendEl = legendId ? document.getElementById(legendId) : null;
     if (!container) return;
 
-    const branchCol = Object.fromEntries(branches.map((b, i) => [b.id, i]));
-    const laneCount = branches.length;
+    const activeBranches = singleBranch
+      ? branches.filter((b) => b.id === singleBranch)
+      : branches;
+    const branchCol = Object.fromEntries(activeBranches.map((b, i) => [b.id, i]));
+    const laneCount = activeBranches.length;
 
     container.dataset.lanes = String(laneCount);
+    container.classList.toggle('gitgraph-single', laneCount === 1);
 
     if (legendEl) {
-      legendEl.innerHTML = branches.map((b) =>
+      legendEl.hidden = laneCount === 1;
+      legendEl.innerHTML = activeBranches.map((b) =>
         `<span class="legend-item"><span class="legend-swatch" style="background:${getBranchCssColor(b.id)}"></span>${b.label}</span>`
       ).join('');
     }
@@ -537,7 +686,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       track.className = 'gitgraph-track';
       track.style.setProperty('--timeline-lanes', String(laneCount));
 
-      const lanes = branches.map((branch) => {
+      const lanes = activeBranches.map((branch) => {
         const lane = document.createElement('div');
         lane.className = 'gitgraph-lane';
         lane.dataset.branch = branch.id;
@@ -555,7 +704,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
         const dot = document.createElement('div');
         dot.className = `gitgraph-dot branch-${ev.branch}${ev.merge ? ' is-merge' : ''}`;
-        if (ev.merge) dot.style.color = branches.find((b) => b.id === ev.branch)?.color || '#525252';
+        if (ev.merge) dot.style.color = activeBranches.find((b) => b.id === ev.branch)?.color || '#525252';
 
         const label = document.createElement('div');
         label.className = 'gitgraph-label';
@@ -609,19 +758,213 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
+  function renderTimelineSection(section) {
+    const branchFocus = timelineState.branchFocus[section.id];
+    const drilldownEl = document.getElementById(section.drilldownId);
+    const gitgraphEl = document.getElementById(section.gitgraphId);
+
+    if (branchFocus === 'all') {
+      if (drilldownEl) {
+        drilldownEl.hidden = true;
+        drilldownEl.innerHTML = '';
+      }
+      renderTimelineGitgraph({
+        branches: section.branches,
+        events: section.events,
+        containerId: section.gitgraphId,
+        legendId: section.legendId,
+        singleBranch: null,
+      });
+      if (gitgraphEl) gitgraphEl.hidden = false;
+    } else {
+      const merged = mergeBranchEvents(section.events, branchFocus);
+      renderTimelineGitgraph({
+        branches: section.branches,
+        events: merged,
+        containerId: section.gitgraphId,
+        legendId: section.legendId,
+        singleBranch: branchFocus,
+      });
+      if (gitgraphEl) gitgraphEl.hidden = false;
+      renderDrilldownList(merged, branchFocus, drilldownEl);
+    }
+  }
+
+  function syncActivityFromTimeline(sectionId, branchId) {
+    const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
+    if (!section) return;
+
+    const groupEl = document.querySelector(`.activity-group[data-group="${section.activityGroupId}"]`);
+    if (groupEl && !groupEl.open) groupEl.open = true;
+
+    if (branchId && branchId !== 'all') {
+      const branchEl = document.querySelector(`.activity-branch[data-branch="${branchId}"]`);
+      if (branchEl && !branchEl.open) {
+        branchEl.open = true;
+        branchEl.dispatchEvent(new Event('toggle'));
+      }
+    }
+  }
+
+  function setTimelineTab(index, { syncActivity = true } = {}) {
+    const tabs = TIMELINE_SECTIONS;
+    const clamped = Math.max(0, Math.min(tabs.length - 1, index));
+    timelineState.tabIndex = clamped;
+    const section = tabs[clamped];
+
+    const tabBtns = document.querySelectorAll('.timeline-tab-btn');
+    const panels = document.querySelectorAll('.timeline-tab-panel');
+    tabBtns.forEach((btn, i) => {
+      const selected = i === clamped;
+      btn.classList.toggle('active', selected);
+      btn.setAttribute('aria-selected', selected ? 'true' : 'false');
+      btn.tabIndex = selected ? 0 : -1;
+    });
+    panels.forEach((panel, i) => {
+      const active = i === clamped;
+      panel.classList.toggle('active', active);
+      panel.hidden = !active;
+    });
+
+    const prevBtn = document.getElementById('timeline-tab-prev');
+    const nextBtn = document.getElementById('timeline-tab-next');
+    if (prevBtn) prevBtn.disabled = clamped === 0;
+    if (nextBtn) nextBtn.disabled = clamped === tabs.length - 1;
+
+    const heading = document.getElementById('timeline-heading');
+    const lead = document.getElementById('timeline-lead');
+    if (heading) heading.textContent = section.heading;
+    if (lead) lead.textContent = section.lead;
+
+    renderTimelineSection(section);
+    if (syncActivity) {
+      syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
+    }
+
+    if (history.replaceState) {
+      const branch = timelineState.branchFocus[section.id];
+      const hash = branch === 'all' ? `#timeline-${section.id}` : `#timeline-${section.id}-${branch}`;
+      history.replaceState(null, '', hash);
+    }
+  }
+
+  function setTimelineBranch(sectionId, branchId) {
+    timelineState.branchFocus[sectionId] = branchId;
+    const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
+    if (!section) return;
+
+    const pillsRoot = document.querySelector(`.timeline-company-pills[data-group="${sectionId}"]`);
+    if (pillsRoot) {
+      pillsRoot.querySelectorAll('.timeline-company-pill').forEach((pill) => {
+        const active = pill.dataset.branch === branchId;
+        pill.classList.toggle('active', active);
+        pill.setAttribute('aria-selected', active ? 'true' : 'false');
+        pill.tabIndex = active ? 0 : -1;
+      });
+    }
+
+    renderTimelineSection(section);
+    syncActivityFromTimeline(sectionId, branchId);
+
+    if (history.replaceState) {
+      const hash = branchId === 'all' ? `#timeline-${sectionId}` : `#timeline-${sectionId}-${branchId}`;
+      history.replaceState(null, '', hash);
+    }
+  }
+
+  function renderTimelineCompanyPills(section) {
+    const root = document.querySelector(`.timeline-company-pills[data-group="${section.id}"]`);
+    if (!root) return;
+
+    const focus = timelineState.branchFocus[section.id];
+    const allActive = focus === 'all';
+
+    const pills = [
+      `<button type="button" role="tab" class="timeline-company-pill${allActive ? ' active' : ''}" data-branch="all" aria-selected="${allActive}" tabindex="${allActive ? 0 : -1}">All lanes</button>`,
+      ...section.branches.map((b) => {
+        const active = focus === b.id;
+        const color = getBranchCssColor(b.id);
+        return `<button type="button" role="tab" class="timeline-company-pill${active ? ' active' : ''}" data-branch="${b.id}" aria-selected="${active}" tabindex="${active ? 0 : -1}" style="--pill-color:${color}">${b.label}</button>`;
+      }),
+    ].join('');
+
+    root.innerHTML = pills;
+
+    root.querySelectorAll('.timeline-company-pill').forEach((pill) => {
+      pill.addEventListener('click', () => setTimelineBranch(section.id, pill.dataset.branch));
+    });
+  }
+
+  function initTimelineTabs() {
+    TIMELINE_SECTIONS.forEach((section) => renderTimelineCompanyPills(section));
+
+    const tabList = document.querySelector('.timeline-tab-list');
+    const prevBtn = document.getElementById('timeline-tab-prev');
+    const nextBtn = document.getElementById('timeline-tab-next');
+
+    document.querySelectorAll('.timeline-tab-btn').forEach((btn, i) => {
+      btn.addEventListener('click', () => setTimelineTab(i));
+    });
+
+    if (prevBtn) prevBtn.addEventListener('click', () => setTimelineTab(timelineState.tabIndex - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => setTimelineTab(timelineState.tabIndex + 1));
+
+    if (tabList) {
+      let touchStartX = 0;
+      tabList.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      tabList.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(dx) < 48) return;
+        if (dx < 0) setTimelineTab(timelineState.tabIndex + 1);
+        else setTimelineTab(timelineState.tabIndex - 1);
+      }, { passive: true });
+    }
+
+    document.getElementById('timeline-tabs')?.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        setTimelineTab(timelineState.tabIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        setTimelineTab(timelineState.tabIndex + 1);
+      }
+    });
+
+    const hash = window.location.hash.slice(1);
+    if (hash.startsWith('timeline-')) {
+      const rest = hash.slice('timeline-'.length);
+      let sectionId = 'cluster';
+      let branchId = 'all';
+
+      if (rest.startsWith('portfolio')) {
+        sectionId = 'portfolio';
+        const suffix = rest.slice('portfolio'.length);
+        branchId = suffix.startsWith('-') ? suffix.slice(1) : 'all';
+      } else if (rest.startsWith('cluster')) {
+        sectionId = 'cluster';
+        const suffix = rest.slice('cluster'.length);
+        branchId = suffix.startsWith('-') ? suffix.slice(1) : 'all';
+      }
+
+      const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
+      if (section) {
+        const valid = branchId === 'all' || section.branches.some((b) => b.id === branchId);
+        if (!valid) branchId = 'all';
+        timelineState.branchFocus[sectionId] = branchId;
+        const tabIdx = TIMELINE_SECTIONS.findIndex((s) => s.id === sectionId);
+        setTimelineTab(tabIdx >= 0 ? tabIdx : 0, { syncActivity: false });
+        TIMELINE_SECTIONS.forEach((s) => renderTimelineCompanyPills(s));
+        setTimelineBranch(sectionId, branchId);
+        return;
+      }
+    }
+    setTimelineTab(0, { syncActivity: false });
+  }
+
   function initTimelineGitgraph() {
-    renderTimelineGitgraph({
-      branches: TIMELINE_CLUSTER_BRANCHES,
-      events: TIMELINE_CLUSTER_EVENTS,
-      containerId: 'gitgraph',
-      legendId: 'timeline-legend',
-    });
-    renderTimelineGitgraph({
-      branches: TIMELINE_PORTFOLIO_BRANCHES,
-      events: TIMELINE_PORTFOLIO_EVENTS,
-      containerId: 'gitgraph-portfolio',
-      legendId: 'timeline-legend-portfolio',
-    });
+    initTimelineTabs();
   }
 
   const CHART = {
@@ -850,12 +1193,35 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     root.querySelectorAll('.activity-group').forEach((groupEl) => {
       groupEl.addEventListener('toggle', () => {
         if (!groupEl.open) return;
+        const groupId = groupEl.dataset.group;
+        const tabIdx = TIMELINE_SECTIONS.findIndex((s) => s.activityGroupId === groupId);
+        if (tabIdx >= 0 && timelineState.tabIndex !== tabIdx) {
+          setTimelineTab(tabIdx, { syncActivity: false });
+        }
         groupEl.querySelectorAll('.activity-branch[open] .activity-branch-chart').forEach((chartEl) => {
           const branchId = chartEl.id.replace('activity-chart-', '');
           const group = groups.find((g) => g.branches.some((b) => b.id === branchId));
           if (!group) return;
           initBranchActivityChart(branchId, branchEventsFor(group.events, branchId), chartEl);
         });
+      });
+    });
+
+    root.querySelectorAll('.activity-branch').forEach((branchEl) => {
+      branchEl.addEventListener('toggle', () => {
+        if (!branchEl.open) return;
+        const branchId = branchEl.dataset.branch;
+        const groupEl = branchEl.closest('.activity-group');
+        if (!groupEl) return;
+        const groupId = groupEl.dataset.group;
+        const tabIdx = TIMELINE_SECTIONS.findIndex((s) => s.activityGroupId === groupId);
+        if (tabIdx >= 0) {
+          if (timelineState.tabIndex !== tabIdx) setTimelineTab(tabIdx, { syncActivity: false });
+          const sectionId = TIMELINE_SECTIONS[tabIdx].id;
+          if (timelineState.branchFocus[sectionId] !== branchId) {
+            setTimelineBranch(sectionId, branchId);
+          }
+        }
       });
     });
   }
