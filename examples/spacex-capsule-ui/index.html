@@ -3,28 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capsule UI — grok-repo-template</title>
+  <title>SpaceX Capsule UI · grok-repo-template</title>
+  <meta name="description" content="Mission-critical Starship cockpit telemetry — dark panel on clean Kensho-style wrapper." />
+  <link rel="stylesheet" href="../../docs/assets/pages.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="cockpit">
-    <section class="panel">
-      <h2>Telemetry</h2>
-      <div id="telemetry"></div>
-    </section>
-    <section class="panel">
-      <h2>Systems</h2>
-      <div class="metric"><span>COMMS</span><span class="value">LINK OK</span></div>
-      <div class="metric"><span>POWER</span><span class="value">NOMINAL</span></div>
-      <div class="metric"><span>THERMAL</span><span class="value">STABLE</span></div>
-      <div class="metric"><span>GNC</span><span class="value">TRACKING</span></div>
-    </section>
-    <div class="status-bar">
-      <span>PHASE: <span id="phase" class="phase">PRE-LAUNCH</span></span>
-      <span id="clock">00:00:00 UTC</span>
-      <button id="ack-btn" type="button">Ack</button>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-brand">
+        <h1>SpaceX Capsule UI</h1>
+        <p class="tagline">Mission-critical cockpit · examples/spacex-capsule-ui · fornevercollective/grok-repo-template</p>
+      </div>
+      <nav class="site-nav" aria-label="Page sections">
+        <a href="../../" class="is-active">Cockpit</a>
+        <a href="../../#quick-start">Configurator</a>
+        <a href="https://github.com/fornevercollective/grok-repo-template/tree/main/examples/spacex-capsule-ui" target="_blank" rel="noopener">Source</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section class="section capsule-section">
+      <span class="section-label">Demo</span>
+      <h2>Starship cockpit telemetry</h2>
+      <p class="section-lead">
+        Dark high-contrast touch-screen panel on a clean white wrapper — pristine JS/HTML/CSS, no dependencies.
+        Lineage: <a href="https://github.com/fornevercollective/grok-repo-template/commit/dece3a4deffc2fcaf804db7cce53d411b12c6421">dece3a4</a>.
+      </p>
+
+      <div class="cockpit-card">
+        <div class="cockpit" role="application" aria-label="Capsule telemetry cockpit">
+          <section class="panel">
+            <h2>Telemetry</h2>
+            <div id="telemetry"></div>
+          </section>
+          <section class="panel">
+            <h2>Systems</h2>
+            <div class="metric"><span>COMMS</span><span class="value">LINK OK</span></div>
+            <div class="metric"><span>POWER</span><span class="value">NOMINAL</span></div>
+            <div class="metric"><span>THERMAL</span><span class="value">STABLE</span></div>
+            <div class="metric"><span>GNC</span><span class="value">TRACKING</span></div>
+          </section>
+          <div class="status-bar">
+            <span>PHASE: <span id="phase" class="phase">PRE-LAUNCH</span></span>
+            <span id="clock">00:00:00 UTC</span>
+            <button id="ack-btn" type="button">Ack</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <script src="capsule_ui.js"></script>
 </body>
 </html>

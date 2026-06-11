@@ -7,7 +7,6 @@ Official Grok-optimized repository template for Colossus/Dojo and space-grade pr
 **Stats & Activity**
 Live ECharts heatmaps and metrics are now fixed and self-contained in the Pages configurator.
 
-<<<<<<< HEAD
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Pages](https://img.shields.io/badge/Pages-live-00ff66)](https://fornevercollective.github.io/grok-repo-template/#activity)
 
@@ -554,10 +553,16 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Conventional Commits (`feat:`, `fix:`, `
 Apache 2.0 © ForNever Collective / SuperHeavyGrok
 
 See [LICENSE](LICENSE).
-=======
+
+---
+
 **Quick Start**
-Use Option 2 on the Pages site: https://fornevercollective.github.io/grok-repo-template/
+
+Use [Option 2](https://fornevercollective.github.io/grok-repo-template/#quick-start) on the [Grok Assembly Line configurator](https://fornevercollective.github.io/grok-repo-template/) — pick a template, copy one command to Grok or your agent.
 
 **SpaceX Capsule Demo**
-See `examples/spacex-capsule-ui/`
->>>>>>> dece3a4deffc2fcaf804db7cce53d411b12c6421
+
+- **Folder:** [`examples/spacex-capsule-ui/`](examples/spacex-capsule-ui/)
+- **Live demo:** [fornevercollective.github.io/.../spacex-capsule-ui](https://fornevercollective.github.io/grok-repo-template/examples/spacex-capsule-ui/index.html)
+
+Cockpit UI lineage: [`dece3a4`](https://github.com/fornevercollective/grok-repo-template/commit/dece3a4deffc2fcaf804db7cce53d411b12c6421).
