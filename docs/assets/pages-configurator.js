@@ -405,13 +405,147 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     goStep(1);
   }
 
+  const TIMELINE_BRANCHES = [
+    { id: 'grok', label: 'grok', color: '#2563eb' },
+    { id: 'colossus', label: 'colossus', color: '#16a34a' },
+    { id: 'terrafab', label: 'terrafab', color: '#d97706' },
+    { id: 'spacex', label: 'spacex-ipo', color: '#7c3aed' },
+  ];
+
+  const BRANCH_COL = { grok: 0, colossus: 1, terrafab: 2, spacex: 3, main: 0 };
+
+  /** Public timeline — approximate dates noted in labels where sources differ. */
+  const TIMELINE_EVENTS = [
+    { sort: '2023-07', date: 'Jul 2023', branch: 'grok', id: 'xai-founded', title: 'xAI announced', approx: false },
+    { sort: '2023-11', date: 'Nov 2023', branch: 'grok', id: 'grok-preview', title: 'Grok preview on X', approx: false },
+    { sort: '2024-03', date: 'Mar 2024', branch: 'grok', id: 'grok-1-oss', title: 'Grok-1 open source', approx: false },
+    { sort: '2024-03', date: 'Mar 2024', branch: 'colossus', id: 'memphis-start', title: 'Colossus build starts', approx: true },
+    { sort: '2024-05', date: 'May 2024', branch: 'grok', id: 'series-b', title: '$6B Series B', approx: false },
+    { sort: '2024-06', date: 'Jun 5 2024', branch: 'colossus', id: 'colossus-announce', title: 'Colossus announced', approx: false },
+    { sort: '2024-08', date: 'Aug 2024', branch: 'colossus', id: 'colossus-live', title: 'Colossus goes live', approx: false },
+    { sort: '2024-08', date: 'Aug 2024', branch: 'grok', id: 'grok-2', title: 'Grok-2 released', approx: false },
+    { sort: '2024-12', date: 'Dec 2024', branch: 'colossus', id: '200k-gpus', title: '200K GPUs cluster', approx: true },
+    { sort: '2025-02', date: 'Feb 2025', branch: 'grok', id: 'grok-3', title: 'Grok 3 launched', approx: false },
+    { sort: '2025-02', date: 'Feb 2025', branch: 'colossus', id: 'scale-200k', title: 'Scaled to 200K GPUs', approx: false },
+    { sort: '2025-07', date: 'Jul 2025', branch: 'grok', id: 'grok-4', title: 'Grok 4 announced', approx: false },
+    { sort: '2026-02', date: 'Feb 2026', branch: 'spacex', id: 'xai-merge', title: 'SpaceX acquires xAI', approx: true, merge: true },
+    { sort: '2026-03', date: 'Mar 21 2026', branch: 'terrafab', id: 'terrafab-launch', title: 'Terafab announced', approx: false },
+    { sort: '2026-04', date: 'Apr 1 2026', branch: 'spacex', id: 'sec-confidential', title: 'Confidential SEC filing', approx: false },
+    { sort: '2026-04', date: 'Apr 2026', branch: 'terrafab', id: 'intel-joins', title: 'Intel joins Terafab', approx: false },
+    { sort: '2026-05', date: 'May 20 2026', branch: 'spacex', id: 's-1-public', title: 'Public S-1 filed', approx: false },
+    { sort: '2026-05', date: 'May 2026', branch: 'terrafab', id: '55b-filing', title: '$55B phase filed', approx: true },
+    { sort: '2026-06', date: 'Jun 3 2026', branch: 'spacex', id: 'ipo-price', title: '$135 · $1.77T val', approx: false },
+    { sort: '2026-06', date: 'Jun 4 2026', branch: 'spacex', id: 'roadshow', title: 'IPO roadshow launch', approx: false },
+    { sort: '2026-06', date: 'Jun 3 2026', branch: 'terrafab', id: 'tax-abate', title: 'Grimes tax abatement', approx: false },
+    { sort: '2026-06', date: 'Jun 12 2026', branch: 'spacex', id: 'spcx-trade', title: 'SPCX trading (target)', approx: true },
+  ];
+
+  function initTimelineGitgraph() {
+    const container = document.getElementById('gitgraph');
+    const legendEl = document.getElementById('timeline-legend');
+    if (!container) return;
+
+    if (legendEl) {
+      legendEl.innerHTML = TIMELINE_BRANCHES.map((b) =>
+        `<span class="legend-item"><span class="legend-swatch" style="background:${b.color}"></span>${b.label}</span>`
+      ).join('');
+    }
+
+    const rows = new Map();
+    TIMELINE_EVENTS.forEach((ev) => {
+      if (!rows.has(ev.sort)) rows.set(ev.sort, { sort: ev.sort, date: ev.date, events: [] });
+      rows.get(ev.sort).events.push(ev);
+    });
+
+    const sortedRows = [...rows.values()].sort((a, b) => a.sort.localeCompare(b.sort));
+    const COL_WIDTH = 56;
+
+    const inner = document.createElement('div');
+    inner.className = 'gitgraph-inner';
+
+    sortedRows.forEach((row, rowIdx) => {
+      const rowEl = document.createElement('div');
+      rowEl.className = 'gitgraph-row';
+      rowEl.dataset.row = String(rowIdx);
+
+      const dateEl = document.createElement('div');
+      dateEl.className = 'gitgraph-date';
+      dateEl.textContent = row.date;
+
+      const track = document.createElement('div');
+      track.className = 'gitgraph-track';
+      track.style.minWidth = `${4 * COL_WIDTH + 48}px`;
+
+      row.events.forEach((ev) => {
+        const col = BRANCH_COL[ev.branch] ?? 0;
+
+        const node = document.createElement('div');
+        node.className = 'gitgraph-node';
+        node.style.setProperty('--col-offset', String(col));
+        node.dataset.branch = ev.branch;
+
+        const dot = document.createElement('div');
+        dot.className = `gitgraph-dot branch-${ev.branch}${ev.merge ? ' is-merge' : ''}`;
+        if (ev.merge) dot.style.color = TIMELINE_BRANCHES.find((b) => b.id === ev.branch)?.color || '#525252';
+
+        const label = document.createElement('div');
+        label.className = 'gitgraph-label';
+        const approxTag = ev.approx ? ' <span style="color:var(--text-muted)">~</span>' : '';
+        label.innerHTML = `<strong>${ev.id}</strong>${approxTag}${ev.title}`;
+
+        node.appendChild(dot);
+        node.appendChild(label);
+        track.appendChild(node);
+      });
+
+      rowEl.appendChild(dateEl);
+      rowEl.appendChild(track);
+      inner.appendChild(rowEl);
+    });
+
+    const overlay = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    overlay.setAttribute('class', 'gitgraph-connectors gitgraph-connectors-overlay');
+
+    container.innerHTML = '';
+    container.appendChild(inner);
+    container.appendChild(overlay);
+
+    requestAnimationFrame(() => {
+      const branchPrev = {};
+      const containerRect = container.getBoundingClientRect();
+      overlay.setAttribute('width', String(container.clientWidth));
+      overlay.setAttribute('height', String(container.clientHeight));
+      overlay.style.width = `${container.clientWidth}px`;
+      overlay.style.height = `${container.clientHeight}px`;
+
+      inner.querySelectorAll('.gitgraph-node').forEach((nodeEl) => {
+        const branch = nodeEl.dataset.branch;
+        const dot = nodeEl.querySelector('.gitgraph-dot');
+        const dotRect = dot.getBoundingClientRect();
+        const x = dotRect.left - containerRect.left + dotRect.width / 2;
+        const y = dotRect.top - containerRect.top + dotRect.height / 2;
+
+        if (branch && branchPrev[branch]) {
+          const prev = branchPrev[branch];
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+          path.setAttribute('class', `branch-${branch}`);
+          const midY = (prev.y + y) / 2;
+          path.setAttribute('d', `M ${prev.x} ${prev.y} C ${prev.x} ${midY}, ${x} ${midY}, ${x} ${y}`);
+          overlay.appendChild(path);
+        }
+
+        if (branch) branchPrev[branch] = { x, y };
+      });
+    });
+  }
+
   const CHART = {
     bg: 'transparent',
     text: '#737373',
-    textLight: '#a3a3a3',
-    grid: '#1a1a1a',
-    border: 'rgba(255,255,255,0.06)',
-    scale: ['#141414', '#1a3324', '#166534', '#22c55e'],
+    textLight: '#525252',
+    grid: '#f1f3f5',
+    border: 'rgba(0,0,0,0.08)',
+    scale: ['#f1f3f5', '#dcfce7', '#86efac', '#16a34a'],
   };
 
   function initActivityCharts() {
@@ -440,9 +574,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     cal.setOption({
       backgroundColor: CHART.bg,
       tooltip: {
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#ffffff',
         borderColor: CHART.border,
-        textStyle: { color: '#f2f2f2', fontSize: 12 },
+        textStyle: { color: '#1a1a1a', fontSize: 12 },
         formatter: (p) => `${p.data[0]}<br/>${p.data[1]} events`,
       },
       visualMap: {
@@ -460,7 +594,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         bottom: 8,
         itemStyle: {
           borderWidth: 2,
-          borderColor: '#141414',
+          borderColor: '#ffffff',
           color: CHART.grid,
         },
         yearLabel: { show: false },
@@ -497,9 +631,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       backgroundColor: CHART.bg,
       grid: { top: 8, left: 48, right: 12, bottom: 32 },
       tooltip: {
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#ffffff',
         borderColor: CHART.border,
-        textStyle: { color: '#f2f2f2', fontSize: 12 },
+        textStyle: { color: '#1a1a1a', fontSize: 12 },
         formatter: (p) => `${stages[p.data[0]]} · ${weeks[p.data[1]]}<br/>${p.data[2]} runs`,
       },
       xAxis: {
@@ -529,7 +663,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         data: pipelineData,
         itemStyle: {
           borderWidth: 3,
-          borderColor: '#141414',
+          borderColor: '#ffffff',
         },
         emphasis: {
           itemStyle: { borderColor: CHART.border },
@@ -573,6 +707,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   function boot() {
     init();
     initActivityCharts();
+    initTimelineGitgraph();
     initNavHighlight();
   }
 

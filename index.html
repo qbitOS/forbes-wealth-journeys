@@ -16,15 +16,51 @@
         <p class="tagline">Template configurator · Colossus / DVC · fornevercollective/grok-repo-template</p>
       </div>
       <nav class="site-nav" aria-label="Page sections">
+        <a href="#activity">Activity</a>
+        <a href="#timeline">Timeline</a>
         <a href="#quick-start">Templates</a>
         <a href="#configurator">Wizard</a>
-        <a href="#activity">Activity</a>
         <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <section id="activity" class="section activity-section">
+      <span class="section-label">Activity</span>
+      <h2>Repository activity</h2>
+      <p class="section-lead">Contribution cadence and pipeline run density across template stages.</p>
+      <div class="activity-grid">
+        <article class="chart-card">
+          <header class="chart-card-header">
+            <h3 class="chart-card-title">Contributions</h3>
+            <span class="chart-card-meta" id="calendar-meta">2026</span>
+          </header>
+          <div id="calendar" class="chart" role="img" aria-label="Contribution calendar heatmap"></div>
+        </article>
+        <article class="chart-card">
+          <header class="chart-card-header">
+            <h3 class="chart-card-title">Pipeline runs</h3>
+            <span class="chart-card-meta">by stage · week</span>
+          </header>
+          <div id="cartesian" class="chart" role="img" aria-label="Pipeline run heatmap"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section timeline-section">
+      <span class="section-label">Public timeline</span>
+      <h2>Colossus · Terrafab · Grok · SpaceX IPO</h2>
+      <p class="section-lead">
+        Publicly reported milestones mapped to a vertical gitgraph. Dates are approximate where sources differ or exact timing was not disclosed.
+      </p>
+      <div class="timeline-legend" id="timeline-legend" aria-label="Branch legend"></div>
+      <div id="gitgraph" class="gitgraph" role="img" aria-label="Vertical gitgraph timeline of public milestones"></div>
+      <p class="timeline-disclaimer">
+        Public timeline — sourced from press releases, SEC filings, and public announcements. Not financial advice.
+      </p>
+    </section>
+
     <section id="quick-start" class="section">
       <span class="section-label">Quick start</span>
       <h2>Choose your template</h2>
@@ -109,28 +145,6 @@
           <button id="btn-prev" type="button" disabled>Previous</button>
           <button id="btn-next" type="button">Next</button>
         </div>
-      </div>
-    </section>
-
-    <section id="activity" class="section activity-section">
-      <span class="section-label">Activity</span>
-      <h2>Repository activity</h2>
-      <p class="section-lead">Contribution cadence and pipeline run density across template stages.</p>
-      <div class="activity-grid">
-        <article class="chart-card">
-          <header class="chart-card-header">
-            <h3 class="chart-card-title">Contributions</h3>
-            <span class="chart-card-meta" id="calendar-meta">2026</span>
-          </header>
-          <div id="calendar" class="chart" role="img" aria-label="Contribution calendar heatmap"></div>
-        </article>
-        <article class="chart-card">
-          <header class="chart-card-header">
-            <h3 class="chart-card-title">Pipeline runs</h3>
-            <span class="chart-card-meta">by stage · week</span>
-          </header>
-          <div id="cartesian" class="chart" role="img" aria-label="Pipeline run heatmap"></div>
-        </article>
       </div>
     </section>
   </main>
