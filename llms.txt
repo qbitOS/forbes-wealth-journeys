@@ -24,7 +24,12 @@
 - docs/COLOSSUS_SETUP.md
 - docs/dvc-pipelines.md
 - docs/colossus-cluster-setup.md
+- docs/pages-configurator.md
 - standards/xai-spacex-terrafab-grokipedia.md
+
+## GitHub Pages
+- index.html (template configurator + ECharts)
+- https://fornevercollective.github.io/grok-repo-template/
 
 ## Config
 - configs/default.yaml

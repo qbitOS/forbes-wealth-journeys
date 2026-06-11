@@ -8,6 +8,7 @@ project:
   training_framework: jax
   dvc_enabled: true
   domain_examples: [vision, agents, fine-tuning, jax-colossus, rust-dojo, python-grok]
+  pages_configurator: https://fornevercollective.github.io/grok-repo-template/
   entrypoints:
     train: scripts/train.py
     infer: scripts/infer.py
@@ -19,8 +20,19 @@ project:
     - browse_page
     - code_execution
     - x_tools
+  grok_skills:
+    - .grok/skills/github-connector/SKILL.md
+    - .grok/skills/web-search/SKILL.md
+    - .grok/skills/browse-page/SKILL.md
+    - .grok/skills/code-execution/SKILL.md
+    - .grok/skills/x-tools/SKILL.md
   standards:
     - xai
     - spacex
     - terrafab
     - grokipedia
+  ecosystem_paths:
+    grokipedia: [.github/workflows/grokipedia-submission.yml, standards/xai-spacex-terrafab-grokipedia.md]
+    x_com: [scripts/connectors/x_tools_pipeline.py, .grok/skills/x-tools/SKILL.md]
+    xai: [standards/xai-spacex-terrafab-grokipedia.md, configs/colossus.yaml, LLMS.md]
+    superheavy_colossus: [scripts/colossus-launch.sh, configs/colossus.yaml, docs/colossus-cluster-setup.md]

@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://github.com/fornevercollective/grok-repo-template"><strong>Repository</strong></a> ·
-  <a href="https://fornevercollective.github.io/grok-repo-template/"><strong>GitHub Pages (interactive charts)</strong></a>
+  <a href="https://fornevercollective.github.io/grok-repo-template/"><strong>GitHub Pages (template configurator)</strong></a>
 </p>
 
 > Drop-in Grok chat assist skill — Grok Build agents can scaffold vision, agent, or fine-tuning projects from this template instantly.
@@ -187,9 +187,9 @@ launch_script: scripts/colossus/colossus-job.sh
 </details>
 
 <details>
-<summary><strong>HTML</strong> — GitHub Pages dashboard</summary>
+<summary><strong>HTML</strong> — GitHub Pages configurator + dashboard</summary>
 
-See [`index.html`](index.html) (ECharts heatmaps, deployed via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)).
+See [`index.html`](index.html) (template wizard, ECharts heatmaps, deployed via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)). Docs: [`docs/pages-configurator.md`](docs/pages-configurator.md).
 
 ```html
 <!DOCTYPE html>
@@ -310,11 +310,12 @@ nvcc -std=c++17 -arch=sm_80 -c src/kernels/attention_kernel.cu -o attention_kern
 </p>
 
 <details>
-<summary><strong>Interactive ECharts heatmaps (GitHub Pages)</strong></summary>
+<summary><strong>Interactive GitHub Pages (configurator + ECharts)</strong></summary>
 
-ECharts cannot run inside GitHub README rendering — use the static charts above, or open **GitHub Pages** for live heatmaps:
+ECharts cannot run inside GitHub README rendering — use the static charts above, or open **GitHub Pages**:
 
-- **Live dashboard:** [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/)
+- **Template configurator + live heatmaps:** [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/)
+- **Configurator docs:** [docs/pages-configurator.md](docs/pages-configurator.md)
 - [Calendar heatmap](https://echarts.apache.org/examples/en/editor.html?c=calendar-heatmap) · [Cartesian heatmap](https://echarts.apache.org/examples/en/editor.html?c=heatmap-cartesian) · [Heatmap gallery](https://echarts.apache.org/examples/en/index.html#chart-type-heatmap)
 
 </details>
@@ -387,6 +388,22 @@ Full starter snippets: [Quick Start by Language](#quick-start-by-language) (abov
 
 ---
 
+## Template Configurator (GitHub Pages)
+
+**Live wizard:** [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/)
+
+Pick domains (vision, agents, JAX Colossus, Rust Dojo, CUDA, DVC, etc.), infrastructure, and Grok ecosystem paths (Grokipedia, X.com, X.ai, SpaceX/Terrafab, SuperHeavyGrok/Colossus). The configurator generates:
+
+- **First-prompt markdown** — copy into Grok GitHub connector or agent bootstrap
+- **JSON manifest** — machine-readable project config
+- **`metadata.yaml` snippet** — merge into your repo root
+- **`llms.txt` route hints** — LLM index paths
+- **GitHub code search query** — optimized `repo:fornevercollective/grok-repo-template …` keywords
+
+See [docs/pages-configurator.md](docs/pages-configurator.md) for connector integration details.
+
+---
+
 ## Quick Setup for Grok Drop-in Chat Assist
 
 ```bash
@@ -398,6 +415,8 @@ grok inspect   # verify AGENTS.md + .grok/skills/ loaded
 ```
 
 **Grok prompt example:** *"Use the grok-repo-template skill to build a new vision project."*
+
+Or open the [Pages configurator](https://fornevercollective.github.io/grok-repo-template/), select options, and paste the generated first prompt.
 
 ---
 
