@@ -662,8 +662,10 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       ).join('');
     }
 
+    const visibleEvents = events.filter((ev) => branchCol[ev.branch] !== undefined);
+
     const rows = new Map();
-    events.forEach((ev) => {
+    visibleEvents.forEach((ev) => {
       if (!rows.has(ev.sort)) rows.set(ev.sort, { sort: ev.sort, date: ev.date, events: [] });
       rows.get(ev.sort).events.push(ev);
     });
@@ -790,6 +792,13 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     }
   }
 
+  function syncActivityGroupHighlight(sectionId) {
+    document.querySelectorAll('.activity-group').forEach((groupEl) => {
+      const isSynced = groupEl.dataset.group === sectionId;
+      groupEl.classList.toggle('is-synced', isSynced);
+    });
+  }
+
   function syncActivityFromTimeline(sectionId, branchId) {
     const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
     if (!section) return;
@@ -836,6 +845,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     if (heading) heading.textContent = section.heading;
     if (lead) lead.textContent = section.lead;
 
+    syncActivityGroupHighlight(section.activityGroupId);
     renderTimelineSection(section);
     if (syncActivity) {
       syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
@@ -1118,42 +1128,36 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     activityCharts.push(chart);
   }
 
+  function renderActivityGroupSwatches(branches) {
+    return branches.map((b) =>
+      `<span class="activity-group-swatch branch-${b.id}" aria-hidden="true"></span>`
+    ).join('');
+  }
+
   function renderActivityBranches() {
     const root = document.getElementById('activity-branches');
     if (!root) return;
 
-    const groups = [
-      {
-        id: 'cluster',
-        title: 'xAI · Colossus · Terafab · IPO',
-        meta: `${TIMELINE_CLUSTER_EVENTS.length} events · 4 branches`,
-        open: true,
-        branches: TIMELINE_CLUSTER_BRANCHES,
-        events: TIMELINE_CLUSTER_EVENTS,
-        branchOpen: true,
-      },
-      {
-        id: 'portfolio',
-        title: 'Elon portfolio · ventures',
-        meta: `${TIMELINE_PORTFOLIO_EVENTS.length} events · 6 branches`,
-        open: false,
-        branches: TIMELINE_PORTFOLIO_BRANCHES,
-        events: TIMELINE_PORTFOLIO_EVENTS,
-        branchOpen: false,
-      },
-    ];
+    const groups = TIMELINE_SECTIONS.map((section, index) => ({
+      id: section.activityGroupId,
+      title: section.label,
+      meta: `${section.events.length} events · ${section.branches.length} branches`,
+      open: index === 0,
+      branches: section.branches,
+      events: section.events,
+      branchOpen: index === 0,
+    }));
 
     root.innerHTML = groups.map((group) => {
       const branchPanels = group.branches.map((branch) => {
         const branchEvents = branchEventsFor(group.events, branch.id);
-        const color = getBranchCssColor(branch.id);
         const span = formatSortSpan(branchEvents);
         const openAttr = group.branchOpen ? ' open' : '';
 
         return `
           <details class="activity-branch" data-branch="${branch.id}"${openAttr}>
             <summary>
-              <span class="activity-branch-swatch" style="background:${color}"></span>
+              <span class="activity-branch-swatch" aria-hidden="true"></span>
               <span class="activity-branch-name">${branch.label}</span>
               <span class="activity-branch-meta">${branchEvents.length} events · ${span}</span>
             </summary>
@@ -1165,10 +1169,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       }).join('');
 
       const openAttr = group.open ? ' open' : '';
+      const syncedCls = group.id === TIMELINE_SECTIONS[timelineState.tabIndex].activityGroupId ? ' is-synced' : '';
       return `
-        <details class="activity-group" data-group="${group.id}"${openAttr}>
+        <details class="activity-group${syncedCls}" data-group="${group.id}"${openAttr}>
           <summary>
-            <span>${group.title}</span>
+            <span class="activity-group-title-wrap">
+              <span class="activity-group-swatches">${renderActivityGroupSwatches(group.branches)}</span>
+              <span>${group.title}</span>
+            </span>
             <span class="activity-group-meta">${group.meta}</span>
           </summary>
           <div class="activity-branch-list">${branchPanels}</div>
@@ -1226,6 +1234,22 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
+  const PIPELINE_STAGE_BRANCHES = {
+    DVC: 'main',
+    CI: 'colossus',
+    Colossus: 'colossus',
+    Grok: 'grok',
+    Vision: 'terrafab',
+    Agents: 'grok',
+    FT: 'openai',
+  };
+
+  function heatmapColorFromScale(scale, value, max) {
+    if (!value || value <= 0) return scale[0];
+    const idx = Math.min(scale.length - 1, Math.round((value / max) * (scale.length - 1)));
+    return scale[idx];
+  }
+
   function initActivityCharts() {
     if (typeof echarts === 'undefined') return;
 
@@ -1236,6 +1260,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     const year = new Date().getFullYear();
     const meta = document.getElementById('calendar-meta');
     if (meta) meta.textContent = String(year);
+
+    const calendarScale = branchHeatmapScale(getBranchCssColor('grok'));
 
     const calendarData = [];
     for (let m = 0; m < 12; m++) {
@@ -1261,7 +1287,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         min: 0,
         max: 8,
         show: false,
-        inRange: { color: CHART.scale },
+        inRange: { color: calendarScale },
       },
       calendar: {
         range: year,
@@ -1303,6 +1329,10 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       [0, 0, 5], [1, 0, 8], [2, 1, 3], [3, 2, 9],
       [4, 3, 2], [5, 1, 6], [6, 2, 4],
     ];
+    const stageColors = stages.map((stage) => {
+      const branchId = PIPELINE_STAGE_BRANCHES[stage] || 'main';
+      return getBranchCssColor(branchId);
+    });
 
     const cart = echarts.init(cartesianEl, null, { renderer: 'canvas' });
     cart.setOption({
@@ -1319,7 +1349,18 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         data: stages,
         axisLine: { show: false },
         axisTick: { show: false },
-        axisLabel: { color: CHART.text, fontSize: 10, margin: 10 },
+        axisLabel: {
+          color: CHART.text,
+          fontSize: 10,
+          margin: 10,
+          rich: Object.fromEntries(
+            stages.map((stage, i) => [
+              `s${i}`,
+              { color: stageColors[i], fontWeight: 500 },
+            ]),
+          ),
+          formatter: (value, idx) => `{s${idx}|${value}}`,
+        },
         splitArea: { show: false },
       },
       yAxis: {
@@ -1330,18 +1371,18 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         axisLabel: { color: CHART.text, fontSize: 10, margin: 8 },
         splitArea: { show: false },
       },
-      visualMap: {
-        min: 0,
-        max: 10,
-        show: false,
-        inRange: { color: CHART.scale },
-      },
       series: [{
         type: 'heatmap',
         data: pipelineData,
         itemStyle: {
           borderWidth: 3,
           borderColor: '#ffffff',
+          color: (params) => {
+            const stageIdx = params.data[0];
+            const branchId = PIPELINE_STAGE_BRANCHES[stages[stageIdx]] || 'main';
+            const scale = branchHeatmapScale(getBranchCssColor(branchId));
+            return heatmapColorFromScale(scale, params.data[2], 10);
+          },
         },
         emphasis: {
           itemStyle: { borderColor: CHART.border },
