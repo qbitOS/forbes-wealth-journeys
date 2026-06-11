@@ -574,6 +574,278 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     ],
   };
 
+  /** Rich hover / tap detail copy keyed by event id — public facts only. */
+  const TIMELINE_EVENT_DETAILS = {
+    /* —— grok drill-down —— */
+    'team-assembled': {
+      detail: 'xAI incorporated July 2023 in Nevada. Founding team drew from DeepMind, OpenAI, Google Research, Tesla Autopilot, and Microsoft — positioned as a “maximum truth-seeking” counterweight to closed labs.',
+      source: 'https://x.ai/about',
+    },
+    'grok-api': {
+      detail: 'Developer API beta opened for programmatic Grok access — chat completions, tool routing, and early function-calling hooks for X embeds and third-party apps.',
+      source: 'https://docs.x.ai',
+    },
+    'grok-vision': {
+      detail: 'Multimodal vision shipped in Grok chat: image upload, chart/diagram QA, and screenshot reasoning alongside text — first broad consumer vision tier on X.',
+    },
+    'grok-studio': {
+      detail: 'Grok Studio workspace preview: shared prompt libraries, eval sets, and run history for teams ahead of SuperGrok / enterprise tiers.',
+    },
+    'grok-voice': {
+      detail: 'Grok Voice on iOS and Android — continuous speech input, spoken replies, and hands-free mode integrated into the X app Grok tab.',
+    },
+    'grok-code': {
+      detail: 'Grok Code IDE beta: repo-aware edits, inline diff preview, and shell command suggestions — precursor to Grok Build CLI (May 2026).',
+    },
+    'supergrok-tier': {
+      detail: 'SuperGrok subscription bundles Imagine video generation, higher rate limits, and priority Grok 4.x access on X — paywall for Imagine rolled Mar 2026.',
+    },
+    /* —— colossus drill-down —— */
+    'memphis-permit': {
+      detail: 'Shelby County industrial permits filed for xAI’s South Memphis campus (former Electrolux footprint). Early site work preceded the Jun 2024 public Colossus announcement.',
+    },
+    'h100-rack': {
+      detail: 'First NVIDIA H100 racks energized at Colossus Memphis — NVLink clusters, early direct-to-chip cooling trials before the 122-day full build sprint.',
+    },
+    'liquid-cooling': {
+      detail: 'Facility-wide liquid cooling loop commissioned to sustain >700 W/GPU thermal density — prerequisite for 100K+ H100 scale in a single building.',
+    },
+    '50k-gpus': {
+      detail: 'Roughly 50,000 GPUs operational — midpoint between Aug 2024 go-live and the Feb 2025 200K expansion announced alongside Grok 3.',
+    },
+    'b200-order': {
+      detail: 'Expansion POs for NVIDIA B200 / GB200 NVL racks to extend Colossus beyond Hopper — mixed-precision training for Grok 4.x and Imagine workloads.',
+    },
+    'grid-interconnect': {
+      detail: '≈1 GW utility interconnect approved with Memphis-area providers — power envelope cited for Colossus 2 and downstream Terafab load.',
+    },
+    'colossus-2-pour': {
+      detail: 'Foundation pour at Colossus 2 Grimes County TX site — ~1M sq ft shell adjacent to Terafab corridor; permit filings referenced $659M phase scope.',
+    },
+    /* —— terrafab drill-down —— */
+    'austin-proto': {
+      detail: 'Austin prototype packaging line announced Mar 21 2026 — Terafab’s first visible fab-adjacent module before Grimes County mega-site selection.',
+    },
+    '18a-pilot': {
+      detail: 'Intel 18A foundry pilot wafers scheduled for Terafab Austin proto — advanced node packaging co-developed with Intel Foundry Services.',
+      source: 'https://www.intel.com/content/www/us/en/foundry/overview.html',
+    },
+    'grimes-site': {
+      detail: 'Grimes County TX selected for primary Terafab campus — co-located with Colossus 2 power corridor; tax abatement hearings followed Jun 2026.',
+    },
+    'phase-1-cap': {
+      detail: 'Phase 1 target: ~20K wafers/month advanced packaging — S-1 and local filings bracketed $55B–$119B multi-phase fab investment.',
+    },
+    /* —— spacex IPO drill-down —— */
+    'xai-board': {
+      detail: 'Post-merge board restructure: xAI leadership retained product autonomy while SpaceX consolidated AI capex, Colossus leases, and Grok distribution under one cap table.',
+    },
+    'bank-syndicate': {
+      detail: 'IPO bank syndicate formed (Goldman, Morgan Stanley, BofA cited in roadshow materials) — dual-track confidential filing Apr 2026 ahead of public S-1.',
+      source: 'https://www.sec.gov/cgi-bin/browse-edgar?company=SpaceX&CIK=&type=S-1',
+    },
+    's-1-amend': {
+      detail: 'S-1/A amendment filed May 2026 with revenue breakout: launch services, Starlink, and xAI/Colossus AI infrastructure as separate segments.',
+      source: 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=S-1',
+    },
+    'retail-allocation': {
+      detail: 'Retail allocation in hybrid direct-listing structure — Robinhood and other brokers offered primary shares at $135 alongside institutional book.',
+    },
+    'lockup-terms': {
+      detail: '180-day insider lockup disclosed for executives and early investors; Elon Musk subject to extended holding requirements per S-1 risk factors.',
+    },
+    /* —— tesla drill-down —— */
+    'model-s-deliver': {
+      detail: 'Model S customer deliveries began Jun 2012 — first mass-market EV from Tesla after Roadster, validating Fremont production lines.',
+      source: 'https://ir.tesla.com',
+    },
+    'model-3-ramp': {
+      detail: 'Model 3 production ramp Jul 2017 — “production hell” quarter; run-rate later exceeded 5K/week, driving TSLA toward sustained profitability.',
+    },
+    'sp500-inclusion': {
+      detail: 'Tesla added to S&P 500 Dec 2020 — largest index addition by market cap at the time; passive fund flows amplified the 2020–21 TSLA rally.',
+    },
+    'master-plan-3': {
+      detail: 'Master Plan Part 3 published Mar 2023 — explicit path to 240 TWh storage, 30 TW renewable, and electrified transport + heat.',
+    },
+    'cybercab-reveal': {
+      detail: 'Cybercab and Robovan revealed Oct 2024 We, Robot event — no steering wheel, inductive charging, target <$30K consumer autonomy platform.',
+    },
+    'optimus-gen2': {
+      detail: 'Optimus Gen 2 factory trials Jun 2025 — 22-DoF hands, tether-free walking on Giga Texas lines; precursor to Cybercab unmanned production.',
+    },
+    /* —— spacex-ops drill-down —— */
+    'crew-demo': {
+      detail: 'Crew Dragon Demo-2 (May 2020) — first NASA astronauts launched from US soil since Shuttle; Bob Behnken and Doug Hurley to ISS.',
+      source: 'https://www.spacex.com/launches',
+    },
+    'inspiration4': {
+      detail: 'Inspiration4 (Sep 2021) — first all-civilian orbital mission, 3-day Crew Dragon flight funded by Jared Isaacman; raised $240M for St. Jude.',
+    },
+    'starship-ift1-boom': {
+      detail: 'Starship IFT-1 (Apr 2023) — cleared pad but lost vehicle during ascent; max-Q structural failure led to rapid unplanned disassembly over Gulf.',
+    },
+    'ift3-success': {
+      detail: 'IFT-3 (Mar 2024) — full ascent profile, payload door demo, and controlled reentry over Indian Ocean; major step toward ship catch.',
+    },
+    'ift10-catch': {
+      detail: 'IFT-10 (Mar 2025) — Mechazilla booster catch attempt; chopstick arms closed on Super Heavy but release timing still being tuned.',
+    },
+    'starlink-v3': {
+      detail: 'Starlink V3 sats deployed Jan 2026 — larger aperture, direct-to-cell payload, supporting >10M subscribers cited Feb 2026.',
+    },
+    /* —— x-corp drill-down —— */
+    'poison-pill': {
+      detail: 'Twitter board adopted poison pill Apr 2022 after Musk’s $54.20/share bid — limited hostile accumulation above 15% without board approval.',
+    },
+    'terminate-suit': {
+      detail: 'Delaware Chancery termination suit Jul 2022 — Musk sought to exit $44B deal citing bot counts; settled with completion Oct 2022.',
+    },
+    'x-payments': {
+      detail: 'X Payments LLC incorporated Jul 2023 — money-transmitter licenses pursued in multiple US states for creator payouts and P2P.',
+    },
+    'grok-on-x': {
+      detail: 'Grok embedded globally in X app Aug 2024 — sidebar chat, post compose assist, and Premium+ default model routing.',
+    },
+    'x-tv': {
+      detail: 'X TV streaming beta Jan 2025 — long-form video hub competing with YouTube/TikTok; Grok summaries on trending clips.',
+    },
+    /* —— neuralink drill-down —— */
+    'n1-chip': {
+      detail: 'N1 implant unveiled Jul 2019 — 1,024 electrodes, pig demo on stage; coin-sized skull-mounted processor with wireless telemetry.',
+      source: 'https://neuralink.com',
+    },
+    'monkey-pong': {
+      detail: 'Pager monkey played Pong Apr 2021 — decoded motor cortex signals via N1 Link; demonstrated closed-loop BCI gaming without physical controller.',
+    },
+    'fda-ide': {
+      detail: 'FDA IDE approved for PRIME study May 2023 — investigational device exemption for fully implantable BCI in quadriplegia patients.',
+      source: 'https://www.fda.gov',
+    },
+    'second-patient': {
+      detail: 'Second PRIME participant implanted May 2024 — Alex, ALS patient; cursor control and speech-decoding trials expanded beyond first patient Noland.',
+    },
+    'telepathy-trial': {
+      detail: 'Telepathy trial expanded to 10 clinical sites Nov 2025 — targets thought-to-text at >20 WPM; high-volume production flagged for 2026.',
+    },
+    /* —— boring drill-down —— */
+    'la-demo': {
+      detail: 'LA demo tunnel concept May 2018 — 1.14-mile Hawthorne test track, top speed 127 mph in Tesla transport sled trials.',
+    },
+    'lvcc-phase1': {
+      detail: 'LVCC Loop Phase 1 opened May 2020 — 0.8-mile Convention Center loop, Tesla shuttles at ~35 mph for CES crowds.',
+    },
+    'vegas-expansion': {
+      detail: 'Vegas Loop expansion approved Nov 2023 — tunnels toward Encore, Westgate, and future airport connector; 68-mile master plan.',
+    },
+    'prufrock-v4': {
+      detail: 'Prufrock V4 TBM deployed Aug 2025 — all-electric boring machine, ~1 mile/week target, reduced surface disruption vs traditional TBMs.',
+    },
+    /* —— openai drill-down —— */
+    'nonprofit-launch': {
+      detail: 'OpenAI nonprofit launched Dec 2015 — $1B pledge from Musk, Altman, Brockman; mission stated as safe AGI for humanity.',
+      source: 'https://openai.com/about',
+    },
+    'dota-5v5': {
+      detail: 'OpenAI Five defeated OG pro Dota 2 team Jun 2018 — 5v5 with 20K training years; showcased large-scale RL on GPUs.',
+    },
+    'gpt-2-cautious': {
+      detail: 'GPT-2 staged release Feb 2019 — 1.5B params withheld initially over misuse concerns; sparked industry debate on responsible disclosure.',
+    },
+    'gpt-3-api': {
+      detail: 'GPT-3 API private beta Jun 2020 — 175B-parameter davinci model; first commercial LLM API at scale before ChatGPT.',
+    },
+    /* —— cluster base milestones —— */
+    'xai-founded': {
+      detail: 'xAI Corp announced Jul 12 2023 — Elon Musk, independent of X Corp initially; mission statement emphasized understanding the universe.',
+      source: 'https://x.ai',
+    },
+    'grok-1': {
+      detail: 'Grok-1 MoE: 314B total params, 86B active per token — trained on Colossus predecessor cluster; humor-oriented system prompt on X.',
+      source: 'https://github.com/xai-org/grok-1',
+    },
+    'series-b': {
+      detail: '$6B Series B May 2024 — Valor, a16z, Sequoia, Fidelity among investors; proceeds earmarked for Colossus GPU build-out.',
+    },
+    'colossus-announce': {
+      detail: 'Colossus announced Jun 5 2024 — public 100K H100 target, Memphis TN site; described as world’s largest AI training cluster at announcement.',
+    },
+    'colossus-live': {
+      detail: 'Colossus went live Aug 2024 — 122 days from bare slab to training Grok-2; xAI cited fastest supercomputer stand-up in industry.',
+    },
+    '100k-gpus': {
+      detail: '≈100,000 GPUs operational Dec 2024 — NVIDIA H100 fleet; power draw estimated in hundreds of MW at full utilization.',
+    },
+    'scale-200k': {
+      detail: 'Scaled to 200K GPUs in 92 days (Feb 2025) — announced alongside Grok 3; mixed H100/B200 generations in same fabric.',
+    },
+    'colossus-2': {
+      detail: 'Colossus 2 site Mar 2025 — ~1M sq ft Grimes County TX; paired with Terafab for chip packaging and on-site power.',
+    },
+    'colossus-2-gw': {
+      detail: 'Colossus 2 ~1 GW online Jan 2026 — utility-scale power envelope; supports 555K GPU roadmap cited in permit filings.',
+    },
+    '555k-target': {
+      detail: '555K GPU target Mar 2026 — Shelby/Grimes permit bundle referenced $659M infrastructure phase; largest disclosed AI cluster roadmap.',
+    },
+    'grok-4': {
+      detail: 'Grok 4 Jul 2025 — multi-agent orchestration, improved math/code benchmarks; trained on expanded Colossus 200K fleet.',
+    },
+    'xai-merge': {
+      detail: 'SpaceX acquires xAI Feb 2026 — reported ~$1.25T combined valuation pre-IPO; merges Grok, Colossus, and launch ops under SPCX.',
+    },
+    'terrafab-launch': {
+      detail: 'Terafab announced Mar 21 2026 Austin proto — advanced packaging fab aligned with SpaceX/xAI vertical integration post-merger.',
+    },
+    'intel-joins': {
+      detail: 'Intel joins Terafab Apr 7 2026 — 18A foundry node for pilot wafers; Supermicro named for rack/liquid-cooling infra Apr 2026.',
+      source: 'https://www.intel.com/content/www/us/en/foundry/overview.html',
+    },
+    '55b-filing': {
+      detail: '$55B Terafab phase disclosed May 2026 SEC filings — upper bound $119B multi-decade; Grimes County abatement tied to job targets.',
+    },
+    's-1-public': {
+      detail: 'Public S-1 filed May 20 2026 — first detailed Starlink revenue, Starship capex, and xAI/Colossus segment breakdown.',
+      source: 'https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=S-1',
+    },
+    'ipo-price': {
+      detail: '$135 offer price · $1.77T market cap · ~$75B primary raise — largest US IPO by proceeds; SPCX ticker reserved on Nasdaq + Texas exchange.',
+    },
+    'ipo-priced': {
+      detail: 'IPO priced Jun 11 2026 — 555.6M shares at $135; greenshoe option ~83M shares; institutional book >10× covered per roadshow leaks.',
+    },
+    'spcx-trade': {
+      detail: 'SPCX lists Jun 12 2026 — dual listing Nasdaq + Texas; day-one volume exceeded $12B; MSCI World inclusion effective T+1 Jun 13.',
+    },
+    'anthropic-lease': {
+      detail: 'Anthropic leases Colossus 1 capacity May 2026 — third-party training hours on xAI Memphis cluster post-IPO capital raise.',
+    },
+    /* —— portfolio base milestones —— */
+    'first-implant': {
+      detail: 'First human N1 implant Jan 2024 — Noland Arbaugh, quadriplegic; cursor control on laptop within weeks; PRIME study participant #1.',
+      source: 'https://neuralink.com/blog',
+    },
+    '21-patients': {
+      detail: '21 PRIME / Telepathy patients globally Jan 2026 — US, Canada, UK sites; speech-decoding trials exceed 15 WPM in subset of cohort.',
+    },
+    'series-e': {
+      detail: '$650M Series E Jun 2025 — ~$9B valuation; Founders Fund, Sequoia; funds high-volume N1 production line for 2026.',
+    },
+    'tsla-ath-498': {
+      detail: 'TSLA all-time high $498.83 Dec 22 2025 — post-election autonomy premium; market cap briefly exceeded $1.5T intraday.',
+      source: 'https://ir.tesla.com',
+    },
+    'tsla-snapshot': {
+      detail: 'TSLA ~$394 Jun 11 2026 — rotation into SPCX IPO week; investors rebalanced Mag7 exposure ahead of $75B SpaceX raise.',
+    },
+    'xai-acquires-x': {
+      detail: 'xAI acquires X Corp Mar 28 2025 — all-stock deal valuing X at ~$80B; Grok becomes default social graph for training data.',
+    },
+    'starship-v3': {
+      detail: 'Starship V3 Flight 12 May 22 2026 — first Pad 2 launch Boca Chica; ship catch attempted; payload capacity target 100+ tons LEO.',
+    },
+  };
+
   const TIMELINE_SECTIONS = [
     {
       id: 'cluster',
@@ -616,7 +888,82 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   function mergeBranchEvents(baseEvents, branchId) {
     const drill = TIMELINE_DRILLDOWN_EVENTS[branchId] || [];
     const merged = [...baseEvents.filter((e) => e.branch === branchId), ...drill];
-    return merged.sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
+    return merged.map(enrichEventWithDetail).sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
+  }
+
+  function enrichEventWithDetail(ev) {
+    const extra = TIMELINE_EVENT_DETAILS[ev.id];
+    if (!extra) return ev;
+    return {
+      ...ev,
+      detail: ev.detail || extra.detail,
+      source: ev.source || extra.source,
+    };
+  }
+
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function renderDetailTrigger(ev, accentColor, variant) {
+    const tooltipId = `detail-${ev.id}`;
+    const label = variant === 'info' ? 'info' : 'detail';
+    const triggerCls = variant === 'info'
+      ? 'detail-tooltip-trigger is-info'
+      : 'detail-tooltip-trigger';
+    const sourceLink = ev.source
+      ? `<a class="detail-tooltip-source" href="${escapeHtml(ev.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`
+      : '';
+    const approxSuffix = ev.approx ? ' ~' : '';
+
+    return `<span class="detail-tooltip-wrap" style="--detail-accent:${accentColor}">
+      <button type="button" class="${triggerCls}" aria-expanded="false" aria-controls="${tooltipId}-inline">${label}</button>
+      <span class="detail-tooltip" id="${tooltipId}" role="tooltip">
+        <span class="detail-tooltip-accent" aria-hidden="true"></span>
+        <strong class="detail-tooltip-title">${escapeHtml(ev.title)}</strong>
+        <time class="detail-tooltip-date">${escapeHtml(ev.date)}${approxSuffix}</time>
+        <p class="detail-tooltip-body">${escapeHtml(ev.detail)}</p>
+        ${sourceLink}
+      </span>
+    </span>`;
+  }
+
+  function renderDetailInlinePanel(ev, accentColor) {
+    const panelId = `detail-${ev.id}-inline`;
+    const sourceLink = ev.source
+      ? `<a class="detail-tooltip-source" href="${escapeHtml(ev.source)}" target="_blank" rel="noopener noreferrer">Source ↗</a>`
+      : '';
+    return `<div class="detail-inline-panel" id="${panelId}" style="--detail-accent:${accentColor}" hidden>
+      <p class="detail-inline-body">${escapeHtml(ev.detail)}</p>
+      ${sourceLink}
+    </div>`;
+  }
+
+  function initDrilldownDetailInteractions(container) {
+    if (!container) return;
+    container.querySelectorAll('.detail-tooltip-trigger').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const item = btn.closest('.timeline-drilldown-item');
+        if (!item) return;
+        const willExpand = !item.classList.contains('is-detail-expanded');
+        container.querySelectorAll('.timeline-drilldown-item.is-detail-expanded').forEach((openItem) => {
+          openItem.classList.remove('is-detail-expanded');
+          openItem.querySelector('.detail-tooltip-trigger')?.setAttribute('aria-expanded', 'false');
+          openItem.querySelector('.detail-inline-panel')?.setAttribute('hidden', '');
+        });
+        if (willExpand) {
+          item.classList.add('is-detail-expanded');
+          btn.setAttribute('aria-expanded', 'true');
+          item.querySelector('.detail-inline-panel')?.removeAttribute('hidden');
+        }
+      });
+    });
   }
 
   function renderDrilldownList(events, branchId, container) {
@@ -632,18 +979,30 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       <ol class="timeline-drilldown-list">
         ${events.map((ev) => {
           const approx = ev.approx ? ' <span class="activity-event-approx">~</span>' : '';
-          const tag = ev.drilldown ? ' <span class="timeline-drilldown-tag">detail</span>' : '';
+          const hasDetail = Boolean(ev.detail);
+          let tag = '';
+          if (ev.drilldown) {
+            tag = hasDetail
+              ? renderDetailTrigger(ev, color, 'tag')
+              : ' <span class="timeline-drilldown-tag">detail</span>';
+          } else if (hasDetail) {
+            tag = renderDetailTrigger(ev, color, 'info');
+          }
           const mergeCls = ev.merge ? ' is-merge' : '';
-          return `<li class="timeline-drilldown-item${mergeCls}">
+          const detailCls = hasDetail ? ' has-detail' : '';
+          const inlinePanel = hasDetail ? renderDetailInlinePanel(ev, color) : '';
+          return `<li class="timeline-drilldown-item${mergeCls}${detailCls}">
             <span class="timeline-drilldown-dot branch-${ev.branch}"></span>
             <div class="timeline-drilldown-body">
               <time class="timeline-drilldown-date">${ev.date}</time>
               <span class="timeline-drilldown-id">${ev.id}</span>${approx}${tag}
               <p class="timeline-drilldown-desc">${ev.title}</p>
+              ${inlinePanel}
             </div>
           </li>`;
         }).join('')}
       </ol>`;
+    initDrilldownDetailInteractions(container);
   }
 
   function renderTimelineGitgraph({ branches, events, containerId, legendId, singleBranch }) {

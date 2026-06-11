@@ -886,6 +886,156 @@ main {
   line-height: 1.45;
 }
 
+/* Detail hover tooltips + mobile tap expand */
+.detail-tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+  vertical-align: baseline;
+}
+
+.detail-tooltip-trigger {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  padding: 0.1rem 0.35rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  cursor: help;
+  line-height: 1.4;
+}
+
+.detail-tooltip-trigger.is-info {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+.detail-tooltip-trigger:hover,
+.detail-tooltip-trigger:focus-visible {
+  color: var(--detail-accent, var(--accent));
+  border-color: var(--detail-accent, var(--accent));
+  outline: none;
+}
+
+.detail-tooltip {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 6px);
+  z-index: 40;
+  width: min(22rem, calc(100vw - 2.5rem));
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  text-align: left;
+  pointer-events: none;
+}
+
+.detail-tooltip-accent {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: -0.75rem -0.875rem 0.625rem;
+  width: calc(100% + 1.75rem);
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--detail-accent, var(--accent));
+}
+
+.detail-tooltip-title {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+
+.detail-tooltip-date {
+  display: block;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.5rem;
+}
+
+.detail-tooltip-body {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.detail-tooltip-source {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--detail-accent, var(--accent));
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.detail-tooltip-source:hover {
+  text-decoration: underline;
+}
+
+.detail-inline-panel {
+  flex: 1 1 100%;
+  margin: 0.35rem 0 0;
+  padding: 0.625rem 0.75rem;
+  border-left: 3px solid var(--detail-accent, var(--accent));
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--surface);
+}
+
+.detail-inline-panel .detail-inline-body {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.detail-inline-panel .detail-tooltip-source {
+  pointer-events: auto;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .detail-tooltip-wrap:hover .detail-tooltip,
+  .detail-tooltip-wrap:focus-within .detail-tooltip {
+    display: block;
+    pointer-events: auto;
+  }
+
+  .detail-inline-panel {
+    display: none !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .detail-tooltip {
+    display: none !important;
+  }
+
+  .timeline-drilldown-item.is-detail-expanded .detail-inline-panel {
+    display: block;
+  }
+
+  .detail-tooltip-trigger {
+    cursor: pointer;
+  }
+}
+
+.timeline-drilldown-item.has-detail .detail-tooltip-trigger[aria-expanded="true"] {
+  color: var(--detail-accent, var(--accent));
+  border-color: var(--detail-accent, var(--accent));
+  background: color-mix(in srgb, var(--detail-accent, var(--accent)) 8%, var(--surface));
+}
+
 /* Single-lane drill-down gitgraph */
 .gitgraph.gitgraph-single {
   padding-right: 1.5rem;
