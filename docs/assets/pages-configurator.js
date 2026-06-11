@@ -509,7 +509,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
     if (legendEl) {
       legendEl.innerHTML = branches.map((b) =>
-        `<span class="legend-item"><span class="legend-swatch" style="background:${b.color}"></span>${b.label}</span>`
+        `<span class="legend-item"><span class="legend-swatch" style="background:${getBranchCssColor(b.id)}"></span>${b.label}</span>`
       ).join('');
     }
 
@@ -632,6 +632,233 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     border: 'rgba(0,0,0,0.08)',
     scale: ['#f1f3f5', '#dcfce7', '#86efac', '#16a34a'],
   };
+
+  const activityCharts = [];
+
+  /** Read gitgraph branch color from CSS custom properties. */
+  function getBranchCssColor(branchId) {
+    const varName = `--branch-${branchId}`;
+    const value = getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+    return value || '#525252';
+  }
+
+  function hexToRgb(hex) {
+    const n = parseInt(hex.replace('#', ''), 16);
+    if (Number.isNaN(n)) return [82, 82, 82];
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  }
+
+  function branchHeatmapScale(hex) {
+    const [r, g, b] = hexToRgb(hex);
+    return [
+      '#f8f9fa',
+      `rgba(${r}, ${g}, ${b}, 0.22)`,
+      `rgba(${r}, ${g}, ${b}, 0.52)`,
+      hex,
+    ];
+  }
+
+  function branchEventsFor(events, branchId) {
+    return events
+      .filter((ev) => ev.branch === branchId)
+      .sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
+  }
+
+  function expandEventsToCalendarData(branchEvents) {
+    const byMonth = {};
+    branchEvents.forEach((ev) => {
+      if (!byMonth[ev.sort]) byMonth[ev.sort] = [];
+      byMonth[ev.sort].push(ev);
+    });
+
+    const data = [];
+    Object.entries(byMonth).forEach(([sort, evs]) => {
+      const [y, m] = sort.split('-').map(Number);
+      const daysInMonth = new Date(y, m, 0).getDate();
+      evs.forEach((ev, i) => {
+        const day = Math.min(
+          daysInMonth,
+          Math.max(1, Math.round(((i + 1) * daysInMonth) / (evs.length + 1))),
+        );
+        const date = `${y}-${String(m).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        data.push([date, ev.merge ? 2 : 1]);
+      });
+    });
+    return data;
+  }
+
+  function calendarRangeFromEvents(branchEvents) {
+    if (!branchEvents.length) {
+      const y = new Date().getFullYear();
+      return [String(y), String(y)];
+    }
+    const sorts = branchEvents.map((ev) => ev.sort);
+    const min = sorts.reduce((a, b) => (a < b ? a : b));
+    const max = sorts.reduce((a, b) => (a > b ? a : b));
+    return [min.slice(0, 4), max.slice(0, 4)];
+  }
+
+  function formatSortSpan(events) {
+    if (!events.length) return '—';
+    return `${events[0].date} – ${events[events.length - 1].date}`;
+  }
+
+  function renderBranchEventList(events) {
+    return events.map((ev) => {
+      const approx = ev.approx ? ' <span class="activity-event-approx">~</span>' : '';
+      return `<li class="activity-event-item">
+        <span class="activity-event-date">${ev.date}</span>
+        <span class="activity-event-id">${ev.id}</span>${approx}
+        <span>${ev.title}</span>
+      </li>`;
+    }).join('');
+  }
+
+  function initBranchActivityChart(branchId, branchEvents, container) {
+    if (!container || typeof echarts === 'undefined' || container.dataset.chartReady === '1') return;
+
+    const color = getBranchCssColor(branchId);
+    const calendarData = expandEventsToCalendarData(branchEvents);
+    const [rangeStart, rangeEnd] = calendarRangeFromEvents(branchEvents);
+    const range = rangeStart === rangeEnd ? rangeStart : [rangeStart, rangeEnd];
+
+    const chart = echarts.init(container, null, { renderer: 'canvas' });
+    chart.setOption({
+      backgroundColor: CHART.bg,
+      tooltip: {
+        backgroundColor: '#ffffff',
+        borderColor: CHART.border,
+        textStyle: { color: '#1a1a1a', fontSize: 11 },
+        formatter: (p) => `${p.data[0]}<br/>${p.data[1]} milestone${p.data[1] === 1 ? '' : 's'}`,
+      },
+      visualMap: {
+        min: 0,
+        max: 2,
+        show: false,
+        inRange: { color: branchHeatmapScale(color) },
+      },
+      calendar: {
+        range,
+        cellSize: ['auto', 10],
+        top: 4,
+        left: 12,
+        right: 8,
+        bottom: 4,
+        itemStyle: {
+          borderWidth: 2,
+          borderColor: '#ffffff',
+          color: CHART.grid,
+        },
+        yearLabel: { show: false },
+        monthLabel: {
+          color: CHART.text,
+          fontSize: 9,
+          nameMap: 'en',
+          margin: 6,
+        },
+        dayLabel: {
+          firstDay: 0,
+          color: CHART.text,
+          fontSize: 8,
+          nameMap: ['', 'M', '', 'W', '', 'F', ''],
+        },
+        splitLine: { show: false },
+      },
+      series: [{
+        type: 'heatmap',
+        coordinateSystem: 'calendar',
+        data: calendarData,
+      }],
+    });
+
+    container.dataset.chartReady = '1';
+    activityCharts.push(chart);
+  }
+
+  function renderActivityBranches() {
+    const root = document.getElementById('activity-branches');
+    if (!root) return;
+
+    const groups = [
+      {
+        id: 'cluster',
+        title: 'xAI · Colossus · Terafab · IPO',
+        meta: `${TIMELINE_CLUSTER_EVENTS.length} events · 4 branches`,
+        open: true,
+        branches: TIMELINE_CLUSTER_BRANCHES,
+        events: TIMELINE_CLUSTER_EVENTS,
+        branchOpen: true,
+      },
+      {
+        id: 'portfolio',
+        title: 'Elon portfolio · ventures',
+        meta: `${TIMELINE_PORTFOLIO_EVENTS.length} events · 6 branches`,
+        open: false,
+        branches: TIMELINE_PORTFOLIO_BRANCHES,
+        events: TIMELINE_PORTFOLIO_EVENTS,
+        branchOpen: false,
+      },
+    ];
+
+    root.innerHTML = groups.map((group) => {
+      const branchPanels = group.branches.map((branch) => {
+        const branchEvents = branchEventsFor(group.events, branch.id);
+        const color = getBranchCssColor(branch.id);
+        const span = formatSortSpan(branchEvents);
+        const openAttr = group.branchOpen ? ' open' : '';
+
+        return `
+          <details class="activity-branch" data-branch="${branch.id}"${openAttr}>
+            <summary>
+              <span class="activity-branch-swatch" style="background:${color}"></span>
+              <span class="activity-branch-name">${branch.label}</span>
+              <span class="activity-branch-meta">${branchEvents.length} events · ${span}</span>
+            </summary>
+            <div class="activity-branch-body">
+              <div class="activity-branch-chart" id="activity-chart-${branch.id}" role="img" aria-label="${branch.label} milestone activity heatmap"></div>
+              <ol class="activity-event-list">${renderBranchEventList(branchEvents)}</ol>
+            </div>
+          </details>`;
+      }).join('');
+
+      const openAttr = group.open ? ' open' : '';
+      return `
+        <details class="activity-group" data-group="${group.id}"${openAttr}>
+          <summary>
+            <span>${group.title}</span>
+            <span class="activity-group-meta">${group.meta}</span>
+          </summary>
+          <div class="activity-branch-list">${branchPanels}</div>
+        </details>`;
+    }).join('');
+
+    root.querySelectorAll('.activity-branch').forEach((details) => {
+      const branchId = details.dataset.branch;
+      const tryInit = () => {
+        if (!details.open) return;
+        const chartEl = details.querySelector('.activity-branch-chart');
+        const group = groups.find((g) => g.branches.some((b) => b.id === branchId));
+        if (!group) return;
+        const branchEvents = branchEventsFor(group.events, branchId);
+        initBranchActivityChart(branchId, branchEvents, chartEl);
+      };
+
+      details.addEventListener('toggle', tryInit);
+      if (details.open) tryInit();
+    });
+
+    root.querySelectorAll('.activity-group').forEach((groupEl) => {
+      groupEl.addEventListener('toggle', () => {
+        if (!groupEl.open) return;
+        groupEl.querySelectorAll('.activity-branch[open] .activity-branch-chart').forEach((chartEl) => {
+          const branchId = chartEl.id.replace('activity-chart-', '');
+          const group = groups.find((g) => g.branches.some((b) => b.id === branchId));
+          if (!group) return;
+          initBranchActivityChart(branchId, branchEventsFor(group.events, branchId), chartEl);
+        });
+      });
+    });
+  }
 
   function initActivityCharts() {
     if (typeof echarts === 'undefined') return;
@@ -756,12 +983,13 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       }],
     });
 
+    activityCharts.push(cal, cart);
+
     let resizeTimer;
     window.addEventListener('resize', () => {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(() => {
-        cal.resize();
-        cart.resize();
+        activityCharts.forEach((c) => c.resize());
       }, 120);
     });
   }
@@ -791,6 +1019,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   function boot() {
     init();
+    renderActivityBranches();
     initActivityCharts();
     initTimelineGitgraph();
     initNavHighlight();
