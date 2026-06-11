@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160" role="img" aria-label="Vision pipeline">
+  <rect width="280" height="160" fill="#1a1a22" rx="8"/>
+  <rect width="280" height="40" fill="#4a3aff" rx="8"/>
+  <text x="20" y="27" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#0f0f12">Vision</text>
+  <text x="20" y="70" font-family="system-ui,sans-serif" font-size="13" fill="#e8e8ec">Detection · Classification</text>
+  <rect x="20" y="90" width="30" height="50" fill="#4a3aff" opacity="0.7"/>
+  <rect x="60" y="110" width="30" height="30" fill="#8af" opacity="0.7"/>
+  <rect x="100" y="80" width="30" height="60" fill="#4a3aff" opacity="0.5"/>
+  <rect x="140" y="100" width="30" height="40" fill="#8af" opacity="0.6"/>
+</svg>

@@ -7,20 +7,28 @@
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
   <style>
     body { font-family: system-ui, sans-serif; margin: 0; background: #0f0f12; color: #e8e8ec; }
-    header { padding: 2rem; text-align: center; border-bottom: 1px solid #333; }
+    header { padding: 1.5rem 2rem 2rem; text-align: center; border-bottom: 1px solid #333; }
+    .banner { max-width: 900px; width: 100%; margin: 0 auto 1rem; display: block; border-radius: 12px; }
     h1 { margin: 0; font-size: 1.75rem; }
     .sub { color: #888; margin-top: 0.5rem; }
     main { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+    .demo-reel { text-align: center; margin: 1.5rem 0; }
+    .demo-reel img { max-width: 100%; border-radius: 8px; border: 1px solid #333; }
+    .panels { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 1rem 0 2rem; }
+    .panels img { border-radius: 8px; max-width: 200px; }
     .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 768px) { .charts { grid-template-columns: 1fr; } }
     .chart { height: 320px; background: #1a1a22; border-radius: 8px; }
-    nav { margin: 1.5rem 0; }
-    nav a { color: #8af; margin-right: 1rem; }
+    nav { margin: 1.5rem 0; text-align: center; }
+    nav a { color: #8af; margin: 0 0.75rem; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    .note { color: #888; font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem; }
     footer { text-align: center; padding: 2rem; color: #666; font-size: 0.875rem; }
   </style>
 </head>
 <body>
   <header>
+    <img class="banner" src="docs/assets/banner.svg" alt="grok-repo-template banner" />
     <h1>🧠 grok-repo-template</h1>
     <p class="sub">Grok-native template · Colossus/Dojo routing · SuperHeavyGrok</p>
   </header>
@@ -31,13 +39,25 @@
       <a href="LLMS.md">LLMS.md</a>
       <a href="docs/colossus-cluster-setup.md">Colossus Setup</a>
     </nav>
-    <p>Interactive activity heatmaps (ECharts) — pipeline runs, agent activity, contributions.</p>
+
+    <section class="demo-reel">
+      <p>Demo reel — static charts in README; <strong>interactive ECharts below</strong>.</p>
+      <img src="docs/assets/demo-scroll.gif" alt="Scrolling demo reel" width="800" />
+      <div class="panels">
+        <img src="docs/assets/panel-vision.svg" alt="Vision" />
+        <img src="docs/assets/panel-agents.svg" alt="Agents" />
+        <img src="docs/assets/panel-colossus.svg" alt="Colossus" />
+        <img src="docs/assets/panel-dvc.svg" alt="DVC" />
+      </div>
+    </section>
+
+    <p class="note">Year activity heatmaps — pipeline runs, agent activity, contributions. README uses static graphs; this page is the live ECharts experience.</p>
     <div class="charts">
       <div id="calendar" class="chart"></div>
       <div id="cartesian" class="chart"></div>
     </div>
   </main>
-  <footer>SuperHeavyGrok · Grok 4.20 Heavy · Apache-2.0</footer>
+  <footer>SuperHeavyGrok · Grok 4.20 Heavy · Apache-2.0 · <a href="https://github.com/fornevercollective/grok-repo-template" style="color:#8af">fornevercollective/grok-repo-template</a></footer>
   <script>
     const cal = echarts.init(document.getElementById('calendar'));
     const year = 2026;

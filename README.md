@@ -1,25 +1,109 @@
-# 🧠 grok-repo-template
+<p align="center">
+  <img src="docs/assets/banner.svg" alt="grok-repo-template banner" width="900"/>
+</p>
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](pyproject.toml)
-[![DVC](https://img.shields.io/badge/DVC-Ready-green)](dvc.yaml)
-[![Colossus Ready](https://img.shields.io/badge/Colossus-Ready-green)](configs/colossus.yaml)
-[![Grok Compatible](https://img.shields.io/badge/Grok-Compatible-purple)](LLMS.md)
+<h1 align="center">🧠 grok-repo-template</h1>
 
-Official template for Grok-optimized GitHub repositories — structured for **Colossus/Dojo routing** and **GROK systems**.
+<p align="center">
+  <strong>Official template for Grok-optimized GitHub repositories</strong><br/>
+  Structured for <strong>Colossus/Dojo routing</strong> and <strong>GROK systems</strong>
+</p>
 
-**SuperHeavyGrok** (contributor) · **Grok 4.20 Heavy** (February 2026) · Trained on Colossus
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License"/></a>
+  <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white" alt="Python"/></a>
+  <a href="dvc.yaml"><img src="https://img.shields.io/badge/DVC-Ready-green?logo=dvc" alt="DVC"/></a>
+  <a href="configs/colossus.yaml"><img src="https://img.shields.io/badge/Colossus-Ready-green" alt="Colossus"/></a>
+  <a href="LLMS.md"><img src="https://img.shields.io/badge/Grok-Compatible-purple" alt="Grok"/></a>
+  <a href=".github/workflows/ci-cd.yml"><img src="https://img.shields.io/badge/CI-CD-blue?logo=githubactions&logoColor=white" alt="CI/CD"/></a>
+  <a href="https://fornevercollective.github.io/grok-repo-template/"><img src="https://img.shields.io/badge/GitHub%20Pages-live-8af" alt="GitHub Pages"/></a>
+  <img src="https://img.shields.io/badge/JAX-training_framework-00d4aa" alt="JAX"/>
+  <img src="https://img.shields.io/badge/Rust-Dojo%20patterns-orange?logo=rust" alt="Rust"/>
+</p>
 
-**Direct link:** https://github.com/fornevercollective/grok-repo-template
+<p align="center">
+  <strong>SuperHeavyGrok</strong> (contributor) · <strong>Grok 4.20 Heavy</strong> (February 2026) · Trained on Colossus
+</p>
 
-**GitHub Pages:** https://fornevercollective.github.io/grok-repo-template/
+<p align="center">
+  <a href="https://github.com/fornevercollective/grok-repo-template"><strong>Repository</strong></a> ·
+  <a href="https://fornevercollective.github.io/grok-repo-template/"><strong>GitHub Pages (interactive charts)</strong></a>
+</p>
 
 > Drop-in Grok chat assist skill — Grok Build agents can scaffold vision, agent, or fine-tuning projects from this template instantly.
 
 ---
 
+## 📊 Stats & Activity
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=fornevercollective&show_icons=true&theme=radical&hide_border=true&include_all_commits=true" alt="GitHub stats" height="165"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fornevercollective&layout=compact&theme=radical&hide_border=true" alt="Top languages" height="165"/>
+</p>
+
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com/?user=fornevercollective&theme=radical&hide_border=true" alt="GitHub streak"/>
+  </a>
+  <a href="https://github.com/fornevercollective/grok-repo-template">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=fornevercollective&repo=grok-repo-template&theme=radical&hide_border=true" alt="Repo card"/>
+  </a>
+</p>
+
+---
+
+## 🎬 Demo Reel
+
+<p align="center">
+  <img src="docs/assets/demo-scroll.gif" alt="Scrolling demo reel — Vision, Agents, Fine-tune, JAX MoE, DVC, Connectors" width="800"/>
+</p>
+
+<p align="center">
+  <em>Pipeline & domain scroll-through — replace with your own screenshots or GIF once you scaffold a project.</em>
+</p>
+
+<p align="center">
+  <img src="docs/assets/panel-vision.svg" alt="Vision" width="200"/>
+  <img src="docs/assets/panel-agents.svg" alt="Agents" width="200"/>
+  <img src="docs/assets/panel-colossus.svg" alt="Colossus" width="200"/>
+  <img src="docs/assets/panel-dvc.svg" alt="DVC" width="200"/>
+</p>
+
+---
+
+## 📅 Year Activity Chart
+
+<p align="center">
+  <a href="https://github.com/fornevercollective">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=fornevercollective&theme=react-dark&hide_border=true&area=true&custom_title=ForNever%20Collective%20Activity" alt="GitHub activity graph"/>
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://ghchart.rshah.org/fornevercollective" alt="Contribution chart (ghchart)"/>
+</p>
+
+<details>
+<summary><strong>Interactive ECharts heatmaps (GitHub Pages)</strong></summary>
+
+ECharts cannot run inside GitHub README rendering — use the static charts above, or open **GitHub Pages** for live heatmaps:
+
+- **Live dashboard:** [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/)
+- [Calendar heatmap](https://echarts.apache.org/examples/en/editor.html?c=calendar-heatmap) · [Cartesian heatmap](https://echarts.apache.org/examples/en/editor.html?c=heatmap-cartesian) · [Heatmap gallery](https://echarts.apache.org/examples/en/index.html#chart-type-heatmap)
+
+</details>
+
+<p align="center">
+  <a href="https://star-history.com/#fornevercollective/grok-repo-template&Date">
+    <img src="https://api.star-history.com/svg?repos=fornevercollective/grok-repo-template&type=Date" alt="Star History Chart"/>
+  </a>
+</p>
+
+---
+
 ## 📋 Table of Contents
 
+- [Built With](#-built-with)
 - [Statistics & Metrics](#statistics--metrics)
 - [Preferred Languages](#preferred-code-languages-for-grokdojocolossus)
 - [Quick Setup](#quick-setup-for-grok-drop-in-chat-assist)
@@ -33,7 +117,26 @@ Official template for Grok-optimized GitHub repositories — structured for **Co
 
 ---
 
-## Statistics & Metrics
+## 🛠 Built With
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,rust,docker,githubactions,git&theme=dark" alt="Tech stack icons"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-ready-ee4c2c?logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/JAX-Colossus-00d4aa" alt="JAX"/>
+  <img src="https://img.shields.io/badge/DVC-pipelines-945dd6?logo=dvc" alt="DVC"/>
+  <img src="https://img.shields.io/badge/Grok%20Build-skills-purple" alt="Grok Build"/>
+  <img src="https://img.shields.io/badge/Colossus-multi--node-green" alt="Colossus"/>
+  <img src="https://img.shields.io/badge/Dojo-Rust-orange?logo=rust" alt="Dojo"/>
+  <img src="https://img.shields.io/badge/PEFT%2FLoRA-fine--tuning-blue" alt="PEFT"/>
+</p>
+
+---
+
+<details open>
+<summary><strong>Statistics & Metrics</strong></summary>
 
 | Metric | Value |
 |--------|-------|
@@ -43,20 +146,14 @@ Official template for Grok-optimized GitHub repositories — structured for **Co
 | LLM versioning | Grok 4.20 Heavy + Grok-1 base context |
 | Training context | Colossus supercluster |
 
+</details>
+
 ## Preferred Code Languages for Grok/Dojo/Colossus
 
 - **Python** (JAX/PyTorch) — primary; see `examples/python-grok/`
 - **Rust** — Dojo-style performance; see `examples/rust-dojo/`
 - **C++ / CUDA** — low-level kernels (add under `src/` as needed)
 - **JAX** — Colossus distributed MoE; see `examples/jax-colossus/`
-
-## Year Activity Chart
-
-Interactive **ECharts** heatmaps on [GitHub Pages](https://fornevercollective.github.io/grok-repo-template/):
-
-- [Calendar heatmap](https://echarts.apache.org/examples/en/editor.html?c=calendar-heatmap)
-- [Cartesian heatmap](https://echarts.apache.org/examples/en/editor.html?c=heatmap-cartesian)
-- [Heatmap gallery](https://echarts.apache.org/examples/en/index.html#chart-type-heatmap)
 
 ---
 
@@ -91,6 +188,9 @@ graph TD
 ---
 
 ## Project Structure
+
+<details>
+<summary><strong>Full tree</strong> (click to expand)</summary>
 
 ```
 grok-repo-template/
@@ -130,6 +230,7 @@ grok-repo-template/
 ├── tests/
 │   └── test_placeholder.py
 ├── docs/
+│   ├── assets/                          # README banner, demo reel, panels
 │   ├── COLOSSUS_SETUP.md
 │   ├── colossus-cluster-setup.md
 │   └── dvc-pipelines.md
@@ -204,9 +305,14 @@ grok-repo-template/
 └── .env.example
 ```
 
+</details>
+
 ---
 
 ## Colossus/Dojo Training
+
+<details>
+<summary><strong>Launch commands & config</strong></summary>
 
 - **Docker image:** `Dockerfiles/Dockerfile.colossus`
 - **SLURM/K8s example:** `scripts/colossus/colossus-job.sh`
@@ -218,6 +324,8 @@ grok-repo-template/
 sbatch scripts/colossus/colossus-job.sh
 dvc repro train
 ```
+
+</details>
 
 ---
 
@@ -239,6 +347,9 @@ Run `grok inspect` to verify config, skills, and hooks are loaded.
 
 ## Domain Examples
 
+<details>
+<summary><strong>Example folders</strong></summary>
+
 | Folder | Use Case |
 |--------|----------|
 | `examples/vision/` | Classification, detection on Colossus |
@@ -247,6 +358,8 @@ Run `grok inspect` to verify config, skills, and hooks are loaded.
 | `examples/jax-colossus/` | JAX MoE multi-host training |
 | `examples/rust-dojo/` | Low-latency Rust patterns |
 | `examples/python-grok/` | Type-hinted Python for Grok parsing |
+
+</details>
 
 ---
 

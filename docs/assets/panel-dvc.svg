@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="160" viewBox="0 0 280 160" role="img" aria-label="DVC pipelines">
+  <rect width="280" height="160" fill="#1a1a22" rx="8"/>
+  <rect width="280" height="40" fill="#f5a623" rx="8"/>
+  <text x="20" y="27" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#0f0f12">DVC</text>
+  <text x="20" y="70" font-family="system-ui,sans-serif" font-size="13" fill="#e8e8ec">Pipelines · Repro</text>
+  <rect x="30" y="95" width="50" height="24" rx="4" fill="#f5a623" opacity="0.8"/>
+  <rect x="95" y="95" width="50" height="24" rx="4" fill="#f5a623" opacity="0.6"/>
+  <rect x="160" y="95" width="50" height="24" rx="4" fill="#f5a623" opacity="0.4"/>
+  <path d="M80 107 H95 M145 107 H160" stroke="#888" stroke-width="2" marker-end="url(#a)"/>
+</svg>

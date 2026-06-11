@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="140" viewBox="0 0 900 140" role="img" aria-label="grok-repo-template banner">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f12"/>
+      <stop offset="50%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#0f0f12"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a3aff"/>
+      <stop offset="50%" stop-color="#8af"/>
+      <stop offset="100%" stop-color="#00d4aa"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="140" fill="url(#bg)" rx="12"/>
+  <rect x="2" y="2" width="896" height="136" fill="none" stroke="url(#accent)" stroke-width="2" rx="11" opacity="0.6"/>
+  <text x="450" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#e8e8ec">>à grok-repo-template</text>
+  <text x="450" y="92" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#888">Grok-native · Colossus/Dojo · DVC Pipelines · SuperHeavyGrok</text>
+  <circle cx="120" cy="70" r="28" fill="#1a1a22" stroke="#4a3aff" stroke-width="2"/>
+  <circle cx="780" cy="70" r="28" fill="#1a1a22" stroke="#8af" stroke-width="2"/>
+  <text x="120" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#8af">G</text>
+  <text x="780" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#4a3aff">C</text>
+</svg>
