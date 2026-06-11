@@ -9,17 +9,19 @@
   <link rel="stylesheet" href="docs/assets/pages.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="site-header-inner">
       <div class="site-brand">
-        <h1>Grok Assembly Line</h1>
+        <a href="#top" class="site-brand-link" id="top">
+          <h1>Grok Assembly Line</h1>
+        </a>
         <p class="tagline">Template configurator · Colossus / DVC · fornevercollective/grok-repo-template</p>
       </div>
       <nav class="site-nav" aria-label="Page sections">
-        <a href="#activity">Activity</a>
-        <a href="#timeline">Timeline</a>
-        <a href="#quick-start">Templates</a>
-        <a href="#configurator">Wizard</a>
+        <a href="#activity" data-section="activity">Activity</a>
+        <a href="#timeline" data-section="timeline">Timeline</a>
+        <a href="#quick-start" data-section="quick-start">Quick Start</a>
+        <a href="#configurator" data-section="configurator">Configurator</a>
         <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -36,16 +38,24 @@
           <article class="chart-card chart-card-contributions" data-chart-theme="cluster">
             <header class="chart-card-header">
               <h3 class="chart-card-title">Contributions</h3>
-              <span class="chart-card-meta" id="calendar-meta">2026</span>
+              <div class="chart-year-nav" id="calendar-year-nav" aria-label="Contribution year">
+                <button type="button" class="chart-year-arrow" id="calendar-year-prev" aria-label="Previous year">←</button>
+                <span class="chart-year-label" id="calendar-meta">2026</span>
+                <button type="button" class="chart-year-arrow" id="calendar-year-next" aria-label="Next year">→</button>
+              </div>
             </header>
-            <div id="calendar" class="chart" role="img" aria-label="Contribution calendar heatmap"></div>
+            <div id="calendar" class="chart" role="img" aria-label="Contribution calendar heatmap by sector"></div>
           </article>
           <article class="chart-card chart-card-pipeline" data-chart-theme="portfolio">
             <header class="chart-card-header">
               <h3 class="chart-card-title">Pipeline runs</h3>
-              <span class="chart-card-meta">by stage · week</span>
+              <div class="chart-year-nav" id="pipeline-year-nav" aria-label="Pipeline year">
+                <button type="button" class="chart-year-arrow" id="pipeline-year-prev" aria-label="Previous year">←</button>
+                <span class="chart-year-label" id="pipeline-meta">2026</span>
+                <button type="button" class="chart-year-arrow" id="pipeline-year-next" aria-label="Next year">→</button>
+              </div>
             </header>
-            <div id="cartesian" class="chart" role="img" aria-label="Pipeline run heatmap"></div>
+            <div id="cartesian" class="chart" role="img" aria-label="Pipeline run heatmap by stage and month"></div>
           </article>
         </div>
       </div>

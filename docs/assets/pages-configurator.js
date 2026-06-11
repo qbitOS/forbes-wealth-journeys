@@ -821,6 +821,13 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     }
   }
 
+  function updateHashWithoutScroll(hash) {
+    const y = window.scrollY;
+    const url = hash ? `${window.location.pathname}${window.location.search}${hash}` : `${window.location.pathname}${window.location.search}`;
+    history.replaceState(null, '', url);
+    requestAnimationFrame(() => window.scrollTo(0, y));
+  }
+
   function setTimelineTab(index, { syncActivity = true } = {}) {
     timelineSyncLock = true;
     const tabs = TIMELINE_SECTIONS;
@@ -858,11 +865,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
     }
 
-    if (history.replaceState) {
-      const branch = timelineState.branchFocus[section.id];
-      const hash = branch === 'all' ? `#timeline-${section.id}` : `#timeline-${section.id}-${branch}`;
-      history.replaceState(null, '', hash);
-    }
+    const branch = timelineState.branchFocus[section.id];
+    const hash = branch === 'all' ? `#timeline-${section.id}` : `#timeline-${section.id}-${branch}`;
+    updateHashWithoutScroll(hash);
     timelineSyncLock = false;
   }
 
@@ -890,10 +895,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       syncActivityFromTimeline(sectionId, branchId);
     }
 
-    if (history.replaceState) {
-      const hash = branchId === 'all' ? `#timeline-${sectionId}` : `#timeline-${sectionId}-${branchId}`;
-      history.replaceState(null, '', hash);
-    }
+    const hash = branchId === 'all' ? `#timeline-${sectionId}` : `#timeline-${sectionId}-${branchId}`;
+    updateHashWithoutScroll(hash);
     timelineSyncLock = false;
   }
 
@@ -916,7 +919,10 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     root.innerHTML = pills;
 
     root.querySelectorAll('.timeline-company-pill').forEach((pill) => {
-      pill.addEventListener('click', () => setTimelineBranch(section.id, pill.dataset.branch));
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTimelineBranch(section.id, pill.dataset.branch);
+      });
     });
   }
 
@@ -928,11 +934,24 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     const nextBtn = document.getElementById('timeline-tab-next');
 
     document.querySelectorAll('.timeline-tab-btn').forEach((btn, i) => {
-      btn.addEventListener('click', () => setTimelineTab(i));
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTimelineTab(i);
+      });
     });
 
-    if (prevBtn) prevBtn.addEventListener('click', () => setTimelineTab(timelineState.tabIndex - 1));
-    if (nextBtn) nextBtn.addEventListener('click', () => setTimelineTab(timelineState.tabIndex + 1));
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTimelineTab(timelineState.tabIndex - 1);
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setTimelineTab(timelineState.tabIndex + 1);
+      });
+    }
 
     if (tabList) {
       let touchStartX = 0;
@@ -1247,6 +1266,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
+  const ACTIVITY_YEARS = [2023, 2024, 2025, 2026];
+
   const PIPELINE_STAGE_BRANCHES = {
     DVC: 'main',
     CI: 'colossus',
@@ -1257,10 +1278,197 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     FT: 'openai',
   };
 
+  const activityYearState = {
+    calendar: ACTIVITY_YEARS[ACTIVITY_YEARS.length - 1],
+    pipeline: ACTIVITY_YEARS[ACTIVITY_YEARS.length - 1],
+  };
+
+  let overviewCalendarChart = null;
+  let overviewPipelineChart = null;
+
   function heatmapColorFromScale(scale, value, max) {
     if (!value || value <= 0) return scale[0];
     const idx = Math.min(scale.length - 1, Math.round((value / max) * (scale.length - 1)));
     return scale[idx];
+  }
+
+  function sortKeyToDate(sortKey, index, total) {
+    const [y, m] = sortKey.split('-').map(Number);
+    const daysInMonth = new Date(y, m, 0).getDate();
+    const day = Math.min(
+      daysInMonth,
+      Math.max(1, Math.round(((index + 1) * daysInMonth) / (total + 1))),
+    );
+    return `${y}-${String(m).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+  }
+
+  function buildSectorContributionIndex() {
+    const byDate = new Map();
+    const allEvents = [...TIMELINE_CLUSTER_EVENTS, ...TIMELINE_PORTFOLIO_EVENTS];
+
+    allEvents.forEach((ev) => {
+      const year = Number(ev.sort.slice(0, 4));
+      if (!ACTIVITY_YEARS.includes(year)) return;
+      const siblings = allEvents.filter((e) => e.sort === ev.sort);
+      const idx = siblings.findIndex((e) => e.id === ev.id);
+      const date = sortKeyToDate(ev.sort, idx, siblings.length);
+      const key = date;
+      if (!byDate.has(key)) byDate.set(key, { branch: ev.branch, count: 0 });
+      const entry = byDate.get(key);
+      entry.count += ev.merge ? 3 : 2;
+      entry.branch = ev.branch;
+    });
+
+    return byDate;
+  }
+
+  const sectorContributionIndex = buildSectorContributionIndex();
+
+  function buildCalendarDataForYear(year) {
+    const data = [];
+    const branchLabels = Object.fromEntries(
+      [...TIMELINE_CLUSTER_BRANCHES, ...TIMELINE_PORTFOLIO_BRANCHES].map((b) => [b.id, b.label]),
+    );
+
+    for (let m = 0; m < 12; m++) {
+      const daysInMonth = new Date(year, m + 1, 0).getDate();
+      for (let d = 1; d <= daysInMonth; d++) {
+        const date = `${year}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        const hit = sectorContributionIndex.get(date);
+        if (hit) {
+          data.push([date, hit.count, hit.branch]);
+          continue;
+        }
+        const noise = Math.random();
+        if (noise < 0.18) {
+          const branches = year >= 2025
+            ? ['grok', 'colossus', 'terrafab', 'tesla', 'spacex-ops']
+            : year >= 2024
+              ? ['grok', 'colossus', 'tesla', 'spacex-ops', 'neuralink']
+              : ['tesla', 'openai', 'neuralink', 'boring', 'grok'];
+          const branch = branches[Math.floor(Math.random() * branches.length)];
+          data.push([date, 1 + Math.floor(Math.random() * 4), branch]);
+        }
+      }
+    }
+
+    return { data, branchLabels };
+  }
+
+  function buildPipelineDataForYear(year) {
+    const stages = ['DVC', 'CI', 'Colossus', 'Grok', 'Vision', 'Agents', 'FT'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const data = [];
+    const yearBias = (year - 2023) * 0.6;
+
+    stages.forEach((stage, stageIdx) => {
+      months.forEach((_, monthIdx) => {
+        const seasonal = 1 + Math.sin((monthIdx + stageIdx) * 0.55) * 0.35;
+        const runs = Math.max(
+          0,
+          Math.round((2 + yearBias + seasonal * 2.5 + Math.random() * 4) * (stage === 'Colossus' || stage === 'Grok' ? 1.2 : 1)),
+        );
+        if (runs > 0) data.push([stageIdx, monthIdx, runs]);
+      });
+    });
+
+    return { stages, months, data };
+  }
+
+  function renderOverviewCalendar(year) {
+    if (!overviewCalendarChart) return;
+    const { data, branchLabels } = buildCalendarDataForYear(year);
+    const meta = document.getElementById('calendar-meta');
+    if (meta) meta.textContent = String(year);
+
+    overviewCalendarChart.setOption({
+      calendar: { range: year },
+      series: [{
+        data,
+        itemStyle: {
+          color: (params) => {
+            const branchId = params.data[2] || 'main';
+            const scale = branchHeatmapScale(getBranchCssColor(branchId));
+            return heatmapColorFromScale(scale, params.data[1], 6);
+          },
+        },
+      }],
+      tooltip: {
+        formatter: (p) => {
+          const branchId = p.data[2] || 'main';
+          const label = branchLabels[branchId] || branchId;
+          return `${p.data[0]}<br/><span style="color:${getBranchCssColor(branchId)}">${label}</span> · ${p.data[1]} events`;
+        },
+      },
+    });
+  }
+
+  function renderOverviewPipeline(year) {
+    if (!overviewPipelineChart) return;
+    const { stages, months, data } = buildPipelineDataForYear(year);
+    const stageColors = stages.map((stage) => getBranchCssColor(PIPELINE_STAGE_BRANCHES[stage] || 'main'));
+    const meta = document.getElementById('pipeline-meta');
+    if (meta) meta.textContent = String(year);
+
+    overviewPipelineChart.setOption({
+      xAxis: {
+        data: stages,
+        axisLabel: {
+          rich: Object.fromEntries(
+            stages.map((stage, i) => [`s${i}`, { color: stageColors[i], fontWeight: 500 }]),
+          ),
+          formatter: (value, idx) => `{s${idx}|${value}}`,
+        },
+      },
+      yAxis: { data: months },
+      series: [{
+        data,
+        itemStyle: {
+          borderWidth: 3,
+          borderColor: '#ffffff',
+          color: (params) => {
+            const stageIdx = params.data[0];
+            const branchId = PIPELINE_STAGE_BRANCHES[stages[stageIdx]] || 'main';
+            const scale = branchHeatmapScale(getBranchCssColor(branchId));
+            return heatmapColorFromScale(scale, params.data[2], 12);
+          },
+        },
+      }],
+      tooltip: {
+        formatter: (p) => `${stages[p.data[0]]} · ${months[p.data[1]]} ${year}<br/>${p.data[2]} runs`,
+      },
+    });
+  }
+
+  function bindYearNav({ minYear, maxYear, stateKey, onChange, prevId, nextId }) {
+    const prevBtn = document.getElementById(prevId);
+    const nextBtn = document.getElementById(nextId);
+    const syncButtons = () => {
+      if (prevBtn) prevBtn.disabled = activityYearState[stateKey] <= minYear;
+      if (nextBtn) nextBtn.disabled = activityYearState[stateKey] >= maxYear;
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (activityYearState[stateKey] > minYear) {
+          activityYearState[stateKey] -= 1;
+          onChange(activityYearState[stateKey]);
+          syncButtons();
+        }
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (activityYearState[stateKey] < maxYear) {
+          activityYearState[stateKey] += 1;
+          onChange(activityYearState[stateKey]);
+          syncButtons();
+        }
+      });
+    }
+    syncButtons();
   }
 
   function initActivityCharts() {
@@ -1270,40 +1478,18 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     const cartesianEl = document.getElementById('cartesian');
     if (!calendarEl || !cartesianEl) return;
 
-    const year = new Date().getFullYear();
-    const meta = document.getElementById('calendar-meta');
-    if (meta) meta.textContent = String(year);
+    const startYear = activityYearState.calendar;
 
-    const calendarScale = branchHeatmapScale(getBranchCssColor('grok'));
-
-    const calendarData = [];
-    for (let m = 0; m < 12; m++) {
-      const daysInMonth = new Date(year, m + 1, 0).getDate();
-      for (let d = 1; d <= daysInMonth; d++) {
-        calendarData.push([
-          `${year}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`,
-          Math.floor(Math.random() * 8),
-        ]);
-      }
-    }
-
-    const cal = echarts.init(calendarEl, null, { renderer: 'canvas' });
-    cal.setOption({
+    overviewCalendarChart = echarts.init(calendarEl, null, { renderer: 'canvas' });
+    overviewCalendarChart.setOption({
       backgroundColor: CHART.bg,
       tooltip: {
         backgroundColor: '#ffffff',
         borderColor: CHART.border,
         textStyle: { color: '#1a1a1a', fontSize: 12 },
-        formatter: (p) => `${p.data[0]}<br/>${p.data[1]} events`,
-      },
-      visualMap: {
-        min: 0,
-        max: 8,
-        show: false,
-        inRange: { color: calendarScale },
       },
       calendar: {
-        range: year,
+        range: startYear,
         cellSize: ['auto', 11],
         top: 8,
         left: 16,
@@ -1332,34 +1518,29 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       series: [{
         type: 'heatmap',
         coordinateSystem: 'calendar',
-        data: calendarData,
+        data: [],
       }],
     });
+    renderOverviewCalendar(startYear);
 
-    const stages = ['DVC', 'CI', 'Colossus', 'Grok', 'Vision', 'Agents', 'FT'];
-    const weeks = ['W1', 'W2', 'W3', 'W4'];
-    const pipelineData = [
-      [0, 0, 5], [1, 0, 8], [2, 1, 3], [3, 2, 9],
-      [4, 3, 2], [5, 1, 6], [6, 2, 4],
-    ];
-    const stageColors = stages.map((stage) => {
-      const branchId = PIPELINE_STAGE_BRANCHES[stage] || 'main';
-      return getBranchCssColor(branchId);
-    });
+    const pipelineYear = activityYearState.pipeline;
+    const initialPipeline = buildPipelineDataForYear(pipelineYear);
+    const stageColors = initialPipeline.stages.map((stage) =>
+      getBranchCssColor(PIPELINE_STAGE_BRANCHES[stage] || 'main'),
+    );
 
-    const cart = echarts.init(cartesianEl, null, { renderer: 'canvas' });
-    cart.setOption({
+    overviewPipelineChart = echarts.init(cartesianEl, null, { renderer: 'canvas' });
+    overviewPipelineChart.setOption({
       backgroundColor: CHART.bg,
       grid: { top: 8, left: 48, right: 12, bottom: 32 },
       tooltip: {
         backgroundColor: '#ffffff',
         borderColor: CHART.border,
         textStyle: { color: '#1a1a1a', fontSize: 12 },
-        formatter: (p) => `${stages[p.data[0]]} · ${weeks[p.data[1]]}<br/>${p.data[2]} runs`,
       },
       xAxis: {
         type: 'category',
-        data: stages,
+        data: initialPipeline.stages,
         axisLine: { show: false },
         axisTick: { show: false },
         axisLabel: {
@@ -1367,10 +1548,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
           fontSize: 10,
           margin: 10,
           rich: Object.fromEntries(
-            stages.map((stage, i) => [
-              `s${i}`,
-              { color: stageColors[i], fontWeight: 500 },
-            ]),
+            initialPipeline.stages.map((stage, i) => [`s${i}`, { color: stageColors[i], fontWeight: 500 }]),
           ),
           formatter: (value, idx) => `{s${idx}|${value}}`,
         },
@@ -1378,7 +1556,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       },
       yAxis: {
         type: 'category',
-        data: weeks,
+        data: initialPipeline.months,
         axisLine: { show: false },
         axisTick: { show: false },
         axisLabel: { color: CHART.text, fontSize: 10, margin: 8 },
@@ -1386,15 +1564,15 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       },
       series: [{
         type: 'heatmap',
-        data: pipelineData,
+        data: initialPipeline.data,
         itemStyle: {
           borderWidth: 3,
           borderColor: '#ffffff',
           color: (params) => {
             const stageIdx = params.data[0];
-            const branchId = PIPELINE_STAGE_BRANCHES[stages[stageIdx]] || 'main';
+            const branchId = PIPELINE_STAGE_BRANCHES[initialPipeline.stages[stageIdx]] || 'main';
             const scale = branchHeatmapScale(getBranchCssColor(branchId));
-            return heatmapColorFromScale(scale, params.data[2], 10);
+            return heatmapColorFromScale(scale, params.data[2], 12);
           },
         },
         emphasis: {
@@ -1402,8 +1580,28 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         },
       }],
     });
+    renderOverviewPipeline(pipelineYear);
 
-    activityCharts.push(cal, cart);
+    activityCharts.push(overviewCalendarChart, overviewPipelineChart);
+
+    const minYear = ACTIVITY_YEARS[0];
+    const maxYear = ACTIVITY_YEARS[ACTIVITY_YEARS.length - 1];
+    bindYearNav({
+      minYear,
+      maxYear,
+      stateKey: 'calendar',
+      onChange: renderOverviewCalendar,
+      prevId: 'calendar-year-prev',
+      nextId: 'calendar-year-next',
+    });
+    bindYearNav({
+      minYear,
+      maxYear,
+      stateKey: 'pipeline',
+      onChange: renderOverviewPipeline,
+      prevId: 'pipeline-year-prev',
+      nextId: 'pipeline-year-next',
+    });
 
     let resizeTimer;
     window.addEventListener('resize', () => {
@@ -1414,22 +1612,49 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
+  function initSiteNav() {
+    const header = document.getElementById('site-header');
+    const headerOffset = () => (header?.offsetHeight || 72) + 8;
+
+    document.querySelectorAll('.site-nav a[href^="#"], .site-brand-link[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (!href || href === '#') return;
+        const id = href.slice(1);
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        updateHashWithoutScroll(`#${id}`);
+      });
+    });
+
+    window.addEventListener('hashchange', () => {
+      const y = history.state?.scrollY;
+      if (typeof y === 'number') window.scrollTo(0, y);
+    });
+  }
+
   function initNavHighlight() {
-    const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('.site-nav a[data-section]');
     if (!navLinks.length) return;
 
     const sections = [...navLinks]
-      .map((link) => document.querySelector(link.getAttribute('href')))
+      .map((link) => document.getElementById(link.dataset.section))
       .filter(Boolean);
 
+    const header = document.getElementById('site-header');
+    const offset = () => (header?.offsetHeight || 72) + 24;
+
     const sync = () => {
-      const scrollY = window.scrollY + 100;
+      const scrollY = window.scrollY + offset();
       let current = sections[0]?.id;
       sections.forEach((section) => {
         if (section.offsetTop <= scrollY) current = section.id;
       });
       navLinks.forEach((link) => {
-        link.classList.toggle('is-active', link.getAttribute('href') === `#${current}`);
+        link.classList.toggle('is-active', link.dataset.section === current);
       });
     };
 
@@ -1449,6 +1674,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
       timelineSyncLock = false;
     }
+    initSiteNav();
     initNavHighlight();
   }
 
