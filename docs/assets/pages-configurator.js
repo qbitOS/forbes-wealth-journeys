@@ -1,6 +1,6 @@
 /**
- * grok-repo-template — GitHub Pages template configurator
- * Static client-side wizard → auto-config prompt + manifest exports
+ * Grok Assembly Line — Option 2 Configurator
+ * Static client-side wizard → one-click commands + manifest exports
  */
 (function () {
   'use strict';
@@ -9,7 +9,18 @@
   const REPO_BASE = `https://github.com/${REPO}`;
   const PAGES_URL = 'https://fornevercollective.github.io/grok-repo-template/';
 
+  const QUICK_TEMPLATES = [
+    { id: 'full', label: 'Full template', path: '', prompt: 'Use grok-repo-template (fornevercollective/grok-repo-template). Clone, read AGENTS.md + LLMS.md, run grok inspect. Scaffold Colossus/DVC baseline.' },
+    { id: 'vision', label: 'Vision', path: 'examples/vision/', prompt: 'Use grok-repo-template — scaffold from examples/vision/ with configs/colossus.yaml and DVC pipeline.' },
+    { id: 'agents', label: 'Agents', path: 'examples/agents/', prompt: 'Use grok-repo-template — scaffold from examples/agents/ with Grok prompts and connector skills.' },
+    { id: 'fine-tuning', label: 'Fine-tuning', path: 'examples/fine-tuning/', prompt: 'Use grok-repo-template — scaffold PEFT/LoRA from examples/fine-tuning/ with DVC train stage.' },
+    { id: 'jax-colossus', label: 'JAX Colossus', path: 'examples/jax-colossus/', prompt: 'Use grok-repo-template — wire JAX MoE from examples/jax-colossus/ with scripts/colossus-launch.sh.' },
+    { id: 'capsule-ui', label: 'Capsule UI', path: 'examples/spacex-capsule-ui/', prompt: 'Use grok-repo-template — extend examples/spacex-capsule-ui/ (capsule_ui.js). Mission-critical dark cockpit UI.' },
+    { id: 'rust-dojo', label: 'Rust Dojo', path: 'examples/rust-dojo/', prompt: 'Use grok-repo-template — scaffold from examples/rust-dojo/ for Dojo performance patterns.' },
+  ];
+
   const DOMAINS = [
+    { id: 'spacex-capsule-ui', label: 'Capsule UI', desc: 'Mission-critical cockpit touch-screen', path: 'examples/spacex-capsule-ui/', search: 'spacex capsule ui cockpit touchscreen' },
     { id: 'vision', label: 'Vision', desc: 'Classification, detection pipelines', path: 'examples/vision/', search: 'vision pipeline model detection colossus' },
     { id: 'agents', label: 'Agents', desc: 'Tool-use loops + Grok prompts', path: 'examples/agents/', search: 'agent loop grok prompts tool-use' },
     { id: 'fine-tuning', label: 'Fine-tuning', desc: 'PEFT / LoRA training', path: 'examples/fine-tuning/', search: 'peft lora fine-tuning grok' },
@@ -277,6 +288,41 @@ ${ECOSYSTEM.filter((e) => state.ecosystem.has(e.id)).map((e) => `- ${e.label}: $
     $('#search-preview').textContent = githubSearchQuery();
   }
 
+  function quickCommand(template) {
+    const folder = template.path ? ` Focus on \`${template.path}\`.` : '';
+    return `${template.prompt}${folder}
+
+\`\`\`bash
+git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.example .env && uv sync && grok inspect
+\`\`\``;
+  }
+
+  function initQuickTemplates() {
+    const grid = $('#quick-templates');
+    const output = $('#quick-cmd');
+    const copyBtn = $('#copy-quick-cmd');
+    if (!grid || !output) return;
+
+    let active = QUICK_TEMPLATES[0];
+    output.textContent = quickCommand(active);
+
+    grid.innerHTML = QUICK_TEMPLATES.map((t) =>
+      `<button type="button" class="quick-btn${t.id === active.id ? ' active' : ''}" data-id="${t.id}">${t.label}</button>`
+    ).join('');
+
+    $$('.quick-btn', grid).forEach((btn) => {
+      btn.addEventListener('click', () => {
+        active = QUICK_TEMPLATES.find((t) => t.id === btn.dataset.id) || active;
+        $$('.quick-btn', grid).forEach((b) => b.classList.toggle('active', b.dataset.id === active.id));
+        output.textContent = quickCommand(active);
+      });
+    });
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => copyText(output.textContent, copyBtn));
+    }
+  }
+
   async function copyText(text, btn) {
     try {
       await navigator.clipboard.writeText(text);
@@ -313,6 +359,8 @@ ${ECOSYSTEM.filter((e) => state.ecosystem.has(e.id)).map((e) => `- ${e.label}: $
   }
 
   function init() {
+    initQuickTemplates();
+
     const root = $('#configurator');
     if (!root) return;
 

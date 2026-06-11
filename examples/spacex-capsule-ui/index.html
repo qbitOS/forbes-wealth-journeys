@@ -1,1 +1,30 @@
-SpaceX capsule pristine JS demo as above.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capsule UI — grok-repo-template</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cockpit">
+    <section class="panel">
+      <h2>Telemetry</h2>
+      <div id="telemetry"></div>
+    </section>
+    <section class="panel">
+      <h2>Systems</h2>
+      <div class="metric"><span>COMMS</span><span class="value">LINK OK</span></div>
+      <div class="metric"><span>POWER</span><span class="value">NOMINAL</span></div>
+      <div class="metric"><span>THERMAL</span><span class="value">STABLE</span></div>
+      <div class="metric"><span>GNC</span><span class="value">TRACKING</span></div>
+    </section>
+    <div class="status-bar">
+      <span>PHASE: <span id="phase" class="phase">PRE-LAUNCH</span></span>
+      <span id="clock">00:00:00 UTC</span>
+      <button id="ack-btn" type="button">Ack</button>
+    </div>
+  </div>
+  <script src="capsule_ui.js"></script>
+</body>
+</html>

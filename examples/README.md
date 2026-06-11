@@ -10,3 +10,4 @@ Domain-specific customization starters. Each subfolder includes README + configs
 | `jax-colossus/` | JAX MoE distributed |
 | `rust-dojo/` | Rust performance |
 | `python-grok/` | Grok-friendly Python |
+| `spacex-capsule-ui/` | Mission-critical cockpit UI |

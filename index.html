@@ -1,13 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Grok Assembly Line - Option 2 Configurator</title>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-<style>body {font-family: system-ui; background: #0a0a0a; color: #0ff; padding: 40px;}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grok Assembly Line – Option 2 Configurator</title>
+  <meta name="description" content="Choose your template — one-click command for Grok, export manifest, live activity heatmaps." />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0a0f0a;
+      --surface2: #0f1a0f;
+      --border: #1a3a1a;
+      --text: #d0ffd0;
+      --muted: #6a9a6a;
+      --accent: #00ff66;
+      --accent-dim: #008833;
+      --success: #00ff66;
+      --radius: 6px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.5; }
+    a { color: var(--accent); }
+    header { padding: 1.25rem 1.5rem; text-align: center; border-bottom: 1px solid var(--border); }
+    h1 { margin: 0; font-size: 1.35rem; font-weight: 600; letter-spacing: -0.02em; }
+    h2 { margin: 0 0 1rem; font-size: 1.1rem; color: var(--accent); font-weight: 600; }
+    h3 { margin: 1rem 0 0.5rem; font-size: 0.95rem; color: var(--muted); }
+    .sub { color: var(--muted); margin-top: 0.35rem; font-size: 0.85rem; font-family: var(--mono); }
+    main { max-width: 920px; margin: 0 auto; padding: 1.25rem 1.5rem 2rem; }
+    nav { margin: 0.75rem 0 1.25rem; text-align: center; font-size: 0.85rem; }
+    nav a { color: var(--muted); margin: 0 0.6rem; text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    #quick-start { margin-bottom: 2rem; }
+    .quick-grid { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .quick-btn, .wizard-nav button, .copy-row button, .download-row button, .tab-btn, #copy-quick-cmd {
+      font-family: var(--mono); padding: 0.4rem 0.75rem; border-radius: var(--radius);
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      cursor: pointer; font-size: 0.78rem;
+    }
+    .quick-btn:hover, .wizard-nav button:hover:not(:disabled), .copy-row button:hover,
+    .download-row button:hover, .tab-btn:hover, #copy-quick-cmd:hover { border-color: var(--accent); color: var(--accent); }
+    .quick-btn.active { background: var(--accent-dim); border-color: var(--accent); color: #000; }
+    .quick-btn.copied, .copy-row button.copied, #copy-quick-cmd.copied { border-color: var(--success); color: var(--success); }
+
+    #configurator {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 2rem;
+    }
+    .project-name-row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin: 0.75rem 0; }
+    .project-name-row label { color: var(--muted); font-size: 0.8rem; font-family: var(--mono); }
+    .project-name-row input {
+      background: var(--bg); border: 1px solid var(--border); color: var(--text);
+      padding: 0.45rem 0.65rem; border-radius: var(--radius); min-width: 200px; font-family: var(--mono); font-size: 0.85rem;
+    }
+    .project-name-row input:focus { outline: 1px solid var(--accent); }
+
+    .step-indicator { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .step-indicator .step {
+      padding: 0.25rem 0.65rem; border-radius: 999px; font-size: 0.72rem; font-family: var(--mono);
+      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+    }
+    .step-indicator .step.active { background: var(--accent-dim); border-color: var(--accent); color: #fff; }
+    .step-indicator .step.done { border-color: var(--success); color: var(--success); }
+
+    .wizard-step { display: none; }
+    .wizard-step.active { display: block; }
+    .option-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.5rem; }
+    .option-card {
+      display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.65rem;
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer;
+    }
+    .option-card:hover { border-color: #2a5a2a; }
+    .option-card:has(input:checked) { border-color: var(--accent); background: rgba(0, 255, 102, 0.06); }
+    .option-card input { accent-color: var(--accent); margin-top: 0.2rem; }
+    .option-body { display: flex; flex-direction: column; gap: 0.15rem; }
+    .option-body strong { font-size: 0.85rem; }
+    .option-desc { font-size: 0.75rem; color: var(--muted); }
+    .option-path { font-size: 0.68rem; color: var(--accent); font-family: var(--mono); opacity: 0.85; }
+    .tag-optional { font-size: 0.6rem; color: var(--muted); }
+
+    .wizard-nav { display: flex; justify-content: space-between; margin-top: 1rem; }
+    .wizard-nav button:disabled { opacity: 0.35; cursor: not-allowed; }
+    #btn-next { background: var(--accent-dim); border-color: var(--accent); color: #fff; }
+
+    .tabs { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.6rem; }
+    .tab-btn.active { background: var(--accent-dim); color: #fff; border-color: var(--accent); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .code-block {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 0.85rem; font-family: var(--mono); font-size: 0.72rem; line-height: 1.45;
+      white-space: pre-wrap; word-break: break-word; max-height: 320px; overflow: auto; margin: 0 0 0.6rem;
+    }
+    .copy-row, .download-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .meta-box {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 0.7rem 0.85rem; margin-top: 0.75rem; font-size: 0.8rem;
+    }
+    .meta-box h4 { margin: 0 0 0.4rem; font-size: 0.8rem; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; }
+    #path-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.6rem; }
+    #path-links a { font-size: 0.72rem; font-family: var(--mono); text-decoration: none; }
+    .search-preview { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); padding: 0.4rem 0.6rem; background: var(--surface2); border-radius: var(--radius); }
+    .agent-hooks { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.4rem; }
+    .agent-hook { padding: 0.45rem 0.6rem; background: var(--surface2); border-radius: var(--radius); font-size: 0.72rem; font-family: var(--mono); }
+    .agent-hook .status { color: var(--muted); }
+    .agent-hook .status.soon { color: #aa8800; }
+
+    .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.75rem; }
+    @media (max-width: 640px) { .charts { grid-template-columns: 1fr; } }
+    .chart { height: 280px; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border); }
+    footer { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 0.75rem; font-family: var(--mono); border-top: 1px solid var(--border); }
+    .section-divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  </style>
 </head>
 <body>
-<h1>🧠 Grok Assembly Line</h1>
-<p>Choose your path. Your AI will pull the exact template instantly.</p>
-<!-- Options cards -->
+  <header>
+    <h1>Grok Assembly Line – Option 2 Configurator</h1>
+    <p class="sub">SuperHeavyGrok · Grok 4.20 Heavy · Colossus/Dojo</p>
+  </header>
+  <main>
+    <nav>
+      <a href="#quick-start">Templates</a>
+      <a href="#configurator">Wizard</a>
+      <a href="#activity">Activity</a>
+      <a href="https://github.com/fornevercollective/grok-repo-template">GitHub</a>
+    </nav>
+
+    <section id="quick-start">
+      <h2>Choose your template...</h2>
+      <div id="quick-templates" class="quick-grid"></div>
+      <pre id="quick-cmd" class="code-block"></pre>
+      <button id="copy-quick-cmd" type="button">Copy command</button>
+    </section>
+
+    <section id="configurator">
+      <h2>Advanced wizard</h2>
+      <div class="project-name-row">
+        <label for="project-name">project</label>
+        <input id="project-name" type="text" value="my-grok-project" />
+      </div>
+      <div class="step-indicator">
+        <span class="step" data-step="1">1 · domains</span>
+        <span class="step" data-step="2">2 · infra</span>
+        <span class="step" data-step="3">3 · connectors</span>
+        <span class="step" data-step="4">4 · export</span>
+      </div>
+      <div class="wizard-step active" data-step="1">
+        <div id="step1-options" class="option-grid"></div>
+      </div>
+      <div class="wizard-step" data-step="2">
+        <div id="step2-options" class="option-grid"></div>
+      </div>
+      <div class="wizard-step" data-step="3">
+        <h3>Connectors</h3>
+        <div id="step3-connectors" class="option-grid"></div>
+        <h3>Ecosystem</h3>
+        <div id="step3-ecosystem" class="option-grid"></div>
+      </div>
+      <div class="wizard-step" data-step="4">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="prompt">prompt</button>
+          <button class="tab-btn" data-tab="json">json</button>
+          <button class="tab-btn" data-tab="yaml">yaml</button>
+          <button class="tab-btn" data-tab="llms">llms.txt</button>
+        </div>
+        <div id="panel-prompt" class="tab-panel active">
+          <pre id="out-prompt" class="code-block"></pre>
+          <div class="copy-row"><button data-copy="prompt">copy</button></div>
+        </div>
+        <div id="panel-json" class="tab-panel">
+          <pre id="out-json" class="code-block"></pre>
+          <div class="copy-row"><button data-copy="json">copy</button></div>
+        </div>
+        <div id="panel-yaml" class="tab-panel">
+          <pre id="out-yaml" class="code-block"></pre>
+          <div class="copy-row"><button data-copy="yaml">copy</button></div>
+        </div>
+        <div id="panel-llms" class="tab-panel">
+          <pre id="out-llms" class="code-block"></pre>
+          <div class="copy-row"><button data-copy="llms">copy</button></div>
+        </div>
+        <div class="download-row">
+          <button id="btn-download-json">download json</button>
+          <button id="btn-download-yaml">download yaml</button>
+        </div>
+        <div class="meta-box">
+          <h4>paths</h4>
+          <div id="path-links"></div>
+        </div>
+        <div class="meta-box">
+          <h4>github search</h4>
+          <div id="search-preview" class="search-preview"></div>
+        </div>
+        <div class="meta-box">
+          <h4>agent hooks</h4>
+          <div class="agent-hooks">
+            <div class="agent-hook"><strong>Grok GitHub</strong><br/>grok-github-connector<br/><span class="status">active</span></div>
+            <div class="agent-hook"><strong>SuperHeavyGrok</strong><br/>colossus-launch.sh<br/><span class="status">active</span></div>
+            <div class="agent-hook"><strong>Cursor</strong><br/>separate dev lane<br/><span class="status soon">not this path</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="wizard-nav">
+        <button id="btn-prev" disabled>prev</button>
+        <button id="btn-next">next</button>
+      </div>
+    </section>
+
+    <hr class="section-divider" id="activity" />
+    <section>
+      <h2>Activity</h2>
+      <div class="charts">
+        <div id="calendar" class="chart"></div>
+        <div id="cartesian" class="chart"></div>
+      </div>
+    </section>
+  </main>
+  <footer>SuperHeavyGrok · Grok 4.20 Heavy · Apache-2.0 · fornevercollective/grok-repo-template</footer>
+
+  <script src="docs/assets/pages-configurator.js"></script>
+  <script>
+    const green = ['#050505', '#004422', '#00ff66'];
+    const cal = echarts.init(document.getElementById('calendar'));
+    const year = 2026;
+    const data = [];
+    for (let m = 0; m < 12; m++) {
+      for (let d = 1; d <= 28; d++) {
+        data.push([`${year}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`, Math.floor(Math.random() * 8)]);
+      }
+    }
+    cal.setOption({
+      backgroundColor: 'transparent',
+      title: { text: 'Contributions', textStyle: { color: '#6a9a6a', fontSize: 12 }, left: 'center' },
+      visualMap: { min: 0, max: 8, show: false, inRange: { color: green } },
+      calendar: { range: year, cellSize: ['auto', 12], top: 36, left: 24, right: 8, itemStyle: { borderWidth: 0.5, color: '#0a0f0a' } },
+      series: [{ type: 'heatmap', coordinateSystem: 'calendar', data }]
+    });
+    const cart = echarts.init(document.getElementById('cartesian'));
+    cart.setOption({
+      backgroundColor: 'transparent',
+      title: { text: 'Pipeline runs', textStyle: { color: '#6a9a6a', fontSize: 12 }, left: 'center' },
+      xAxis: { type: 'category', data: ['DVC', 'CI', 'Colossus', 'Grok', 'Vision', 'Agents', 'FT'], axisLabel: { color: '#6a9a6a', fontSize: 10 } },
+      yAxis: { type: 'category', data: ['W1', 'W2', 'W3', 'W4'], axisLabel: { color: '#6a9a6a', fontSize: 10 } },
+      visualMap: { min: 0, max: 10, show: false, inRange: { color: green } },
+      series: [{ type: 'heatmap', data: [[0, 0, 5], [1, 0, 8], [2, 1, 3], [3, 2, 9], [4, 3, 2], [5, 1, 6], [6, 2, 4]] }]
+    });
+  </script>
 </body>
 </html>

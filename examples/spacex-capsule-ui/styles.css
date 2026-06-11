@@ -1,0 +1,81 @@
+:root {
+  --bg: #050505;
+  --panel: #0a0f0a;
+  --border: #1a3a1a;
+  --text: #c8ffc8;
+  --accent: #00ff66;
+  --warn: #ffaa00;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.cockpit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  min-height: 100vh;
+}
+
+.panel {
+  background: var(--panel);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.panel h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #0f1f0f;
+}
+
+.metric .value { color: var(--accent); }
+
+.status-bar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background: #000;
+  border-top: 2px solid var(--accent);
+  font-size: 0.8rem;
+}
+
+.status-bar .phase { color: var(--accent); }
+
+button {
+  font-family: var(--mono);
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+button:active { background: rgba(0, 255, 102, 0.15); }
+
+@media (max-width: 640px) {
+  .cockpit { grid-template-columns: 1fr; }
+}

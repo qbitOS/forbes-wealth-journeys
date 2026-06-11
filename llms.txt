@@ -1,7 +1,7 @@
 # llms.txt – Root index for LLM agents (emerging standard)
 # https://llmstxt.org/
 
-> grok-repo-template
+> Grok Assembly Line – Colossus/Dojo Template
 
 ## Primary Instructions
 - LLMS.md
@@ -19,6 +19,7 @@
 - examples/jax-colossus/
 - examples/rust-dojo/
 - examples/python-grok/
+- examples/spacex-capsule-ui/
 
 ## Documentation
 - docs/COLOSSUS_SETUP.md
@@ -28,7 +29,7 @@
 - standards/xai-spacex-terrafab-grokipedia.md
 
 ## GitHub Pages
-- index.html (template configurator + ECharts)
+- index.html (Option 2 Configurator + ECharts)
 - https://fornevercollective.github.io/grok-repo-template/
 
 ## Config
