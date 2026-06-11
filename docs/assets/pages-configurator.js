@@ -608,6 +608,11 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     branchFocus: { cluster: 'all', portfolio: 'all' },
   };
 
+  /** Prevents activity ↔ timeline sync feedback during timeline-driven updates. */
+  let timelineSyncLock = false;
+  /** Activity panels only drive timeline after boot completes. */
+  let activitySyncEnabled = false;
+
   function mergeBranchEvents(baseEvents, branchId) {
     const drill = TIMELINE_DRILLDOWN_EVENTS[branchId] || [];
     const merged = [...baseEvents.filter((e) => e.branch === branchId), ...drill];
@@ -810,12 +815,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       const branchEl = document.querySelector(`.activity-branch[data-branch="${branchId}"]`);
       if (branchEl && !branchEl.open) {
         branchEl.open = true;
-        branchEl.dispatchEvent(new Event('toggle'));
+        const chartEl = branchEl.querySelector('.activity-branch-chart');
+        initBranchActivityChart(branchId, branchEventsFor(section.events, branchId), chartEl);
       }
     }
   }
 
   function setTimelineTab(index, { syncActivity = true } = {}) {
+    timelineSyncLock = true;
     const tabs = TIMELINE_SECTIONS;
     const clamped = Math.max(0, Math.min(tabs.length - 1, index));
     timelineState.tabIndex = clamped;
@@ -856,12 +863,17 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       const hash = branch === 'all' ? `#timeline-${section.id}` : `#timeline-${section.id}-${branch}`;
       history.replaceState(null, '', hash);
     }
+    timelineSyncLock = false;
   }
 
-  function setTimelineBranch(sectionId, branchId) {
+  function setTimelineBranch(sectionId, branchId, { syncActivity = true } = {}) {
+    timelineSyncLock = true;
     timelineState.branchFocus[sectionId] = branchId;
     const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
-    if (!section) return;
+    if (!section) {
+      timelineSyncLock = false;
+      return;
+    }
 
     const pillsRoot = document.querySelector(`.timeline-company-pills[data-group="${sectionId}"]`);
     if (pillsRoot) {
@@ -874,12 +886,15 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     }
 
     renderTimelineSection(section);
-    syncActivityFromTimeline(sectionId, branchId);
+    if (syncActivity) {
+      syncActivityFromTimeline(sectionId, branchId);
+    }
 
     if (history.replaceState) {
       const hash = branchId === 'all' ? `#timeline-${sectionId}` : `#timeline-${sectionId}-${branchId}`;
       history.replaceState(null, '', hash);
     }
+    timelineSyncLock = false;
   }
 
   function renderTimelineCompanyPills(section) {
@@ -1145,17 +1160,15 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       open: index === 0,
       branches: section.branches,
       events: section.events,
-      branchOpen: index === 0,
     }));
 
     root.innerHTML = groups.map((group) => {
       const branchPanels = group.branches.map((branch) => {
         const branchEvents = branchEventsFor(group.events, branch.id);
         const span = formatSortSpan(branchEvents);
-        const openAttr = group.branchOpen ? ' open' : '';
 
         return `
-          <details class="activity-branch" data-branch="${branch.id}"${openAttr}>
+          <details class="activity-branch" data-branch="${branch.id}">
             <summary>
               <span class="activity-branch-swatch" aria-hidden="true"></span>
               <span class="activity-branch-name">${branch.label}</span>
@@ -1200,7 +1213,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
     root.querySelectorAll('.activity-group').forEach((groupEl) => {
       groupEl.addEventListener('toggle', () => {
-        if (!groupEl.open) return;
+        if (!activitySyncEnabled || timelineSyncLock || !groupEl.open) return;
         const groupId = groupEl.dataset.group;
         const tabIdx = TIMELINE_SECTIONS.findIndex((s) => s.activityGroupId === groupId);
         if (tabIdx >= 0 && timelineState.tabIndex !== tabIdx) {
@@ -1217,7 +1230,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
     root.querySelectorAll('.activity-branch').forEach((branchEl) => {
       branchEl.addEventListener('toggle', () => {
-        if (!branchEl.open) return;
+        if (!activitySyncEnabled || timelineSyncLock || !branchEl.open) return;
         const branchId = branchEl.dataset.branch;
         const groupEl = branchEl.closest('.activity-group');
         if (!groupEl) return;
@@ -1426,9 +1439,16 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   function boot() {
     init();
+    initTimelineGitgraph();
     renderActivityBranches();
     initActivityCharts();
-    initTimelineGitgraph();
+    activitySyncEnabled = true;
+    const section = TIMELINE_SECTIONS[timelineState.tabIndex];
+    if (section) {
+      timelineSyncLock = true;
+      syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
+      timelineSyncLock = false;
+    }
     initNavHighlight();
   }
 
