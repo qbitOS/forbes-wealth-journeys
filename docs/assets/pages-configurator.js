@@ -405,54 +405,116 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     goStep(1);
   }
 
-  const TIMELINE_BRANCHES = [
+  /** xAI · Colossus · Terafab · IPO cluster — fixed 4-lane layout. */
+  const TIMELINE_CLUSTER_BRANCHES = [
     { id: 'grok', label: 'grok', color: '#2563eb' },
     { id: 'colossus', label: 'colossus', color: '#16a34a' },
     { id: 'terrafab', label: 'terrafab', color: '#d97706' },
     { id: 'spacex', label: 'spacex-ipo', color: '#7c3aed' },
   ];
 
-  const BRANCH_COL = { grok: 0, colossus: 1, terrafab: 2, spacex: 3, main: 0 };
-
-  /** Public timeline — approximate dates noted in labels where sources differ. */
-  const TIMELINE_EVENTS = [
-    { sort: '2023-07', date: 'Jul 2023', branch: 'grok', id: 'xai-founded', title: 'xAI announced', approx: false },
-    { sort: '2023-11', date: 'Nov 2023', branch: 'grok', id: 'grok-preview', title: 'Grok preview on X', approx: false },
-    { sort: '2024-03', date: 'Mar 2024', branch: 'grok', id: 'grok-1-oss', title: 'Grok-1 open source', approx: false },
-    { sort: '2024-03', date: 'Mar 2024', branch: 'colossus', id: 'memphis-start', title: 'Colossus build starts', approx: true },
-    { sort: '2024-05', date: 'May 2024', branch: 'grok', id: 'series-b', title: '$6B Series B', approx: false },
-    { sort: '2024-06', date: 'Jun 5 2024', branch: 'colossus', id: 'colossus-announce', title: 'Colossus announced', approx: false },
-    { sort: '2024-08', date: 'Aug 2024', branch: 'colossus', id: 'colossus-live', title: 'Colossus goes live', approx: false },
-    { sort: '2024-08', date: 'Aug 2024', branch: 'grok', id: 'grok-2', title: 'Grok-2 released', approx: false },
-    { sort: '2024-12', date: 'Dec 2024', branch: 'colossus', id: '200k-gpus', title: '200K GPUs cluster', approx: true },
-    { sort: '2025-02', date: 'Feb 2025', branch: 'grok', id: 'grok-3', title: 'Grok 3 launched', approx: false },
-    { sort: '2025-02', date: 'Feb 2025', branch: 'colossus', id: 'scale-200k', title: 'Scaled to 200K GPUs', approx: false },
-    { sort: '2025-07', date: 'Jul 2025', branch: 'grok', id: 'grok-4', title: 'Grok 4 announced', approx: false },
-    { sort: '2026-02', date: 'Feb 2026', branch: 'spacex', id: 'xai-merge', title: 'SpaceX acquires xAI', approx: true, merge: true },
-    { sort: '2026-03', date: 'Mar 21 2026', branch: 'terrafab', id: 'terrafab-launch', title: 'Terafab announced', approx: false },
-    { sort: '2026-04', date: 'Apr 1 2026', branch: 'spacex', id: 'sec-confidential', title: 'Confidential SEC filing', approx: false },
-    { sort: '2026-04', date: 'Apr 2026', branch: 'terrafab', id: 'intel-joins', title: 'Intel joins Terafab', approx: false },
-    { sort: '2026-05', date: 'May 20 2026', branch: 'spacex', id: 's-1-public', title: 'Public S-1 filed', approx: false },
-    { sort: '2026-05', date: 'May 2026', branch: 'terrafab', id: '55b-filing', title: '$55B phase filed', approx: true },
-    { sort: '2026-06', date: 'Jun 3 2026', branch: 'spacex', id: 'ipo-price', title: '$135 · $1.77T val', approx: false },
-    { sort: '2026-06', date: 'Jun 4 2026', branch: 'spacex', id: 'roadshow', title: 'IPO roadshow launch', approx: false },
-    { sort: '2026-06', date: 'Jun 3 2026', branch: 'terrafab', id: 'tax-abate', title: 'Grimes tax abatement', approx: false },
-    { sort: '2026-06', date: 'Jun 12 2026', branch: 'spacex', id: 'spcx-trade', title: 'SPCX trading (target)', approx: true },
+  /** Elon portfolio ventures — 6-lane secondary section. */
+  const TIMELINE_PORTFOLIO_BRANCHES = [
+    { id: 'tesla', label: 'tsla', color: '#dc2626' },
+    { id: 'spacex-ops', label: 'spacex-ops', color: '#6366f1' },
+    { id: 'x-corp', label: 'x-corp', color: '#171717' },
+    { id: 'neuralink', label: 'neuralink', color: '#0891b2' },
+    { id: 'boring', label: 'boring-co', color: '#78716c' },
+    { id: 'openai', label: 'openai', color: '#059669' },
   ];
 
-  function initTimelineGitgraph() {
-    const container = document.getElementById('gitgraph');
-    const legendEl = document.getElementById('timeline-legend');
+  /** Public timeline — approximate dates (~) where sources differ. Stock snapshots are informational only. */
+  const TIMELINE_CLUSTER_EVENTS = [
+    { sort: '2023-07', date: 'Jul 2023', branch: 'grok', id: 'xai-founded', title: 'xAI announced', approx: false },
+    { sort: '2023-11', date: 'Nov 2023', branch: 'grok', id: 'grok-preview', title: 'Grok preview on X Premium+', approx: false },
+    { sort: '2023-11', date: 'Nov 2023', branch: 'grok', id: 'grok-1', title: 'Grok-1 · 314B MoE', approx: false },
+    { sort: '2024-03', date: 'Mar 2024', branch: 'grok', id: 'grok-1-oss', title: 'Grok-1 open source (Apache)', approx: false },
+    { sort: '2024-03', date: 'Mar 2024', branch: 'colossus', id: 'memphis-start', title: 'Colossus build starts · Memphis', approx: true },
+    { sort: '2024-05', date: 'May 2024', branch: 'grok', id: 'series-b', title: '$6B Series B', approx: false },
+    { sort: '2024-06', date: 'Jun 5 2024', branch: 'colossus', id: 'colossus-announce', title: 'Colossus announced · 100K H100 target', approx: false },
+    { sort: '2024-08', date: 'Aug 2024', branch: 'colossus', id: 'colossus-live', title: 'Colossus live · 122-day build', approx: false },
+    { sort: '2024-08', date: 'Aug 2024', branch: 'grok', id: 'grok-2', title: 'Grok-2 released', approx: false },
+    { sort: '2024-12', date: 'Dec 2024', branch: 'grok', id: 'aurora', title: 'Aurora image model', approx: false },
+    { sort: '2024-12', date: 'Dec 2024', branch: 'colossus', id: '100k-gpus', title: '100K GPUs operational', approx: true },
+    { sort: '2025-02', date: 'Feb 2025', branch: 'grok', id: 'grok-3', title: 'Grok 3 launched', approx: false },
+    { sort: '2025-02', date: 'Feb 2025', branch: 'colossus', id: 'scale-200k', title: 'Scaled to 200K GPUs · 92 days', approx: false },
+    { sort: '2025-03', date: 'Mar 2025', branch: 'colossus', id: 'colossus-2', title: 'Colossus 2 site · 1M sq ft', approx: false },
+    { sort: '2025-07', date: 'Jul 2025', branch: 'grok', id: 'grok-4', title: 'Grok 4 · multi-agent', approx: false },
+    { sort: '2025-08', date: 'Aug 2025', branch: 'grok', id: 'grok-imagine', title: 'Grok Imagine video · 480p', approx: false },
+    { sort: '2025-11', date: 'Nov 2025', branch: 'grok', id: 'grok-4-1', title: 'Grok 4.1 · EQ-Bench lead', approx: false },
+    { sort: '2026-01', date: 'Jan 2026', branch: 'colossus', id: 'colossus-2-gw', title: 'Colossus 2 · ~1 GW online', approx: true },
+    { sort: '2026-02', date: 'Feb 17 2026', branch: 'grok', id: 'grok-4-20', title: 'Grok 4.20 · 4-agent beta', approx: false },
+    { sort: '2026-02', date: 'Feb 2026', branch: 'spacex', id: 'xai-merge', title: 'SpaceX acquires xAI · ~$1.25T', approx: true, merge: true },
+    { sort: '2026-03', date: 'Mar 21 2026', branch: 'terrafab', id: 'terrafab-launch', title: 'Terafab announced · Austin proto', approx: false },
+    { sort: '2026-03', date: 'Mar 2026', branch: 'colossus', id: '555k-target', title: '555K GPU target · $659M permit', approx: true },
+    { sort: '2026-04', date: 'Apr 1 2026', branch: 'spacex', id: 'sec-confidential', title: 'Confidential SEC filing', approx: false },
+    { sort: '2026-04', date: 'Apr 7 2026', branch: 'terrafab', id: 'intel-joins', title: 'Intel joins · 18A foundry', approx: false },
+    { sort: '2026-04', date: 'Apr 2026', branch: 'terrafab', id: 'supermicro', title: 'Supermicro infra partner', approx: false },
+    { sort: '2026-04', date: 'Apr 17 2026', branch: 'grok', id: 'grok-4-3', title: 'Grok 4.3 beta · 2M context', approx: false },
+    { sort: '2026-05', date: 'May 14 2026', branch: 'grok', id: 'grok-build', title: 'Grok Build CLI shipped', approx: false },
+    { sort: '2026-05', date: 'May 20 2026', branch: 'spacex', id: 's-1-public', title: 'Public S-1 filed', approx: false },
+    { sort: '2026-05', date: 'May 2026', branch: 'terrafab', id: '55b-filing', title: '$55B phase · up to $119B', approx: true },
+    { sort: '2026-05', date: 'May 2026', branch: 'colossus', id: 'anthropic-lease', title: 'Anthropic leases Colossus 1', approx: true },
+    { sort: '2026-06', date: 'Jun 3 2026', branch: 'spacex', id: 'ipo-price', title: '$135 · $1.77T · $75B raise', approx: false },
+    { sort: '2026-06', date: 'Jun 3 2026', branch: 'terrafab', id: 'tax-abate', title: 'Grimes County tax abatement', approx: false },
+    { sort: '2026-06', date: 'Jun 4 2026', branch: 'spacex', id: 'roadshow', title: 'IPO roadshow · oversubscribed', approx: false },
+    { sort: '2026-06', date: 'Jun 11 2026', branch: 'spacex', id: 'ipo-priced', title: 'IPO priced · 555.6M shares', approx: false },
+    { sort: '2026-06', date: 'Jun 12 2026', branch: 'spacex', id: 'spcx-trade', title: 'SPCX lists · Nasdaq + Texas', approx: false },
+    { sort: '2026-06', date: 'Jun 13 2026', branch: 'spacex', id: 'msci-inclusion', title: 'MSCI World inclusion T+1', approx: false },
+  ];
+
+  const TIMELINE_PORTFOLIO_EVENTS = [
+    { sort: '2010-06', date: 'Jun 2010', branch: 'tesla', id: 'tsla-ipo', title: 'Tesla IPO · $17/share', approx: false },
+    { sort: '2015-12', date: 'Dec 2015', branch: 'openai', id: 'openai-founded', title: 'OpenAI co-founded', approx: false },
+    { sort: '2016-07', date: 'Jul 2016', branch: 'neuralink', id: 'neuralink-founded', title: 'Neuralink founded', approx: true },
+    { sort: '2017-01', date: 'Jan 2017', branch: 'boring', id: 'boring-founded', title: 'Boring Company founded', approx: false },
+    { sort: '2018-02', date: 'Feb 2018', branch: 'openai', id: 'openai-exit', title: 'Leaves OpenAI board', approx: false },
+    { sort: '2018-12', date: 'Dec 2018', branch: 'boring', id: 'hawthorne-tunnel', title: 'Hawthorne test tunnel opens', approx: false },
+    { sort: '2019-05', date: 'May 2019', branch: 'boring', id: 'vegas-loop', title: 'Vegas Loop · $48.7M contract', approx: false },
+    { sort: '2022-04', date: 'Apr 2022', branch: 'x-corp', id: 'twitter-bid', title: '$44B Twitter bid', approx: false },
+    { sort: '2022-10', date: 'Oct 2022', branch: 'x-corp', id: 'twitter-close', title: 'Twitter acquisition closes', approx: false },
+    { sort: '2023-04', date: 'Apr 2023', branch: 'spacex-ops', id: 'starship-ift1', title: 'Starship IFT-1 first test', approx: false },
+    { sort: '2023-07', date: 'Jul 2023', branch: 'x-corp', id: 'rebrand-x', title: 'Rebranded to X', approx: false },
+    { sort: '2023-05', date: 'May 2023', branch: 'neuralink', id: 'fda-prime', title: 'FDA PRIME trial approved', approx: false },
+    { sort: '2024-01', date: 'Jan 2024', branch: 'neuralink', id: 'first-implant', title: 'First human implant · Noland', approx: false },
+    { sort: '2024-06', date: 'Jun 2024', branch: 'spacex-ops', id: 'ift4-reentry', title: 'IFT-4 · controlled reentry', approx: false },
+    { sort: '2024-10', date: 'Oct 2024', branch: 'spacex-ops', id: 'mechazilla', title: 'Mechazilla booster catch · IFT-5', approx: false },
+    { sort: '2024-12', date: 'Dec 2024', branch: 'tesla', id: 'tsla-ath-480', title: 'TSLA ~$480 · post-election', approx: true },
+    { sort: '2024-12', date: 'Dec 2024', branch: 'spacex-ops', id: 'falcon-134', title: '134 Falcon launches in 2024', approx: false },
+    { sort: '2025-03', date: 'Mar 28 2025', branch: 'x-corp', id: 'xai-acquires-x', title: 'xAI acquires X · $80B val', approx: false, merge: true },
+    { sort: '2025-06', date: 'Jun 2025', branch: 'neuralink', id: 'series-e', title: '$650M Series E · ~$9B val', approx: true },
+    { sort: '2025-07', date: 'Jul 2025', branch: 'neuralink', id: 'dual-implant', title: 'Two implants in one day', approx: false },
+    { sort: '2025-10', date: 'Oct 2025', branch: 'spacex-ops', id: 'ift11-block2', title: 'IFT-11 · final Block 2 flight', approx: false },
+    { sort: '2025-12', date: 'Dec 22 2025', branch: 'tesla', id: 'tsla-ath-498', title: 'TSLA ATH $498.83', approx: false },
+    { sort: '2025-12', date: 'Dec 2025', branch: 'neuralink', id: 'high-volume', title: 'High-volume production · 2026', approx: false },
+    { sort: '2025-12', date: 'Dec 2025', branch: 'spacex-ops', id: 'starlink-11b', title: 'Starlink ~$11.4B revenue', approx: true },
+    { sort: '2026-01', date: 'Jan 2026', branch: 'tesla', id: 'robotaxi-austin', title: 'Unsupervised robotaxi · Austin', approx: false },
+    { sort: '2026-01', date: 'Jan 2026', branch: 'neuralink', id: '21-patients', title: '21 patients globally', approx: true },
+    { sort: '2026-02', date: 'Feb 2026', branch: 'tesla', id: 'cybercab-line', title: 'First Cybercab · Giga Texas', approx: false },
+    { sort: '2026-02', date: 'Feb 2026', branch: 'spacex-ops', id: 'starlink-10m', title: '10M+ Starlink subscribers', approx: true },
+    { sort: '2026-03', date: 'Mar 2026', branch: 'x-corp', id: 'imagine-paywall', title: 'Imagine → SuperGrok paywall', approx: false },
+    { sort: '2026-05', date: 'May 22 2026', branch: 'spacex-ops', id: 'starship-v3', title: 'Starship V3 · Flight 12 · Pad 2', approx: false },
+    { sort: '2026-06', date: 'Jun 11 2026', branch: 'tesla', id: 'tsla-snapshot', title: 'TSLA ~$394 · SpaceX rotation', approx: true },
+  ];
+
+  function renderTimelineGitgraph({ branches, events, containerId, legendId }) {
+    const container = document.getElementById(containerId);
+    const legendEl = legendId ? document.getElementById(legendId) : null;
     if (!container) return;
 
+    const branchCol = Object.fromEntries(branches.map((b, i) => [b.id, i]));
+    const laneCount = branches.length;
+
+    container.dataset.lanes = String(laneCount);
+
     if (legendEl) {
-      legendEl.innerHTML = TIMELINE_BRANCHES.map((b) =>
+      legendEl.innerHTML = branches.map((b) =>
         `<span class="legend-item"><span class="legend-swatch" style="background:${b.color}"></span>${b.label}</span>`
       ).join('');
     }
 
     const rows = new Map();
-    TIMELINE_EVENTS.forEach((ev) => {
+    events.forEach((ev) => {
       if (!rows.has(ev.sort)) rows.set(ev.sort, { sort: ev.sort, date: ev.date, events: [] });
       rows.get(ev.sort).events.push(ev);
     });
@@ -473,8 +535,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
       const track = document.createElement('div');
       track.className = 'gitgraph-track';
+      track.style.setProperty('--timeline-lanes', String(laneCount));
 
-      const lanes = TIMELINE_BRANCHES.map((branch) => {
+      const lanes = branches.map((branch) => {
         const lane = document.createElement('div');
         lane.className = 'gitgraph-lane';
         lane.dataset.branch = branch.id;
@@ -482,7 +545,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       });
 
       row.events.forEach((ev) => {
-        const col = BRANCH_COL[ev.branch] ?? 0;
+        const col = branchCol[ev.branch] ?? 0;
         const lane = lanes[col];
         if (!lane) return;
 
@@ -492,7 +555,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
         const dot = document.createElement('div');
         dot.className = `gitgraph-dot branch-${ev.branch}${ev.merge ? ' is-merge' : ''}`;
-        if (ev.merge) dot.style.color = TIMELINE_BRANCHES.find((b) => b.id === ev.branch)?.color || '#525252';
+        if (ev.merge) dot.style.color = branches.find((b) => b.id === ev.branch)?.color || '#525252';
 
         const label = document.createElement('div');
         label.className = 'gitgraph-label';
@@ -543,6 +606,21 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
         if (branch) branchPrev[branch] = { x, y };
       });
+    });
+  }
+
+  function initTimelineGitgraph() {
+    renderTimelineGitgraph({
+      branches: TIMELINE_CLUSTER_BRANCHES,
+      events: TIMELINE_CLUSTER_EVENTS,
+      containerId: 'gitgraph',
+      legendId: 'timeline-legend',
+    });
+    renderTimelineGitgraph({
+      branches: TIMELINE_PORTFOLIO_BRANCHES,
+      events: TIMELINE_PORTFOLIO_EVENTS,
+      containerId: 'gitgraph-portfolio',
+      legendId: 'timeline-legend-portfolio',
     });
   }
 
