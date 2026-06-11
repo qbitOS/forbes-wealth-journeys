@@ -245,14 +245,24 @@ torch = ["torch>=2.0"]
 <details>
 <summary><strong>C++ / CUDA</strong> — low-level kernels (add under <code>src/</code>)</summary>
 
-No kernel stubs in this template yet — add CUDA sources under `src/` when you need custom ops. Match the cluster CUDA version in [`Dockerfiles/Dockerfile.colossus`](Dockerfiles/Dockerfile.colossus).
+See [`src/kernels/attention_kernel.cu`](src/kernels/attention_kernel.cu), [`src/kernels/attention_kernel.h`](src/kernels/attention_kernel.h), and [`src/cuda/kernel.h`](src/cuda/kernel.h). Match the cluster CUDA version in [`Dockerfiles/Dockerfile.colossus`](Dockerfiles/Dockerfile.colossus) (CUDA 12.4).
 
 ```cpp
-// src/kernels/example.cu — minimal CUDA kernel stub
-__global__ void add_kernel(const float* a, const float* b, float* out, int n) {
-    int i = blockIdx.x * blockDim.x + threadIdx.x;
-    if (i < n) out[i] = a[i] + b[i];
+// src/kernels/attention_kernel.cu — scaled dot-product scores stub
+__global__ void attention_scores_kernel(
+    const float* q, const float* k, float* scores,
+    int seq_len, int head_dim, float scale) {
+    int i = blockIdx.x, j = blockIdx.y;
+    if (i >= seq_len || j >= seq_len) return;
+    float dot = 0.f;
+    for (int d = 0; d < head_dim; ++d)
+        dot += q[i * head_dim + d] * k[j * head_dim + d];
+    scores[i * seq_len + j] = scale * dot;
 }
+```
+
+```bash
+nvcc -std=c++17 -arch=sm_80 -c src/kernels/attention_kernel.cu -o attention_kernel.o
 ```
 
 </details>
@@ -371,7 +381,7 @@ Full starter snippets: [Quick Start by Language](#quick-start-by-language) (abov
 
 - **Python** (JAX/PyTorch) — primary; see `examples/python-grok/`
 - **Rust** — Dojo-style performance; see `examples/rust-dojo/`
-- **C++ / CUDA** — low-level kernels (add under `src/` as needed)
+- **C++ / CUDA** — low-level kernels; see `src/kernels/` and `src/cuda/`
 - **JAX** — Colossus distributed MoE; see `examples/jax-colossus/`
 - **Shell / YAML / Dockerfile / TOML / Markdown / HTML** — configs, launch, Pages, prompts (see collapsible starters above)
 
@@ -446,6 +456,11 @@ grok-repo-template/
 │   └── README.md
 ├── src/                                 # core library
 │   ├── __init__.py
+│   ├── cuda/
+│   │   └── kernel.h                     # shared CUDA helpers (CUDA 12.4)
+│   ├── kernels/
+│   │   ├── attention_kernel.cu          # attention kernel stub
+│   │   └── attention_kernel.h
 │   └── README.md
 ├── tests/
 │   └── test_placeholder.py
