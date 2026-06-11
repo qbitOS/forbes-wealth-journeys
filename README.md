@@ -41,6 +41,222 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fornevercollective&layout=compact&theme=radical&hide_border=true" alt="Top languages" height="165"/>
 </p>
 
+### Quick Start by Language
+
+GitHub language stats weight README and docs — the Grok/Dojo/Colossus stack uses more than the bar shows. Collapsible starters below; full trees in [`examples/`](examples/) and [`scripts/`](scripts/).
+
+<details>
+<summary><strong>Python</strong> — training entrypoint & Grok-friendly patterns</summary>
+
+See [`scripts/train.py`](scripts/train.py) and [`examples/python-grok/src/grok_patterns.py`](examples/python-grok/src/grok_patterns.py).
+
+```python
+#!/usr/bin/env python3
+"""Main training entrypoint — Colossus/Dojo compatible."""
+from pathlib import Path
+import argparse
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--config", type=Path, default=Path("configs/default.yaml"))
+    args = parser.parse_args()
+    print(f"[train] config={args.config} — implement training loop here")
+
+if __name__ == "__main__":
+    main()
+```
+
+```bash
+python scripts/train.py --config configs/default.yaml
+```
+
+</details>
+
+<details>
+<summary><strong>JAX</strong> — Colossus MoE distributed training</summary>
+
+See [`examples/jax-colossus/train_moe.py`](examples/jax-colossus/train_moe.py) and [`examples/jax-colossus/configs/moe.yaml`](examples/jax-colossus/configs/moe.yaml).
+
+```python
+"""JAX MoE distributed training stub."""
+def main() -> None:
+    print("[jax-colossus] MoE training — wire JAX multi-host here")
+
+if __name__ == "__main__":
+    main()
+```
+
+```yaml
+# examples/jax-colossus/configs/moe.yaml
+framework: jax
+num_experts: 8
+mesh_shape: [2, 4]
+precision: bfloat16
+```
+
+</details>
+
+<details>
+<summary><strong>Rust</strong> — Dojo performance patterns</summary>
+
+See [`examples/rust-dojo/src/main.rs`](examples/rust-dojo/src/main.rs).
+
+```rust
+fn main() {
+    println!("[rust-dojo] performance stub");
+}
+```
+
+```bash
+cd examples/rust-dojo && cargo run
+```
+
+</details>
+
+<details>
+<summary><strong>Shell</strong> — Colossus SLURM / cluster launch</summary>
+
+See [`scripts/colossus-launch.sh`](scripts/colossus-launch.sh) and [`scripts/colossus/colossus-job.sh`](scripts/colossus/colossus-job.sh).
+
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
+CONFIG="${1:-configs/colossus.yaml}"
+echo "[colossus-launch] config=${CONFIG}"
+sbatch scripts/colossus/colossus-job.sh
+```
+
+</details>
+
+<details>
+<summary><strong>Dockerfile</strong> — multi-stage ML images</summary>
+
+See [`Dockerfiles/Dockerfile`](Dockerfiles/Dockerfile) (local dev) and [`Dockerfiles/Dockerfile.colossus`](Dockerfiles/Dockerfile.colossus) (CUDA/JAX cluster).
+
+```dockerfile
+# Multi-stage base — local dev
+FROM python:3.11-slim AS base
+WORKDIR /app
+COPY pyproject.toml .
+RUN pip install -e .
+
+FROM base AS runtime
+COPY . .
+CMD ["python", "scripts/train.py"]
+```
+
+```dockerfile
+# Colossus CUDA/JAX — match cluster CUDA version
+FROM nvidia/cuda:12.4.0-runtime-ubuntu22.04
+WORKDIR /app
+COPY pyproject.toml .
+RUN pip3 install -e ".[jax]"
+CMD ["python3", "scripts/train.py", "--config", "configs/colossus.yaml"]
+```
+
+</details>
+
+<details>
+<summary><strong>YAML</strong> — DVC pipelines & Colossus scaling</summary>
+
+See [`dvc.yaml`](dvc.yaml), [`configs/colossus.yaml`](configs/colossus.yaml), and [`metadata.yaml`](metadata.yaml).
+
+```yaml
+# dvc.yaml — pipeline stages
+stages:
+  preprocess:
+    cmd: python scripts/preprocess.py
+    deps: [data/raw/, scripts/preprocess.py]
+    outs: [data/processed/]
+  train:
+    cmd: python scripts/train.py --config configs/default.yaml
+    deps: [data/processed/, configs/default.yaml, scripts/train.py, src/]
+    outs: [models/checkpoint/]
+```
+
+```yaml
+# configs/colossus.yaml — multi-node scaling
+framework: jax
+nodes: 2
+gpus_per_node: 8
+batch_size: 256
+precision: bfloat16
+launch_script: scripts/colossus/colossus-job.sh
+```
+
+</details>
+
+<details>
+<summary><strong>HTML</strong> — GitHub Pages dashboard</summary>
+
+See [`index.html`](index.html) (ECharts heatmaps, deployed via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)).
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>grok-repo-template</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+  <header><h1>🧠 grok-repo-template</h1></header>
+  <main><div id="heatmap" style="height:320px"></div></main>
+</body>
+</html>
+```
+
+</details>
+
+<details>
+<summary><strong>Markdown</strong> — Grok agent prompts</summary>
+
+See [`prompts/grok-agent.md`](prompts/grok-agent.md) and [`examples/agents/prompts/system.md`](examples/agents/prompts/system.md).
+
+```markdown
+# System prompt for Grok agents using this template
+
+You are building from grok-repo-template. Read LLMS.md for routing variants.
+Prefer Python (JAX), Rust, or C++/CUDA per project domain.
+Use DVC for data, Colossus configs for training scale.
+```
+
+</details>
+
+<details>
+<summary><strong>TOML</strong> — project manifest (<code>pyproject.toml</code>)</summary>
+
+See [`pyproject.toml`](pyproject.toml).
+
+```toml
+[project]
+name = "grok-repo-template"
+requires-python = ">=3.11"
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.4", "pytest>=8.0"]
+jax = ["jax>=0.4", "jaxlib>=0.4"]
+torch = ["torch>=2.0"]
+```
+
+</details>
+
+<details>
+<summary><strong>C++ / CUDA</strong> — low-level kernels (add under <code>src/</code>)</summary>
+
+No kernel stubs in this template yet — add CUDA sources under `src/` when you need custom ops. Match the cluster CUDA version in [`Dockerfiles/Dockerfile.colossus`](Dockerfiles/Dockerfile.colossus).
+
+```cpp
+// src/kernels/example.cu — minimal CUDA kernel stub
+__global__ void add_kernel(const float* a, const float* b, float* out, int n) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i < n) out[i] = a[i] + b[i];
+}
+```
+
+</details>
+
 <p align="center">
   <a href="https://git.io/streak-stats">
     <img src="https://streak-stats.demolab.com/?user=fornevercollective&theme=radical&hide_border=true" alt="GitHub streak"/>
@@ -105,6 +321,7 @@ ECharts cannot run inside GitHub README rendering — use the static charts abov
 
 - [Built With](#-built-with)
 - [Statistics & Metrics](#statistics--metrics)
+- [Quick Start by Language](#quick-start-by-language)
 - [Preferred Languages](#preferred-code-languages-for-grokdojocolossus)
 - [Quick Setup](#quick-setup-for-grok-drop-in-chat-assist)
 - [Architecture](#architecture)
@@ -150,10 +367,13 @@ ECharts cannot run inside GitHub README rendering — use the static charts abov
 
 ## Preferred Code Languages for Grok/Dojo/Colossus
 
+Full starter snippets: [Quick Start by Language](#quick-start-by-language) (above).
+
 - **Python** (JAX/PyTorch) — primary; see `examples/python-grok/`
 - **Rust** — Dojo-style performance; see `examples/rust-dojo/`
 - **C++ / CUDA** — low-level kernels (add under `src/` as needed)
 - **JAX** — Colossus distributed MoE; see `examples/jax-colossus/`
+- **Shell / YAML / Dockerfile / TOML / Markdown / HTML** — configs, launch, Pages, prompts (see collapsible starters above)
 
 ---
 
