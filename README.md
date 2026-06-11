@@ -7,7 +7,7 @@ Official Grok-optimized repository template for Colossus/Dojo routing, DVC pipel
 **SuperHeavyGrok** (contributor) · **Grok 4.20 Heavy** (February 2026) · Trained on Colossus
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Pages](https://img.shields.io/badge/Pages-live-00ff66)](https://fornevercollective.github.io/grok-repo-template/)
+[![Pages](https://img.shields.io/badge/Pages-live-00ff66)](https://fornevercollective.github.io/grok-repo-template/#activity)
 
 ---
 
@@ -54,7 +54,7 @@ gitGraph
 
 ## Configurator
 
-Live wizard: [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/)
+Live wizard: [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/) · [Activity heatmaps](https://fornevercollective.github.io/grok-repo-template/#activity)
 
 One-click template buttons + advanced wizard → first-prompt markdown, JSON manifest, `metadata.yaml`, `llms.txt`, GitHub search query. Docs: [docs/pages-configurator.md](docs/pages-configurator.md).
 

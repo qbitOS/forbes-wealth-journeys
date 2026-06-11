@@ -405,9 +405,180 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     goStep(1);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
+  const CHART = {
+    bg: 'transparent',
+    text: '#737373',
+    textLight: '#a3a3a3',
+    grid: '#1a1a1a',
+    border: 'rgba(255,255,255,0.06)',
+    scale: ['#141414', '#1a3324', '#166534', '#22c55e'],
+  };
+
+  function initActivityCharts() {
+    if (typeof echarts === 'undefined') return;
+
+    const calendarEl = document.getElementById('calendar');
+    const cartesianEl = document.getElementById('cartesian');
+    if (!calendarEl || !cartesianEl) return;
+
+    const year = new Date().getFullYear();
+    const meta = document.getElementById('calendar-meta');
+    if (meta) meta.textContent = String(year);
+
+    const calendarData = [];
+    for (let m = 0; m < 12; m++) {
+      const daysInMonth = new Date(year, m + 1, 0).getDate();
+      for (let d = 1; d <= daysInMonth; d++) {
+        calendarData.push([
+          `${year}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`,
+          Math.floor(Math.random() * 8),
+        ]);
+      }
+    }
+
+    const cal = echarts.init(calendarEl, null, { renderer: 'canvas' });
+    cal.setOption({
+      backgroundColor: CHART.bg,
+      tooltip: {
+        backgroundColor: '#1a1a1a',
+        borderColor: CHART.border,
+        textStyle: { color: '#f2f2f2', fontSize: 12 },
+        formatter: (p) => `${p.data[0]}<br/>${p.data[1]} events`,
+      },
+      visualMap: {
+        min: 0,
+        max: 8,
+        show: false,
+        inRange: { color: CHART.scale },
+      },
+      calendar: {
+        range: year,
+        cellSize: ['auto', 11],
+        top: 8,
+        left: 16,
+        right: 8,
+        bottom: 8,
+        itemStyle: {
+          borderWidth: 2,
+          borderColor: '#141414',
+          color: CHART.grid,
+        },
+        yearLabel: { show: false },
+        monthLabel: {
+          color: CHART.text,
+          fontSize: 10,
+          nameMap: 'en',
+          margin: 8,
+        },
+        dayLabel: {
+          firstDay: 0,
+          color: CHART.text,
+          fontSize: 9,
+          nameMap: ['', 'M', '', 'W', '', 'F', ''],
+        },
+        splitLine: { show: false },
+      },
+      series: [{
+        type: 'heatmap',
+        coordinateSystem: 'calendar',
+        data: calendarData,
+      }],
+    });
+
+    const stages = ['DVC', 'CI', 'Colossus', 'Grok', 'Vision', 'Agents', 'FT'];
+    const weeks = ['W1', 'W2', 'W3', 'W4'];
+    const pipelineData = [
+      [0, 0, 5], [1, 0, 8], [2, 1, 3], [3, 2, 9],
+      [4, 3, 2], [5, 1, 6], [6, 2, 4],
+    ];
+
+    const cart = echarts.init(cartesianEl, null, { renderer: 'canvas' });
+    cart.setOption({
+      backgroundColor: CHART.bg,
+      grid: { top: 8, left: 48, right: 12, bottom: 32 },
+      tooltip: {
+        backgroundColor: '#1a1a1a',
+        borderColor: CHART.border,
+        textStyle: { color: '#f2f2f2', fontSize: 12 },
+        formatter: (p) => `${stages[p.data[0]]} · ${weeks[p.data[1]]}<br/>${p.data[2]} runs`,
+      },
+      xAxis: {
+        type: 'category',
+        data: stages,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: { color: CHART.text, fontSize: 10, margin: 10 },
+        splitArea: { show: false },
+      },
+      yAxis: {
+        type: 'category',
+        data: weeks,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: { color: CHART.text, fontSize: 10, margin: 8 },
+        splitArea: { show: false },
+      },
+      visualMap: {
+        min: 0,
+        max: 10,
+        show: false,
+        inRange: { color: CHART.scale },
+      },
+      series: [{
+        type: 'heatmap',
+        data: pipelineData,
+        itemStyle: {
+          borderWidth: 3,
+          borderColor: '#141414',
+        },
+        emphasis: {
+          itemStyle: { borderColor: CHART.border },
+        },
+      }],
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        cal.resize();
+        cart.resize();
+      }, 120);
+    });
+  }
+
+  function initNavHighlight() {
+    const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
+    if (!navLinks.length) return;
+
+    const sections = [...navLinks]
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    const sync = () => {
+      const scrollY = window.scrollY + 100;
+      let current = sections[0]?.id;
+      sections.forEach((section) => {
+        if (section.offsetTop <= scrollY) current = section.id;
+      });
+      navLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === `#${current}`);
+      });
+    };
+
+    window.addEventListener('scroll', sync, { passive: true });
+    sync();
+  }
+
+  function boot() {
     init();
+    initActivityCharts();
+    initNavHighlight();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
   }
 })();
