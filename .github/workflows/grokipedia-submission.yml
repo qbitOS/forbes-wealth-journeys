@@ -1,0 +1,16 @@
+name: Grokipedia Submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      article_slug:
+        description: Grokipedia article slug
+        required: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Grokipedia submission stub
+        run: echo "Submit article ${{ inputs.article_slug }} — wire to Grokipedia API"

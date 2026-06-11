@@ -1,0 +1,38 @@
+# DVC pipeline — data versioning + Colossus-ready stages
+# See docs/dvc-pipelines.md for full guide
+
+stages:
+  explore:
+    cmd: python scripts/explore_dvc.py
+    deps:
+      - data/raw/
+      - scripts/explore_dvc.py
+    outs:
+      - data/explore/
+
+  preprocess:
+    cmd: python scripts/preprocess.py
+    deps:
+      - data/raw/
+      - scripts/preprocess.py
+    outs:
+      - data/processed/
+
+  train:
+    cmd: python scripts/train.py --config configs/default.yaml
+    deps:
+      - data/processed/
+      - configs/default.yaml
+      - scripts/train.py
+      - src/
+    outs:
+      - models/checkpoint/
+
+  validate:
+    cmd: python scripts/infer.py --config configs/default.yaml --validate
+    deps:
+      - models/checkpoint/
+      - data/processed/
+      - scripts/infer.py
+    outs:
+      - models/validation_report.json

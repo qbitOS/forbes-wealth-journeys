@@ -1,0 +1,5 @@
+# Vision training config
+model: resnet50
+input_size: 224
+batch_size: 64
+augment: true

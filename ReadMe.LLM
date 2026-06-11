@@ -1,0 +1,38 @@
+---
+name: grok-repo-template
+version: 0.1.0
+license: Apache-2.0
+grok_optimized: true
+colossus_compatible: true
+description: |
+  Official template for Grok-optimized GitHub repositories.
+  Structured for Colossus/Dojo routing, DVC pipelines, and Grok Build skills.
+languages: [python, rust, cpp, cuda]
+frameworks: [jax, pytorch]
+---
+
+# grok-repo-template
+
+## Modules
+
+### src/
+Core library. Add your package here.
+
+### scripts/
+- train.py — training entrypoint
+- infer.py — inference / validation
+- explore_dvc.py — DVC explore stage
+- preprocess.py — data preprocessing
+- colossus-launch.sh — cluster launch wrapper
+
+### examples/
+Domain-specific starters: vision, agents, fine-tuning, jax-colossus, rust-dojo, python-grok.
+
+## Dependencies
+See pyproject.toml. Optional: jax, torch.
+
+## Usage
+```bash
+pip install -e .
+python scripts/train.py --config configs/default.yaml
+```

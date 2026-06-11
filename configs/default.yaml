@@ -1,0 +1,7 @@
+# Default training config
+seed: 42
+batch_size: 32
+learning_rate: 1.0e-4
+epochs: 10
+data_dir: data/processed
+output_dir: models/checkpoint

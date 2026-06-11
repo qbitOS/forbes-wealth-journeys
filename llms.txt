@@ -1,0 +1,36 @@
+# llms.txt – Root index for LLM agents (emerging standard)
+# https://llmstxt.org/
+
+> grok-repo-template
+
+## Primary Instructions
+- LLMS.md
+- AGENTS.md
+
+## Entry Points
+- scripts/train.py
+- scripts/infer.py
+- scripts/colossus-launch.sh
+
+## Domain Examples
+- examples/vision/
+- examples/agents/
+- examples/fine-tuning/
+- examples/jax-colossus/
+- examples/rust-dojo/
+- examples/python-grok/
+
+## Documentation
+- docs/COLOSSUS_SETUP.md
+- docs/dvc-pipelines.md
+- docs/colossus-cluster-setup.md
+- standards/xai-spacex-terrafab-grokipedia.md
+
+## Config
+- configs/default.yaml
+- configs/colossus.yaml
+- metadata.yaml
+- dvc.yaml
+
+## Optional
+- ReadMe.LLM

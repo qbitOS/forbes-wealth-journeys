@@ -1,0 +1,4 @@
+framework: jax
+num_experts: 8
+mesh_shape: [2, 4]
+precision: bfloat16

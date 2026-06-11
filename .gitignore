@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Data & models (use DVC / Git LFS)
+data/raw/*
+data/interim/*
+data/processed/*
+data/explore/*
+!data/**/.gitkeep
+models/checkpoints/*
+!models/**/.gitkeep
+
+# DVC
+.dvc/cache/
+.dvc/tmp/
+
+# Build & IDE
+dist/
+build/
+*.so
+.idea/
+.vscode/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+.tmp/
+tmp/

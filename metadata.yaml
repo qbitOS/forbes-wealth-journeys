@@ -1,0 +1,26 @@
+project:
+  name: grok-repo-template
+  grok_optimized: true
+  colossus_compatible: true
+  dojo_pipeline: true
+  license: Apache-2.0
+  data_formats: [parquet, jsonl]
+  training_framework: jax
+  dvc_enabled: true
+  domain_examples: [vision, agents, fine-tuning, jax-colossus, rust-dojo, python-grok]
+  entrypoints:
+    train: scripts/train.py
+    infer: scripts/infer.py
+    colossus_launch: scripts/colossus-launch.sh
+    explore: scripts/explore_dvc.py
+  grok_connectors:
+    - github
+    - web_search
+    - browse_page
+    - code_execution
+    - x_tools
+  standards:
+    - xai
+    - spacex
+    - terrafab
+    - grokipedia

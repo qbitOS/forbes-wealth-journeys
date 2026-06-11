@@ -1,10 +1,16 @@
-# Colossus Cluster Setup
+# Colossus Setup (Quick Reference)
 
-Detailed guide for running pipelines on xAI's Colossus supercluster.
+> Full guide: [colossus-cluster-setup.md](./colossus-cluster-setup.md)
 
 ## Key Features
+
 - JAX distributed training
 - Multi-node SLURM jobs
 - Integration with DVC
+- Docker image: `Dockerfiles/Dockerfile.colossus`
 
-Example script in `scripts/colossus/`
+## Entry Points
+
+- `scripts/colossus/colossus-job.sh` — SLURM submission
+- `scripts/colossus-launch.sh` — launch wrapper
+- `configs/colossus.yaml` — scaling config

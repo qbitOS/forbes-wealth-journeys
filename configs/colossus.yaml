@@ -1,0 +1,9 @@
+# Colossus multi-node scaling config
+framework: jax
+nodes: 2
+gpus_per_node: 8
+batch_size: 256
+precision: bfloat16
+rdma: true
+dockerfile: Dockerfiles/Dockerfile.colossus
+launch_script: scripts/colossus/colossus-job.sh

@@ -1,0 +1,7 @@
+# Grok Build ignore (root copy — also see .grok/.grokignore)
+node_modules/
+.venv/
+__pycache__/
+.dvc/cache/
+data/raw/
+models/checkpoints/

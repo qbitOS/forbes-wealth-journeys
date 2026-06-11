@@ -1,0 +1,4 @@
+# Agent config
+model: grok-4
+max_steps: 20
+tools: [web_search, code_execution, github]
