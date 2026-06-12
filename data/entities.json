@@ -16,6 +16,7 @@
     "name": "Alphabet",
     "founded": 2015,
     "status": "public",
+    "valuationUsdB": 2800,
     "ticker": "GOOGL"
   },
   {
@@ -43,6 +44,7 @@
     "name": "Antofagasta",
     "founded": 1980,
     "status": "public",
+    "valuationUsdB": 25,
     "ticker": "ANTO.L"
   },
   {
@@ -70,6 +72,7 @@
     "name": "Blackstone",
     "founded": 1985,
     "status": "public",
+    "valuationUsdB": 180,
     "ticker": "BX"
   },
   {
@@ -121,7 +124,9 @@
     "id": "citadel",
     "name": "Citadel",
     "founded": 1990,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 60,
+    "ticker": null
   },
   {
     "id": "ck-hutchison",
@@ -327,7 +332,9 @@
     "id": "mars-inc",
     "name": "Mars Inc.",
     "founded": 1911,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 120,
+    "ticker": null
   },
   {
     "id": "meta",
@@ -356,13 +363,16 @@
     "id": "msc",
     "name": "MSC",
     "founded": 1970,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 200,
+    "ticker": null
   },
   {
     "id": "netease",
     "name": "NetEase",
     "founded": 1997,
     "status": "public",
+    "valuationUsdB": 80,
     "ticker": "NTES"
   },
   {
@@ -443,7 +453,9 @@
     "id": "schwarz-group",
     "name": "Schwarz Group (Lidl)",
     "founded": 1930,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 150,
+    "ticker": null
   },
   {
     "id": "semiconductors",

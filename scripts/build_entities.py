@@ -17,6 +17,7 @@ SEED_ENTITIES: list[dict[str, Any]] = [
     {"id": "tesla", "name": "Tesla", "founded": 2003, "status": "public", "valuationUsdB": 1200, "ticker": "TSLA"},
     {"id": "xai", "name": "xAI", "founded": 2023, "status": "private", "valuationUsdB": 50, "ticker": None},
     {"id": "google", "name": "Google", "founded": 1998, "status": "public", "valuationUsdB": 2800, "ticker": "GOOGL"},
+    {"id": "alphabet", "name": "Alphabet", "founded": 2015, "status": "public", "valuationUsdB": 2800, "ticker": "GOOGL"},
     {"id": "amazon", "name": "Amazon", "founded": 1994, "status": "public", "valuationUsdB": 2200, "ticker": "AMZN"},
     {"id": "oracle", "name": "Oracle", "founded": 1977, "status": "public", "valuationUsdB": 450, "ticker": "ORCL"},
     {"id": "nvidia", "name": "Nvidia", "founded": 1993, "status": "public", "valuationUsdB": 3200, "ticker": "NVDA"},
@@ -26,6 +27,13 @@ SEED_ENTITIES: list[dict[str, Any]] = [
     {"id": "lvmh", "name": "LVMH", "founded": 1987, "status": "public", "valuationUsdB": 400, "ticker": "MC.PA"},
     {"id": "berkshire", "name": "Berkshire Hathaway", "founded": 1955, "status": "public", "valuationUsdB": 900, "ticker": "BRK.A"},
     {"id": "walmart", "name": "Walmart", "founded": 1962, "status": "public", "valuationUsdB": 650, "ticker": "WMT"},
+    {"id": "blackstone", "name": "Blackstone", "founded": 1985, "status": "public", "valuationUsdB": 180, "ticker": "BX"},
+    {"id": "netease", "name": "NetEase", "founded": 1997, "status": "public", "valuationUsdB": 80, "ticker": "NTES"},
+    {"id": "antofagasta", "name": "Antofagasta", "founded": 1980, "status": "public", "valuationUsdB": 25, "ticker": "ANTO.L"},
+    {"id": "msc", "name": "MSC", "founded": 1970, "status": "private", "valuationUsdB": 200, "ticker": None},
+    {"id": "mars-inc", "name": "Mars Inc.", "founded": 1911, "status": "private", "valuationUsdB": 120, "ticker": None},
+    {"id": "schwarz-group", "name": "Schwarz Group (Lidl)", "founded": 1930, "status": "private", "valuationUsdB": 150, "ticker": None},
+    {"id": "citadel", "name": "Citadel", "founded": 1990, "status": "private", "valuationUsdB": 60, "ticker": None},
 ]
 
 

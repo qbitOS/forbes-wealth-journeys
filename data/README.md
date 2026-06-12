@@ -77,6 +77,10 @@ python3 scripts/merge_grok_enrichment.py data/grok-enrichment-7-20.json
 python3 scripts/build_entities.py
 ```
 
-[`entities.json`](entities.json) — deduplicated companies (`id`, `name`, `ticker`, `valuationUsdB`, `status`) extracted from billionaire profiles.
+[`entities.json`](entities.json) — deduplicated companies (`id`, `name`, `ticker`, `valuationUsdB`, `status`) extracted from billionaire profiles. Rebuild after merges:
+
+```bash
+python3 scripts/build_entities.py
+```
 
 Source thread: [Grok Forbes 500 Wealth Journeys](https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748)
