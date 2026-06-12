@@ -1,74 +1,3114 @@
 {
   "1": [
-    {"year": 1987, "netWorthB": 0.1},
-    {"year": 1995, "netWorthB": 0.3},
-    {"year": 2000, "netWorthB": 1.5},
-    {"year": 2005, "netWorthB": 8},
-    {"year": 2010, "netWorthB": 4},
-    {"year": 2015, "netWorthB": 12},
-    {"year": 2020, "netWorthB": 150},
-    {"year": 2025, "netWorthB": 300},
-    {"year": 2026, "netWorthB": 794.6}
+    {
+      "year": 1987,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1995,
+      "netWorthB": 0.3
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1.5
+    },
+    {
+      "year": 2005,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 12
+    },
+    {
+      "year": 2020,
+      "netWorthB": 150
+    },
+    {
+      "year": 2025,
+      "netWorthB": 300
+    },
+    {
+      "year": 2026,
+      "netWorthB": 794.6
+    }
   ],
   "2": [
-    {"year": 1998, "netWorthB": 0.1},
-    {"year": 2004, "netWorthB": 5},
-    {"year": 2010, "netWorthB": 15},
-    {"year": 2015, "netWorthB": 35},
-    {"year": 2020, "netWorthB": 70},
-    {"year": 2025, "netWorthB": 200},
-    {"year": 2026, "netWorthB": 292.7}
+    {
+      "year": 1998,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2004,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 35
+    },
+    {
+      "year": 2020,
+      "netWorthB": 70
+    },
+    {
+      "year": 2025,
+      "netWorthB": 200
+    },
+    {
+      "year": 2026,
+      "netWorthB": 292.7
+    }
   ],
   "3": [
-    {"year": 1998, "netWorthB": 0.1},
-    {"year": 2004, "netWorthB": 5},
-    {"year": 2010, "netWorthB": 14},
-    {"year": 2015, "netWorthB": 32},
-    {"year": 2020, "netWorthB": 65},
-    {"year": 2025, "netWorthB": 190},
-    {"year": 2026, "netWorthB": 270}
+    {
+      "year": 1998,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2004,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 14
+    },
+    {
+      "year": 2015,
+      "netWorthB": 32
+    },
+    {
+      "year": 2020,
+      "netWorthB": 65
+    },
+    {
+      "year": 2025,
+      "netWorthB": 190
+    },
+    {
+      "year": 2026,
+      "netWorthB": 270
+    }
   ],
   "4": [
-    {"year": 1997, "netWorthB": 0.5},
-    {"year": 2005, "netWorthB": 8},
-    {"year": 2010, "netWorthB": 20},
-    {"year": 2015, "netWorthB": 60},
-    {"year": 2020, "netWorthB": 130},
-    {"year": 2025, "netWorthB": 200},
-    {"year": 2026, "netWorthB": 251.5}
+    {
+      "year": 1997,
+      "netWorthB": 0.5
+    },
+    {
+      "year": 2005,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 60
+    },
+    {
+      "year": 2020,
+      "netWorthB": 130
+    },
+    {
+      "year": 2025,
+      "netWorthB": 200
+    },
+    {
+      "year": 2026,
+      "netWorthB": 251.5
+    }
   ],
   "5": [
-    {"year": 1986, "netWorthB": 2},
-    {"year": 2000, "netWorthB": 15},
-    {"year": 2010, "netWorthB": 28},
-    {"year": 2015, "netWorthB": 50},
-    {"year": 2020, "netWorthB": 70},
-    {"year": 2025, "netWorthB": 150},
-    {"year": 2026, "netWorthB": 230.1}
+    {
+      "year": 1986,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 28
+    },
+    {
+      "year": 2015,
+      "netWorthB": 50
+    },
+    {
+      "year": 2020,
+      "netWorthB": 70
+    },
+    {
+      "year": 2025,
+      "netWorthB": 150
+    },
+    {
+      "year": 2026,
+      "netWorthB": 230.1
+    }
   ],
   "6": [
-    {"year": 2004, "netWorthB": 0.1},
-    {"year": 2010, "netWorthB": 5},
-    {"year": 2015, "netWorthB": 45},
-    {"year": 2020, "netWorthB": 80},
-    {"year": 2025, "netWorthB": 170},
-    {"year": 2026, "netWorthB": 222}
+    {
+      "year": 2004,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 45
+    },
+    {
+      "year": 2020,
+      "netWorthB": 80
+    },
+    {
+      "year": 2025,
+      "netWorthB": 170
+    },
+    {
+      "year": 2026,
+      "netWorthB": 222
+    }
   ],
   "7": [
-    {"year": 1999, "netWorthB": 0.5},
-    {"year": 2010, "netWorthB": 2},
-    {"year": 2015, "netWorthB": 8},
-    {"year": 2020, "netWorthB": 25},
-    {"year": 2025, "netWorthB": 120},
-    {"year": 2026, "netWorthB": 182}
+    {
+      "year": 1999,
+      "netWorthB": 0.5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2
+    },
+    {
+      "year": 2015,
+      "netWorthB": 8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 25
+    },
+    {
+      "year": 2025,
+      "netWorthB": 120
+    },
+    {
+      "year": 2026,
+      "netWorthB": 182
+    }
   ],
   "8": [
-    {"year": 1984, "netWorthB": 0.1},
-    {"year": 2000, "netWorthB": 10},
-    {"year": 2010, "netWorthB": 15},
-    {"year": 2015, "netWorthB": 20},
-    {"year": 2020, "netWorthB": 40},
-    {"year": 2025, "netWorthB": 100},
-    {"year": 2026, "netWorthB": 120}
+    {
+      "year": 1984,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 40
+    },
+    {
+      "year": 2025,
+      "netWorthB": 100
+    },
+    {
+      "year": 2026,
+      "netWorthB": 120
+    }
+  ],
+  "9": [
+    {
+      "year": 1980,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 50
+    },
+    {
+      "year": 2025,
+      "netWorthB": 90
+    },
+    {
+      "year": 2026,
+      "netWorthB": 110
+    }
+  ],
+  "10": [
+    {
+      "year": 1987,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 30
+    },
+    {
+      "year": 2015,
+      "netWorthB": 40
+    },
+    {
+      "year": 2020,
+      "netWorthB": 100
+    },
+    {
+      "year": 2025,
+      "netWorthB": 150
+    },
+    {
+      "year": 2026,
+      "netWorthB": 174
+    }
+  ],
+  "11": [
+    {
+      "year": 1956,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 30
+    },
+    {
+      "year": 2010,
+      "netWorthB": 50
+    },
+    {
+      "year": 2015,
+      "netWorthB": 70
+    },
+    {
+      "year": 2020,
+      "netWorthB": 80
+    },
+    {
+      "year": 2025,
+      "netWorthB": 120
+    },
+    {
+      "year": 2026,
+      "netWorthB": 140
+    }
+  ],
+  "12": [
+    {
+      "year": 1975,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 10
+    },
+    {
+      "year": 2000,
+      "netWorthB": 60
+    },
+    {
+      "year": 2010,
+      "netWorthB": 55
+    },
+    {
+      "year": 2015,
+      "netWorthB": 80
+    },
+    {
+      "year": 2020,
+      "netWorthB": 100
+    },
+    {
+      "year": 2025,
+      "netWorthB": 120
+    },
+    {
+      "year": 2026,
+      "netWorthB": 130
+    }
+  ],
+  "13": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 60
+    },
+    {
+      "year": 2025,
+      "netWorthB": 100
+    },
+    {
+      "year": 2026,
+      "netWorthB": 120
+    }
+  ],
+  "14": [
+    {
+      "year": 1998,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 3
+    },
+    {
+      "year": 2015,
+      "netWorthB": 5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 80
+    },
+    {
+      "year": 2026,
+      "netWorthB": 110
+    }
+  ],
+  "15": [
+    {
+      "year": 1996,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 70
+    },
+    {
+      "year": 2026,
+      "netWorthB": 100
+    }
+  ],
+  "16": [
+    {
+      "year": 1950,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 20
+    },
+    {
+      "year": 2010,
+      "netWorthB": 30
+    },
+    {
+      "year": 2015,
+      "netWorthB": 40
+    },
+    {
+      "year": 2020,
+      "netWorthB": 70
+    },
+    {
+      "year": 2025,
+      "netWorthB": 90
+    },
+    {
+      "year": 2026,
+      "netWorthB": 95
+    }
+  ],
+  "17": [
+    {
+      "year": 1975,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 30
+    },
+    {
+      "year": 2015,
+      "netWorthB": 60
+    },
+    {
+      "year": 2020,
+      "netWorthB": 70
+    },
+    {
+      "year": 2025,
+      "netWorthB": 85
+    },
+    {
+      "year": 2026,
+      "netWorthB": 90
+    }
+  ],
+  "18": [
+    {
+      "year": 1980,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 20
+    },
+    {
+      "year": 2010,
+      "netWorthB": 40
+    },
+    {
+      "year": 2015,
+      "netWorthB": 50
+    },
+    {
+      "year": 2020,
+      "netWorthB": 60
+    },
+    {
+      "year": 2025,
+      "netWorthB": 80
+    },
+    {
+      "year": 2026,
+      "netWorthB": 85
+    }
+  ],
+  "19": [
+    {
+      "year": 1962,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 20
+    },
+    {
+      "year": 2010,
+      "netWorthB": 30
+    },
+    {
+      "year": 2015,
+      "netWorthB": 40
+    },
+    {
+      "year": 2020,
+      "netWorthB": 60
+    },
+    {
+      "year": 2025,
+      "netWorthB": 75
+    },
+    {
+      "year": 2026,
+      "netWorthB": 80
+    }
+  ],
+  "20": [
+    {
+      "year": 1962,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 18
+    },
+    {
+      "year": 2010,
+      "netWorthB": 28
+    },
+    {
+      "year": 2015,
+      "netWorthB": 38
+    },
+    {
+      "year": 2020,
+      "netWorthB": 58
+    },
+    {
+      "year": 2025,
+      "netWorthB": 73
+    },
+    {
+      "year": 2026,
+      "netWorthB": 78
+    }
+  ],
+  "21": [
+    {
+      "year": 1962,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 4
+    },
+    {
+      "year": 2000,
+      "netWorthB": 17
+    },
+    {
+      "year": 2010,
+      "netWorthB": 27
+    },
+    {
+      "year": 2015,
+      "netWorthB": 37
+    },
+    {
+      "year": 2020,
+      "netWorthB": 57
+    },
+    {
+      "year": 2025,
+      "netWorthB": 72
+    },
+    {
+      "year": 2026,
+      "netWorthB": 76
+    }
+  ],
+  "22": [
+    {
+      "year": 1940,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 20
+    },
+    {
+      "year": 2010,
+      "netWorthB": 30
+    },
+    {
+      "year": 2015,
+      "netWorthB": 40
+    },
+    {
+      "year": 2020,
+      "netWorthB": 55
+    },
+    {
+      "year": 2025,
+      "netWorthB": 65
+    },
+    {
+      "year": 2026,
+      "netWorthB": 70
+    }
+  ],
+  "23": [
+    {
+      "year": 1940,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 18
+    },
+    {
+      "year": 2010,
+      "netWorthB": 28
+    },
+    {
+      "year": 2015,
+      "netWorthB": 38
+    },
+    {
+      "year": 2020,
+      "netWorthB": 53
+    },
+    {
+      "year": 2025,
+      "netWorthB": 63
+    },
+    {
+      "year": 2026,
+      "netWorthB": 68
+    }
+  ],
+  "24": [
+    {
+      "year": 1952,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 3
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 25
+    },
+    {
+      "year": 2015,
+      "netWorthB": 35
+    },
+    {
+      "year": 2020,
+      "netWorthB": 45
+    },
+    {
+      "year": 2025,
+      "netWorthB": 60
+    },
+    {
+      "year": 2026,
+      "netWorthB": 65
+    }
+  ],
+  "25": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 18
+    },
+    {
+      "year": 2015,
+      "netWorthB": 35
+    },
+    {
+      "year": 2020,
+      "netWorthB": 50
+    },
+    {
+      "year": 2025,
+      "netWorthB": 58
+    },
+    {
+      "year": 2026,
+      "netWorthB": 62
+    }
+  ],
+  "26": [
+    {
+      "year": 1986,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 30
+    },
+    {
+      "year": 2020,
+      "netWorthB": 40
+    },
+    {
+      "year": 2025,
+      "netWorthB": 55
+    },
+    {
+      "year": 2026,
+      "netWorthB": 60
+    }
+  ],
+  "27": [
+    {
+      "year": 1980,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 30
+    },
+    {
+      "year": 2020,
+      "netWorthB": 45
+    },
+    {
+      "year": 2025,
+      "netWorthB": 55
+    },
+    {
+      "year": 2026,
+      "netWorthB": 58
+    }
+  ],
+  "28": [
+    {
+      "year": 1946,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 25
+    },
+    {
+      "year": 2015,
+      "netWorthB": 35
+    },
+    {
+      "year": 2020,
+      "netWorthB": 45
+    },
+    {
+      "year": 2025,
+      "netWorthB": 52
+    },
+    {
+      "year": 2026,
+      "netWorthB": 55
+    }
+  ],
+  "29": [
+    {
+      "year": 1998,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 30
+    },
+    {
+      "year": 2025,
+      "netWorthB": 45
+    },
+    {
+      "year": 2026,
+      "netWorthB": 52
+    }
+  ],
+  "30": [
+    {
+      "year": 2012,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2015,
+      "netWorthB": 5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 40
+    },
+    {
+      "year": 2026,
+      "netWorthB": 50
+    }
+  ],
+  "31": [
+    {
+      "year": 1984,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 30
+    },
+    {
+      "year": 2025,
+      "netWorthB": 45
+    },
+    {
+      "year": 2026,
+      "netWorthB": 48
+    }
+  ],
+  "32": [
+    {
+      "year": 1980,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 25
+    },
+    {
+      "year": 2020,
+      "netWorthB": 35
+    },
+    {
+      "year": 2025,
+      "netWorthB": 42
+    },
+    {
+      "year": 2026,
+      "netWorthB": 45
+    }
+  ],
+  "33": [
+    {
+      "year": 1954,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 30
+    },
+    {
+      "year": 2020,
+      "netWorthB": 38
+    },
+    {
+      "year": 2025,
+      "netWorthB": 41
+    },
+    {
+      "year": 2026,
+      "netWorthB": 43
+    }
+  ],
+  "34": [
+    {
+      "year": 1954,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 30
+    },
+    {
+      "year": 2020,
+      "netWorthB": 38
+    },
+    {
+      "year": 2025,
+      "netWorthB": 41
+    },
+    {
+      "year": 2026,
+      "netWorthB": 43
+    }
+  ],
+  "35": [
+    {
+      "year": 1950,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 25
+    },
+    {
+      "year": 2020,
+      "netWorthB": 30
+    },
+    {
+      "year": 2025,
+      "netWorthB": 38
+    },
+    {
+      "year": 2026,
+      "netWorthB": 40
+    }
+  ],
+  "36": [
+    {
+      "year": 1993,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 32
+    },
+    {
+      "year": 2026,
+      "netWorthB": 38
+    }
+  ],
+  "37": [
+    {
+      "year": 2015,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2020,
+      "netWorthB": 10
+    },
+    {
+      "year": 2025,
+      "netWorthB": 30
+    },
+    {
+      "year": 2026,
+      "netWorthB": 36
+    }
+  ],
+  "38": [
+    {
+      "year": 1983,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 25
+    },
+    {
+      "year": 2025,
+      "netWorthB": 32
+    },
+    {
+      "year": 2026,
+      "netWorthB": 35
+    }
+  ],
+  "39": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 25
+    },
+    {
+      "year": 2025,
+      "netWorthB": 32
+    },
+    {
+      "year": 2026,
+      "netWorthB": 34
+    }
+  ],
+  "40": [
+    {
+      "year": 1930,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 15
+    },
+    {
+      "year": 2010,
+      "netWorthB": 20
+    },
+    {
+      "year": 2015,
+      "netWorthB": 25
+    },
+    {
+      "year": 2020,
+      "netWorthB": 28
+    },
+    {
+      "year": 2025,
+      "netWorthB": 31
+    },
+    {
+      "year": 2026,
+      "netWorthB": 33
+    }
+  ],
+  "41": [
+    {
+      "year": 1968,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 25
+    },
+    {
+      "year": 2025,
+      "netWorthB": 30
+    },
+    {
+      "year": 2026,
+      "netWorthB": 32
+    }
+  ],
+  "42": [
+    {
+      "year": 2011,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 10
+    },
+    {
+      "year": 2025,
+      "netWorthB": 25
+    },
+    {
+      "year": 2026,
+      "netWorthB": 31
+    }
+  ],
+  "43": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 28
+    },
+    {
+      "year": 2026,
+      "netWorthB": 30
+    }
+  ],
+  "44": [
+    {
+      "year": 1968,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 15
+    },
+    {
+      "year": 2015,
+      "netWorthB": 20
+    },
+    {
+      "year": 2020,
+      "netWorthB": 25
+    },
+    {
+      "year": 2025,
+      "netWorthB": 28
+    },
+    {
+      "year": 2026,
+      "netWorthB": 29
+    }
+  ],
+  "45": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 25
+    },
+    {
+      "year": 2026,
+      "netWorthB": 28
+    }
+  ],
+  "46": [
+    {
+      "year": 1980,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 25
+    },
+    {
+      "year": 2026,
+      "netWorthB": 27
+    }
+  ],
+  "47": [
+    {
+      "year": 1946,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 18
+    },
+    {
+      "year": 2020,
+      "netWorthB": 22
+    },
+    {
+      "year": 2025,
+      "netWorthB": 24
+    },
+    {
+      "year": 2026,
+      "netWorthB": 26
+    }
+  ],
+  "48": [
+    {
+      "year": 1994,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 15
+    },
+    {
+      "year": 2025,
+      "netWorthB": 22
+    },
+    {
+      "year": 2026,
+      "netWorthB": 25
+    }
+  ],
+  "49": [
+    {
+      "year": 1966,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 20
+    },
+    {
+      "year": 2025,
+      "netWorthB": 22
+    },
+    {
+      "year": 2026,
+      "netWorthB": 24
+    }
+  ],
+  "50": [
+    {
+      "year": 1976,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 18
+    },
+    {
+      "year": 2025,
+      "netWorthB": 21
+    },
+    {
+      "year": 2026,
+      "netWorthB": 23
+    }
+  ],
+  "51": [
+    {
+      "year": 2001,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 15
+    },
+    {
+      "year": 2025,
+      "netWorthB": 20
+    },
+    {
+      "year": 2026,
+      "netWorthB": 22.5
+    }
+  ],
+  "52": [
+    {
+      "year": 1985,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 18
+    },
+    {
+      "year": 2025,
+      "netWorthB": 20
+    },
+    {
+      "year": 2026,
+      "netWorthB": 21.8
+    }
+  ],
+  "53": [
+    {
+      "year": 1997,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 15
+    },
+    {
+      "year": 2025,
+      "netWorthB": 18
+    },
+    {
+      "year": 2026,
+      "netWorthB": 21
+    }
+  ],
+  "54": [
+    {
+      "year": 1980,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 10
+    },
+    {
+      "year": 2015,
+      "netWorthB": 12
+    },
+    {
+      "year": 2020,
+      "netWorthB": 15
+    },
+    {
+      "year": 2025,
+      "netWorthB": 19
+    },
+    {
+      "year": 2026,
+      "netWorthB": 20.5
+    }
+  ],
+  "55": [
+    {
+      "year": 1962,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 17
+    },
+    {
+      "year": 2025,
+      "netWorthB": 19
+    },
+    {
+      "year": 2026,
+      "netWorthB": 20
+    }
+  ],
+  "56": [
+    {
+      "year": 1970,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 8
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 17
+    },
+    {
+      "year": 2025,
+      "netWorthB": 18.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 19.5
+    }
+  ],
+  "57": [
+    {
+      "year": 1911,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 17
+    },
+    {
+      "year": 2025,
+      "netWorthB": 18
+    },
+    {
+      "year": 2026,
+      "netWorthB": 19
+    }
+  ],
+  "58": [
+    {
+      "year": 1911,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 15
+    },
+    {
+      "year": 2020,
+      "netWorthB": 17
+    },
+    {
+      "year": 2025,
+      "netWorthB": 18
+    },
+    {
+      "year": 2026,
+      "netWorthB": 19
+    }
+  ],
+  "59": [
+    {
+      "year": 1930,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 10
+    },
+    {
+      "year": 2010,
+      "netWorthB": 12
+    },
+    {
+      "year": 2015,
+      "netWorthB": 14
+    },
+    {
+      "year": 2020,
+      "netWorthB": 16
+    },
+    {
+      "year": 2025,
+      "netWorthB": 17.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 18.5
+    }
+  ],
+  "60": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 15
+    },
+    {
+      "year": 2025,
+      "netWorthB": 17
+    },
+    {
+      "year": 2026,
+      "netWorthB": 18
+    }
+  ],
+  "61": [
+    {
+      "year": 1994,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 10
+    },
+    {
+      "year": 2020,
+      "netWorthB": 15
+    },
+    {
+      "year": 2025,
+      "netWorthB": 22
+    },
+    {
+      "year": 2026,
+      "netWorthB": 25
+    }
+  ],
+  "62": [
+    {
+      "year": 1978,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 10
+    },
+    {
+      "year": 2025,
+      "netWorthB": 10.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 11
+    }
+  ],
+  "63": [
+    {
+      "year": 1979,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1990,
+      "netWorthB": 1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 3
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 9
+    },
+    {
+      "year": 2025,
+      "netWorthB": 10
+    },
+    {
+      "year": 2026,
+      "netWorthB": 10.5
+    }
+  ],
+  "64": [
+    {
+      "year": 1996,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4
+    },
+    {
+      "year": 2020,
+      "netWorthB": 7
+    },
+    {
+      "year": 2025,
+      "netWorthB": 9
+    },
+    {
+      "year": 2026,
+      "netWorthB": 10
+    }
+  ],
+  "65": [
+    {
+      "year": 2006,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 9
+    },
+    {
+      "year": 2026,
+      "netWorthB": 9.8
+    }
+  ],
+  "66": [
+    {
+      "year": 1910,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 7
+    },
+    {
+      "year": 2015,
+      "netWorthB": 8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 9
+    },
+    {
+      "year": 2025,
+      "netWorthB": 9.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 9.5
+    }
+  ],
+  "67": [
+    {
+      "year": 2011,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2015,
+      "netWorthB": 1
+    },
+    {
+      "year": 2020,
+      "netWorthB": 4
+    },
+    {
+      "year": 2025,
+      "netWorthB": 8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 9
+    }
+  ],
+  "68": [
+    {
+      "year": 1910,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 7
+    },
+    {
+      "year": 2015,
+      "netWorthB": 8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 8.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 8.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 8.8
+    }
+  ],
+  "69": [
+    {
+      "year": 1946,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 7
+    },
+    {
+      "year": 2015,
+      "netWorthB": 8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 8.2
+    },
+    {
+      "year": 2025,
+      "netWorthB": 8.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 8.5
+    }
+  ],
+  "70": [
+    {
+      "year": 1952,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 6
+    },
+    {
+      "year": 2015,
+      "netWorthB": 7
+    },
+    {
+      "year": 2020,
+      "netWorthB": 7.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 8.2
+    }
+  ],
+  "71": [
+    {
+      "year": 1982,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 6
+    },
+    {
+      "year": 2020,
+      "netWorthB": 7
+    },
+    {
+      "year": 2025,
+      "netWorthB": 7.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 8
+    }
+  ],
+  "72": [
+    {
+      "year": 1868,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 5
+    },
+    {
+      "year": 2010,
+      "netWorthB": 6
+    },
+    {
+      "year": 2015,
+      "netWorthB": 7
+    },
+    {
+      "year": 2020,
+      "netWorthB": 7.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 7.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 7.8
+    }
+  ],
+  "73": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 6
+    },
+    {
+      "year": 2020,
+      "netWorthB": 7
+    },
+    {
+      "year": 2025,
+      "netWorthB": 7.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 7.5
+    }
+  ],
+  "74": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 6
+    },
+    {
+      "year": 2020,
+      "netWorthB": 6.8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 7.2
+    },
+    {
+      "year": 2026,
+      "netWorthB": 7.2
+    }
+  ],
+  "75": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 6
+    },
+    {
+      "year": 2020,
+      "netWorthB": 6.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 7
+    },
+    {
+      "year": 2026,
+      "netWorthB": 7
+    }
+  ],
+  "76": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 6
+    },
+    {
+      "year": 2020,
+      "netWorthB": 6.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 6.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 6.8
+    }
+  ],
+  "77": [
+    {
+      "year": 1911,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 4
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 6
+    },
+    {
+      "year": 2020,
+      "netWorthB": 6.2
+    },
+    {
+      "year": 2025,
+      "netWorthB": 6.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 6.5
+    }
+  ],
+  "78": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 5.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 6
+    },
+    {
+      "year": 2026,
+      "netWorthB": 6.2
+    }
+  ],
+  "79": [
+    {
+      "year": 1942,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 4
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 5.5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 5.8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 6
+    },
+    {
+      "year": 2026,
+      "netWorthB": 6
+    }
+  ],
+  "80": [
+    {
+      "year": 1938,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 4
+    },
+    {
+      "year": 2010,
+      "netWorthB": 5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 5.5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 5.6
+    },
+    {
+      "year": 2025,
+      "netWorthB": 5.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 5.8
+    }
+  ],
+  "81": [
+    {
+      "year": 1986,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4.5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 5.2
+    },
+    {
+      "year": 2026,
+      "netWorthB": 5.5
+    }
+  ],
+  "82": [
+    {
+      "year": 1984,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4.5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 5.1
+    },
+    {
+      "year": 2026,
+      "netWorthB": 5.2
+    }
+  ],
+  "83": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4.5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 4.8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 5
+    }
+  ],
+  "84": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 3
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4
+    },
+    {
+      "year": 2020,
+      "netWorthB": 4.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 4.7
+    },
+    {
+      "year": 2026,
+      "netWorthB": 4.8
+    }
+  ],
+  "85": [
+    {
+      "year": 1959,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 3
+    },
+    {
+      "year": 2010,
+      "netWorthB": 4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4.2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 4.4
+    },
+    {
+      "year": 2025,
+      "netWorthB": 4.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 4.5
+    }
+  ],
+  "86": [
+    {
+      "year": 1926,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 3
+    },
+    {
+      "year": 2010,
+      "netWorthB": 3.5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 4
+    },
+    {
+      "year": 2020,
+      "netWorthB": 4.1
+    },
+    {
+      "year": 2025,
+      "netWorthB": 4.2
+    },
+    {
+      "year": 2026,
+      "netWorthB": 4.2
+    }
+  ],
+  "87": [
+    {
+      "year": 1926,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 3
+    },
+    {
+      "year": 2010,
+      "netWorthB": 3.5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 3.8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 3.9
+    },
+    {
+      "year": 2025,
+      "netWorthB": 4
+    },
+    {
+      "year": 2026,
+      "netWorthB": 4
+    }
+  ],
+  "88": [
+    {
+      "year": 1926,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 3
+    },
+    {
+      "year": 2010,
+      "netWorthB": 3.5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 3.7
+    },
+    {
+      "year": 2020,
+      "netWorthB": 3.8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 3.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 3.8
+    }
+  ],
+  "89": [
+    {
+      "year": 1952,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 2
+    },
+    {
+      "year": 2000,
+      "netWorthB": 3
+    },
+    {
+      "year": 2010,
+      "netWorthB": 3
+    },
+    {
+      "year": 2015,
+      "netWorthB": 3.2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 3.4
+    },
+    {
+      "year": 2025,
+      "netWorthB": 3.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 3.5
+    }
+  ],
+  "90": [
+    {
+      "year": 1838,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2.5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2.8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 3
+    },
+    {
+      "year": 2025,
+      "netWorthB": 3.1
+    },
+    {
+      "year": 2026,
+      "netWorthB": 3.2
+    }
+  ],
+  "91": [
+    {
+      "year": 1838,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2.5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2.8
+    },
+    {
+      "year": 2020,
+      "netWorthB": 2.9
+    },
+    {
+      "year": 2025,
+      "netWorthB": 3
+    },
+    {
+      "year": 2026,
+      "netWorthB": 3
+    }
+  ],
+  "92": [
+    {
+      "year": 1838,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 2
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2.5
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2.7
+    },
+    {
+      "year": 2020,
+      "netWorthB": 2.8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 2.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 2.8
+    }
+  ],
+  "93": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2.2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 2.4
+    },
+    {
+      "year": 2025,
+      "netWorthB": 2.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 2.5
+    }
+  ],
+  "94": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 2
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2.1
+    },
+    {
+      "year": 2020,
+      "netWorthB": 2.2
+    },
+    {
+      "year": 2025,
+      "netWorthB": 2.2
+    },
+    {
+      "year": 2026,
+      "netWorthB": 2.2
+    }
+  ],
+  "95": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 1.8
+    },
+    {
+      "year": 2015,
+      "netWorthB": 2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 2
+    },
+    {
+      "year": 2025,
+      "netWorthB": 2
+    },
+    {
+      "year": 2026,
+      "netWorthB": 2
+    }
+  ],
+  "96": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 1.6
+    },
+    {
+      "year": 2015,
+      "netWorthB": 1.7
+    },
+    {
+      "year": 2020,
+      "netWorthB": 1.8
+    },
+    {
+      "year": 2025,
+      "netWorthB": 1.8
+    },
+    {
+      "year": 2026,
+      "netWorthB": 1.8
+    }
+  ],
+  "97": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 1.4
+    },
+    {
+      "year": 2015,
+      "netWorthB": 1.5
+    },
+    {
+      "year": 2020,
+      "netWorthB": 1.5
+    },
+    {
+      "year": 2025,
+      "netWorthB": 1.5
+    },
+    {
+      "year": 2026,
+      "netWorthB": 1.5
+    }
+  ],
+  "98": [
+    {
+      "year": 1981,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 1.2
+    },
+    {
+      "year": 2015,
+      "netWorthB": 1.2
+    },
+    {
+      "year": 2020,
+      "netWorthB": 1.2
+    },
+    {
+      "year": 2025,
+      "netWorthB": 1.2
+    },
+    {
+      "year": 2026,
+      "netWorthB": 1.2
+    }
+  ],
+  "99": [
+    {
+      "year": 1911,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 1980,
+      "netWorthB": 0.5
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 1
+    },
+    {
+      "year": 2015,
+      "netWorthB": 1
+    },
+    {
+      "year": 2020,
+      "netWorthB": 1
+    },
+    {
+      "year": 2025,
+      "netWorthB": 1
+    },
+    {
+      "year": 2026,
+      "netWorthB": 1
+    }
+  ],
+  "100": [
+    {
+      "year": 1990,
+      "netWorthB": 0.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 1
+    },
+    {
+      "year": 2010,
+      "netWorthB": 1
+    },
+    {
+      "year": 2015,
+      "netWorthB": 1
+    },
+    {
+      "year": 2020,
+      "netWorthB": 1
+    },
+    {
+      "year": 2025,
+      "netWorthB": 0.95
+    },
+    {
+      "year": 2026,
+      "netWorthB": 0.95
+    }
   ]
 }

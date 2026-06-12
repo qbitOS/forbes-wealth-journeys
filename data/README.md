@@ -77,7 +77,7 @@ python3 scripts/merge_grok_enrichment.py data/grok-enrichment-7-20.json
 python3 scripts/build_entities.py
 ```
 
-[`historical-net-worth.json`](historical-net-worth.json) — estimated net worth by year, keyed by Forbes rank (`"1"` … `"100"`). Loaded in the Story tab line chart:
+[`historical-net-worth.json`](historical-net-worth.json) — estimated net worth by year for all **100** Forbes ranks, keyed by rank (`"1"` … `"100"`). Loaded in the Story tab line chart:
 
 ```json
 {
