@@ -5,6 +5,7 @@
   'use strict';
 
   const DATA_URL = 'data/forbes-billionaires.json';
+  const HOLDINGS_13F_URL = 'data/13f-top20.json';
   const REPO = 'qbitOS/forbes-wealth-journeys';
   const REPO_BASE = `https://github.com/${REPO}`;
   const PAGES_URL = 'https://qbitos.github.io/forbes-wealth-journeys/';
@@ -42,6 +43,8 @@
   ];
 
   let dataset = [];
+  let holdings13fByRank = {};
+  let holdings13fMeta = null;
   const state = {
     step: 1,
     sector: '',
@@ -306,12 +309,49 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
       </ol>`;
   }
 
+  function formatShares(shares) {
+    if (shares == null || shares === '') return '—';
+    const n = Number(shares);
+    if (Number.isNaN(n)) return '—';
+    if (n >= 1e9) return `${(n / 1e9).toFixed(2)}B`;
+    if (n >= 1e6) return `${(n / 1e6).toFixed(1)}M`;
+    return n.toLocaleString();
+  }
+
+  function render13fPanel(rank) {
+    const entry = holdings13fByRank[String(rank)] || window.Forbes13F?.forRank?.(rank);
+    const rows = entry?.holdings;
+    if (!rows?.length) return '';
+
+    const meta = holdings13fMeta || window.Forbes13F?.meta?.();
+    const metaText = meta
+      ? [meta.asOf ? `as of ${meta.asOf}` : '', meta.source || ''].filter(Boolean).join(' · ')
+      : '';
+
+    return `
+      <section class="member-13f-block">
+        <h4 class="member-subheading">13F public holdings</h4>
+        ${metaText ? `<p class="member-13f-meta">${escapeHtml(metaText)}</p>` : ''}
+        <table class="member-detail-table">
+          <thead><tr><th>Ticker</th><th>Shares</th><th>Value</th><th>% portfolio</th></tr></thead>
+          <tbody>
+            ${rows.map((r) => `
+              <tr>
+                <td>${escapeHtml(r.ticker)}</td>
+                <td>${formatShares(r.shares)}</td>
+                <td>${r.valueUsdB != null ? `$${r.valueUsdB}B` : '—'}</td>
+                <td>${r.pctPortfolio != null ? `${r.pctPortfolio}%` : '—'}</td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </section>`;
+  }
+
   function renderPortfolioPanel(profile) {
     const rows = profile.wealthBreakdown || [];
-    if (!rows.length) {
-      return '<p class="member-empty">No stake-level wealth breakdown yet.</p>';
-    }
-    return `
+    const breakdownHtml = !rows.length
+      ? '<p class="member-empty">No stake-level wealth breakdown yet.</p>'
+      : `
       <table class="member-detail-table">
         <thead><tr><th>Entity</th><th>Type</th><th>Stake</th><th>Value</th></tr></thead>
         <tbody>
@@ -324,6 +364,11 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
             </tr>`).join('')}
         </tbody>
       </table>`;
+
+    return `
+      <h4 class="member-subheading">Wealth breakdown</h4>
+      ${breakdownHtml}
+      ${render13fPanel(profile.rank)}`;
   }
 
   function renderEntitiesPanel(profile) {
@@ -626,6 +671,23 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     refreshExportPanels();
   }
 
+  async function load13fHoldings() {
+    try {
+      const resp = await fetch(HOLDINGS_13F_URL);
+      if (!resp.ok) return;
+      const payload = await resp.json();
+      const ranks = Array.isArray(payload) ? payload : payload.ranks || [];
+      holdings13fMeta = { asOf: payload.asOf, source: payload.source };
+      holdings13fByRank = {};
+      ranks.forEach((row) => {
+        if (row?.rank != null) holdings13fByRank[String(row.rank)] = row;
+      });
+    } catch {
+      holdings13fByRank = {};
+      holdings13fMeta = null;
+    }
+  }
+
   async function initWealthDataTools() {
     try {
       const resp = await fetch(DATA_URL);
@@ -636,6 +698,7 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     } catch {
       dataset = [];
     }
+    await load13fHoldings();
     initMemberDetails();
   }
 

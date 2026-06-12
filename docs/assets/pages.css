@@ -1797,6 +1797,27 @@ main {
   font-size: 0.875rem;
 }
 
+.member-subheading {
+  margin: 0 0 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.member-13f-block {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.member-13f-meta {
+  margin: 0 0 0.625rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
 /* Configurator panel */
 .panel {
   background: var(--surface);
@@ -2647,6 +2668,42 @@ body.forbes-drawer-open {
 }
 
 /* Detail tabs — Story / Portfolio / Entities */
+.forbes-modal-content {
+  padding: 0;
+}
+
+.forbes-modal-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.forbes-modal-tab {
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.forbes-modal-tab:hover {
+  color: var(--text);
+  border-bottom-color: var(--border-strong);
+}
+
+.forbes-modal-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
 .forbes-detail-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -2689,14 +2746,18 @@ body.forbes-drawer-open {
 
 .forbes-breakdown-chart {
   width: 100%;
-  height: 280px;
+  height: 300px;
   margin-bottom: 1rem;
 }
 
 .forbes-history-chart {
   width: 100%;
-  height: 240px;
+  height: 300px;
   margin-bottom: 0.5rem;
+}
+
+#historyChart.forbes-history-chart {
+  height: 300px;
 }
 
 .forbes-panel-history {
@@ -2721,6 +2782,22 @@ body.forbes-drawer-open {
 .forbes-grokipedia-btn:hover {
   background: #404040;
   color: #fff;
+}
+
+.forbes-13f-panel {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.forbes-13f-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.forbes-13f-table {
+  margin-bottom: 0;
 }
 
 .forbes-entity-grid {

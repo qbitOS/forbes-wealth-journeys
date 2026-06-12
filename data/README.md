@@ -96,6 +96,18 @@ python3 scripts/build_market_crossover.py /path/to/robinhood-agentic/data/flip-b
 }
 ```
 
+[`13f-top20.json`](13f-top20.json) — public 13F / insider holdings for enriched profiles (ticker, shares, valueUsdB, pctPortfolio). Rank keys match `forbes-billionaires.json`. Shown under **Portfolio**:
+
+```json
+{
+  "rank": 1,
+  "name": "Elon Musk",
+  "holdings": [
+    { "ticker": "TSLA", "shares": 300000000, "valueUsdB": 120, "pctPortfolio": 40 }
+  ]
+}
+```
+
 [`entities.json`](entities.json) — deduplicated companies (`id`, `name`, `ticker`, `valuationUsdB`, `status`) extracted from billionaire profiles. Rebuild after merges:
 
 ```bash

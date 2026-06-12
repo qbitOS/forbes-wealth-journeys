@@ -1,5 +1,5 @@
 /**
- * Forbes Wealth Journeys — billionaire list + tabbed detail (Story / Portfolio / Entities)
+ * Forbes Wealth Journeys — billionaire list + tabbed detail (Story / Portfolio / Entities / History)
  * Data: data/forbes-billionaires.json, data/entities.json
  */
 (function () {
@@ -8,6 +8,7 @@
   const DATA_URL = 'data/forbes-billionaires.json';
   const ENTITIES_URL = 'data/entities.json';
   const HISTORICAL_URL = 'data/historical-net-worth.json';
+  const HOLDINGS_13F_URL = 'data/13f-top20.json';
   const BREAKDOWN_COLORS = ['#2563eb', '#16a34a', '#d97706', '#7c3aed', '#dc2626', '#0891b2', '#78716c'];
 
   let billionaires = [];
@@ -16,6 +17,8 @@
   let searchQuery = '';
   let entityCatalog = new Map();
   let historicalByRank = {};
+  let holdings13fByRank = {};
+  let holdings13fMeta = null;
   let breakdownChart = null;
   let historyChart = null;
   let detailTab = 'story';
@@ -137,16 +140,62 @@
     });
   }
 
-  function renderLinks(person) {
-    const links = [
-      ['Forbes', person.forbesProfile],
-      ['Wikipedia', person.wikipediaLink],
-    ].filter(([, url]) => url);
-    if (!links.length) return '';
+  function formatShares(shares) {
+    if (shares == null || shares === '') return '—';
+    const n = Number(shares);
+    if (Number.isNaN(n)) return '—';
+    if (n >= 1e9) return `${(n / 1e9).toFixed(2)}B`;
+    if (n >= 1e6) return `${(n / 1e6).toFixed(1)}M`;
+    return n.toLocaleString();
+  }
+
+  function holdings13fForRank(rank) {
+    return holdings13fByRank[String(rank)] || null;
+  }
+
+  function render13fTable(rows) {
+    if (!rows?.length) {
+      return '<p class="forbes-empty">No 13F holdings on file.</p>';
+    }
     return `
-      <nav class="forbes-links" aria-label="External profiles">
-        ${links.map(([label, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${label}</a>`).join('')}
-      </nav>`;
+      <table class="forbes-table forbes-13f-table">
+        <thead>
+          <tr><th>Ticker</th><th>Shares</th><th>Value</th><th>% portfolio</th></tr>
+        </thead>
+        <tbody>
+          ${rows.map((r) => `
+            <tr>
+              <td><span class="forbes-ticker">${escapeHtml(r.ticker)}</span></td>
+              <td>${formatShares(r.shares)}</td>
+              <td>${formatUsdB(r.valueUsdB)}</td>
+              <td>${r.pctPortfolio != null ? `${r.pctPortfolio}%` : '—'}</td>
+            </tr>`).join('')}
+        </tbody>
+      </table>`;
+  }
+
+  function render13fSection(person) {
+    const section = $('#forbes-13f-section');
+    const metaEl = $('#forbes-13f-meta');
+    const tableEl = $('#forbes-13f-table');
+    if (!section || !tableEl) return;
+
+    const entry = holdings13fForRank(person.rank);
+    if (!entry?.holdings?.length) {
+      section.hidden = true;
+      tableEl.innerHTML = '';
+      if (metaEl) metaEl.textContent = '';
+      return;
+    }
+
+    section.hidden = false;
+    if (metaEl && holdings13fMeta) {
+      const parts = [];
+      if (holdings13fMeta.asOf) parts.push(`as of ${holdings13fMeta.asOf}`);
+      if (holdings13fMeta.source) parts.push(holdings13fMeta.source);
+      metaEl.textContent = parts.join(' · ');
+    }
+    tableEl.innerHTML = render13fTable(entry.holdings);
   }
 
   function renderWealthBreakdownTable(rows) {
@@ -170,21 +219,29 @@
       </table>`;
   }
 
-  function renderEntityCards(entities) {
+  const TAB_KEYS = ['story', 'portfolio', 'entities', 'history'];
+
+  function tabIndex(tab) {
+    const i = TAB_KEYS.indexOf(tab);
+    return i >= 0 ? i : 0;
+  }
+
+  function renderEntityCardsHtml(entities) {
     const list = (entities || []).map(catalogEntry);
     if (!list.length) {
       return '<p class="forbes-empty">No linked entities yet.</p>';
     }
-    return `
-      <div class="forbes-entity-grid">
-        ${list.map((e) => `
+    return list
+      .map(
+        (e) => `
           <article class="forbes-entity-card">
             <h4 class="forbes-entity-card-name">${escapeHtml(e.name)}</h4>
             <p class="forbes-entity-card-meta">${escapeHtml(e.role || '—')}${e.founded ? ` · ${e.founded}` : ''} · ${escapeHtml(e.status || '—')}</p>
             <p class="forbes-entity-card-val">${e.ticker ? `<span class="forbes-ticker">${escapeHtml(e.ticker)}</span> · ` : ''}${e.valuationUsdB ? `${formatUsdB(e.valuationUsdB)} mkt cap` : ''}</p>
             <code class="forbes-entity-id">${escapeHtml(e.id)}</code>
-          </article>`).join('')}
-      </div>`;
+          </article>`,
+      )
+      .join('');
   }
 
   function renderTimeline(events) {
@@ -235,28 +292,21 @@
     return historicalByRank[String(rank)] || null;
   }
 
-  function renderHistorySection(person) {
-    const series = historicalSeries(person.rank);
-    if (!series?.length) {
-      return '';
-    }
-    return `
-        <section class="forbes-panel forbes-panel-history">
-          <h4 class="forbes-journey-heading">Net worth over time</h4>
-          <div id="forbes-history-chart" class="forbes-history-chart" role="img" aria-label="Line chart of estimated net worth by year"></div>
-        </section>`;
-  }
-
   function renderHistoryChart(person) {
-    const el = $('#forbes-history-chart');
+    const el = $('#historyChart');
+    const emptyEl = $('#forbes-history-empty');
     if (!el || typeof echarts === 'undefined') return;
 
     disposeHistoryChart();
     const series = historicalSeries(person.rank);
     if (!series?.length) {
       el.innerHTML = '';
+      el.hidden = true;
+      if (emptyEl) emptyEl.hidden = false;
       return;
     }
+    if (emptyEl) emptyEl.hidden = true;
+    el.hidden = false;
     el.innerHTML = '';
 
     const years = series.map((p) => p.year);
@@ -265,7 +315,7 @@
     historyChart = echarts.init(el, null, { renderer: 'canvas' });
     historyChart.setOption({
       backgroundColor: 'transparent',
-      color: ['#2563eb'],
+      color: ['#171717'],
       tooltip: {
         trigger: 'axis',
         formatter: (params) => {
@@ -283,7 +333,7 @@
       },
       yAxis: {
         type: 'value',
-        name: '$B',
+        name: 'Net Worth (B USD)',
         nameTextStyle: { color: '#737373', fontSize: 10 },
         axisLabel: { color: '#737373', fontSize: 10 },
         splitLine: { lineStyle: { color: 'rgba(0,0,0,0.06)' } },
@@ -295,8 +345,9 @@
           smooth: true,
           symbol: 'circle',
           symbolSize: 6,
-          lineStyle: { width: 2 },
-          areaStyle: { color: 'rgba(37, 99, 235, 0.08)' },
+          lineStyle: { width: 2, color: '#171717' },
+          itemStyle: { color: '#171717' },
+          areaStyle: { color: 'rgba(0, 0, 0, 0.06)' },
           data: values,
         },
       ],
@@ -304,7 +355,7 @@
   }
 
   function renderBreakdownChart(person) {
-    const el = $('#forbes-breakdown-chart');
+    const el = $('#breakdownChart');
     if (!el || typeof echarts === 'undefined') return;
 
     disposeBreakdownChart();
@@ -360,28 +411,38 @@
     });
   }
 
-  function setDetailTab(tab, root) {
-    detailTab = tab;
-    root.querySelectorAll('.forbes-detail-tab').forEach((btn) => {
-      const active = btn.dataset.tab === tab;
+  function showTab(n) {
+    const idx = Number(n);
+    if (Number.isNaN(idx) || idx < 0 || idx > 3) return;
+
+    detailTab = TAB_KEYS[idx];
+    const modal = $('#modalContent');
+    if (!modal) return;
+
+    modal.querySelectorAll('.forbes-modal-tab').forEach((btn) => {
+      const active = Number(btn.dataset.tabIndex) === idx;
       btn.classList.toggle('active', active);
       btn.setAttribute('aria-selected', active ? 'true' : 'false');
     });
-    root.querySelectorAll('.forbes-detail-tabpanel').forEach((panel) => {
-      const show = panel.dataset.tab === tab;
+
+    [0, 1, 2, 3].forEach((i) => {
+      const panel = $(`#tab${i}`);
+      if (!panel) return;
+      const show = i === idx;
       panel.hidden = !show;
       panel.classList.toggle('active', show);
     });
+
     const person = findPerson(selectedKey);
     if (!person) return;
 
-    if (tab === 'portfolio') {
+    if (idx === 1) {
       requestAnimationFrame(() => {
         renderBreakdownChart(person);
         breakdownChart?.resize();
       });
     }
-    if (tab === 'story') {
+    if (idx === 3) {
       requestAnimationFrame(() => {
         renderHistoryChart(person);
         historyChart?.resize();
@@ -389,12 +450,94 @@
     }
   }
 
+  function renderFacts(person) {
+    const factsEl = $('#forbes-facts');
+    if (!factsEl) return;
+
+    const legacySource = person.sourceOfWealth
+      ? `<div><dt>Source of wealth</dt><dd>${escapeHtml(person.sourceOfWealth)}</dd></div>`
+      : '';
+    const legacyDecade = person.firstFortuneDecade
+      ? `<div><dt>First fortune</dt><dd>${escapeHtml(person.firstFortuneDecade)}</dd></div>`
+      : '';
+
+    factsEl.innerHTML = `
+      <div><dt>Age</dt><dd>${person.age ?? '—'}</dd></div>
+      <div><dt>Country</dt><dd>${escapeHtml(person.country || '—')}</dd></div>
+      <div><dt>Sector</dt><dd>${escapeHtml(person.sector || '—')}</dd></div>
+      ${legacySource}
+      ${legacyDecade}`;
+  }
+
+  function renderDetailLinks(person) {
+    const linksEl = $('#forbes-detail-links');
+    if (!linksEl) return;
+
+    const links = [
+      ['Forbes', person.forbesProfile],
+      ['Wikipedia', person.wikipediaLink],
+    ].filter(([, url]) => url);
+
+    if (!links.length) {
+      linksEl.hidden = true;
+      linksEl.innerHTML = '';
+      return;
+    }
+
+    linksEl.hidden = false;
+    linksEl.innerHTML = links
+      .map(([label, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${label}</a>`)
+      .join('');
+  }
+
+  function renderStoryTab(person) {
+    const tab0 = $('#tab0');
+    if (!tab0) return;
+
+    tab0.innerHTML = `
+      <section class="forbes-panel">
+        <h4 class="forbes-journey-heading">Wealth journey</h4>
+        ${renderTimeline(person.timeline)}
+      </section>`;
+  }
+
+  function renderHistoryTab(person) {
+    renderHistoryChart(person);
+  }
+
+  function renderPortfolioTab(person) {
+    const tableEl = $('#forbes-breakdown-table');
+    const grokBtn = $('#grokipediaBtn');
+    if (tableEl) {
+      tableEl.innerHTML = renderWealthBreakdownTable(person.wealthBreakdown);
+    }
+    render13fSection(person);
+    if (grokBtn) {
+      if (person.grokipediaLink) {
+        grokBtn.href = person.grokipediaLink;
+        grokBtn.hidden = false;
+      } else {
+        grokBtn.hidden = true;
+      }
+    }
+  }
+
+  function renderEntitiesTab(person) {
+    const listEl = $('#entitiesList');
+    if (!listEl) return;
+    listEl.innerHTML = renderEntityCardsHtml(person.entities);
+  }
+
   function renderDetail(container) {
     const person = findPerson(selectedKey);
+    const emptyEl = $('#forbes-detail-empty');
+    const modal = $('#modalContent');
+
     if (!person) {
       disposeBreakdownChart();
       disposeHistoryChart();
-      container.innerHTML = '<p class="forbes-empty">Select a person from the list.</p>';
+      if (emptyEl) emptyEl.hidden = false;
+      if (modal) modal.hidden = true;
       return;
     }
 
@@ -406,80 +549,38 @@
     disposeBreakdownChart();
     disposeHistoryChart();
 
-    const legacySource = person.sourceOfWealth
-      ? `<div><dt>Source of wealth</dt><dd>${escapeHtml(person.sourceOfWealth)}</dd></div>`
-      : '';
-    const legacyDecade = person.firstFortuneDecade
-      ? `<div><dt>First fortune</dt><dd>${escapeHtml(person.firstFortuneDecade)}</dd></div>`
-      : '';
+    if (emptyEl) emptyEl.hidden = true;
+    if (modal) modal.hidden = false;
 
-    const grokBtn = person.grokipediaLink
-      ? `<a id="forbes-grokipedia-btn" class="forbes-grokipedia-btn" href="${escapeHtml(person.grokipediaLink)}" target="_blank" rel="noopener">Open Grokipedia profile</a>`
-      : '';
+    const rankLabel = $('#forbes-rank-label');
+    if (rankLabel) rankLabel.textContent = `Forbes rank #${person.rank}`;
 
-    container.innerHTML = `
-      <header class="forbes-detail-header">
-        <button
-          type="button"
-          class="forbes-rank-picker"
-          id="forbes-rank-picker"
-          aria-expanded="${listDrawerOpen ? 'true' : 'false'}"
-          aria-controls="forbes-list-drawer"
-        >
-          <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
-          <span>Forbes rank #${person.rank}</span>
-          <span class="forbes-rank-picker-hint">Browse all</span>
-        </button>
-        <h3 class="forbes-detail-name">${escapeHtml(person.name)}</h3>
-        <p class="forbes-detail-worth">${formatNetWorth(person.netWorth)}</p>
-        <p class="forbes-detail-summary">${escapeHtml(person.summary || '')}</p>
-        ${renderLinks(person)}
-      </header>
-      <dl class="forbes-facts">
-        <div><dt>Age</dt><dd>${person.age ?? '—'}</dd></div>
-        <div><dt>Country</dt><dd>${escapeHtml(person.country || '—')}</dd></div>
-        <div><dt>Sector</dt><dd>${escapeHtml(person.sector || '—')}</dd></div>
-        ${legacySource}
-        ${legacyDecade}
-      </dl>
-      <div class="forbes-detail-tabs" role="tablist" aria-label="Profile sections">
-        <button type="button" role="tab" class="forbes-detail-tab${detailTab === 'story' ? ' active' : ''}" data-tab="story" aria-selected="${detailTab === 'story'}">Story</button>
-        <button type="button" role="tab" class="forbes-detail-tab${detailTab === 'portfolio' ? ' active' : ''}" data-tab="portfolio" aria-selected="${detailTab === 'portfolio'}">Portfolio</button>
-        <button type="button" role="tab" class="forbes-detail-tab${detailTab === 'entities' ? ' active' : ''}" data-tab="entities" aria-selected="${detailTab === 'entities'}">Entities</button>
-      </div>
-      <div class="forbes-detail-tabpanel${detailTab === 'story' ? ' active' : ''}" data-tab="story" role="tabpanel" ${detailTab === 'story' ? '' : 'hidden'}>
-        ${renderHistorySection(person)}
-        <section class="forbes-panel">
-          <h4 class="forbes-journey-heading">Wealth journey</h4>
-          ${renderTimeline(person.timeline)}
-        </section>
-      </div>
-      <div class="forbes-detail-tabpanel${detailTab === 'portfolio' ? ' active' : ''}" data-tab="portfolio" role="tabpanel" ${detailTab === 'portfolio' ? '' : 'hidden'}>
-        <section class="forbes-panel">
-          <h4 class="forbes-journey-heading">Wealth breakdown</h4>
-          <div id="forbes-breakdown-chart" class="forbes-breakdown-chart" role="img" aria-label="Stacked bar chart of wealth breakdown"></div>
-          ${renderWealthBreakdownTable(person.wealthBreakdown)}
-          ${grokBtn}
-        </section>
-      </div>
-      <div class="forbes-detail-tabpanel${detailTab === 'entities' ? ' active' : ''}" data-tab="entities" role="tabpanel" ${detailTab === 'entities' ? '' : 'hidden'}>
-        <section class="forbes-panel">
-          <h4 class="forbes-journey-heading">Key entities</h4>
-          ${renderEntityCards(person.entities)}
-        </section>
-      </div>
-    `;
+    const nameEl = $('#modalName');
+    if (nameEl) nameEl.textContent = person.name;
 
-    container.querySelectorAll('.forbes-detail-tab').forEach((btn) => {
-      btn.addEventListener('click', () => setDetailTab(btn.dataset.tab, container));
+    const worthEl = $('#forbes-detail-worth');
+    if (worthEl) worthEl.innerHTML = formatNetWorth(person.netWorth);
+
+    const summaryEl = $('#forbes-detail-summary');
+    if (summaryEl) summaryEl.textContent = person.summary || '';
+
+    renderDetailLinks(person);
+    renderFacts(person);
+    renderStoryTab(person);
+    renderPortfolioTab(person);
+    renderEntitiesTab(person);
+    renderHistoryTab(person);
+    showTab(tabIndex(detailTab));
+  }
+
+  function bindDetailTabs() {
+    const modal = $('#modalContent');
+    if (!modal || modal.dataset.tabsBound === 'true') return;
+    modal.dataset.tabsBound = 'true';
+
+    modal.querySelectorAll('.forbes-modal-tab').forEach((btn) => {
+      btn.addEventListener('click', () => showTab(btn.dataset.tabIndex));
     });
-
-    if (detailTab === 'portfolio') {
-      renderBreakdownChart(person);
-    }
-    if (detailTab === 'story') {
-      renderHistoryChart(person);
-    }
   }
 
   function setListDrawer(open) {
@@ -569,7 +670,8 @@
       (b.wealthBreakdown || []).some((w) => w.stakePct != null),
     ).length;
     const historical = Object.keys(historicalByRank).length;
-    countEl.textContent = `${billionaires.length} profiles · ${enriched} with stake breakdown · ${historical} with historical net worth · schema v2`;
+    const with13f = Object.keys(holdings13fByRank).length;
+    countEl.textContent = `${billionaires.length} profiles · ${enriched} with stake breakdown · ${historical} with historical net worth · ${with13f} with 13F · schema v2`;
   }
 
   async function loadEntityCatalog() {
@@ -580,6 +682,27 @@
       entityCatalog = new Map(rows.filter((e) => e.id).map((e) => [e.id, e]));
     } catch {
       entityCatalog = new Map();
+    }
+  }
+
+  async function load13fHoldings() {
+    try {
+      const resp = await fetch(HOLDINGS_13F_URL);
+      if (!resp.ok) return;
+      const payload = await resp.json();
+      const ranks = Array.isArray(payload) ? payload : payload.ranks || [];
+      holdings13fMeta = {
+        asOf: payload.asOf,
+        source: payload.source,
+        note: payload.note,
+      };
+      holdings13fByRank = {};
+      ranks.forEach((row) => {
+        if (row?.rank != null) holdings13fByRank[String(row.rank)] = row;
+      });
+    } catch {
+      holdings13fByRank = {};
+      holdings13fMeta = null;
     }
   }
 
@@ -607,7 +730,7 @@
     });
 
     try {
-      await Promise.all([loadEntityCatalog(), loadHistoricalNetWorth()]);
+      await Promise.all([loadEntityCatalog(), loadHistoricalNetWorth(), load13fHoldings()]);
       const resp = await fetch(DATA_URL);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       billionaires = await resp.json();
@@ -624,6 +747,7 @@
     readSelectionFromUrl();
     applyFilter();
     bindListDrawer();
+    bindDetailTabs();
     renderMeta(countEl);
     renderList(listEl);
     renderDetail(detailEl);
@@ -647,6 +771,12 @@
       notifyProfileSelection(findPerson(selectedKey));
     });
   }
+
+  window.showTab = showTab;
+  window.Forbes13F = {
+    forRank: (rank) => holdings13fForRank(rank),
+    meta: () => holdings13fMeta,
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initForbesWealth);

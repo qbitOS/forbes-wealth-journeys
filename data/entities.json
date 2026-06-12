@@ -52,7 +52,32 @@
     "name": "ArcelorMittal",
     "founded": 2006,
     "status": "public",
+    "valuationUsdB": 30,
     "ticker": "MT"
+  },
+  {
+    "id": "asian-paints",
+    "name": "Asian Paints",
+    "founded": 1942,
+    "status": "public",
+    "valuationUsdB": 30,
+    "ticker": "ASIANPAINT.NS"
+  },
+  {
+    "id": "aurobindo",
+    "name": "Aurobindo Pharma",
+    "founded": 1986,
+    "status": "public",
+    "valuationUsdB": 12,
+    "ticker": "AUROPHARMA.NS"
+  },
+  {
+    "id": "bajaj-finserv",
+    "name": "Bajaj Finserv",
+    "founded": 2007,
+    "status": "public",
+    "valuationUsdB": 25,
+    "ticker": "BAJAJFINSV.NS"
   },
   {
     "id": "batteries",
@@ -97,6 +122,7 @@
     "name": "CATL",
     "founded": 2011,
     "status": "public",
+    "valuationUsdB": 150,
     "ticker": "300750.SZ"
   },
   {
@@ -108,7 +134,9 @@
     "id": "chanel",
     "name": "Chanel",
     "founded": 1909,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 120,
+    "ticker": null
   },
   {
     "id": "cheese",
@@ -133,6 +161,7 @@
     "name": "CK Hutchison",
     "founded": 1950,
     "status": "public",
+    "valuationUsdB": 60,
     "ticker": "0001.HK"
   },
   {
@@ -179,6 +208,22 @@
     "status": "private"
   },
   {
+    "id": "divis-labs",
+    "name": "Divi's Laboratories",
+    "founded": 1990,
+    "status": "public",
+    "valuationUsdB": 15,
+    "ticker": "DIVISLAB.NS"
+  },
+  {
+    "id": "dr-reddys",
+    "name": "Dr Reddy's Laboratories",
+    "founded": 1984,
+    "status": "public",
+    "valuationUsdB": 10,
+    "ticker": "DRREDDY.NS"
+  },
+  {
     "id": "e_commerce",
     "name": "E-commerce",
     "status": "private"
@@ -193,6 +238,7 @@
     "name": "Fast Retailing (Uniqlo)",
     "founded": 1984,
     "status": "public",
+    "valuationUsdB": 100,
     "ticker": "9983.T"
   },
   {
@@ -244,10 +290,19 @@
     "ticker": "GMEXICOB.MX"
   },
   {
+    "id": "gvk",
+    "name": "GVK Group",
+    "founded": 1990,
+    "status": "private",
+    "valuationUsdB": 5,
+    "ticker": null
+  },
+  {
     "id": "hca",
     "name": "HCA Healthcare",
     "founded": 1968,
     "status": "public",
+    "valuationUsdB": 80,
     "ticker": "HCA"
   },
   {
@@ -276,7 +331,9 @@
     "id": "jindal",
     "name": "Jindal Group",
     "founded": 1952,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 25,
+    "ticker": null
   },
   {
     "id": "koch_inc",
@@ -294,6 +351,7 @@
     "name": "Kuehne + Nagel",
     "founded": 1890,
     "status": "public",
+    "valuationUsdB": 30,
     "ticker": "KNIN.SW"
   },
   {
@@ -308,6 +366,7 @@
     "name": "Las Vegas Sands",
     "founded": 1988,
     "status": "public",
+    "valuationUsdB": 40,
     "ticker": "LVS"
   },
   {
@@ -327,6 +386,14 @@
     "id": "machinery",
     "name": "Machinery",
     "status": "private"
+  },
+  {
+    "id": "marico",
+    "name": "Marico",
+    "founded": 1990,
+    "status": "public",
+    "valuationUsdB": 10,
+    "ticker": "MARICO.NS"
   },
   {
     "id": "mars-inc",
@@ -357,6 +424,7 @@
     "name": "Midea Group",
     "founded": 1968,
     "status": "public",
+    "valuationUsdB": 80,
     "ticker": "000333.SZ"
   },
   {
@@ -392,6 +460,7 @@
     "name": "Norilsk Nickel",
     "founded": 1993,
     "status": "public",
+    "valuationUsdB": 50,
     "ticker": "GMKN.ME"
   },
   {
@@ -421,11 +490,28 @@
     "status": "private"
   },
   {
+    "id": "pidilite",
+    "name": "Pidilite Industries",
+    "founded": 1959,
+    "status": "public",
+    "valuationUsdB": 15,
+    "ticker": "PIDILITIND.NS"
+  },
+  {
     "id": "pinduoduo",
     "name": "Pinduoduo",
     "founded": 2015,
     "status": "public",
+    "valuationUsdB": 200,
     "ticker": "PDD"
+  },
+  {
+    "id": "rajapalayam-mills",
+    "name": "Rajapalayam Mills",
+    "founded": 1938,
+    "status": "public",
+    "valuationUsdB": 2,
+    "ticker": null
   },
   {
     "id": "real_estate",
@@ -466,7 +552,9 @@
     "id": "serum-institute",
     "name": "Serum Institute",
     "founded": 1966,
-    "status": "private"
+    "status": "private",
+    "valuationUsdB": 30,
+    "ticker": null
   },
   {
     "id": "shipping",
@@ -478,6 +566,7 @@
     "name": "SoftBank",
     "founded": 1981,
     "status": "public",
+    "valuationUsdB": 90,
     "ticker": "9984.T"
   },
   {
@@ -503,6 +592,7 @@
     "name": "Sun Pharmaceutical",
     "founded": 1983,
     "status": "public",
+    "valuationUsdB": 40,
     "ticker": "SUNPHARMA.NS"
   },
   {
@@ -521,6 +611,14 @@
     "ticker": "TSLA"
   },
   {
+    "id": "times-group",
+    "name": "Times Group",
+    "founded": 1838,
+    "status": "private",
+    "valuationUsdB": 5,
+    "ticker": null
+  },
+  {
     "id": "trading",
     "name": "Trading",
     "status": "private"
@@ -529,6 +627,14 @@
     "id": "transport",
     "name": "transport",
     "status": "private"
+  },
+  {
+    "id": "tvs-motor",
+    "name": "TVS Motor",
+    "founded": 1911,
+    "status": "public",
+    "valuationUsdB": 15,
+    "ticker": "TVSMOTOR.NS"
   },
   {
     "id": "walmart",
@@ -550,5 +656,13 @@
     "status": "private",
     "valuationUsdB": 50,
     "ticker": null
+  },
+  {
+    "id": "zydus",
+    "name": "Zydus Lifesciences",
+    "founded": 1952,
+    "status": "public",
+    "valuationUsdB": 15,
+    "ticker": "ZYDUSLIFE.NS"
   }
 ]

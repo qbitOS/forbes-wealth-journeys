@@ -43,7 +43,63 @@
         · 100 profiles in <code>data/forbes-billionaires.json</code>
       </p>
       <div id="forbes-wealth" class="forbes-layout">
-        <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile"></article>
+        <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile">
+          <p id="forbes-detail-empty" class="forbes-empty">Select a person from the rankings.</p>
+          <div id="modalContent" class="forbes-modal-content" hidden>
+            <header class="forbes-detail-header">
+              <button
+                type="button"
+                class="forbes-rank-picker"
+                id="forbes-rank-picker"
+                aria-expanded="false"
+                aria-controls="forbes-list-drawer"
+              >
+                <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
+                <span id="forbes-rank-label">Forbes rank</span>
+                <span class="forbes-rank-picker-hint">Browse all</span>
+              </button>
+            </header>
+            <h2 id="modalName" class="forbes-detail-name"></h2>
+            <p id="forbes-detail-worth" class="forbes-detail-worth"></p>
+            <p id="forbes-detail-summary" class="forbes-detail-summary"></p>
+            <nav id="forbes-detail-links" class="forbes-links" aria-label="External profiles" hidden></nav>
+            <dl id="forbes-facts" class="forbes-facts"></dl>
+
+            <div class="forbes-modal-tabs" role="tablist" aria-label="Profile sections">
+              <button type="button" role="tab" class="forbes-modal-tab active" data-tab-index="0" aria-selected="true">Story</button>
+              <button type="button" role="tab" class="forbes-modal-tab" data-tab-index="1" aria-selected="false">Portfolio</button>
+              <button type="button" role="tab" class="forbes-modal-tab" data-tab-index="2" aria-selected="false">Entities</button>
+              <button type="button" role="tab" class="forbes-modal-tab" data-tab-index="3" aria-selected="false">History</button>
+            </div>
+
+            <div id="tab0" class="forbes-detail-tabpanel active" role="tabpanel"></div>
+
+            <div id="tab1" class="forbes-detail-tabpanel" role="tabpanel" hidden>
+              <h3 class="forbes-journey-heading">Wealth Breakdown</h3>
+              <div id="breakdownChart" class="forbes-breakdown-chart" role="img" aria-label="Stacked bar chart of wealth breakdown"></div>
+              <div id="forbes-breakdown-table"></div>
+              <section id="forbes-13f-section" class="forbes-panel forbes-13f-panel" hidden>
+                <h4 class="forbes-journey-heading">13F public holdings</h4>
+                <p id="forbes-13f-meta" class="forbes-13f-meta"></p>
+                <div id="forbes-13f-table"></div>
+              </section>
+              <a id="grokipediaBtn" href="#" target="_blank" rel="noopener" class="forbes-grokipedia-btn" hidden>
+                🔍 Grokipedia Profile
+              </a>
+            </div>
+
+            <div id="tab2" class="forbes-detail-tabpanel" role="tabpanel" hidden>
+              <h3 class="forbes-journey-heading">Key Entities</h3>
+              <div id="entitiesList" class="forbes-entity-grid"></div>
+            </div>
+
+            <div id="tab3" class="forbes-detail-tabpanel" role="tabpanel" hidden>
+              <h3 class="forbes-journey-heading">Net Worth History</h3>
+              <p id="forbes-history-empty" class="forbes-empty" hidden>No historical series for this rank.</p>
+              <div id="historyChart" class="forbes-history-chart" role="img" aria-label="Line chart of estimated net worth by year"></div>
+            </div>
+          </div>
+        </article>
         <div id="forbes-list-drawer" class="forbes-list-drawer" aria-hidden="true">
           <div class="forbes-list-drawer-panel" role="dialog" aria-modal="true" aria-label="Forbes billionaire rankings">
             <header class="forbes-list-drawer-head">

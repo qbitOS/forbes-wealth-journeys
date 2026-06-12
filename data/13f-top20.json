@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "source": "Public SEC 13F and insider disclosure filings (illustrative)",
+  "asOf": "2026-03-31",
+  "note": "Twenty enriched profiles; rank keys match forbes-billionaires.json.",
+  "ranks": [
+    {
+      "rank": 1,
+      "name": "Elon Musk",
+      "holdings": [
+        { "ticker": "TSLA", "shares": 300000000, "valueUsdB": 120, "pctPortfolio": 40 },
+        { "ticker": "GOOGL", "shares": 5000000, "valueUsdB": 8, "pctPortfolio": 3 }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Larry Page",
+      "holdings": [
+        { "ticker": "GOOGL", "shares": 120000000, "valueUsdB": 280, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Sergey Brin",
+      "holdings": [
+        { "ticker": "GOOGL", "shares": 110000000, "valueUsdB": 260, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Jeff Bezos",
+      "holdings": [
+        { "ticker": "AMZN", "shares": 90000000, "valueUsdB": 220, "pctPortfolio": 90 }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Larry Ellison",
+      "holdings": [
+        { "ticker": "ORCL", "shares": 1200000000, "valueUsdB": 220, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Michael Dell",
+      "holdings": [
+        { "ticker": "DELL", "shares": 300000000, "valueUsdB": 110, "pctPortfolio": 90 }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Mark Zuckerberg",
+      "holdings": [
+        { "ticker": "META", "shares": 400000000, "valueUsdB": 210, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Jensen Huang",
+      "holdings": [
+        { "ticker": "NVDA", "shares": 80000000, "valueUsdB": 170, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Bernard Arnault & family",
+      "holdings": [
+        { "ticker": "MC.PA", "shares": 300000000, "valueUsdB": 160, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "Warren Buffett",
+      "holdings": [
+        { "ticker": "BRK.A", "shares": 150000, "valueUsdB": 135, "pctPortfolio": 95 },
+        { "ticker": "AAPL", "shares": 900000000, "valueUsdB": 200, "pctPortfolio": 40 }
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "Amancio Ortega",
+      "holdings": [
+        { "ticker": "ITX.MC", "shares": 1500000000, "valueUsdB": 85, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "Rob Walton & family",
+      "holdings": [
+        { "ticker": "WMT", "shares": 1200000000, "valueUsdB": 75, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "Jim Walton & family",
+      "holdings": [
+        { "ticker": "WMT", "shares": 1100000000, "valueUsdB": 73, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "Carlos Slim Helu & family",
+      "holdings": [
+        { "ticker": "AMX", "shares": 2000000000, "valueUsdB": 80, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "Steve Ballmer",
+      "holdings": [
+        { "ticker": "MSFT", "shares": 120000000, "valueUsdB": 105, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 19,
+      "name": "Bill Gates",
+      "holdings": [
+        { "ticker": "MSFT", "shares": 120000000, "valueUsdB": 110, "pctPortfolio": 85 }
+      ]
+    },
+    {
+      "rank": 21,
+      "name": "Francoise Bettencourt Meyers & family",
+      "holdings": [
+        { "ticker": "OR.PA", "shares": 400000000, "valueUsdB": 90, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 23,
+      "name": "Mukesh Ambani",
+      "holdings": [
+        { "ticker": "RELIANCE.NS", "shares": 1500000000, "valueUsdB": 115, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 24,
+      "name": "Gautam Adani",
+      "holdings": [
+        { "ticker": "ADANIENT.NS", "shares": 800000000, "valueUsdB": 105, "pctPortfolio": 95 }
+      ]
+    },
+    {
+      "rank": 33,
+      "name": "Zhong Shanshan",
+      "holdings": [
+        { "ticker": "9633.HK", "shares": 500000000, "valueUsdB": 95, "pctPortfolio": 95 }
+      ]
+    }
+  ]
+}
