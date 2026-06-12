@@ -1,0 +1,162 @@
+[
+  {
+    "rank": 1,
+    "name": "Elon Musk",
+    "netWorth": "794.6B",
+    "age": 55,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": ["Tesla", "SpaceX", "xAI", "Neuralink", "The Boring Company"],
+    "sourceOfWealth": "Tesla, SpaceX",
+    "firstFortuneDecade": "1990s",
+    "summary": "Serial entrepreneur behind electric vehicles, private spaceflight, AI, and neural interfaces.",
+    "timeline": [
+      {
+        "year": "1995",
+        "title": "Founded Zip2",
+        "description": "Online city guide software sold for $307M in 1999.",
+        "impact": "First major exit"
+      },
+      {
+        "year": "1999",
+        "title": "Founded X.com → PayPal",
+        "description": "Sold to eBay for $1.5B in 2002.",
+        "impact": "$180M personal stake"
+      },
+      {
+        "year": "2002",
+        "title": "Founded SpaceX",
+        "description": "First reusable rocket landings 2015–2018, Starlink constellation.",
+        "impact": "NASA contracts"
+      },
+      {
+        "year": "2004",
+        "title": "Led Tesla investment & CEO",
+        "description": "Turned Tesla into the world's most valuable car company.",
+        "impact": "Multiple trillion-dollar valuation peaks"
+      }
+    ]
+  },
+  {
+    "rank": 2,
+    "name": "Larry Page",
+    "netWorth": "292.7B",
+    "age": 53,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": ["Google", "Alphabet"],
+    "sourceOfWealth": "Google",
+    "firstFortuneDecade": "1990s",
+    "summary": "Co-founder of Google; now focuses on moonshot projects at Alphabet.",
+    "timeline": [
+      {
+        "year": "1998",
+        "title": "Co-founded Google",
+        "description": "With Sergey Brin in Stanford dorm room.",
+        "impact": "Search engine revolution"
+      },
+      {
+        "year": "2004",
+        "title": "Google IPO",
+        "description": "Public offering at $85/share; dual-class structure preserved control.",
+        "impact": "Created two multi-billionaires"
+      },
+      {
+        "year": "2015",
+        "title": "Alphabet restructuring",
+        "description": "Moved to parent company structure.",
+        "impact": "Moonshot focus"
+      }
+    ]
+  },
+  {
+    "rank": 3,
+    "name": "Sergey Brin",
+    "netWorth": "270B",
+    "age": 53,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": ["Google", "Alphabet"],
+    "sourceOfWealth": "Google",
+    "firstFortuneDecade": "1990s",
+    "summary": "Co-founder of Google; leads Google X moonshot factory.",
+    "timeline": [
+      {
+        "year": "1998",
+        "title": "Co-founded Google",
+        "description": "PageRank algorithm with Larry Page at Stanford.",
+        "impact": "Search engine revolution"
+      },
+      {
+        "year": "2004",
+        "title": "Google IPO",
+        "description": "Public offering alongside Page; retained super-voting shares.",
+        "impact": "Multi-billionaire status"
+      },
+      {
+        "year": "2015",
+        "title": "Alphabet restructuring",
+        "description": "Google X and Other Bets under Alphabet umbrella.",
+        "impact": "Moonshot focus"
+      }
+    ]
+  },
+  {
+    "rank": 4,
+    "name": "Jeff Bezos",
+    "netWorth": "251.5B",
+    "age": 62,
+    "country": "United States",
+    "sector": "Retail / Technology",
+    "companies": ["Amazon", "Blue Origin"],
+    "sourceOfWealth": "Amazon",
+    "firstFortuneDecade": "1990s",
+    "summary": "Founder of Amazon; transformed global retail and cloud computing.",
+    "timeline": [
+      {
+        "year": "1994",
+        "title": "Founded Amazon",
+        "description": "Started in garage selling books.",
+        "impact": "E-commerce empire"
+      },
+      {
+        "year": "1997",
+        "title": "Amazon IPO",
+        "description": "Raised $54M at $18/share; survived dot-com bust.",
+        "impact": "Public market foundation"
+      },
+      {
+        "year": "2018",
+        "title": "Blue Origin founded",
+        "description": "Private space company; New Shepard suborbital tourism.",
+        "impact": "Space tourism"
+      }
+    ]
+  },
+  {
+    "rank": 5,
+    "name": "Larry Ellison",
+    "netWorth": "230.1B",
+    "age": 82,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": ["Oracle"],
+    "sourceOfWealth": "Oracle",
+    "firstFortuneDecade": "1970s",
+    "summary": "Co-founder and chairman of Oracle Corporation.",
+    "timeline": [
+      {
+        "year": "1977",
+        "title": "Founded Oracle",
+        "description": "Relational database software; early IBM-compatible systems.",
+        "impact": "Database giant"
+      },
+      {
+        "year": "1986",
+        "title": "Oracle IPO",
+        "description": "One day before Microsoft went public.",
+        "impact": "Enterprise software wealth base"
+      }
+    ]
+  }
+]

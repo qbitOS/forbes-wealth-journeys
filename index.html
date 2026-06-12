@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grok Assembly Line · Template Configurator</title>
-  <meta name="description" content="Choose your template — one-click command for Grok, export manifest, live activity heatmaps." />
+  <title>Forbes Wealth Journeys · Billionaire Timelines</title>
+  <meta name="description" content="Forbes billionaire wealth journeys mapped to venture milestones — interactive timelines, drill-downs, and source-linked events." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
   <link rel="stylesheet" href="docs/assets/pages.css" />
 </head>
@@ -13,21 +13,39 @@
     <div class="site-header-inner">
       <div class="site-brand">
         <a href="#top" class="site-brand-link" id="top">
-          <h1>Grok Assembly Line</h1>
+          <h1>Forbes Wealth Journeys</h1>
         </a>
-        <p class="tagline">Template configurator · Colossus / DVC · fornevercollective/grok-repo-template</p>
+        <p class="tagline">Billionaire timelines · venture milestones · qbitOS/forbes-wealth-journeys</p>
       </div>
       <nav class="site-nav" aria-label="Page sections">
+        <a href="#forbes" data-section="forbes">Forbes</a>
+        <a href="#timeline" data-section="timeline">Ventures</a>
         <a href="#activity" data-section="activity">Activity</a>
-        <a href="#timeline" data-section="timeline">Timeline</a>
-        <a href="#quick-start" data-section="quick-start">Quick Start</a>
         <a href="#configurator" data-section="configurator">Configurator</a>
-        <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/qbitOS/forbes-wealth-journeys" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <section id="forbes" class="section forbes-section">
+      <span class="section-label">Forbes 500</span>
+      <h2>Wealth journeys</h2>
+      <p class="section-lead">
+        Ranked billionaires with milestone timelines — how net worth connects to company founding, IPOs, and major exits.
+        Select a profile to explore their journey. Net worth figures are point-in-time snapshots, not live Forbes data.
+      </p>
+      <p id="forbes-count" class="forbes-count" aria-live="polite"></p>
+      <div id="forbes-wealth" class="forbes-layout">
+        <aside id="forbes-list" class="forbes-list" aria-label="Forbes billionaire rankings"></aside>
+        <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile"></article>
+      </div>
+      <p class="timeline-disclaimer">
+        Profiles sourced from public biographical records. Not financial advice. Expand the dataset in
+        <a href="https://github.com/qbitOS/forbes-wealth-journeys/blob/main/data/forbes-billionaires.json">data/forbes-billionaires.json</a>.
+      </p>
+    </section>
+
     <section id="activity" class="section activity-section">
       <span class="section-label">Activity</span>
       <h2>Repository activity</h2>
@@ -198,9 +216,11 @@
   </main>
 
   <footer class="site-footer">
-    Apache-2.0 · <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">fornevercollective/grok-repo-template</a>
+    Apache-2.0 · <a href="https://github.com/qbitOS/forbes-wealth-journeys" target="_blank" rel="noopener">qbitOS/forbes-wealth-journeys</a>
+    · forked from <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">grok-repo-template</a>
   </footer>
 
+  <script src="docs/assets/forbes-wealth.js"></script>
   <script src="docs/assets/pages-configurator.js"></script>
 </body>
 </html>

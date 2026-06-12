@@ -1,544 +1,161 @@
-# 🧠 Grok Assembly Line Template
+# Forbes Wealth Journeys
 
-Official Grok-optimized repository template for Colossus/Dojo and space-grade projects.
+Interactive timeline of billionaire wealth trajectories mapped to public venture milestones — built on the [Grok Assembly Line](https://github.com/fornevercollective/grok-repo-template) GitHub Pages stack.
 
-**SuperHeavyGrok + Grok 4.20 Heavy**
-
-**Stats & Activity**
-Live ECharts heatmaps and metrics are now fixed and self-contained in the Pages configurator.
+**Live site:** [qbitos.github.io/forbes-wealth-journeys](https://qbitos.github.io/forbes-wealth-journeys/)  
+**Origin:** [Grok conversation — Forbes 500 Wealth Journeys Timeline](https://grok.com/share/bGVnYWN5LWNvcHk_3b729467-de29-42f6-84f8-5b956ddbb4c8)  
+**Upstream template:** [fornevercollective/grok-repo-template](https://github.com/fornevercollective/grok-repo-template)
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
-[![Pages](https://img.shields.io/badge/Pages-live-00ff66)](https://fornevercollective.github.io/grok-repo-template/#activity)
+[![Pages](https://img.shields.io/badge/Pages-GitHub%20Pages-00ff66)](https://qbitos.github.io/forbes-wealth-journeys/)
 
 ---
 
-## Quick Start
+## What this is
 
-```bash
-git clone https://github.com/fornevercollective/grok-repo-template.git my-project && cd my-project && cp .env.example .env && uv sync && grok inspect
+Forbes Wealth Journeys is a **static, source-linked timeline** that connects how the world's richest people accumulate (and lose) net worth to the companies, IPOs, product launches, and market events behind those moves.
+
+### Forbes billionaire profiles
+
+The **Forbes** section loads ranked profiles from [`data/forbes-billionaires.json`](data/forbes-billionaires.json):
+
+| Rank | Name | Net worth | Timeline milestones |
+|------|------|-----------|---------------------|
+| 1 | Elon Musk | $794.6B | Zip2, PayPal, SpaceX, Tesla |
+| 2 | Larry Page | $292.7B | Google founding, IPO, Alphabet |
+| 3 | Sergey Brin | $270B | Google founding, IPO, Alphabet |
+| 4 | Jeff Bezos | $251.5B | Amazon, IPO, Blue Origin |
+| 5 | Larry Ellison | $230.1B | Oracle founding, IPO |
+
+Select a profile on the live site to view their full wealth journey. **Paste ranks 6–100** into the same JSON file to expand the dataset.
+
+### Venture gitgraph (Elon portfolio)
+
+The **Ventures** section focuses on **Elon Musk's operating companies** with two parallel gitgraph timelines:
+
+| Section | Lanes | Scope |
+|---------|-------|--------|
+| **Colossus · Terrafab · Grok · IPO** | grok, colossus, terrafab, spacex-ipo | xAI model releases, Colossus GPU buildout, Terafab fab announcements, SpaceX IPO roadshow |
+| **Elon portfolio · ventures** | tsla, spacex-ops, x-corp, neuralink, boring-co, openai | Tesla, SpaceX operations, X Corp, Neuralink, Boring Company, OpenAI co-founder arc |
+
+Each milestone is clickable: hover or tap for **drill-down detail** with public facts and source links (SEC filings, press releases, arena leaderboards, etc.).
+
+> **Not financial advice.** Dates marked `~` are approximate where sources differ. Stock prices and valuations are point-in-time snapshots only.
+
+---
+
+## Features
+
+- **Forbes ranked profiles** — browse billionaires by rank; per-person milestone timelines with impact notes
+- **Vertical gitgraph timelines** — lane-colored branches with merge nodes (e.g. xAI → SpaceX, xAI acquires X)
+- **Company drill-down** — filter to a single lane; extra milestones per branch (S&P 500 inclusion, Alpha Arena seasons, Cashtags launch, etc.)
+- **Activity heatmaps** — ECharts calendar + pipeline-run charts aligned to timeline branch colors
+- **Per-branch activity panels** — contribution cadence mapped to portfolio companies
+- **Grok template configurator** — retained from upstream for scaffolding ML/agent projects from the same repo
+
+---
+
+## Quick start
+
+### View the timeline
+
+Open the GitHub Pages site (deploys automatically on push to `main`):
+
+```text
+https://qbitos.github.io/forbes-wealth-journeys/
 ```
 
-**Or:** [Grok Assembly Line Configurator](https://fornevercollective.github.io/grok-repo-template/) → choose template → copy one command to Grok or your AI.
+If you see a 404, enable **Settings → Pages → Build and deployment → GitHub Actions** on the repo, then re-run the [Deploy GitHub Pages](.github/workflows/pages.yml) workflow.
 
-**Grok prompt:** *"Use grok-repo-template to scaffold from examples/vision/ with Colossus configs."*
+### Run locally
+
+No build step — static HTML + JS:
+
+```bash
+git clone https://github.com/qbitOS/forbes-wealth-journeys.git
+cd forbes-wealth-journeys
+python -m http.server 8080
+# open http://localhost:8080/
+```
+
+Navigate to **Forbes** for billionaire profiles, **Ventures** for the gitgraph, **Activity** for heatmaps.
 
 ---
 
-## Code Standards
-
-SpaceX capsule standard — minimal, readable, mission-critical.
-
-- **JAX / Rust** for performance-critical paths (Colossus/Dojo); Python with strict type hints when necessary
-- **Names:** `train.py`, `infer.py`, `capsule_ui.js` — short, descriptive
-- **Comments:** explain *why*, never *what*
-- **UI:** pristine JS/HTML/CSS, dark high-contrast, no decorative animation
-- **Deps:** locked; runnable with one command after clone
-
----
-
-## Flow
+## Architecture
 
 ```mermaid
-gitGraph
-  commit id: "clone"
-  commit id: "configure"
-  branch colossus
-  checkout colossus
-  commit id: "dvc-repro"
-  commit id: "train"
-  checkout main
-  merge colossus
-  commit id: "deploy"
+flowchart LR
+  subgraph pages [GitHub Pages]
+    index[index.html]
+    forbesJs[docs/assets/forbes-wealth.js]
+    js[docs/assets/pages-configurator.js]
+    css[docs/assets/pages.css]
+    data[data/forbes-billionaires.json]
+  end
+  index --> forbesJs
+  index --> js
+  index --> css
+  forbesJs --> data
+  js -->|TIMELINE_*_EVENTS| gitgraph[Vertical gitgraph]
+  js -->|TIMELINE_EVENT_DETAILS| drilldown[Drill-down tooltips]
 ```
+
+| Path | Role |
+|------|------|
+| [`index.html`](index.html) | Landing page — Forbes, Ventures, Activity, Configurator |
+| [`data/forbes-billionaires.json`](data/forbes-billionaires.json) | Ranked billionaire profiles + wealth journey timelines |
+| [`docs/assets/forbes-wealth.js`](docs/assets/forbes-wealth.js) | Forbes list/detail UI, loads JSON via fetch |
+| [`docs/assets/pages-configurator.js`](docs/assets/pages-configurator.js) | Venture timeline data, gitgraph renderer, template wizard |
+| [`docs/assets/pages.css`](docs/assets/pages.css) | Layout, lane colors, Forbes section styles |
+| [`.github/workflows/pages.yml`](.github/workflows/pages.yml) | Deploy entire repo root to GitHub Pages |
+
+Timeline events live as structured arrays in `pages-configurator.js`:
+
+- `TIMELINE_CLUSTER_EVENTS` / `TIMELINE_PORTFOLIO_EVENTS` — primary milestones
+- `TIMELINE_DRILLDOWN_EVENTS` — per-branch extras in single-company view
+- `TIMELINE_EVENT_DETAILS` — rich tooltip copy + optional `source` URLs
 
 ---
 
-## Configurator
+## Data sources
 
-Live wizard: [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/) · [Activity heatmaps](https://fornevercollective.github.io/grok-repo-template/#activity) · [Public timeline](https://fornevercollective.github.io/grok-repo-template/#timeline) includes Grok Alpha Arena and Rallies AI trading milestones
+Milestones are compiled from **public records only**:
 
-One-click template buttons + advanced wizard → first-prompt markdown, JSON manifest, `metadata.yaml`, `llms.txt`, GitHub search query. Docs: [docs/pages-configurator.md](docs/pages-configurator.md).
+- SEC filings (S-1, S-1/A, confidential filing notices)
+- Company press releases and investor relations pages
+- Public trading competitions ([Nof1 Alpha Arena](https://nof1.ai/), [Rallies AI Arena](https://rallies.ai/arena))
+- Documented product launches (Grok release notes, SpaceX launch logs, Tesla IR)
 
-> **Note:** SuperHeavyGrok / Grok Build is a separate dev lane from Cursor agents.
+We do **not** scrape Forbes paywalled data. The Forbes framing comes from tracking how recurring #1 wealth holders map to identifiable corporate events — the same lens used in the [origin Grok thread](https://grok.com/share/bGVnYWN5LWNvcHk_3b729467-de29-42f6-84f8-5b956ddbb4c8).
 
 ---
 
-<details>
-<summary><strong>Stats & Activity</strong></summary>
+## Relationship to grok-repo-template
 
-## 📊 Stats & Activity
+This repo is a **fork** of [fornevercollective/grok-repo-template](https://github.com/fornevercollective/grok-repo-template) (`upstream` remote). It keeps the full Colossus/DVC/connector scaffold while specializing the **Pages timeline** for wealth-journey storytelling.
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=fornevercollective&show_icons=true&theme=radical&hide_border=true&include_all_commits=true" alt="GitHub stats" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fornevercollective&layout=compact&theme=radical&hide_border=true" alt="Top languages" height="165"/>
-</p>
+| Kept from upstream | Specialized here |
+|--------------------|------------------|
+| DVC pipelines, Colossus configs, Grok skills | Timeline event data + drill-downs |
+| Template configurator wizard | Activity charts tied to portfolio lanes |
+| `examples/`, `scripts/train.py`, connector stubs | Forbes / billionaire journey narrative |
 
-
-### Quick Start by Language
-
-GitHub language stats weight README and docs — the Grok/Dojo/Colossus stack uses more than the bar shows. Collapsible starters below; full trees in [`examples/`](examples/) and [`scripts/`](scripts/).
-
-<details>
-<summary><strong>Python</strong> — training entrypoint & Grok-friendly patterns</summary>
-
-See [`scripts/train.py`](scripts/train.py) and [`examples/python-grok/src/grok_patterns.py`](examples/python-grok/src/grok_patterns.py).
-
-```python
-#!/usr/bin/env python3
-"""Main training entrypoint — Colossus/Dojo compatible."""
-from pathlib import Path
-import argparse
-
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--config", type=Path, default=Path("configs/default.yaml"))
-    args = parser.parse_args()
-    print(f"[train] config={args.config} — implement training loop here")
-
-if __name__ == "__main__":
-    main()
-```
+To pull upstream template fixes:
 
 ```bash
-python scripts/train.py --config configs/default.yaml
+git fetch upstream
+git merge upstream/main
 ```
-
-</details>
-
-<details>
-<summary><strong>JAX</strong> — Colossus MoE distributed training</summary>
-
-See [`examples/jax-colossus/train_moe.py`](examples/jax-colossus/train_moe.py) and [`examples/jax-colossus/configs/moe.yaml`](examples/jax-colossus/configs/moe.yaml).
-
-```python
-"""JAX MoE distributed training stub."""
-def main() -> None:
-    print("[jax-colossus] MoE training — wire JAX multi-host here")
-
-if __name__ == "__main__":
-    main()
-```
-
-```yaml
-# examples/jax-colossus/configs/moe.yaml
-framework: jax
-num_experts: 8
-mesh_shape: [2, 4]
-precision: bfloat16
-```
-
-</details>
-
-<details>
-<summary><strong>Rust</strong> — Dojo performance patterns</summary>
-
-See [`examples/rust-dojo/src/main.rs`](examples/rust-dojo/src/main.rs).
-
-```rust
-fn main() {
-    println!("[rust-dojo] performance stub");
-}
-```
-
-```bash
-cd examples/rust-dojo && cargo run
-```
-
-</details>
-
-<details>
-<summary><strong>Shell</strong> — Colossus SLURM / cluster launch</summary>
-
-See [`scripts/colossus-launch.sh`](scripts/colossus-launch.sh) and [`scripts/colossus/colossus-job.sh`](scripts/colossus/colossus-job.sh).
-
-```bash
-#!/usr/bin/env bash
-set -euo pipefail
-CONFIG="${1:-configs/colossus.yaml}"
-echo "[colossus-launch] config=${CONFIG}"
-sbatch scripts/colossus/colossus-job.sh
-```
-
-</details>
-
-<details>
-<summary><strong>Dockerfile</strong> — multi-stage ML images</summary>
-
-See [`Dockerfiles/Dockerfile`](Dockerfiles/Dockerfile) (local dev) and [`Dockerfiles/Dockerfile.colossus`](Dockerfiles/Dockerfile.colossus) (CUDA/JAX cluster).
-
-```dockerfile
-# Multi-stage base — local dev
-FROM python:3.11-slim AS base
-WORKDIR /app
-COPY pyproject.toml .
-RUN pip install -e .
-
-FROM base AS runtime
-COPY . .
-CMD ["python", "scripts/train.py"]
-```
-
-```dockerfile
-# Colossus CUDA/JAX — match cluster CUDA version
-FROM nvidia/cuda:12.4.0-runtime-ubuntu22.04
-WORKDIR /app
-COPY pyproject.toml .
-RUN pip3 install -e ".[jax]"
-CMD ["python3", "scripts/train.py", "--config", "configs/colossus.yaml"]
-```
-
-</details>
-
-<details>
-<summary><strong>YAML</strong> — DVC pipelines & Colossus scaling</summary>
-
-See [`dvc.yaml`](dvc.yaml), [`configs/colossus.yaml`](configs/colossus.yaml), and [`metadata.yaml`](metadata.yaml).
-
-```yaml
-# dvc.yaml — pipeline stages
-stages:
-  preprocess:
-    cmd: python scripts/preprocess.py
-    deps: [data/raw/, scripts/preprocess.py]
-    outs: [data/processed/]
-  train:
-    cmd: python scripts/train.py --config configs/default.yaml
-    deps: [data/processed/, configs/default.yaml, scripts/train.py, src/]
-    outs: [models/checkpoint/]
-```
-
-```yaml
-# configs/colossus.yaml — multi-node scaling
-framework: jax
-nodes: 2
-gpus_per_node: 8
-batch_size: 256
-precision: bfloat16
-launch_script: scripts/colossus/colossus-job.sh
-```
-
-</details>
-
-<details>
-<summary><strong>HTML</strong> — GitHub Pages configurator + dashboard</summary>
-
-See [`index.html`](index.html) (template wizard, ECharts heatmaps, deployed via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)). Docs: [`docs/pages-configurator.md`](docs/pages-configurator.md).
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>grok-repo-template</title>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-</head>
-<body>
-  <header><h1>🧠 grok-repo-template</h1></header>
-  <main><div id="heatmap" style="height:320px"></div></main>
-</body>
-</html>
-```
-
-</details>
-
-<details>
-<summary><strong>Markdown</strong> — Grok agent prompts</summary>
-
-See [`prompts/grok-agent.md`](prompts/grok-agent.md) and [`examples/agents/prompts/system.md`](examples/agents/prompts/system.md).
-
-```markdown
-# System prompt for Grok agents using this template
-
-You are building from grok-repo-template. Read LLMS.md for routing variants.
-Prefer Python (JAX), Rust, or C++/CUDA per project domain.
-Use DVC for data, Colossus configs for training scale.
-```
-
-</details>
-
-<details>
-<summary><strong>TOML</strong> — project manifest (<code>pyproject.toml</code>)</summary>
-
-See [`pyproject.toml`](pyproject.toml).
-
-```toml
-[project]
-name = "grok-repo-template"
-requires-python = ">=3.11"
-dependencies = ["pyyaml>=6.0"]
-
-[project.optional-dependencies]
-dev = ["ruff>=0.4", "pytest>=8.0"]
-jax = ["jax>=0.4", "jaxlib>=0.4"]
-torch = ["torch>=2.0"]
-```
-
-</details>
-
-<details>
-<summary><strong>C++ / CUDA</strong> — low-level kernels (add under <code>src/</code>)</summary>
-
-See [`src/kernels/attention_kernel.cu`](src/kernels/attention_kernel.cu), [`src/kernels/attention_kernel.h`](src/kernels/attention_kernel.h), and [`src/cuda/kernel.h`](src/cuda/kernel.h). Match the cluster CUDA version in [`Dockerfiles/Dockerfile.colossus`](Dockerfiles/Dockerfile.colossus) (CUDA 12.4).
-
-```cpp
-// src/kernels/attention_kernel.cu — scaled dot-product scores stub
-__global__ void attention_scores_kernel(
-    const float* q, const float* k, float* scores,
-    int seq_len, int head_dim, float scale) {
-    int i = blockIdx.x, j = blockIdx.y;
-    if (i >= seq_len || j >= seq_len) return;
-    float dot = 0.f;
-    for (int d = 0; d < head_dim; ++d)
-        dot += q[i * head_dim + d] * k[j * head_dim + d];
-    scores[i * seq_len + j] = scale * dot;
-}
-```
-
-```bash
-nvcc -std=c++17 -arch=sm_80 -c src/kernels/attention_kernel.cu -o attention_kernel.o
-```
-
-</details>
-
-
-## 🎬 Demo Reel
-
-<p align="center">
-  <img src="docs/assets/demo-scroll.gif" alt="Scrolling demo reel — Vision, Agents, Fine-tune, JAX MoE, DVC, Connectors" width="800"/>
-</p>
-
-<p align="center">
-  <em>Pipeline & domain scroll-through — replace with your own screenshots or GIF once you scaffold a project.</em>
-</p>
-
-<p align="center">
-  <img src="docs/assets/panel-vision.svg" alt="Vision" width="200"/>
-  <img src="docs/assets/panel-agents.svg" alt="Agents" width="200"/>
-  <img src="docs/assets/panel-colossus.svg" alt="Colossus" width="200"/>
-  <img src="docs/assets/panel-dvc.svg" alt="DVC" width="200"/>
-</p>
-
-
-## 📅 Year Activity Chart
-
-<p align="center">
-  <a href="https://github.com/fornevercollective">
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username=fornevercollective&theme=react-dark&hide_border=true&area=true&custom_title=ForNever%20Collective%20Activity" alt="GitHub activity graph"/>
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://ghchart.rshah.org/fornevercollective" alt="Contribution chart (ghchart)"/>
-</p>
-
-<details>
-<summary><strong>Interactive GitHub Pages (configurator + ECharts)</strong></summary>
-
-ECharts cannot run inside GitHub README rendering — use the static charts above, or open **GitHub Pages**:
-
-- **Template configurator + live heatmaps:** [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/)
-- **Configurator docs:** [docs/pages-configurator.md](docs/pages-configurator.md)
-- [Calendar heatmap](https://echarts.apache.org/examples/en/editor.html?c=calendar-heatmap) · [Cartesian heatmap](https://echarts.apache.org/examples/en/editor.html?c=heatmap-cartesian) · [Heatmap gallery](https://echarts.apache.org/examples/en/index.html#chart-type-heatmap)
-
-</details>
-
-<p align="center">
-  <a href="https://star-history.com/#fornevercollective/grok-repo-template&Date">
-    <img src="https://api.star-history.com/svg?repos=fornevercollective/grok-repo-template&type=Date" alt="Star History Chart"/>
-  </a>
-</p>
-
-
-</details>
 
 ---
 
-## Project Structure
+## Roadmap
 
-<details>
-<summary><strong>Full tree</strong> (click to expand)</summary>
-
-```
-grok-repo-template/
-├── .github/
-│   ├── workflows/
-│   │   ├── ci-cd.yml                    # lint, test, Docker build
-│   │   ├── grok-connectors-pipelines.yml
-│   │   ├── standards-compliance.yml
-│   │   ├── grokipedia-submission.yml
-│   │   └── pages.yml                    # GitHub Pages deploy
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── bug_report.md
-│   │   └── feature_request.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── CODEOWNERS
-├── .grok/                               # Grok Build agent support
-│   ├── skills/
-│   │   ├── github-connector/SKILL.md
-│   │   ├── web-search/SKILL.md
-│   │   ├── code-execution/SKILL.md
-│   │   ├── browse-page/SKILL.md
-│   │   └── x-tools/SKILL.md
-│   └── .grokignore
-├── .dvc/                                # DVC config (init with dvc init)
-├── data/
-│   ├── raw/                             # immutable source (DVC/LFS)
-│   ├── interim/
-│   ├── processed/
-│   ├── explore/                         # EDA from dvc explore stage
-│   └── README.md
-├── models/
-│   ├── checkpoints/
-│   └── README.md
-├── src/                                 # core library
-│   ├── __init__.py
-│   ├── cuda/
-│   │   └── kernel.h                     # shared CUDA helpers (CUDA 12.4)
-│   ├── kernels/
-│   │   ├── attention_kernel.cu          # attention kernel stub
-│   │   └── attention_kernel.h
-│   └── README.md
-├── tests/
-│   └── test_placeholder.py
-├── docs/
-│   ├── assets/                          # README banner, demo reel, panels
-│   ├── COLOSSUS_SETUP.md
-│   ├── colossus-cluster-setup.md
-│   └── dvc-pipelines.md
-├── notebooks/
-│   └── README.md
-├── configs/
-│   ├── default.yaml
-│   └── colossus.yaml
-├── scripts/
-│   ├── train.py
-│   ├── infer.py
-│   ├── preprocess.py
-│   ├── explore_dvc.py
-│   ├── colossus-launch.sh
-│   ├── colossus/
-│   │   └── colossus-job.sh
-│   └── connectors/
-│       ├── github_pipeline.py
-│       ├── web_pipeline.py
-│       ├── code_execution_pipeline.py
-│       └── x_tools_pipeline.py
-├── prompts/
-│   └── grok-agent.md
-├── Dockerfiles/
-│   ├── Dockerfile
-│   └── Dockerfile.colossus
-├── examples/
-│   ├── vision/                          # image / detection pipelines
-│   │   ├── README.md
-│   │   ├── pipeline.py
-│   │   ├── configs/vision.yaml
-│   │   └── src/model.py
-│   ├── agents/                          # agent loop + Grok prompts
-│   │   ├── README.md
-│   │   ├── agent_loop.py
-│   │   ├── configs/agent.yaml
-│   │   └── prompts/system.md
-│   ├── fine-tuning/                     # PEFT / LoRA
-│   │   ├── README.md
-│   │   ├── peft_lora.py
-│   │   ├── dataset.py
-│   │   └── configs/finetune.yaml
-│   ├── jax-colossus/                    # JAX MoE distributed
-│   │   ├── README.md
-│   │   ├── train_moe.py
-│   │   └── configs/moe.yaml
-│   ├── rust-dojo/                       # Rust performance
-│   │   ├── README.md
-│   │   └── src/main.rs
-│   ├── python-grok/                     # Grok-friendly Python
-│   │   ├── README.md
-│   │   └── src/grok_patterns.py
-│   └── spacex-capsule-ui/               # mission-critical cockpit UI
-│       ├── README.md
-│       ├── index.html
-│       ├── capsule_ui.js
-│       └── styles.css
-├── standards/
-│   └── xai-spacex-terrafab-grokipedia.md
-├── pipelines/
-│   └── README.md
-├── index.html                           # GitHub Pages landing + ECharts
-├── README.md                            # ← you are here
-├── AGENTS.md                            # Grok Build instructions
-├── LLMS.md                              # LLM agent routes (7 variants)
-├── llms.txt                             # Root LLM index
-├── ReadMe.LLM                           # Structured LLM library docs
-├── dvc.yaml                             # DVC pipeline stages
-├── metadata.yaml                        # Colossus/Dojo routing manifest
-├── pyproject.toml
-├── LICENSE                              # Apache-2.0
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── SECURITY.md
-├── CONTRIBUTORS.md                      # SuperHeavyGrok credit
-├── .gitignore
-└── .env.example
-```
-
-</details>
-
-
----
-
-## Colossus/Dojo Training
-
-<details>
-<summary><strong>Launch commands & config</strong></summary>
-
-- **Docker image:** `Dockerfiles/Dockerfile.colossus`
-- **SLURM/K8s example:** `scripts/colossus/colossus-job.sh`
-- **Launch wrapper:** `scripts/colossus-launch.sh`
-- **Scaling config:** `configs/colossus.yaml` (nodes, GPUs, JAX multi-host)
-- **Full guide:** [docs/colossus-cluster-setup.md](docs/colossus-cluster-setup.md)
-
-```bash
-sbatch scripts/colossus/colossus-job.sh
-dvc repro train
-```
-
-</details>
-
-
----
-
-## Grok Integration
-
-| File | Purpose |
-|------|---------|
-| `LLMS.md` | Primary agent instructions (7 routing variants) |
-| `AGENTS.md` | Grok Build entry point |
-| `llms.txt` | Root index (llmstxt.org standard) |
-| `ReadMe.LLM` | Structured machine-readable docs |
-| `prompts/grok-agent.md` | System prompts |
-| `.grok/skills/` | Connector skills (GitHub, web, code, X) |
-| `metadata.yaml` | Pipeline routing manifest |
-
-Run `grok inspect` to verify config, skills, and hooks are loaded.
-
----
-
-## Domain Examples
-
-<details>
-<summary><strong>Example folders</strong></summary>
-
-| Folder | Use Case |
-|--------|----------|
-| `examples/vision/` | Classification, detection on Colossus |
-| `examples/agents/` | Tool-use agent loops + Grok prompts |
-| `examples/fine-tuning/` | PEFT/LoRA fine-tuning |
-| `examples/jax-colossus/` | JAX MoE multi-host training |
-| `examples/rust-dojo/` | Low-latency Rust patterns |
-| `examples/python-grok/` | Type-hinted Python for Grok parsing |
-| `examples/spacex-capsule-ui/` | Mission-critical cockpit touch-screen UI |
-
-</details>
+- [ ] **Forbes 500 expansion** — append ranks 6–100 to `data/forbes-billionaires.json` (Jensen Huang, Zuckerberg, Arnault, etc.)
+- [ ] **Wealth overlay chart** — ECharts net-worth line synced to timeline scroll position
+- [ ] **Cross-link Musk** — deep-link Forbes #1 profile to Ventures gitgraph lanes
+- [ ] **Export** — JSON/CSV download of full milestone dataset
 
 ---
 
@@ -546,23 +163,31 @@ Run `grok inspect` to verify config, skills, and hooks are loaded.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Conventional Commits (`feat:`, `fix:`, `docs:`).
 
+To add a billionaire profile:
+
+1. Append an object to [`data/forbes-billionaires.json`](data/forbes-billionaires.json) matching the schema above
+2. Preview locally (`python -m http.server 8080` → **Forbes** section)
+3. Open a PR
+
+To add a venture milestone:
+
+1. Edit `TIMELINE_*_EVENTS` or `TIMELINE_DRILLDOWN_EVENTS` in [`docs/assets/pages-configurator.js`](docs/assets/pages-configurator.js)
+2. Add a matching entry in `TIMELINE_EVENT_DETAILS` with `detail` and `source`
+3. Preview locally under **Ventures**, then open a PR
+
+## Agent / LLM entry points
+
+| File | Purpose |
+|------|---------|
+| [`AGENTS.md`](AGENTS.md) | Grok Build agent instructions |
+| [`LLMS.md`](LLMS.md) | LLM routing variants (vision, agents, Colossus, etc.) |
+| [`llms.txt`](llms.txt) | Root LLM index ([llmstxt.org](https://llmstxt.org/)) |
+| [`metadata.yaml`](metadata.yaml) | Machine-readable project manifest |
+
 ---
 
 ## License
 
-Apache 2.0 © ForNever Collective / SuperHeavyGrok
+Apache 2.0 © [qbitOS](https://github.com/qbitOS) / ForNever Collective / SuperHeavyGrok
 
 See [LICENSE](LICENSE).
-
----
-
-**Quick Start**
-
-Use [Option 2](https://fornevercollective.github.io/grok-repo-template/#quick-start) on the [Grok Assembly Line configurator](https://fornevercollective.github.io/grok-repo-template/) — pick a template, copy one command to Grok or your agent.
-
-**SpaceX Capsule Demo**
-
-- **Folder:** [`examples/spacex-capsule-ui/`](examples/spacex-capsule-ui/)
-- **Live demo:** [fornevercollective.github.io/.../spacex-capsule-ui](https://fornevercollective.github.io/grok-repo-template/examples/spacex-capsule-ui/index.html)
-
-Cockpit UI lineage: [`dece3a4`](https://github.com/fornevercollective/grok-repo-template/commit/dece3a4deffc2fcaf804db7cce53d411b12c6421).
