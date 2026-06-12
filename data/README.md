@@ -10,26 +10,45 @@ DVC-tracked data layout (Cookiecutter-style):
 
 Do not commit large files directly — use DVC remotes.
 
-## Forbes billionaire dataset
+## Forbes billionaire dataset (schema v2)
 
-[`forbes-billionaires.json`](forbes-billionaires.json) powers the **Forbes** section on GitHub Pages. Each entry:
+[`forbes-billionaires.json`](forbes-billionaires.json) powers the **Forbes** section on GitHub Pages.
 
 ```json
 {
   "rank": 1,
   "name": "Elon Musk",
-  "netWorth": "794.6B",
+  "netWorth": { "value": 794.6, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
   "age": 55,
   "country": "United States",
   "sector": "Technology",
-  "companies": ["Tesla", "SpaceX"],
-  "sourceOfWealth": "Tesla, SpaceX",
-  "firstFortuneDecade": "1990s",
+  "grokipediaLink": "https://grok.x.ai/wiki/elon-musk",
+  "forbesProfile": "https://www.forbes.com/profile/elon-musk/",
+  "wikipediaLink": "https://en.wikipedia.org/wiki/Elon_Musk",
+  "wealthBreakdown": [
+    { "entity": "Tesla", "ticker": "TSLA", "stakePct": 12.8, "valueUsdB": 120, "type": "public" }
+  ],
+  "entities": [
+    { "id": "tesla", "name": "Tesla", "role": "ceo", "founded": 2003, "status": "public", "ticker": "TSLA" }
+  ],
   "summary": "…",
   "timeline": [
-    { "year": "1995", "title": "…", "description": "…", "impact": "…" }
+    {
+      "year": "2002",
+      "type": "founding",
+      "entityId": "spacex",
+      "title": "Founded SpaceX",
+      "valuationUsdB": 350,
+      "source": "https://www.spacex.com"
+    }
   ]
 }
+```
+
+**Migrate legacy v1 → v2:**
+
+```bash
+python scripts/migrate_forbes_v2.py
 ```
 
 Append objects to the array to expand toward Forbes 500. The UI loads via `fetch('data/forbes-billionaires.json')` in [`docs/assets/forbes-wealth.js`](../docs/assets/forbes-wealth.js).

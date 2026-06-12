@@ -1547,6 +1547,77 @@ h3.subheading {
   font-size: 0.8125rem;
 }
 
+/* Wealth data export filters */
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.875rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.filter-field span { font-weight: 500; }
+
+.filter-field select,
+.filter-field input[type="number"] {
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  padding: 0.45rem 0.65rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.filter-field.filter-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  grid-column: 1 / -1;
+}
+
+.filter-field.filter-check input { accent-color: var(--accent); }
+
+.filter-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 0.625rem;
+  margin-bottom: 0.75rem;
+}
+
+.filter-preview a {
+  font-size: 0.8125rem;
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+}
+
+.filter-preview a:hover { text-decoration: underline; }
+
+.filter-preview .more-paths {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  align-self: center;
+}
+
+.meta-box .filter-preview a {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+#export-count { margin-bottom: 0.75rem; }
+
 .meta-box h4 {
   margin: 0 0 0.5rem;
   font-size: 0.6875rem;
@@ -1928,6 +1999,102 @@ h3.subheading {
   margin: 0;
   color: var(--text-muted);
   font-size: 0.875rem;
+}
+
+.forbes-asof {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.forbes-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.8125rem;
+}
+
+.forbes-links a {
+  color: var(--forbes-accent);
+}
+
+.forbes-panel {
+  margin-bottom: 1.25rem;
+}
+
+.forbes-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.forbes-table th,
+.forbes-table td {
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.forbes-table th {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.forbes-ticker {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.forbes-entities {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.forbes-entity {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.forbes-entity:last-child {
+  border-bottom: none;
+}
+
+.forbes-entity-meta {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.125rem;
+}
+
+.forbes-event-type {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: var(--forbes-accent-dim);
+  color: var(--forbes-accent);
+}
+
+.forbes-journey-entity,
+.forbes-journey-val,
+.forbes-journey-source {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.forbes-journey-source a {
+  color: var(--forbes-accent);
 }
 
 .forbes-error .forbes-empty {

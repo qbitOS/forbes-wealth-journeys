@@ -359,6 +359,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   }
 
   function init() {
+    if ($('#configurator')?.dataset.mode === 'wealth') return;
     initQuickTemplates();
 
     const root = $('#configurator');

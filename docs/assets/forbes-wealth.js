@@ -1,5 +1,5 @@
 /**
- * Forbes Wealth Journeys — billionaire list + per-person timeline
+ * Forbes Wealth Journeys — billionaire list + portfolio detail (schema v2)
  * Data: data/forbes-billionaires.json
  */
 (function () {
@@ -20,6 +20,7 @@
   }
 
   function escapeHtml(str) {
+    if (str == null) return '';
     return String(str)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
@@ -28,17 +29,31 @@
   }
 
   function formatNetWorth(raw) {
+    if (raw && typeof raw === 'object' && raw.value != null) {
+      const sym = raw.currency === 'USD' ? '$' : `${raw.currency || ''} `;
+      const asOf = raw.asOf ? ` <span class="forbes-asof">as of ${escapeHtml(raw.asOf)}</span>` : '';
+      return `${sym}${raw.value}${raw.unit || 'B'}${asOf}`;
+    }
     const s = String(raw).replace(/^\$/, '').trim();
     return s.endsWith('B') || s.endsWith('M') ? `$${s}` : `$${s}B`;
   }
 
+  function formatUsdB(val) {
+    if (val == null || val === '') return '—';
+    return `$${val}B`;
+  }
+
   function personHaystack(b) {
+    const entityNames = (b.entities || []).map((e) => e.name);
+    const breakdown = (b.wealthBreakdown || []).map((w) => w.entity);
     return [
       b.name,
       b.country,
       b.sector,
       b.sourceOfWealth,
       ...(b.companies || []),
+      ...entityNames,
+      ...breakdown,
     ]
       .filter(Boolean)
       .join(' ')
@@ -81,7 +96,7 @@
           <strong class="forbes-name">${escapeHtml(b.name)}</strong>
           <span class="forbes-meta">${escapeHtml(b.sector)} · ${escapeHtml(b.country)}</span>
         </span>
-        <span class="forbes-worth">${escapeHtml(formatNetWorth(b.netWorth))}</span>
+        <span class="forbes-worth">${formatNetWorth(b.netWorth)}</span>
       </button>`;
       })
       .join('');
@@ -96,6 +111,56 @@
     });
   }
 
+  function renderLinks(person) {
+    const links = [
+      ['Forbes', person.forbesProfile],
+      ['Wikipedia', person.wikipediaLink],
+      ['Grokipedia', person.grokipediaLink],
+    ].filter(([, url]) => url);
+    if (!links.length) return '';
+    return `
+      <nav class="forbes-links" aria-label="External profiles">
+        ${links.map(([label, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener">${label}</a>`).join('')}
+      </nav>`;
+  }
+
+  function renderWealthBreakdown(rows) {
+    if (!rows || !rows.length) return '';
+    return `
+      <section class="forbes-panel">
+        <h4 class="forbes-journey-heading">Wealth breakdown</h4>
+        <table class="forbes-table">
+          <thead>
+            <tr><th>Entity</th><th>Type</th><th>Stake</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            ${rows.map((r) => `
+              <tr>
+                <td>${escapeHtml(r.entity)}${r.ticker ? ` <span class="forbes-ticker">${escapeHtml(r.ticker)}</span>` : ''}</td>
+                <td>${escapeHtml(r.type || '—')}</td>
+                <td>${r.stakePct != null ? `${r.stakePct}%` : '—'}</td>
+                <td>${formatUsdB(r.valueUsdB)}</td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+      </section>`;
+  }
+
+  function renderEntities(entities) {
+    if (!entities || !entities.length) return '';
+    return `
+      <section class="forbes-panel">
+        <h4 class="forbes-journey-heading">Entities</h4>
+        <ul class="forbes-entities">
+          ${entities.map((e) => `
+            <li class="forbes-entity">
+              <strong>${escapeHtml(e.name)}</strong>
+              <span class="forbes-entity-meta">${escapeHtml(e.role || '')}${e.founded ? ` · ${e.founded}` : ''} · ${escapeHtml(e.status || '')}${e.ticker ? ` · ${escapeHtml(e.ticker)}` : ''}${e.valuationUsdB ? ` · ${formatUsdB(e.valuationUsdB)} val` : ''}</span>
+            </li>`).join('')}
+        </ul>
+      </section>`;
+  }
+
   function renderTimeline(events) {
     if (!events || !events.length) {
       return '<p class="forbes-empty">No timeline entries yet.</p>';
@@ -104,17 +169,24 @@
     return `
       <ol class="forbes-journey">
         ${events
-          .map(
-            (ev) => `
+          .map((ev) => {
+            const type = ev.type ? `<span class="forbes-event-type">${escapeHtml(ev.type)}</span>` : '';
+            const val = ev.valuationUsdB != null ? `<p class="forbes-journey-val">Valuation ${formatUsdB(ev.valuationUsdB)}</p>` : '';
+            const src = ev.source ? `<p class="forbes-journey-source"><a href="${escapeHtml(ev.source)}" target="_blank" rel="noopener">Source</a></p>` : '';
+            return `
           <li class="forbes-journey-item">
             <span class="forbes-journey-year">${escapeHtml(ev.year)}</span>
             <div class="forbes-journey-body">
+              ${type}
               <strong class="forbes-journey-title">${escapeHtml(ev.title)}</strong>
+              ${ev.entityId ? `<p class="forbes-journey-entity">${escapeHtml(ev.entityId)}</p>` : ''}
               ${ev.description ? `<p class="forbes-journey-desc">${escapeHtml(ev.description)}</p>` : ''}
               ${ev.impact ? `<p class="forbes-journey-impact"><span>Impact</span> ${escapeHtml(ev.impact)}</p>` : ''}
+              ${val}
+              ${src}
             </div>
-          </li>`,
-          )
+          </li>`;
+          })
           .join('')}
       </ol>`;
   }
@@ -126,27 +198,34 @@
       return;
     }
 
-    const companies = (person.companies || [])
-      .map((c) => `<span class="forbes-tag">${escapeHtml(c)}</span>`)
-      .join('');
+    const legacySource = person.sourceOfWealth
+      ? `<div><dt>Source of wealth</dt><dd>${escapeHtml(person.sourceOfWealth)}</dd></div>`
+      : '';
+    const legacyDecade = person.firstFortuneDecade
+      ? `<div><dt>First fortune</dt><dd>${escapeHtml(person.firstFortuneDecade)}</dd></div>`
+      : '';
 
     container.innerHTML = `
       <header class="forbes-detail-header">
         <p class="forbes-detail-rank">Forbes rank #${person.rank}</p>
         <h3 class="forbes-detail-name">${escapeHtml(person.name)}</h3>
-        <p class="forbes-detail-worth">${escapeHtml(formatNetWorth(person.netWorth))}</p>
+        <p class="forbes-detail-worth">${formatNetWorth(person.netWorth)}</p>
         <p class="forbes-detail-summary">${escapeHtml(person.summary || '')}</p>
+        ${renderLinks(person)}
       </header>
       <dl class="forbes-facts">
         <div><dt>Age</dt><dd>${person.age ?? '—'}</dd></div>
         <div><dt>Country</dt><dd>${escapeHtml(person.country || '—')}</dd></div>
         <div><dt>Sector</dt><dd>${escapeHtml(person.sector || '—')}</dd></div>
-        <div><dt>Source of wealth</dt><dd>${escapeHtml(person.sourceOfWealth || '—')}</dd></div>
-        <div><dt>First fortune</dt><dd>${escapeHtml(person.firstFortuneDecade || '—')}</dd></div>
+        ${legacySource}
+        ${legacyDecade}
       </dl>
-      ${companies ? `<div class="forbes-tags" aria-label="Companies">${companies}</div>` : ''}
-      <h4 class="forbes-journey-heading">Wealth journey</h4>
-      ${renderTimeline(person.timeline)}
+      ${renderWealthBreakdown(person.wealthBreakdown)}
+      ${renderEntities(person.entities)}
+      <section class="forbes-panel">
+        <h4 class="forbes-journey-heading">Wealth journey</h4>
+        ${renderTimeline(person.timeline)}
+      </section>
     `;
   }
 
@@ -190,9 +269,10 @@
       countEl.textContent = `Showing ${filtered.length} of ${billionaires.length} profiles`;
       return;
     }
-    const tied = billionaires.length - new Set(billionaires.map((b) => b.rank)).size;
-    const tiedNote = tied ? ` · ${tied} tied Forbes ranks` : '';
-    countEl.textContent = `${billionaires.length} profiles from Grok · Forbes 500 Wealth Journeys${tiedNote}`;
+    const enriched = billionaires.filter((b) =>
+      (b.wealthBreakdown || []).some((w) => w.stakePct != null),
+    ).length;
+    countEl.textContent = `${billionaires.length} profiles · ${enriched} with stake-level breakdown · schema v2`;
   }
 
   async function initForbesWealth() {

@@ -14,6 +14,36 @@ OUTPUT_PATH = REPO_ROOT / "data" / "forbes-billionaires.json"
 REQUIRED_FIELDS = frozenset({"rank", "name", "netWorth", "timeline"})
 
 
+def validate_net_worth(value: Any, index: int, name: str) -> None:
+    if isinstance(value, str):
+        if not value.strip():
+            raise ValueError(f"Entry {index} ({name}) netWorth string must be non-empty")
+        return
+    if isinstance(value, dict):
+        for key in ("value", "unit", "currency"):
+            if key not in value:
+                raise ValueError(f"Entry {index} ({name}) netWorth object missing '{key}'")
+        return
+    raise ValueError(f"Entry {index} ({name}) netWorth must be a string or object")
+
+
+def validate_timeline_event(event: Any, entry_index: int, event_index: int) -> None:
+    if not isinstance(event, dict):
+        raise ValueError(f"Entry {entry_index} timeline[{event_index}] must be an object")
+
+    for key in ("year", "title"):
+        if key not in event or not str(event[key]).strip():
+            raise ValueError(
+                f"Entry {entry_index} timeline[{event_index}] missing or empty '{key}'"
+            )
+
+    # v1 required description/impact; v2 uses type/source/entityId instead
+    if "type" not in event and "description" not in event:
+        raise ValueError(
+            f"Entry {entry_index} timeline[{event_index}] needs 'type' (v2) or 'description' (v1)"
+        )
+
+
 def validate_entry(entry: Any, index: int) -> None:
     if not isinstance(entry, dict):
         raise ValueError(f"Entry {index} must be an object")
@@ -25,24 +55,18 @@ def validate_entry(entry: Any, index: int) -> None:
     if not isinstance(entry["rank"], int):
         raise ValueError(f"Entry {index} rank must be an integer")
 
+    name = entry.get("name", "?")
     if not isinstance(entry["name"], str) or not entry["name"].strip():
         raise ValueError(f"Entry {index} name must be a non-empty string")
 
-    if not isinstance(entry["netWorth"], str) or not entry["netWorth"].strip():
-        raise ValueError(f"Entry {index} netWorth must be a non-empty string")
+    validate_net_worth(entry["netWorth"], index, name)
 
     timeline = entry["timeline"]
     if not isinstance(timeline, list) or len(timeline) < 1:
         raise ValueError(f"Entry {index} timeline must be a non-empty array")
 
     for event_index, event in enumerate(timeline):
-        if not isinstance(event, dict):
-            raise ValueError(f"Entry {index} timeline[{event_index}] must be an object")
-        for key in ("year", "title", "description", "impact"):
-            if key not in event or not str(event[key]).strip():
-                raise ValueError(
-                    f"Entry {index} timeline[{event_index}] missing or empty '{key}'"
-                )
+        validate_timeline_event(event, index, event_index)
 
 
 def validate_dataset(data: Any) -> list[dict[str, Any]]:
@@ -54,7 +78,8 @@ def validate_dataset(data: Any) -> list[dict[str, Any]]:
     for index, entry in enumerate(data):
         validate_entry(entry, index)
 
-    return data
+    entries = sorted(data, key=lambda e: (e["rank"], e["name"].casefold()))
+    return entries
 
 
 def main() -> None:
