@@ -77,6 +77,17 @@ python3 scripts/merge_grok_enrichment.py data/grok-enrichment-7-20.json
 python3 scripts/build_entities.py
 ```
 
+[`historical-net-worth.json`](historical-net-worth.json) — estimated net worth by year, keyed by Forbes rank (`"1"` … `"100"`). Loaded in the Story tab line chart:
+
+```json
+{
+  "1": [
+    { "year": 1987, "netWorthB": 0.1 },
+    { "year": 2026, "netWorthB": 794.6 }
+  ]
+}
+```
+
 [`entities.json`](entities.json) — deduplicated companies (`id`, `name`, `ticker`, `valuationUsdB`, `status`) extracted from billionaire profiles. Rebuild after merges:
 
 ```bash

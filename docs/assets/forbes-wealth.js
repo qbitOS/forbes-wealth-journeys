@@ -7,6 +7,7 @@
 
   const DATA_URL = 'data/forbes-billionaires.json';
   const ENTITIES_URL = 'data/entities.json';
+  const HISTORICAL_URL = 'data/historical-net-worth.json';
   const BREAKDOWN_COLORS = ['#2563eb', '#16a34a', '#d97706', '#7c3aed', '#dc2626', '#0891b2', '#78716c'];
 
   let billionaires = [];
@@ -14,7 +15,9 @@
   let selectedKey = '';
   let searchQuery = '';
   let entityCatalog = new Map();
+  let historicalByRank = {};
   let breakdownChart = null;
+  let historyChart = null;
   let detailTab = 'story';
   let lastRenderedKey = '';
 
@@ -219,6 +222,85 @@
     }
   }
 
+  function disposeHistoryChart() {
+    if (historyChart) {
+      historyChart.dispose();
+      historyChart = null;
+    }
+  }
+
+  function historicalSeries(rank) {
+    return historicalByRank[String(rank)] || null;
+  }
+
+  function renderHistorySection(person) {
+    const series = historicalSeries(person.rank);
+    if (!series?.length) {
+      return '';
+    }
+    return `
+        <section class="forbes-panel forbes-panel-history">
+          <h4 class="forbes-journey-heading">Net worth over time</h4>
+          <div id="forbes-history-chart" class="forbes-history-chart" role="img" aria-label="Line chart of estimated net worth by year"></div>
+        </section>`;
+  }
+
+  function renderHistoryChart(person) {
+    const el = $('#forbes-history-chart');
+    if (!el || typeof echarts === 'undefined') return;
+
+    disposeHistoryChart();
+    const series = historicalSeries(person.rank);
+    if (!series?.length) {
+      el.innerHTML = '';
+      return;
+    }
+    el.innerHTML = '';
+
+    const years = series.map((p) => p.year);
+    const values = series.map((p) => p.netWorthB);
+
+    historyChart = echarts.init(el, null, { renderer: 'canvas' });
+    historyChart.setOption({
+      backgroundColor: 'transparent',
+      color: ['#2563eb'],
+      tooltip: {
+        trigger: 'axis',
+        formatter: (params) => {
+          const p = params[0];
+          return `${p.name}: $${p.value}B`;
+        },
+      },
+      grid: { left: 8, right: 16, top: 16, bottom: 32, containLabel: true },
+      xAxis: {
+        type: 'category',
+        data: years,
+        boundaryGap: false,
+        axisLabel: { color: '#737373', fontSize: 10 },
+        axisLine: { lineStyle: { color: 'rgba(0,0,0,0.12)' } },
+      },
+      yAxis: {
+        type: 'value',
+        name: '$B',
+        nameTextStyle: { color: '#737373', fontSize: 10 },
+        axisLabel: { color: '#737373', fontSize: 10 },
+        splitLine: { lineStyle: { color: 'rgba(0,0,0,0.06)' } },
+      },
+      series: [
+        {
+          name: 'Net worth',
+          type: 'line',
+          smooth: true,
+          symbol: 'circle',
+          symbolSize: 6,
+          lineStyle: { width: 2 },
+          areaStyle: { color: 'rgba(37, 99, 235, 0.08)' },
+          data: values,
+        },
+      ],
+    });
+  }
+
   function renderBreakdownChart(person) {
     const el = $('#forbes-breakdown-chart');
     if (!el || typeof echarts === 'undefined') return;
@@ -288,14 +370,20 @@
       panel.hidden = !show;
       panel.classList.toggle('active', show);
     });
+    const person = findPerson(selectedKey);
+    if (!person) return;
+
     if (tab === 'portfolio') {
-      const person = findPerson(selectedKey);
-      if (person) {
-        requestAnimationFrame(() => {
-          renderBreakdownChart(person);
-          breakdownChart?.resize();
-        });
-      }
+      requestAnimationFrame(() => {
+        renderBreakdownChart(person);
+        breakdownChart?.resize();
+      });
+    }
+    if (tab === 'story') {
+      requestAnimationFrame(() => {
+        renderHistoryChart(person);
+        historyChart?.resize();
+      });
     }
   }
 
@@ -303,6 +391,7 @@
     const person = findPerson(selectedKey);
     if (!person) {
       disposeBreakdownChart();
+      disposeHistoryChart();
       container.innerHTML = '<p class="forbes-empty">Select a person from the list.</p>';
       return;
     }
@@ -313,6 +402,7 @@
     }
 
     disposeBreakdownChart();
+    disposeHistoryChart();
 
     const legacySource = person.sourceOfWealth
       ? `<div><dt>Source of wealth</dt><dd>${escapeHtml(person.sourceOfWealth)}</dd></div>`
@@ -346,6 +436,7 @@
         <button type="button" role="tab" class="forbes-detail-tab${detailTab === 'entities' ? ' active' : ''}" data-tab="entities" aria-selected="${detailTab === 'entities'}">Entities</button>
       </div>
       <div class="forbes-detail-tabpanel${detailTab === 'story' ? ' active' : ''}" data-tab="story" role="tabpanel" ${detailTab === 'story' ? '' : 'hidden'}>
+        ${renderHistorySection(person)}
         <section class="forbes-panel">
           <h4 class="forbes-journey-heading">Wealth journey</h4>
           ${renderTimeline(person.timeline)}
@@ -373,6 +464,9 @@
 
     if (detailTab === 'portfolio') {
       renderBreakdownChart(person);
+    }
+    if (detailTab === 'story') {
+      renderHistoryChart(person);
     }
   }
 
@@ -424,7 +518,8 @@
     const enriched = billionaires.filter((b) =>
       (b.wealthBreakdown || []).some((w) => w.stakePct != null),
     ).length;
-    countEl.textContent = `${billionaires.length} profiles · ${enriched} with stake-level breakdown · schema v2`;
+    const historical = Object.keys(historicalByRank).length;
+    countEl.textContent = `${billionaires.length} profiles · ${enriched} with stake breakdown · ${historical} with historical net worth · schema v2`;
   }
 
   async function loadEntityCatalog() {
@@ -438,6 +533,16 @@
     }
   }
 
+  async function loadHistoricalNetWorth() {
+    try {
+      const resp = await fetch(HISTORICAL_URL);
+      if (!resp.ok) return;
+      historicalByRank = await resp.json();
+    } catch {
+      historicalByRank = {};
+    }
+  }
+
   async function initForbesWealth() {
     const root = $('#forbes-wealth');
     const listEl = $('#forbes-list');
@@ -446,10 +551,13 @@
     const searchEl = $('#forbes-search');
     if (!root || !listEl || !detailEl) return;
 
-    window.addEventListener('resize', () => breakdownChart?.resize());
+    window.addEventListener('resize', () => {
+      breakdownChart?.resize();
+      historyChart?.resize();
+    });
 
     try {
-      await loadEntityCatalog();
+      await Promise.all([loadEntityCatalog(), loadHistoricalNetWorth()]);
       const resp = await fetch(DATA_URL);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       billionaires = await resp.json();

@@ -1,0 +1,74 @@
+{
+  "1": [
+    {"year": 1987, "netWorthB": 0.1},
+    {"year": 1995, "netWorthB": 0.3},
+    {"year": 2000, "netWorthB": 1.5},
+    {"year": 2005, "netWorthB": 8},
+    {"year": 2010, "netWorthB": 4},
+    {"year": 2015, "netWorthB": 12},
+    {"year": 2020, "netWorthB": 150},
+    {"year": 2025, "netWorthB": 300},
+    {"year": 2026, "netWorthB": 794.6}
+  ],
+  "2": [
+    {"year": 1998, "netWorthB": 0.1},
+    {"year": 2004, "netWorthB": 5},
+    {"year": 2010, "netWorthB": 15},
+    {"year": 2015, "netWorthB": 35},
+    {"year": 2020, "netWorthB": 70},
+    {"year": 2025, "netWorthB": 200},
+    {"year": 2026, "netWorthB": 292.7}
+  ],
+  "3": [
+    {"year": 1998, "netWorthB": 0.1},
+    {"year": 2004, "netWorthB": 5},
+    {"year": 2010, "netWorthB": 14},
+    {"year": 2015, "netWorthB": 32},
+    {"year": 2020, "netWorthB": 65},
+    {"year": 2025, "netWorthB": 190},
+    {"year": 2026, "netWorthB": 270}
+  ],
+  "4": [
+    {"year": 1997, "netWorthB": 0.5},
+    {"year": 2005, "netWorthB": 8},
+    {"year": 2010, "netWorthB": 20},
+    {"year": 2015, "netWorthB": 60},
+    {"year": 2020, "netWorthB": 130},
+    {"year": 2025, "netWorthB": 200},
+    {"year": 2026, "netWorthB": 251.5}
+  ],
+  "5": [
+    {"year": 1986, "netWorthB": 2},
+    {"year": 2000, "netWorthB": 15},
+    {"year": 2010, "netWorthB": 28},
+    {"year": 2015, "netWorthB": 50},
+    {"year": 2020, "netWorthB": 70},
+    {"year": 2025, "netWorthB": 150},
+    {"year": 2026, "netWorthB": 230.1}
+  ],
+  "6": [
+    {"year": 2004, "netWorthB": 0.1},
+    {"year": 2010, "netWorthB": 5},
+    {"year": 2015, "netWorthB": 45},
+    {"year": 2020, "netWorthB": 80},
+    {"year": 2025, "netWorthB": 170},
+    {"year": 2026, "netWorthB": 222}
+  ],
+  "7": [
+    {"year": 1999, "netWorthB": 0.5},
+    {"year": 2010, "netWorthB": 2},
+    {"year": 2015, "netWorthB": 8},
+    {"year": 2020, "netWorthB": 25},
+    {"year": 2025, "netWorthB": 120},
+    {"year": 2026, "netWorthB": 182}
+  ],
+  "8": [
+    {"year": 1984, "netWorthB": 0.1},
+    {"year": 2000, "netWorthB": 10},
+    {"year": 2010, "netWorthB": 15},
+    {"year": 2015, "netWorthB": 20},
+    {"year": 2020, "netWorthB": 40},
+    {"year": 2025, "netWorthB": 100},
+    {"year": 2026, "netWorthB": 120}
+  ]
+}
