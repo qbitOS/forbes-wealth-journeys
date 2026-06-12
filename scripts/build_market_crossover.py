@@ -10,9 +10,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_ROWS = Path("/Volumes/qbitOS/00.dev/cursor/robinhood-agentic/data/flip-board/rows.json")
+DEFAULT_CHARTS = Path("/Volumes/qbitOS/00.dev/cursor/robinhood-agentic/data/flip-board/charts")
 PROFILES_PATH = ROOT / "data/forbes-billionaires.json"
 ENTITIES_PATH = ROOT / "data/entities.json"
 OUT_PATH = ROOT / "data/market-crossover.json"
+CHART_POINT_LIMIT = 90
 
 
 def load_json(path: Path):
@@ -34,7 +36,100 @@ def ticker_lookup_ids(ticker: str) -> list[str]:
     return out
 
 
-def compact_market(row: dict) -> dict:
+def ema(values: list[float], period: int) -> list[float]:
+    k = 2 / (period + 1)
+    out = [values[0]]
+    for i in range(1, len(values)):
+        out.append(values[i] * k + out[-1] * (1 - k))
+    return out
+
+
+def compute_macd(closes: list[float]) -> list[dict]:
+    ema12 = ema(closes, 12)
+    ema26 = ema(closes, 26)
+    macd_line = [a - b for a, b in zip(ema12, ema26)]
+    signal = ema(macd_line, 9)
+    return [
+        {"macd": m, "signal": s, "hist": m - s}
+        for m, s in zip(macd_line, signal)
+    ]
+
+
+def compute_bollinger(closes: list[float], period: int = 20, mult: float = 2.0) -> list[dict]:
+    out: list[dict] = []
+    for i in range(len(closes)):
+        if i < period - 1:
+            out.append({"bbM": None, "bbU": None, "bbL": None})
+            continue
+        window = closes[i - period + 1 : i + 1]
+        mid = sum(window) / period
+        variance = sum((x - mid) ** 2 for x in window) / period
+        sd = variance**0.5
+        out.append({"bbM": mid, "bbU": mid + mult * sd, "bbL": mid - mult * sd})
+    return out
+
+
+def compact_chart_payload(ticker: str, charts_dir: Path, limit: int = CHART_POINT_LIMIT) -> dict | None:
+    path = charts_dir / f"{ticker}.json"
+    if not path.is_file():
+        return None
+    raw = load_json(path)
+    daily = raw.get("daily") or {}
+    dates = daily.get("d") or []
+    closes = daily.get("c") or []
+    if len(closes) < 26 or len(dates) != len(closes):
+        return None
+
+    macd = compute_macd(closes)
+    bb = compute_bollinger(closes)
+    start = max(0, len(closes) - limit)
+    points = []
+    for i in range(start, len(closes)):
+        m = macd[i]
+        b = bb[i]
+        points.append(
+            {
+                "date": dates[i],
+                "close": round(closes[i], 4),
+                "bbU": round(b["bbU"], 4) if b["bbU"] is not None else None,
+                "bbM": round(b["bbM"], 4) if b["bbM"] is not None else None,
+                "bbL": round(b["bbL"], 4) if b["bbL"] is not None else None,
+                "macd": round(m["macd"], 4),
+                "signal": round(m["signal"], 4),
+                "hist": round(m["hist"], 4),
+            }
+        )
+
+    window_start = dates[start]
+    flips = []
+    last_flip = None
+    for i in range(1, len(closes)):
+        if dates[i] < window_start:
+            continue
+        prev_m = macd[i - 1]
+        cur_m = macd[i]
+        prev_b = bb[i - 1]
+        cur_b = bb[i]
+        if prev_m["macd"] <= prev_m["signal"] and cur_m["macd"] > cur_m["signal"]:
+            flips.append({"date": dates[i], "type": "macd_bullish", "indicator": "macd"})
+        elif prev_m["macd"] >= prev_m["signal"] and cur_m["macd"] < cur_m["signal"]:
+            flips.append({"date": dates[i], "type": "macd_bearish", "indicator": "macd"})
+        if cur_b["bbL"] is not None:
+            if closes[i - 1] >= prev_b["bbL"] and closes[i] < cur_b["bbL"]:
+                flips.append({"date": dates[i], "type": "bb_lower_breakdown", "indicator": "bollinger"})
+            elif closes[i - 1] <= prev_b["bbU"] and closes[i] > cur_b["bbU"]:
+                flips.append({"date": dates[i], "type": "bb_upper_breakout", "indicator": "bollinger"})
+
+    return {
+        "ticker": ticker,
+        "asOf": dates[-1],
+        "close": round(closes[-1], 4),
+        "points": points,
+        "flips": flips[-8:],
+    }
+
+
+def compact_market(row: dict, chart: dict | None = None) -> dict:
     day = (row.get("frames") or {}).get("day") or {}
     week = (row.get("frames") or {}).get("week") or {}
     pot_day = (row.get("potentials") or {}).get("day") or {}
@@ -69,6 +164,7 @@ def compact_market(row: dict) -> dict:
         }
         if pot_day
         else None,
+        "chart": chart,
     }
 
 
@@ -119,6 +215,7 @@ def profile_symbols(profile: dict, entity_catalog: dict[str, dict]) -> list[dict
 
 def main() -> int:
     rows_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_ROWS
+    charts_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else DEFAULT_CHARTS
     if not rows_path.is_file():
         print(f"Missing flip-board rows: {rows_path}", file=sys.stderr)
         return 1
@@ -145,7 +242,8 @@ def main() -> int:
             for cand in ticker_lookup_ids(sym.get("ticker") or ""):
                 src = row_by_id.get(cand)
                 if src:
-                    market = compact_market(src)
+                    chart = compact_chart_payload(cand, charts_dir)
+                    market = compact_market(src, chart)
                     sym["ticker"] = cand
                     matched_tickers += 1
                     break

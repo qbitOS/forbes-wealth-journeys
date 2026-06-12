@@ -71,7 +71,7 @@
         "source": "https://techcrunch.com"
       }
     ],
-    "grokipediaLink": "https://grok.x.ai/wiki/elon-musk",
+    "grokipediaLink": "https://grokipedia.com/page/Elon_Musk",
     "forbesProfile": "https://www.forbes.com/profile/elon-musk/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Elon_Musk",
     "wealthBreakdown": [
@@ -172,7 +172,7 @@
         "source": "https://abc.xyz"
       }
     ],
-    "grokipediaLink": "https://grok.x.ai/wiki/larry-page",
+    "grokipediaLink": "https://grokipedia.com/page/Larry_Page",
     "forbesProfile": "https://www.forbes.com/profile/larry-page/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Larry_Page",
     "wealthBreakdown": [
@@ -237,7 +237,7 @@
         "source": "https://www.sec.gov"
       }
     ],
-    "grokipediaLink": "https://grok.x.ai/wiki/sergey-brin",
+    "grokipediaLink": "https://grokipedia.com/page/Sergey_Brin",
     "forbesProfile": "https://www.forbes.com/profile/sergey-brin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Sergey_Brin",
     "wealthBreakdown": [
@@ -304,7 +304,7 @@
         "source": "https://www.forbes.com"
       }
     ],
-    "grokipediaLink": "https://grok.x.ai/wiki/jeff-bezos",
+    "grokipediaLink": "https://grokipedia.com/page/Jeff_Bezos",
     "forbesProfile": "https://www.forbes.com/profile/jeff-bezos/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jeff_Bezos",
     "wealthBreakdown": [
@@ -360,7 +360,7 @@
         "source": "https://en.wikipedia.org/wiki/Oracle_Corporation"
       }
     ],
-    "grokipediaLink": "https://grok.x.ai/wiki/larry-ellison",
+    "grokipediaLink": "https://grokipedia.com/page/Larry_Ellison",
     "forbesProfile": "https://www.forbes.com/profile/larry-ellison/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Larry_Ellison",
     "wealthBreakdown": [
@@ -391,10 +391,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/michael-dell",
+    "grokipediaLink": "https://grokipedia.com/page/Michael_Dell",
     "forbesProfile": "https://www.forbes.com/profile/michael-dell/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Michael_Dell",
     "wealthBreakdown": [
@@ -464,7 +464,7 @@
         "source": "https://www.sec.gov"
       }
     ],
-    "grokipediaLink": "https://grok.x.ai/wiki/mark-zuckerberg",
+    "grokipediaLink": "https://grokipedia.com/page/Mark_Zuckerberg",
     "forbesProfile": "https://www.forbes.com/profile/mark-zuckerberg/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Mark_Zuckerberg",
     "wealthBreakdown": [
@@ -495,10 +495,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/jensen-huang",
+    "grokipediaLink": "https://grokipedia.com/page/Jensen_Huang",
     "forbesProfile": "https://www.forbes.com/profile/jensen-huang/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jensen_Huang",
     "wealthBreakdown": [
@@ -549,10 +549,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "France",
     "sector": "Luxury Goods",
-    "grokipediaLink": "https://grok.x.ai/wiki/bernard-arnault",
+    "grokipediaLink": "https://grokipedia.com/page/Bernard_Arnault_&_family",
     "forbesProfile": "https://www.forbes.com/profile/bernard-arnault/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Bernard_Arnault",
     "wealthBreakdown": [
@@ -595,10 +595,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Finance",
-    "grokipediaLink": "https://grok.x.ai/wiki/warren-buffett",
+    "grokipediaLink": "https://grokipedia.com/page/Warren_Buffett",
     "forbesProfile": "https://www.forbes.com/profile/warren-buffett/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Warren_Buffett",
     "wealthBreakdown": [
@@ -649,10 +649,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Spain",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/amancio-ortega",
+    "grokipediaLink": "https://grokipedia.com/page/Amancio_Ortega",
     "forbesProfile": "https://www.forbes.com/profile/amancio-ortega/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Amancio_Ortega",
     "wealthBreakdown": [
@@ -695,10 +695,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/rob-walton",
+    "grokipediaLink": "https://grokipedia.com/page/Rob_Walton_&_family",
     "forbesProfile": "https://www.forbes.com/profile/rob-walton/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Rob_Walton",
     "wealthBreakdown": [
@@ -741,10 +741,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/jim-walton",
+    "grokipediaLink": "https://grokipedia.com/page/Jim_Walton_&_family",
     "forbesProfile": "https://www.forbes.com/profile/jim-walton/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jim_Walton",
     "wealthBreakdown": [
@@ -787,10 +787,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/alice-walton",
+    "grokipediaLink": "https://grokipedia.com/page/Alice_Walton",
     "forbesProfile": "https://www.forbes.com/profile/alice-walton/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Alice_Walton",
     "wealthBreakdown": [
@@ -833,15 +833,15 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Mexico",
     "sector": "Telecom",
-    "grokipediaLink": "https://grok.x.ai/wiki/carlos-slim",
+    "grokipediaLink": "https://grokipedia.com/page/Carlos_Slim_Helu_&_family",
     "forbesProfile": "https://www.forbes.com/profile/carlos-slim/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Carlos_Slim",
     "wealthBreakdown": [
       {
-        "entity": "América Móvil",
+        "entity": "Am\u00e9rica M\u00f3vil",
         "ticker": "AMX",
         "stakePct": 55,
         "valueUsdB": 80,
@@ -851,13 +851,13 @@
     "entities": [
       {
         "id": "america-movil",
-        "name": "América Móvil",
+        "name": "Am\u00e9rica M\u00f3vil",
         "role": "major_shareholder",
         "founded": 2000,
         "status": "public"
       }
     ],
-    "summary": "Owner of América Móvil.",
+    "summary": "Owner of Am\u00e9rica M\u00f3vil.",
     "timeline": [
       {
         "year": "1980s",
@@ -879,10 +879,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/steve-ballmer",
+    "grokipediaLink": "https://grokipedia.com/page/Steve_Ballmer",
     "forbesProfile": "https://www.forbes.com/profile/steve-ballmer/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Steve_Ballmer",
     "wealthBreakdown": [
@@ -933,10 +933,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Media",
-    "grokipediaLink": "https://grok.x.ai/wiki/michael-bloomberg",
+    "grokipediaLink": "https://grokipedia.com/page/Michael_Bloomberg",
     "forbesProfile": "https://www.forbes.com/profile/michael-bloomberg/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Michael_Bloomberg",
     "wealthBreakdown": [
@@ -981,7 +981,7 @@
     "age": null,
     "country": "Canada",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/changpeng-zhao",
+    "grokipediaLink": "https://grokipedia.com/page/Changpeng_Zhao",
     "forbesProfile": "https://www.forbes.com/profile/changpeng-zhao/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Changpeng_Zhao",
     "wealthBreakdown": [
@@ -1054,10 +1054,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/bill-gates",
+    "grokipediaLink": "https://grokipedia.com/page/Bill_Gates",
     "forbesProfile": "https://www.forbes.com/profile/bill-gates/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Bill_Gates",
     "wealthBreakdown": [
@@ -1103,7 +1103,7 @@
     "age": null,
     "country": "United States",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/thomas-peterffy",
+    "grokipediaLink": "https://grokipedia.com/page/Thomas_Peterffy",
     "forbesProfile": "https://www.forbes.com/profile/thomas-peterffy/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Thomas_Peterffy",
     "wealthBreakdown": [
@@ -1176,15 +1176,15 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "France",
     "sector": "Luxury Goods",
-    "grokipediaLink": "https://grok.x.ai/wiki/fran%C3%A7oise-bettencourt-meyers",
+    "grokipediaLink": "https://grokipedia.com/page/Francoise_Bettencourt_Meyers_&_family",
     "forbesProfile": "https://www.forbes.com/profile/fran%C3%A7oise-bettencourt-meyers/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers",
     "wealthBreakdown": [
       {
-        "entity": "L'Oréal",
+        "entity": "L'Or\u00e9al",
         "ticker": "OR.PA",
         "stakePct": 33,
         "valueUsdB": 90,
@@ -1194,19 +1194,19 @@
     "entities": [
       {
         "id": "loreal",
-        "name": "L'Oréal",
+        "name": "L'Or\u00e9al",
         "role": "major_shareholder",
         "founded": 1909,
         "status": "public"
       }
     ],
-    "summary": "Heiress of L'Oréal.",
+    "summary": "Heiress of L'Or\u00e9al.",
     "timeline": [
       {
         "year": "1950s",
         "type": "inheritance",
         "entityId": "loreal",
-        "title": "Inherited L'Oréal stake",
+        "title": "Inherited L'Or\u00e9al stake",
         "valuationUsdB": null,
         "source": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers"
       }
@@ -1225,7 +1225,7 @@
     "age": null,
     "country": "Italy",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/giancarlo-devasini",
+    "grokipediaLink": "https://grokipedia.com/page/Giancarlo_Devasini",
     "forbesProfile": "https://www.forbes.com/profile/giancarlo-devasini/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Giancarlo_Devasini",
     "wealthBreakdown": [
@@ -1298,10 +1298,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "India",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/mukesh-ambani",
+    "grokipediaLink": "https://grokipedia.com/page/Mukesh_Ambani",
     "forbesProfile": "https://www.forbes.com/profile/mukesh-ambani/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Mukesh_Ambani",
     "wealthBreakdown": [
@@ -1344,10 +1344,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "India",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/gautam-adani",
+    "grokipediaLink": "https://grokipedia.com/page/Gautam_Adani",
     "forbesProfile": "https://www.forbes.com/profile/gautam-adani/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Gautam_Adani",
     "wealthBreakdown": [
@@ -1389,10 +1389,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/julia-koch",
+    "grokipediaLink": "https://grokipedia.com/page/Julia_Koch_&_family",
     "forbesProfile": "https://www.forbes.com/profile/julia-koch/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Julia_Koch",
     "wealthBreakdown": [
@@ -1434,10 +1434,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Japan",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/masayoshi-son",
+    "grokipediaLink": "https://grokipedia.com/page/Masayoshi_Son",
     "forbesProfile": "https://www.forbes.com/profile/masayoshi-son/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Masayoshi_Son",
     "wealthBreakdown": [
@@ -1480,10 +1480,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/charles-koch",
+    "grokipediaLink": "https://grokipedia.com/page/Charles_Koch_&_family",
     "forbesProfile": "https://www.forbes.com/profile/charles-koch/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Charles_Koch",
     "wealthBreakdown": [
@@ -1525,10 +1525,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/zhang-yiming",
+    "grokipediaLink": "https://grokipedia.com/page/Zhang_Yiming",
     "forbesProfile": "https://www.forbes.com/profile/zhang-yiming/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Zhang_Yiming",
     "wealthBreakdown": [
@@ -1570,10 +1570,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Japan",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/tadashi-yanai",
+    "grokipediaLink": "https://grokipedia.com/page/Tadashi_Yanai_&_family",
     "forbesProfile": "https://www.forbes.com/profile/tadashi-yanai/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Tadashi_Yanai",
     "wealthBreakdown": [
@@ -1619,7 +1619,7 @@
     "age": null,
     "country": "United States",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/jeff-yass",
+    "grokipediaLink": "https://grokipedia.com/page/Jeff_Yass",
     "forbesProfile": "https://www.forbes.com/profile/jeff-yass/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jeff_Yass",
     "wealthBreakdown": [
@@ -1697,22 +1697,22 @@
   },
   {
     "rank": 31,
-    "name": "Germán Larrea Mota Velasco & family",
+    "name": "Germ\u00e1n Larrea Mota Velasco & family",
     "netWorth": {
       "value": 63.1,
       "unit": "B",
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Mexico",
     "sector": "Mining",
-    "grokipediaLink": "https://grok.x.ai/wiki/germ%C3%A1n-larrea-mota-velasco",
+    "grokipediaLink": "https://grokipedia.com/page/Germ\u00e1n_Larrea_Mota_Velasco_&_family",
     "forbesProfile": "https://www.forbes.com/profile/germ%C3%A1n-larrea-mota-velasco/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Germ%C3%A1n_Larrea_Mota-Velasco",
     "wealthBreakdown": [
       {
-        "entity": "Grupo México",
+        "entity": "Grupo M\u00e9xico",
         "ticker": "GMEXICOB.MX",
         "stakePct": 65,
         "valueUsdB": 55,
@@ -1722,7 +1722,7 @@
     "entities": [
       {
         "id": "grupo-mexico",
-        "name": "Grupo México",
+        "name": "Grupo M\u00e9xico",
         "role": "major_shareholder",
         "founded": 1978,
         "status": "public"
@@ -1750,10 +1750,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Germany",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/dieter-schwarz",
+    "grokipediaLink": "https://grokipedia.com/page/Dieter_Schwarz",
     "forbesProfile": "https://www.forbes.com/profile/dieter-schwarz/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Dieter_Schwarz",
     "wealthBreakdown": [
@@ -1795,10 +1795,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "Beverages",
-    "grokipediaLink": "https://grok.x.ai/wiki/zhong-shanshan",
+    "grokipediaLink": "https://grokipedia.com/page/Zhong_Shanshan",
     "forbesProfile": "https://www.forbes.com/profile/zhong-shanshan/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Zhong_Shanshan",
     "wealthBreakdown": [
@@ -1841,10 +1841,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "Batteries",
-    "grokipediaLink": "https://grok.x.ai/wiki/robin-zeng",
+    "grokipediaLink": "https://grokipedia.com/page/Robin_Zeng",
     "forbesProfile": "https://www.forbes.com/profile/robin-zeng/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Robin_Zeng",
     "wealthBreakdown": [
@@ -1887,10 +1887,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Finance",
-    "grokipediaLink": "https://grok.x.ai/wiki/ken-griffin",
+    "grokipediaLink": "https://grokipedia.com/page/Ken_Griffin",
     "forbesProfile": "https://www.forbes.com/profile/ken-griffin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Ken_Griffin",
     "wealthBreakdown": [
@@ -1932,10 +1932,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/ma-huateng",
+    "grokipediaLink": "https://grokipedia.com/page/Ma_Huateng",
     "forbesProfile": "https://www.forbes.com/profile/ma-huateng/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Ma_Huateng",
     "wealthBreakdown": [
@@ -1978,10 +1978,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Hong Kong",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/li-ka-shing",
+    "grokipediaLink": "https://grokipedia.com/page/Li_Ka-shing",
     "forbesProfile": "https://www.forbes.com/profile/li-ka-shing/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Li_Ka-shing",
     "wealthBreakdown": [
@@ -2024,10 +2024,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Italy",
     "sector": "Food",
-    "grokipediaLink": "https://grok.x.ai/wiki/giovanni-ferrero",
+    "grokipediaLink": "https://grokipedia.com/page/Giovanni_Ferrero",
     "forbesProfile": "https://www.forbes.com/profile/giovanni-ferrero/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Giovanni_Ferrero",
     "wealthBreakdown": [
@@ -2069,10 +2069,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Chile",
     "sector": "Mining",
-    "grokipediaLink": "https://grok.x.ai/wiki/iris-fontbona",
+    "grokipediaLink": "https://grokipedia.com/page/Iris_Fontbona_&_family",
     "forbesProfile": "https://www.forbes.com/profile/iris-fontbona/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Iris_Fontbona",
     "wealthBreakdown": [
@@ -2115,10 +2115,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/lukas-walton",
+    "grokipediaLink": "https://grokipedia.com/page/Lukas_Walton",
     "forbesProfile": "https://www.forbes.com/profile/lukas-walton/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Lukas_Walton",
     "wealthBreakdown": [
@@ -2161,10 +2161,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Switzerland",
     "sector": "Shipping",
-    "grokipediaLink": "https://grok.x.ai/wiki/gianluigi-aponte",
+    "grokipediaLink": "https://grokipedia.com/page/Gianluigi_Aponte",
     "forbesProfile": "https://www.forbes.com/profile/gianluigi-aponte/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Gianluigi_Aponte",
     "wealthBreakdown": [
@@ -2209,7 +2209,7 @@
     "age": null,
     "country": "Switzerland",
     "sector": "Logistics",
-    "grokipediaLink": "https://grok.x.ai/wiki/rafaela-aponte-diamant",
+    "grokipediaLink": "https://grokipedia.com/page/Rafaela_Aponte-Diamant",
     "forbesProfile": "https://www.forbes.com/profile/rafaela-aponte-diamant/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Rafaela_Aponte-Diamant",
     "wealthBreakdown": [
@@ -2282,10 +2282,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Food",
-    "grokipediaLink": "https://grok.x.ai/wiki/jacqueline-mars",
+    "grokipediaLink": "https://grokipedia.com/page/Jacqueline_Mars",
     "forbesProfile": "https://www.forbes.com/profile/jacqueline-mars/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jacqueline_Mars",
     "wealthBreakdown": [
@@ -2327,10 +2327,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Food",
-    "grokipediaLink": "https://grok.x.ai/wiki/john-mars",
+    "grokipediaLink": "https://grokipedia.com/page/John_Mars",
     "forbesProfile": "https://www.forbes.com/profile/john-mars/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/John_Mars",
     "wealthBreakdown": [
@@ -2375,7 +2375,7 @@
     "age": null,
     "country": "Austria",
     "sector": "Food & Beverage",
-    "grokipediaLink": "https://grok.x.ai/wiki/mark-mateschitz",
+    "grokipediaLink": "https://grokipedia.com/page/Mark_Mateschitz",
     "forbesProfile": "https://www.forbes.com/profile/mark-mateschitz/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Mark_Mateschitz",
     "wealthBreakdown": [
@@ -2451,7 +2451,7 @@
     "age": null,
     "country": "Italy",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/andrea-pignataro",
+    "grokipediaLink": "https://grokipedia.com/page/Andrea_Pignataro",
     "forbesProfile": "https://www.forbes.com/profile/andrea-pignataro/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Andrea_Pignataro",
     "wealthBreakdown": [
@@ -2524,10 +2524,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Germany",
     "sector": "Logistics",
-    "grokipediaLink": "https://grok.x.ai/wiki/klaus-michael-k%C3%BChne",
+    "grokipediaLink": "https://grokipedia.com/page/Klaus-Michael_Kuehne",
     "forbesProfile": "https://www.forbes.com/profile/klaus-michael-kuehne/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Klaus-Michael_K%C3%BChne",
     "wealthBreakdown": [
@@ -2570,10 +2570,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/william-ding",
+    "grokipediaLink": "https://grokipedia.com/page/William_Ding",
     "forbesProfile": "https://www.forbes.com/profile/william-ding/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Ding_Lei",
     "wealthBreakdown": [
@@ -2616,10 +2616,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Finance",
-    "grokipediaLink": "https://grok.x.ai/wiki/abigail-johnson",
+    "grokipediaLink": "https://grokipedia.com/page/Abigail_Johnson",
     "forbesProfile": "https://www.forbes.com/profile/abigail-johnson/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Abigail_Johnson",
     "wealthBreakdown": [
@@ -2661,10 +2661,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Finance",
-    "grokipediaLink": "https://grok.x.ai/wiki/stephen-schwarzman",
+    "grokipediaLink": "https://grokipedia.com/page/Stephen_Schwarzman",
     "forbesProfile": "https://www.forbes.com/profile/stephen-schwarzman/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Stephen_A._Schwarzman",
     "wealthBreakdown": [
@@ -2707,10 +2707,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/eric-schmidt",
+    "grokipediaLink": "https://grokipedia.com/page/Eric_Schmidt",
     "forbesProfile": "https://www.forbes.com/profile/eric-schmidt/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Eric_Schmidt",
     "wealthBreakdown": [
@@ -2767,10 +2767,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "France",
     "sector": "Luxury Goods",
-    "grokipediaLink": "https://grok.x.ai/wiki/alain-wertheimer",
+    "grokipediaLink": "https://grokipedia.com/page/Alain_Wertheimer",
     "forbesProfile": "https://www.forbes.com/profile/alain-wertheimer/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Alain_Wertheimer",
     "wealthBreakdown": [
@@ -2812,10 +2812,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "France",
     "sector": "Luxury Goods",
-    "grokipediaLink": "https://grok.x.ai/wiki/gerard-wertheimer",
+    "grokipediaLink": "https://grokipedia.com/page/Gerard_Wertheimer",
     "forbesProfile": "https://www.forbes.com/profile/gerard-wertheimer/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/G%C3%A9rard_Wertheimer",
     "wealthBreakdown": [
@@ -2860,7 +2860,7 @@
     "age": null,
     "country": "Netherlands",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/jean-louis-van-der-velde",
+    "grokipediaLink": "https://grokipedia.com/page/Jean-Louis_van_der_Velde",
     "forbesProfile": "https://www.forbes.com/profile/jean-louis-van-der-velde/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jean-Louis_van_der_Velde",
     "wealthBreakdown": [
@@ -2936,7 +2936,7 @@
     "age": null,
     "country": "Italy",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/paolo-ardoino",
+    "grokipediaLink": "https://grokipedia.com/page/Paolo_Ardoino",
     "forbesProfile": "https://www.forbes.com/profile/paolo-ardoino/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Paolo_Ardoino",
     "wealthBreakdown": [
@@ -3009,10 +3009,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "India",
     "sector": "Steel",
-    "grokipediaLink": "https://grok.x.ai/wiki/savitri-jindal",
+    "grokipediaLink": "https://grokipedia.com/page/Savitri_Jindal_&_family",
     "forbesProfile": "https://www.forbes.com/profile/savitri-jindal/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Savitri_Jindal",
     "wealthBreakdown": [
@@ -3057,7 +3057,7 @@
     "age": null,
     "country": "Russia",
     "sector": "Metals & Mining",
-    "grokipediaLink": "https://grok.x.ai/wiki/alexey-mordashov",
+    "grokipediaLink": "https://grokipedia.com/page/Alexey_Mordashov_&_family",
     "forbesProfile": "https://www.forbes.com/profile/alexey-mordashov/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Alexey_Mordashov_&_family",
     "wealthBreakdown": [
@@ -3145,7 +3145,7 @@
     "age": null,
     "country": "South Korea",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/jay-y-lee",
+    "grokipediaLink": "https://grokipedia.com/page/Jay_Y._Lee",
     "forbesProfile": "https://www.forbes.com/profile/jay-y-lee/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jay_Y._Lee",
     "wealthBreakdown": [
@@ -3221,7 +3221,7 @@
     "age": null,
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/henry-samueli",
+    "grokipediaLink": "https://grokipedia.com/page/Henry_Samueli",
     "forbesProfile": "https://www.forbes.com/profile/henry-samueli/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Henry_Samueli",
     "wealthBreakdown": [
@@ -3294,10 +3294,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Casinos",
-    "grokipediaLink": "https://grok.x.ai/wiki/miriam-adelson",
+    "grokipediaLink": "https://grokipedia.com/page/Miriam_Adelson_&_family",
     "forbesProfile": "https://www.forbes.com/profile/miriam-adelson/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Miriam_Adelson",
     "wealthBreakdown": [
@@ -3340,10 +3340,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "Appliances",
-    "grokipediaLink": "https://grok.x.ai/wiki/he-xiangjian",
+    "grokipediaLink": "https://grokipedia.com/page/He_Xiangjian_&_family",
     "forbesProfile": "https://www.forbes.com/profile/he-xiangjian/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/He_Xiangjian",
     "wealthBreakdown": [
@@ -3389,7 +3389,7 @@
     "age": null,
     "country": "Israel",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/eyal-ofer",
+    "grokipediaLink": "https://grokipedia.com/page/Eyal_Ofer",
     "forbesProfile": "https://www.forbes.com/profile/eyal-ofer/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Eyal_Ofer",
     "wealthBreakdown": [
@@ -3474,10 +3474,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/len-blavatnik",
+    "grokipediaLink": "https://grokipedia.com/page/Len_Blavatnik",
     "forbesProfile": "https://www.forbes.com/profile/len-blavatnik/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Len_Blavatnik",
     "wealthBreakdown": [
@@ -3522,7 +3522,7 @@
     "age": null,
     "country": "Israel",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/idan-ofer",
+    "grokipediaLink": "https://grokipedia.com/page/Idan_Ofer",
     "forbesProfile": "https://www.forbes.com/profile/idan-ofer/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Idan_Ofer",
     "wealthBreakdown": [
@@ -3598,7 +3598,7 @@
     "age": null,
     "country": "Nigeria",
     "sector": "Manufacturing",
-    "grokipediaLink": "https://grok.x.ai/wiki/aliko-dangote",
+    "grokipediaLink": "https://grokipedia.com/page/Aliko_Dangote",
     "forbesProfile": "https://www.forbes.com/profile/aliko-dangote/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Aliko_Dangote",
     "wealthBreakdown": [
@@ -3686,7 +3686,7 @@
     "age": null,
     "country": "United States",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/marilyn-simons",
+    "grokipediaLink": "https://grokipedia.com/page/Marilyn_Simons_&_family",
     "forbesProfile": "https://www.forbes.com/profile/marilyn-simons/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Marilyn_Simons_&_family",
     "wealthBreakdown": [
@@ -3762,7 +3762,7 @@
     "age": null,
     "country": "Germany",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/andreas-von-bechtolsheim",
+    "grokipediaLink": "https://grokipedia.com/page/Andreas_von_Bechtolsheim_&_family",
     "forbesProfile": "https://www.forbes.com/profile/andreas-von-bechtolsheim/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Andreas_von_Bechtolsheim_&_family",
     "wealthBreakdown": [
@@ -3838,7 +3838,7 @@
     "age": null,
     "country": "China",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/chen-tianshi",
+    "grokipediaLink": "https://grokipedia.com/page/Chen_Tianshi",
     "forbesProfile": "https://www.forbes.com/profile/chen-tianshi/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Chen_Tianshi",
     "wealthBreakdown": [
@@ -3914,7 +3914,7 @@
     "age": null,
     "country": "United States",
     "sector": "Energy",
-    "grokipediaLink": "https://grok.x.ai/wiki/lyndal-stephens-greth",
+    "grokipediaLink": "https://grokipedia.com/page/Lyndal_Stephens_Greth_&_family",
     "forbesProfile": "https://www.forbes.com/profile/lyndal-stephens-greth/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Lyndal_Stephens_Greth_&_family",
     "wealthBreakdown": [
@@ -3990,7 +3990,7 @@
     "age": null,
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/robert-pera",
+    "grokipediaLink": "https://grokipedia.com/page/Robert_Pera",
     "forbesProfile": "https://www.forbes.com/profile/robert-pera/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Robert_Pera",
     "wealthBreakdown": [
@@ -4066,7 +4066,7 @@
     "age": null,
     "country": "Brazil",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/eduardo-saverin",
+    "grokipediaLink": "https://grokipedia.com/page/Eduardo_Saverin",
     "forbesProfile": "https://www.forbes.com/profile/eduardo-saverin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Eduardo_Saverin",
     "wealthBreakdown": [
@@ -4139,10 +4139,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "India",
     "sector": "Steel",
-    "grokipediaLink": "https://grok.x.ai/wiki/lakshmi-mittal",
+    "grokipediaLink": "https://grokipedia.com/page/Lakshmi_Mittal",
     "forbesProfile": "https://www.forbes.com/profile/lakshmi-mittal/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Lakshmi_Mittal",
     "wealthBreakdown": [
@@ -4185,10 +4185,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/mackenzie-scott",
+    "grokipediaLink": "https://grokipedia.com/page/MacKenzie_Scott",
     "forbesProfile": "https://www.forbes.com/profile/mackenzie-scott/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/MacKenzie_Scott",
     "wealthBreakdown": [
@@ -4234,7 +4234,7 @@
     "age": null,
     "country": "United States",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/elaine-marshall",
+    "grokipediaLink": "https://grokipedia.com/page/Elaine_Marshall_&_family",
     "forbesProfile": "https://www.forbes.com/profile/elaine-marshall/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Elaine_Marshall_&_family",
     "wealthBreakdown": [
@@ -4307,10 +4307,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "United States",
     "sector": "Healthcare",
-    "grokipediaLink": "https://grok.x.ai/wiki/thomas-frist-jr",
+    "grokipediaLink": "https://grokipedia.com/page/Thomas_Frist_Jr_&_family",
     "forbesProfile": "https://www.forbes.com/profile/thomas-frist-jr/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Thomas_Frist_Jr.",
     "wealthBreakdown": [
@@ -4356,7 +4356,7 @@
     "age": null,
     "country": "Vietnam",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/pham-nhat-vuong",
+    "grokipediaLink": "https://grokipedia.com/page/Pham_Nhat_Vuong",
     "forbesProfile": "https://www.forbes.com/profile/pham-nhat-vuong/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Pham_Nhat_Vuong",
     "wealthBreakdown": [
@@ -4432,7 +4432,7 @@
     "age": null,
     "country": "Czech Republic",
     "sector": "Manufacturing",
-    "grokipediaLink": "https://grok.x.ai/wiki/michal-strnad",
+    "grokipediaLink": "https://grokipedia.com/page/Michal_Strnad",
     "forbesProfile": "https://www.forbes.com/profile/michal-strnad/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Michal_Strnad",
     "wealthBreakdown": [
@@ -4508,7 +4508,7 @@
     "age": null,
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/melinda-french-gates",
+    "grokipediaLink": "https://grokipedia.com/page/Melinda_French_Gates",
     "forbesProfile": "https://www.forbes.com/profile/melinda-french-gates/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Melinda_French_Gates",
     "wealthBreakdown": [
@@ -4581,10 +4581,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "Russia",
     "sector": "Metals",
-    "grokipediaLink": "https://grok.x.ai/wiki/vladimir-potanin",
+    "grokipediaLink": "https://grokipedia.com/page/Vladimir_Potanin",
     "forbesProfile": "https://www.forbes.com/profile/vladimir-potanin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Vladimir_Potanin",
     "wealthBreakdown": [
@@ -4630,7 +4630,7 @@
     "age": null,
     "country": "Russia",
     "sector": "Energy",
-    "grokipediaLink": "https://grok.x.ai/wiki/vagit-alekperov",
+    "grokipediaLink": "https://grokipedia.com/page/Vagit_Alekperov",
     "forbesProfile": "https://www.forbes.com/profile/vagit-alekperov/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Vagit_Alekperov",
     "wealthBreakdown": [
@@ -4706,7 +4706,7 @@
     "age": null,
     "country": "China",
     "sector": "Manufacturing",
-    "grokipediaLink": "https://grok.x.ai/wiki/wang-weixiu",
+    "grokipediaLink": "https://grokipedia.com/page/Wang_Weixiu_&_family",
     "forbesProfile": "https://www.forbes.com/profile/wang-weixiu/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Wang_Weixiu_&_family",
     "wealthBreakdown": [
@@ -4779,10 +4779,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "China",
     "sector": "E-commerce",
-    "grokipediaLink": "https://grok.x.ai/wiki/colin-huang",
+    "grokipediaLink": "https://grokipedia.com/page/Colin_Huang",
     "forbesProfile": "https://www.forbes.com/profile/colin-huang/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Colin_Huang",
     "wealthBreakdown": [
@@ -4828,7 +4828,7 @@
     "age": null,
     "country": "Russia",
     "sector": "Energy",
-    "grokipediaLink": "https://grok.x.ai/wiki/leonid-mikhelson",
+    "grokipediaLink": "https://grokipedia.com/page/Leonid_Mikhelson_&_family",
     "forbesProfile": "https://www.forbes.com/profile/leonid-mikhelson/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Leonid_Mikhelson_&_family",
     "wealthBreakdown": [
@@ -4916,7 +4916,7 @@
     "age": null,
     "country": "China",
     "sector": "Energy",
-    "grokipediaLink": "https://grok.x.ai/wiki/huang-shilin",
+    "grokipediaLink": "https://grokipedia.com/page/Huang_Shilin",
     "forbesProfile": "https://www.forbes.com/profile/huang-shilin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Huang_Shilin",
     "wealthBreakdown": [
@@ -4992,7 +4992,7 @@
     "age": null,
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/john-tu",
+    "grokipediaLink": "https://grokipedia.com/page/John_Tu",
     "forbesProfile": "https://www.forbes.com/profile/john-tu/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/John_Tu",
     "wealthBreakdown": [
@@ -5068,7 +5068,7 @@
     "age": null,
     "country": "United States",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/david-sun",
+    "grokipediaLink": "https://grokipedia.com/page/David_Sun",
     "forbesProfile": "https://www.forbes.com/profile/david-sun/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/David_Sun",
     "wealthBreakdown": [
@@ -5144,7 +5144,7 @@
     "age": null,
     "country": "United States",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/peter-thiel",
+    "grokipediaLink": "https://grokipedia.com/page/Peter_Thiel",
     "forbesProfile": "https://www.forbes.com/profile/peter-thiel/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Peter_Thiel",
     "wealthBreakdown": [
@@ -5232,7 +5232,7 @@
     "age": null,
     "country": "Cyprus",
     "sector": "Diversified",
-    "grokipediaLink": "https://grok.x.ai/wiki/vinod-adani",
+    "grokipediaLink": "https://grokipedia.com/page/Vinod_Adani",
     "forbesProfile": "https://www.forbes.com/profile/vinod-adani/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Vinod_Adani",
     "wealthBreakdown": [
@@ -5310,7 +5310,7 @@
   },
   {
     "rank": 89,
-    "name": "François Pinault & family",
+    "name": "Fran\u00e7ois Pinault & family",
     "netWorth": {
       "value": 27.6,
       "unit": "B",
@@ -5320,9 +5320,9 @@
     "age": null,
     "country": "France",
     "sector": "Fashion & Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/fran-ois-pinault",
+    "grokipediaLink": "https://grokipedia.com/page/Fran\u00e7ois_Pinault_&_family",
     "forbesProfile": "https://www.forbes.com/profile/fran-ois-pinault/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/François_Pinault_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Fran\u00e7ois_Pinault_&_family",
     "wealthBreakdown": [
       {
         "entity": "Luxury goods",
@@ -5396,7 +5396,7 @@
     "age": null,
     "country": "China",
     "sector": "Metals & Mining",
-    "grokipediaLink": "https://grok.x.ai/wiki/zheng-shuliang",
+    "grokipediaLink": "https://grokipedia.com/page/Zheng_Shuliang_&_family",
     "forbesProfile": "https://www.forbes.com/profile/zheng-shuliang/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Zheng_Shuliang_&_family",
     "wealthBreakdown": [
@@ -5472,7 +5472,7 @@
     "age": null,
     "country": "Germany",
     "sector": "Manufacturing",
-    "grokipediaLink": "https://grok.x.ai/wiki/reinhold-wuerth",
+    "grokipediaLink": "https://grokipedia.com/page/Reinhold_Wuerth_&_family",
     "forbesProfile": "https://www.forbes.com/profile/reinhold-wuerth/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Reinhold_Wuerth_&_family",
     "wealthBreakdown": [
@@ -5548,7 +5548,7 @@
     "age": null,
     "country": "China",
     "sector": "Technology",
-    "grokipediaLink": "https://grok.x.ai/wiki/jack-ma",
+    "grokipediaLink": "https://grokipedia.com/page/Jack_Ma",
     "forbesProfile": "https://www.forbes.com/profile/jack-ma/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jack_Ma",
     "wealthBreakdown": [
@@ -5621,10 +5621,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "India",
     "sector": "Pharmaceuticals",
-    "grokipediaLink": "https://grok.x.ai/wiki/cyrus-poonawalla",
+    "grokipediaLink": "https://grokipedia.com/page/Cyrus_Poonawalla",
     "forbesProfile": "https://www.forbes.com/profile/cyrus-poonawalla/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Cyrus_Poonawalla",
     "wealthBreakdown": [
@@ -5669,7 +5669,7 @@
     "age": null,
     "country": "United States",
     "sector": "Fashion & Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/phil-knight",
+    "grokipediaLink": "https://grokipedia.com/page/Phil_Knight_&_family",
     "forbesProfile": "https://www.forbes.com/profile/phil-knight/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Phil_Knight_&_family",
     "wealthBreakdown": [
@@ -5745,7 +5745,7 @@
     "age": null,
     "country": "France",
     "sector": "Food & Beverage",
-    "grokipediaLink": "https://grok.x.ai/wiki/emmanuel-besnier",
+    "grokipediaLink": "https://grokipedia.com/page/Emmanuel_Besnier",
     "forbesProfile": "https://www.forbes.com/profile/emmanuel-besnier/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Emmanuel_Besnier",
     "wealthBreakdown": [
@@ -5773,7 +5773,7 @@
         "title": "Lactalis founded",
         "valuationUsdB": null,
         "source": null,
-        "description": "Grandfather André Besnier started cheese dairy.",
+        "description": "Grandfather Andr\u00e9 Besnier started cheese dairy.",
         "impact": "Dairy dynasty"
       },
       {
@@ -5783,7 +5783,7 @@
         "title": "Father expanded Lactalis",
         "valuationUsdB": null,
         "source": null,
-        "description": "Michel Besnier grew Président brand.",
+        "description": "Michel Besnier grew Pr\u00e9sident brand.",
         "impact": "French cheese leader"
       },
       {
@@ -5821,7 +5821,7 @@
     "age": null,
     "country": "Germany",
     "sector": "Automotive",
-    "grokipediaLink": "https://grok.x.ai/wiki/susanne-klatten",
+    "grokipediaLink": "https://grokipedia.com/page/Susanne_Klatten",
     "forbesProfile": "https://www.forbes.com/profile/susanne-klatten/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Susanne_Klatten",
     "wealthBreakdown": [
@@ -5909,7 +5909,7 @@
     "age": null,
     "country": "United States",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/israel-englander",
+    "grokipediaLink": "https://grokipedia.com/page/Israel_Englander",
     "forbesProfile": "https://www.forbes.com/profile/israel-englander/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Israel_Englander",
     "wealthBreakdown": [
@@ -5985,7 +5985,7 @@
     "age": null,
     "country": "Russia",
     "sector": "Finance & Investments",
-    "grokipediaLink": "https://grok.x.ai/wiki/suleiman-kerimov",
+    "grokipediaLink": "https://grokipedia.com/page/Suleiman_Kerimov_&_family",
     "forbesProfile": "https://www.forbes.com/profile/suleiman-kerimov/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Suleiman_Kerimov_&_family",
     "wealthBreakdown": [
@@ -6061,7 +6061,7 @@
     "age": null,
     "country": "Russia",
     "sector": "Metals & Mining",
-    "grokipediaLink": "https://grok.x.ai/wiki/vladimir-lisin",
+    "grokipediaLink": "https://grokipedia.com/page/Vladimir_Lisin",
     "forbesProfile": "https://www.forbes.com/profile/vladimir-lisin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Vladimir_Lisin",
     "wealthBreakdown": [
@@ -6146,10 +6146,10 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "—",
+    "age": "\u2014",
     "country": "India",
     "sector": "Pharmaceuticals",
-    "grokipediaLink": "https://grok.x.ai/wiki/dilip-shanghvi",
+    "grokipediaLink": "https://grokipedia.com/page/Dilip_Shanghvi",
     "forbesProfile": "https://www.forbes.com/profile/dilip-shanghvi/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Dilip_Shanghvi",
     "wealthBreakdown": [

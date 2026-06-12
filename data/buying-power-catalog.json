@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "note": "Illustrative RISK-scale targets in USD billions — not financial advice.",
+  "targets": [
+    { "id": "uk", "label": "United Kingdom", "type": "territory", "costUsdB": 650, "emoji": "🇬🇧", "lat": 54.0, "lng": -2.5 },
+    { "id": "india-gdp", "label": "India annual GDP", "type": "economy", "costUsdB": 4100, "emoji": "🇮🇳", "lat": 22.0, "lng": 79.0 },
+    { "id": "germany-debt", "label": "Germany public debt", "type": "debt", "costUsdB": 2800, "emoji": "🇩🇪", "lat": 51.2, "lng": 10.4 },
+    { "id": "japan-debt-svc", "label": "Japan debt service (1 yr)", "type": "debt", "costUsdB": 220, "emoji": "🇯🇵", "lat": 36.2, "lng": 138.25 },
+    { "id": "ukraine-rebuild", "label": "Ukraine rebuild estimate", "type": "territory", "costUsdB": 500, "emoji": "🇺🇦", "lat": 48.5, "lng": 31.5 },
+    { "id": "lithium-reserves", "label": "Global lithium reserves (est.)", "type": "mineral", "costUsdB": 180, "emoji": "⛏️", "lat": -23.0, "lng": -68.0 },
+    { "id": "copper-reserves", "label": "Chile copper reserves (est.)", "type": "mineral", "costUsdB": 320, "emoji": "🟤", "lat": -22.9, "lng": -68.3 },
+    { "id": "rare-earth", "label": "Rare-earth strategic stockpile", "type": "mineral", "costUsdB": 90, "emoji": "🧲", "lat": 39.9, "lng": 116.4 },
+    { "id": "nasa-decade", "label": "NASA budget × 10 years", "type": "institution", "costUsdB": 250, "emoji": "🚀", "lat": 28.5, "lng": -80.6 },
+    { "id": "world-oil-reserve", "label": "Strategic petroleum reserve (US)", "type": "commodity", "costUsdB": 120, "emoji": "🛢️", "lat": 30.0, "lng": -93.0 },
+    { "id": "argentina-debt", "label": "Argentina sovereign debt", "type": "debt", "costUsdB": 280, "emoji": "🇦🇷", "lat": -34.6, "lng": -58.4 },
+    { "id": "egypt", "label": "Egypt GDP", "type": "economy", "costUsdB": 480, "emoji": "🇪🇬", "lat": 26.8, "lng": 30.8 },
+    { "id": "indonesia", "label": "Indonesia · archipelago card", "type": "territory", "costUsdB": 1400, "emoji": "🇮🇩", "lat": -2.5, "lng": 118.0 },
+    { "id": "saudi-oil", "label": "Saudi Aramco market cap", "type": "commodity", "costUsdB": 2100, "emoji": "🇸🇦", "lat": 24.7, "lng": 46.7 },
+    { "id": "eu-green-deal", "label": "EU Green Deal fund", "type": "institution", "costUsdB": 600, "emoji": "🇪🇺", "lat": 50.85, "lng": 4.35 },
+    { "id": "tsmc-fabs", "label": "Global leading-edge fab build-out", "type": "infrastructure", "costUsdB": 400, "emoji": "💾", "lat": 24.8, "lng": 121.0 },
+    { "id": "amazon-rainforest", "label": "Amazon conservation fund (10 yr)", "type": "territory", "costUsdB": 150, "emoji": "🌳", "lat": -3.4, "lng": -62.0 },
+    { "id": "gold-reserves", "label": "US gold reserves (market)", "type": "mineral", "costUsdB": 520, "emoji": "🥇", "lat": 38.9, "lng": -77.0 },
+    { "id": "spacex-val", "label": "SpaceX private valuation", "type": "company", "costUsdB": 350, "emoji": "🛰️", "lat": 25.99, "lng": -97.15 },
+    { "id": "world-food", "label": "UN World Food Programme (10 yr)", "type": "institution", "costUsdB": 75, "emoji": "🌾", "lat": 46.2, "lng": 6.14 }
+  ]
+}

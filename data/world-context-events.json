@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "source": "fornevercollective/ancestory · majorHistoricalEvents + Forbes wealth overlays",
+  "ancestoryUrl": "https://fornevercollective.github.io/ancestory/",
+  "events": [
+    { "year": 1971, "label": "Nixon ends gold standard", "category": "wealth", "description": "USD leaves Bretton Woods — modern fiat era for global fortunes." },
+    { "year": 1973, "label": "Oil embargo shock", "category": "history", "description": "Energy crisis reshapes industrial wealth and Middle East capital flows." },
+    { "year": 1975, "label": "Microsoft founded", "category": "science", "description": "PC software stack begins — template for tech-founder fortunes." },
+    { "year": 1976, "label": "Apple Computer founded", "category": "science", "description": "Consumer tech design becomes a wealth category." },
+    { "year": 1980, "label": "Apple IPO", "category": "wealth", "description": "First mega tech public-market fortune narrative." },
+    { "year": 1986, "label": "Chernobyl disaster", "category": "history", "description": "Soviet-era industrial risk enters global consciousness." },
+    { "year": 1987, "label": "Black Monday crash", "category": "wealth", "description": "Single-day equity wipeout — volatility tax on paper wealth." },
+    { "year": 1989, "label": "Berlin Wall falls", "category": "history", "description": "Cold War thaw opens Eastern European capital and labor markets." },
+    { "year": 1990, "label": "Web / HTTP born (CERN)", "category": "science", "description": "Internet substrate for platform billionaires." },
+    { "year": 1991, "label": "Soviet Union dissolves", "category": "history", "description": "Oligarch-class wealth emerges from state asset sales." },
+    { "year": 1993, "label": "Mosaic browser released", "category": "science", "description": "Graphical web unlocks dot-com founder cycle." },
+    { "year": 1994, "label": "Amazon founded", "category": "science", "description": "E-commerce scale playbook begins." },
+    { "year": 1995, "label": "Netscape IPO", "category": "wealth", "description": "Dot-com mania — revenue-multiple fortunes." },
+    { "year": 1997, "label": "Asian financial crisis", "category": "wealth", "description": "FX and debt shock across Pacific tiger economies." },
+    { "year": 1998, "label": "Google incorporated", "category": "science", "description": "Search/advertising monopoly wealth model starts." },
+    { "year": 1999, "label": "Euro launched", "category": "wealth", "description": "Single currency deepens European capital markets." },
+    { "year": 2000, "label": "Dot-com peak / bust", "category": "wealth", "description": "NASDAQ collapse — paper wealth reset for tech founders." },
+    { "year": 2001, "label": "September 11 attacks", "category": "history", "description": "Geopolitics, defense, and travel wealth reshaped." },
+    { "year": 2003, "label": "Human Genome Project completed", "category": "science", "description": "Biotech fortune lane opens (ancestory science layer)." },
+    { "year": 2004, "label": "Facebook launches", "category": "science", "description": "Social graph becomes ad-driven wealth engine." },
+    { "year": 2007, "label": "iPhone introduced", "category": "science", "description": "Mobile super-cycle for hardware + platform fortunes." },
+    { "year": 2008, "label": "Global financial crisis", "category": "wealth", "description": "Lehman moment — credit wealth destroyed and recreated." },
+    { "year": 2009, "label": "Bitcoin genesis block", "category": "science", "description": "Crypto wealth class seeded." },
+    { "year": 2010, "label": "Instagram founded", "category": "science", "description": "Attention economy accelerates." },
+    { "year": 2011, "label": "Arab Spring", "category": "history", "description": "Regional instability shifts Gulf and North Africa capital." },
+    { "year": 2012, "label": "SpaceX Dragon docks with ISS", "category": "space", "description": "Private space wealth becomes credible (ancestory forward layer)." },
+    { "year": 2014, "label": "Crimea annexation", "category": "history", "description": "Sanctions era reshapes Russian-linked fortunes." },
+    { "year": 2015, "label": "Paris Climate Agreement", "category": "history", "description": "Green capital and ESG wealth mandates rise." },
+    { "year": 2016, "label": "Brexit referendum", "category": "history", "description": "UK-EU wealth routing uncertainty." },
+    { "year": 2017, "label": "Bitcoin peaks first mega-cycle", "category": "wealth", "description": "Crypto billionaires enter Forbes lists." },
+    { "year": 2018, "label": "US–China trade war escalates", "category": "history", "description": "Supply-chain wealth shifts and tariff risk." },
+    { "year": 2019, "label": "WeWork IPO implosion", "category": "wealth", "description": "Private-markets valuation discipline returns." },
+    { "year": 2020, "label": "COVID-19 pandemic", "category": "history", "description": "Trillions in fiscal stimulus — wealth inequality debate peaks." },
+    { "year": 2020, "label": "mRNA vaccines deployed", "category": "science", "description": "Pharma/biotech fortunes surge on accelerated science." },
+    { "year": 2021, "label": "Perseverance lands on Mars", "category": "space", "description": "Space exploration narrative strengthens (ancestory)." },
+    { "year": 2021, "label": "Meme-stock / SPAC frenzy", "category": "wealth", "description": "Retail-driven volatility reshapes founder stakes." },
+    { "year": 2022, "label": "Russia invades Ukraine", "category": "history", "description": "Energy, defense, and sanctions wealth reordering." },
+    { "year": 2022, "label": "Fed rate-hike cycle", "category": "wealth", "description": "Higher rates compress growth-stock billionaire multiples." },
+    { "year": 2023, "label": "Generative AI breakout", "category": "science", "description": "LLM wave creates new AI-founder wealth tier." },
+    { "year": 2024, "label": "Bitcoin ETF approved (US)", "category": "wealth", "description": "Crypto wealth institutionalized in public markets." },
+    { "year": 2025, "label": "Starship integrated flight tests", "category": "space", "description": "Multi-planetary wealth thesis advances." },
+    { "year": 2026, "label": "Forbes list as-of snapshot", "category": "wealth", "description": "Current rank and net-worth anchor for this profile." }
+  ],
+  "sectorEvents": {
+    "Technology": [
+      { "year": 1995, "label": "Windows 95 launch", "category": "science", "description": "PC ubiquity wave." },
+      { "year": 2004, "label": "Google IPO", "category": "wealth", "description": "Search monopoly monetized at scale." },
+      { "year": 2012, "label": "Facebook IPO", "category": "wealth", "description": "Social graph goes public." },
+      { "year": 2023, "label": "NVIDIA AI GPU supercycle", "category": "wealth", "description": "Semiconductor wealth concentrates on AI capex." }
+    ],
+    "Finance & Investments": [
+      { "year": 1982, "label": "Bull market begins (Volcker)", "category": "wealth", "description": "Decades-long asset appreciation for investors." },
+      { "year": 2008, "label": "Buffett deploys crisis capital", "category": "wealth", "description": "Distressed investing playbook at scale." },
+      { "year": 2020, "label": "Fed backstop / QE infinity", "category": "wealth", "description": "Asset prices decouple from earnings briefly." }
+    ],
+    "Fashion & Retail": [
+      { "year": 1987, "label": "LVMH formed", "category": "wealth", "description": "Luxury conglomerate model for Arnault-class wealth." },
+      { "year": 2019, "label": "Luxury China slowdown fears", "category": "wealth", "description": "Asian demand drives luxury fortunes." }
+    ],
+    "Healthcare": [
+      { "year": 2020, "label": "Vaccine race", "category": "science", "description": "Pharma founders and investors surge." },
+      { "year": 2023, "label": "GLP-1 obesity drugs boom", "category": "science", "description": "New therapeutic wealth category." }
+    ],
+    "Manufacturing": [
+      { "year": 2001, "label": "China joins WTO", "category": "history", "description": "Manufacturing supply-chain wealth shifts East." },
+      { "year": 2022, "label": "CHIPS Act (US)", "category": "science", "description": "Reshoring subsidies for industrial fortunes." }
+    ],
+    "Diversified": [
+      { "year": 1991, "label": "India economic liberalization", "category": "history", "description": "Conglomerate fortunes expand post-license Raj." },
+      { "year": 2014, "label": "Modi election / India growth narrative", "category": "history", "description": "Domestic champions scale nationally." }
+    ]
+  }
+}

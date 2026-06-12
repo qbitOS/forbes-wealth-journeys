@@ -1280,32 +1280,17 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     timelineState.tabIndex = clamped;
     const section = tabs[clamped];
 
-    const tabBtns = document.querySelectorAll('.timeline-tab-btn');
-    const panels = document.querySelectorAll('.timeline-tab-panel');
-    tabBtns.forEach((btn, i) => {
-      const selected = i === clamped;
-      btn.classList.toggle('active', selected);
-      btn.setAttribute('aria-selected', selected ? 'true' : 'false');
-      btn.tabIndex = selected ? 0 : -1;
-    });
-    panels.forEach((panel, i) => {
-      const active = i === clamped;
-      panel.classList.toggle('active', active);
-      panel.hidden = !active;
-    });
-
-    const prevBtn = document.getElementById('timeline-tab-prev');
-    const nextBtn = document.getElementById('timeline-tab-next');
-    if (prevBtn) prevBtn.disabled = clamped === 0;
-    if (nextBtn) nextBtn.disabled = clamped === tabs.length - 1;
-
     const heading = document.getElementById('timeline-heading');
     const lead = document.getElementById('timeline-lead');
-    if (heading) heading.textContent = section.heading;
-    if (lead) lead.textContent = section.lead;
+    if (heading) heading.textContent = 'Milestones · portfolio · wealth';
+    if (lead) {
+      lead.textContent = 'IPO cluster and venture gitgraphs stacked with net-worth history — orange pins mark milestone years that overlap wealth moves.';
+    }
 
     syncActivityGroupHighlight(section.activityGroupId);
-    renderTimelineSection(section);
+    renderUnifiedVentureView(timelineProfileState || forbesProfiles.find((p) => p.rank === 1));
+    document.getElementById(`timeline-block-${section.id}`)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
     if (syncActivity) {
       syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
     }
@@ -1336,6 +1321,10 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     }
 
     renderTimelineSection(section);
+    if (sectionId === 'cluster' || sectionId === 'portfolio') {
+      const profile = timelineProfileState || forbesProfiles.find((p) => p.rank === 1);
+      renderTimelineWealthChart('timeline-unified-wealth', profile, { includeVentureEvents: true });
+    }
     if (syncActivity) {
       syncActivityFromTimeline(sectionId, branchId);
     }
@@ -1371,55 +1360,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
-  function initTimelineTabs() {
+  function initUnifiedTimeline() {
     TIMELINE_SECTIONS.forEach((section) => renderTimelineCompanyPills(section));
-
-    const tabList = document.querySelector('.timeline-tab-list');
-    const prevBtn = document.getElementById('timeline-tab-prev');
-    const nextBtn = document.getElementById('timeline-tab-next');
-
-    document.querySelectorAll('.timeline-tab-btn').forEach((btn, i) => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        setTimelineTab(i);
-      });
-    });
-
-    if (prevBtn) {
-      prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        setTimelineTab(timelineState.tabIndex - 1);
-      });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        setTimelineTab(timelineState.tabIndex + 1);
-      });
-    }
-
-    if (tabList) {
-      let touchStartX = 0;
-      tabList.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-      tabList.addEventListener('touchend', (e) => {
-        const dx = e.changedTouches[0].screenX - touchStartX;
-        if (Math.abs(dx) < 48) return;
-        if (dx < 0) setTimelineTab(timelineState.tabIndex + 1);
-        else setTimelineTab(timelineState.tabIndex - 1);
-      }, { passive: true });
-    }
-
-    document.getElementById('timeline-tabs')?.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        setTimelineTab(timelineState.tabIndex - 1);
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        setTimelineTab(timelineState.tabIndex + 1);
-      }
-    });
 
     const hash = window.location.hash.slice(1);
     if (hash.startsWith('timeline-')) {
@@ -1442,18 +1384,17 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         const valid = branchId === 'all' || section.branches.some((b) => b.id === branchId);
         if (!valid) branchId = 'all';
         timelineState.branchFocus[sectionId] = branchId;
-        const tabIdx = TIMELINE_SECTIONS.findIndex((s) => s.id === sectionId);
-        setTimelineTab(tabIdx >= 0 ? tabIdx : 0, { syncActivity: false });
         TIMELINE_SECTIONS.forEach((s) => renderTimelineCompanyPills(s));
-        setTimelineBranch(sectionId, branchId);
+        setTimelineBranch(sectionId, branchId, { syncActivity: false });
         return;
       }
     }
-    setTimelineTab(0, { syncActivity: false });
+
+    renderUnifiedVentureView(forbesProfiles.find((p) => p.rank === 1));
   }
 
   function initTimelineGitgraph() {
-    initTimelineTabs();
+    initUnifiedTimeline();
   }
 
   const PROFILE_LANE_COLORS = [
@@ -1531,8 +1472,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       return;
     }
     const mode = profileUsesVentureTimeline(profile)
-      ? 'Full venture gitgraph (Colossus · portfolio lanes)'
-      : `${(profile.timeline || []).length} profile milestones`;
+      ? 'Unified venture + portfolio lanes with wealth overlay'
+      : `${(profile.timeline || []).length} profile milestones · wealth cross-reference`;
     el.hidden = false;
     el.innerHTML = `Timeline for <strong>${escapeHtml(profile.name)}</strong> · rank #${profile.rank} · ${escapeHtml(mode)}`;
   }
@@ -1566,6 +1507,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     if (!profile || !model) return;
     timelineProfileModel = model;
     renderProfileTimelinePills(model);
+    renderTimelineWealthChart('timeline-profile-wealth', profile);
 
     const branchColorMap = profileBranchColorMap(model);
     const focus = timelineProfileBranchFocus;
@@ -1615,9 +1557,11 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     if (!profile) {
       if (ventureShell) ventureShell.hidden = false;
       if (profileShell) profileShell.hidden = true;
-      const section = TIMELINE_SECTIONS[timelineState.tabIndex];
-      if (heading && section) heading.textContent = section.heading;
-      if (lead && section) lead.textContent = section.lead;
+      if (heading) heading.textContent = 'Milestones · portfolio · wealth';
+      if (lead) {
+        lead.textContent = 'IPO cluster and venture gitgraphs stacked with net-worth history — orange pins mark milestone years that overlap wealth moves.';
+      }
+      renderUnifiedVentureView(forbesProfiles.find((p) => p.rank === 1));
       return;
     }
 
@@ -1626,10 +1570,11 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     if (profileShell) profileShell.hidden = showVenture;
 
     if (showVenture) {
-      const section = TIMELINE_SECTIONS[timelineState.tabIndex];
-      if (heading) heading.textContent = section.heading;
-      if (lead) lead.textContent = section.lead;
-      renderTimelineSection(section);
+      if (heading) heading.textContent = 'Milestones · portfolio · wealth';
+      if (lead) {
+        lead.textContent = 'IPO cluster and venture gitgraphs stacked with net-worth history — orange pins mark milestone years that overlap wealth moves.';
+      }
+      renderUnifiedVentureView(profile);
       return;
     }
 
@@ -1931,6 +1876,224 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   let activityProfileState = null;
   let pendingActivityProfile = null;
   let forbesProfiles = [];
+  let historicalByRank = {};
+  const timelineWealthCharts = {};
+
+  async function loadHistoricalNetWorth() {
+    try {
+      const resp = await fetch('data/historical-net-worth.json');
+      if (!resp.ok) return;
+      historicalByRank = await resp.json();
+    } catch {
+      historicalByRank = {};
+    }
+  }
+
+  function parseEventYear(raw) {
+    const match = String(raw || '').match(/(\d{4})/);
+    return match ? Number(match[1]) : null;
+  }
+
+  function crossRefYearRange(profile) {
+    const years = [...parseTimelineYears(profile?.timeline || [])];
+    const hist = historicalByRank[String(profile?.rank)] || [];
+    hist.forEach((p) => years.push(p.year));
+    if (!years.length) return { min: 2010, max: 2026 };
+    return { min: Math.min(...years), max: Math.max(...years) };
+  }
+
+  function yearToSlot(year, min, max, slots) {
+    if (year == null || year < min || year > max) return -1;
+    if (max === min) return 0;
+    return Math.round(((year - min) / (max - min)) * (slots - 1));
+  }
+
+  function buildCrossRefLanes(profile, slots = 20) {
+    const { min, max } = crossRefYearRange(profile);
+    const milestoneSlots = Array(slots).fill(0);
+    const wealthSlots = Array(slots).fill(0);
+    const slotYears = Array.from({ length: slots }, (_, i) =>
+      Math.round(min + (i / Math.max(1, slots - 1)) * (max - min)),
+    );
+    const milestoneTips = Array(slots).fill(null).map(() => []);
+    const wealthTips = Array(slots).fill(null).map(() => []);
+
+    (profile.timeline || []).forEach((ev) => {
+      const y = parseEventYear(ev.year);
+      const s = yearToSlot(y, min, max, slots);
+      if (s < 0) return;
+      milestoneSlots[s] = Math.min(4, milestoneSlots[s] + 1);
+      milestoneTips[s].push(`${ev.year}: ${ev.title}`);
+    });
+
+    const hist = historicalByRank[String(profile.rank)] || [];
+    const histByYear = Object.fromEntries(hist.map((p) => [p.year, p.netWorthB]));
+    const maxNw = Math.max(...hist.map((p) => p.netWorthB), 1);
+
+    slotYears.forEach((year, i) => {
+      const nw = histByYear[year];
+      if (nw != null) {
+        wealthSlots[i] = Math.max(1, Math.round((nw / maxNw) * 4));
+        wealthTips[i].push(`${year}: $${nw}B`);
+      }
+    });
+
+    if (!hist.length && (profile.wealthBreakdown || []).length) {
+      wealthSlots[slots - 1] = 3;
+      wealthTips[slots - 1].push('Present stake breakdown');
+    }
+
+    const overlaps = milestoneSlots.map((m, i) => m > 0 && wealthSlots[i] > 0);
+    return { min, max, milestoneSlots, wealthSlots, milestoneTips, wealthTips, overlaps, slotYears };
+  }
+
+  function renderCrossRefCardBody(profile) {
+    const lanes = buildCrossRefLanes(profile);
+    const cell = (level, overlap, tips, kind) => {
+      const title = tips.filter(Boolean).join('\n') || `${kind} · ${lanes.min}–${lanes.max}`;
+      return `<span class="rank-card-cell${overlap ? ' is-overlap' : ''}" data-level="${level}" title="${escapeHtml(title)}"></span>`;
+    };
+    return `
+      <span class="rank-card-crossref" aria-hidden="true">
+        <span class="rank-card-lane">
+          <span class="rank-card-lane-label">Milestones</span>
+          <span class="rank-card-lane-cells">
+            ${lanes.milestoneSlots.map((level, i) => cell(level, lanes.overlaps[i], lanes.milestoneTips[i], 'Milestone')).join('')}
+          </span>
+        </span>
+        <span class="rank-card-lane">
+          <span class="rank-card-lane-label">Wealth</span>
+          <span class="rank-card-lane-cells rank-card-lane-wealth">
+            ${lanes.wealthSlots.map((level, i) => cell(level, lanes.overlaps[i], lanes.wealthTips[i], 'Wealth')).join('')}
+          </span>
+        </span>
+        <span class="rank-card-year-axis">
+          <span>${lanes.min}</span>
+          <span>${lanes.max}</span>
+        </span>
+      </span>`;
+  }
+
+  function disposeTimelineWealthChart(containerId) {
+    if (timelineWealthCharts[containerId]) {
+      timelineWealthCharts[containerId].dispose();
+      delete timelineWealthCharts[containerId];
+    }
+  }
+
+  function collectMilestoneMarks(profile, { includeVentureEvents = false } = {}) {
+    const marks = [];
+    const seen = new Set();
+    const add = (yearRaw, title) => {
+      const year = parseEventYear(yearRaw);
+      if (!year) return;
+      const key = `${year}::${title}`;
+      if (seen.has(key)) return;
+      seen.add(key);
+      marks.push({ year, title });
+    };
+    (profile?.timeline || []).forEach((ev) => add(ev.year, ev.title));
+    if (includeVentureEvents) {
+      [...TIMELINE_CLUSTER_EVENTS, ...TIMELINE_PORTFOLIO_EVENTS].forEach((ev) => {
+        add(ev.date || ev.sort, ev.title);
+      });
+    }
+    return marks;
+  }
+
+  function renderTimelineWealthChart(containerId, profile, { includeVentureEvents = false } = {}) {
+    const el = document.getElementById(containerId);
+    if (!el || typeof echarts === 'undefined' || !profile) return;
+
+    disposeTimelineWealthChart(containerId);
+    const hist = historicalByRank[String(profile.rank)] || [];
+    const marks = collectMilestoneMarks(profile, { includeVentureEvents });
+
+    if (!hist.length) {
+      el.innerHTML = '<p class="timeline-wealth-empty">No historical net-worth series — milestone lanes still align by year in the cards above.</p>';
+      return;
+    }
+
+    el.innerHTML = '';
+    const years = hist.map((p) => String(p.year));
+    const values = hist.map((p) => p.netWorthB);
+    const markByYear = Object.fromEntries(marks.map((m) => [m.year, m.title]));
+    const peakValue = Math.max(...values);
+    const peakYear = years[values.indexOf(peakValue)];
+    const markPoints = hist
+      .filter((p) => markByYear[p.year])
+      .map((p) => {
+        const isPeak = p.netWorthB === peakValue && String(p.year) === peakYear;
+        return {
+          name: markByYear[p.year],
+          coord: [String(p.year), p.netWorthB],
+          value: markByYear[p.year],
+          symbol: isPeak ? 'diamond' : 'circle',
+          symbolSize: isPeak ? 14 : 8,
+          itemStyle: isPeak
+            ? { color: '#b45309', shadowBlur: 6, shadowColor: 'rgba(180, 83, 9, 0.35)' }
+            : { color: '#ffffff', borderColor: '#b45309', borderWidth: 2 },
+        };
+      });
+
+    timelineWealthCharts[containerId] = echarts.init(el, null, { renderer: 'canvas' });
+    timelineWealthCharts[containerId].setOption({
+      backgroundColor: 'transparent',
+      color: ['#171717', '#b45309'],
+      tooltip: {
+        trigger: 'axis',
+        formatter(params) {
+          const p = params[0];
+          const mark = markByYear[Number(p.name)];
+          return mark
+            ? `${p.name}: $${p.value}B<br/><strong>Milestone:</strong> ${mark}`
+            : `${p.name}: $${p.value}B`;
+        },
+      },
+      grid: { left: 8, right: 16, top: 36, bottom: 32, containLabel: true },
+      xAxis: {
+        type: 'category',
+        data: years,
+        boundaryGap: false,
+        axisLabel: { color: '#737373', fontSize: 10 },
+      },
+      yAxis: {
+        type: 'value',
+        name: '$B',
+        nameTextStyle: { color: '#737373', fontSize: 10 },
+        axisLabel: { color: '#737373', fontSize: 10 },
+        splitLine: { lineStyle: { color: 'rgba(0,0,0,0.06)' } },
+      },
+      series: [
+        {
+          name: 'Net worth',
+          type: 'line',
+          smooth: true,
+          symbol: 'circle',
+          symbolSize: 6,
+          lineStyle: { width: 2, color: '#171717' },
+          areaStyle: { color: 'rgba(0, 0, 0, 0.05)' },
+          data: values,
+          markPoint: markPoints.length
+            ? {
+                label: { show: false },
+                data: markPoints,
+              }
+            : undefined,
+        },
+      ],
+    });
+  }
+
+  function renderUnifiedVentureView(profile) {
+    TIMELINE_SECTIONS.forEach((section) => {
+      renderTimelineCompanyPills(section);
+      renderTimelineSection(section);
+    });
+    renderTimelineWealthChart('timeline-unified-wealth', profile || timelineProfileState, {
+      includeVentureEvents: true,
+    });
+  }
 
   function formatProfileNetWorth(profile) {
     const nw = profile?.netWorth;
@@ -1982,7 +2145,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
-  function renderWealthRankGrid(rootId, { scrollTargetId = 'forbes' } = {}) {
+  function renderWealthRankGrid(rootId, { scrollTargetId = 'forbes', crossRef = false } = {}) {
     const root = document.getElementById(rootId);
     if (!root) return;
 
@@ -1991,13 +2154,20 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       return;
     }
 
+    if (crossRef) root.classList.add('timeline-ranks-crossref');
+
     root.innerHTML = forbesProfiles.map((profile) => {
       const cells = placeholderCellsForProfile(profile);
       const milestones = (profile.timeline || []).length;
+      const crossRefBody = crossRef ? renderCrossRefCardBody(profile) : `
+          <span class="activity-rank-placeholder" aria-hidden="true">
+            ${cells.map((level) => `<span class="activity-rank-cell" data-level="${level}"></span>`).join('')}
+          </span>`;
+      const overlapCount = crossRef ? buildCrossRefLanes(profile).overlaps.filter(Boolean).length : 0;
       return `
         <button
           type="button"
-          class="activity-rank-card wealth-rank-card"
+          class="activity-rank-card wealth-rank-card${crossRef ? ' wealth-rank-card-crossref' : ''}"
           data-rank="${profile.rank}"
           aria-pressed="false"
           aria-label="Rank ${profile.rank}, ${escapeHtml(profile.name)}"
@@ -2006,11 +2176,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
             <span class="activity-rank-num">#${profile.rank}</span>
             <span class="activity-rank-name">${escapeHtml(profile.name)}</span>
           </span>
-          <span class="activity-rank-placeholder" aria-hidden="true">
-            ${cells.map((level) => `<span class="activity-rank-cell" data-level="${level}"></span>`).join('')}
-          </span>
+          ${crossRefBody}
           <span class="activity-rank-meta">
-            <span>${milestones} milestone${milestones === 1 ? '' : 's'}</span>
+            <span>${milestones} milestone${milestones === 1 ? '' : 's'}${crossRef && overlapCount ? ` · ${overlapCount} overlap${overlapCount === 1 ? '' : 's'}` : ''}</span>
             <span>${escapeHtml(formatProfileNetWorth(profile))}</span>
           </span>
         </button>`;
@@ -2041,7 +2209,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   function renderTimelineRankGrid(profiles) {
     if (profiles?.length) forbesProfiles = profiles;
-    renderWealthRankGrid('timeline-ranks', { scrollTargetId: 'timeline' });
+    renderWealthRankGrid('timeline-ranks', { scrollTargetId: 'timeline', crossRef: true });
   }
 
   function parseTimelineYears(timeline) {
@@ -2636,6 +2804,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   async function boot() {
     init();
+    await loadHistoricalNetWorth();
     initTimelineGitgraph();
     renderActivityBranches();
     initActivityCharts();
@@ -2649,6 +2818,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
       timelineSyncLock = false;
     }
+    window.addEventListener('resize', () => {
+      Object.values(timelineWealthCharts).forEach((chart) => chart?.resize());
+    });
     if (pendingActivityProfile) {
       syncActivityFromProfile(pendingActivityProfile);
       syncTimelineFromProfile(pendingActivityProfile);

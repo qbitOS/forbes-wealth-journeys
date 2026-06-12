@@ -6,6 +6,7 @@
 
   const DATA_URL = 'data/forbes-billionaires.json';
   const HOLDINGS_13F_URL = 'data/13f-top20.json';
+  const CROSSOVER_URL = 'data/market-crossover.json';
   const REPO = 'qbitOS/forbes-wealth-journeys';
   const REPO_BASE = `https://github.com/${REPO}`;
   const PAGES_URL = 'https://qbitos.github.io/forbes-wealth-journeys/';
@@ -45,6 +46,8 @@
   let dataset = [];
   let holdings13fByRank = {};
   let holdings13fMeta = null;
+  let crossoverByRank = {};
+  let crossoverMeta = null;
   const state = {
     step: 1,
     sector: '',
@@ -70,6 +73,12 @@
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+  }
+
+  function grokipediaPageUrl(name) {
+    if (!name) return null;
+    const slug = String(name).trim().replace(/\s+/g, '_');
+    return `https://grokipedia.com/page/${encodeURIComponent(slug).replace(/%20/g, '_')}`;
   }
 
   function isEnriched(entry) {
@@ -292,19 +301,92 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
       <p class="member-summary">${escapeHtml(profile.summary || 'No summary yet.')}</p>`;
   }
 
+  function crossoverSymbolsForRank(rank) {
+    return crossoverByRank[String(rank)]?.symbols || [];
+  }
+
+  function symbolForTimelineEvent(profile, ev) {
+    const entityId = ev?.entityId;
+    if (!entityId) return null;
+
+    const fromRank = crossoverSymbolsForRank(profile.rank).find(
+      (s) => s.entityId === entityId || (s.ticker || '').toLowerCase() === entityId,
+    );
+    if (fromRank) return fromRank;
+
+    const entity = (profile.entities || []).find((e) => e.id === entityId);
+    const ticker = entity?.ticker;
+    if (ticker) {
+      return crossoverSymbolsForRank(profile.rank).find(
+        (s) => (s.ticker || '').toUpperCase() === ticker.toUpperCase(),
+      ) || { ticker, entity: entity.name, entityId, market: null };
+    }
+
+    const breakdown = (profile.wealthBreakdown || []).find(
+      (w) => (w.entity || '').toLowerCase().includes(entityId) || entityId === (w.entity || '').toLowerCase(),
+    );
+    if (breakdown?.ticker) {
+      return crossoverSymbolsForRank(profile.rank).find(
+        (s) => (s.ticker || '').toUpperCase() === breakdown.ticker.toUpperCase(),
+      ) || { ticker: breakdown.ticker, entity: breakdown.entity, entityId, market: null };
+    }
+
+    return null;
+  }
+
+  function renderTimelineChartAside(profile, ev, idx) {
+    const sym = symbolForTimelineEvent(profile, ev);
+    const chartId = `member-crossover-${profile.rank}-${idx}`;
+    const market = sym?.market;
+    const chart = market?.chart;
+
+    if (chart?.points?.length) {
+      window.__crossoverChartPayloads = window.__crossoverChartPayloads || {};
+      window.__crossoverChartPayloads[chartId] = { chart, market };
+      const bias = market.macdBias ? `<span class="member-crossover-bias is-${String(market.macdBias).toLowerCase()}">${escapeHtml(market.macdBias)}</span>` : '';
+      const bb = market.bbPosition ? `<span class="member-crossover-bb">${escapeHtml(market.bbPosition.replace(/_/g, ' '))}</span>` : '';
+      return `
+        <aside class="member-timeline-chart" aria-label="${escapeHtml(sym.ticker)} crossover chart">
+          <div class="member-crossover-meta">
+            <span class="member-crossover-ticker">${escapeHtml(sym.ticker)}</span>
+            ${bias}${bb}
+          </div>
+          <div id="${chartId}" class="member-crossover-chart" data-crossover-chart data-chart-id="${chartId}" role="img" aria-label="Bollinger and MACD chart for ${escapeHtml(sym.ticker)}"></div>
+        </aside>`;
+    }
+
+    if (sym?.ticker) {
+      return `
+        <aside class="member-timeline-chart member-timeline-chart-empty" aria-hidden="true">
+          <span class="member-crossover-ticker">${escapeHtml(sym.ticker)}</span>
+          <span class="member-crossover-empty">No crossover row · rebuild flip-board</span>
+        </aside>`;
+    }
+
+    return `
+      <aside class="member-timeline-chart member-timeline-chart-empty" aria-hidden="true">
+        <span class="member-crossover-empty">Private · no public crossover</span>
+      </aside>`;
+  }
+
   function renderTimelinePanel(profile) {
     const events = profile.timeline || [];
     if (!events.length) {
       return '<p class="member-empty">No timeline milestones in profile data.</p>';
     }
     return `
-      <ol class="member-detail-list">
-        ${events.map((ev) => `
-          <li>
-            <strong>${escapeHtml(ev.year)} · ${escapeHtml(ev.title)}</strong>
-            ${ev.type ? `<span>${escapeHtml(ev.type)}</span>` : ''}
-            ${ev.entityId ? ` · <code>${escapeHtml(ev.entityId)}</code>` : ''}
-            ${ev.valuationUsdB != null ? ` · $${ev.valuationUsdB}B` : ''}
+      <ol class="member-detail-list member-timeline-list">
+        ${events.map((ev, idx) => `
+          <li class="member-timeline-row">
+            <div class="member-timeline-main">
+              <strong>${escapeHtml(ev.year)} · ${escapeHtml(ev.title)}</strong>
+              <span class="member-timeline-meta">
+                ${ev.type ? escapeHtml(ev.type) : ''}
+                ${ev.entityId ? ` · <code>${escapeHtml(ev.entityId)}</code>` : ''}
+                ${ev.valuationUsdB != null ? ` · $${ev.valuationUsdB}B` : ''}
+              </span>
+            </div>
+            ${renderTimelineChartAside(profile, ev, idx)}
           </li>`).join('')}
       </ol>`;
   }
@@ -396,7 +478,7 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     const links = [
       ['Forbes profile', profile.forbesProfile],
       ['Wikipedia', profile.wikipediaLink],
-      ['Grokipedia', profile.grokipediaLink],
+      ['Grokipedia', grokipediaPageUrl(profile.name) || profile.grokipediaLink],
       ['Open in Forbes list', `#forbes?rank=${profile.rank}&name=${encodeURIComponent(profile.name)}`],
       ['Venture timeline', '#timeline'],
       ['Activity view', '#activity'],
@@ -433,11 +515,19 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
   function renderMemberPanel(profile, tabId) {
     const panel = $('#member-detail-panel');
     if (!panel) return;
+    if (window.CrossoverMiniChart) {
+      window.CrossoverMiniChart.disposeIn(panel);
+    }
     if (!profile) {
+      panel.classList.remove('member-detail-panel--timeline');
       panel.innerHTML = '<p class="member-empty">Pick a billionaire from the Forbes list or use Prev/Next to browse ranks.</p>';
       return;
     }
+    panel.classList.toggle('member-detail-panel--timeline', tabId === 'timeline');
     panel.innerHTML = memberPanelHtml(profile, tabId);
+    if (tabId === 'timeline' && window.CrossoverMiniChart) {
+      window.CrossoverMiniChart.mountAll(panel);
+    }
   }
 
   function updateMemberNavButtons(profile) {
@@ -688,6 +778,22 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     }
   }
 
+  async function loadMarketCrossover() {
+    try {
+      const resp = await fetch(CROSSOVER_URL);
+      if (!resp.ok) return;
+      const payload = await resp.json();
+      crossoverMeta = { asOf: payload.asOf, source: payload.source };
+      crossoverByRank = {};
+      (payload.ranks || []).forEach((row) => {
+        if (row?.rank != null) crossoverByRank[String(row.rank)] = row;
+      });
+    } catch {
+      crossoverByRank = {};
+      crossoverMeta = null;
+    }
+  }
+
   async function initWealthDataTools() {
     try {
       const resp = await fetch(DATA_URL);
@@ -698,7 +804,7 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     } catch {
       dataset = [];
     }
-    await load13fHoldings();
+    await Promise.all([load13fHoldings(), loadMarketCrossover()]);
     initMemberDetails();
   }
 
