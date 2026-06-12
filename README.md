@@ -55,7 +55,7 @@ gitGraph
 
 ## Configurator
 
-Live wizard: [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/) · [Activity heatmaps](https://fornevercollective.github.io/grok-repo-template/#activity)
+Live wizard: [fornevercollective.github.io/grok-repo-template](https://fornevercollective.github.io/grok-repo-template/) · [Activity heatmaps](https://fornevercollective.github.io/grok-repo-template/#activity) · [Public timeline](https://fornevercollective.github.io/grok-repo-template/#timeline) includes Grok Alpha Arena and Rallies AI trading milestones
 
 One-click template buttons + advanced wizard → first-prompt markdown, JSON manifest, `metadata.yaml`, `llms.txt`, GitHub search query. Docs: [docs/pages-configurator.md](docs/pages-configurator.md).
 

@@ -441,8 +441,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     { sort: '2025-03', date: 'Mar 2025', branch: 'colossus', id: 'colossus-2', title: 'Colossus 2 site · 1M sq ft', approx: false },
     { sort: '2025-07', date: 'Jul 2025', branch: 'grok', id: 'grok-4', title: 'Grok 4 · multi-agent', approx: false },
     { sort: '2025-08', date: 'Aug 2025', branch: 'grok', id: 'grok-imagine', title: 'Grok Imagine video · 480p', approx: false },
+    { sort: '2025-10', date: 'Oct 18 2025', branch: 'grok', id: 'alpha-arena-s1', title: 'Alpha Arena S1 · live crypto', approx: false },
     { sort: '2025-11', date: 'Nov 2025', branch: 'grok', id: 'grok-4-1', title: 'Grok 4.1 · EQ-Bench lead', approx: false },
+    { sort: '2025-11', date: 'Nov 3 2025', branch: 'grok', id: 'alpha-arena-s1-end', title: 'Alpha Arena S1 · Grok 4 −45%', approx: true },
+    { sort: '2025-11', date: 'Nov 19 2025', branch: 'grok', id: 'alpha-arena-s15', title: 'Alpha Arena S1.5 · US equities', approx: false },
+    { sort: '2025-11', date: '~Nov 27 2025', branch: 'grok', id: 'rallies-arena-start', title: 'Rallies AI Arena · $100K/model', approx: true },
+    { sort: '2025-12', date: 'Dec 3 2025', branch: 'grok', id: 'alpha-arena-s15-win', title: 'Grok 4.20 wins S1.5 · +12.11%', approx: false },
     { sort: '2026-01', date: 'Jan 2026', branch: 'colossus', id: 'colossus-2-gw', title: 'Colossus 2 · ~1 GW online', approx: true },
+    { sort: '2026-01', date: 'Jan 2026', branch: 'grok', id: 'rallies-arena-lead', title: 'Rallies Arena · Grok ~+8% lead', approx: true },
     { sort: '2026-02', date: 'Feb 17 2026', branch: 'grok', id: 'grok-4-20', title: 'Grok 4.20 · 4-agent beta', approx: false },
     { sort: '2026-02', date: 'Feb 2026', branch: 'spacex', id: 'xai-merge', title: 'SpaceX acquires xAI · ~$1.25T', approx: true, merge: true },
     { sort: '2026-03', date: 'Mar 21 2026', branch: 'terrafab', id: 'terrafab-launch', title: 'Terafab announced · Austin proto', approx: false },
@@ -490,9 +496,12 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     { sort: '2025-12', date: 'Dec 2025', branch: 'spacex-ops', id: 'starlink-11b', title: 'Starlink ~$11.4B revenue', approx: true },
     { sort: '2026-01', date: 'Jan 2026', branch: 'tesla', id: 'robotaxi-austin', title: 'Unsupervised robotaxi · Austin', approx: false },
     { sort: '2026-01', date: 'Jan 2026', branch: 'neuralink', id: '21-patients', title: '21 patients globally', approx: true },
+    { sort: '2026-01', date: 'Jan 2026', branch: 'x-corp', id: 'cashtags-preview', title: 'Cashtags unveiled · live charts', approx: false },
     { sort: '2026-02', date: 'Feb 2026', branch: 'tesla', id: 'cybercab-line', title: 'First Cybercab · Giga Texas', approx: false },
     { sort: '2026-02', date: 'Feb 2026', branch: 'spacex-ops', id: 'starlink-10m', title: '10M+ Starlink subscribers', approx: true },
     { sort: '2026-03', date: 'Mar 2026', branch: 'x-corp', id: 'imagine-paywall', title: 'Imagine → SuperGrok paywall', approx: false },
+    { sort: '2026-04', date: 'Apr 14 2026', branch: 'x-corp', id: 'cashtags-launch', title: 'Cashtags live · US/Canada iOS', approx: false },
+    { sort: '2026-04', date: 'Apr 30 2026', branch: 'x-corp', id: 'cashtags-web', title: 'Cashtags web · trading terminal', approx: false },
     { sort: '2026-05', date: 'May 22 2026', branch: 'spacex-ops', id: 'starship-v3', title: 'Starship V3 · Flight 12 · Pad 2', approx: false },
     { sort: '2026-06', date: 'Jun 11 2026', branch: 'tesla', id: 'tsla-snapshot', title: 'TSLA ~$394 · SpaceX rotation', approx: true },
   ];
@@ -507,6 +516,10 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       { sort: '2025-05', date: 'May 2025', branch: 'grok', id: 'grok-voice', title: 'Grok Voice mode on iOS/Android', approx: false, drilldown: true },
       { sort: '2025-09', date: 'Sep 2025', branch: 'grok', id: 'grok-code', title: 'Grok Code · IDE integration beta', approx: false, drilldown: true },
       { sort: '2026-03', date: 'Mar 2026', branch: 'grok', id: 'supergrok-tier', title: 'SuperGrok subscription tier · Imagine bundle', approx: false, drilldown: true },
+      { sort: '2025-10', date: 'Oct 2025', branch: 'grok', id: 'alpha-arena-s1-board', title: 'Alpha Arena S1 field · 6 models × $10K crypto', approx: false, drilldown: true },
+      { sort: '2025-11', date: 'Nov 2025', branch: 'grok', id: 'alpha-arena-s15-modes', title: 'S1.5 four modes · Baseline / Monk / SA / Max Lev', approx: false, drilldown: true },
+      { sort: '2025-12', date: 'Dec 2025', branch: 'grok', id: 'alpha-arena-s15-board', title: 'S1.5 final board · Grok 4.20 all 4 modes green', approx: false, drilldown: true },
+      { sort: '2026-01', date: 'Jan 2026', branch: 'grok', id: 'rallies-arena-board', title: 'Rallies leaderboard · Grok vs GPT-5 / Qwen', approx: true, drilldown: true },
     ],
     colossus: [
       { sort: '2024-04', date: 'Apr 2024', branch: 'colossus', id: 'memphis-permit', title: 'Memphis site permits filed', approx: true, drilldown: true },
@@ -552,6 +565,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       { sort: '2023-07', date: 'Jul 2023', branch: 'x-corp', id: 'x-payments', title: 'X Payments LLC incorporated', approx: true, drilldown: true },
       { sort: '2024-08', date: 'Aug 2024', branch: 'x-corp', id: 'grok-on-x', title: 'Grok embedded in X app globally', approx: false, drilldown: true },
       { sort: '2025-01', date: 'Jan 2025', branch: 'x-corp', id: 'x-tv', title: 'X TV streaming beta', approx: true, drilldown: true },
+      { sort: '2026-04', date: 'Apr 2026', branch: 'x-corp', id: 'wealthsimple-pilot', title: 'Wealthsimple one-tap trade · Canada pilot', approx: false, drilldown: true },
+      { sort: '2026-04', date: 'Apr 2026', branch: 'x-corp', id: 'cashtags-onchain', title: 'Cashtags · Solana / Base contract lookup', approx: false, drilldown: true },
     ],
     neuralink: [
       { sort: '2019-07', date: 'Jul 2019', branch: 'neuralink', id: 'n1-chip', title: 'N1 chip unveiled · pig demo', approx: false, drilldown: true },
@@ -599,6 +614,22 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     },
     'supergrok-tier': {
       detail: 'SuperGrok subscription bundles Imagine video generation, higher rate limits, and priority Grok 4.x access on X — paywall for Imagine rolled Mar 2026.',
+    },
+    'alpha-arena-s1-board': {
+      detail: 'Nof1 Alpha Arena Season 1 (Oct 18 – Nov 3 2025): six frontier LLMs each traded $10,000 in crypto perpetuals on Hyperliquid with zero human intervention. Field: Grok 4, Qwen 3 Max, DeepSeek V3.1, GPT-5, Gemini 2.5 Pro, Claude Sonnet 4.5. Winner Qwen +22.3% ($12,232); DeepSeek +4.9%. Grok 4 finished fifth at roughly −45% ($5,470 final equity per public leaderboard).',
+      source: 'https://nof1.ai/',
+    },
+    'alpha-arena-s15-modes': {
+      detail: 'Season 1.5 (from Nov 19 2025) moved to US equities — TSLA, NVDA, MSFT, AMZN, NDX — with eight models and four parallel modes: New Baseline (news + market data), Monk Mode (capital preservation), Situational Awareness (tracks peer rankings), Max Leverage (mandatory high leverage). Each model received $10,000 per mode ($320,000 total capital).',
+      source: 'https://nof1.ai/',
+    },
+    'alpha-arena-s15-board': {
+      detail: 'Season 1.5 ended Dec 3 2025 5pm EST. Mystery Model (Grok 4.20) won with +12.11% aggregate return (~$4,844 profit) — profitable in all four modes. GPT-5.1 second, Gemini 3 third. Crypto-season winner Qwen 3 Max struggled on US equities. Elon Musk and Nof1 confirmed Grok 4.20 as Mystery Model.',
+      source: 'https://nof1.ai/',
+    },
+    'rallies-arena-board': {
+      detail: 'Rallies.ai AI Arena (~Nov 27 2025 onward): eight models each manage $100,000 in US equities with public trade logs. Mid-Jan 2026 snapshot: Grok 4 ~+8.2% ($108,891), DeepSeek V3 ~+5.8%, GPT-5.1 ~+3.9%, Claude Sonnet 4.5 ~+1.7%, Gemini 2.5 Pro ~+0.7%, Qwen 3 ~−21.3%. Grok cited concentrated CRM/MU positions vs diversified peers; S&P 500 ~+3% same window.',
+      source: 'https://rallies.ai/arena',
     },
     /* —— colossus drill-down —— */
     'memphis-permit': {
@@ -710,6 +741,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     'x-tv': {
       detail: 'X TV streaming beta Jan 2025 — long-form video hub competing with YouTube/TikTok; Grok summaries on trending clips.',
     },
+    'wealthsimple-pilot': {
+      detail: 'Wealthsimple brokerage pilot Apr 2026 — Canadian users tap a Cashtag to open a pre-filled order on Wealthsimple (one-tap from timeline conversation to trade entry). X is not a broker; routes to partner execution.',
+      source: 'https://thedefiant.io/news/tradfi-and-fintech/x-rolls-out-cashtags-with-price-charts-pilots-in-app-trading-via-wealthsimple',
+    },
+    'cashtags-onchain': {
+      detail: 'Cashtags support major equities, crypto tickers, and on-chain tokens via contract addresses on Solana and Base — extending prior TradingView (2022) and eToro (2023) cashtag integrations with live in-app charts.',
+      source: 'https://thedefiant.io/news/tradfi-and-fintech/x-rolls-out-cashtags-with-price-charts-pilots-in-app-trading-via-wealthsimple',
+    },
     /* —— neuralink drill-down —— */
     'n1-chip': {
       detail: 'N1 implant unveiled Jul 2019 — 1,024 electrodes, pig demo on stage; coin-sized skull-mounted processor with wireless telemetry.',
@@ -790,6 +829,42 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     },
     'grok-4': {
       detail: 'Grok 4 Jul 2025 — multi-agent orchestration, improved math/code benchmarks; trained on expanded Colossus 200K fleet.',
+    },
+    'alpha-arena-s1': {
+      detail: 'Nof1 Alpha Arena Season 1 launched Oct 18 2025 — first live benchmark where frontier LLMs trade real capital on Hyperliquid crypto perpetuals ($10K each, identical prompts, public reasoning traces). Goal: measure autonomous alpha generation vs static evals.',
+      source: 'https://nof1.ai/blog/TechPost1',
+    },
+    'alpha-arena-s1-end': {
+      detail: 'Season 1 concluded Nov 3 2025. Qwen 3 Max +22.3%, DeepSeek +4.9%; four US models lost money. Grok 4 ~−45% (high leverage, long holds) — fifth of six. Highlighted gap between crypto volatility skills (China models) and US frontier LLMs in adversarial markets.',
+      source: 'https://www.gncrypto.news/news/qwen-wins-alpha-arena-season-1-with-22-percent-returns/',
+    },
+    'alpha-arena-s15': {
+      detail: 'Alpha Arena Season 1.5 opened Nov 19 2025 on US stocks — sequel after crypto season. Eight models (added Kimi K2, Grok 4.20) trade TSLA, NVDA, MSFT, AMZN, NDX with four parallel competition modes and $10K capital per mode.',
+      source: 'https://www.weex.com/news/detail/ai-crypto-trading-competition-sequel-strikes-back-switching-to-the-us-stock-market-arena-can-the-american-model-turn-the-tide-234409',
+    },
+    'alpha-arena-s15-win': {
+      detail: 'Grok 4.20 (Mystery Model) won Season 1.5 with +12.11% aggregate over two weeks (~$4,844 profit) — only entrant profitable across all four modes. Beat GPT-5.1 and Gemini 3; Qwen (crypto winner) fell to sixth. Competition ended Dec 3 2025.',
+      source: 'https://www.gncrypto.news/news/mystery-model-alpha-arena-season-1-5-winner/',
+    },
+    'rallies-arena-start': {
+      detail: 'Rallies.ai AI Arena opened ~Nov 27 2025 — open financial benchmark where eight LLMs (Grok 4, GPT-5.x, Claude, Gemini, DeepSeek, Qwen, etc.) each received $100,000 to trade US equities autonomously with published trade logic.',
+      source: 'https://rallies.ai/arena',
+    },
+    'rallies-arena-lead': {
+      detail: 'Jan 2026 Rallies leaderboard: Grok 4 leading ~+8.2% (~$8,891 profit on $100K) vs S&P 500 ~+3% same period. DeepSeek ~+5.8%, GPT-5.1 ~+3.9%; Qwen 3 down ~−21%. Grok used concentrated CRM/MU/QCOM themes around AI infrastructure momentum.',
+      source: 'https://paretoinvestor.substack.com/p/grok-is-crushing-the-s-and-p-500',
+    },
+    'cashtags-preview': {
+      detail: 'Nikita Bier unveiled Cashtags Jan 2026 — dollar-sign tickers and contract addresses surface live price charts plus asset-specific posts inside X, positioning the timeline as a real-time financial data layer.',
+      source: 'https://finance.yahoo.com/markets/stocks/articles/elon-musks-x-launches-cashtags-150207451.html',
+    },
+    'cashtags-launch': {
+      detail: 'Cashtags shipped Apr 14 2026 on iPhone for US and Canada — tap $TSLA, $BTC, or paste a token contract to open charts and related posts without leaving X. Wealthsimple trading button pilot for Canadian users.',
+      source: 'https://thedefiant.io/news/tradfi-and-fintech/x-rolls-out-cashtags-with-price-charts-pilots-in-app-trading-via-wealthsimple',
+    },
+    'cashtags-web': {
+      detail: 'Cashtags expanded to web Apr 30 2026 — desktop traders get the same real-time chart + sentiment view previously mobile-only. Reports cited ~$1B trading volume in first two days of iPhone launch week.',
+      source: 'https://startupfortune.com/x-just-brought-the-trading-terminal-into-your-social-feed/',
     },
     'xai-merge': {
       detail: 'SpaceX acquires xAI Feb 2026 — reported ~$1.25T combined valuation pre-IPO; merges Grok, Colossus, and launch ops under SPCX.',
