@@ -11,56 +11,19 @@
   const GROK_SOURCE =
     'https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748';
 
-  const QUICK_PATHS = [
-    {
-      id: 'browse',
-      label: 'Browse profiles',
-      blurb: 'Ranked list with wealth breakdown, entities, and journey timelines.',
-      hash: '#forbes',
-      cmd: null,
-    },
-    {
-      id: 'ventures',
-      label: 'Venture gitgraph',
-      blurb: 'Elon portfolio + Colossus/Grok/IPO lanes with drill-down sources.',
-      hash: '#timeline',
-      cmd: null,
-    },
-    {
-      id: 'top10',
-      label: 'Top 10',
-      blurb: 'Jump to Forbes ranks 1–10.',
-      hash: '#forbes?rank=1&name=Elon%20Musk',
-      cmd: null,
-    },
-    {
-      id: 'enriched',
-      label: 'Enriched stakes',
-      blurb: 'Profiles with stake-level wealthBreakdown (Musk, Page, Brin, Bezos, Ellison, Zuckerberg).',
-      hash: '#configurator',
-      cmd: null,
-      onSelect: () => {
-        state.enrichedOnly = true;
-        const cb = $('#filter-enriched');
-        if (cb) cb.checked = true;
-        refreshExportPanels();
-      },
-    },
-    {
-      id: 'local',
-      label: 'Run locally',
-      blurb: 'Static server — no build step.',
-      hash: null,
-      cmd: `git clone ${REPO_BASE}.git\ncd forbes-wealth-journeys\npython -m http.server 8080\n# open http://localhost:8080/#forbes`,
-    },
-    {
-      id: 'dataset',
-      label: 'Edit dataset',
-      blurb: 'Append or import Grok JSON exports.',
-      hash: null,
-      cmd: `# import full Grok export\npython scripts/import_grok_forbes.py grok-export.json\n\n# migrate v1 → v2 schema\npython scripts/migrate_forbes_v2.py`,
-    },
+  const MEMBER_TABS = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'timeline', label: 'Timeline' },
+    { id: 'portfolio', label: 'Portfolio' },
+    { id: 'entities', label: 'Entities' },
+    { id: 'export', label: 'Export JSON' },
+    { id: 'links', label: 'Links' },
   ];
+
+  const memberState = {
+    profile: null,
+    tab: 'overview',
+  };
 
   const SECTORS = [
     'Technology',
@@ -128,6 +91,25 @@
   }
 
   function pickFields(entry) {
+    return {
+      rank: entry.rank,
+      name: entry.name,
+      netWorth: entry.netWorth,
+      age: entry.age,
+      country: entry.country,
+      sector: entry.sector,
+      summary: entry.summary,
+      grokipediaLink: entry.grokipediaLink,
+      forbesProfile: entry.forbesProfile,
+      wikipediaLink: entry.wikipediaLink,
+      firstFortuneDecade: entry.firstFortuneDecade,
+      wealthBreakdown: entry.wealthBreakdown || [],
+      entities: entry.entities || [],
+      timeline: entry.timeline || [],
+    };
+  }
+
+  function pickFieldsFiltered(entry) {
     const out = { rank: entry.rank, name: entry.name };
     if (state.fields.has('profile')) {
       Object.assign(out, {
@@ -149,7 +131,7 @@
   }
 
   function buildExportJson() {
-    return JSON.stringify(filterDataset().map(pickFields), null, 2);
+    return JSON.stringify(filterDataset().map(pickFieldsFiltered), null, 2);
   }
 
   function buildExportCsv() {
@@ -250,47 +232,242 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     URL.revokeObjectURL(a.href);
   }
 
-  function initQuickStart() {
-    const grid = $('#quick-templates');
-    const output = $('#quick-cmd');
-    const copyBtn = $('#copy-quick-cmd');
-    if (!grid || !output) return;
-
-    let active = QUICK_PATHS[0];
-
-    function renderOutput() {
-      if (active.cmd) {
-        output.textContent = active.cmd;
-      } else if (active.hash) {
-        output.textContent = `${PAGES_URL}${active.hash}\n\n${active.blurb}`;
-      } else {
-        output.textContent = active.blurb;
-      }
+  function formatNetWorth(profile) {
+    const nw = profile?.netWorth;
+    if (nw && typeof nw === 'object' && nw.value != null) {
+      return `$${nw.value}${nw.unit || 'B'}`;
     }
+    return '—';
+  }
 
-    grid.innerHTML = QUICK_PATHS.map(
-      (p) =>
-        `<button type="button" class="quick-btn${p.id === active.id ? ' active' : ''}" data-id="${p.id}">${escapeHtml(p.label)}</button>`,
+  function findProfileByRank(rank) {
+    return dataset.find((p) => p.rank === rank);
+  }
+
+  function selectMemberProfile(profile, { syncForbes = true } = {}) {
+    if (!profile) return;
+    memberState.profile = profile;
+    renderMemberHeader(profile);
+    renderMemberPanel(profile, memberState.tab);
+    updateMemberNavButtons(profile);
+
+    if (syncForbes) {
+      const hash = `#forbes?rank=${profile.rank}&name=${encodeURIComponent(profile.name)}`;
+      if (window.location.hash !== hash) {
+        history.replaceState(null, '', hash);
+      }
+      window.dispatchEvent(new CustomEvent('forbes:select', { detail: { person: profile } }));
+    }
+  }
+
+  function renderMemberHeader(profile) {
+    const nameEl = $('#member-details-name');
+    const metaEl = $('#member-details-meta');
+    if (!profile) {
+      if (nameEl) nameEl.textContent = 'Select a profile';
+      if (metaEl) metaEl.textContent = '';
+      return;
+    }
+    if (nameEl) nameEl.textContent = profile.name;
+    if (metaEl) {
+      const milestones = (profile.timeline || []).length;
+      const enriched = isEnriched(profile) ? ' · stake breakdown' : '';
+      metaEl.textContent = `Forbes #${profile.rank} · ${formatNetWorth(profile)} · ${profile.sector || '—'} · ${profile.country || '—'} · ${milestones} milestones${enriched}`;
+    }
+  }
+
+  function renderOverviewPanel(profile) {
+    return `
+      <dl class="member-facts">
+        <div><dt>Rank</dt><dd>#${profile.rank}</dd></div>
+        <div><dt>Net worth</dt><dd>${escapeHtml(formatNetWorth(profile))}</dd></div>
+        <div><dt>Age</dt><dd>${escapeHtml(profile.age ?? '—')}</dd></div>
+        <div><dt>Country</dt><dd>${escapeHtml(profile.country || '—')}</dd></div>
+        <div><dt>Sector</dt><dd>${escapeHtml(profile.sector || '—')}</dd></div>
+        <div><dt>First fortune</dt><dd>${escapeHtml(profile.firstFortuneDecade || '—')}</dd></div>
+      </dl>
+      <p class="member-summary">${escapeHtml(profile.summary || 'No summary yet.')}</p>`;
+  }
+
+  function renderTimelinePanel(profile) {
+    const events = profile.timeline || [];
+    if (!events.length) {
+      return '<p class="member-empty">No timeline milestones in profile data.</p>';
+    }
+    return `
+      <ol class="member-detail-list">
+        ${events.map((ev) => `
+          <li>
+            <strong>${escapeHtml(ev.year)} · ${escapeHtml(ev.title)}</strong>
+            ${ev.type ? `<span>${escapeHtml(ev.type)}</span>` : ''}
+            ${ev.entityId ? ` · <code>${escapeHtml(ev.entityId)}</code>` : ''}
+            ${ev.valuationUsdB != null ? ` · $${ev.valuationUsdB}B` : ''}
+          </li>`).join('')}
+      </ol>`;
+  }
+
+  function renderPortfolioPanel(profile) {
+    const rows = profile.wealthBreakdown || [];
+    if (!rows.length) {
+      return '<p class="member-empty">No stake-level wealth breakdown yet.</p>';
+    }
+    return `
+      <table class="member-detail-table">
+        <thead><tr><th>Entity</th><th>Type</th><th>Stake</th><th>Value</th></tr></thead>
+        <tbody>
+          ${rows.map((r) => `
+            <tr>
+              <td>${escapeHtml(r.entity)}${r.ticker ? ` (${escapeHtml(r.ticker)})` : ''}</td>
+              <td>${escapeHtml(r.type || '—')}</td>
+              <td>${r.stakePct != null ? `${r.stakePct}%` : '—'}</td>
+              <td>${r.valueUsdB != null ? `$${r.valueUsdB}B` : '—'}</td>
+            </tr>`).join('')}
+        </tbody>
+      </table>`;
+  }
+
+  function renderEntitiesPanel(profile) {
+    const entities = profile.entities || [];
+    if (!entities.length) {
+      return '<p class="member-empty">No linked entities yet.</p>';
+    }
+    return `
+      <ul class="member-detail-list">
+        ${entities.map((e) => `
+          <li>
+            <strong>${escapeHtml(e.name || e.id)}</strong>
+            ${escapeHtml(e.role || '—')}${e.founded ? ` · ${e.founded}` : ''} · ${escapeHtml(e.status || '—')}
+            ${e.ticker ? ` · ${escapeHtml(e.ticker)}` : ''}
+          </li>`).join('')}
+      </ul>`;
+  }
+
+  function renderExportPanel(profile) {
+    const payload = pickFields(profile);
+    return `<pre class="code-block">${escapeHtml(JSON.stringify(payload, null, 2))}</pre>`;
+  }
+
+  function renderLinksPanel(profile) {
+    const links = [
+      ['Forbes profile', profile.forbesProfile],
+      ['Wikipedia', profile.wikipediaLink],
+      ['Grokipedia', profile.grokipediaLink],
+      ['Open in Forbes list', `#forbes?rank=${profile.rank}&name=${encodeURIComponent(profile.name)}`],
+      ['Venture timeline', '#timeline'],
+      ['Activity view', '#activity'],
+    ].filter(([, url]) => url);
+    return `
+      <ul class="member-link-list">
+        ${links.map(([label, url]) => {
+          const external = url.startsWith('http');
+          return `<li><a href="${escapeHtml(url)}"${external ? ' target="_blank" rel="noopener"' : ''}>${escapeHtml(label)}</a></li>`;
+        }).join('')}
+      </ul>`;
+  }
+
+  function memberPanelHtml(profile, tabId) {
+    switch (tabId) {
+      case 'overview': return renderOverviewPanel(profile);
+      case 'timeline': return renderTimelinePanel(profile);
+      case 'portfolio': return renderPortfolioPanel(profile);
+      case 'entities': return renderEntitiesPanel(profile);
+      case 'export': return renderExportPanel(profile);
+      case 'links': return renderLinksPanel(profile);
+      default: return '';
+    }
+  }
+
+  function memberCopyText(profile, tabId) {
+    if (!profile) return '';
+    if (tabId === 'export') return JSON.stringify(pickFields(profile), null, 2);
+    const panel = document.createElement('div');
+    panel.innerHTML = memberPanelHtml(profile, tabId);
+    return panel.textContent.trim();
+  }
+
+  function renderMemberPanel(profile, tabId) {
+    const panel = $('#member-detail-panel');
+    if (!panel) return;
+    if (!profile) {
+      panel.innerHTML = '<p class="member-empty">Pick a billionaire from the Forbes list or use Prev/Next to browse ranks.</p>';
+      return;
+    }
+    panel.innerHTML = memberPanelHtml(profile, tabId);
+  }
+
+  function updateMemberNavButtons(profile) {
+    const prevBtn = $('#member-rank-prev');
+    const nextBtn = $('#member-rank-next');
+    if (!profile || !dataset.length) {
+      if (prevBtn) prevBtn.disabled = true;
+      if (nextBtn) nextBtn.disabled = true;
+      return;
+    }
+    if (prevBtn) prevBtn.disabled = profile.rank <= 1;
+    if (nextBtn) {
+      const maxRank = dataset.reduce((max, p) => Math.max(max, p.rank), 1);
+      nextBtn.disabled = profile.rank >= maxRank;
+    }
+  }
+
+  function initMemberDetails() {
+    const grid = $('#quick-templates');
+    const copyBtn = $('#copy-quick-cmd');
+    if (!grid) return;
+
+    grid.innerHTML = MEMBER_TABS.map(
+      (tab) =>
+        `<button type="button" role="tab" class="quick-btn${tab.id === memberState.tab ? ' active' : ''}" data-tab="${tab.id}" aria-selected="${tab.id === memberState.tab}">${escapeHtml(tab.label)}</button>`,
     ).join('');
-
-    renderOutput();
 
     $$('.quick-btn', grid).forEach((btn) => {
       btn.addEventListener('click', () => {
-        active = QUICK_PATHS.find((p) => p.id === btn.dataset.id) || active;
-        $$('.quick-btn', grid).forEach((b) =>
-          b.classList.toggle('active', b.dataset.id === active.id),
-        );
-        renderOutput();
-        if (active.onSelect) active.onSelect();
-        if (active.hash && !active.cmd) {
-          window.location.hash = active.hash.replace(/^#/, '');
-        }
+        memberState.tab = btn.dataset.tab || 'overview';
+        $$('.quick-btn', grid).forEach((b) => {
+          const active = b.dataset.tab === memberState.tab;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        renderMemberPanel(memberState.profile, memberState.tab);
       });
     });
 
+    $('#member-rank-prev')?.addEventListener('click', () => {
+      const profile = memberState.profile;
+      if (!profile || profile.rank <= 1) return;
+      const prev = findProfileByRank(profile.rank - 1);
+      if (prev) selectMemberProfile(prev);
+    });
+
+    $('#member-rank-next')?.addEventListener('click', () => {
+      const profile = memberState.profile;
+      if (!profile) return;
+      const next = findProfileByRank(profile.rank + 1);
+      if (next) selectMemberProfile(next);
+    });
+
     if (copyBtn) {
-      copyBtn.addEventListener('click', () => copyText(output.textContent, copyBtn));
+      copyBtn.addEventListener('click', () => {
+        const text = memberCopyText(memberState.profile, memberState.tab);
+        if (text) copyText(text, copyBtn);
+      });
+    }
+
+    window.addEventListener('forbes:select', (e) => {
+      const person = e.detail?.person;
+      if (!person || person.rank === memberState.profile?.rank) return;
+      memberState.profile = person;
+      renderMemberHeader(person);
+      renderMemberPanel(person, memberState.tab);
+      updateMemberNavButtons(person);
+    });
+
+    if (dataset.length) {
+      selectMemberProfile(dataset[0], { syncForbes: false });
+    } else {
+      renderMemberHeader(null);
+      renderMemberPanel(null, memberState.tab);
+      updateMemberNavButtons(null);
     }
   }
 
@@ -450,14 +627,16 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
   }
 
   async function initWealthDataTools() {
-    initQuickStart();
     try {
       const resp = await fetch(DATA_URL);
-      if (resp.ok) dataset = await resp.json();
+      if (resp.ok) {
+        dataset = await resp.json();
+        dataset.sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name));
+      }
     } catch {
       dataset = [];
     }
-    initConfigurator();
+    initMemberDetails();
   }
 
   if (document.readyState === 'loading') {

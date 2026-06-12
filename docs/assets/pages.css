@@ -279,6 +279,131 @@ main {
   gap: 1.25rem;
 }
 
+.activity-ranks-section {
+  margin-bottom: 1.75rem;
+}
+
+.activity-ranks-lead {
+  margin: -0.35rem 0 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  max-width: 42rem;
+}
+
+.activity-ranks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 0.75rem;
+}
+
+.activity-ranks-loading,
+.activity-ranks-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.activity-rank-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.activity-rank-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.activity-rank-card.is-active {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 1px var(--accent-dim);
+}
+
+.activity-rank-card.is-profile-match {
+  border-color: #b45309;
+  box-shadow: 0 0 0 1px rgba(180, 83, 9, 0.12);
+}
+
+.activity-rank-card-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.activity-rank-num {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-rank-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity-rank-placeholder {
+  display: grid;
+  grid-template-columns: repeat(53, minmax(0, 1fr));
+  gap: 1px;
+  height: 26px;
+  padding: 2px;
+  border-radius: 4px;
+  background: var(--bg);
+}
+
+.activity-rank-cell {
+  min-width: 0;
+  border-radius: 1px;
+  background: color-mix(in srgb, var(--border) 55%, transparent);
+}
+
+.activity-rank-cell[data-level="1"] {
+  background: color-mix(in srgb, var(--branch-grok) 35%, var(--bg));
+}
+
+.activity-rank-cell[data-level="2"] {
+  background: color-mix(in srgb, var(--branch-grok) 55%, var(--bg));
+}
+
+.activity-rank-cell[data-level="3"] {
+  background: color-mix(in srgb, var(--branch-colossus) 50%, var(--bg));
+}
+
+.activity-rank-cell[data-level="4"] {
+  background: color-mix(in srgb, var(--branch-tesla) 55%, var(--bg));
+}
+
+.activity-rank-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-size: 0.625rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.activity-rank-meta span:last-child {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
 /* Per-company collapsible activity blocks */
 .activity-branches {
   display: flex;
@@ -675,6 +800,36 @@ main {
 /* Timeline + vertical gitgraph */
 .timeline-section {
   padding-top: 0.5rem;
+}
+
+.timeline-profile-context {
+  margin: 0 0 1rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  background: rgba(180, 83, 9, 0.08);
+  border: 1px solid rgba(180, 83, 9, 0.35);
+  border-radius: var(--radius-sm);
+}
+
+.timeline-profile-context strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.timeline-ranks-section {
+  margin-bottom: 1.25rem;
+}
+
+.timeline-ranks-lead {
+  margin: -0.35rem 0 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  max-width: 42rem;
+}
+
+.timeline-profile-shell {
+  margin-bottom: 0.5rem;
 }
 
 /* Major section tabs */
@@ -1468,6 +1623,180 @@ main {
 
 #copy-quick-cmd { margin-top: 0.25rem; }
 
+.member-details-section {
+  --member-accent: #b45309;
+  --member-accent-dim: rgba(180, 83, 9, 0.08);
+  --member-accent-border: rgba(180, 83, 9, 0.35);
+}
+
+.member-details-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-details-title-wrap {
+  min-width: 0;
+}
+
+.member-details-header h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.member-details-meta {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.member-details-nav {
+  display: flex;
+  gap: 0.375rem;
+  flex-shrink: 0;
+}
+
+.member-rank-nav {
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.member-rank-nav:hover:not(:disabled) {
+  border-color: var(--member-accent-border);
+  color: var(--member-accent);
+  background: var(--member-accent-dim);
+}
+
+.member-rank-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.member-detail-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.125rem;
+  margin: 0 0 0.875rem;
+  min-height: 12rem;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.member-detail-panel .code-block {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-height: none;
+}
+
+.member-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.75rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.member-facts div {
+  margin: 0;
+}
+
+.member-facts dt {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.15rem;
+}
+
+.member-facts dd {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.member-summary {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.member-detail-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member-detail-list li {
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8125rem;
+}
+
+.member-detail-list li:last-child {
+  border-bottom: 0;
+}
+
+.member-detail-list strong {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.2rem;
+}
+
+.member-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+
+.member-detail-table th,
+.member-detail-table td {
+  padding: 0.5rem 0.625rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.member-detail-table th {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.member-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member-link-list a {
+  font-size: 0.875rem;
+  color: var(--member-accent);
+}
+
+.member-empty {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
 /* Configurator panel */
 .panel {
   background: var(--surface);
@@ -1752,6 +2081,10 @@ h3.subheading {
 @media (max-width: 720px) {
   main { padding: 1.5rem 1.25rem 3rem; }
   .activity-grid { grid-template-columns: 1fr; }
+  .activity-ranks {
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    gap: 0.5rem;
+  }
   .activity-group > summary,
   .activity-branch > summary {
     padding-left: 1rem;
@@ -1833,8 +2166,7 @@ h3.subheading {
 .forbes-search {
   display: block;
   width: 100%;
-  max-width: 420px;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -1851,22 +2183,117 @@ h3.subheading {
 }
 
 .forbes-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
-  gap: 1.25rem;
-  align-items: start;
+  position: relative;
+  display: block;
+}
+
+.forbes-list-drawer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.forbes-list-drawer.is-open {
+  pointer-events: auto;
+}
+
+.forbes-list-drawer-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 22rem);
+  max-width: calc(100% - 2rem);
+  height: 100%;
+  min-height: min(70vh, 640px);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateX(calc(-100% - 1.25rem));
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.forbes-list-drawer.is-open .forbes-list-drawer-panel {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.forbes-list-drawer-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.forbes-list-drawer-title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.forbes-drawer-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.forbes-drawer-close:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-raised);
+}
+
+.forbes-list-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.28s ease;
+}
+
+.forbes-list-drawer.is-open .forbes-list-backdrop {
+  opacity: 1;
+}
+
+body.forbes-drawer-open {
+  overflow: hidden;
 }
 
 .forbes-list {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 0.375rem;
-  max-height: min(70vh, 640px);
+  min-height: 0;
   overflow-y: auto;
   padding: 0.25rem;
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
 }
 
 .forbes-list-item {
@@ -1945,6 +2372,49 @@ h3.subheading {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--forbes-accent);
+}
+
+.forbes-rank-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0 0.375rem;
+  padding: 0.35rem 0.65rem 0.35rem 0.5rem;
+  border: 1px solid var(--forbes-accent-border);
+  border-radius: 999px;
+  background: var(--forbes-accent-dim);
+  color: var(--forbes-accent);
+  font: inherit;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.forbes-rank-picker:hover {
+  background: var(--surface-raised);
+  border-color: var(--forbes-accent);
+}
+
+.forbes-rank-picker:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--forbes-accent-dim);
+}
+
+.forbes-rank-picker-icon {
+  display: inline-flex;
+  font-size: 0.875rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.forbes-rank-picker-hint {
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-secondary);
 }
 
 .forbes-detail-name {
@@ -2296,10 +2766,122 @@ h3.subheading {
 }
 
 @media (max-width: 768px) {
-  .forbes-layout {
-    grid-template-columns: 1fr;
+  .forbes-list-drawer-panel {
+    width: min(100%, 20rem);
+    max-width: calc(100vw - 2.5rem);
+    min-height: min(75vh, 640px);
   }
-  .forbes-list {
-    max-height: 280px;
+  .market-symbol-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   }
+}
+
+/* Market crossover */
+.market-crossover-section {
+  --xc-bull: #16a34a;
+  --xc-bear: #dc2626;
+  --xc-accent: #2563eb;
+  --xc-gold: #b45309;
+}
+
+.market-panel { margin-top: 0.5rem; }
+.market-filter-grid { margin-bottom: 1rem; }
+.market-wizard-step { display: none; }
+.market-wizard-step.active { display: block; }
+
+.market-rank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.market-rank-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.market-rank-chip.active {
+  border-color: var(--xc-gold);
+  background: rgba(180, 83, 9, 0.08);
+}
+
+.market-rank-chip-num { font-size: 0.6875rem; font-weight: 600; color: var(--xc-gold); }
+.market-rank-chip-name { font-size: 0.8125rem; font-weight: 600; }
+.market-rank-chip-meta { font-size: 0.625rem; color: var(--text-muted); }
+
+.market-symbol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.625rem;
+}
+
+.market-symbol-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.market-symbol-card.has-market { border-top: 3px solid var(--xc-accent); }
+.market-symbol-card.active { border-color: var(--xc-accent); }
+
+.market-symbol-ticker {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  font-family: var(--mono);
+}
+
+.market-pill {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.market-pill[data-kind="bull"] { color: var(--xc-bull); border-color: rgba(22, 163, 74, 0.35); background: rgba(22, 163, 74, 0.08); }
+.market-pill[data-kind="bear"] { color: var(--xc-bear); border-color: rgba(220, 38, 38, 0.35); background: rgba(220, 38, 38, 0.08); }
+
+.market-brief {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 1rem 1.125rem;
+}
+
+.market-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 1rem;
+}
+
+.market-brief-dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+}
+
+.market-rebuild-note {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }

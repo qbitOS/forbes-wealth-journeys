@@ -19,10 +19,10 @@
       </div>
       <nav class="site-nav" aria-label="Page sections">
         <a href="#forbes" data-section="forbes">Forbes</a>
-        <a href="#quick-start" data-section="quick-start">Quick start</a>
+        <a href="#quick-start" data-section="quick-start">Details</a>
         <a href="#timeline" data-section="timeline">Ventures</a>
         <a href="#activity" data-section="activity">Activity</a>
-        <a href="#configurator" data-section="configurator">Data export</a>
+        <a href="#configurator" data-section="configurator">Markets</a>
         <a href="https://github.com/qbitOS/forbes-wealth-journeys" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -42,11 +42,20 @@
         <a href="https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748" target="_blank" rel="noopener">Grok Forbes 500 thread</a>
         · 100 profiles in <code>data/forbes-billionaires.json</code>
       </p>
-      <label class="forbes-search-label" for="forbes-search">Search by name, country, or sector</label>
-      <input id="forbes-search" class="forbes-search" type="search" placeholder="e.g. Musk, France, Technology…" autocomplete="off" spellcheck="false" />
       <div id="forbes-wealth" class="forbes-layout">
-        <aside id="forbes-list" class="forbes-list" aria-label="Forbes billionaire rankings"></aside>
         <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile"></article>
+        <div id="forbes-list-drawer" class="forbes-list-drawer" aria-hidden="true">
+          <div class="forbes-list-drawer-panel" role="dialog" aria-modal="true" aria-label="Forbes billionaire rankings">
+            <header class="forbes-list-drawer-head">
+              <h3 class="forbes-list-drawer-title">Rankings</h3>
+              <button type="button" id="forbes-drawer-close" class="forbes-drawer-close" aria-label="Close rankings">×</button>
+            </header>
+            <label class="forbes-search-label" for="forbes-search">Search by name, country, or sector</label>
+            <input id="forbes-search" class="forbes-search" type="search" placeholder="e.g. Musk, France, Technology…" autocomplete="off" spellcheck="false" />
+            <aside id="forbes-list" class="forbes-list" aria-label="Forbes billionaire rankings"></aside>
+          </div>
+          <button type="button" class="forbes-list-backdrop" aria-label="Close rankings" tabindex="-1"></button>
+        </div>
       </div>
       <p class="timeline-disclaimer">
         Profiles sourced from public biographical records. Not financial advice. Expand the dataset in
@@ -54,15 +63,23 @@
       </p>
     </section>
 
-    <section id="quick-start" class="section wealth-tools-section">
-      <span class="section-label">Quick start</span>
-      <h2>Explore the data</h2>
-      <p class="section-lead">
-        Jump to a view, open a ranked profile, or copy commands to run locally and update
-        <code>data/forbes-billionaires.json</code>.
+    <section id="quick-start" class="section wealth-tools-section member-details-section">
+      <span class="section-label">Member details</span>
+      <header class="member-details-header">
+        <div class="member-details-title-wrap">
+          <h2 id="member-details-name">Select a profile</h2>
+          <p id="member-details-meta" class="member-details-meta" aria-live="polite"></p>
+        </div>
+        <div class="member-details-nav">
+          <button type="button" id="member-rank-prev" class="member-rank-nav" aria-label="Previous rank">← Prev</button>
+          <button type="button" id="member-rank-next" class="member-rank-nav" aria-label="Next rank">Next →</button>
+        </div>
+      </header>
+      <p class="section-lead" id="member-details-lead">
+        Tab through overview, timeline, portfolio, and entities for the selected Forbes rank — synced from the list above.
       </p>
-      <div id="quick-templates" class="quick-grid"></div>
-      <pre id="quick-cmd" class="code-block"></pre>
+      <div id="quick-templates" class="quick-grid" role="tablist" aria-label="Member detail sections"></div>
+      <div id="member-detail-panel" class="member-detail-panel" aria-live="polite"></div>
       <button id="copy-quick-cmd" type="button">Copy</button>
     </section>
 
@@ -72,7 +89,16 @@
       <p class="section-lead" id="timeline-lead">
         xAI cluster and IPO roadshow, plus Elon portfolio ventures — switch sections, then drill into a single company for expanded milestones. Dates are approximate (~) where sources differ.
       </p>
+      <p id="timeline-profile-context" class="timeline-profile-context" hidden aria-live="polite"></p>
+      <div class="timeline-ranks-section">
+        <p class="activity-overview-label">Ranked member timelines</p>
+        <p class="timeline-ranks-lead">Select a Forbes rank — rank #1 opens the full venture gitgraph; other profiles show milestone lanes from their profile data.</p>
+        <div id="timeline-ranks" class="activity-ranks timeline-ranks" aria-label="Timeline selectors by Forbes rank">
+          <p class="activity-ranks-loading">Loading ranked profiles…</p>
+        </div>
+      </div>
 
+      <div id="timeline-venture-shell">
       <div class="timeline-tabs" id="timeline-tabs">
         <div class="timeline-tab-nav">
           <button type="button" class="timeline-tab-arrow" id="timeline-tab-prev" aria-label="Previous timeline section" disabled>
@@ -106,6 +132,14 @@
             <div id="timeline-drilldown-portfolio" class="timeline-drilldown" hidden></div>
           </div>
         </div>
+      </div>
+      </div>
+
+      <div id="timeline-profile-shell" class="timeline-profile-shell" hidden>
+        <div class="timeline-company-pills" id="timeline-profile-pills" role="tablist" aria-label="Profile timeline lanes"></div>
+        <div class="timeline-legend" id="timeline-profile-legend" aria-label="Profile timeline branch legend"></div>
+        <div id="gitgraph-profile" class="gitgraph" data-lanes="1" role="img" aria-label="Profile wealth journey gitgraph"></div>
+        <div id="timeline-drilldown-profile" class="timeline-drilldown" hidden></div>
       </div>
 
       <p class="timeline-disclaimer">
@@ -145,96 +179,72 @@
           </article>
         </div>
       </div>
+      <div class="activity-ranks-section">
+        <p class="activity-overview-label">Ranked member activity</p>
+        <p class="activity-ranks-lead">One activity track per Forbes rank — intensity reflects milestone count until live cadence data is wired.</p>
+        <div id="activity-ranks" class="activity-ranks" aria-label="Activity placeholders by Forbes rank">
+          <p class="activity-ranks-loading">Loading ranked profiles…</p>
+        </div>
+      </div>
       <article id="activity-profile-events" class="activity-profile-events" hidden aria-label="Selected profile milestones"></article>
       <div id="activity-branches" class="activity-branches" aria-label="Per-company activity by timeline branch"></div>
     </section>
 
-    <section id="configurator" class="section wealth-tools-section" data-mode="wealth">
-      <span class="section-label">Data export</span>
-      <h2>Filter &amp; export</h2>
+    <section id="configurator" class="section market-crossover-section" data-mode="market">
+      <span class="section-label">Market crossover</span>
+      <h2>Ranked holdings · crossover signals</h2>
       <p class="section-lead">
-        Filter the billionaire dataset by sector, country, and rank — then export JSON, CSV summary,
-        manifest YAML, or llms.txt hints for agents.
+        Public-company stakes from Forbes profiles crossed with
+        <a href="https://fornevercollective.github.io/crossover/" target="_blank" rel="noopener">crossover</a>
+        flip-board data (MACD / Bollinger) from
+        <code>robinhood-agentic</code>.
       </p>
-      <p id="export-count" class="forbes-count" aria-live="polite"></p>
-      <div class="panel">
+      <p id="market-crossover-count" class="forbes-count" aria-live="polite"></p>
+      <p id="market-profile-context" class="timeline-profile-context" hidden aria-live="polite"></p>
+      <div class="panel market-panel">
         <div class="step-indicator">
-          <span class="step" data-step="1">1 · Filters</span>
-          <span class="step" data-step="2">2 · Fields</span>
-          <span class="step" data-step="3">3 · Preview</span>
+          <span class="step active" data-step="1">1 · Ranks</span>
+          <span class="step" data-step="2">2 · Companies</span>
+          <span class="step" data-step="3">3 · Signal</span>
           <span class="step" data-step="4">4 · Export</span>
         </div>
-        <div class="wizard-step active" data-step="1">
-          <div class="filter-grid">
-            <label class="filter-field">
-              <span>Sector</span>
-              <select id="filter-sector"></select>
-            </label>
-            <label class="filter-field">
-              <span>Country</span>
-              <select id="filter-country"></select>
-            </label>
-            <label class="filter-field">
-              <span>Rank min</span>
-              <input id="filter-rank-min" type="number" min="1" max="100" value="1" />
-            </label>
-            <label class="filter-field">
-              <span>Rank max</span>
-              <input id="filter-rank-max" type="number" min="1" max="100" value="100" />
-            </label>
-            <label class="filter-field filter-check">
-              <input id="filter-enriched" type="checkbox" />
-              <span>Stake-level breakdown only</span>
-            </label>
-          </div>
+        <div class="filter-grid market-filter-grid">
+          <label class="filter-field">
+            <span>Rank min</span>
+            <input id="market-rank-min" type="number" min="1" max="100" value="1" />
+          </label>
+          <label class="filter-field">
+            <span>Rank max</span>
+            <input id="market-rank-max" type="number" min="1" max="100" value="100" />
+          </label>
+          <label class="filter-field filter-check">
+            <input id="market-crossover-only" type="checkbox" />
+            <span>Crossover data only</span>
+          </label>
+          <label class="filter-field filter-check">
+            <input id="market-public-only" type="checkbox" />
+            <span>Public tickers only</span>
+          </label>
         </div>
-        <div class="wizard-step" data-step="2">
-          <div id="export-fields" class="option-grid"></div>
-        </div>
-        <div class="wizard-step" data-step="3">
-          <h3 class="subheading">Matching profiles</h3>
-          <div id="filter-preview" class="filter-preview"></div>
-        </div>
-        <div class="wizard-step" data-step="4">
-          <div class="tabs">
-            <button class="tab-btn active" data-tab="json" type="button">JSON</button>
-            <button class="tab-btn" data-tab="csv" type="button">CSV</button>
-            <button class="tab-btn" data-tab="yaml" type="button">YAML</button>
-            <button class="tab-btn" data-tab="llms" type="button">llms.txt</button>
+        <div class="market-wizard-step active" data-step="1" id="market-step-ranks"></div>
+        <div class="market-wizard-step" data-step="2" id="market-step-companies" hidden></div>
+        <div class="market-wizard-step" data-step="3" id="market-step-signal" hidden></div>
+        <div class="market-wizard-step" data-step="4" id="market-step-export" hidden>
+          <pre id="market-export-json" class="code-block"></pre>
+          <div class="copy-row">
+            <button id="market-copy-export" type="button">Copy JSON</button>
+            <button id="market-download-export" type="button">Download</button>
           </div>
-          <div id="panel-json" class="tab-panel active">
-            <pre id="out-json" class="code-block"></pre>
-            <div class="copy-row"><button data-copy="json" type="button">Copy</button></div>
-          </div>
-          <div id="panel-csv" class="tab-panel">
-            <pre id="out-csv" class="code-block"></pre>
-            <div class="copy-row"><button data-copy="csv" type="button">Copy</button></div>
-          </div>
-          <div id="panel-yaml" class="tab-panel">
-            <pre id="out-yaml" class="code-block"></pre>
-            <div class="copy-row"><button data-copy="yaml" type="button">Copy</button></div>
-          </div>
-          <div id="panel-llms" class="tab-panel">
-            <pre id="out-llms" class="code-block"></pre>
-            <div class="copy-row"><button data-copy="llms" type="button">Copy</button></div>
-          </div>
-          <div class="download-row">
-            <button id="btn-download-json" type="button">Download JSON</button>
-            <button id="btn-download-csv" type="button">Download CSV</button>
-            <button id="btn-download-yaml" type="button">Download YAML</button>
-          </div>
-          <div class="meta-box">
-            <h4>Dataset paths</h4>
-            <div class="filter-preview">
-              <a href="data/forbes-billionaires.json">data/forbes-billionaires.json</a>
-              <a href="https://github.com/qbitOS/forbes-wealth-journeys/tree/main/scripts">scripts/</a>
-              <a href="https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748" target="_blank" rel="noopener">Grok source thread</a>
-            </div>
-          </div>
+          <p class="market-rebuild-note">
+            Rebuild snapshot:
+            <code>python3 scripts/build_market_crossover.py</code>
+            · source:
+            <code>robinhood-agentic/data/flip-board/rows.json</code>
+          </p>
         </div>
         <div class="wizard-nav">
-          <button id="btn-prev" type="button" disabled>Previous</button>
-          <button id="btn-next" type="button">Next</button>
+          <button id="market-btn-prev" type="button" disabled>Previous</button>
+          <button id="market-btn-next" type="button">Next</button>
         </div>
       </div>
     </section>
@@ -247,6 +257,7 @@
 
   <script src="docs/assets/forbes-wealth.js"></script>
   <script src="docs/assets/wealth-data-tools.js"></script>
+  <script src="docs/assets/market-crossover.js"></script>
   <script src="docs/assets/pages-configurator.js"></script>
 </body>
 </html>

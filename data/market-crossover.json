@@ -1,0 +1,2598 @@
+{
+  "generatedAt": "2026-06-12T04:29:54.108893+00:00",
+  "source": "/Volumes/qbitOS/00.dev/cursor/robinhood-agentic/data/flip-board/rows.json",
+  "crossoverStyle": "fornevercollective/crossover \u00b7 robinhood-agentic flip-board",
+  "asOf": "2026-06-10",
+  "summary": {
+    "ranks": 100,
+    "symbols": 43,
+    "withMarketData": 24
+  },
+  "ranks": [
+    {
+      "rank": 1,
+      "name": "Elon Musk",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 794.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "TSLA",
+          "entity": "Tesla",
+          "entityId": null,
+          "stakePct": 12.8,
+          "valueUsdB": 120,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "TSLA",
+            "name": "TSLA",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 381.59,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "below_lower",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_lower_breakdown",
+              "price": 381.5899963378906
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": -0.69,
+              "evPct": -0.521,
+              "winRate": 75.0,
+              "floor": 384.24,
+              "ceiling": 418.5,
+              "flipType": "bb_lower_breakdown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "Larry Page",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 292.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "GOOGL",
+          "entity": "Alphabet",
+          "entityId": null,
+          "stakePct": 6,
+          "valueUsdB": 280,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "GOOGL",
+            "name": "GOOGL",
+            "exchange": "US",
+            "sector": "Technology",
+            "close": 356.38,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 6,
+            "lastFlip": {
+              "date": "2026-06-04",
+              "type": "bb_lower_reentry",
+              "price": 372.19000244140625
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "long",
+              "pct": 0.28,
+              "evPct": 0.095,
+              "winRate": 33.3,
+              "floor": 358.21,
+              "ceiling": 373.25,
+              "flipType": "bb_lower_reentry"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "Sergey Brin",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 270,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "GOOGL",
+          "entity": "Alphabet",
+          "entityId": null,
+          "stakePct": 5.8,
+          "valueUsdB": 260,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "GOOGL",
+            "name": "GOOGL",
+            "exchange": "US",
+            "sector": "Technology",
+            "close": 356.38,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 6,
+            "lastFlip": {
+              "date": "2026-06-04",
+              "type": "bb_lower_reentry",
+              "price": 372.19000244140625
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "long",
+              "pct": 0.28,
+              "evPct": 0.095,
+              "winRate": 33.3,
+              "floor": 358.21,
+              "ceiling": 373.25,
+              "flipType": "bb_lower_reentry"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "Jeff Bezos",
+      "country": "United States",
+      "sector": "Retail / Technology",
+      "netWorth": {
+        "value": 251.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "AMZN",
+          "entity": "Amazon",
+          "entityId": null,
+          "stakePct": 9.5,
+          "valueUsdB": 220,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "AMZN",
+            "name": "AMZN",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 238.0,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "below_lower",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_lower_breakdown",
+              "price": 238.0
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 0.23,
+              "evPct": 0.173,
+              "winRate": 75.0,
+              "floor": 237.45,
+              "ceiling": 244.05,
+              "flipType": "bb_lower_breakdown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "Larry Ellison",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 230.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "ORCL",
+          "entity": "Oracle",
+          "entityId": null,
+          "stakePct": 42,
+          "valueUsdB": 220,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "ORCL",
+            "name": "ORCL",
+            "exchange": "US",
+            "sector": "Technology",
+            "close": 201.26,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_middle_bearish",
+              "price": 201.25999450683594
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 1.72,
+              "evPct": 0.574,
+              "winRate": 33.3,
+              "floor": 197.79,
+              "ceiling": 220.5,
+              "flipType": "bb_middle_bearish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "Michael Dell",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 224.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "DELL",
+          "entity": "Dell Technologies",
+          "entityId": null,
+          "stakePct": 52,
+          "valueUsdB": 110,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "DELL",
+            "name": "DELL",
+            "exchange": "US",
+            "sector": "Technology",
+            "close": 369.83,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "histogram_bearish",
+              "price": 369.8299865722656
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 3.45,
+              "evPct": 1.149,
+              "winRate": 33.3,
+              "floor": 357.07,
+              "ceiling": 407.74,
+              "flipType": "histogram_bearish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "Mark Zuckerberg",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 222,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "META",
+          "entity": "Meta",
+          "entityId": null,
+          "stakePct": 13.5,
+          "valueUsdB": 210,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "META",
+            "name": "META",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 570.98,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "below_lower",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_lower_breakdown",
+              "price": 570.97998046875
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "short",
+              "pct": -1.76,
+              "evPct": -1.317,
+              "winRate": 75.0,
+              "floor": 581.01,
+              "ceiling": 597.63,
+              "flipType": "bb_lower_breakdown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Jensen Huang",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 177.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "NVDA",
+          "entity": "Nvidia",
+          "entityId": null,
+          "stakePct": 3.5,
+          "valueUsdB": 170,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "NVDA",
+            "name": "NVDA",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 200.42,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "below_lower",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_lower_breakdown",
+              "price": 200.4199981689453
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 0.54,
+              "evPct": 0.404,
+              "winRate": 75.0,
+              "floor": 199.34,
+              "ceiling": 211.4,
+              "flipType": "bb_lower_breakdown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Bernard Arnault & family",
+      "country": "France",
+      "sector": "Luxury Goods",
+      "netWorth": {
+        "value": 152.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "MC.PA",
+          "entity": "LVMH",
+          "entityId": null,
+          "stakePct": 48,
+          "valueUsdB": 160,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "Warren Buffett",
+      "country": "United States",
+      "sector": "Finance",
+      "netWorth": {
+        "value": 143.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "BRK.A",
+          "entity": "Berkshire Hathaway",
+          "entityId": null,
+          "stakePct": 15.6,
+          "valueUsdB": 135,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "BRK.A",
+            "name": "BRK.A",
+            "exchange": "US",
+            "sector": "Manufacturing & Materials",
+            "close": null,
+            "asOf": null,
+            "macdBias": null,
+            "histogramBias": null,
+            "bbPosition": null,
+            "daysSinceFlip": null,
+            "lastFlip": null,
+            "weekMacdBias": null,
+            "potential": null
+          }
+        }
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "Amancio Ortega",
+      "country": "Spain",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 141.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "ITX.MC",
+          "entity": "Inditex",
+          "entityId": null,
+          "stakePct": 59,
+          "valueUsdB": 85,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "Rob Walton & family",
+      "country": "United States",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 139.2,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "WMT",
+          "entity": "Walmart",
+          "entityId": null,
+          "stakePct": 15,
+          "valueUsdB": 75,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "WMT",
+            "name": "WMT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 120.59,
+            "asOf": "2026-06-10",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "histogram_bullish",
+              "price": 120.58999633789062
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "long",
+              "pct": -0.07,
+              "evPct": -0.056,
+              "winRate": 75.0,
+              "floor": 118.0,
+              "ceiling": 120.5,
+              "flipType": "histogram_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "Jim Walton & family",
+      "country": "United States",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 136.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "WMT",
+          "entity": "Walmart",
+          "entityId": null,
+          "stakePct": 14,
+          "valueUsdB": 73,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "WMT",
+            "name": "WMT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 120.59,
+            "asOf": "2026-06-10",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "histogram_bullish",
+              "price": 120.58999633789062
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "long",
+              "pct": -0.07,
+              "evPct": -0.056,
+              "winRate": 75.0,
+              "floor": 118.0,
+              "ceiling": 120.5,
+              "flipType": "histogram_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "name": "Alice Walton",
+      "country": "United States",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 127.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "WMT",
+          "entity": "Walmart",
+          "entityId": null,
+          "stakePct": 13,
+          "valueUsdB": 72,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "WMT",
+            "name": "WMT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 120.59,
+            "asOf": "2026-06-10",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "histogram_bullish",
+              "price": 120.58999633789062
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "long",
+              "pct": -0.07,
+              "evPct": -0.056,
+              "winRate": 75.0,
+              "floor": 118.0,
+              "ceiling": 120.5,
+              "flipType": "histogram_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "Carlos Slim Helu & family",
+      "country": "Mexico",
+      "sector": "Telecom",
+      "netWorth": {
+        "value": 127.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "AMX",
+          "entity": "Am\u00e9rica M\u00f3vil",
+          "entityId": null,
+          "stakePct": 55,
+          "valueUsdB": 80,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "Steve Ballmer",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 125.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "MSFT",
+          "entity": "Microsoft",
+          "entityId": null,
+          "stakePct": 4,
+          "valueUsdB": 105,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "MSFT",
+            "name": "MSFT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 397.36,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 5,
+            "lastFlip": {
+              "date": "2026-06-05",
+              "type": "bb_middle_bearish",
+              "price": 416.6700134277344
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 1.95,
+              "evPct": 1.46,
+              "winRate": 75.0,
+              "floor": 408.56,
+              "ceiling": 429.47,
+              "flipType": "bb_middle_bearish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 17,
+      "name": "Michael Bloomberg",
+      "country": "United States",
+      "sector": "Media",
+      "netWorth": {
+        "value": 109.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 18,
+      "name": "Changpeng Zhao",
+      "country": "Canada",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 108.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 19,
+      "name": "Bill Gates",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 103.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "MSFT",
+          "entity": "Microsoft",
+          "entityId": null,
+          "stakePct": 1.3,
+          "valueUsdB": 110,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "MSFT",
+            "name": "MSFT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 397.36,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 5,
+            "lastFlip": {
+              "date": "2026-06-05",
+              "type": "bb_middle_bearish",
+              "price": 416.6700134277344
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 1.95,
+              "evPct": 1.46,
+              "winRate": 75.0,
+              "floor": 408.56,
+              "ceiling": 429.47,
+              "flipType": "bb_middle_bearish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "Thomas Peterffy",
+      "country": "United States",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 102.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 21,
+      "name": "Francoise Bettencourt Meyers & family",
+      "country": "France",
+      "sector": "Luxury Goods",
+      "netWorth": {
+        "value": 95.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "OR",
+          "entity": "L'Or\u00e9al",
+          "entityId": null,
+          "stakePct": 33,
+          "valueUsdB": 90,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "OR",
+            "name": "OR",
+            "exchange": "US",
+            "sector": "Manufacturing & Materials",
+            "close": 31.47,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "below_lower",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_lower_breakdown",
+              "price": 31.469999313354492
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "short",
+              "pct": -2.29,
+              "evPct": -0.858,
+              "winRate": 37.5,
+              "floor": 32.19,
+              "ceiling": 34.29,
+              "flipType": "bb_lower_breakdown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 22,
+      "name": "Giancarlo Devasini",
+      "country": "Italy",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 89.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 23,
+      "name": "Mukesh Ambani",
+      "country": "India",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 86.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "RELIANCE.NS",
+          "entity": "Reliance Industries",
+          "entityId": null,
+          "stakePct": 45,
+          "valueUsdB": 115,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 24,
+      "name": "Gautam Adani",
+      "country": "India",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 85.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 25,
+      "name": "Julia Koch & family",
+      "country": "United States",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 81.2,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 26,
+      "name": "Masayoshi Son",
+      "country": "Japan",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 76.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "9984.T",
+          "entity": "SoftBank",
+          "entityId": null,
+          "stakePct": 21,
+          "valueUsdB": 28,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 27,
+      "name": "Charles Koch & family",
+      "country": "United States",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 73.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 28,
+      "name": "Zhang Yiming",
+      "country": "China",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 69.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 29,
+      "name": "Tadashi Yanai & family",
+      "country": "Japan",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 68.2,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "9983.T",
+          "entity": "Fast Retailing",
+          "entityId": null,
+          "stakePct": 58,
+          "valueUsdB": 45,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 30,
+      "name": "Jeff Yass",
+      "country": "United States",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 67.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 31,
+      "name": "Germ\u00e1n Larrea Mota Velasco & family",
+      "country": "Mexico",
+      "sector": "Mining",
+      "netWorth": {
+        "value": 63.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "GMEXICOB.MX",
+          "entity": "Grupo M\u00e9xico",
+          "entityId": null,
+          "stakePct": 65,
+          "valueUsdB": 55,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 32,
+      "name": "Dieter Schwarz",
+      "country": "Germany",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 62.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 33,
+      "name": "Zhong Shanshan",
+      "country": "China",
+      "sector": "Beverages",
+      "netWorth": {
+        "value": 61.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "9633.HK",
+          "entity": "Nongfu Spring",
+          "entityId": null,
+          "stakePct": 68,
+          "valueUsdB": 95,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 34,
+      "name": "Robin Zeng",
+      "country": "China",
+      "sector": "Batteries",
+      "netWorth": {
+        "value": 61.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "300750.SZ",
+          "entity": "CATL",
+          "entityId": null,
+          "stakePct": 25,
+          "valueUsdB": 29,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 35,
+      "name": "Ken Griffin",
+      "country": "United States",
+      "sector": "Finance",
+      "netWorth": {
+        "value": 50.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 36,
+      "name": "Ma Huateng",
+      "country": "China",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 48.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "TCEHY",
+          "entity": "Tencent",
+          "entityId": null,
+          "stakePct": 8.5,
+          "valueUsdB": 50,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "TCEHY",
+            "name": "TCEHY",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 57.63,
+            "asOf": "2026-06-09",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-09",
+              "type": "bb_middle_bullish",
+              "price": 57.630001068115234
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "long",
+              "pct": 1.46,
+              "evPct": 1.093,
+              "winRate": 75.0,
+              "floor": 57.09,
+              "ceiling": 58.47,
+              "flipType": "bb_middle_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 37,
+      "name": "Li Ka-shing",
+      "country": "Hong Kong",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 48.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "0001.HK",
+          "entity": "CK Hutchison",
+          "entityId": null,
+          "stakePct": 30,
+          "valueUsdB": 38,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 38,
+      "name": "Giovanni Ferrero",
+      "country": "Italy",
+      "sector": "Food",
+      "netWorth": {
+        "value": 47.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 39,
+      "name": "Iris Fontbona & family",
+      "country": "Chile",
+      "sector": "Mining",
+      "netWorth": {
+        "value": 47.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "ANTO.L",
+          "entity": "Antofagasta",
+          "entityId": null,
+          "stakePct": 65,
+          "valueUsdB": 19,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "name": "Lukas Walton",
+      "country": "United States",
+      "sector": "Retail",
+      "netWorth": {
+        "value": 46.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "WMT",
+          "entity": "Walmart",
+          "entityId": null,
+          "stakePct": 2,
+          "valueUsdB": 19,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "WMT",
+            "name": "WMT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 120.59,
+            "asOf": "2026-06-10",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "histogram_bullish",
+              "price": 120.58999633789062
+            },
+            "weekMacdBias": "bearish",
+            "potential": {
+              "side": "long",
+              "pct": -0.07,
+              "evPct": -0.056,
+              "winRate": 75.0,
+              "floor": 118.0,
+              "ceiling": 120.5,
+              "flipType": "histogram_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "name": "Gianluigi Aponte",
+      "country": "Switzerland",
+      "sector": "Shipping",
+      "netWorth": {
+        "value": 45.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 41,
+      "name": "Rafaela Aponte-Diamant",
+      "country": "Switzerland",
+      "sector": "Logistics",
+      "netWorth": {
+        "value": 45.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 43,
+      "name": "Jacqueline Mars",
+      "country": "United States",
+      "sector": "Food",
+      "netWorth": {
+        "value": 45.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 43,
+      "name": "John Mars",
+      "country": "United States",
+      "sector": "Food",
+      "netWorth": {
+        "value": 45.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 45,
+      "name": "Mark Mateschitz",
+      "country": "Austria",
+      "sector": "Food & Beverage",
+      "netWorth": {
+        "value": 44.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 46,
+      "name": "Andrea Pignataro",
+      "country": "Italy",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 41.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 47,
+      "name": "Klaus-Michael Kuehne",
+      "country": "Germany",
+      "sector": "Logistics",
+      "netWorth": {
+        "value": 41.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "KNIN.SW",
+          "entity": "Kuehne + Nagel",
+          "entityId": null,
+          "stakePct": 53,
+          "valueUsdB": 31,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "name": "William Ding",
+      "country": "China",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 41.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "NTES",
+          "entity": "NetEase",
+          "entityId": null,
+          "stakePct": 45,
+          "valueUsdB": 19.5,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "NTES",
+            "name": "NTES",
+            "exchange": "US",
+            "sector": "China",
+            "close": 125.52,
+            "asOf": "2026-06-10",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "histogram_bullish",
+              "price": 125.5199966430664
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "long",
+              "pct": -3.57,
+              "evPct": -1.135,
+              "winRate": 31.8,
+              "floor": 119.1,
+              "ceiling": 121.04,
+              "flipType": "histogram_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "name": "Abigail Johnson",
+      "country": "United States",
+      "sector": "Finance",
+      "netWorth": {
+        "value": 40.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 50,
+      "name": "Stephen Schwarzman",
+      "country": "United States",
+      "sector": "Finance",
+      "netWorth": {
+        "value": 40.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "BX",
+          "entity": "Blackstone",
+          "entityId": null,
+          "stakePct": 23,
+          "valueUsdB": 20,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "BX",
+            "name": "BX",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 118.48,
+            "asOf": "2026-06-10",
+            "macdBias": "bullish",
+            "histogramBias": "bullish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 1,
+            "lastFlip": {
+              "date": "2026-06-09",
+              "type": "bb_middle_bullish",
+              "price": 120.29000091552734
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "long",
+              "pct": 1.6,
+              "evPct": 1.197,
+              "winRate": 75.0,
+              "floor": 115.16,
+              "ceiling": 122.21,
+              "flipType": "bb_middle_bullish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 51,
+      "name": "Eric Schmidt",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 39.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "GOOGL",
+          "entity": "Alphabet",
+          "entityId": null,
+          "stakePct": 0.5,
+          "valueUsdB": 20,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "GOOGL",
+            "name": "GOOGL",
+            "exchange": "US",
+            "sector": "Technology",
+            "close": 356.38,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 6,
+            "lastFlip": {
+              "date": "2026-06-04",
+              "type": "bb_lower_reentry",
+              "price": 372.19000244140625
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "long",
+              "pct": 0.28,
+              "evPct": 0.095,
+              "winRate": 33.3,
+              "floor": 358.21,
+              "ceiling": 373.25,
+              "flipType": "bb_lower_reentry"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "name": "Alain Wertheimer",
+      "country": "France",
+      "sector": "Luxury Goods",
+      "netWorth": {
+        "value": 39.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 52,
+      "name": "Gerard Wertheimer",
+      "country": "France",
+      "sector": "Luxury Goods",
+      "netWorth": {
+        "value": 39.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 54,
+      "name": "Jean-Louis van der Velde",
+      "country": "Netherlands",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 38.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 54,
+      "name": "Paolo Ardoino",
+      "country": "Italy",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 38.0,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 56,
+      "name": "Savitri Jindal & family",
+      "country": "India",
+      "sector": "Steel",
+      "netWorth": {
+        "value": 37.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 57,
+      "name": "Alexey Mordashov & family",
+      "country": "Russia",
+      "sector": "Metals & Mining",
+      "netWorth": {
+        "value": 36.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 58,
+      "name": "Jay Y. Lee",
+      "country": "South Korea",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 36.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 59,
+      "name": "Henry Samueli",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 36.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 60,
+      "name": "Miriam Adelson & family",
+      "country": "United States",
+      "sector": "Casinos",
+      "netWorth": {
+        "value": 35.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "LVS",
+          "entity": "Las Vegas Sands",
+          "entityId": null,
+          "stakePct": 52,
+          "valueUsdB": 42,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 61,
+      "name": "He Xiangjian & family",
+      "country": "China",
+      "sector": "Appliances",
+      "netWorth": {
+        "value": 34.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "000333.SZ",
+          "entity": "Midea Group",
+          "entityId": null,
+          "stakePct": 35,
+          "valueUsdB": 27,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 62,
+      "name": "Eyal Ofer",
+      "country": "Israel",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 33.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 63,
+      "name": "Len Blavatnik",
+      "country": "United States",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 32.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 64,
+      "name": "Idan Ofer",
+      "country": "Israel",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 32.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 65,
+      "name": "Aliko Dangote",
+      "country": "Nigeria",
+      "sector": "Manufacturing",
+      "netWorth": {
+        "value": 32.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 66,
+      "name": "Marilyn Simons & family",
+      "country": "United States",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 32.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 67,
+      "name": "Andreas von Bechtolsheim & family",
+      "country": "Germany",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 32.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "GOOGL",
+          "entity": "Google",
+          "entityId": "google",
+          "stakePct": null,
+          "valueUsdB": 2800,
+          "type": "private",
+          "source": "entities",
+          "market": {
+            "ticker": "GOOGL",
+            "name": "GOOGL",
+            "exchange": "US",
+            "sector": "Technology",
+            "close": 356.38,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 6,
+            "lastFlip": {
+              "date": "2026-06-04",
+              "type": "bb_lower_reentry",
+              "price": 372.19000244140625
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "long",
+              "pct": 0.28,
+              "evPct": 0.095,
+              "winRate": 33.3,
+              "floor": 358.21,
+              "ceiling": 373.25,
+              "flipType": "bb_lower_reentry"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 68,
+      "name": "Chen Tianshi",
+      "country": "China",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 31.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 69,
+      "name": "Lyndal Stephens Greth & family",
+      "country": "United States",
+      "sector": "Energy",
+      "netWorth": {
+        "value": 31.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 70,
+      "name": "Robert Pera",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 31.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 71,
+      "name": "Eduardo Saverin",
+      "country": "Brazil",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 31.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 72,
+      "name": "Lakshmi Mittal",
+      "country": "India",
+      "sector": "Steel",
+      "netWorth": {
+        "value": 31.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "MT",
+          "entity": "ArcelorMittal",
+          "entityId": null,
+          "stakePct": 38,
+          "valueUsdB": 19,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "MT",
+            "name": "MT",
+            "exchange": "US",
+            "sector": "Manufacturing & Materials",
+            "close": 63.81,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 1,
+            "lastFlip": {
+              "date": "2026-06-09",
+              "type": "bb_middle_bearish",
+              "price": 66.30999755859375
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 3.38,
+              "evPct": 1.267,
+              "winRate": 37.5,
+              "floor": 64.07,
+              "ceiling": 68.11,
+              "flipType": "bb_middle_bearish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 73,
+      "name": "MacKenzie Scott",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 31.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "AMZN",
+          "entity": "Amazon",
+          "entityId": null,
+          "stakePct": 4,
+          "valueUsdB": 24,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": {
+            "ticker": "AMZN",
+            "name": "AMZN",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 238.0,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "below_lower",
+            "daysSinceFlip": 0,
+            "lastFlip": {
+              "date": "2026-06-10",
+              "type": "bb_lower_breakdown",
+              "price": 238.0
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 0.23,
+              "evPct": 0.173,
+              "winRate": 75.0,
+              "floor": 237.45,
+              "ceiling": 244.05,
+              "flipType": "bb_lower_breakdown"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 74,
+      "name": "Elaine Marshall & family",
+      "country": "United States",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 30.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 75,
+      "name": "Thomas Frist Jr & family",
+      "country": "United States",
+      "sector": "Healthcare",
+      "netWorth": {
+        "value": 30.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "HCA",
+          "entity": "HCA Healthcare",
+          "entityId": null,
+          "stakePct": 20,
+          "valueUsdB": 30,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 76,
+      "name": "Pham Nhat Vuong",
+      "country": "Vietnam",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 30.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 77,
+      "name": "Michal Strnad",
+      "country": "Czech Republic",
+      "sector": "Manufacturing",
+      "netWorth": {
+        "value": 30.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 78,
+      "name": "Melinda French Gates",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 30.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 1,
+      "symbols": [
+        {
+          "ticker": "MSFT",
+          "entity": "Microsoft",
+          "entityId": "microsoft",
+          "stakePct": null,
+          "valueUsdB": 3400,
+          "type": "private",
+          "source": "entities",
+          "market": {
+            "ticker": "MSFT",
+            "name": "MSFT",
+            "exchange": "US",
+            "sector": "My First List",
+            "close": 397.36,
+            "asOf": "2026-06-10",
+            "macdBias": "bearish",
+            "histogramBias": "bearish",
+            "bbPosition": "inside",
+            "daysSinceFlip": 5,
+            "lastFlip": {
+              "date": "2026-06-05",
+              "type": "bb_middle_bearish",
+              "price": 416.6700134277344
+            },
+            "weekMacdBias": "bullish",
+            "potential": {
+              "side": "short",
+              "pct": 1.95,
+              "evPct": 1.46,
+              "winRate": 75.0,
+              "floor": 408.56,
+              "ceiling": 429.47,
+              "flipType": "bb_middle_bearish"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "rank": 79,
+      "name": "Vladimir Potanin",
+      "country": "Russia",
+      "sector": "Metals",
+      "netWorth": {
+        "value": 29.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "GMKN.ME",
+          "entity": "Norilsk Nickel",
+          "entityId": null,
+          "stakePct": 35,
+          "valueUsdB": 26,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 80,
+      "name": "Vagit Alekperov",
+      "country": "Russia",
+      "sector": "Energy",
+      "netWorth": {
+        "value": 29.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 81,
+      "name": "Wang Weixiu & family",
+      "country": "China",
+      "sector": "Manufacturing",
+      "netWorth": {
+        "value": 29.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 82,
+      "name": "Colin Huang",
+      "country": "China",
+      "sector": "E-commerce",
+      "netWorth": {
+        "value": 28.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "PDD",
+          "entity": "Pinduoduo",
+          "entityId": null,
+          "stakePct": 25,
+          "valueUsdB": 34,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 83,
+      "name": "Leonid Mikhelson & family",
+      "country": "Russia",
+      "sector": "Energy",
+      "netWorth": {
+        "value": 28.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "ANTO.L",
+          "entity": "Gas",
+          "entityId": "gas",
+          "stakePct": null,
+          "valueUsdB": null,
+          "type": "private",
+          "source": "entities",
+          "market": null
+        }
+      ]
+    },
+    {
+      "rank": 84,
+      "name": "Huang Shilin",
+      "country": "China",
+      "sector": "Energy",
+      "netWorth": {
+        "value": 28.1,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 85,
+      "name": "John Tu",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 27.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 86,
+      "name": "David Sun",
+      "country": "United States",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 27.9,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 87,
+      "name": "Peter Thiel",
+      "country": "United States",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 27.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 88,
+      "name": "Vinod Adani",
+      "country": "Cyprus",
+      "sector": "Diversified",
+      "netWorth": {
+        "value": 27.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 89,
+      "name": "Fran\u00e7ois Pinault & family",
+      "country": "France",
+      "sector": "Fashion & Retail",
+      "netWorth": {
+        "value": 27.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 90,
+      "name": "Zheng Shuliang & family",
+      "country": "China",
+      "sector": "Metals & Mining",
+      "netWorth": {
+        "value": 26.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 91,
+      "name": "Reinhold Wuerth & family",
+      "country": "Germany",
+      "sector": "Manufacturing",
+      "netWorth": {
+        "value": 26.6,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 92,
+      "name": "Jack Ma",
+      "country": "China",
+      "sector": "Technology",
+      "netWorth": {
+        "value": 26.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 93,
+      "name": "Cyrus Poonawalla",
+      "country": "India",
+      "sector": "Pharmaceuticals",
+      "netWorth": {
+        "value": 26.3,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 94,
+      "name": "Phil Knight & family",
+      "country": "United States",
+      "sector": "Fashion & Retail",
+      "netWorth": {
+        "value": 26.2,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 95,
+      "name": "Emmanuel Besnier",
+      "country": "France",
+      "sector": "Food & Beverage",
+      "netWorth": {
+        "value": 25.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 96,
+      "name": "Susanne Klatten",
+      "country": "Germany",
+      "sector": "Automotive",
+      "netWorth": {
+        "value": 25.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 97,
+      "name": "Israel Englander",
+      "country": "United States",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 25.8,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 98,
+      "name": "Suleiman Kerimov & family",
+      "country": "Russia",
+      "sector": "Finance & Investments",
+      "netWorth": {
+        "value": 25.7,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 99,
+      "name": "Vladimir Lisin",
+      "country": "Russia",
+      "sector": "Metals & Mining",
+      "netWorth": {
+        "value": 25.5,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 0,
+      "marketCount": 0,
+      "symbols": []
+    },
+    {
+      "rank": 100,
+      "name": "Dilip Shanghvi",
+      "country": "India",
+      "sector": "Pharmaceuticals",
+      "netWorth": {
+        "value": 25.4,
+        "unit": "B",
+        "currency": "USD",
+        "asOf": "2026-06-11"
+      },
+      "symbolCount": 1,
+      "marketCount": 0,
+      "symbols": [
+        {
+          "ticker": "SUNPHARMA.NS",
+          "entity": "Sun Pharma",
+          "entityId": null,
+          "stakePct": 42,
+          "valueUsdB": 33,
+          "type": "public",
+          "source": "wealthBreakdown",
+          "market": null
+        }
+      ]
+    }
+  ]
+}

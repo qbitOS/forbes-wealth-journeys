@@ -77,6 +77,14 @@ python3 scripts/merge_grok_enrichment.py data/grok-enrichment-7-20.json
 python3 scripts/build_entities.py
 ```
 
+[`market-crossover.json`](market-crossover.json) — Forbes rank holdings joined to crossover flip-board rows. Rebuild from local robinhood-agentic data:
+
+```bash
+python3 scripts/build_market_crossover.py
+# optional rows path:
+python3 scripts/build_market_crossover.py /path/to/robinhood-agentic/data/flip-board/rows.json
+```
+
 [`historical-net-worth.json`](historical-net-worth.json) — estimated net worth by year for all **100** Forbes ranks, keyed by rank (`"1"` … `"100"`). Loaded in the Story tab line chart:
 
 ```json

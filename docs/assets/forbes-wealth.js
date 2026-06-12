@@ -20,6 +20,7 @@
   let historyChart = null;
   let detailTab = 'story';
   let lastRenderedKey = '';
+  let listDrawerOpen = false;
 
   function $(sel, root = document) {
     return root.querySelector(sel);
@@ -131,6 +132,7 @@
         renderList(container);
         renderDetail($('#forbes-detail'));
         syncUrl();
+        setListDrawer(false);
       });
     });
   }
@@ -417,7 +419,17 @@
 
     container.innerHTML = `
       <header class="forbes-detail-header">
-        <p class="forbes-detail-rank">Forbes rank #${person.rank}</p>
+        <button
+          type="button"
+          class="forbes-rank-picker"
+          id="forbes-rank-picker"
+          aria-expanded="${listDrawerOpen ? 'true' : 'false'}"
+          aria-controls="forbes-list-drawer"
+        >
+          <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
+          <span>Forbes rank #${person.rank}</span>
+          <span class="forbes-rank-picker-hint">Browse all</span>
+        </button>
         <h3 class="forbes-detail-name">${escapeHtml(person.name)}</h3>
         <p class="forbes-detail-worth">${formatNetWorth(person.netWorth)}</p>
         <p class="forbes-detail-summary">${escapeHtml(person.summary || '')}</p>
@@ -468,6 +480,44 @@
     if (detailTab === 'story') {
       renderHistoryChart(person);
     }
+  }
+
+  function setListDrawer(open) {
+    listDrawerOpen = open;
+    const drawer = $('#forbes-list-drawer');
+    const picker = $('#forbes-rank-picker');
+    if (!drawer) return;
+
+    drawer.classList.toggle('is-open', open);
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (picker) picker.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('forbes-drawer-open', open);
+
+    if (open) {
+      requestAnimationFrame(() => $('#forbes-search')?.focus());
+    }
+  }
+
+  function bindListDrawer() {
+    const drawer = $('#forbes-list-drawer');
+    const detailEl = $('#forbes-detail');
+    if (!drawer || drawer.dataset.bound === 'true') return;
+    drawer.dataset.bound = 'true';
+
+    $('#forbes-drawer-close')?.addEventListener('click', () => setListDrawer(false));
+    drawer.querySelector('.forbes-list-backdrop')?.addEventListener('click', () => setListDrawer(false));
+
+    detailEl?.addEventListener('click', (e) => {
+      if (e.target.closest('#forbes-rank-picker')) setListDrawer(true);
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && listDrawerOpen) {
+        e.preventDefault();
+        setListDrawer(false);
+        $('#forbes-rank-picker')?.focus();
+      }
+    });
   }
 
   function syncUrl() {
@@ -573,6 +623,7 @@
 
     readSelectionFromUrl();
     applyFilter();
+    bindListDrawer();
     renderMeta(countEl);
     renderList(listEl);
     renderDetail(detailEl);

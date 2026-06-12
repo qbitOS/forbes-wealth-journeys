@@ -359,7 +359,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   }
 
   function init() {
-    if ($('#configurator')?.dataset.mode === 'wealth') return;
+    const cfg = $('#configurator');
+    if (cfg?.dataset.mode === 'wealth' || cfg?.dataset.mode === 'market') return;
     initQuickTemplates();
 
     const root = $('#configurator');
@@ -1042,9 +1043,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
-  function renderDrilldownList(events, branchId, container) {
+  function renderDrilldownList(events, branchId, container, accentColor) {
     if (!container) return;
-    const color = getBranchCssColor(branchId);
+    const color = accentColor || getBranchCssColor(branchId);
     container.hidden = false;
     container.innerHTML = `
       <header class="timeline-drilldown-header">
@@ -1081,10 +1082,12 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     initDrilldownDetailInteractions(container);
   }
 
-  function renderTimelineGitgraph({ branches, events, containerId, legendId, singleBranch }) {
+  function renderTimelineGitgraph({ branches, events, containerId, legendId, singleBranch, branchColorMap = {} }) {
     const container = document.getElementById(containerId);
     const legendEl = legendId ? document.getElementById(legendId) : null;
     if (!container) return;
+
+    const colorFor = (branchId) => branchColorMap[branchId] || getBranchCssColor(branchId);
 
     const activeBranches = singleBranch
       ? branches.filter((b) => b.id === singleBranch)
@@ -1098,7 +1101,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     if (legendEl) {
       legendEl.hidden = laneCount === 1;
       legendEl.innerHTML = activeBranches.map((b) =>
-        `<span class="legend-item"><span class="legend-swatch" style="background:${getBranchCssColor(b.id)}"></span>${b.label}</span>`
+        `<span class="legend-item"><span class="legend-swatch" style="background:${colorFor(b.id)}"></span>${b.label}</span>`
       ).join('');
     }
 
@@ -1114,6 +1117,11 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
     const inner = document.createElement('div');
     inner.className = 'gitgraph-inner';
+
+    if (!sortedRows.length) {
+      container.innerHTML = '<p class="forbes-empty">No milestones yet for this profile.</p>';
+      return;
+    }
 
     sortedRows.forEach((row, rowIdx) => {
       const rowEl = document.createElement('div');
@@ -1146,7 +1154,9 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
         const dot = document.createElement('div');
         dot.className = `gitgraph-dot branch-${ev.branch}${ev.merge ? ' is-merge' : ''}`;
-        if (ev.merge) dot.style.color = activeBranches.find((b) => b.id === ev.branch)?.color || '#525252';
+        const laneColor = colorFor(ev.branch);
+        if (laneColor) dot.style.background = laneColor;
+        if (ev.merge) dot.style.color = laneColor || activeBranches.find((b) => b.id === ev.branch)?.color || '#525252';
 
         const label = document.createElement('div');
         label.className = 'gitgraph-label';
@@ -1446,6 +1456,190 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     initTimelineTabs();
   }
 
+  const PROFILE_LANE_COLORS = [
+    '#2563eb', '#16a34a', '#d97706', '#7c3aed', '#dc2626', '#0891b2', '#78716c', '#b45309',
+  ];
+
+  let timelineProfileState = null;
+  let timelineProfileBranchFocus = 'all';
+  let timelineProfileModel = null;
+
+  function profileUsesVentureTimeline(profile) {
+    return profile?.rank === 1;
+  }
+
+  function buildProfileTimelineModel(profile) {
+    const timeline = profile?.timeline || [];
+    const entities = profile?.entities || [];
+    const entityMap = Object.fromEntries(entities.map((e) => [e.id, e.name]));
+    const branches = [];
+    const branchSeen = new Set();
+
+    const addBranch = (id, label) => {
+      if (branchSeen.has(id)) return;
+      branchSeen.add(id);
+      branches.push({
+        id,
+        label: label || id,
+        color: PROFILE_LANE_COLORS[branches.length % PROFILE_LANE_COLORS.length],
+      });
+    };
+
+    timeline.forEach((ev) => {
+      if (ev.entityId) addBranch(ev.entityId, entityMap[ev.entityId] || ev.entityId);
+    });
+    if (!branches.length) addBranch('journey', profile.sector || 'Wealth journey');
+
+    const events = timeline.map((ev, i) => {
+      const yearMatch = String(ev.year || '').match(/(\d{4})/);
+      const year = yearMatch ? yearMatch[1] : '0000';
+      const month = String((i % 12) + 1).padStart(2, '0');
+      const branch = ev.entityId || branches[0].id;
+      const detailParts = [];
+      if (ev.type) detailParts.push(ev.type);
+      if (ev.valuationUsdB != null) detailParts.push(`Valuation $${ev.valuationUsdB}B`);
+      if (ev.description) detailParts.push(ev.description);
+      return {
+        id: `${branch}-${i}`,
+        branch,
+        sort: `${year}-${month}`,
+        date: String(ev.year),
+        title: ev.title,
+        approx: String(ev.year).includes('s'),
+        detail: detailParts.join(' · ') || undefined,
+      };
+    }).sort((a, b) => a.sort.localeCompare(b.sort) || a.id.localeCompare(b.id));
+
+    return {
+      heading: `${profile.name} · wealth journey`,
+      lead: `${timeline.length} milestone${timeline.length === 1 ? '' : 's'} from profile data — ${profile.sector || 'sector'} · ${profile.country || 'global'}. Select a lane pill to drill down.`,
+      branches,
+      events,
+    };
+  }
+
+  function profileBranchColorMap(model) {
+    return Object.fromEntries((model?.branches || []).map((b) => [b.id, b.color]));
+  }
+
+  function updateTimelineProfileContext(profile) {
+    const el = document.getElementById('timeline-profile-context');
+    if (!el) return;
+    if (!profile) {
+      el.hidden = true;
+      el.textContent = '';
+      return;
+    }
+    const mode = profileUsesVentureTimeline(profile)
+      ? 'Full venture gitgraph (Colossus · portfolio lanes)'
+      : `${(profile.timeline || []).length} profile milestones`;
+    el.hidden = false;
+    el.innerHTML = `Timeline for <strong>${escapeHtml(profile.name)}</strong> · rank #${profile.rank} · ${escapeHtml(mode)}`;
+  }
+
+  function renderProfileTimelinePills(model) {
+    const root = document.getElementById('timeline-profile-pills');
+    if (!root || !model) return;
+
+    const focus = timelineProfileBranchFocus;
+    const allActive = focus === 'all';
+    const colorMap = profileBranchColorMap(model);
+
+    root.innerHTML = [
+      `<button type="button" role="tab" class="timeline-company-pill${allActive ? ' active' : ''}" data-branch="all" aria-selected="${allActive}" tabindex="${allActive ? 0 : -1}">All lanes</button>`,
+      ...model.branches.map((b) => {
+        const active = focus === b.id;
+        return `<button type="button" role="tab" class="timeline-company-pill${active ? ' active' : ''}" data-branch="${b.id}" aria-selected="${active}" tabindex="${active ? 0 : -1}" style="--pill-color:${colorMap[b.id]}">${escapeHtml(b.label)}</button>`;
+      }),
+    ].join('');
+
+    root.querySelectorAll('.timeline-company-pill').forEach((pill) => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        timelineProfileBranchFocus = pill.dataset.branch;
+        renderProfileTimelineView(timelineProfileState, timelineProfileModel);
+      });
+    });
+  }
+
+  function renderProfileTimelineView(profile, model) {
+    if (!profile || !model) return;
+    timelineProfileModel = model;
+    renderProfileTimelinePills(model);
+
+    const branchColorMap = profileBranchColorMap(model);
+    const focus = timelineProfileBranchFocus;
+    const drilldownEl = document.getElementById('timeline-drilldown-profile');
+    const gitgraphEl = document.getElementById('gitgraph-profile');
+
+    if (focus === 'all') {
+      if (drilldownEl) {
+        drilldownEl.hidden = true;
+        drilldownEl.innerHTML = '';
+      }
+      renderTimelineGitgraph({
+        branches: model.branches,
+        events: model.events,
+        containerId: 'gitgraph-profile',
+        legendId: 'timeline-profile-legend',
+        singleBranch: null,
+        branchColorMap,
+      });
+      if (gitgraphEl) gitgraphEl.hidden = false;
+      return;
+    }
+
+    const branchEvents = model.events.filter((ev) => ev.branch === focus);
+    renderTimelineGitgraph({
+      branches: model.branches,
+      events: branchEvents,
+      containerId: 'gitgraph-profile',
+      legendId: 'timeline-profile-legend',
+      singleBranch: focus,
+      branchColorMap,
+    });
+    if (gitgraphEl) gitgraphEl.hidden = false;
+    renderDrilldownList(branchEvents, focus, drilldownEl, branchColorMap[focus]);
+  }
+
+  function syncTimelineFromProfile(profile) {
+    timelineProfileState = profile || null;
+    highlightWealthRankCards(profile);
+    updateTimelineProfileContext(profile);
+
+    const ventureShell = document.getElementById('timeline-venture-shell');
+    const profileShell = document.getElementById('timeline-profile-shell');
+    const heading = document.getElementById('timeline-heading');
+    const lead = document.getElementById('timeline-lead');
+
+    if (!profile) {
+      if (ventureShell) ventureShell.hidden = false;
+      if (profileShell) profileShell.hidden = true;
+      const section = TIMELINE_SECTIONS[timelineState.tabIndex];
+      if (heading && section) heading.textContent = section.heading;
+      if (lead && section) lead.textContent = section.lead;
+      return;
+    }
+
+    const showVenture = profileUsesVentureTimeline(profile);
+    if (ventureShell) ventureShell.hidden = !showVenture;
+    if (profileShell) profileShell.hidden = showVenture;
+
+    if (showVenture) {
+      const section = TIMELINE_SECTIONS[timelineState.tabIndex];
+      if (heading) heading.textContent = section.heading;
+      if (lead) lead.textContent = section.lead;
+      renderTimelineSection(section);
+      return;
+    }
+
+    timelineProfileBranchFocus = 'all';
+    const model = buildProfileTimelineModel(profile);
+    if (heading) heading.textContent = model.heading;
+    if (lead) lead.textContent = model.lead;
+    renderProfileTimelineView(profile, model);
+  }
+
   const CHART = {
     bg: 'transparent',
     text: '#737373',
@@ -1736,6 +1930,119 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   let activityProfileState = null;
   let pendingActivityProfile = null;
+  let forbesProfiles = [];
+
+  function formatProfileNetWorth(profile) {
+    const nw = profile?.netWorth;
+    if (nw && typeof nw === 'object' && nw.value != null) {
+      return `$${nw.value}${nw.unit || 'B'}`;
+    }
+    return '—';
+  }
+
+  function placeholderCellsForProfile(profile, weeks = 53) {
+    const events = profile?.timeline || [];
+    const eventCount = events.length;
+    const rank = profile?.rank || 1;
+    const cells = [];
+    for (let w = 0; w < weeks; w += 1) {
+      if (!eventCount) {
+        cells.push(0);
+        continue;
+      }
+      const pulse = (rank * 17 + w * 13) % 53;
+      if (pulse >= eventCount + 8) {
+        cells.push(0);
+        continue;
+      }
+      cells.push(1 + ((rank + w + pulse) % 4));
+    }
+    return cells;
+  }
+
+  async function loadForbesProfiles() {
+    try {
+      const resp = await fetch('data/forbes-billionaires.json');
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const rows = await resp.json();
+      forbesProfiles = rows.sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name));
+      return forbesProfiles;
+    } catch {
+      forbesProfiles = [];
+      return [];
+    }
+  }
+
+  function highlightWealthRankCards(profile) {
+    document.querySelectorAll('.wealth-rank-card').forEach((card) => {
+      const active = profile && Number(card.dataset.rank) === profile.rank;
+      card.classList.toggle('is-active', Boolean(active));
+      card.classList.toggle('is-profile-match', Boolean(active));
+      card.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+  }
+
+  function renderWealthRankGrid(rootId, { scrollTargetId = 'forbes' } = {}) {
+    const root = document.getElementById(rootId);
+    if (!root) return;
+
+    if (!forbesProfiles.length) {
+      root.innerHTML = '<p class="activity-ranks-empty">Could not load ranked profiles.</p>';
+      return;
+    }
+
+    root.innerHTML = forbesProfiles.map((profile) => {
+      const cells = placeholderCellsForProfile(profile);
+      const milestones = (profile.timeline || []).length;
+      return `
+        <button
+          type="button"
+          class="activity-rank-card wealth-rank-card"
+          data-rank="${profile.rank}"
+          aria-pressed="false"
+          aria-label="Rank ${profile.rank}, ${escapeHtml(profile.name)}"
+        >
+          <span class="activity-rank-card-head">
+            <span class="activity-rank-num">#${profile.rank}</span>
+            <span class="activity-rank-name">${escapeHtml(profile.name)}</span>
+          </span>
+          <span class="activity-rank-placeholder" aria-hidden="true">
+            ${cells.map((level) => `<span class="activity-rank-cell" data-level="${level}"></span>`).join('')}
+          </span>
+          <span class="activity-rank-meta">
+            <span>${milestones} milestone${milestones === 1 ? '' : 's'}</span>
+            <span>${escapeHtml(formatProfileNetWorth(profile))}</span>
+          </span>
+        </button>`;
+    }).join('');
+
+    root.querySelectorAll('.wealth-rank-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        const rank = Number(card.dataset.rank);
+        const profile = forbesProfiles.find((p) => p.rank === rank);
+        if (!profile) return;
+        const hash = `#forbes?rank=${profile.rank}&name=${encodeURIComponent(profile.name)}`;
+        if (window.location.hash !== hash) {
+          history.replaceState(null, '', hash);
+        }
+        window.dispatchEvent(new CustomEvent('forbes:select', { detail: { person: profile } }));
+        document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    const activeProfile = rootId === 'activity-ranks' ? activityProfileState : timelineProfileState;
+    if (activeProfile) highlightWealthRankCards(activeProfile);
+  }
+
+  function renderActivityRankGrid(profiles) {
+    if (profiles?.length) forbesProfiles = profiles;
+    renderWealthRankGrid('activity-ranks', { scrollTargetId: 'forbes' });
+  }
+
+  function renderTimelineRankGrid(profiles) {
+    if (profiles?.length) forbesProfiles = profiles;
+    renderWealthRankGrid('timeline-ranks', { scrollTargetId: 'timeline' });
+  }
 
   function parseTimelineYears(timeline) {
     const years = new Set();
@@ -1901,6 +2208,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       updateActivityProfileContext(null, []);
       renderProfileTimelinePanel(null);
       clearProfileActivityHighlight();
+      highlightWealthRankCards(null);
       renderOverviewCalendar(activityYearState.calendar);
       renderOverviewPipeline(activityYearState.pipeline);
       return;
@@ -1916,6 +2224,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     updateActivityProfileContext(profile, branches);
     renderProfileTimelinePanel(profile);
     highlightActivityForProfile(branches);
+    highlightWealthRankCards(profile);
     renderOverviewCalendar(targetYear);
     renderOverviewPipeline(targetYear);
 
@@ -2325,11 +2634,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     sync();
   }
 
-  function boot() {
+  async function boot() {
     init();
     initTimelineGitgraph();
     renderActivityBranches();
     initActivityCharts();
+    await loadForbesProfiles();
+    renderActivityRankGrid(forbesProfiles);
+    renderTimelineRankGrid(forbesProfiles);
     activitySyncEnabled = true;
     const section = TIMELINE_SECTIONS[timelineState.tabIndex];
     if (section) {
@@ -2339,10 +2651,15 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     }
     if (pendingActivityProfile) {
       syncActivityFromProfile(pendingActivityProfile);
+      syncTimelineFromProfile(pendingActivityProfile);
       pendingActivityProfile = null;
+    } else if (forbesProfiles.length) {
+      syncTimelineFromProfile(forbesProfiles[0]);
     }
     window.addEventListener('forbes:select', (e) => {
-      syncActivityFromProfile(e.detail?.person || null);
+      const person = e.detail?.person || null;
+      syncActivityFromProfile(person);
+      syncTimelineFromProfile(person);
     });
     window.WealthActivity = { syncFromProfile: syncActivityFromProfile };
     initSiteNav();
