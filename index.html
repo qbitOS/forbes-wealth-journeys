@@ -6,7 +6,7 @@
   <title>Forbes Wealth Journeys · Billionaire Timelines</title>
   <meta name="description" content="Forbes billionaire wealth journeys mapped to venture milestones — interactive timelines, drill-downs, and source-linked events." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <link rel="stylesheet" href="docs/assets/pages.css?v=20260612g" />
+  <link rel="stylesheet" href="docs/assets/pages.css?v=20260612h" />
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -56,7 +56,7 @@
         </div>
         <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile">
           <p id="forbes-detail-empty" class="forbes-empty">Select a person from the rankings.</p>
-          <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="5" hidden>
+          <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="6" hidden>
             <header class="forbes-detail-header">
               <div class="forbes-detail-nav">
                 <button
@@ -96,6 +96,9 @@
               </aside>
             </div>
             <nav id="forbes-detail-links" class="forbes-links" aria-label="External profiles" hidden></nav>
+            <div id="forbes-grokipedia-bar" class="forbes-grokipedia-bar" hidden>
+              <a id="forbes-grokipedia-link" class="forbes-grokipedia-btn forbes-grokipedia-btn--bar" href="#" target="_blank" rel="noopener">Grokipedia profile →</a>
+            </div>
             <dl id="forbes-facts" class="forbes-facts"></dl>
 
             <div class="forbes-modal-tabs" role="tablist" aria-label="Profile sections">
@@ -356,7 +359,7 @@
     · forked from <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">grok-repo-template</a>
   </footer>
 
-  <script src="docs/assets/forbes-wealth.js?v=20260612f"></script>
+  <script src="docs/assets/forbes-wealth.js?v=20260612h"></script>
   <script src="docs/assets/crossover-mini-chart.js?v=20260611g"></script>
   <script src="docs/assets/wealth-data-tools.js?v=20260611g"></script>
   <script src="docs/assets/market-crossover.js?v=20260611g"></script>

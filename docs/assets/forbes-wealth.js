@@ -1381,43 +1381,82 @@
       backgroundColor: 'transparent',
       color: BREAKDOWN_COLORS,
       tooltip: {
-        trigger: 'axis',
-        axisPointer: { type: 'shadow' },
-        formatter: (params) =>
-          params
-            .filter((p) => p.value > 0)
-            .map((p) => `${p.seriesName}: $${p.value}B`)
-            .join('<br/>'),
+        trigger: 'item',
+        formatter: (p) => `${p.name}<br/>${formatUsdB(p.value)} (${p.percent}%)`,
       },
       legend: {
         type: 'scroll',
-        bottom: 0,
+        orient: 'vertical',
+        right: 0,
+        top: 'middle',
         textStyle: { color: '#737373', fontSize: 11 },
       },
-      grid: { left: 8, right: 16, top: 16, bottom: 48, containLabel: true },
-      xAxis: {
-        type: 'value',
-        name: '$B',
-        nameTextStyle: { color: '#737373', fontSize: 10 },
-        axisLabel: { color: '#737373', fontSize: 10 },
-        splitLine: { lineStyle: { color: 'rgba(0,0,0,0.06)' } },
-      },
-      yAxis: {
-        type: 'category',
-        data: ['Wealth composition'],
-        axisLabel: { color: '#737373', fontSize: 10 },
-        axisLine: { show: false },
-        axisTick: { show: false },
-      },
-      series: rows.map((row, i) => ({
-        name: row.ticker ? `${row.entity} (${row.ticker})` : row.entity,
-        type: 'bar',
-        stack: 'total',
-        barWidth: 36,
-        emphasis: { focus: 'series' },
-        data: [row.valueUsdB],
-        itemStyle: { color: BREAKDOWN_COLORS[i % BREAKDOWN_COLORS.length] },
-      })),
+      series: [
+        {
+          name: 'Wealth breakdown',
+          type: 'pie',
+          radius: ['42%', '68%'],
+          center: ['38%', '50%'],
+          avoidLabelOverlap: true,
+          itemStyle: {
+            borderRadius: 4,
+            borderColor: '#fff',
+            borderWidth: 2,
+          },
+          label: {
+            show: true,
+            formatter: '{b}\n{d}%',
+            fontSize: 10,
+            color: '#525252',
+          },
+          labelLine: { length: 8, length2: 6 },
+          data: rows.map((row) => ({
+            name: row.ticker ? `${row.entity} (${row.ticker})` : `${row.entity}${row.type ? ` · ${row.type}` : ''}`,
+            value: row.valueUsdB,
+          })),
+        },
+      ],
+    });
+  }
+
+  function renderGrokipediaBar(person) {
+    const bar = $('#forbes-grokipedia-bar');
+    const link = $('#forbes-grokipedia-link');
+    if (!bar || !link) return;
+
+    const grokUrl = grokipediaUrlForPerson(person);
+    if (!grokUrl) {
+      bar.hidden = true;
+      link.removeAttribute('href');
+      return;
+    }
+
+    bar.hidden = false;
+    link.href = grokUrl;
+    link.textContent = `Grokipedia · ${person.name} →`;
+  }
+
+  function updateTabLabels(person) {
+    const modal = $('#modalContent');
+    if (!modal || !person) return;
+
+    const breakdownCount = (person.wealthBreakdown || []).filter((r) => r.valueUsdB != null).length;
+    const entityCount = (person.entities || []).length;
+    const histYears = historicalSeries(person.rank)?.length || 0;
+    const has13f = Boolean(holdings13fForRank(person.rank)?.holdings?.length);
+
+    const hints = [
+      null,
+      breakdownCount ? `${breakdownCount} stakes${has13f ? ' · 13F' : ''}` : (has13f ? '13F' : null),
+      entityCount ? `${entityCount} entities` : null,
+      histYears ? `${histYears} yrs` : null,
+    ];
+
+    modal.querySelectorAll('.forbes-modal-tab').forEach((btn) => {
+      const idx = Number(btn.dataset.tabIndex);
+      const base = ['Story', 'Portfolio', 'Entities', 'History'][idx] || btn.textContent;
+      const hint = hints[idx];
+      btn.textContent = hint ? `${base} (${hint})` : base;
     });
   }
 
@@ -1452,12 +1491,17 @@
         breakdownChart?.resize();
       });
     }
+    if (idx === 2) {
+      requestAnimationFrame(() => renderEntitiesTab(person));
+    }
     if (idx === 3) {
       requestAnimationFrame(() => {
         renderHistoryChart(person);
         historyChart?.resize();
       });
     }
+
+    syncUrl();
   }
 
   function renderFacts(person) {
@@ -1596,6 +1640,7 @@
   }
 
   function renderPortfolioTab(person) {
+    renderBreakdownChart(person);
     const tableEl = $('#forbes-breakdown-table');
     if (tableEl) {
       tableEl.innerHTML = renderWealthBreakdownTable(person.wealthBreakdown);
@@ -1653,6 +1698,8 @@
     renderWealthInsights(person);
     renderDetailLinks(person);
     renderFacts(person);
+    renderGrokipediaBar(person);
+    updateTabLabels(person);
     renderStoryTab(person);
     renderPortfolioTab(person);
     renderEntitiesTab(person);
@@ -1664,7 +1711,7 @@
   function detailShellHtml() {
     return `
       <p id="forbes-detail-empty" class="forbes-empty">Select a person from the rankings.</p>
-      <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="5" hidden>
+      <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="6" hidden>
         <header class="forbes-detail-header">
           <div class="forbes-detail-nav">
             <button
@@ -1704,6 +1751,9 @@
           </aside>
         </div>
         <nav id="forbes-detail-links" class="forbes-links" aria-label="External profiles" hidden></nav>
+        <div id="forbes-grokipedia-bar" class="forbes-grokipedia-bar" hidden>
+          <a id="forbes-grokipedia-link" class="forbes-grokipedia-btn forbes-grokipedia-btn--bar" href="#" target="_blank" rel="noopener">Grokipedia profile →</a>
+        </div>
         <dl id="forbes-facts" class="forbes-facts"></dl>
         <div class="forbes-modal-tabs" role="tablist" aria-label="Profile sections">
           <button type="button" role="tab" class="forbes-modal-tab active" data-tab-index="0" aria-selected="true">Story</button>
@@ -1763,7 +1813,7 @@
     if (!container) return;
     const modal = $('#modalContent', container);
     if (
-      modal?.dataset.forbesDetailV2 === '5'
+      modal?.dataset.forbesDetailV2 === '6'
       && $('#forbes-story-timeline', container)
       && $('#forbes-story-wealth-chart', container)
       && $('#forbes-story-chart-toolbar', container)
@@ -1771,6 +1821,8 @@
       && $('#forbes-snowflake-chart', container)
       && $('#forbes-world-map', container)
       && $('#forbes-physique-panel', container)
+      && $('#forbes-13f-section', container)
+      && $('#forbes-grokipedia-bar', container)
     ) return;
     disposeStoryWealthChart();
     storyChartPerson = null;
@@ -1846,7 +1898,8 @@
     const person = findPerson(selectedKey);
     if (!person) return;
     const url = new URL(window.location.href);
-    url.hash = `forbes?rank=${person.rank}&name=${encodeURIComponent(person.name)}`;
+    const tabParam = detailTab && detailTab !== 'story' ? `&tab=${detailTab}` : '';
+    url.hash = `forbes?rank=${person.rank}&name=${encodeURIComponent(person.name)}${tabParam}`;
     history.replaceState(null, '', url);
     notifyProfileSelection(person);
   }
@@ -1859,6 +1912,11 @@
     const hash = window.location.hash;
     const nameMatch = hash.match(/[?&]name=([^&]+)/);
     const rankMatch = hash.match(/[?&]rank=(\d+)/);
+    const tabMatch = hash.match(/[?&]tab=(\w+)/);
+
+    if (tabMatch && TAB_KEYS.includes(tabMatch[1])) {
+      detailTab = tabMatch[1];
+    }
 
     if (nameMatch) {
       const name = decodeURIComponent(nameMatch[1]);
