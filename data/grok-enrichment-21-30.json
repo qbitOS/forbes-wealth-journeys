@@ -1,0 +1,212 @@
+[
+  {
+    "rank": 21,
+    "name": "Alice Walton",
+    "netWorth": { "value": 76, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/alice-walton",
+    "forbesProfile": "https://www.forbes.com/profile/alice-walton/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Alice_Walton",
+    "wealthBreakdown": [
+      { "entity": "Walmart", "ticker": "WMT", "stakePct": 13, "valueUsdB": 72, "type": "public" }
+    ],
+    "entities": [
+      { "id": "walmart", "name": "Walmart", "role": "major_shareholder", "founded": 1962, "status": "public" }
+    ],
+    "summary": "Walmart heir.",
+    "timeline": [
+      { "year": "1962", "type": "founding", "entityId": "walmart", "title": "Walmart founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Walmart" }
+    ]
+  },
+  {
+    "rank": 22,
+    "name": "Charles Koch",
+    "netWorth": { "value": 70, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/charles-koch",
+    "forbesProfile": "https://www.forbes.com/profile/charles-koch/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Charles_Koch",
+    "wealthBreakdown": [
+      { "entity": "Koch Industries", "stakePct": 42, "valueUsdB": 68, "type": "private" }
+    ],
+    "entities": [
+      { "id": "koch", "name": "Koch Industries", "role": "co-owner", "founded": 1940, "status": "private" }
+    ],
+    "summary": "Koch Industries heir.",
+    "timeline": [
+      { "year": "1940", "type": "founding", "entityId": "koch", "title": "Koch Industries founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Koch_Industries" }
+    ]
+  },
+  {
+    "rank": 23,
+    "name": "Julia Koch & family",
+    "netWorth": { "value": 68, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/julia-koch",
+    "forbesProfile": "https://www.forbes.com/profile/julia-koch/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Julia_Koch",
+    "wealthBreakdown": [
+      { "entity": "Koch Industries", "stakePct": 42, "valueUsdB": 66, "type": "private" }
+    ],
+    "entities": [
+      { "id": "koch", "name": "Koch Industries", "role": "co-owner", "founded": 1940, "status": "private" }
+    ],
+    "summary": "Koch Industries heir.",
+    "timeline": [
+      { "year": "1940", "type": "founding", "entityId": "koch", "title": "Koch Industries founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Koch_Industries" }
+    ]
+  },
+  {
+    "rank": 24,
+    "name": "Rupert Murdoch & family",
+    "netWorth": { "value": 65, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Media",
+    "grokipediaLink": "https://grok.x.ai/wiki/rupert-murdoch",
+    "forbesProfile": "https://www.forbes.com/profile/rupert-murdoch/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Rupert_Murdoch",
+    "wealthBreakdown": [
+      { "entity": "News Corp", "ticker": "NWS", "stakePct": 39, "valueUsdB": 62, "type": "public" }
+    ],
+    "entities": [
+      { "id": "newscorp", "name": "News Corp", "role": "founder", "founded": 1980, "status": "public" }
+    ],
+    "summary": "Media mogul.",
+    "timeline": [
+      { "year": "1952", "type": "inheritance", "entityId": "newscorp", "title": "Inherited News Corp", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Rupert_Murdoch" }
+    ]
+  },
+  {
+    "rank": 25,
+    "name": "Michael Bloomberg",
+    "netWorth": { "value": 62, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Media",
+    "grokipediaLink": "https://grok.x.ai/wiki/michael-bloomberg",
+    "forbesProfile": "https://www.forbes.com/profile/michael-bloomberg/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Michael_Bloomberg",
+    "wealthBreakdown": [
+      { "entity": "Bloomberg LP", "stakePct": 88, "valueUsdB": 60, "type": "private" }
+    ],
+    "entities": [
+      { "id": "bloomberg", "name": "Bloomberg LP", "role": "founder", "founded": 1981, "status": "private" }
+    ],
+    "summary": "Founder of Bloomberg LP.",
+    "timeline": [
+      { "year": "1981", "type": "founding", "entityId": "bloomberg", "title": "Founded Bloomberg LP", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Michael_Bloomberg" }
+    ]
+  },
+  {
+    "rank": 26,
+    "name": "Len Blavatnik",
+    "netWorth": { "value": 60, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/len-blavatnik",
+    "forbesProfile": "https://www.forbes.com/profile/len-blavatnik/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Len_Blavatnik",
+    "wealthBreakdown": [
+      { "entity": "Access Industries", "stakePct": 100, "valueUsdB": 58, "type": "private" }
+    ],
+    "entities": [
+      { "id": "access", "name": "Access Industries", "role": "founder", "founded": 1986, "status": "private" }
+    ],
+    "summary": "Founder of Access Industries.",
+    "timeline": [
+      { "year": "1986", "type": "founding", "entityId": "access", "title": "Founded Access Industries", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Len_Blavatnik" }
+    ]
+  },
+  {
+    "rank": 27,
+    "name": "Germán Larrea Mota Velasco",
+    "netWorth": { "value": 58, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Mexico",
+    "sector": "Mining",
+    "grokipediaLink": "https://grok.x.ai/wiki/germ%C3%A1n-larrea-mota-velasco",
+    "forbesProfile": "https://www.forbes.com/profile/germ%C3%A1n-larrea-mota-velasco/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Germ%C3%A1n_Larrea_Mota-Velasco",
+    "wealthBreakdown": [
+      { "entity": "Grupo México", "ticker": "GMEXICOB.MX", "stakePct": 65, "valueUsdB": 55, "type": "public" }
+    ],
+    "entities": [
+      { "id": "grupo-mexico", "name": "Grupo México", "role": "major_shareholder", "founded": 1978, "status": "public" }
+    ],
+    "summary": "Mining magnate.",
+    "timeline": [
+      { "year": "1980s", "type": "acquisition", "entityId": "grupo-mexico", "title": "Acquired mining assets", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Germ%C3%A1n_Larrea_Mota-Velasco" }
+    ]
+  },
+  {
+    "rank": 28,
+    "name": "Giovanni Ferrero",
+    "netWorth": { "value": 55, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Italy",
+    "sector": "Food",
+    "grokipediaLink": "https://grok.x.ai/wiki/giovanni-ferrero",
+    "forbesProfile": "https://www.forbes.com/profile/giovanni-ferrero/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Giovanni_Ferrero",
+    "wealthBreakdown": [
+      { "entity": "Ferrero", "stakePct": 100, "valueUsdB": 52, "type": "private" }
+    ],
+    "entities": [
+      { "id": "ferrero", "name": "Ferrero", "role": "major_shareholder", "founded": 1946, "status": "private" }
+    ],
+    "summary": "Ferrero chocolate heir.",
+    "timeline": [
+      { "year": "1946", "type": "founding", "entityId": "ferrero", "title": "Ferrero founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Ferrero_Spa" }
+    ]
+  },
+  {
+    "rank": 29,
+    "name": "Ma Huateng",
+    "netWorth": { "value": 52, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/ma-huateng",
+    "forbesProfile": "https://www.forbes.com/profile/ma-huateng/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ma_Huateng",
+    "wealthBreakdown": [
+      { "entity": "Tencent", "ticker": "TCEHY", "stakePct": 8.5, "valueUsdB": 50, "type": "public" }
+    ],
+    "entities": [
+      { "id": "tencent", "name": "Tencent", "role": "founder", "founded": 1998, "status": "public" }
+    ],
+    "summary": "Founder of Tencent.",
+    "timeline": [
+      { "year": "1998", "type": "founding", "entityId": "tencent", "title": "Founded Tencent", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Ma_Huateng" }
+    ]
+  },
+  {
+    "rank": 30,
+    "name": "Zhang Yiming",
+    "netWorth": { "value": 50, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/zhang-yiming",
+    "forbesProfile": "https://www.forbes.com/profile/zhang-yiming/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Zhang_Yiming",
+    "wealthBreakdown": [
+      { "entity": "ByteDance", "stakePct": 20, "valueUsdB": 48, "type": "private" }
+    ],
+    "entities": [
+      { "id": "bytedance", "name": "ByteDance", "role": "founder", "founded": 2012, "status": "private" }
+    ],
+    "summary": "Founder of ByteDance (TikTok).",
+    "timeline": [
+      { "year": "2012", "type": "founding", "entityId": "bytedance", "title": "Founded ByteDance", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Zhang_Yiming" }
+    ]
+  }
+]

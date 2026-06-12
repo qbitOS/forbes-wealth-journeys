@@ -1,0 +1,299 @@
+[
+  {
+    "rank": 7,
+    "name": "Jensen Huang",
+    "netWorth": { "value": 182, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/jensen-huang",
+    "forbesProfile": "https://www.forbes.com/profile/jensen-huang/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Jensen_Huang",
+    "wealthBreakdown": [
+      { "entity": "Nvidia", "ticker": "NVDA", "stakePct": 3.5, "valueUsdB": 170, "type": "public" }
+    ],
+    "entities": [
+      { "id": "nvidia", "name": "Nvidia", "role": "co-founder_ceo", "founded": 1993, "status": "public" }
+    ],
+    "summary": "Co-founder and CEO of Nvidia; AI chip leader.",
+    "timeline": [
+      { "year": "1993", "type": "founding", "entityId": "nvidia", "title": "Founded Nvidia", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Nvidia" },
+      { "year": "1999", "type": "ipo", "entityId": "nvidia", "title": "Nvidia IPO", "valuationUsdB": null, "source": "https://www.sec.gov" }
+    ]
+  },
+  {
+    "rank": 8,
+    "name": "Michael Dell",
+    "netWorth": { "value": 120, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/michael-dell",
+    "forbesProfile": "https://www.forbes.com/profile/michael-dell/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Michael_Dell",
+    "wealthBreakdown": [
+      { "entity": "Dell Technologies", "ticker": "DELL", "stakePct": 52, "valueUsdB": 110, "type": "public" }
+    ],
+    "entities": [
+      { "id": "dell", "name": "Dell Technologies", "role": "founder", "founded": 1984, "status": "public" }
+    ],
+    "summary": "Founder of Dell Technologies.",
+    "timeline": [
+      { "year": "1984", "type": "founding", "entityId": "dell", "title": "Founded Dell", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Dell" }
+    ]
+  },
+  {
+    "rank": 9,
+    "name": "Steve Ballmer",
+    "netWorth": { "value": 110, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/steve-ballmer",
+    "forbesProfile": "https://www.forbes.com/profile/steve-ballmer/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Steve_Ballmer",
+    "wealthBreakdown": [
+      { "entity": "Microsoft", "ticker": "MSFT", "stakePct": 4, "valueUsdB": 105, "type": "public" }
+    ],
+    "entities": [
+      { "id": "microsoft", "name": "Microsoft", "role": "former_ceo", "founded": 1975, "status": "public" }
+    ],
+    "summary": "Former CEO of Microsoft; major Clippers owner.",
+    "timeline": [
+      { "year": "1980", "type": "joined", "entityId": "microsoft", "title": "Joined Microsoft", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Microsoft" },
+      { "year": "2000", "type": "leadership", "entityId": "microsoft", "title": "CEO of Microsoft", "valuationUsdB": null, "source": "https://www.microsoft.com" }
+    ]
+  },
+  {
+    "rank": 10,
+    "name": "Bernard Arnault & family",
+    "netWorth": { "value": 174, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "France",
+    "sector": "Luxury Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/bernard-arnault",
+    "forbesProfile": "https://www.forbes.com/profile/bernard-arnault/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Bernard_Arnault",
+    "wealthBreakdown": [
+      { "entity": "LVMH", "ticker": "MC.PA", "stakePct": 48, "valueUsdB": 160, "type": "public" }
+    ],
+    "entities": [
+      { "id": "lvmh", "name": "LVMH", "role": "chairman_ceo", "founded": 1987, "status": "public" }
+    ],
+    "summary": "Chairman and CEO of LVMH.",
+    "timeline": [
+      { "year": "1987", "type": "merger", "entityId": "lvmh", "title": "LVMH formed", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/LVMH" }
+    ]
+  },
+  {
+    "rank": 11,
+    "name": "Warren Buffett",
+    "netWorth": { "value": 140, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Finance",
+    "grokipediaLink": "https://grok.x.ai/wiki/warren-buffett",
+    "forbesProfile": "https://www.forbes.com/profile/warren-buffett/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Warren_Buffett",
+    "wealthBreakdown": [
+      { "entity": "Berkshire Hathaway", "ticker": "BRK.A", "stakePct": 15.6, "valueUsdB": 135, "type": "public" }
+    ],
+    "entities": [
+      { "id": "berkshire", "name": "Berkshire Hathaway", "role": "chairman_ceo", "founded": 1955, "status": "public" }
+    ],
+    "summary": "Chairman and CEO of Berkshire Hathaway.",
+    "timeline": [
+      { "year": "1956", "type": "founding", "entityId": "berkshire", "title": "Started investment partnership", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Warren_Buffett" },
+      { "year": "1965", "type": "acquisition", "entityId": "berkshire", "title": "Took control of Berkshire Hathaway", "valuationUsdB": null, "source": "https://www.berkshirehathaway.com" }
+    ]
+  },
+  {
+    "rank": 12,
+    "name": "Bill Gates",
+    "netWorth": { "value": 130, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/bill-gates",
+    "forbesProfile": "https://www.forbes.com/profile/bill-gates/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Bill_Gates",
+    "wealthBreakdown": [
+      { "entity": "Microsoft", "ticker": "MSFT", "stakePct": 1.3, "valueUsdB": 110, "type": "public" }
+    ],
+    "entities": [
+      { "id": "microsoft", "name": "Microsoft", "role": "co-founder", "founded": 1975, "status": "public" }
+    ],
+    "summary": "Co-founder of Microsoft; major philanthropist.",
+    "timeline": [
+      { "year": "1975", "type": "founding", "entityId": "microsoft", "title": "Co-founded Microsoft", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Microsoft" }
+    ]
+  },
+  {
+    "rank": 13,
+    "name": "Mukesh Ambani",
+    "netWorth": { "value": 120, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "India",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/mukesh-ambani",
+    "forbesProfile": "https://www.forbes.com/profile/mukesh-ambani/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Mukesh_Ambani",
+    "wealthBreakdown": [
+      { "entity": "Reliance Industries", "ticker": "RELIANCE.NS", "stakePct": 45, "valueUsdB": 115, "type": "public" }
+    ],
+    "entities": [
+      { "id": "reliance", "name": "Reliance Industries", "role": "chairman", "founded": 1966, "status": "public" }
+    ],
+    "summary": "Chairman of Reliance Industries.",
+    "timeline": [
+      { "year": "1981", "type": "leadership", "entityId": "reliance", "title": "Joined Reliance", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Mukesh_Ambani" }
+    ]
+  },
+  {
+    "rank": 14,
+    "name": "Gautam Adani",
+    "netWorth": { "value": 110, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "India",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/gautam-adani",
+    "forbesProfile": "https://www.forbes.com/profile/gautam-adani/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Gautam_Adani",
+    "wealthBreakdown": [
+      { "entity": "Adani Group", "stakePct": 60, "valueUsdB": 105, "type": "private" }
+    ],
+    "entities": [
+      { "id": "adani", "name": "Adani Group", "role": "founder", "founded": 1988, "status": "public" }
+    ],
+    "summary": "Founder of Adani Group.",
+    "timeline": [
+      { "year": "1998", "type": "founding", "entityId": "adani", "title": "Adani Group founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Gautam_Adani" }
+    ]
+  },
+  {
+    "rank": 15,
+    "name": "Zhong Shanshan",
+    "netWorth": { "value": 100, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Beverages",
+    "grokipediaLink": "https://grok.x.ai/wiki/zhong-shanshan",
+    "forbesProfile": "https://www.forbes.com/profile/zhong-shanshan/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Zhong_Shanshan",
+    "wealthBreakdown": [
+      { "entity": "Nongfu Spring", "ticker": "9633.HK", "stakePct": 68, "valueUsdB": 95, "type": "public" }
+    ],
+    "entities": [
+      { "id": "nongfu", "name": "Nongfu Spring", "role": "founder", "founded": 1996, "status": "public" }
+    ],
+    "summary": "Founder of Nongfu Spring.",
+    "timeline": [
+      { "year": "1996", "type": "founding", "entityId": "nongfu", "title": "Founded Nongfu Spring", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Zhong_Shanshan" }
+    ]
+  },
+  {
+    "rank": 16,
+    "name": "Françoise Bettencourt Meyers",
+    "netWorth": { "value": 95, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "France",
+    "sector": "Luxury Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/fran%C3%A7oise-bettencourt-meyers",
+    "forbesProfile": "https://www.forbes.com/profile/fran%C3%A7oise-bettencourt-meyers/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers",
+    "wealthBreakdown": [
+      { "entity": "L'Oréal", "ticker": "OR.PA", "stakePct": 33, "valueUsdB": 90, "type": "public" }
+    ],
+    "entities": [
+      { "id": "loreal", "name": "L'Oréal", "role": "major_shareholder", "founded": 1909, "status": "public" }
+    ],
+    "summary": "Heiress of L'Oréal.",
+    "timeline": [
+      { "year": "1950s", "type": "inheritance", "entityId": "loreal", "title": "Inherited L'Oréal stake", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers" }
+    ]
+  },
+  {
+    "rank": 17,
+    "name": "Amancio Ortega",
+    "netWorth": { "value": 90, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Spain",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/amancio-ortega",
+    "forbesProfile": "https://www.forbes.com/profile/amancio-ortega/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Amancio_Ortega",
+    "wealthBreakdown": [
+      { "entity": "Inditex", "ticker": "ITX.MC", "stakePct": 59, "valueUsdB": 85, "type": "public" }
+    ],
+    "entities": [
+      { "id": "inditex", "name": "Inditex (Zara)", "role": "founder", "founded": 1975, "status": "public" }
+    ],
+    "summary": "Founder of Inditex (Zara).",
+    "timeline": [
+      { "year": "1975", "type": "founding", "entityId": "inditex", "title": "Founded Zara", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Amancio_Ortega" }
+    ]
+  },
+  {
+    "rank": 18,
+    "name": "Carlos Slim",
+    "netWorth": { "value": 85, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Mexico",
+    "sector": "Telecom",
+    "grokipediaLink": "https://grok.x.ai/wiki/carlos-slim",
+    "forbesProfile": "https://www.forbes.com/profile/carlos-slim/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Carlos_Slim",
+    "wealthBreakdown": [
+      { "entity": "América Móvil", "ticker": "AMX", "stakePct": 55, "valueUsdB": 80, "type": "public" }
+    ],
+    "entities": [
+      { "id": "america-movil", "name": "América Móvil", "role": "major_shareholder", "founded": 2000, "status": "public" }
+    ],
+    "summary": "Owner of América Móvil.",
+    "timeline": [
+      { "year": "1980s", "type": "acquisition", "entityId": "america-movil", "title": "Acquired telecom assets", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Carlos_Slim" }
+    ]
+  },
+  {
+    "rank": 19,
+    "name": "Rob Walton & family",
+    "netWorth": { "value": 80, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/rob-walton",
+    "forbesProfile": "https://www.forbes.com/profile/rob-walton/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Rob_Walton",
+    "wealthBreakdown": [
+      { "entity": "Walmart", "ticker": "WMT", "stakePct": 15, "valueUsdB": 75, "type": "public" }
+    ],
+    "entities": [
+      { "id": "walmart", "name": "Walmart", "role": "major_shareholder", "founded": 1962, "status": "public" }
+    ],
+    "summary": "Walmart heirs.",
+    "timeline": [
+      { "year": "1962", "type": "founding", "entityId": "walmart", "title": "Walmart founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Walmart" }
+    ]
+  },
+  {
+    "rank": 20,
+    "name": "Jim Walton",
+    "netWorth": { "value": 78, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/jim-walton",
+    "forbesProfile": "https://www.forbes.com/profile/jim-walton/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Jim_Walton",
+    "wealthBreakdown": [
+      { "entity": "Walmart", "ticker": "WMT", "stakePct": 14, "valueUsdB": 73, "type": "public" }
+    ],
+    "entities": [
+      { "id": "walmart", "name": "Walmart", "role": "major_shareholder", "founded": 1962, "status": "public" }
+    ],
+    "summary": "Walmart heir.",
+    "timeline": [
+      { "year": "1962", "type": "founding", "entityId": "walmart", "title": "Walmart founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Walmart" }
+    ]
+  }
+]

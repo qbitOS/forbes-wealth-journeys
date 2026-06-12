@@ -1,0 +1,503 @@
+[
+  {
+    "id": "access",
+    "name": "Access Industries",
+    "founded": 1986,
+    "status": "private"
+  },
+  {
+    "id": "adani",
+    "name": "Adani Group",
+    "founded": 1988,
+    "status": "public"
+  },
+  {
+    "id": "aluminum_products",
+    "name": "Aluminum products",
+    "status": "private"
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "founded": 1994,
+    "status": "public",
+    "valuationUsdB": 2200,
+    "ticker": "AMZN"
+  },
+  {
+    "id": "america-movil",
+    "name": "América Móvil",
+    "founded": 2000,
+    "status": "public",
+    "ticker": "AMX"
+  },
+  {
+    "id": "batteries",
+    "name": "Batteries",
+    "status": "private"
+  },
+  {
+    "id": "berkshire",
+    "name": "Berkshire Hathaway",
+    "founded": 1955,
+    "status": "public",
+    "valuationUsdB": 900,
+    "ticker": "BRK.A"
+  },
+  {
+    "id": "bloomberg",
+    "name": "Bloomberg LP",
+    "founded": 1981,
+    "status": "private"
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "status": "private"
+  },
+  {
+    "id": "bytedance",
+    "name": "ByteDance",
+    "founded": 2012,
+    "status": "private"
+  },
+  {
+    "id": "candy",
+    "name": "Candy",
+    "status": "private"
+  },
+  {
+    "id": "catl",
+    "name": "CATL",
+    "founded": 2011,
+    "status": "public",
+    "ticker": "300750.SZ"
+  },
+  {
+    "id": "cement",
+    "name": "Cement",
+    "status": "private"
+  },
+  {
+    "id": "chanel",
+    "name": "Chanel",
+    "founded": 1909,
+    "status": "private"
+  },
+  {
+    "id": "cheese",
+    "name": "Cheese",
+    "status": "private"
+  },
+  {
+    "id": "chemicals",
+    "name": "chemicals",
+    "status": "private"
+  },
+  {
+    "id": "ck-hutchison",
+    "name": "CK Hutchison",
+    "founded": 1950,
+    "status": "public",
+    "ticker": "0001.HK"
+  },
+  {
+    "id": "commodities",
+    "name": "commodities",
+    "status": "private"
+  },
+  {
+    "id": "computer_hardware",
+    "name": "Computer hardware",
+    "status": "private"
+  },
+  {
+    "id": "cryptocurrency",
+    "name": "Cryptocurrency",
+    "status": "private"
+  },
+  {
+    "id": "cryptocurrency_exchange",
+    "name": "Cryptocurrency exchange",
+    "status": "private"
+  },
+  {
+    "id": "defense_contracting",
+    "name": "Defense Contracting",
+    "status": "private"
+  },
+  {
+    "id": "dell",
+    "name": "Dell Technologies",
+    "founded": 1984,
+    "status": "public",
+    "valuationUsdB": 90,
+    "ticker": "DELL"
+  },
+  {
+    "id": "discount_brokerage",
+    "name": "Discount brokerage",
+    "status": "private"
+  },
+  {
+    "id": "diversified",
+    "name": "Diversified",
+    "status": "private"
+  },
+  {
+    "id": "e_commerce",
+    "name": "E-commerce",
+    "status": "private"
+  },
+  {
+    "id": "facebook",
+    "name": "Facebook",
+    "status": "private"
+  },
+  {
+    "id": "fast-retailing",
+    "name": "Fast Retailing (Uniqlo)",
+    "founded": 1984,
+    "status": "public",
+    "ticker": "9983.T"
+  },
+  {
+    "id": "fasteners",
+    "name": "Fasteners",
+    "status": "private"
+  },
+  {
+    "id": "ferrero",
+    "name": "Ferrero",
+    "founded": 1946,
+    "status": "private"
+  },
+  {
+    "id": "fidelity",
+    "name": "Fidelity",
+    "founded": 1946,
+    "status": "private"
+  },
+  {
+    "id": "financial_software",
+    "name": "Financial software",
+    "status": "private"
+  },
+  {
+    "id": "gas",
+    "name": "Gas",
+    "status": "private",
+    "ticker": "LVS"
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "status": "private"
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "founded": 1998,
+    "status": "public",
+    "valuationUsdB": 2800,
+    "ticker": "GOOGL"
+  },
+  {
+    "id": "grupo-mexico",
+    "name": "Grupo México",
+    "founded": 1978,
+    "status": "public",
+    "ticker": "GMEXICOB.MX"
+  },
+  {
+    "id": "hca",
+    "name": "HCA Healthcare",
+    "founded": 1968,
+    "status": "public",
+    "ticker": "HCA"
+  },
+  {
+    "id": "hedge_funds",
+    "name": "Hedge funds",
+    "status": "private"
+  },
+  {
+    "id": "inditex",
+    "name": "Inditex (Zara)",
+    "founded": 1975,
+    "status": "public",
+    "ticker": "ITX.MC"
+  },
+  {
+    "id": "infrastructure",
+    "name": "Infrastructure",
+    "status": "private"
+  },
+  {
+    "id": "investments",
+    "name": "investments",
+    "status": "private"
+  },
+  {
+    "id": "koch_inc",
+    "name": "Koch Inc.",
+    "status": "private"
+  },
+  {
+    "id": "koch",
+    "name": "Koch Industries",
+    "founded": 1940,
+    "status": "private"
+  },
+  {
+    "id": "kuehne-nagel",
+    "name": "Kuehne + Nagel",
+    "founded": 1890,
+    "status": "public",
+    "ticker": "KNIN.SW"
+  },
+  {
+    "id": "loreal",
+    "name": "L'Oréal",
+    "founded": 1909,
+    "status": "public",
+    "ticker": "OR.PA"
+  },
+  {
+    "id": "lvs",
+    "name": "Las Vegas Sands",
+    "founded": 1988,
+    "status": "public",
+    "ticker": "LVS"
+  },
+  {
+    "id": "luxury_goods",
+    "name": "Luxury goods",
+    "status": "private"
+  },
+  {
+    "id": "lvmh",
+    "name": "LVMH",
+    "founded": 1987,
+    "status": "public",
+    "valuationUsdB": 400,
+    "ticker": "MC.PA"
+  },
+  {
+    "id": "machinery",
+    "name": "Machinery",
+    "status": "private"
+  },
+  {
+    "id": "meta",
+    "name": "Meta",
+    "founded": 2004,
+    "status": "public",
+    "valuationUsdB": 1500,
+    "ticker": "META"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "founded": 1975,
+    "status": "public",
+    "valuationUsdB": 3400,
+    "ticker": "MSFT"
+  },
+  {
+    "id": "midea",
+    "name": "Midea Group",
+    "founded": 1968,
+    "status": "public",
+    "ticker": "000333.SZ"
+  },
+  {
+    "id": "mining",
+    "name": "Mining",
+    "status": "private"
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "status": "private"
+  },
+  {
+    "id": "nongfu",
+    "name": "Nongfu Spring",
+    "founded": 1996,
+    "status": "public",
+    "ticker": "9633.HK"
+  },
+  {
+    "id": "norilsk-nickel",
+    "name": "Norilsk Nickel",
+    "founded": 1993,
+    "status": "public",
+    "ticker": "GMKN.ME"
+  },
+  {
+    "id": "nvidia",
+    "name": "Nvidia",
+    "founded": 1993,
+    "status": "public",
+    "valuationUsdB": 3200,
+    "ticker": "NVDA"
+  },
+  {
+    "id": "oil",
+    "name": "Oil & gas",
+    "status": "private"
+  },
+  {
+    "id": "online_games",
+    "name": "Online games",
+    "status": "private"
+  },
+  {
+    "id": "oracle",
+    "name": "Oracle",
+    "founded": 1977,
+    "status": "public",
+    "valuationUsdB": 450,
+    "ticker": "ORCL"
+  },
+  {
+    "id": "pet_food",
+    "name": "pet food",
+    "status": "private"
+  },
+  {
+    "id": "pharmaceuticals",
+    "name": "pharmaceuticals",
+    "status": "private"
+  },
+  {
+    "id": "pinduoduo",
+    "name": "Pinduoduo",
+    "founded": 2015,
+    "status": "public",
+    "ticker": "PDD"
+  },
+  {
+    "id": "real_estate",
+    "name": "Real estate",
+    "status": "private"
+  },
+  {
+    "id": "red_bull",
+    "name": "Red Bull",
+    "status": "private"
+  },
+  {
+    "id": "reliance",
+    "name": "Reliance Industries",
+    "founded": 1966,
+    "status": "public",
+    "ticker": "RELIANCE.NS"
+  },
+  {
+    "id": "retail",
+    "name": "Retail",
+    "status": "private",
+    "ticker": "9983.T"
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung",
+    "status": "private"
+  },
+  {
+    "id": "semiconductors",
+    "name": "Semiconductors",
+    "status": "private"
+  },
+  {
+    "id": "serum-institute",
+    "name": "Serum Institute",
+    "founded": 1966,
+    "status": "private"
+  },
+  {
+    "id": "shipping",
+    "name": "Shipping",
+    "status": "private"
+  },
+  {
+    "id": "softbank",
+    "name": "SoftBank",
+    "founded": 1981,
+    "status": "public",
+    "ticker": "9984.T"
+  },
+  {
+    "id": "spacex",
+    "name": "SpaceX",
+    "founded": 2002,
+    "status": "private",
+    "valuationUsdB": 350,
+    "ticker": null
+  },
+  {
+    "id": "steel",
+    "name": "Steel",
+    "status": "private"
+  },
+  {
+    "id": "sugar",
+    "name": "sugar",
+    "status": "private"
+  },
+  {
+    "id": "sun-pharma",
+    "name": "Sun Pharmaceutical",
+    "founded": 1983,
+    "status": "public",
+    "ticker": "SUNPHARMA.NS"
+  },
+  {
+    "id": "tencent",
+    "name": "Tencent",
+    "founded": 1998,
+    "status": "public",
+    "ticker": "TCEHY"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "founded": 2003,
+    "status": "public",
+    "valuationUsdB": 1200,
+    "ticker": "TSLA"
+  },
+  {
+    "id": "trading",
+    "name": "Trading",
+    "status": "private"
+  },
+  {
+    "id": "transport",
+    "name": "transport",
+    "status": "private"
+  },
+  {
+    "id": "walmart",
+    "name": "Walmart",
+    "founded": 1962,
+    "status": "public",
+    "valuationUsdB": 650,
+    "ticker": "WMT"
+  },
+  {
+    "id": "wireless_networking",
+    "name": "Wireless networking",
+    "status": "private"
+  },
+  {
+    "id": "xai",
+    "name": "xAI",
+    "founded": 2023,
+    "status": "private",
+    "valuationUsdB": 50,
+    "ticker": null
+  }
+]

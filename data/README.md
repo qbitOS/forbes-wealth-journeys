@@ -59,10 +59,24 @@ Append objects to the array to expand toward Forbes 500. The UI loads via `fetch
 python scripts/build_forbes_billionaires.py
 ```
 
-**Import full Grok JSON export:**
+**Import full Grok JSON export (replace entire dataset):**
 
 ```bash
-python scripts/import_grok_forbes.py /path/to/grok-export.json
+python3 scripts/import_grok_forbes.py /path/to/grok-export.json
 ```
+
+**Merge Grok enrichment by name (keeps Forbes rank & net worth):**
+
+```bash
+python3 scripts/merge_grok_enrichment.py data/grok-enrichment-7-20.json
+```
+
+**Rebuild entity catalog** from profiles + seed valuations:
+
+```bash
+python3 scripts/build_entities.py
+```
+
+[`entities.json`](entities.json) — deduplicated companies (`id`, `name`, `ticker`, `valuationUsdB`, `status`) extracted from billionaire profiles.
 
 Source thread: [Grok Forbes 500 Wealth Journeys](https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748)

@@ -1,0 +1,422 @@
+[
+  {
+    "rank": 31,
+    "name": "Tadashi Yanai",
+    "netWorth": { "value": 48, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Japan",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/tadashi-yanai",
+    "forbesProfile": "https://www.forbes.com/profile/tadashi-yanai/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Tadashi_Yanai",
+    "wealthBreakdown": [
+      { "entity": "Fast Retailing", "ticker": "9983.T", "stakePct": 58, "valueUsdB": 45, "type": "public" }
+    ],
+    "entities": [
+      { "id": "fast-retailing", "name": "Fast Retailing (Uniqlo)", "role": "founder", "founded": 1984, "status": "public" }
+    ],
+    "summary": "Founder of Uniqlo.",
+    "timeline": [
+      { "year": "1984", "type": "founding", "entityId": "fast-retailing", "title": "Founded Uniqlo", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Tadashi_Yanai" }
+    ]
+  },
+  {
+    "rank": 32,
+    "name": "Miriam Adelson",
+    "netWorth": { "value": 45, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Casinos",
+    "grokipediaLink": "https://grok.x.ai/wiki/miriam-adelson",
+    "forbesProfile": "https://www.forbes.com/profile/miriam-adelson/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Miriam_Adelson",
+    "wealthBreakdown": [
+      { "entity": "Las Vegas Sands", "ticker": "LVS", "stakePct": 52, "valueUsdB": 42, "type": "public" }
+    ],
+    "entities": [
+      { "id": "lvs", "name": "Las Vegas Sands", "role": "major_shareholder", "founded": 1988, "status": "public" }
+    ],
+    "summary": "Casino magnate.",
+    "timeline": [
+      { "year": "1980s", "type": "founding", "entityId": "lvs", "title": "Las Vegas Sands founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Miriam_Adelson" }
+    ]
+  },
+  {
+    "rank": 33,
+    "name": "Alain Wertheimer",
+    "netWorth": { "value": 43, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "France",
+    "sector": "Luxury Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/alain-wertheimer",
+    "forbesProfile": "https://www.forbes.com/profile/alain-wertheimer/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Alain_Wertheimer",
+    "wealthBreakdown": [
+      { "entity": "Chanel", "stakePct": 50, "valueUsdB": 42, "type": "private" }
+    ],
+    "entities": [
+      { "id": "chanel", "name": "Chanel", "role": "co-owner", "founded": 1909, "status": "private" }
+    ],
+    "summary": "Chanel heir.",
+    "timeline": [
+      { "year": "1954", "type": "inheritance", "entityId": "chanel", "title": "Inherited Chanel", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Alain_Wertheimer" }
+    ]
+  },
+  {
+    "rank": 34,
+    "name": "Gerard Wertheimer",
+    "netWorth": { "value": 43, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "France",
+    "sector": "Luxury Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/gerard-wertheimer",
+    "forbesProfile": "https://www.forbes.com/profile/gerard-wertheimer/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/G%C3%A9rard_Wertheimer",
+    "wealthBreakdown": [
+      { "entity": "Chanel", "stakePct": 50, "valueUsdB": 42, "type": "private" }
+    ],
+    "entities": [
+      { "id": "chanel", "name": "Chanel", "role": "co-owner", "founded": 1909, "status": "private" }
+    ],
+    "summary": "Chanel heir.",
+    "timeline": [
+      { "year": "1954", "type": "inheritance", "entityId": "chanel", "title": "Inherited Chanel", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/G%C3%A9rard_Wertheimer" }
+    ]
+  },
+  {
+    "rank": 35,
+    "name": "Li Ka-shing",
+    "netWorth": { "value": 40, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Hong Kong",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/li-ka-shing",
+    "forbesProfile": "https://www.forbes.com/profile/li-ka-shing/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Li_Ka-shing",
+    "wealthBreakdown": [
+      { "entity": "CK Hutchison", "ticker": "0001.HK", "stakePct": 30, "valueUsdB": 38, "type": "public" }
+    ],
+    "entities": [
+      { "id": "ck-hutchison", "name": "CK Hutchison", "role": "founder", "founded": 1950, "status": "public" }
+    ],
+    "summary": "Hong Kong tycoon.",
+    "timeline": [
+      { "year": "1950", "type": "founding", "entityId": "ck-hutchison", "title": "Founded Cheung Kong", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Li_Ka-shing" }
+    ]
+  },
+  {
+    "rank": 36,
+    "name": "Wang Wei",
+    "netWorth": { "value": 38, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Logistics",
+    "grokipediaLink": "https://grok.x.ai/wiki/wang-wei",
+    "forbesProfile": "https://www.forbes.com/profile/wang-wei/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Wang_Wei_(businessman)",
+    "wealthBreakdown": [
+      { "entity": "SF Holding", "ticker": "002352.SZ", "stakePct": 70, "valueUsdB": 36, "type": "public" }
+    ],
+    "entities": [
+      { "id": "sf-holding", "name": "SF Holding", "role": "founder", "founded": 1993, "status": "public" }
+    ],
+    "summary": "Founder of SF Express.",
+    "timeline": [
+      { "year": "1993", "type": "founding", "entityId": "sf-holding", "title": "Founded SF Express", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Wang_Wei_(businessman)" }
+    ]
+  },
+  {
+    "rank": 37,
+    "name": "Colin Huang",
+    "netWorth": { "value": 36, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "E-commerce",
+    "grokipediaLink": "https://grok.x.ai/wiki/colin-huang",
+    "forbesProfile": "https://www.forbes.com/profile/colin-huang/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Colin_Huang",
+    "wealthBreakdown": [
+      { "entity": "Pinduoduo", "ticker": "PDD", "stakePct": 25, "valueUsdB": 34, "type": "public" }
+    ],
+    "entities": [
+      { "id": "pinduoduo", "name": "Pinduoduo", "role": "founder", "founded": 2015, "status": "public" }
+    ],
+    "summary": "Founder of Pinduoduo.",
+    "timeline": [
+      { "year": "2015", "type": "founding", "entityId": "pinduoduo", "title": "Founded Pinduoduo", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Colin_Huang" }
+    ]
+  },
+  {
+    "rank": 38,
+    "name": "Dilip Shanghvi",
+    "netWorth": { "value": 35, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "India",
+    "sector": "Pharmaceuticals",
+    "grokipediaLink": "https://grok.x.ai/wiki/dilip-shanghvi",
+    "forbesProfile": "https://www.forbes.com/profile/dilip-shanghvi/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Dilip_Shanghvi",
+    "wealthBreakdown": [
+      { "entity": "Sun Pharma", "ticker": "SUNPHARMA.NS", "stakePct": 42, "valueUsdB": 33, "type": "public" }
+    ],
+    "entities": [
+      { "id": "sun-pharma", "name": "Sun Pharmaceutical", "role": "founder", "founded": 1983, "status": "public" }
+    ],
+    "summary": "Founder of Sun Pharmaceutical.",
+    "timeline": [
+      { "year": "1983", "type": "founding", "entityId": "sun-pharma", "title": "Founded Sun Pharma", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Dilip_Shanghvi" }
+    ]
+  },
+  {
+    "rank": 39,
+    "name": "Ravi Jaipuria",
+    "netWorth": { "value": 34, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "India",
+    "sector": "Beverages",
+    "grokipediaLink": "https://grok.x.ai/wiki/ravi-jaipuria",
+    "forbesProfile": "https://www.forbes.com/profile/ravi-jaipuria/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ravi_Jaipuria",
+    "wealthBreakdown": [
+      { "entity": "RJ Corp", "stakePct": 100, "valueUsdB": 32, "type": "private" }
+    ],
+    "entities": [
+      { "id": "rj-corp", "name": "RJ Corp", "role": "founder", "founded": 1990, "status": "private" }
+    ],
+    "summary": "PepsiCo India bottler.",
+    "timeline": [
+      { "year": "1990s", "type": "acquisition", "entityId": "rj-corp", "title": "Acquired PepsiCo bottling rights", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Ravi_Jaipuria" }
+    ]
+  },
+  {
+    "rank": 40,
+    "name": "Klaus-Michael Kuehne",
+    "netWorth": { "value": 33, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Germany",
+    "sector": "Logistics",
+    "grokipediaLink": "https://grok.x.ai/wiki/klaus-michael-k%C3%BChne",
+    "forbesProfile": "https://www.forbes.com/profile/klaus-michael-kuehne/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Klaus-Michael_K%C3%BChne",
+    "wealthBreakdown": [
+      { "entity": "Kuehne + Nagel", "ticker": "KNIN.SW", "stakePct": 53, "valueUsdB": 31, "type": "public" }
+    ],
+    "entities": [
+      { "id": "kuehne-nagel", "name": "Kuehne + Nagel", "role": "major_shareholder", "founded": 1890, "status": "public" }
+    ],
+    "summary": "Logistics heir.",
+    "timeline": [
+      { "year": "1890", "type": "founding", "entityId": "kuehne-nagel", "title": "Kuehne + Nagel founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Klaus-Michael_K%C3%BChne" }
+    ]
+  },
+  {
+    "rank": 41,
+    "name": "Thomas Frist Jr",
+    "netWorth": { "value": 32, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Healthcare",
+    "grokipediaLink": "https://grok.x.ai/wiki/thomas-frist-jr",
+    "forbesProfile": "https://www.forbes.com/profile/thomas-frist-jr/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Thomas_Frist_Jr.",
+    "wealthBreakdown": [
+      { "entity": "HCA Healthcare", "ticker": "HCA", "stakePct": 20, "valueUsdB": 30, "type": "public" }
+    ],
+    "entities": [
+      { "id": "hca", "name": "HCA Healthcare", "role": "founder", "founded": 1968, "status": "public" }
+    ],
+    "summary": "HCA Healthcare founder.",
+    "timeline": [
+      { "year": "1968", "type": "founding", "entityId": "hca", "title": "Founded HCA", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Thomas_Frist_Jr." }
+    ]
+  },
+  {
+    "rank": 42,
+    "name": "Robin Zeng",
+    "netWorth": { "value": 31, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Batteries",
+    "grokipediaLink": "https://grok.x.ai/wiki/robin-zeng",
+    "forbesProfile": "https://www.forbes.com/profile/robin-zeng/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Robin_Zeng",
+    "wealthBreakdown": [
+      { "entity": "CATL", "ticker": "300750.SZ", "stakePct": 25, "valueUsdB": 29, "type": "public" }
+    ],
+    "entities": [
+      { "id": "catl", "name": "CATL", "role": "founder", "founded": 2011, "status": "public" }
+    ],
+    "summary": "Founder of CATL.",
+    "timeline": [
+      { "year": "2011", "type": "founding", "entityId": "catl", "title": "Founded CATL", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Robin_Zeng" }
+    ]
+  },
+  {
+    "rank": 43,
+    "name": "Masayoshi Son",
+    "netWorth": { "value": 30, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Japan",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/masayoshi-son",
+    "forbesProfile": "https://www.forbes.com/profile/masayoshi-son/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Masayoshi_Son",
+    "wealthBreakdown": [
+      { "entity": "SoftBank", "ticker": "9984.T", "stakePct": 21, "valueUsdB": 28, "type": "public" }
+    ],
+    "entities": [
+      { "id": "softbank", "name": "SoftBank", "role": "founder", "founded": 1981, "status": "public" }
+    ],
+    "summary": "Founder of SoftBank.",
+    "timeline": [
+      { "year": "1981", "type": "founding", "entityId": "softbank", "title": "Founded SoftBank", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Masayoshi_Son" }
+    ]
+  },
+  {
+    "rank": 44,
+    "name": "He Xiangjian",
+    "netWorth": { "value": 29, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Appliances",
+    "grokipediaLink": "https://grok.x.ai/wiki/he-xiangjian",
+    "forbesProfile": "https://www.forbes.com/profile/he-xiangjian/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/He_Xiangjian",
+    "wealthBreakdown": [
+      { "entity": "Midea Group", "ticker": "000333.SZ", "stakePct": 35, "valueUsdB": 27, "type": "public" }
+    ],
+    "entities": [
+      { "id": "midea", "name": "Midea Group", "role": "founder", "founded": 1968, "status": "public" }
+    ],
+    "summary": "Founder of Midea Group.",
+    "timeline": [
+      { "year": "1968", "type": "founding", "entityId": "midea", "title": "Founded Midea", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/He_Xiangjian" }
+    ]
+  },
+  {
+    "rank": 45,
+    "name": "Vladimir Potanin",
+    "netWorth": { "value": 28, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Russia",
+    "sector": "Metals",
+    "grokipediaLink": "https://grok.x.ai/wiki/vladimir-potanin",
+    "forbesProfile": "https://www.forbes.com/profile/vladimir-potanin/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Vladimir_Potanin",
+    "wealthBreakdown": [
+      { "entity": "Norilsk Nickel", "ticker": "GMKN.ME", "stakePct": 35, "valueUsdB": 26, "type": "public" }
+    ],
+    "entities": [
+      { "id": "norilsk-nickel", "name": "Norilsk Nickel", "role": "major_shareholder", "founded": 1993, "status": "public" }
+    ],
+    "summary": "Metals magnate.",
+    "timeline": [
+      { "year": "1990s", "type": "acquisition", "entityId": "norilsk-nickel", "title": "Acquired Norilsk Nickel", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Vladimir_Potanin" }
+    ]
+  },
+  {
+    "rank": 46,
+    "name": "Gina Rinehart",
+    "netWorth": { "value": 27, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Australia",
+    "sector": "Mining",
+    "grokipediaLink": "https://grok.x.ai/wiki/gina-rinehart",
+    "forbesProfile": "https://www.forbes.com/profile/gina-rinehart/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Gina_Rinehart",
+    "wealthBreakdown": [
+      { "entity": "Hancock Prospecting", "stakePct": 100, "valueUsdB": 25, "type": "private" }
+    ],
+    "entities": [
+      { "id": "hancock", "name": "Hancock Prospecting", "role": "owner", "founded": 1955, "status": "private" }
+    ],
+    "summary": "Australia's richest person.",
+    "timeline": [
+      { "year": "1980s", "type": "inheritance", "entityId": "hancock", "title": "Took over Hancock Prospecting", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Gina_Rinehart" }
+    ]
+  },
+  {
+    "rank": 47,
+    "name": "Abigail Johnson",
+    "netWorth": { "value": 26, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Finance",
+    "grokipediaLink": "https://grok.x.ai/wiki/abigail-johnson",
+    "forbesProfile": "https://www.forbes.com/profile/abigail-johnson/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Abigail_Johnson",
+    "wealthBreakdown": [
+      { "entity": "Fidelity", "stakePct": 24, "valueUsdB": 24, "type": "private" }
+    ],
+    "entities": [
+      { "id": "fidelity", "name": "Fidelity", "role": "ceo", "founded": 1946, "status": "private" }
+    ],
+    "summary": "Fidelity Investments CEO.",
+    "timeline": [
+      { "year": "1946", "type": "founding", "entityId": "fidelity", "title": "Fidelity founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Abigail_Johnson" }
+    ]
+  },
+  {
+    "rank": 48,
+    "name": "MacKenzie Scott",
+    "netWorth": { "value": 25, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/mackenzie-scott",
+    "forbesProfile": "https://www.forbes.com/profile/mackenzie-scott/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/MacKenzie_Scott",
+    "wealthBreakdown": [
+      { "entity": "Amazon", "ticker": "AMZN", "stakePct": 4, "valueUsdB": 24, "type": "public" }
+    ],
+    "entities": [
+      { "id": "amazon", "name": "Amazon", "role": "co-founder", "founded": 1994, "status": "public" }
+    ],
+    "summary": "Amazon co-founder (ex-wife of Jeff Bezos).",
+    "timeline": [
+      { "year": "1994", "type": "co-founding", "entityId": "amazon", "title": "Co-founded Amazon", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/MacKenzie_Scott" }
+    ]
+  },
+  {
+    "rank": 49,
+    "name": "Cyrus Poonawalla",
+    "netWorth": { "value": 24, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "India",
+    "sector": "Pharmaceuticals",
+    "grokipediaLink": "https://grok.x.ai/wiki/cyrus-poonawalla",
+    "forbesProfile": "https://www.forbes.com/profile/cyrus-poonawalla/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Cyrus_Poonawalla",
+    "wealthBreakdown": [
+      { "entity": "Serum Institute", "stakePct": 100, "valueUsdB": 22, "type": "private" }
+    ],
+    "entities": [
+      { "id": "serum-institute", "name": "Serum Institute", "role": "founder", "founded": 1966, "status": "private" }
+    ],
+    "summary": "Vaccine billionaire.",
+    "timeline": [
+      { "year": "1966", "type": "founding", "entityId": "serum-institute", "title": "Founded Serum Institute", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Cyrus_Poonawalla" }
+    ]
+  },
+  {
+    "rank": 50,
+    "name": "Shiv Nadar",
+    "netWorth": { "value": 23, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/shiv-nadar",
+    "forbesProfile": "https://www.forbes.com/profile/shiv-nadar/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Shiv_Nadar",
+    "wealthBreakdown": [
+      { "entity": "HCL Technologies", "ticker": "HCLTECH.NS", "stakePct": 60, "valueUsdB": 21, "type": "public" }
+    ],
+    "entities": [
+      { "id": "hcl", "name": "HCL Technologies", "role": "founder", "founded": 1976, "status": "public" }
+    ],
+    "summary": "Founder of HCL Technologies.",
+    "timeline": [
+      { "year": "1976", "type": "founding", "entityId": "hcl", "title": "Founded HCL", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Shiv_Nadar" }
+    ]
+  }
+]

@@ -391,7 +391,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/michael-dell",
@@ -400,60 +400,30 @@
     "wealthBreakdown": [
       {
         "entity": "Dell Technologies",
-        "stakePct": null,
-        "valueUsdB": 224.4,
-        "type": "private"
+        "ticker": "DELL",
+        "stakePct": 52,
+        "valueUsdB": 110,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "dell_technologies",
+        "id": "dell",
         "name": "Dell Technologies",
         "role": "founder",
-        "status": "private"
+        "founded": 1984,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Dell Technologies in technology.",
+    "summary": "Founder of Dell Technologies.",
     "timeline": [
       {
         "year": "1984",
         "type": "founding",
-        "entityId": null,
+        "entityId": "dell",
         "title": "Founded Dell",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Started PC company from University of Texas dorm room.",
-        "impact": "Direct-to-consumer PCs"
-      },
-      {
-        "year": "1988",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Dell IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "One of fastest-growing PC makers of the 1990s.",
-        "impact": "Public market scale"
-      },
-      {
-        "year": "2013",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Took Dell private",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "$24.9B leveraged buyout to reshape company.",
-        "impact": "Enterprise pivot"
-      },
-      {
-        "year": "2016",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Merged with EMC",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Created Dell Technologies; storage and cloud expansion.",
-        "impact": "IT infrastructure giant"
+        "source": "https://en.wikipedia.org/wiki/Dell"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -525,7 +495,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/jensen-huang",
@@ -533,61 +503,39 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jensen_Huang",
     "wealthBreakdown": [
       {
-        "entity": "Semiconductors",
-        "stakePct": null,
-        "valueUsdB": 177.1,
-        "type": "private"
+        "entity": "Nvidia",
+        "ticker": "NVDA",
+        "stakePct": 3.5,
+        "valueUsdB": 170,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "semiconductors",
-        "name": "Semiconductors",
-        "role": "founder",
-        "status": "private"
+        "id": "nvidia",
+        "name": "Nvidia",
+        "role": "co-founder_ceo",
+        "founded": 1993,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Semiconductors in technology.",
+    "summary": "Co-founder and CEO of Nvidia; AI chip leader.",
     "timeline": [
       {
         "year": "1993",
         "type": "founding",
-        "entityId": null,
-        "title": "Co-founded NVIDIA",
+        "entityId": "nvidia",
+        "title": "Founded Nvidia",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Graphics chips for gaming and professional visualization.",
-        "impact": "GPU pioneer"
+        "source": "https://en.wikipedia.org/wiki/Nvidia"
       },
       {
         "year": "1999",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Invented the GPU",
+        "type": "ipo",
+        "entityId": "nvidia",
+        "title": "Nvidia IPO",
         "valuationUsdB": null,
-        "source": null,
-        "description": "GeForce brand defined consumer 3D graphics.",
-        "impact": "Gaming hardware leader"
-      },
-      {
-        "year": "2012",
-        "type": "milestone",
-        "entityId": null,
-        "title": "CUDA platform",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "General-purpose GPU computing for AI and HPC.",
-        "impact": "AI infrastructure foundation"
-      },
-      {
-        "year": "2023",
-        "type": "milestone",
-        "entityId": null,
-        "title": "AI chip boom",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Data-center GPUs became essential for LLM training.",
-        "impact": "Trillion-dollar market cap"
+        "source": "https://www.sec.gov"
       }
     ],
     "firstFortuneDecade": "1990s"
@@ -601,69 +549,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "France",
-    "sector": "Fashion & Retail",
+    "sector": "Luxury Goods",
     "grokipediaLink": "https://grok.x.ai/wiki/bernard-arnault",
     "forbesProfile": "https://www.forbes.com/profile/bernard-arnault/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Bernard_Arnault_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Bernard_Arnault",
     "wealthBreakdown": [
       {
         "entity": "LVMH",
-        "stakePct": null,
-        "valueUsdB": 152.3,
-        "type": "private"
+        "ticker": "MC.PA",
+        "stakePct": 48,
+        "valueUsdB": 160,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "lvmh",
         "name": "LVMH",
-        "role": "founder",
-        "status": "private"
+        "role": "chairman_ceo",
+        "founded": 1987,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from LVMH in fashion & retail.",
+    "summary": "Chairman and CEO of LVMH.",
     "timeline": [
       {
-        "year": "1984",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Acquired Boussac",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Bought textile group including Christian Dior.",
-        "impact": "Luxury empire seed"
-      },
-      {
         "year": "1987",
-        "type": "milestone",
+        "type": "merger",
         "entityId": "lvmh",
-        "title": "Created LVMH",
+        "title": "LVMH formed",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Merged Louis Vuitton with Moët Hennessy.",
-        "impact": "World's largest luxury group"
-      },
-      {
-        "year": "1990s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Brand acquisitions",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Added Givenchy, Sephora, TAG Heuer, and more.",
-        "impact": "Portfolio diversification"
-      },
-      {
-        "year": "2019",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Tiffany acquisition",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "$15.8B deal for iconic jeweler.",
-        "impact": "Luxury market consolidation"
+        "source": "https://en.wikipedia.org/wiki/LVMH"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -677,69 +595,47 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Finance & Investments",
+    "sector": "Finance",
     "grokipediaLink": "https://grok.x.ai/wiki/warren-buffett",
     "forbesProfile": "https://www.forbes.com/profile/warren-buffett/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Warren_Buffett",
     "wealthBreakdown": [
       {
         "entity": "Berkshire Hathaway",
-        "stakePct": null,
-        "valueUsdB": 143.4,
-        "type": "private"
+        "ticker": "BRK.A",
+        "stakePct": 15.6,
+        "valueUsdB": 135,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "berkshire_hathaway",
+        "id": "berkshire",
         "name": "Berkshire Hathaway",
-        "role": "founder",
-        "status": "private"
+        "role": "chairman_ceo",
+        "founded": 1955,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Berkshire Hathaway in finance & investments.",
+    "summary": "Chairman and CEO of Berkshire Hathaway.",
     "timeline": [
       {
         "year": "1956",
         "type": "founding",
-        "entityId": null,
-        "title": "Founded Buffett Partnership",
+        "entityId": "berkshire",
+        "title": "Started investment partnership",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Investment partnership in Omaha.",
-        "impact": "Value investing track record"
+        "source": "https://en.wikipedia.org/wiki/Warren_Buffett"
       },
       {
         "year": "1965",
-        "type": "milestone",
-        "entityId": "berkshire_hathaway",
+        "type": "acquisition",
+        "entityId": "berkshire",
         "title": "Took control of Berkshire Hathaway",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Transformed textile firm into conglomerate.",
-        "impact": "Compounding machine"
-      },
-      {
-        "year": "1988",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Major Coca-Cola stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Long-term consumer brand holding.",
-        "impact": "Iconic portfolio position"
-      },
-      {
-        "year": "2008",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Goldman Sachs investment",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Deployed capital during financial crisis.",
-        "impact": "Crisis-era opportunism"
+        "source": "https://www.berkshirehathaway.com"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -753,69 +649,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Spain",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/amancio-ortega",
     "forbesProfile": "https://www.forbes.com/profile/amancio-ortega/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Amancio_Ortega",
     "wealthBreakdown": [
       {
-        "entity": "Zara",
-        "stakePct": null,
-        "valueUsdB": 141.6,
-        "type": "private"
+        "entity": "Inditex",
+        "ticker": "ITX.MC",
+        "stakePct": 59,
+        "valueUsdB": 85,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "zara",
-        "name": "Zara",
+        "id": "inditex",
+        "name": "Inditex (Zara)",
         "role": "founder",
-        "status": "private"
+        "founded": 1975,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Zara in fashion & retail.",
+    "summary": "Founder of Inditex (Zara).",
     "timeline": [
       {
         "year": "1975",
-        "type": "milestone",
-        "entityId": "zara",
-        "title": "Opened first Zara store",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Fast-fashion model in La Coruña, Spain.",
-        "impact": "Retail innovation"
-      },
-      {
-        "year": "1985",
         "type": "founding",
-        "entityId": null,
-        "title": "Founded Inditex",
+        "entityId": "inditex",
+        "title": "Founded Zara",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Parent company for Zara and related brands.",
-        "impact": "Global fashion group"
-      },
-      {
-        "year": "2001",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Inditex IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "One of largest fashion IPOs in Europe.",
-        "impact": "Wealth crystallization"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Global expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Thousands of stores across 90+ markets.",
-        "impact": "Fast-fashion dominance"
+        "source": "https://en.wikipedia.org/wiki/Amancio_Ortega"
       }
     ],
     "firstFortuneDecade": "1970s"
@@ -829,69 +695,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/rob-walton",
     "forbesProfile": "https://www.forbes.com/profile/rob-walton/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Rob_Walton_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Rob_Walton",
     "wealthBreakdown": [
       {
         "entity": "Walmart",
-        "stakePct": null,
-        "valueUsdB": 139.2,
-        "type": "private"
+        "ticker": "WMT",
+        "stakePct": 15,
+        "valueUsdB": 75,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "walmart",
         "name": "Walmart",
-        "role": "founder",
-        "status": "private"
+        "role": "major_shareholder",
+        "founded": 1962,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "summary": "Walmart heirs.",
     "timeline": [
       {
         "year": "1962",
-        "type": "milestone",
+        "type": "founding",
         "entityId": "walmart",
-        "title": "Sam Walton opened first Walmart",
+        "title": "Walmart founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Family retail dynasty began in Arkansas.",
-        "impact": "Discount retail revolution"
-      },
-      {
-        "year": "1970",
-        "type": "milestone",
-        "entityId": "walmart",
-        "title": "Walmart went public",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Walton family retained controlling stake.",
-        "impact": "Generational wealth"
-      },
-      {
-        "year": "1992",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Sam Walton died",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Fortune passed to Helen Walton and children.",
-        "impact": "Family inheritance"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Dividend dynasty",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Walmart dividends and share appreciation sustained fortune.",
-        "impact": "Largest U.S. retail fortune"
+        "source": "https://en.wikipedia.org/wiki/Walmart"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -905,29 +741,31 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/jim-walton",
     "forbesProfile": "https://www.forbes.com/profile/jim-walton/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Jim_Walton_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Jim_Walton",
     "wealthBreakdown": [
       {
         "entity": "Walmart",
-        "stakePct": null,
-        "valueUsdB": 136.5,
-        "type": "private"
+        "ticker": "WMT",
+        "stakePct": 14,
+        "valueUsdB": 73,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "walmart",
         "name": "Walmart",
-        "role": "founder",
-        "status": "private"
+        "role": "major_shareholder",
+        "founded": 1962,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "summary": "Walmart heir.",
     "timeline": [
       {
         "year": "1962",
@@ -935,39 +773,7 @@
         "entityId": "walmart",
         "title": "Walmart founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Youngest son of Sam Walton joined family business.",
-        "impact": "Retail empire roots"
-      },
-      {
-        "year": "1970",
-        "type": "ipo",
-        "entityId": "walmart",
-        "title": "Walmart IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Family retained majority economic interest.",
-        "impact": "Long-term compounding"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Chaired Arvest Bank",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Regional banking arm of Walton interests.",
-        "impact": "Diversified family holdings"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Walton family fortune",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Among largest shareholders of Walmart.",
-        "impact": "Inherited billionaire status"
+        "source": "https://en.wikipedia.org/wiki/Walmart"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -981,69 +787,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/alice-walton",
     "forbesProfile": "https://www.forbes.com/profile/alice-walton/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Alice_Walton",
     "wealthBreakdown": [
       {
         "entity": "Walmart",
-        "stakePct": null,
-        "valueUsdB": 127.5,
-        "type": "private"
+        "ticker": "WMT",
+        "stakePct": 13,
+        "valueUsdB": 72,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "walmart",
         "name": "Walmart",
-        "role": "founder",
-        "status": "private"
+        "role": "major_shareholder",
+        "founded": 1962,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "summary": "Walmart heir.",
     "timeline": [
       {
         "year": "1962",
-        "type": "milestone",
+        "type": "founding",
         "entityId": "walmart",
-        "title": "Walmart origins",
+        "title": "Walmart founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Daughter of Sam Walton; family built discount retail giant.",
-        "impact": "Inherited stake"
-      },
-      {
-        "year": "1970",
-        "type": "milestone",
-        "entityId": "walmart",
-        "title": "Walmart public listing",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Walton siblings became among richest Americans.",
-        "impact": "Generational wealth"
-      },
-      {
-        "year": "2011",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Opened Crystal Bridges",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "World-class American art museum in Bentonville.",
-        "impact": "Philanthropic legacy"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Art and philanthropy",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Major arts patron; Walton family governance.",
-        "impact": "Cultural impact"
+        "source": "https://en.wikipedia.org/wiki/Walmart"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -1057,69 +833,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Mexico",
     "sector": "Telecom",
-    "grokipediaLink": "https://grok.x.ai/wiki/carlos-slim-helu",
-    "forbesProfile": "https://www.forbes.com/profile/carlos-slim-helu/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Carlos_Slim_Helu_&_family",
+    "grokipediaLink": "https://grok.x.ai/wiki/carlos-slim",
+    "forbesProfile": "https://www.forbes.com/profile/carlos-slim/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Carlos_Slim",
     "wealthBreakdown": [
       {
-        "entity": "Telecom",
-        "stakePct": null,
-        "valueUsdB": 127.0,
-        "type": "private"
+        "entity": "América Móvil",
+        "ticker": "AMX",
+        "stakePct": 55,
+        "valueUsdB": 80,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "telecom",
-        "name": "Telecom",
-        "role": "founder",
-        "status": "private"
+        "id": "america-movil",
+        "name": "América Móvil",
+        "role": "major_shareholder",
+        "founded": 2000,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Telecom in telecom.",
+    "summary": "Owner of América Móvil.",
     "timeline": [
       {
-        "year": "1960s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Early investments",
+        "year": "1980s",
+        "type": "acquisition",
+        "entityId": "america-movil",
+        "title": "Acquired telecom assets",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Bought distressed Mexican businesses after crises.",
-        "impact": "Contrarian investing"
-      },
-      {
-        "year": "1990",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Privatization wave",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Acquired Telmex and other state assets.",
-        "impact": "Telecom monopoly"
-      },
-      {
-        "year": "2000",
-        "type": "milestone",
-        "entityId": null,
-        "title": "América Móvil expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Built Latin America's largest mobile carrier.",
-        "impact": "Regional telecom dominance"
-      },
-      {
-        "year": "2007",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Brief world's richest",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Surpassed Bill Gates during commodities boom.",
-        "impact": "Peak global wealth rank"
+        "source": "https://en.wikipedia.org/wiki/Carlos_Slim"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -1133,7 +879,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/steve-ballmer",
@@ -1142,60 +888,38 @@
     "wealthBreakdown": [
       {
         "entity": "Microsoft",
-        "stakePct": null,
-        "valueUsdB": 125.7,
-        "type": "private"
+        "ticker": "MSFT",
+        "stakePct": 4,
+        "valueUsdB": 105,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "microsoft",
         "name": "Microsoft",
-        "role": "founder",
-        "status": "private"
+        "role": "former_ceo",
+        "founded": 1975,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Microsoft in technology.",
+    "summary": "Former CEO of Microsoft; major Clippers owner.",
     "timeline": [
       {
         "year": "1980",
-        "type": "milestone",
+        "type": "joined",
         "entityId": "microsoft",
         "title": "Joined Microsoft",
         "valuationUsdB": null,
-        "source": null,
-        "description": "30th employee; first business manager hired by Gates.",
-        "impact": "Early Microsoft growth"
-      },
-      {
-        "year": "1998",
-        "type": "milestone",
-        "entityId": "microsoft",
-        "title": "President of Microsoft",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Led sales and operations through dot-com era.",
-        "impact": "Enterprise scale"
+        "source": "https://en.wikipedia.org/wiki/Microsoft"
       },
       {
         "year": "2000",
-        "type": "milestone",
+        "type": "leadership",
         "entityId": "microsoft",
         "title": "CEO of Microsoft",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Succeeded Bill Gates; Windows and Office era.",
-        "impact": "Peak Microsoft dominance"
-      },
-      {
-        "year": "2014",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Bought LA Clippers",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Retired from Microsoft; purchased NBA team for $2B.",
-        "impact": "Sports ownership"
+        "source": "https://www.microsoft.com"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -1209,69 +933,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Finance & Investments",
+    "sector": "Media",
     "grokipediaLink": "https://grok.x.ai/wiki/michael-bloomberg",
     "forbesProfile": "https://www.forbes.com/profile/michael-bloomberg/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Michael_Bloomberg",
     "wealthBreakdown": [
       {
         "entity": "Bloomberg LP",
-        "stakePct": null,
-        "valueUsdB": 109.4,
+        "stakePct": 88,
+        "valueUsdB": 60,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "bloomberg_lp",
+        "id": "bloomberg",
         "name": "Bloomberg LP",
         "role": "founder",
+        "founded": 1981,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Bloomberg LP in finance & investments.",
+    "summary": "Founder of Bloomberg LP.",
     "timeline": [
       {
         "year": "1981",
         "type": "founding",
-        "entityId": "bloomberg_lp",
+        "entityId": "bloomberg",
         "title": "Founded Bloomberg LP",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Financial data terminals after Salomon Brothers.",
-        "impact": "Terminal monopoly"
-      },
-      {
-        "year": "1990",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Global expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Bloomberg terminals became Wall Street standard.",
-        "impact": "Data empire"
-      },
-      {
-        "year": "2001",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Elected NYC mayor",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Three terms focusing on finance and public health.",
-        "impact": "Political influence"
-      },
-      {
-        "year": "2019",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Presidential campaign",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Self-funded run; continued philanthropy.",
-        "impact": "Media and policy reach"
+        "source": "https://en.wikipedia.org/wiki/Michael_Bloomberg"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -1361,7 +1054,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/bill-gates",
@@ -1370,60 +1063,30 @@
     "wealthBreakdown": [
       {
         "entity": "Microsoft",
-        "stakePct": null,
-        "valueUsdB": 103.6,
-        "type": "private"
+        "ticker": "MSFT",
+        "stakePct": 1.3,
+        "valueUsdB": 110,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "microsoft",
         "name": "Microsoft",
-        "role": "founder",
-        "status": "private"
+        "role": "co-founder",
+        "founded": 1975,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Microsoft in technology.",
+    "summary": "Co-founder of Microsoft; major philanthropist.",
     "timeline": [
       {
         "year": "1975",
         "type": "founding",
         "entityId": "microsoft",
-        "title": "Founded Microsoft",
+        "title": "Co-founded Microsoft",
         "valuationUsdB": null,
-        "source": null,
-        "description": "With Paul Allen; BASIC for Altair 8800.",
-        "impact": "PC software revolution"
-      },
-      {
-        "year": "1980",
-        "type": "milestone",
-        "entityId": null,
-        "title": "IBM PC DOS deal",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Licensed MS-DOS for IBM personal computer.",
-        "impact": "Operating system standard"
-      },
-      {
-        "year": "1986",
-        "type": "ipo",
-        "entityId": "microsoft",
-        "title": "Microsoft IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Became youngest billionaire at the time.",
-        "impact": "Software fortune"
-      },
-      {
-        "year": "2000",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Bill & Melinda Gates Foundation",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Shifted focus to global health and education philanthropy.",
-        "impact": "Philanthropic legacy"
+        "source": "https://en.wikipedia.org/wiki/Microsoft"
       }
     ],
     "firstFortuneDecade": "1970s"
@@ -1513,69 +1176,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "France",
-    "sector": "Fashion & Retail",
-    "grokipediaLink": "https://grok.x.ai/wiki/francoise-bettencourt-meyers",
-    "forbesProfile": "https://www.forbes.com/profile/francoise-bettencourt-meyers/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Francoise_Bettencourt_Meyers_&_family",
+    "sector": "Luxury Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/fran%C3%A7oise-bettencourt-meyers",
+    "forbesProfile": "https://www.forbes.com/profile/fran%C3%A7oise-bettencourt-meyers/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers",
     "wealthBreakdown": [
       {
         "entity": "L'Oréal",
-        "stakePct": null,
-        "valueUsdB": 95.0,
-        "type": "private"
+        "ticker": "OR.PA",
+        "stakePct": 33,
+        "valueUsdB": 90,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "l_or_al",
+        "id": "loreal",
         "name": "L'Oréal",
-        "role": "founder",
-        "status": "private"
+        "role": "major_shareholder",
+        "founded": 1909,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from L'Oréal in fashion & retail.",
+    "summary": "Heiress of L'Oréal.",
     "timeline": [
       {
-        "year": "1909",
-        "type": "founding",
-        "entityId": "l_or_al",
-        "title": "L'Oréal founded",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Grandfather Eugène Schueller created cosmetics giant.",
-        "impact": "Family dynasty origin"
-      },
-      {
-        "year": "1957",
-        "type": "liquidity",
-        "entityId": "l_or_al",
+        "year": "1950s",
+        "type": "inheritance",
+        "entityId": "loreal",
         "title": "Inherited L'Oréal stake",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Mother Liliane Bettencourt held controlling interest.",
-        "impact": "Generational transfer"
-      },
-      {
-        "year": "2017",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Inherited fortune",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Became world's richest woman after mother's death.",
-        "impact": "Cosmetics empire heiress"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": "l_or_al",
-        "title": "L'Oréal growth",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Beauty brands thrived in global markets.",
-        "impact": "Sustained family wealth"
+        "source": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -1665,7 +1298,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "India",
     "sector": "Diversified",
     "grokipediaLink": "https://grok.x.ai/wiki/mukesh-ambani",
@@ -1673,61 +1306,31 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Mukesh_Ambani",
     "wealthBreakdown": [
       {
-        "entity": "Diversified",
-        "stakePct": null,
-        "valueUsdB": 86.5,
-        "type": "private"
+        "entity": "Reliance Industries",
+        "ticker": "RELIANCE.NS",
+        "stakePct": 45,
+        "valueUsdB": 115,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "diversified",
-        "name": "Diversified",
-        "role": "founder",
-        "status": "private"
+        "id": "reliance",
+        "name": "Reliance Industries",
+        "role": "chairman",
+        "founded": 1966,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Diversified in diversified.",
+    "summary": "Chairman of Reliance Industries.",
     "timeline": [
       {
         "year": "1981",
-        "type": "milestone",
-        "entityId": null,
+        "type": "leadership",
+        "entityId": "reliance",
         "title": "Joined Reliance",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Son of founder Dhirubhai Ambani.",
-        "impact": "Petrochemicals dynasty"
-      },
-      {
-        "year": "2002",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Led Reliance after split",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Took refining and petrochemicals businesses.",
-        "impact": "Industrial conglomerate"
-      },
-      {
-        "year": "2016",
-        "type": "founding",
-        "entityId": null,
-        "title": "Launched Jio",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Disrupted Indian telecom with cheap 4G data.",
-        "impact": "Digital India platform"
-      },
-      {
-        "year": "2020",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Jio Platforms investments",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Raised billions from Facebook, Google, others.",
-        "impact": "Tech conglomerate pivot"
+        "source": "https://en.wikipedia.org/wiki/Mukesh_Ambani"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -1741,7 +1344,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "India",
     "sector": "Diversified",
     "grokipediaLink": "https://grok.x.ai/wiki/gautam-adani",
@@ -1749,73 +1352,30 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Gautam_Adani",
     "wealthBreakdown": [
       {
-        "entity": "Infrastructure",
-        "stakePct": null,
-        "valueUsdB": 42.5,
-        "type": "private"
-      },
-      {
-        "entity": "commodities",
-        "stakePct": null,
-        "valueUsdB": 42.5,
+        "entity": "Adani Group",
+        "stakePct": 60,
+        "valueUsdB": 105,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "infrastructure",
-        "name": "Infrastructure",
+        "id": "adani",
+        "name": "Adani Group",
         "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "commodities",
-        "name": "commodities",
-        "role": "founder",
-        "status": "private"
+        "founded": 1988,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Infrastructure, commodities in diversified.",
+    "summary": "Founder of Adani Group.",
     "timeline": [
       {
-        "year": "1988",
+        "year": "1998",
         "type": "founding",
-        "entityId": null,
-        "title": "Founded Adani Enterprises",
+        "entityId": "adani",
+        "title": "Adani Group founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Commodity trading in Ahmedabad.",
-        "impact": "Trading house origins"
-      },
-      {
-        "year": "1995",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Mundra Port development",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Built India's largest private port.",
-        "impact": "Infrastructure empire"
-      },
-      {
-        "year": "2008",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Adani Power IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Expanded into energy generation.",
-        "impact": "Energy diversification"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Green energy push",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Solar, wind, and hydrogen investments at scale.",
-        "impact": "India infrastructure titan"
+        "source": "https://en.wikipedia.org/wiki/Gautam_Adani"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -1829,81 +1389,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Diversified",
     "grokipediaLink": "https://grok.x.ai/wiki/julia-koch",
     "forbesProfile": "https://www.forbes.com/profile/julia-koch/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Julia_Koch_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Julia_Koch",
     "wealthBreakdown": [
       {
-        "entity": "Koch",
-        "stakePct": null,
-        "valueUsdB": 40.6,
-        "type": "private"
-      },
-      {
-        "entity": "Inc.",
-        "stakePct": null,
-        "valueUsdB": 40.6,
+        "entity": "Koch Industries",
+        "stakePct": 42,
+        "valueUsdB": 66,
         "type": "private"
       }
     ],
     "entities": [
       {
         "id": "koch",
-        "name": "Koch",
-        "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "inc",
-        "name": "Inc.",
-        "role": "founder",
+        "name": "Koch Industries",
+        "role": "co-owner",
+        "founded": 1940,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Koch, Inc in diversified.",
+    "summary": "Koch Industries heir.",
     "timeline": [
       {
         "year": "1940",
         "type": "founding",
         "entityId": "koch",
-        "title": "Fred Koch founded oil business",
+        "title": "Koch Industries founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Family engineering and refining roots.",
-        "impact": "Koch Industries origin"
-      },
-      {
-        "year": "1967",
-        "type": "milestone",
-        "entityId": "koch",
-        "title": "Charles and David Koch expanded",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Built conglomerate across energy and chemicals.",
-        "impact": "Private conglomerate scale"
-      },
-      {
-        "year": "2019",
-        "type": "liquidity",
-        "entityId": "koch",
-        "title": "Inherited David Koch stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Julia Koch and children received 42% after David's death.",
-        "impact": "Billionaire inheritance"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": "koch",
-        "title": "Koch Industries growth",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Diversified manufacturing, ranching, and investments.",
-        "impact": "Family fortune"
+        "source": "https://en.wikipedia.org/wiki/Koch_Industries"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -1917,81 +1434,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Japan",
-    "sector": "Finance & Investments",
+    "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/masayoshi-son",
     "forbesProfile": "https://www.forbes.com/profile/masayoshi-son/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Masayoshi_Son",
     "wealthBreakdown": [
       {
-        "entity": "Telecom",
-        "stakePct": null,
-        "valueUsdB": 38.3,
-        "type": "private"
-      },
-      {
-        "entity": "Investments",
-        "stakePct": null,
-        "valueUsdB": 38.3,
-        "type": "private"
+        "entity": "SoftBank",
+        "ticker": "9984.T",
+        "stakePct": 21,
+        "valueUsdB": 28,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "telecom",
-        "name": "Telecom",
+        "id": "softbank",
+        "name": "SoftBank",
         "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "investments",
-        "name": "Investments",
-        "role": "founder",
-        "status": "private"
+        "founded": 1981,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Telecom, Investments in finance & investments.",
+    "summary": "Founder of SoftBank.",
     "timeline": [
       {
         "year": "1981",
         "type": "founding",
-        "entityId": null,
+        "entityId": "softbank",
         "title": "Founded SoftBank",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Software distribution in Tokyo.",
-        "impact": "Japanese tech investor"
-      },
-      {
-        "year": "1996",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Yahoo Japan stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Early internet bet in Japan.",
-        "impact": "Portal dominance"
-      },
-      {
-        "year": "2000",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Alibaba investment",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "$20M bet became one of history's best VC returns.",
-        "impact": "Legendary venture return"
-      },
-      {
-        "year": "2017",
-        "type": "founding",
-        "entityId": null,
-        "title": "Vision Fund launched",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "$100B fund backed Uber, WeWork, ARM.",
-        "impact": "Global tech investing"
+        "source": "https://en.wikipedia.org/wiki/Masayoshi_Son"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -2005,81 +1480,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Diversified",
     "grokipediaLink": "https://grok.x.ai/wiki/charles-koch",
     "forbesProfile": "https://www.forbes.com/profile/charles-koch/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Charles_Koch_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Charles_Koch",
     "wealthBreakdown": [
       {
-        "entity": "Koch",
-        "stakePct": null,
-        "valueUsdB": 36.9,
-        "type": "private"
-      },
-      {
-        "entity": "Inc.",
-        "stakePct": null,
-        "valueUsdB": 36.9,
+        "entity": "Koch Industries",
+        "stakePct": 42,
+        "valueUsdB": 68,
         "type": "private"
       }
     ],
     "entities": [
       {
         "id": "koch",
-        "name": "Koch",
-        "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "inc",
-        "name": "Inc.",
-        "role": "founder",
+        "name": "Koch Industries",
+        "role": "co-owner",
+        "founded": 1940,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Koch, Inc in diversified.",
+    "summary": "Koch Industries heir.",
     "timeline": [
       {
-        "year": "1967",
-        "type": "milestone",
+        "year": "1940",
+        "type": "founding",
         "entityId": "koch",
-        "title": "Took over Koch Industries",
+        "title": "Koch Industries founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "With brother David after father's death.",
-        "impact": "Conglomerate leadership"
-      },
-      {
-        "year": "1970s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Libertarian philosophy",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Market-based management and advocacy.",
-        "impact": "Political influence"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Georgia-Pacific acquisition",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "$21B deal expanded paper and building products.",
-        "impact": "Industrial scale"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": "koch",
-        "title": "Koch network",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Major donor to policy and educational institutions.",
-        "impact": "Institutional influence"
+        "source": "https://en.wikipedia.org/wiki/Koch_Industries"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -2093,7 +1525,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "China",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/zhang-yiming",
@@ -2101,61 +1533,30 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Zhang_Yiming",
     "wealthBreakdown": [
       {
-        "entity": "TikTok",
-        "stakePct": null,
-        "valueUsdB": 69.3,
+        "entity": "ByteDance",
+        "stakePct": 20,
+        "valueUsdB": 48,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "tiktok",
-        "name": "TikTok",
+        "id": "bytedance",
+        "name": "ByteDance",
         "role": "founder",
+        "founded": 2012,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from TikTok in technology.",
+    "summary": "Founder of ByteDance (TikTok).",
     "timeline": [
       {
         "year": "2012",
         "type": "founding",
-        "entityId": null,
+        "entityId": "bytedance",
         "title": "Founded ByteDance",
         "valuationUsdB": null,
-        "source": null,
-        "description": "News aggregator Toutiao launched in Beijing.",
-        "impact": "Algorithmic content"
-      },
-      {
-        "year": "2016",
-        "type": "founding",
-        "entityId": "tiktok",
-        "title": "Launched Douyin / TikTok",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Short-video app exploded globally.",
-        "impact": "Global social phenomenon"
-      },
-      {
-        "year": "2018",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Musical.ly acquisition",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Merged into TikTok for U.S. expansion.",
-        "impact": "Teen platform dominance"
-      },
-      {
-        "year": "2021",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Stepped down as CEO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "ByteDance valued over $300B at peak.",
-        "impact": "AI content empire"
+        "source": "https://en.wikipedia.org/wiki/Zhang_Yiming"
       }
     ],
     "firstFortuneDecade": "2010s"
@@ -2169,69 +1570,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Japan",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/tadashi-yanai",
     "forbesProfile": "https://www.forbes.com/profile/tadashi-yanai/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Tadashi_Yanai_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Tadashi_Yanai",
     "wealthBreakdown": [
       {
-        "entity": "Fashion retail",
-        "stakePct": null,
-        "valueUsdB": 68.2,
-        "type": "private"
+        "entity": "Fast Retailing",
+        "ticker": "9983.T",
+        "stakePct": 58,
+        "valueUsdB": 45,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "fashion_retail",
-        "name": "Fashion retail",
+        "id": "fast-retailing",
+        "name": "Fast Retailing (Uniqlo)",
         "role": "founder",
-        "status": "private"
+        "founded": 1984,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Fashion retail in fashion & retail.",
+    "summary": "Founder of Uniqlo.",
     "timeline": [
       {
         "year": "1984",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Opened first Uniqlo store",
+        "type": "founding",
+        "entityId": "fast-retailing",
+        "title": "Founded Uniqlo",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Unique Clothing Warehouse in Hiroshima.",
-        "impact": "Fast retail basics"
-      },
-      {
-        "year": "1991",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Renamed to Uniqlo",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Affordable quality casual wear model.",
-        "impact": "Brand identity"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Global expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Stores in London, New York, and across Asia.",
-        "impact": "International fashion"
-      },
-      {
-        "year": "2019",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Fast Retailing scale",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Parent of Uniqlo, GU, and Theory brands.",
-        "impact": "Asia's top retailer"
+        "source": "https://en.wikipedia.org/wiki/Tadashi_Yanai"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -2333,69 +1704,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Mexico",
-    "sector": "Metals & Mining",
-    "grokipediaLink": "https://grok.x.ai/wiki/germ-n-larrea-mota-velasco",
-    "forbesProfile": "https://www.forbes.com/profile/germ-n-larrea-mota-velasco/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Germán_Larrea_Mota_Velasco_&_family",
+    "sector": "Mining",
+    "grokipediaLink": "https://grok.x.ai/wiki/germ%C3%A1n-larrea-mota-velasco",
+    "forbesProfile": "https://www.forbes.com/profile/germ%C3%A1n-larrea-mota-velasco/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Germ%C3%A1n_Larrea_Mota-Velasco",
     "wealthBreakdown": [
       {
-        "entity": "Mining",
-        "stakePct": null,
-        "valueUsdB": 63.1,
-        "type": "private"
+        "entity": "Grupo México",
+        "ticker": "GMEXICOB.MX",
+        "stakePct": 65,
+        "valueUsdB": 55,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "mining",
-        "name": "Mining",
-        "role": "founder",
-        "status": "private"
+        "id": "grupo-mexico",
+        "name": "Grupo México",
+        "role": "major_shareholder",
+        "founded": 1978,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Mining in metals & mining.",
+    "summary": "Mining magnate.",
     "timeline": [
       {
-        "year": "1976",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Grupo México origins",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Mining and infrastructure conglomerate in Mexico.",
-        "impact": "Mining dynasty"
-      },
-      {
-        "year": "1990",
+        "year": "1980s",
         "type": "acquisition",
-        "entityId": "mining",
+        "entityId": "grupo-mexico",
         "title": "Acquired mining assets",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Consolidated copper and railroad holdings.",
-        "impact": "Resource empire"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Southern Copper control",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Among world's largest copper producers.",
-        "impact": "Commodity wealth"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Infrastructure expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Railroads and transport under Grupo México.",
-        "impact": "Mexican industrial titan"
+        "source": "https://en.wikipedia.org/wiki/Germ%C3%A1n_Larrea_Mota-Velasco"
       }
     ],
     "firstFortuneDecade": "1970s"
@@ -2485,81 +1826,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "China",
-    "sector": "Food & Beverage",
+    "sector": "Beverages",
     "grokipediaLink": "https://grok.x.ai/wiki/zhong-shanshan",
     "forbesProfile": "https://www.forbes.com/profile/zhong-shanshan/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Zhong_Shanshan",
     "wealthBreakdown": [
       {
-        "entity": "Beverages",
-        "stakePct": null,
-        "valueUsdB": 30.7,
-        "type": "private"
-      },
-      {
-        "entity": "pharmaceuticals",
-        "stakePct": null,
-        "valueUsdB": 30.7,
-        "type": "private"
+        "entity": "Nongfu Spring",
+        "ticker": "9633.HK",
+        "stakePct": 68,
+        "valueUsdB": 95,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "beverages",
-        "name": "Beverages",
+        "id": "nongfu",
+        "name": "Nongfu Spring",
         "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "pharmaceuticals",
-        "name": "pharmaceuticals",
-        "role": "founder",
-        "status": "private"
+        "founded": 1996,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Beverages, pharmaceuticals in food & beverage.",
+    "summary": "Founder of Nongfu Spring.",
     "timeline": [
       {
         "year": "1996",
         "type": "founding",
-        "entityId": null,
+        "entityId": "nongfu",
         "title": "Founded Nongfu Spring",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Bottled water brand in Hangzhou.",
-        "impact": "China's top water brand"
-      },
-      {
-        "year": "2000s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Beverage expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Tea drinks and juice under Nongfu portfolio.",
-        "impact": "Consumer staples leader"
-      },
-      {
-        "year": "2020",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Nongfu Spring IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Hong Kong listing made him briefly China's richest.",
-        "impact": "Bottled water fortune"
-      },
-      {
-        "year": "2021",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Beijing Wantai stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Vaccine and diagnostics biotech holdings.",
-        "impact": "Healthcare diversification"
+        "source": "https://en.wikipedia.org/wiki/Zhong_Shanshan"
       }
     ],
     "firstFortuneDecade": "1990s"
@@ -2573,69 +1872,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
-    "country": "Hong Kong",
-    "sector": "Energy",
+    "age": "—",
+    "country": "China",
+    "sector": "Batteries",
     "grokipediaLink": "https://grok.x.ai/wiki/robin-zeng",
     "forbesProfile": "https://www.forbes.com/profile/robin-zeng/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Robin_Zeng",
     "wealthBreakdown": [
       {
-        "entity": "Batteries",
-        "stakePct": null,
-        "valueUsdB": 61.3,
-        "type": "private"
+        "entity": "CATL",
+        "ticker": "300750.SZ",
+        "stakePct": 25,
+        "valueUsdB": 29,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "batteries",
-        "name": "Batteries",
+        "id": "catl",
+        "name": "CATL",
         "role": "founder",
-        "status": "private"
+        "founded": 2011,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Batteries in energy.",
+    "summary": "Founder of CATL.",
     "timeline": [
-      {
-        "year": "1999",
-        "type": "founding",
-        "entityId": null,
-        "title": "Founded ATL",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Amperex Technology Limited for lithium batteries.",
-        "impact": "Battery pioneer"
-      },
       {
         "year": "2011",
         "type": "founding",
-        "entityId": null,
+        "entityId": "catl",
         "title": "Founded CATL",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Contemporary Amperex Technology for EV cells.",
-        "impact": "EV battery leader"
-      },
-      {
-        "year": "2018",
-        "type": "ipo",
-        "entityId": null,
-        "title": "CATL IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Shenzhen listing funded global expansion.",
-        "impact": "Battery giant public"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "EV supply dominance",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Supplied BMW, Tesla, Volkswagen, and others.",
-        "impact": "Clean energy infrastructure"
+        "source": "https://en.wikipedia.org/wiki/Robin_Zeng"
       }
     ],
     "firstFortuneDecade": "1990s"
@@ -2725,7 +1994,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "China",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/ma-huateng",
@@ -2733,61 +2002,31 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Ma_Huateng",
     "wealthBreakdown": [
       {
-        "entity": "Online games",
-        "stakePct": null,
-        "valueUsdB": 48.7,
-        "type": "private"
+        "entity": "Tencent",
+        "ticker": "TCEHY",
+        "stakePct": 8.5,
+        "valueUsdB": 50,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "online_games",
-        "name": "Online games",
+        "id": "tencent",
+        "name": "Tencent",
         "role": "founder",
-        "status": "private"
+        "founded": 1998,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Online games in technology.",
+    "summary": "Founder of Tencent.",
     "timeline": [
       {
         "year": "1998",
         "type": "founding",
-        "entityId": null,
-        "title": "Co-founded Tencent",
+        "entityId": "tencent",
+        "title": "Founded Tencent",
         "valuationUsdB": null,
-        "source": null,
-        "description": "With college friends in Shenzhen.",
-        "impact": "Chinese internet giant"
-      },
-      {
-        "year": "1999",
-        "type": "founding",
-        "entityId": null,
-        "title": "Launched QQ",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Instant messaging captured China's youth.",
-        "impact": "Social platform base"
-      },
-      {
-        "year": "2011",
-        "type": "founding",
-        "entityId": null,
-        "title": "Launched WeChat",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Super-app combining messaging, payments, and services.",
-        "impact": "One billion users"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Gaming and investments",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Riot Games, Epic, and mobile gaming revenue.",
-        "impact": "Digital entertainment empire"
+        "source": "https://en.wikipedia.org/wiki/Ma_Huateng"
       }
     ],
     "firstFortuneDecade": "1990s"
@@ -2801,7 +2040,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Hong Kong",
     "sector": "Diversified",
     "grokipediaLink": "https://grok.x.ai/wiki/li-ka-shing",
@@ -2809,61 +2048,31 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Li_Ka-shing",
     "wealthBreakdown": [
       {
-        "entity": "Diversified",
-        "stakePct": null,
-        "valueUsdB": 48.4,
-        "type": "private"
+        "entity": "CK Hutchison",
+        "ticker": "0001.HK",
+        "stakePct": 30,
+        "valueUsdB": 38,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "diversified",
-        "name": "Diversified",
+        "id": "ck-hutchison",
+        "name": "CK Hutchison",
         "role": "founder",
-        "status": "private"
+        "founded": 1950,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Diversified in diversified.",
+    "summary": "Hong Kong tycoon.",
     "timeline": [
       {
         "year": "1950",
         "type": "founding",
-        "entityId": null,
+        "entityId": "ck-hutchison",
         "title": "Founded Cheung Kong",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Plastic flower factory grew into property.",
-        "impact": "Hong Kong property tycoon"
-      },
-      {
-        "year": "1979",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Acquired Hutchison Whampoa",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Ports, retail, and telecom conglomerate.",
-        "impact": "Global diversification"
-      },
-      {
-        "year": "1987",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Expanded globally",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Ports in Europe, Canada, and Asia.",
-        "impact": "Infrastructure investor"
-      },
-      {
-        "year": "2015",
-        "type": "restructuring",
-        "entityId": null,
-        "title": "CK Hutchison restructuring",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Consolidated ports, retail, and infrastructure.",
-        "impact": "Asia's Superman"
+        "source": "https://en.wikipedia.org/wiki/Li_Ka-shing"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -2877,81 +2086,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Italy",
-    "sector": "Food & Beverage",
+    "sector": "Food",
     "grokipediaLink": "https://grok.x.ai/wiki/giovanni-ferrero",
     "forbesProfile": "https://www.forbes.com/profile/giovanni-ferrero/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Giovanni_Ferrero",
     "wealthBreakdown": [
       {
-        "entity": "Nutella",
-        "stakePct": null,
-        "valueUsdB": 23.9,
-        "type": "private"
-      },
-      {
-        "entity": "chocolates",
-        "stakePct": null,
-        "valueUsdB": 23.9,
+        "entity": "Ferrero",
+        "stakePct": 100,
+        "valueUsdB": 52,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "nutella",
-        "name": "Nutella",
-        "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "chocolates",
-        "name": "chocolates",
-        "role": "founder",
+        "id": "ferrero",
+        "name": "Ferrero",
+        "role": "major_shareholder",
+        "founded": 1946,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Nutella, chocolates in food & beverage.",
+    "summary": "Ferrero chocolate heir.",
     "timeline": [
       {
         "year": "1946",
         "type": "founding",
-        "entityId": null,
-        "title": "Ferrero company founded",
+        "entityId": "ferrero",
+        "title": "Ferrero founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Father Pietro created Nutella predecessor in Alba.",
-        "impact": "Confectionery dynasty"
-      },
-      {
-        "year": "1997",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Took leadership",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "After brother Pietro's death; led global expansion.",
-        "impact": "Family business succession"
-      },
-      {
-        "year": "2011",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Acquired Thorntons",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "British chocolate chain added to portfolio.",
-        "impact": "Global confectionery"
-      },
-      {
-        "year": "2018",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Acquired Nestlé U.S. candy",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Bought Butterfinger and other brands for $2.8B.",
-        "impact": "World's candy leader"
+        "source": "https://en.wikipedia.org/wiki/Ferrero_Spa"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -3597,69 +2763,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Germany",
     "sector": "Logistics",
-    "grokipediaLink": "https://grok.x.ai/wiki/klaus-michael-kuehne",
+    "grokipediaLink": "https://grok.x.ai/wiki/klaus-michael-k%C3%BChne",
     "forbesProfile": "https://www.forbes.com/profile/klaus-michael-kuehne/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Klaus-Michael_Kuehne",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Klaus-Michael_K%C3%BChne",
     "wealthBreakdown": [
       {
-        "entity": "Shipping",
-        "stakePct": null,
-        "valueUsdB": 41.0,
-        "type": "private"
+        "entity": "Kuehne + Nagel",
+        "ticker": "KNIN.SW",
+        "stakePct": 53,
+        "valueUsdB": 31,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "shipping",
-        "name": "Shipping",
-        "role": "founder",
-        "status": "private"
+        "id": "kuehne-nagel",
+        "name": "Kuehne + Nagel",
+        "role": "major_shareholder",
+        "founded": 1890,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Shipping in logistics.",
+    "summary": "Logistics heir.",
     "timeline": [
       {
-        "year": "1933",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Kuehne family logistics",
+        "year": "1890",
+        "type": "founding",
+        "entityId": "kuehne-nagel",
+        "title": "Kuehne + Nagel founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Grandfather founded freight forwarder in Bremen.",
-        "impact": "Logistics dynasty"
-      },
-      {
-        "year": "1958",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Joined Kuehne + Nagel",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Expanded international freight forwarding.",
-        "impact": "Global logistics"
-      },
-      {
-        "year": "1990",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Majority stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Became controlling shareholder of K+N.",
-        "impact": "Shipping fortune"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Hapag-Lloyd investment",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Stake in container shipping line.",
-        "impact": "Integrated logistics wealth"
+        "source": "https://en.wikipedia.org/wiki/Klaus-Michael_K%C3%BChne"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -3749,17 +2885,17 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Finance & Investments",
+    "sector": "Finance",
     "grokipediaLink": "https://grok.x.ai/wiki/abigail-johnson",
     "forbesProfile": "https://www.forbes.com/profile/abigail-johnson/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Abigail_Johnson",
     "wealthBreakdown": [
       {
         "entity": "Fidelity",
-        "stakePct": null,
-        "valueUsdB": 40.5,
+        "stakePct": 24,
+        "valueUsdB": 24,
         "type": "private"
       }
     ],
@@ -3767,11 +2903,12 @@
       {
         "id": "fidelity",
         "name": "Fidelity",
-        "role": "founder",
+        "role": "ceo",
+        "founded": 1946,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Fidelity in finance & investments.",
+    "summary": "Fidelity Investments CEO.",
     "timeline": [
       {
         "year": "1946",
@@ -3779,39 +2916,7 @@
         "entityId": "fidelity",
         "title": "Fidelity founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Grandfather Edward Johnson II started mutual fund firm.",
-        "impact": "Finance dynasty"
-      },
-      {
-        "year": "1988",
-        "type": "milestone",
-        "entityId": "fidelity",
-        "title": "Joined Fidelity",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Abigail Johnson started in customer service.",
-        "impact": "Family business path"
-      },
-      {
-        "year": "2014",
-        "type": "milestone",
-        "entityId": "fidelity",
-        "title": "CEO of Fidelity",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Succeeded father Ned Johnson III.",
-        "impact": "Asset management leader"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Crypto and fintech",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Fidelity launched Bitcoin custody and trading.",
-        "impact": "Modernized family firm"
+        "source": "https://en.wikipedia.org/wiki/Abigail_Johnson"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -3977,17 +3082,17 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "France",
-    "sector": "Fashion & Retail",
+    "sector": "Luxury Goods",
     "grokipediaLink": "https://grok.x.ai/wiki/alain-wertheimer",
     "forbesProfile": "https://www.forbes.com/profile/alain-wertheimer/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Alain_Wertheimer",
     "wealthBreakdown": [
       {
         "entity": "Chanel",
-        "stakePct": null,
-        "valueUsdB": 39.4,
+        "stakePct": 50,
+        "valueUsdB": 42,
         "type": "private"
       }
     ],
@@ -3995,51 +3100,20 @@
       {
         "id": "chanel",
         "name": "Chanel",
-        "role": "founder",
+        "role": "co-owner",
+        "founded": 1909,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Chanel in fashion & retail.",
+    "summary": "Chanel heir.",
     "timeline": [
       {
-        "year": "1920s",
-        "type": "founding",
+        "year": "1954",
+        "type": "inheritance",
         "entityId": "chanel",
-        "title": "Chanel founded",
+        "title": "Inherited Chanel",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Family partnered with Coco Chanel in Paris.",
-        "impact": "Luxury dynasty"
-      },
-      {
-        "year": "1974",
-        "type": "milestone",
-        "entityId": "chanel",
-        "title": "Took control of Chanel",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Alain and Gerard revived dormant fashion house.",
-        "impact": "Luxury revival"
-      },
-      {
-        "year": "1983",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Hired Karl Lagerfeld",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Revitalized Chanel haute couture.",
-        "impact": "Global fashion icon"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": "chanel",
-        "title": "Chanel private empire",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "No public listing; boutiques worldwide.",
-        "impact": "Luxury fortune"
+        "source": "https://en.wikipedia.org/wiki/Alain_Wertheimer"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -4053,17 +3127,17 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "France",
-    "sector": "Fashion & Retail",
+    "sector": "Luxury Goods",
     "grokipediaLink": "https://grok.x.ai/wiki/gerard-wertheimer",
     "forbesProfile": "https://www.forbes.com/profile/gerard-wertheimer/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Gerard_Wertheimer",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/G%C3%A9rard_Wertheimer",
     "wealthBreakdown": [
       {
         "entity": "Chanel",
-        "stakePct": null,
-        "valueUsdB": 39.4,
+        "stakePct": 50,
+        "valueUsdB": 42,
         "type": "private"
       }
     ],
@@ -4071,51 +3145,20 @@
       {
         "id": "chanel",
         "name": "Chanel",
-        "role": "founder",
+        "role": "co-owner",
+        "founded": 1909,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Chanel in fashion & retail.",
+    "summary": "Chanel heir.",
     "timeline": [
       {
-        "year": "1920s",
-        "type": "milestone",
+        "year": "1954",
+        "type": "inheritance",
         "entityId": "chanel",
-        "title": "Chanel partnership",
+        "title": "Inherited Chanel",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Family has owned Chanel since 1920s.",
-        "impact": "Inherited luxury stake"
-      },
-      {
-        "year": "1974",
-        "type": "milestone",
-        "entityId": "chanel",
-        "title": "Chanel revival",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "With brother Alain; rebuilt fashion house.",
-        "impact": "Private luxury giant"
-      },
-      {
-        "year": "2000s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Global boutiques",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Chanel expanded in Asia and Americas.",
-        "impact": "Fashion wealth"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Watch and beauty",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Diversified beyond haute couture.",
-        "impact": "Brother co-owner fortune"
+        "source": "https://en.wikipedia.org/wiki/G%C3%A9rard_Wertheimer"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -4597,69 +3640,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Gambling & Casinos",
+    "sector": "Casinos",
     "grokipediaLink": "https://grok.x.ai/wiki/miriam-adelson",
     "forbesProfile": "https://www.forbes.com/profile/miriam-adelson/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Miriam_Adelson_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Miriam_Adelson",
     "wealthBreakdown": [
       {
-        "entity": "Casinos",
-        "stakePct": null,
-        "valueUsdB": 35.1,
-        "type": "private"
+        "entity": "Las Vegas Sands",
+        "ticker": "LVS",
+        "stakePct": 52,
+        "valueUsdB": 42,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "casinos",
-        "name": "Casinos",
-        "role": "founder",
-        "status": "private"
+        "id": "lvs",
+        "name": "Las Vegas Sands",
+        "role": "major_shareholder",
+        "founded": 1988,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Casinos in gambling & casinos.",
+    "summary": "Casino magnate.",
     "timeline": [
       {
-        "year": "1988",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Married Sheldon Adelson",
+        "year": "1980s",
+        "type": "founding",
+        "entityId": "lvs",
+        "title": "Las Vegas Sands founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Physician became partner in casino empire.",
-        "impact": "Casino dynasty"
-      },
-      {
-        "year": "1989",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Las Vegas Sands",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Sheldon built Venetian and Macau casinos.",
-        "impact": "Gaming empire"
-      },
-      {
-        "year": "2018",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Inherited controlling stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "After Sheldon Adelson died; largest shareholder.",
-        "impact": "Casino fortune heir"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Las Vegas Sands scale",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Sold Las Vegas assets; focused on Asia.",
-        "impact": "Inherited billionaire"
+        "source": "https://en.wikipedia.org/wiki/Miriam_Adelson"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -4673,69 +3686,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "China",
-    "sector": "Manufacturing",
+    "sector": "Appliances",
     "grokipediaLink": "https://grok.x.ai/wiki/he-xiangjian",
     "forbesProfile": "https://www.forbes.com/profile/he-xiangjian/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/He_Xiangjian_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/He_Xiangjian",
     "wealthBreakdown": [
       {
-        "entity": "Home appliances",
-        "stakePct": null,
-        "valueUsdB": 34.9,
-        "type": "private"
+        "entity": "Midea Group",
+        "ticker": "000333.SZ",
+        "stakePct": 35,
+        "valueUsdB": 27,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "home_appliances",
-        "name": "Home appliances",
+        "id": "midea",
+        "name": "Midea Group",
         "role": "founder",
-        "status": "private"
+        "founded": 1968,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Home appliances in manufacturing.",
+    "summary": "Founder of Midea Group.",
     "timeline": [
       {
         "year": "1968",
         "type": "founding",
-        "entityId": null,
+        "entityId": "midea",
         "title": "Founded Midea",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Started with bottle caps in Guangdong.",
-        "impact": "Appliance dynasty"
-      },
-      {
-        "year": "1980s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Electric fans and AC",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Midea became China's appliance leader.",
-        "impact": "Manufacturing scale"
-      },
-      {
-        "year": "2013",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Midea global acquisitions",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Bought Kuka robotics and Toshiba appliances.",
-        "impact": "Global appliance brand"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Midea Group",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Air conditioners and smart home devices worldwide.",
-        "impact": "China manufacturing fortune"
+        "source": "https://en.wikipedia.org/wiki/He_Xiangjian"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -4837,7 +3820,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Diversified",
     "grokipediaLink": "https://grok.x.ai/wiki/len-blavatnik",
@@ -4845,73 +3828,30 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Len_Blavatnik",
     "wealthBreakdown": [
       {
-        "entity": "Music",
-        "stakePct": null,
-        "valueUsdB": 16.4,
-        "type": "private"
-      },
-      {
-        "entity": "chemicals",
-        "stakePct": null,
-        "valueUsdB": 16.4,
+        "entity": "Access Industries",
+        "stakePct": 100,
+        "valueUsdB": 58,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "music",
-        "name": "Music",
+        "id": "access",
+        "name": "Access Industries",
         "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "chemicals",
-        "name": "chemicals",
-        "role": "founder",
+        "founded": 1986,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Music, chemicals in diversified.",
+    "summary": "Founder of Access Industries.",
     "timeline": [
       {
         "year": "1986",
         "type": "founding",
-        "entityId": null,
+        "entityId": "access",
         "title": "Founded Access Industries",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Industrial and media holding company.",
-        "impact": "Conglomerate builder"
-      },
-      {
-        "year": "2003",
-        "type": "milestone",
-        "entityId": null,
-        "title": "TNK-BP oil venture",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Russian oil partnership with BP.",
-        "impact": "Energy fortune"
-      },
-      {
-        "year": "2011",
-        "type": "acquisition",
-        "entityId": "music",
-        "title": "Acquired Warner Music",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Major music label portfolio.",
-        "impact": "Media empire"
-      },
-      {
-        "year": "2018",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "LyondellBasell stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Chemicals and refining investments.",
-        "impact": "Diversified billionaire"
+        "source": "https://en.wikipedia.org/wiki/Len_Blavatnik"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -5621,7 +4561,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/mackenzie-scott",
@@ -5630,60 +4570,30 @@
     "wealthBreakdown": [
       {
         "entity": "Amazon",
-        "stakePct": null,
-        "valueUsdB": 31.1,
-        "type": "private"
+        "ticker": "AMZN",
+        "stakePct": 4,
+        "valueUsdB": 24,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "amazon",
         "name": "Amazon",
-        "role": "founder",
-        "status": "private"
+        "role": "co-founder",
+        "founded": 1994,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Amazon in technology.",
+    "summary": "Amazon co-founder (ex-wife of Jeff Bezos).",
     "timeline": [
       {
-        "year": "1992",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Married Jeff Bezos",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Early Amazon employee and novelist.",
-        "impact": "Amazon early stake"
-      },
-      {
         "year": "1994",
-        "type": "founding",
+        "type": "co-founding",
         "entityId": "amazon",
-        "title": "Amazon founded",
+        "title": "Co-founded Amazon",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Helped start company; early accounting.",
-        "impact": "E-commerce origins"
-      },
-      {
-        "year": "2019",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Divorced Jeff Bezos",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Received 25% of Amazon shares (~$36B).",
-        "impact": "Major stake transfer"
-      },
-      {
-        "year": "2020",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Philanthropic giving",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Donated billions to nonprofits via Yield Giving.",
-        "impact": "Record philanthropy"
+        "source": "https://en.wikipedia.org/wiki/MacKenzie_Scott"
       }
     ],
     "firstFortuneDecade": "1990s"
@@ -5773,69 +4683,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Healthcare",
     "grokipediaLink": "https://grok.x.ai/wiki/thomas-frist-jr",
     "forbesProfile": "https://www.forbes.com/profile/thomas-frist-jr/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Thomas_Frist_Jr_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Thomas_Frist_Jr.",
     "wealthBreakdown": [
       {
-        "entity": "Hospitals",
-        "stakePct": null,
-        "valueUsdB": 30.6,
-        "type": "private"
+        "entity": "HCA Healthcare",
+        "ticker": "HCA",
+        "stakePct": 20,
+        "valueUsdB": 30,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "hospitals",
-        "name": "Hospitals",
+        "id": "hca",
+        "name": "HCA Healthcare",
         "role": "founder",
-        "status": "private"
+        "founded": 1968,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Hospitals in healthcare.",
+    "summary": "HCA Healthcare founder.",
     "timeline": [
       {
         "year": "1968",
         "type": "founding",
-        "entityId": null,
-        "title": "Founded HCA Healthcare",
+        "entityId": "hca",
+        "title": "Founded HCA",
         "valuationUsdB": null,
-        "source": null,
-        "description": "With father Thomas Frist Sr. in Nashville.",
-        "impact": "Hospital chain pioneer"
-      },
-      {
-        "year": "1990s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "HCA expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Largest for-profit hospital operator in U.S.",
-        "impact": "Healthcare scale"
-      },
-      {
-        "year": "2006",
-        "type": "milestone",
-        "entityId": null,
-        "title": "HCA taken private",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Private equity buyout; later re-IPO.",
-        "impact": "Healthcare investing"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Frist family fortune",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Generations lead HCA and healthcare ventures.",
-        "impact": "Hospital billionaire dynasty"
+        "source": "https://en.wikipedia.org/wiki/Thomas_Frist_Jr."
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -6077,69 +4957,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Russia",
-    "sector": "Metals & Mining",
+    "sector": "Metals",
     "grokipediaLink": "https://grok.x.ai/wiki/vladimir-potanin",
     "forbesProfile": "https://www.forbes.com/profile/vladimir-potanin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Vladimir_Potanin",
     "wealthBreakdown": [
       {
-        "entity": "Metals",
-        "stakePct": null,
-        "valueUsdB": 29.7,
-        "type": "private"
+        "entity": "Norilsk Nickel",
+        "ticker": "GMKN.ME",
+        "stakePct": 35,
+        "valueUsdB": 26,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "metals",
-        "name": "Metals",
-        "role": "founder",
-        "status": "private"
+        "id": "norilsk-nickel",
+        "name": "Norilsk Nickel",
+        "role": "major_shareholder",
+        "founded": 1993,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Metals in metals & mining.",
+    "summary": "Metals magnate.",
     "timeline": [
       {
-        "year": "1989",
-        "type": "founding",
-        "entityId": null,
-        "title": "Founded Interros",
+        "year": "1990s",
+        "type": "acquisition",
+        "entityId": "norilsk-nickel",
+        "title": "Acquired Norilsk Nickel",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Investment company during Soviet privatization.",
-        "impact": "Russian oligarch era"
-      },
-      {
-        "year": "1995",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Norilsk Nickel stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Acquired metals giant in loans-for-shares.",
-        "impact": "Nickel and palladium"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Nornickel leadership",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "World's largest palladium producer.",
-        "impact": "Metals fortune"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Sanctions and divestment",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Navigated Western sanctions on Russian assets.",
-        "impact": "Commodity oligarch"
+        "source": "https://en.wikipedia.org/wiki/Vladimir_Potanin"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -6305,69 +5155,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "China",
-    "sector": "Technology",
+    "sector": "E-commerce",
     "grokipediaLink": "https://grok.x.ai/wiki/colin-huang",
     "forbesProfile": "https://www.forbes.com/profile/colin-huang/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Colin_Huang",
     "wealthBreakdown": [
       {
-        "entity": "E-commerce",
-        "stakePct": null,
-        "valueUsdB": 28.7,
-        "type": "private"
+        "entity": "Pinduoduo",
+        "ticker": "PDD",
+        "stakePct": 25,
+        "valueUsdB": 34,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "e_commerce",
-        "name": "E-commerce",
+        "id": "pinduoduo",
+        "name": "Pinduoduo",
         "role": "founder",
-        "status": "private"
+        "founded": 2015,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from E-commerce in technology.",
+    "summary": "Founder of Pinduoduo.",
     "timeline": [
-      {
-        "year": "2004",
-        "type": "founding",
-        "entityId": null,
-        "title": "Founded Ouku",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Early e-commerce venture in China.",
-        "impact": "Serial entrepreneur"
-      },
       {
         "year": "2015",
         "type": "founding",
-        "entityId": null,
+        "entityId": "pinduoduo",
         "title": "Founded Pinduoduo",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Social group-buying e-commerce platform.",
-        "impact": "E-commerce disruptor"
-      },
-      {
-        "year": "2018",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Pinduoduo IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "NASDAQ listing; rivaled Alibaba and JD.",
-        "impact": "Rapid user growth"
-      },
-      {
-        "year": "2020",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Stepped down as chairman",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Pinduoduo reached hundreds of millions of users.",
-        "impact": "E-commerce fortune"
+        "source": "https://en.wikipedia.org/wiki/Colin_Huang"
       }
     ],
     "firstFortuneDecade": "2000s"
@@ -7177,69 +5997,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "India",
-    "sector": "Healthcare",
+    "sector": "Pharmaceuticals",
     "grokipediaLink": "https://grok.x.ai/wiki/cyrus-poonawalla",
     "forbesProfile": "https://www.forbes.com/profile/cyrus-poonawalla/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Cyrus_Poonawalla",
     "wealthBreakdown": [
       {
-        "entity": "Vaccines",
-        "stakePct": null,
-        "valueUsdB": 26.3,
+        "entity": "Serum Institute",
+        "stakePct": 100,
+        "valueUsdB": 22,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "vaccines",
-        "name": "Vaccines",
+        "id": "serum-institute",
+        "name": "Serum Institute",
         "role": "founder",
+        "founded": 1966,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Vaccines in healthcare.",
+    "summary": "Vaccine billionaire.",
     "timeline": [
       {
         "year": "1966",
         "type": "founding",
-        "entityId": null,
+        "entityId": "serum-institute",
         "title": "Founded Serum Institute",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Vaccine production in Pune, India.",
-        "impact": "Vaccine dynasty"
-      },
-      {
-        "year": "1990s",
-        "type": "milestone",
-        "entityId": "vaccines",
-        "title": "Affordable vaccines",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Supplied UNICEF and developing nations.",
-        "impact": "Global immunization"
-      },
-      {
-        "year": "2020",
-        "type": "milestone",
-        "entityId": "vaccines",
-        "title": "COVID-19 vaccines",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Produced AstraZeneca and Novavax doses at scale.",
-        "impact": "Pandemic response"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "World's largest vaccinemaker",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Billions of doses annually.",
-        "impact": "Healthcare fortune"
+        "source": "https://en.wikipedia.org/wiki/Cyrus_Poonawalla"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -7733,69 +6522,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "India",
-    "sector": "Healthcare",
+    "sector": "Pharmaceuticals",
     "grokipediaLink": "https://grok.x.ai/wiki/dilip-shanghvi",
     "forbesProfile": "https://www.forbes.com/profile/dilip-shanghvi/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Dilip_Shanghvi",
     "wealthBreakdown": [
       {
-        "entity": "Pharmaceuticals",
-        "stakePct": null,
-        "valueUsdB": 25.4,
-        "type": "private"
+        "entity": "Sun Pharma",
+        "ticker": "SUNPHARMA.NS",
+        "stakePct": 42,
+        "valueUsdB": 33,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "pharmaceuticals",
-        "name": "Pharmaceuticals",
+        "id": "sun-pharma",
+        "name": "Sun Pharmaceutical",
         "role": "founder",
-        "status": "private"
+        "founded": 1983,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Pharmaceuticals in healthcare.",
+    "summary": "Founder of Sun Pharmaceutical.",
     "timeline": [
       {
         "year": "1983",
         "type": "founding",
-        "entityId": null,
+        "entityId": "sun-pharma",
         "title": "Founded Sun Pharma",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Psychiatry drugs in Mumbai garage.",
-        "impact": "Pharma entrepreneur"
-      },
-      {
-        "year": "1997",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Sun Pharma IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Expanded generic drug manufacturing.",
-        "impact": "India pharma leader"
-      },
-      {
-        "year": "2014",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Acquired Ranbaxy",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "$4B deal made Sun India's top drugmaker.",
-        "impact": "Generic consolidation"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Global generics",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Markets in U.S., India, and emerging economies.",
-        "impact": "Pharmaceutical fortune"
+        "source": "https://en.wikipedia.org/wiki/Dilip_Shanghvi"
       }
     ],
     "firstFortuneDecade": "1980s"
