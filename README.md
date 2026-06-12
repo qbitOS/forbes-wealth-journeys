@@ -11,6 +11,46 @@ Interactive timeline of billionaire wealth trajectories mapped to public venture
 
 ---
 
+## Screenshots
+
+Captured from the [live site](https://qbitos.github.io/forbes-wealth-journeys/). Regenerate after UI changes:
+
+```bash
+npx -p playwright@1.49.1 node scripts/capture_readme_screenshots.mjs
+```
+
+### Forbes — ranked profiles
+
+Net-worth header, world map, snowflake metrics, buying-power list, and year-by-year wealth journey with Grokipedia aside.
+
+![Forbes profile — Elon Musk rank #1](docs/screenshots/forbes-profile.png)
+
+### Member details
+
+Per-rank overview with timeline crossover mini charts (Bollinger + MACD) beside venture listings.
+
+![Member details panel](docs/screenshots/member-details.png)
+
+### Ventures — unified timeline
+
+Wealth line with milestone markers, IPO cluster gitgraph, and Elon portfolio lanes on a shared year axis.
+
+![Venture timeline — cluster and portfolio gitgraphs](docs/screenshots/venture-timeline.png)
+
+### Activity
+
+Contribution heatmaps, pipeline runs, ranked member cards, and per-branch activity aligned to timeline colors.
+
+![Activity section — heatmaps and branch panels](docs/screenshots/activity.png)
+
+### Markets configurator
+
+Grok template wizard retained from upstream — domains, infra, connectors, and export.
+
+![Markets configurator wizard](docs/screenshots/markets-configurator.png)
+
+---
+
 ## What this is
 
 Forbes Wealth Journeys is a **static, source-linked timeline** that connects how the world's richest people accumulate (and lose) net worth to the companies, IPOs, product launches, and market events behind those moves.
