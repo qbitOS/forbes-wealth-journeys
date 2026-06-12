@@ -17,17 +17,25 @@ Forbes Wealth Journeys is a **static, source-linked timeline** that connects how
 
 ### Forbes billionaire profiles
 
-The **Forbes** section loads ranked profiles from [`data/forbes-billionaires.json`](data/forbes-billionaires.json):
+The **Forbes** section loads **100 ranked profiles** from [`data/forbes-billionaires.json`](data/forbes-billionaires.json):
 
-| Rank | Name | Net worth | Timeline milestones |
-|------|------|-----------|---------------------|
-| 1 | Elon Musk | $794.6B | Zip2, PayPal, SpaceX, Tesla |
-| 2 | Larry Page | $292.7B | Google founding, IPO, Alphabet |
-| 3 | Sergey Brin | $270B | Google founding, IPO, Alphabet |
-| 4 | Jeff Bezos | $251.5B | Amazon, IPO, Blue Origin |
-| 5 | Larry Ellison | $230.1B | Oracle founding, IPO |
+| Source | Ranks | Notes |
+|--------|-------|-------|
+| [Grok Forbes 500 thread](https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748) | 1–100 | Full profiles pasted from Grok chat into `data/forbes-billionaires.json` |
 
-Select a profile on the live site to view their full wealth journey. **Paste ranks 6–100** into the same JSON file to expand the dataset.
+Rebuild (preserves all 100 Grok entries; only fills gaps from Forbes API):
+
+```bash
+python scripts/build_forbes_billionaires.py
+```
+
+Import a full Grok JSON export (replaces entire file):
+
+```bash
+python scripts/import_grok_forbes.py path/to/grok-export.json
+```
+
+Use search on the live site to filter by name, country, or sector. Deep link: `#forbes?rank=41&name=Gianluigi%20Aponte` (name required for tied ranks 41, 43, 52, 54).
 
 ### Venture gitgraph (Elon portfolio)
 
@@ -152,7 +160,6 @@ git merge upstream/main
 
 ## Roadmap
 
-- [ ] **Forbes 500 expansion** — append ranks 6–100 to `data/forbes-billionaires.json` (Jensen Huang, Zuckerberg, Arnault, etc.)
 - [ ] **Wealth overlay chart** — ECharts net-worth line synced to timeline scroll position
 - [ ] **Cross-link Musk** — deep-link Forbes #1 profile to Ventures gitgraph lanes
 - [ ] **Export** — JSON/CSV download of full milestone dataset

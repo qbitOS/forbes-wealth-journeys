@@ -36,6 +36,13 @@
         Select a profile to explore their journey. Net worth figures are point-in-time snapshots, not live Forbes data.
       </p>
       <p id="forbes-count" class="forbes-count" aria-live="polite"></p>
+      <p class="forbes-source-note">
+        Source:
+        <a href="https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748" target="_blank" rel="noopener">Grok Forbes 500 thread</a>
+        · 100 profiles in <code>data/forbes-billionaires.json</code>
+      </p>
+      <label class="forbes-search-label" for="forbes-search">Search by name, country, or sector</label>
+      <input id="forbes-search" class="forbes-search" type="search" placeholder="e.g. Musk, France, Technology…" autocomplete="off" spellcheck="false" />
       <div id="forbes-wealth" class="forbes-layout">
         <aside id="forbes-list" class="forbes-list" aria-label="Forbes billionaire rankings"></aside>
         <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile"></article>

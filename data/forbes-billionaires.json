@@ -6,7 +6,13 @@
     "age": 55,
     "country": "United States",
     "sector": "Technology",
-    "companies": ["Tesla", "SpaceX", "xAI", "Neuralink", "The Boring Company"],
+    "companies": [
+      "Tesla",
+      "SpaceX",
+      "xAI",
+      "Neuralink",
+      "The Boring Company"
+    ],
     "sourceOfWealth": "Tesla, SpaceX",
     "firstFortuneDecade": "1990s",
     "summary": "Serial entrepreneur behind electric vehicles, private spaceflight, AI, and neural interfaces.",
@@ -44,7 +50,10 @@
     "age": 53,
     "country": "United States",
     "sector": "Technology",
-    "companies": ["Google", "Alphabet"],
+    "companies": [
+      "Google",
+      "Alphabet"
+    ],
     "sourceOfWealth": "Google",
     "firstFortuneDecade": "1990s",
     "summary": "Co-founder of Google; now focuses on moonshot projects at Alphabet.",
@@ -76,7 +85,10 @@
     "age": 53,
     "country": "United States",
     "sector": "Technology",
-    "companies": ["Google", "Alphabet"],
+    "companies": [
+      "Google",
+      "Alphabet"
+    ],
     "sourceOfWealth": "Google",
     "firstFortuneDecade": "1990s",
     "summary": "Co-founder of Google; leads Google X moonshot factory.",
@@ -108,7 +120,10 @@
     "age": 62,
     "country": "United States",
     "sector": "Retail / Technology",
-    "companies": ["Amazon", "Blue Origin"],
+    "companies": [
+      "Amazon",
+      "Blue Origin"
+    ],
     "sourceOfWealth": "Amazon",
     "firstFortuneDecade": "1990s",
     "summary": "Founder of Amazon; transformed global retail and cloud computing.",
@@ -140,7 +155,9 @@
     "age": 82,
     "country": "United States",
     "sector": "Technology",
-    "companies": ["Oracle"],
+    "companies": [
+      "Oracle"
+    ],
     "sourceOfWealth": "Oracle",
     "firstFortuneDecade": "1970s",
     "summary": "Co-founder and chairman of Oracle Corporation.",
@@ -156,6 +173,3824 @@
         "title": "Oracle IPO",
         "description": "One day before Microsoft went public.",
         "impact": "Enterprise software wealth base"
+      }
+    ]
+  },
+  {
+    "rank": 6,
+    "name": "Michael Dell",
+    "netWorth": "224.4B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Dell Technologies"
+    ],
+    "sourceOfWealth": "Dell Technologies",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Dell Technologies in technology.",
+    "timeline": [
+      {
+        "year": "1984",
+        "title": "Founded Dell",
+        "description": "Started PC company from University of Texas dorm room.",
+        "impact": "Direct-to-consumer PCs"
+      },
+      {
+        "year": "1988",
+        "title": "Dell IPO",
+        "description": "One of fastest-growing PC makers of the 1990s.",
+        "impact": "Public market scale"
+      },
+      {
+        "year": "2013",
+        "title": "Took Dell private",
+        "description": "$24.9B leveraged buyout to reshape company.",
+        "impact": "Enterprise pivot"
+      },
+      {
+        "year": "2016",
+        "title": "Merged with EMC",
+        "description": "Created Dell Technologies; storage and cloud expansion.",
+        "impact": "IT infrastructure giant"
+      }
+    ]
+  },
+  {
+    "rank": 7,
+    "name": "Mark Zuckerberg",
+    "netWorth": "195.3B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Facebook"
+    ],
+    "sourceOfWealth": "Facebook",
+    "firstFortuneDecade": "2000s",
+    "summary": "Billionaire whose fortune stems primarily from Facebook in technology.",
+    "timeline": [
+      {
+        "year": "2004",
+        "title": "Launched Facebook",
+        "description": "Started at Harvard; expanded to global social network.",
+        "impact": "Social media dominance"
+      },
+      {
+        "year": "2012",
+        "title": "Facebook IPO",
+        "description": "Largest tech IPO at the time at $38/share.",
+        "impact": "Multi-billionaire at 28"
+      },
+      {
+        "year": "2014",
+        "title": "Acquired WhatsApp & Instagram",
+        "description": "Consolidated messaging and photo sharing.",
+        "impact": "Billions of daily users"
+      },
+      {
+        "year": "2021",
+        "title": "Rebranded to Meta",
+        "description": "Pivoted company toward metaverse and AI.",
+        "impact": "Next computing platform bet"
+      }
+    ]
+  },
+  {
+    "rank": 8,
+    "name": "Jensen Huang",
+    "netWorth": "177.1B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Semiconductors"
+    ],
+    "sourceOfWealth": "Semiconductors",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Semiconductors in technology.",
+    "timeline": [
+      {
+        "year": "1993",
+        "title": "Co-founded NVIDIA",
+        "description": "Graphics chips for gaming and professional visualization.",
+        "impact": "GPU pioneer"
+      },
+      {
+        "year": "1999",
+        "title": "Invented the GPU",
+        "description": "GeForce brand defined consumer 3D graphics.",
+        "impact": "Gaming hardware leader"
+      },
+      {
+        "year": "2012",
+        "title": "CUDA platform",
+        "description": "General-purpose GPU computing for AI and HPC.",
+        "impact": "AI infrastructure foundation"
+      },
+      {
+        "year": "2023",
+        "title": "AI chip boom",
+        "description": "Data-center GPUs became essential for LLM training.",
+        "impact": "Trillion-dollar market cap"
+      }
+    ]
+  },
+  {
+    "rank": 9,
+    "name": "Bernard Arnault & family",
+    "netWorth": "152.3B",
+    "age": null,
+    "country": "France",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "LVMH"
+    ],
+    "sourceOfWealth": "LVMH",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from LVMH in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1984",
+        "title": "Acquired Boussac",
+        "description": "Bought textile group including Christian Dior.",
+        "impact": "Luxury empire seed"
+      },
+      {
+        "year": "1987",
+        "title": "Created LVMH",
+        "description": "Merged Louis Vuitton with Moët Hennessy.",
+        "impact": "World's largest luxury group"
+      },
+      {
+        "year": "1990s",
+        "title": "Brand acquisitions",
+        "description": "Added Givenchy, Sephora, TAG Heuer, and more.",
+        "impact": "Portfolio diversification"
+      },
+      {
+        "year": "2019",
+        "title": "Tiffany acquisition",
+        "description": "$15.8B deal for iconic jeweler.",
+        "impact": "Luxury market consolidation"
+      }
+    ]
+  },
+  {
+    "rank": 10,
+    "name": "Warren Buffett",
+    "netWorth": "143.4B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Berkshire Hathaway"
+    ],
+    "sourceOfWealth": "Berkshire Hathaway",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Berkshire Hathaway in finance & investments.",
+    "timeline": [
+      {
+        "year": "1956",
+        "title": "Founded Buffett Partnership",
+        "description": "Investment partnership in Omaha.",
+        "impact": "Value investing track record"
+      },
+      {
+        "year": "1965",
+        "title": "Took control of Berkshire Hathaway",
+        "description": "Transformed textile firm into conglomerate.",
+        "impact": "Compounding machine"
+      },
+      {
+        "year": "1988",
+        "title": "Major Coca-Cola stake",
+        "description": "Long-term consumer brand holding.",
+        "impact": "Iconic portfolio position"
+      },
+      {
+        "year": "2008",
+        "title": "Goldman Sachs investment",
+        "description": "Deployed capital during financial crisis.",
+        "impact": "Crisis-era opportunism"
+      }
+    ]
+  },
+  {
+    "rank": 11,
+    "name": "Amancio Ortega",
+    "netWorth": "141.6B",
+    "age": null,
+    "country": "Spain",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Zara"
+    ],
+    "sourceOfWealth": "Zara",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Zara in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1975",
+        "title": "Opened first Zara store",
+        "description": "Fast-fashion model in La Coruña, Spain.",
+        "impact": "Retail innovation"
+      },
+      {
+        "year": "1985",
+        "title": "Founded Inditex",
+        "description": "Parent company for Zara and related brands.",
+        "impact": "Global fashion group"
+      },
+      {
+        "year": "2001",
+        "title": "Inditex IPO",
+        "description": "One of largest fashion IPOs in Europe.",
+        "impact": "Wealth crystallization"
+      },
+      {
+        "year": "2010s",
+        "title": "Global expansion",
+        "description": "Thousands of stores across 90+ markets.",
+        "impact": "Fast-fashion dominance"
+      }
+    ]
+  },
+  {
+    "rank": 12,
+    "name": "Rob Walton & family",
+    "netWorth": "139.2B",
+    "age": null,
+    "country": "United States",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Walmart"
+    ],
+    "sourceOfWealth": "Walmart",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1962",
+        "title": "Sam Walton opened first Walmart",
+        "description": "Family retail dynasty began in Arkansas.",
+        "impact": "Discount retail revolution"
+      },
+      {
+        "year": "1970",
+        "title": "Walmart went public",
+        "description": "Walton family retained controlling stake.",
+        "impact": "Generational wealth"
+      },
+      {
+        "year": "1992",
+        "title": "Sam Walton died",
+        "description": "Fortune passed to Helen Walton and children.",
+        "impact": "Family inheritance"
+      },
+      {
+        "year": "2010s",
+        "title": "Dividend dynasty",
+        "description": "Walmart dividends and share appreciation sustained fortune.",
+        "impact": "Largest U.S. retail fortune"
+      }
+    ]
+  },
+  {
+    "rank": 13,
+    "name": "Jim Walton & family",
+    "netWorth": "136.5B",
+    "age": null,
+    "country": "United States",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Walmart"
+    ],
+    "sourceOfWealth": "Walmart",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1962",
+        "title": "Walmart founded",
+        "description": "Youngest son of Sam Walton joined family business.",
+        "impact": "Retail empire roots"
+      },
+      {
+        "year": "1970",
+        "title": "Walmart IPO",
+        "description": "Family retained majority economic interest.",
+        "impact": "Long-term compounding"
+      },
+      {
+        "year": "2005",
+        "title": "Chaired Arvest Bank",
+        "description": "Regional banking arm of Walton interests.",
+        "impact": "Diversified family holdings"
+      },
+      {
+        "year": "2010s",
+        "title": "Walton family fortune",
+        "description": "Among largest shareholders of Walmart.",
+        "impact": "Inherited billionaire status"
+      }
+    ]
+  },
+  {
+    "rank": 14,
+    "name": "Alice Walton",
+    "netWorth": "127.5B",
+    "age": null,
+    "country": "United States",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Walmart"
+    ],
+    "sourceOfWealth": "Walmart",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1962",
+        "title": "Walmart origins",
+        "description": "Daughter of Sam Walton; family built discount retail giant.",
+        "impact": "Inherited stake"
+      },
+      {
+        "year": "1970",
+        "title": "Walmart public listing",
+        "description": "Walton siblings became among richest Americans.",
+        "impact": "Generational wealth"
+      },
+      {
+        "year": "2011",
+        "title": "Opened Crystal Bridges",
+        "description": "World-class American art museum in Bentonville.",
+        "impact": "Philanthropic legacy"
+      },
+      {
+        "year": "2020s",
+        "title": "Art and philanthropy",
+        "description": "Major arts patron; Walton family governance.",
+        "impact": "Cultural impact"
+      }
+    ]
+  },
+  {
+    "rank": 15,
+    "name": "Carlos Slim Helu & family",
+    "netWorth": "127.0B",
+    "age": null,
+    "country": "Mexico",
+    "sector": "Telecom",
+    "companies": [
+      "Telecom"
+    ],
+    "sourceOfWealth": "Telecom",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Telecom in telecom.",
+    "timeline": [
+      {
+        "year": "1960s",
+        "title": "Early investments",
+        "description": "Bought distressed Mexican businesses after crises.",
+        "impact": "Contrarian investing"
+      },
+      {
+        "year": "1990",
+        "title": "Privatization wave",
+        "description": "Acquired Telmex and other state assets.",
+        "impact": "Telecom monopoly"
+      },
+      {
+        "year": "2000",
+        "title": "América Móvil expansion",
+        "description": "Built Latin America's largest mobile carrier.",
+        "impact": "Regional telecom dominance"
+      },
+      {
+        "year": "2007",
+        "title": "Brief world's richest",
+        "description": "Surpassed Bill Gates during commodities boom.",
+        "impact": "Peak global wealth rank"
+      }
+    ]
+  },
+  {
+    "rank": 16,
+    "name": "Steve Ballmer",
+    "netWorth": "125.7B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Microsoft"
+    ],
+    "sourceOfWealth": "Microsoft",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Microsoft in technology.",
+    "timeline": [
+      {
+        "year": "1980",
+        "title": "Joined Microsoft",
+        "description": "30th employee; first business manager hired by Gates.",
+        "impact": "Early Microsoft growth"
+      },
+      {
+        "year": "1998",
+        "title": "President of Microsoft",
+        "description": "Led sales and operations through dot-com era.",
+        "impact": "Enterprise scale"
+      },
+      {
+        "year": "2000",
+        "title": "CEO of Microsoft",
+        "description": "Succeeded Bill Gates; Windows and Office era.",
+        "impact": "Peak Microsoft dominance"
+      },
+      {
+        "year": "2014",
+        "title": "Bought LA Clippers",
+        "description": "Retired from Microsoft; purchased NBA team for $2B.",
+        "impact": "Sports ownership"
+      }
+    ]
+  },
+  {
+    "rank": 17,
+    "name": "Michael Bloomberg",
+    "netWorth": "109.4B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Bloomberg LP"
+    ],
+    "sourceOfWealth": "Bloomberg LP",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Bloomberg LP in finance & investments.",
+    "timeline": [
+      {
+        "year": "1981",
+        "title": "Founded Bloomberg LP",
+        "description": "Financial data terminals after Salomon Brothers.",
+        "impact": "Terminal monopoly"
+      },
+      {
+        "year": "1990",
+        "title": "Global expansion",
+        "description": "Bloomberg terminals became Wall Street standard.",
+        "impact": "Data empire"
+      },
+      {
+        "year": "2001",
+        "title": "Elected NYC mayor",
+        "description": "Three terms focusing on finance and public health.",
+        "impact": "Political influence"
+      },
+      {
+        "year": "2019",
+        "title": "Presidential campaign",
+        "description": "Self-funded run; continued philanthropy.",
+        "impact": "Media and policy reach"
+      }
+    ]
+  },
+  {
+    "rank": 18,
+    "name": "Changpeng Zhao",
+    "netWorth": "108.8B",
+    "age": null,
+    "country": "Canada",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Cryptocurrency exchange"
+    ],
+    "sourceOfWealth": "Cryptocurrency exchange",
+    "firstFortuneDecade": "2010s",
+    "summary": "Billionaire whose fortune stems primarily from Cryptocurrency exchange in finance & investments.",
+    "timeline": [
+      {
+        "year": "2013",
+        "title": "Joined Blockchain.info",
+        "description": "Early crypto wallet and exchange experience.",
+        "impact": "Crypto industry entry"
+      },
+      {
+        "year": "2017",
+        "title": "Founded Binance",
+        "description": "Crypto exchange launched in Shanghai, later global.",
+        "impact": "Largest exchange by volume"
+      },
+      {
+        "year": "2018",
+        "title": "Rapid global growth",
+        "description": "Binance expanded to 100+ countries.",
+        "impact": "Crypto trading dominance"
+      },
+      {
+        "year": "2023",
+        "title": "Pleaded guilty to violations",
+        "description": "Stepped down; paid fines related to compliance failures.",
+        "impact": "Regulatory reckoning"
+      }
+    ]
+  },
+  {
+    "rank": 19,
+    "name": "Bill Gates",
+    "netWorth": "103.6B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Microsoft"
+    ],
+    "sourceOfWealth": "Microsoft",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Microsoft in technology.",
+    "timeline": [
+      {
+        "year": "1975",
+        "title": "Founded Microsoft",
+        "description": "With Paul Allen; BASIC for Altair 8800.",
+        "impact": "PC software revolution"
+      },
+      {
+        "year": "1980",
+        "title": "IBM PC DOS deal",
+        "description": "Licensed MS-DOS for IBM personal computer.",
+        "impact": "Operating system standard"
+      },
+      {
+        "year": "1986",
+        "title": "Microsoft IPO",
+        "description": "Became youngest billionaire at the time.",
+        "impact": "Software fortune"
+      },
+      {
+        "year": "2000",
+        "title": "Bill & Melinda Gates Foundation",
+        "description": "Shifted focus to global health and education philanthropy.",
+        "impact": "Philanthropic legacy"
+      }
+    ]
+  },
+  {
+    "rank": 20,
+    "name": "Thomas Peterffy",
+    "netWorth": "102.1B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Discount brokerage"
+    ],
+    "sourceOfWealth": "Discount brokerage",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Discount brokerage in finance & investments.",
+    "timeline": [
+      {
+        "year": "1977",
+        "title": "Founded Timber Hill",
+        "description": "Pioneered handheld trading devices on exchanges.",
+        "impact": "Electronic trading pioneer"
+      },
+      {
+        "year": "1993",
+        "title": "Founded Interactive Brokers",
+        "description": "Discount brokerage with global reach.",
+        "impact": "Low-cost trading leader"
+      },
+      {
+        "year": "2007",
+        "title": "IBKR IPO",
+        "description": "Took Interactive Brokers public on NASDAQ.",
+        "impact": "Automated trading wealth"
+      },
+      {
+        "year": "2010s",
+        "title": "Algorithmic trading scale",
+        "description": "IB served millions of accounts worldwide.",
+        "impact": "Fintech billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 21,
+    "name": "Francoise Bettencourt Meyers & family",
+    "netWorth": "95.0B",
+    "age": null,
+    "country": "France",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "L'Oréal"
+    ],
+    "sourceOfWealth": "L'Oréal",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from L'Oréal in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1909",
+        "title": "L'Oréal founded",
+        "description": "Grandfather Eugène Schueller created cosmetics giant.",
+        "impact": "Family dynasty origin"
+      },
+      {
+        "year": "1957",
+        "title": "Inherited L'Oréal stake",
+        "description": "Mother Liliane Bettencourt held controlling interest.",
+        "impact": "Generational transfer"
+      },
+      {
+        "year": "2017",
+        "title": "Inherited fortune",
+        "description": "Became world's richest woman after mother's death.",
+        "impact": "Cosmetics empire heiress"
+      },
+      {
+        "year": "2020s",
+        "title": "L'Oréal growth",
+        "description": "Beauty brands thrived in global markets.",
+        "impact": "Sustained family wealth"
+      }
+    ]
+  },
+  {
+    "rank": 22,
+    "name": "Giancarlo Devasini",
+    "netWorth": "89.3B",
+    "age": null,
+    "country": "Italy",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Cryptocurrency"
+    ],
+    "sourceOfWealth": "Cryptocurrency",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Cryptocurrency in finance & investments.",
+    "timeline": [
+      {
+        "year": "1990s",
+        "title": "Medical supply trading",
+        "description": "Built businesses in Italy before crypto.",
+        "impact": "Entrepreneurial background"
+      },
+      {
+        "year": "2012",
+        "title": "Joined Bitfinex",
+        "description": "Early crypto exchange operations.",
+        "impact": "Digital asset markets"
+      },
+      {
+        "year": "2014",
+        "title": "Co-founded Tether",
+        "description": "Stablecoin USDT launched for crypto liquidity.",
+        "impact": "Stablecoin dominance"
+      },
+      {
+        "year": "2020s",
+        "title": "Tether scale",
+        "description": "USDT became most-traded crypto dollar proxy.",
+        "impact": "Crypto infrastructure wealth"
+      }
+    ]
+  },
+  {
+    "rank": 23,
+    "name": "Mukesh Ambani",
+    "netWorth": "86.5B",
+    "age": null,
+    "country": "India",
+    "sector": "Diversified",
+    "companies": [
+      "Diversified"
+    ],
+    "sourceOfWealth": "Diversified",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Diversified in diversified.",
+    "timeline": [
+      {
+        "year": "1981",
+        "title": "Joined Reliance",
+        "description": "Son of founder Dhirubhai Ambani.",
+        "impact": "Petrochemicals dynasty"
+      },
+      {
+        "year": "2002",
+        "title": "Led Reliance after split",
+        "description": "Took refining and petrochemicals businesses.",
+        "impact": "Industrial conglomerate"
+      },
+      {
+        "year": "2016",
+        "title": "Launched Jio",
+        "description": "Disrupted Indian telecom with cheap 4G data.",
+        "impact": "Digital India platform"
+      },
+      {
+        "year": "2020",
+        "title": "Jio Platforms investments",
+        "description": "Raised billions from Facebook, Google, others.",
+        "impact": "Tech conglomerate pivot"
+      }
+    ]
+  },
+  {
+    "rank": 24,
+    "name": "Gautam Adani",
+    "netWorth": "85.0B",
+    "age": null,
+    "country": "India",
+    "sector": "Diversified",
+    "companies": [
+      "Infrastructure",
+      "commodities"
+    ],
+    "sourceOfWealth": "Infrastructure, commodities",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Infrastructure, commodities in diversified.",
+    "timeline": [
+      {
+        "year": "1988",
+        "title": "Founded Adani Enterprises",
+        "description": "Commodity trading in Ahmedabad.",
+        "impact": "Trading house origins"
+      },
+      {
+        "year": "1995",
+        "title": "Mundra Port development",
+        "description": "Built India's largest private port.",
+        "impact": "Infrastructure empire"
+      },
+      {
+        "year": "2008",
+        "title": "Adani Power IPO",
+        "description": "Expanded into energy generation.",
+        "impact": "Energy diversification"
+      },
+      {
+        "year": "2020s",
+        "title": "Green energy push",
+        "description": "Solar, wind, and hydrogen investments at scale.",
+        "impact": "India infrastructure titan"
+      }
+    ]
+  },
+  {
+    "rank": 25,
+    "name": "Julia Koch & family",
+    "netWorth": "81.2B",
+    "age": null,
+    "country": "United States",
+    "sector": "Diversified",
+    "companies": [
+      "Koch",
+      "Inc."
+    ],
+    "sourceOfWealth": "Koch, Inc.",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Koch, Inc in diversified.",
+    "timeline": [
+      {
+        "year": "1940",
+        "title": "Fred Koch founded oil business",
+        "description": "Family engineering and refining roots.",
+        "impact": "Koch Industries origin"
+      },
+      {
+        "year": "1967",
+        "title": "Charles and David Koch expanded",
+        "description": "Built conglomerate across energy and chemicals.",
+        "impact": "Private conglomerate scale"
+      },
+      {
+        "year": "2019",
+        "title": "Inherited David Koch stake",
+        "description": "Julia Koch and children received 42% after David's death.",
+        "impact": "Billionaire inheritance"
+      },
+      {
+        "year": "2020s",
+        "title": "Koch Industries growth",
+        "description": "Diversified manufacturing, ranching, and investments.",
+        "impact": "Family fortune"
+      }
+    ]
+  },
+  {
+    "rank": 26,
+    "name": "Masayoshi Son",
+    "netWorth": "76.6B",
+    "age": null,
+    "country": "Japan",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Telecom",
+      "Investments"
+    ],
+    "sourceOfWealth": "Telecom, Investments",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Telecom, Investments in finance & investments.",
+    "timeline": [
+      {
+        "year": "1981",
+        "title": "Founded SoftBank",
+        "description": "Software distribution in Tokyo.",
+        "impact": "Japanese tech investor"
+      },
+      {
+        "year": "1996",
+        "title": "Yahoo Japan stake",
+        "description": "Early internet bet in Japan.",
+        "impact": "Portal dominance"
+      },
+      {
+        "year": "2000",
+        "title": "Alibaba investment",
+        "description": "$20M bet became one of history's best VC returns.",
+        "impact": "Legendary venture return"
+      },
+      {
+        "year": "2017",
+        "title": "Vision Fund launched",
+        "description": "$100B fund backed Uber, WeWork, ARM.",
+        "impact": "Global tech investing"
+      }
+    ]
+  },
+  {
+    "rank": 27,
+    "name": "Charles Koch & family",
+    "netWorth": "73.8B",
+    "age": null,
+    "country": "United States",
+    "sector": "Diversified",
+    "companies": [
+      "Koch",
+      "Inc."
+    ],
+    "sourceOfWealth": "Koch, Inc.",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Koch, Inc in diversified.",
+    "timeline": [
+      {
+        "year": "1967",
+        "title": "Took over Koch Industries",
+        "description": "With brother David after father's death.",
+        "impact": "Conglomerate leadership"
+      },
+      {
+        "year": "1970s",
+        "title": "Libertarian philosophy",
+        "description": "Market-based management and advocacy.",
+        "impact": "Political influence"
+      },
+      {
+        "year": "2005",
+        "title": "Georgia-Pacific acquisition",
+        "description": "$21B deal expanded paper and building products.",
+        "impact": "Industrial scale"
+      },
+      {
+        "year": "2010s",
+        "title": "Koch network",
+        "description": "Major donor to policy and educational institutions.",
+        "impact": "Institutional influence"
+      }
+    ]
+  },
+  {
+    "rank": 28,
+    "name": "Zhang Yiming",
+    "netWorth": "69.3B",
+    "age": null,
+    "country": "China",
+    "sector": "Technology",
+    "companies": [
+      "TikTok"
+    ],
+    "sourceOfWealth": "TikTok",
+    "firstFortuneDecade": "2010s",
+    "summary": "Billionaire whose fortune stems primarily from TikTok in technology.",
+    "timeline": [
+      {
+        "year": "2012",
+        "title": "Founded ByteDance",
+        "description": "News aggregator Toutiao launched in Beijing.",
+        "impact": "Algorithmic content"
+      },
+      {
+        "year": "2016",
+        "title": "Launched Douyin / TikTok",
+        "description": "Short-video app exploded globally.",
+        "impact": "Global social phenomenon"
+      },
+      {
+        "year": "2018",
+        "title": "Musical.ly acquisition",
+        "description": "Merged into TikTok for U.S. expansion.",
+        "impact": "Teen platform dominance"
+      },
+      {
+        "year": "2021",
+        "title": "Stepped down as CEO",
+        "description": "ByteDance valued over $300B at peak.",
+        "impact": "AI content empire"
+      }
+    ]
+  },
+  {
+    "rank": 29,
+    "name": "Tadashi Yanai & family",
+    "netWorth": "68.2B",
+    "age": null,
+    "country": "Japan",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Fashion retail"
+    ],
+    "sourceOfWealth": "Fashion retail",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Fashion retail in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1984",
+        "title": "Opened first Uniqlo store",
+        "description": "Unique Clothing Warehouse in Hiroshima.",
+        "impact": "Fast retail basics"
+      },
+      {
+        "year": "1991",
+        "title": "Renamed to Uniqlo",
+        "description": "Affordable quality casual wear model.",
+        "impact": "Brand identity"
+      },
+      {
+        "year": "2005",
+        "title": "Global expansion",
+        "description": "Stores in London, New York, and across Asia.",
+        "impact": "International fashion"
+      },
+      {
+        "year": "2019",
+        "title": "Fast Retailing scale",
+        "description": "Parent of Uniqlo, GU, and Theory brands.",
+        "impact": "Asia's top retailer"
+      }
+    ]
+  },
+  {
+    "rank": 30,
+    "name": "Jeff Yass",
+    "netWorth": "67.4B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Trading",
+      "investments"
+    ],
+    "sourceOfWealth": "Trading, investments",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Trading, investments in finance & investments.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Co-founded Susquehanna",
+        "description": "Options trading firm in Philadelphia.",
+        "impact": "Quantitative trading"
+      },
+      {
+        "year": "1990s",
+        "title": "Options market making",
+        "description": "Pioneered electronic options trading.",
+        "impact": "Market structure influence"
+      },
+      {
+        "year": "2000s",
+        "title": "Global expansion",
+        "description": "Offices in Dublin, Sydney, Hong Kong.",
+        "impact": "International quant firm"
+      },
+      {
+        "year": "2010s",
+        "title": "TikTok stake via ByteDance",
+        "description": "Early investor in parent of TikTok.",
+        "impact": "Tech investment gains"
+      }
+    ]
+  },
+  {
+    "rank": 31,
+    "name": "Germán Larrea Mota Velasco & family",
+    "netWorth": "63.1B",
+    "age": null,
+    "country": "Mexico",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Mining"
+    ],
+    "sourceOfWealth": "Mining",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Mining in metals & mining.",
+    "timeline": [
+      {
+        "year": "1976",
+        "title": "Grupo México origins",
+        "description": "Mining and infrastructure conglomerate in Mexico.",
+        "impact": "Mining dynasty"
+      },
+      {
+        "year": "1990",
+        "title": "Acquired mining assets",
+        "description": "Consolidated copper and railroad holdings.",
+        "impact": "Resource empire"
+      },
+      {
+        "year": "2005",
+        "title": "Southern Copper control",
+        "description": "Among world's largest copper producers.",
+        "impact": "Commodity wealth"
+      },
+      {
+        "year": "2010s",
+        "title": "Infrastructure expansion",
+        "description": "Railroads and transport under Grupo México.",
+        "impact": "Mexican industrial titan"
+      }
+    ]
+  },
+  {
+    "rank": 32,
+    "name": "Dieter Schwarz",
+    "netWorth": "62.3B",
+    "age": null,
+    "country": "Germany",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Retail"
+    ],
+    "sourceOfWealth": "Retail",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Retail in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1930",
+        "title": "Father founded Lidl",
+        "description": "Josef Schwarz started discount grocery in Germany.",
+        "impact": "Discount retail roots"
+      },
+      {
+        "year": "1977",
+        "title": "Took over Lidl",
+        "description": "Dieter Schwarz expanded discount supermarket chain.",
+        "impact": "European grocery scale"
+      },
+      {
+        "year": "1970s",
+        "title": "Kaufland hypermarkets",
+        "description": "Built second retail banner under Schwarz Group.",
+        "impact": "Dual-brand strategy"
+      },
+      {
+        "year": "2010s",
+        "title": "Schwarz Group scale",
+        "description": "Lidl and Kaufland across 30+ countries.",
+        "impact": "Europe's largest retailer"
+      }
+    ]
+  },
+  {
+    "rank": 33,
+    "name": "Zhong Shanshan",
+    "netWorth": "61.4B",
+    "age": null,
+    "country": "China",
+    "sector": "Food & Beverage",
+    "companies": [
+      "Beverages",
+      "pharmaceuticals"
+    ],
+    "sourceOfWealth": "Beverages, pharmaceuticals",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Beverages, pharmaceuticals in food & beverage.",
+    "timeline": [
+      {
+        "year": "1996",
+        "title": "Founded Nongfu Spring",
+        "description": "Bottled water brand in Hangzhou.",
+        "impact": "China's top water brand"
+      },
+      {
+        "year": "2000s",
+        "title": "Beverage expansion",
+        "description": "Tea drinks and juice under Nongfu portfolio.",
+        "impact": "Consumer staples leader"
+      },
+      {
+        "year": "2020",
+        "title": "Nongfu Spring IPO",
+        "description": "Hong Kong listing made him briefly China's richest.",
+        "impact": "Bottled water fortune"
+      },
+      {
+        "year": "2021",
+        "title": "Beijing Wantai stake",
+        "description": "Vaccine and diagnostics biotech holdings.",
+        "impact": "Healthcare diversification"
+      }
+    ]
+  },
+  {
+    "rank": 34,
+    "name": "Robin Zeng",
+    "netWorth": "61.3B",
+    "age": null,
+    "country": "Hong Kong",
+    "sector": "Energy",
+    "companies": [
+      "Batteries"
+    ],
+    "sourceOfWealth": "Batteries",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Batteries in energy.",
+    "timeline": [
+      {
+        "year": "1999",
+        "title": "Founded ATL",
+        "description": "Amperex Technology Limited for lithium batteries.",
+        "impact": "Battery pioneer"
+      },
+      {
+        "year": "2011",
+        "title": "Founded CATL",
+        "description": "Contemporary Amperex Technology for EV cells.",
+        "impact": "EV battery leader"
+      },
+      {
+        "year": "2018",
+        "title": "CATL IPO",
+        "description": "Shenzhen listing funded global expansion.",
+        "impact": "Battery giant public"
+      },
+      {
+        "year": "2020s",
+        "title": "EV supply dominance",
+        "description": "Supplied BMW, Tesla, Volkswagen, and others.",
+        "impact": "Clean energy infrastructure"
+      }
+    ]
+  },
+  {
+    "rank": 35,
+    "name": "Ken Griffin",
+    "netWorth": "50.3B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Hedge funds"
+    ],
+    "sourceOfWealth": "Hedge funds",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Hedge funds in finance & investments.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Founded Citadel",
+        "description": "Started trading from Harvard dorm room.",
+        "impact": "Quant hedge fund"
+      },
+      {
+        "year": "1990",
+        "title": "Citadel growth",
+        "description": "Multi-strategy hedge fund in Chicago.",
+        "impact": "Trading empire"
+      },
+      {
+        "year": "2002",
+        "title": "Founded Citadel Securities",
+        "description": "Market-making arm became top U.S. equity trader.",
+        "impact": "Market structure power"
+      },
+      {
+        "year": "2022",
+        "title": "Citadel record year",
+        "description": "Fund and market-maker posted record revenues.",
+        "impact": "Top hedge fund fortune"
+      }
+    ]
+  },
+  {
+    "rank": 36,
+    "name": "Ma Huateng",
+    "netWorth": "48.7B",
+    "age": null,
+    "country": "China",
+    "sector": "Technology",
+    "companies": [
+      "Online games"
+    ],
+    "sourceOfWealth": "Online games",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Online games in technology.",
+    "timeline": [
+      {
+        "year": "1998",
+        "title": "Co-founded Tencent",
+        "description": "With college friends in Shenzhen.",
+        "impact": "Chinese internet giant"
+      },
+      {
+        "year": "1999",
+        "title": "Launched QQ",
+        "description": "Instant messaging captured China's youth.",
+        "impact": "Social platform base"
+      },
+      {
+        "year": "2011",
+        "title": "Launched WeChat",
+        "description": "Super-app combining messaging, payments, and services.",
+        "impact": "One billion users"
+      },
+      {
+        "year": "2010s",
+        "title": "Gaming and investments",
+        "description": "Riot Games, Epic, and mobile gaming revenue.",
+        "impact": "Digital entertainment empire"
+      }
+    ]
+  },
+  {
+    "rank": 37,
+    "name": "Li Ka-shing",
+    "netWorth": "48.4B",
+    "age": null,
+    "country": "Hong Kong",
+    "sector": "Diversified",
+    "companies": [
+      "Diversified"
+    ],
+    "sourceOfWealth": "Diversified",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Diversified in diversified.",
+    "timeline": [
+      {
+        "year": "1950",
+        "title": "Founded Cheung Kong",
+        "description": "Plastic flower factory grew into property.",
+        "impact": "Hong Kong property tycoon"
+      },
+      {
+        "year": "1979",
+        "title": "Acquired Hutchison Whampoa",
+        "description": "Ports, retail, and telecom conglomerate.",
+        "impact": "Global diversification"
+      },
+      {
+        "year": "1987",
+        "title": "Expanded globally",
+        "description": "Ports in Europe, Canada, and Asia.",
+        "impact": "Infrastructure investor"
+      },
+      {
+        "year": "2015",
+        "title": "CK Hutchison restructuring",
+        "description": "Consolidated ports, retail, and infrastructure.",
+        "impact": "Asia's Superman"
+      }
+    ]
+  },
+  {
+    "rank": 38,
+    "name": "Giovanni Ferrero",
+    "netWorth": "47.7B",
+    "age": null,
+    "country": "Italy",
+    "sector": "Food & Beverage",
+    "companies": [
+      "Nutella",
+      "chocolates"
+    ],
+    "sourceOfWealth": "Nutella, chocolates",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Nutella, chocolates in food & beverage.",
+    "timeline": [
+      {
+        "year": "1946",
+        "title": "Ferrero company founded",
+        "description": "Father Pietro created Nutella predecessor in Alba.",
+        "impact": "Confectionery dynasty"
+      },
+      {
+        "year": "1997",
+        "title": "Took leadership",
+        "description": "After brother Pietro's death; led global expansion.",
+        "impact": "Family business succession"
+      },
+      {
+        "year": "2011",
+        "title": "Acquired Thorntons",
+        "description": "British chocolate chain added to portfolio.",
+        "impact": "Global confectionery"
+      },
+      {
+        "year": "2018",
+        "title": "Acquired Nestlé U.S. candy",
+        "description": "Bought Butterfinger and other brands for $2.8B.",
+        "impact": "World's candy leader"
+      }
+    ]
+  },
+  {
+    "rank": 39,
+    "name": "Iris Fontbona & family",
+    "netWorth": "47.7B",
+    "age": null,
+    "country": "Chile",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Mining"
+    ],
+    "sourceOfWealth": "Mining",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Mining in metals & mining.",
+    "timeline": [
+      {
+        "year": "1950s",
+        "title": "Andrónico Luksic mining",
+        "description": "Husband built mining and beverages fortune in Chile.",
+        "impact": "Family dynasty origin"
+      },
+      {
+        "year": "2005",
+        "title": "Inherited Luksic Group",
+        "description": "After Andrónico's death; children took control.",
+        "impact": "Mining and banking wealth"
+      },
+      {
+        "year": "2010s",
+        "title": "Antofagasta Minerals",
+        "description": "Copper mining operations across Chile.",
+        "impact": "Commodity fortune"
+      },
+      {
+        "year": "2020s",
+        "title": "Beverages and banking",
+        "description": "Quiñenco diversified holdings sustained wealth.",
+        "impact": "Chile's richest family"
+      }
+    ]
+  },
+  {
+    "rank": 40,
+    "name": "Lukas Walton",
+    "netWorth": "46.9B",
+    "age": null,
+    "country": "United States",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Walmart"
+    ],
+    "sourceOfWealth": "Walmart ",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1962",
+        "title": "Walmart founded",
+        "description": "Grandson of Sam Walton; family retail dynasty.",
+        "impact": "Inherited fortune"
+      },
+      {
+        "year": "2005",
+        "title": "Inherited after father's death",
+        "description": "John Walton died; stake passed to Lukas.",
+        "impact": "Generational transfer"
+      },
+      {
+        "year": "2010s",
+        "title": "Sustainable investing",
+        "description": "Focus on environment through Walton Family Foundation.",
+        "impact": "Impact investing"
+      },
+      {
+        "year": "2020s",
+        "title": "Walton heir",
+        "description": "Among youngest billionaires on Forbes list.",
+        "impact": "Inherited retail wealth"
+      }
+    ]
+  },
+  {
+    "rank": 41,
+    "name": "Gianluigi Aponte",
+    "netWorth": "45.8B",
+    "age": null,
+    "country": "Switzerland",
+    "sector": "Logistics",
+    "companies": [
+      "Shipping"
+    ],
+    "sourceOfWealth": "Shipping",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Shipping in logistics.",
+    "timeline": [
+      {
+        "year": "1970",
+        "title": "Founded MSC",
+        "description": "Bought first ship with wife Rafaela; Mediterranean Shipping.",
+        "impact": "Shipping origins"
+      },
+      {
+        "year": "1980s",
+        "title": "Container shipping growth",
+        "description": "Expanded fleet across Europe and beyond.",
+        "impact": "Global cargo network"
+      },
+      {
+        "year": "2000s",
+        "title": "Second-largest container line",
+        "description": "MSC rivaled Maersk in global shipping.",
+        "impact": "Logistics empire"
+      },
+      {
+        "year": "2020s",
+        "title": "Port investments",
+        "description": "Terminals and logistics infrastructure worldwide.",
+        "impact": "Shipping billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 41,
+    "name": "Rafaela Aponte-Diamant",
+    "netWorth": "45.8B",
+    "age": null,
+    "country": "Switzerland",
+    "sector": "Logistics",
+    "companies": [
+      "Shipping"
+    ],
+    "sourceOfWealth": "Shipping",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Shipping in logistics.",
+    "timeline": [
+      {
+        "year": "1970",
+        "title": "Co-founded MSC",
+        "description": "With husband Gianluigi; single-ship start in Naples.",
+        "impact": "Shipping dynasty"
+      },
+      {
+        "year": "1980s",
+        "title": "Fleet expansion",
+        "description": "Built MSC into major container carrier.",
+        "impact": "Maritime logistics"
+      },
+      {
+        "year": "2000s",
+        "title": "Global shipping scale",
+        "description": "MSC became industry leader by capacity.",
+        "impact": "Container shipping wealth"
+      },
+      {
+        "year": "2020s",
+        "title": "MSC Group",
+        "description": "Cruise, logistics, and port operations diversified.",
+        "impact": "Co-founder fortune"
+      }
+    ]
+  },
+  {
+    "rank": 43,
+    "name": "Jacqueline Mars",
+    "netWorth": "45.3B",
+    "age": null,
+    "country": "United States",
+    "sector": "Food & Beverage",
+    "companies": [
+      "Candy",
+      "pet food"
+    ],
+    "sourceOfWealth": "Candy, pet food",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Candy, pet food in food & beverage.",
+    "timeline": [
+      {
+        "year": "1911",
+        "title": "Mars founded",
+        "description": "Frank Mars created candy company in Tacoma.",
+        "impact": "Candy dynasty origin"
+      },
+      {
+        "year": "1941",
+        "title": "M&M's launched",
+        "description": "Forrest Mars Sr. created iconic chocolate.",
+        "impact": "Global confectionery"
+      },
+      {
+        "year": "1999",
+        "title": "Inherited Mars stake",
+        "description": "With brother John after family generations.",
+        "impact": "Private company wealth"
+      },
+      {
+        "year": "2017",
+        "title": "Acquired VCA pet care",
+        "description": "Mars expanded into veterinary services.",
+        "impact": "Diversified family business"
+      }
+    ]
+  },
+  {
+    "rank": 43,
+    "name": "John Mars",
+    "netWorth": "45.3B",
+    "age": null,
+    "country": "United States",
+    "sector": "Food & Beverage",
+    "companies": [
+      "Candy",
+      "pet food"
+    ],
+    "sourceOfWealth": "Candy, pet food",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Candy, pet food in food & beverage.",
+    "timeline": [
+      {
+        "year": "1911",
+        "title": "Mars company origins",
+        "description": "Third generation of Mars candy family.",
+        "impact": "Inherited stake"
+      },
+      {
+        "year": "1941",
+        "title": "M&M's and Snickers scale",
+        "description": "Iconic brands built global presence.",
+        "impact": "Candy empire"
+      },
+      {
+        "year": "1999",
+        "title": "Mars Inc. ownership",
+        "description": "Private company; no public listing.",
+        "impact": "Stealth billionaire"
+      },
+      {
+        "year": "2017",
+        "title": "Pet care expansion",
+        "description": "Mars Petcare became largest division.",
+        "impact": "Consumer goods fortune"
+      }
+    ]
+  },
+  {
+    "rank": 45,
+    "name": "Mark Mateschitz",
+    "netWorth": "44.8B",
+    "age": null,
+    "country": "Austria",
+    "sector": "Food & Beverage",
+    "companies": [
+      "Red Bull"
+    ],
+    "sourceOfWealth": "Red Bull",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Red Bull in food & beverage.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Red Bull founded",
+        "description": "Father Dietrich created energy drink in Austria.",
+        "impact": "Beverage innovation"
+      },
+      {
+        "year": "2012",
+        "title": "Inherited Red Bull stake",
+        "description": "After Dietrich Mateschitz died at 78.",
+        "impact": "Energy drink heir"
+      },
+      {
+        "year": "2020s",
+        "title": "Red Bull global brand",
+        "description": "Sports marketing and F1 team ownership.",
+        "impact": "Inherited fortune"
+      },
+      {
+        "year": "2023",
+        "title": "Red Bull GmbH control",
+        "description": "Co-owns with Thai Yoovidhya family.",
+        "impact": "Billionaire heir"
+      }
+    ]
+  },
+  {
+    "rank": 46,
+    "name": "Andrea Pignataro",
+    "netWorth": "41.7B",
+    "age": null,
+    "country": "Italy",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Financial software"
+    ],
+    "sourceOfWealth": "Financial software",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Financial software in finance & investments.",
+    "timeline": [
+      {
+        "year": "1996",
+        "title": "Founded ION Trading",
+        "description": "Financial software for trading desks.",
+        "impact": "Fintech entrepreneur"
+      },
+      {
+        "year": "2000s",
+        "title": "ION acquisitions",
+        "description": "Bought Wall Street Systems and other vendors.",
+        "impact": "Trading tech consolidation"
+      },
+      {
+        "year": "2019",
+        "title": "Cerved acquisition",
+        "description": "Italian business data and credit services.",
+        "impact": "European data empire"
+      },
+      {
+        "year": "2020s",
+        "title": "ION Group scale",
+        "description": "Back-office software across finance and energy.",
+        "impact": "Italian tech billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 47,
+    "name": "Klaus-Michael Kuehne",
+    "netWorth": "41.0B",
+    "age": null,
+    "country": "Germany",
+    "sector": "Logistics",
+    "companies": [
+      "Shipping"
+    ],
+    "sourceOfWealth": "Shipping",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Shipping in logistics.",
+    "timeline": [
+      {
+        "year": "1933",
+        "title": "Kuehne family logistics",
+        "description": "Grandfather founded freight forwarder in Bremen.",
+        "impact": "Logistics dynasty"
+      },
+      {
+        "year": "1958",
+        "title": "Joined Kuehne + Nagel",
+        "description": "Expanded international freight forwarding.",
+        "impact": "Global logistics"
+      },
+      {
+        "year": "1990",
+        "title": "Majority stake",
+        "description": "Became controlling shareholder of K+N.",
+        "impact": "Shipping fortune"
+      },
+      {
+        "year": "2010s",
+        "title": "Hapag-Lloyd investment",
+        "description": "Stake in container shipping line.",
+        "impact": "Integrated logistics wealth"
+      }
+    ]
+  },
+  {
+    "rank": 48,
+    "name": "William Ding",
+    "netWorth": "41.0B",
+    "age": null,
+    "country": "China",
+    "sector": "Technology",
+    "companies": [
+      "Online games"
+    ],
+    "sourceOfWealth": "Online games",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Online games in technology.",
+    "timeline": [
+      {
+        "year": "1997",
+        "title": "Founded NetEase",
+        "description": "Internet portal and gaming in Guangzhou.",
+        "impact": "Chinese gaming pioneer"
+      },
+      {
+        "year": "2001",
+        "title": "Blizzard partnership",
+        "description": "Distributed World of Warcraft in China.",
+        "impact": "Gaming distribution"
+      },
+      {
+        "year": "2014",
+        "title": "Mobile gaming hits",
+        "description": "Fantasy Westward Journey and Onmyoji.",
+        "impact": "Mobile revenue leader"
+      },
+      {
+        "year": "2020s",
+        "title": "NetEase global push",
+        "description": "Studios in U.S. and Japan; music streaming.",
+        "impact": "Diversified tech fortune"
+      }
+    ]
+  },
+  {
+    "rank": 49,
+    "name": "Abigail Johnson",
+    "netWorth": "40.5B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Fidelity"
+    ],
+    "sourceOfWealth": "Fidelity",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Fidelity in finance & investments.",
+    "timeline": [
+      {
+        "year": "1946",
+        "title": "Fidelity founded",
+        "description": "Grandfather Edward Johnson II started mutual fund firm.",
+        "impact": "Finance dynasty"
+      },
+      {
+        "year": "1988",
+        "title": "Joined Fidelity",
+        "description": "Abigail Johnson started in customer service.",
+        "impact": "Family business path"
+      },
+      {
+        "year": "2014",
+        "title": "CEO of Fidelity",
+        "description": "Succeeded father Ned Johnson III.",
+        "impact": "Asset management leader"
+      },
+      {
+        "year": "2020s",
+        "title": "Crypto and fintech",
+        "description": "Fidelity launched Bitcoin custody and trading.",
+        "impact": "Modernized family firm"
+      }
+    ]
+  },
+  {
+    "rank": 50,
+    "name": "Stephen Schwarzman",
+    "netWorth": "40.1B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Investments"
+    ],
+    "sourceOfWealth": "Investments",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Investments in finance & investments.",
+    "timeline": [
+      {
+        "year": "1985",
+        "title": "Co-founded Blackstone",
+        "description": "With Pete Peterson; private equity and advisory.",
+        "impact": "PE pioneer"
+      },
+      {
+        "year": "2007",
+        "title": "Blackstone IPO",
+        "description": "Largest PE firm public offering.",
+        "impact": "Alternative asset giant"
+      },
+      {
+        "year": "2015",
+        "title": "Real estate scale",
+        "description": "Acquired Hilton and large property portfolios.",
+        "impact": "Diversified alternatives"
+      },
+      {
+        "year": "2020s",
+        "title": "Infrastructure investing",
+        "description": "Major data-center and energy investments.",
+        "impact": "Wall Street billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 51,
+    "name": "Eric Schmidt",
+    "netWorth": "39.6B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Google"
+    ],
+    "sourceOfWealth": "Google",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Google in technology.",
+    "timeline": [
+      {
+        "year": "1983",
+        "title": "Joined Sun Microsystems",
+        "description": "Led software engineering at workstation maker.",
+        "impact": "Silicon Valley career"
+      },
+      {
+        "year": "1997",
+        "title": "CEO of Novell",
+        "description": "Turned around networking software company.",
+        "impact": "Enterprise software"
+      },
+      {
+        "year": "2001",
+        "title": "CEO of Google",
+        "description": "Hired to provide 'adult supervision' with founders.",
+        "impact": "Google scale era"
+      },
+      {
+        "year": "2011",
+        "title": "Executive chairman",
+        "description": "Oversaw Android, Chrome, and acquisitions.",
+        "impact": "Alphabet wealth"
+      }
+    ]
+  },
+  {
+    "rank": 52,
+    "name": "Alain Wertheimer",
+    "netWorth": "39.4B",
+    "age": null,
+    "country": "France",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Chanel"
+    ],
+    "sourceOfWealth": "Chanel",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Chanel in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1920s",
+        "title": "Chanel founded",
+        "description": "Family partnered with Coco Chanel in Paris.",
+        "impact": "Luxury dynasty"
+      },
+      {
+        "year": "1974",
+        "title": "Took control of Chanel",
+        "description": "Alain and Gerard revived dormant fashion house.",
+        "impact": "Luxury revival"
+      },
+      {
+        "year": "1983",
+        "title": "Hired Karl Lagerfeld",
+        "description": "Revitalized Chanel haute couture.",
+        "impact": "Global fashion icon"
+      },
+      {
+        "year": "2010s",
+        "title": "Chanel private empire",
+        "description": "No public listing; boutiques worldwide.",
+        "impact": "Luxury fortune"
+      }
+    ]
+  },
+  {
+    "rank": 52,
+    "name": "Gerard Wertheimer",
+    "netWorth": "39.4B",
+    "age": null,
+    "country": "France",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Chanel"
+    ],
+    "sourceOfWealth": "Chanel",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Chanel in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1920s",
+        "title": "Chanel partnership",
+        "description": "Family has owned Chanel since 1920s.",
+        "impact": "Inherited luxury stake"
+      },
+      {
+        "year": "1974",
+        "title": "Chanel revival",
+        "description": "With brother Alain; rebuilt fashion house.",
+        "impact": "Private luxury giant"
+      },
+      {
+        "year": "2000s",
+        "title": "Global boutiques",
+        "description": "Chanel expanded in Asia and Americas.",
+        "impact": "Fashion wealth"
+      },
+      {
+        "year": "2010s",
+        "title": "Watch and beauty",
+        "description": "Diversified beyond haute couture.",
+        "impact": "Brother co-owner fortune"
+      }
+    ]
+  },
+  {
+    "rank": 54,
+    "name": "Jean-Louis van der Velde",
+    "netWorth": "38.0B",
+    "age": null,
+    "country": "Netherlands",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Cryptocurrency"
+    ],
+    "sourceOfWealth": "Cryptocurrency",
+    "firstFortuneDecade": "2010s",
+    "summary": "Billionaire whose fortune stems primarily from Cryptocurrency in finance & investments.",
+    "timeline": [
+      {
+        "year": "2012",
+        "title": "Joined Bitfinex",
+        "description": "CEO of crypto exchange during growth phase.",
+        "impact": "Digital asset trading"
+      },
+      {
+        "year": "2014",
+        "title": "Tether operations",
+        "description": "Linked to stablecoin USDT issuance.",
+        "impact": "Crypto liquidity"
+      },
+      {
+        "year": "2018",
+        "title": "Market leadership",
+        "description": "Bitfinex among top crypto exchanges.",
+        "impact": "Trading platform scale"
+      },
+      {
+        "year": "2020s",
+        "title": "Stablecoin scrutiny",
+        "description": "Navigated regulatory attention on Tether reserves.",
+        "impact": "Crypto infrastructure"
+      }
+    ]
+  },
+  {
+    "rank": 54,
+    "name": "Paolo Ardoino",
+    "netWorth": "38.0B",
+    "age": null,
+    "country": "Italy",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Cryptocurrency"
+    ],
+    "sourceOfWealth": "Cryptocurrency",
+    "firstFortuneDecade": "2010s",
+    "summary": "Billionaire whose fortune stems primarily from Cryptocurrency in finance & investments.",
+    "timeline": [
+      {
+        "year": "2014",
+        "title": "Joined Bitfinex",
+        "description": "Technical leadership at crypto exchange.",
+        "impact": "Exchange engineering"
+      },
+      {
+        "year": "2021",
+        "title": "CTO of Bitfinex",
+        "description": "Led technology and Tether integration.",
+        "impact": "Stablecoin tech"
+      },
+      {
+        "year": "2023",
+        "title": "CEO of Tether",
+        "description": "Succeeded van der Velde at stablecoin issuer.",
+        "impact": "USDT leadership"
+      },
+      {
+        "year": "2024",
+        "title": "Tether profits",
+        "description": "Stablecoin issuer reported record earnings.",
+        "impact": "Crypto fortune"
+      }
+    ]
+  },
+  {
+    "rank": 56,
+    "name": "Savitri Jindal & family",
+    "netWorth": "37.5B",
+    "age": null,
+    "country": "India",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Steel"
+    ],
+    "sourceOfWealth": "Steel",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Steel in metals & mining.",
+    "timeline": [
+      {
+        "year": "1952",
+        "title": "O.P. Jindal founded steel",
+        "description": "Husband built Jindal steel empire in India.",
+        "impact": "Industrial dynasty"
+      },
+      {
+        "year": "2005",
+        "title": "Inherited after O.P. Jindal died",
+        "description": "Savitri Jindal became family matriarch.",
+        "impact": "Steel fortune"
+      },
+      {
+        "year": "2010s",
+        "title": "JSW Steel growth",
+        "description": "Sajjan Jindal led expansion and acquisitions.",
+        "impact": "India steel leader"
+      },
+      {
+        "year": "2020s",
+        "title": "Diversified Jindal Group",
+        "description": "Power, cement, and infrastructure holdings.",
+        "impact": "Family industrial wealth"
+      }
+    ]
+  },
+  {
+    "rank": 57,
+    "name": "Alexey Mordashov & family",
+    "netWorth": "36.9B",
+    "age": null,
+    "country": "Russia",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Steel",
+      "investments"
+    ],
+    "sourceOfWealth": "Steel, investments",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Steel, investments in metals & mining.",
+    "timeline": [
+      {
+        "year": "1991",
+        "title": "Joined Cherepovets steel",
+        "description": "Father's mill during Soviet privatization.",
+        "impact": "Russian steel origins"
+      },
+      {
+        "year": "2000",
+        "title": "Consolidated Severstal",
+        "description": "Built Russia's largest steel company.",
+        "impact": "Metals oligarch"
+      },
+      {
+        "year": "2006",
+        "title": "Arcelor battle",
+        "description": "Bid for Arcelor; later sold foreign assets.",
+        "impact": "Global steel player"
+      },
+      {
+        "year": "2010s",
+        "title": "Gold and telecom",
+        "description": "Nordgold mining and Tele2 Russia investments.",
+        "impact": "Diversified Russian fortune"
+      }
+    ]
+  },
+  {
+    "rank": 58,
+    "name": "Jay Y. Lee",
+    "netWorth": "36.9B",
+    "age": null,
+    "country": "South Korea",
+    "sector": "Technology",
+    "companies": [
+      "Samsung"
+    ],
+    "sourceOfWealth": "Samsung",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Samsung in technology.",
+    "timeline": [
+      {
+        "year": "1968",
+        "title": "Samsung Group scale",
+        "description": "Grandson of founder Lee Byung-chul.",
+        "impact": "Korean chaebol heir"
+      },
+      {
+        "year": "2014",
+        "title": "De facto Samsung leader",
+        "description": "After father Lee Kun-hee's illness.",
+        "impact": "Conglomerate control"
+      },
+      {
+        "year": "2017",
+        "title": "Legal challenges",
+        "description": "Convicted and pardoned in bribery scandal.",
+        "impact": "Corporate governance scrutiny"
+      },
+      {
+        "year": "2022",
+        "title": "Chairman of Samsung Electronics",
+        "description": "Led chip and smartphone divisions.",
+        "impact": "Tech manufacturing fortune"
+      }
+    ]
+  },
+  {
+    "rank": 59,
+    "name": "Henry Samueli",
+    "netWorth": "36.4B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Semiconductors"
+    ],
+    "sourceOfWealth": "Semiconductors",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Semiconductors in technology.",
+    "timeline": [
+      {
+        "year": "1991",
+        "title": "Co-founded Broadcom",
+        "description": "With Henry Nicholas; semiconductor chips.",
+        "impact": "Chip pioneer"
+      },
+      {
+        "year": "1998",
+        "title": "Broadcom IPO",
+        "description": "Networking chips for cable and ethernet.",
+        "impact": "Silicon Valley wealth"
+      },
+      {
+        "year": "2016",
+        "title": "Acquired by Avago",
+        "description": "Merged into Broadcom Inc.; continued as chairman.",
+        "impact": "Semiconductor consolidation"
+      },
+      {
+        "year": "2020s",
+        "title": "Broadcom scale",
+        "description": "AI networking chips and VMware acquisition.",
+        "impact": "Infrastructure chips"
+      }
+    ]
+  },
+  {
+    "rank": 60,
+    "name": "Miriam Adelson & family",
+    "netWorth": "35.1B",
+    "age": null,
+    "country": "United States",
+    "sector": "Gambling & Casinos",
+    "companies": [
+      "Casinos"
+    ],
+    "sourceOfWealth": "Casinos",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Casinos in gambling & casinos.",
+    "timeline": [
+      {
+        "year": "1988",
+        "title": "Married Sheldon Adelson",
+        "description": "Physician became partner in casino empire.",
+        "impact": "Casino dynasty"
+      },
+      {
+        "year": "1989",
+        "title": "Las Vegas Sands",
+        "description": "Sheldon built Venetian and Macau casinos.",
+        "impact": "Gaming empire"
+      },
+      {
+        "year": "2018",
+        "title": "Inherited controlling stake",
+        "description": "After Sheldon Adelson died; largest shareholder.",
+        "impact": "Casino fortune heir"
+      },
+      {
+        "year": "2020s",
+        "title": "Las Vegas Sands scale",
+        "description": "Sold Las Vegas assets; focused on Asia.",
+        "impact": "Inherited billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 61,
+    "name": "He Xiangjian & family",
+    "netWorth": "34.9B",
+    "age": null,
+    "country": "China",
+    "sector": "Manufacturing",
+    "companies": [
+      "Home appliances"
+    ],
+    "sourceOfWealth": "Home appliances",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Home appliances in manufacturing.",
+    "timeline": [
+      {
+        "year": "1968",
+        "title": "Founded Midea",
+        "description": "Started with bottle caps in Guangdong.",
+        "impact": "Appliance dynasty"
+      },
+      {
+        "year": "1980s",
+        "title": "Electric fans and AC",
+        "description": "Midea became China's appliance leader.",
+        "impact": "Manufacturing scale"
+      },
+      {
+        "year": "2013",
+        "title": "Midea global acquisitions",
+        "description": "Bought Kuka robotics and Toshiba appliances.",
+        "impact": "Global appliance brand"
+      },
+      {
+        "year": "2020s",
+        "title": "Midea Group",
+        "description": "Air conditioners and smart home devices worldwide.",
+        "impact": "China manufacturing fortune"
+      }
+    ]
+  },
+  {
+    "rank": 62,
+    "name": "Eyal Ofer",
+    "netWorth": "33.9B",
+    "age": null,
+    "country": "Israel",
+    "sector": "Diversified",
+    "companies": [
+      "Real estate",
+      "shipping"
+    ],
+    "sourceOfWealth": "Real estate, shipping",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Real estate, shipping in diversified.",
+    "timeline": [
+      {
+        "year": "1950s",
+        "title": "Sammy Ofer shipping",
+        "description": "Father built global shipping empire.",
+        "impact": "Maritime dynasty"
+      },
+      {
+        "year": "1990",
+        "title": "Expanded Ofer Global",
+        "description": "Shipping, real estate, and energy investments.",
+        "impact": "Diversified holdings"
+      },
+      {
+        "year": "2010s",
+        "title": "Zodiac Maritime",
+        "description": "Major tanker and bulk carrier operator.",
+        "impact": "Global shipping"
+      },
+      {
+        "year": "2020s",
+        "title": "Real estate and art",
+        "description": "London and New York property; major art collector.",
+        "impact": "Israeli billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 63,
+    "name": "Len Blavatnik",
+    "netWorth": "32.9B",
+    "age": null,
+    "country": "United States",
+    "sector": "Diversified",
+    "companies": [
+      "Music",
+      "chemicals"
+    ],
+    "sourceOfWealth": "Music, chemicals",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Music, chemicals in diversified.",
+    "timeline": [
+      {
+        "year": "1986",
+        "title": "Founded Access Industries",
+        "description": "Industrial and media holding company.",
+        "impact": "Conglomerate builder"
+      },
+      {
+        "year": "2003",
+        "title": "TNK-BP oil venture",
+        "description": "Russian oil partnership with BP.",
+        "impact": "Energy fortune"
+      },
+      {
+        "year": "2011",
+        "title": "Acquired Warner Music",
+        "description": "Major music label portfolio.",
+        "impact": "Media empire"
+      },
+      {
+        "year": "2018",
+        "title": "LyondellBasell stake",
+        "description": "Chemicals and refining investments.",
+        "impact": "Diversified billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 64,
+    "name": "Idan Ofer",
+    "netWorth": "32.7B",
+    "age": null,
+    "country": "Israel",
+    "sector": "Diversified",
+    "companies": [
+      "Shipping"
+    ],
+    "sourceOfWealth": "Shipping",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Shipping in diversified.",
+    "timeline": [
+      {
+        "year": "1950s",
+        "title": "Ofer family shipping",
+        "description": "Son of Sammy Ofer; maritime dynasty.",
+        "impact": "Inherited shipping"
+      },
+      {
+        "year": "2000s",
+        "title": "Quantum Pacific",
+        "description": "Holding company for shipping and energy.",
+        "impact": "Conglomerate structure"
+      },
+      {
+        "year": "2010s",
+        "title": "Drilling and LNG",
+        "description": "Pacific Drilling and gas investments.",
+        "impact": "Energy diversification"
+      },
+      {
+        "year": "2020s",
+        "title": "Shipping and tech",
+        "description": "Stake in AI and fintech ventures.",
+        "impact": "Israeli fortune"
+      }
+    ]
+  },
+  {
+    "rank": 65,
+    "name": "Aliko Dangote",
+    "netWorth": "32.6B",
+    "age": null,
+    "country": "Nigeria",
+    "sector": "Manufacturing",
+    "companies": [
+      "Cement",
+      "sugar"
+    ],
+    "sourceOfWealth": "Cement, sugar",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Cement, sugar in manufacturing.",
+    "timeline": [
+      {
+        "year": "1977",
+        "title": "Founded Dangote Group",
+        "description": "Trading business in Lagos, Nigeria.",
+        "impact": "African industrialist"
+      },
+      {
+        "year": "1990s",
+        "title": "Cement expansion",
+        "description": "Built plants across Nigeria and Africa.",
+        "impact": "Cement monopoly"
+      },
+      {
+        "year": "2010",
+        "title": "Dangote Cement IPO",
+        "description": "Largest listing on Nigerian Stock Exchange.",
+        "impact": "Africa's richest man"
+      },
+      {
+        "year": "2020s",
+        "title": "Refinery project",
+        "description": "Massive oil refinery in Lekki, Nigeria.",
+        "impact": "Industrial diversification"
+      }
+    ]
+  },
+  {
+    "rank": 66,
+    "name": "Marilyn Simons & family",
+    "netWorth": "32.5B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Hedge funds"
+    ],
+    "sourceOfWealth": "Hedge funds",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Hedge funds in finance & investments.",
+    "timeline": [
+      {
+        "year": "1982",
+        "title": "Jim Simons founded Renaissance",
+        "description": "Quant hedge fund using math models.",
+        "impact": "Quant revolution"
+      },
+      {
+        "year": "2000s",
+        "title": "Medallion Fund returns",
+        "description": "Legendary returns for employees and Simons.",
+        "impact": "Quant fortune"
+      },
+      {
+        "year": "2010",
+        "title": "Retired from Renaissance",
+        "description": "Marilyn and family inherited wealth.",
+        "impact": "Philanthropic focus"
+      },
+      {
+        "year": "2024",
+        "title": "Inherited after Jim died",
+        "description": "Marilyn Simons became billionaire heiress.",
+        "impact": "Math philanthropy legacy"
+      }
+    ]
+  },
+  {
+    "rank": 67,
+    "name": "Andreas von Bechtolsheim & family",
+    "netWorth": "32.3B",
+    "age": null,
+    "country": "Germany",
+    "sector": "Technology",
+    "companies": [
+      "Google"
+    ],
+    "sourceOfWealth": "Google",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Google in technology.",
+    "timeline": [
+      {
+        "year": "1982",
+        "title": "Co-founded Sun Microsystems",
+        "description": "Workstations that powered Silicon Valley.",
+        "impact": "Sun co-founder"
+      },
+      {
+        "year": "1998",
+        "title": "First Google investor",
+        "description": "Wrote $100K check to Larry and Sergey.",
+        "impact": "Legendary angel bet"
+      },
+      {
+        "year": "2004",
+        "title": "Founded Arista Networks",
+        "description": "Cloud networking switches.",
+        "impact": "Networking billionaire"
+      },
+      {
+        "year": "2008",
+        "title": "Google stake value",
+        "description": "Early Google shares compounded for decades.",
+        "impact": "Serial tech investor"
+      }
+    ]
+  },
+  {
+    "rank": 68,
+    "name": "Chen Tianshi",
+    "netWorth": "31.9B",
+    "age": null,
+    "country": "China",
+    "sector": "Technology",
+    "companies": [
+      "Semiconductors"
+    ],
+    "sourceOfWealth": "Semiconductors",
+    "firstFortuneDecade": "2000s",
+    "summary": "Billionaire whose fortune stems primarily from Semiconductors in technology.",
+    "timeline": [
+      {
+        "year": "2008",
+        "title": "Founded Cambricon",
+        "description": "AI chip startup spun from Chinese Academy of Sciences.",
+        "impact": "AI silicon pioneer"
+      },
+      {
+        "year": "2016",
+        "title": "Cambricon founded formally",
+        "description": "Neural network processors for AI inference.",
+        "impact": "China AI chips"
+      },
+      {
+        "year": "2020",
+        "title": "STAR Market IPO",
+        "description": "Listed on Shanghai tech board.",
+        "impact": "Public AI chip company"
+      },
+      {
+        "year": "2020s",
+        "title": "Edge AI processors",
+        "description": "Chips for smartphones and data centers.",
+        "impact": "Semiconductor fortune"
+      }
+    ]
+  },
+  {
+    "rank": 69,
+    "name": "Lyndal Stephens Greth & family",
+    "netWorth": "31.8B",
+    "age": null,
+    "country": "United States",
+    "sector": "Energy",
+    "companies": [
+      "Oil & gas"
+    ],
+    "sourceOfWealth": "Oil & gas",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Oil & gas in energy.",
+    "timeline": [
+      {
+        "year": "1934",
+        "title": "Cargill founded roots",
+        "description": "Family agribusiness giant in Minnesota.",
+        "impact": "Commodity dynasty"
+      },
+      {
+        "year": "1990s",
+        "title": "Cargill private ownership",
+        "description": "Family descendants hold stake in Cargill.",
+        "impact": "Private conglomerate"
+      },
+      {
+        "year": "2010s",
+        "title": "Food and agriculture",
+        "description": "Grain trading, animal feed, and food processing.",
+        "impact": "Global agribusiness"
+      },
+      {
+        "year": "2020s",
+        "title": "Inherited Cargill wealth",
+        "description": "Among largest private companies in U.S.",
+        "impact": "Family fortune"
+      }
+    ]
+  },
+  {
+    "rank": 70,
+    "name": "Robert Pera",
+    "netWorth": "31.7B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Wireless networking"
+    ],
+    "sourceOfWealth": "Wireless networking",
+    "firstFortuneDecade": "2000s",
+    "summary": "Billionaire whose fortune stems primarily from Wireless networking in technology.",
+    "timeline": [
+      {
+        "year": "2005",
+        "title": "Founded Ubiquiti",
+        "description": "Wireless networking equipment maker.",
+        "impact": "Networking entrepreneur"
+      },
+      {
+        "year": "2011",
+        "title": "Ubiquiti IPO",
+        "description": "Affordable Wi-Fi for enterprises and consumers.",
+        "impact": "Tech IPO wealth"
+      },
+      {
+        "year": "2015",
+        "title": "Bought Memphis Grizzlies",
+        "description": "NBA team ownership at age 36.",
+        "impact": "Sports investor"
+      },
+      {
+        "year": "2020s",
+        "title": "Ubiquiti scale",
+        "description": "UniFi ecosystem for home and business networks.",
+        "impact": "Wireless billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 71,
+    "name": "Eduardo Saverin",
+    "netWorth": "31.6B",
+    "age": null,
+    "country": "Brazil",
+    "sector": "Technology",
+    "companies": [
+      "Facebook"
+    ],
+    "sourceOfWealth": "Facebook",
+    "firstFortuneDecade": "2000s",
+    "summary": "Billionaire whose fortune stems primarily from Facebook in technology.",
+    "timeline": [
+      {
+        "year": "2004",
+        "title": "Co-founded Facebook",
+        "description": "With Mark Zuckerberg at Harvard.",
+        "impact": "Social network origins"
+      },
+      {
+        "year": "2005",
+        "title": "Left Facebook operations",
+        "description": "Settlement retained significant equity stake.",
+        "impact": "Co-founder stake"
+      },
+      {
+        "year": "2009",
+        "title": "Moved to Singapore",
+        "description": "Renounced U.S. citizenship; tax planning.",
+        "impact": "International investor"
+      },
+      {
+        "year": "2010s",
+        "title": "B Capital founded",
+        "description": "Venture fund investing across Asia.",
+        "impact": "Venture capital fortune"
+      }
+    ]
+  },
+  {
+    "rank": 72,
+    "name": "Lakshmi Mittal",
+    "netWorth": "31.3B",
+    "age": null,
+    "country": "India",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Steel"
+    ],
+    "sourceOfWealth": "Steel",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Steel in metals & mining.",
+    "timeline": [
+      {
+        "year": "1976",
+        "title": "Founded Mittal Steel",
+        "description": "Steel operations in Indonesia and Trinidad.",
+        "impact": "Global steel roll-up"
+      },
+      {
+        "year": "1989",
+        "title": "Expanded in Mexico",
+        "description": "Acquired steel plants in developing markets.",
+        "impact": "Emerging market steel"
+      },
+      {
+        "year": "2006",
+        "title": "Merged with Arcelor",
+        "description": "Created ArcelorMittal; world's largest steelmaker.",
+        "impact": "Steel empire"
+      },
+      {
+        "year": "2010s",
+        "title": "India and Europe plants",
+        "description": "Integrated mining and steel production.",
+        "impact": "Steel magnate"
+      }
+    ]
+  },
+  {
+    "rank": 73,
+    "name": "MacKenzie Scott",
+    "netWorth": "31.1B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Amazon"
+    ],
+    "sourceOfWealth": "Amazon",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Amazon in technology.",
+    "timeline": [
+      {
+        "year": "1992",
+        "title": "Married Jeff Bezos",
+        "description": "Early Amazon employee and novelist.",
+        "impact": "Amazon early stake"
+      },
+      {
+        "year": "1994",
+        "title": "Amazon founded",
+        "description": "Helped start company; early accounting.",
+        "impact": "E-commerce origins"
+      },
+      {
+        "year": "2019",
+        "title": "Divorced Jeff Bezos",
+        "description": "Received 25% of Amazon shares (~$36B).",
+        "impact": "Major stake transfer"
+      },
+      {
+        "year": "2020",
+        "title": "Philanthropic giving",
+        "description": "Donated billions to nonprofits via Yield Giving.",
+        "impact": "Record philanthropy"
+      }
+    ]
+  },
+  {
+    "rank": 74,
+    "name": "Elaine Marshall & family",
+    "netWorth": "30.9B",
+    "age": null,
+    "country": "United States",
+    "sector": "Diversified",
+    "companies": [
+      "Koch Inc."
+    ],
+    "sourceOfWealth": "Koch Inc.",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Koch Inc in diversified.",
+    "timeline": [
+      {
+        "year": "1898",
+        "title": "Koch family origins",
+        "description": "Related to Koch Industries through marriage.",
+        "impact": "Industrial dynasty link"
+      },
+      {
+        "year": "1967",
+        "title": "E. Pierce Marshall inheritance",
+        "description": "Husband's stake in Koch Industries.",
+        "impact": "Family wealth transfer"
+      },
+      {
+        "year": "2006",
+        "title": "Legal battles over estate",
+        "description": "Protracted Koch family inheritance disputes.",
+        "impact": "Fortune consolidation"
+      },
+      {
+        "year": "2020s",
+        "title": "Koch Industries stake",
+        "description": "Among largest private company shareholders.",
+        "impact": "Inherited fortune"
+      }
+    ]
+  },
+  {
+    "rank": 75,
+    "name": "Thomas Frist Jr & family",
+    "netWorth": "30.6B",
+    "age": null,
+    "country": "United States",
+    "sector": "Healthcare",
+    "companies": [
+      "Hospitals"
+    ],
+    "sourceOfWealth": "Hospitals",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Hospitals in healthcare.",
+    "timeline": [
+      {
+        "year": "1968",
+        "title": "Founded HCA Healthcare",
+        "description": "With father Thomas Frist Sr. in Nashville.",
+        "impact": "Hospital chain pioneer"
+      },
+      {
+        "year": "1990s",
+        "title": "HCA expansion",
+        "description": "Largest for-profit hospital operator in U.S.",
+        "impact": "Healthcare scale"
+      },
+      {
+        "year": "2006",
+        "title": "HCA taken private",
+        "description": "Private equity buyout; later re-IPO.",
+        "impact": "Healthcare investing"
+      },
+      {
+        "year": "2020s",
+        "title": "Frist family fortune",
+        "description": "Generations lead HCA and healthcare ventures.",
+        "impact": "Hospital billionaire dynasty"
+      }
+    ]
+  },
+  {
+    "rank": 76,
+    "name": "Pham Nhat Vuong",
+    "netWorth": "30.6B",
+    "age": null,
+    "country": "Vietnam",
+    "sector": "Diversified",
+    "companies": [
+      "Diversified"
+    ],
+    "sourceOfWealth": "Diversified",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Diversified in diversified.",
+    "timeline": [
+      {
+        "year": "1993",
+        "title": "Founded Technocom",
+        "description": "Instant noodles in Ukraine; first Vietnamese billionaire abroad.",
+        "impact": "Food entrepreneur"
+      },
+      {
+        "year": "2000s",
+        "title": "Returned to Vietnam",
+        "description": "Sold Technocom; invested in homeland.",
+        "impact": "Repats wealth"
+      },
+      {
+        "year": "2010",
+        "title": "Founded Vingroup",
+        "description": "Real estate, retail, and hospitality conglomerate.",
+        "impact": "Vietnam conglomerate"
+      },
+      {
+        "year": "2018",
+        "title": "VinFast auto brand",
+        "description": "Electric vehicles and manufacturing.",
+        "impact": "Vietnam industrialist"
+      }
+    ]
+  },
+  {
+    "rank": 77,
+    "name": "Michal Strnad",
+    "netWorth": "30.4B",
+    "age": null,
+    "country": "Czech Republic",
+    "sector": "Manufacturing",
+    "companies": [
+      "Defense Contracting"
+    ],
+    "sourceOfWealth": "Defense Contracting",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Defense Contracting in manufacturing.",
+    "timeline": [
+      {
+        "year": "1990s",
+        "title": "CSG Group origins",
+        "description": "Family ammunition and defense business in Czechia.",
+        "impact": "Defense industry"
+      },
+      {
+        "year": "2010s",
+        "title": "Expanded CSG aerospace",
+        "description": "Aircraft parts and defense systems.",
+        "impact": "European defense"
+      },
+      {
+        "year": "2020",
+        "title": "Acquired Colt CZ Group",
+        "description": "Merged firearms brands globally.",
+        "impact": "Firearms consolidation"
+      },
+      {
+        "year": "2020s",
+        "title": "Defense exports",
+        "description": "NATO supplier amid European rearmament.",
+        "impact": "Czech defense fortune"
+      }
+    ]
+  },
+  {
+    "rank": 78,
+    "name": "Melinda French Gates",
+    "netWorth": "30.1B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Microsoft"
+    ],
+    "sourceOfWealth": "Microsoft",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Microsoft in technology.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Joined Microsoft",
+        "description": "Product manager; met Bill Gates at company.",
+        "impact": "Tech career start"
+      },
+      {
+        "year": "1994",
+        "title": "Married Bill Gates",
+        "description": "Co-led philanthropy and family foundation.",
+        "impact": "Foundation partnership"
+      },
+      {
+        "year": "2000",
+        "title": "Bill & Melinda Gates Foundation",
+        "description": "Co-chaired world's largest private foundation.",
+        "impact": "Global health philanthropy"
+      },
+      {
+        "year": "2021",
+        "title": "Divorced Bill Gates",
+        "description": "Retained foundation role; independent Pivotal Ventures.",
+        "impact": "Independent philanthropy"
+      }
+    ]
+  },
+  {
+    "rank": 79,
+    "name": "Vladimir Potanin",
+    "netWorth": "29.7B",
+    "age": null,
+    "country": "Russia",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Metals"
+    ],
+    "sourceOfWealth": "Metals",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Metals in metals & mining.",
+    "timeline": [
+      {
+        "year": "1989",
+        "title": "Founded Interros",
+        "description": "Investment company during Soviet privatization.",
+        "impact": "Russian oligarch era"
+      },
+      {
+        "year": "1995",
+        "title": "Norilsk Nickel stake",
+        "description": "Acquired metals giant in loans-for-shares.",
+        "impact": "Nickel and palladium"
+      },
+      {
+        "year": "2010s",
+        "title": "Nornickel leadership",
+        "description": "World's largest palladium producer.",
+        "impact": "Metals fortune"
+      },
+      {
+        "year": "2020s",
+        "title": "Sanctions and divestment",
+        "description": "Navigated Western sanctions on Russian assets.",
+        "impact": "Commodity oligarch"
+      }
+    ]
+  },
+  {
+    "rank": 80,
+    "name": "Vagit Alekperov",
+    "netWorth": "29.5B",
+    "age": null,
+    "country": "Russia",
+    "sector": "Energy",
+    "companies": [
+      "Oil"
+    ],
+    "sourceOfWealth": "Oil",
+    "firstFortuneDecade": "1970s",
+    "summary": "Billionaire whose fortune stems primarily from Oil in energy.",
+    "timeline": [
+      {
+        "year": "1979",
+        "title": "Joined Soviet oil ministry",
+        "description": "Engineer in Caspian oil fields.",
+        "impact": "Oil career start"
+      },
+      {
+        "year": "1991",
+        "title": "Founded Lukoil",
+        "description": "Russia's largest private oil company.",
+        "impact": "Oil major founder"
+      },
+      {
+        "year": "1995",
+        "title": "Lukoil privatization",
+        "description": "Consolidated Soviet oil assets.",
+        "impact": "Energy oligarch"
+      },
+      {
+        "year": "2000s",
+        "title": "Global Lukoil expansion",
+        "description": "Refineries and gas stations across Europe.",
+        "impact": "Russian oil fortune"
+      }
+    ]
+  },
+  {
+    "rank": 81,
+    "name": "Wang Weixiu & family",
+    "netWorth": "29.1B",
+    "age": null,
+    "country": "China",
+    "sector": "Manufacturing",
+    "companies": [
+      "Machinery"
+    ],
+    "sourceOfWealth": "Machinery",
+    "firstFortuneDecade": "2000s",
+    "summary": "Billionaire whose fortune stems primarily from Machinery in manufacturing.",
+    "timeline": [
+      {
+        "year": "2000",
+        "title": "Founded Longi Green Energy",
+        "description": "Solar wafer and module manufacturer.",
+        "impact": "Solar industry pioneer"
+      },
+      {
+        "year": "2012",
+        "title": "Monocrystalline focus",
+        "description": "Bet on single-crystal silicon technology.",
+        "impact": "Solar tech leader"
+      },
+      {
+        "year": "2018",
+        "title": "Longi global expansion",
+        "description": "Largest monocrystalline silicon producer.",
+        "impact": "Clean energy scale"
+      },
+      {
+        "year": "2020s",
+        "title": "Solar manufacturing",
+        "description": "Supplied panels worldwide amid energy transition.",
+        "impact": "China solar fortune"
+      }
+    ]
+  },
+  {
+    "rank": 82,
+    "name": "Colin Huang",
+    "netWorth": "28.7B",
+    "age": null,
+    "country": "China",
+    "sector": "Technology",
+    "companies": [
+      "E-commerce"
+    ],
+    "sourceOfWealth": "E-commerce",
+    "firstFortuneDecade": "2000s",
+    "summary": "Billionaire whose fortune stems primarily from E-commerce in technology.",
+    "timeline": [
+      {
+        "year": "2004",
+        "title": "Founded Ouku",
+        "description": "Early e-commerce venture in China.",
+        "impact": "Serial entrepreneur"
+      },
+      {
+        "year": "2015",
+        "title": "Founded Pinduoduo",
+        "description": "Social group-buying e-commerce platform.",
+        "impact": "E-commerce disruptor"
+      },
+      {
+        "year": "2018",
+        "title": "Pinduoduo IPO",
+        "description": "NASDAQ listing; rivaled Alibaba and JD.",
+        "impact": "Rapid user growth"
+      },
+      {
+        "year": "2020",
+        "title": "Stepped down as chairman",
+        "description": "Pinduoduo reached hundreds of millions of users.",
+        "impact": "E-commerce fortune"
+      }
+    ]
+  },
+  {
+    "rank": 83,
+    "name": "Leonid Mikhelson & family",
+    "netWorth": "28.3B",
+    "age": null,
+    "country": "Russia",
+    "sector": "Energy",
+    "companies": [
+      "Gas",
+      "chemicals"
+    ],
+    "sourceOfWealth": "Gas, chemicals",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Gas, chemicals in energy.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Joined Novafininvest",
+        "description": "Gas processing during Soviet transition.",
+        "impact": "Energy career"
+      },
+      {
+        "year": "1993",
+        "title": "Founded Novatek",
+        "description": "Russia's largest independent gas producer.",
+        "impact": "LNG pioneer"
+      },
+      {
+        "year": "2010s",
+        "title": "Yamal LNG project",
+        "description": "Arctic liquefied natural gas export facility.",
+        "impact": "Gas export giant"
+      },
+      {
+        "year": "2020s",
+        "title": "Novatek expansion",
+        "description": "Major stake in Russian energy sector.",
+        "impact": "Gas oligarch fortune"
+      }
+    ]
+  },
+  {
+    "rank": 84,
+    "name": "Huang Shilin",
+    "netWorth": "28.1B",
+    "age": null,
+    "country": "China",
+    "sector": "Energy",
+    "companies": [
+      "Batteries"
+    ],
+    "sourceOfWealth": "Batteries",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Batteries in energy.",
+    "timeline": [
+      {
+        "year": "1999",
+        "title": "Joined CATL early team",
+        "description": "Co-builder of battery giant with Robin Zeng.",
+        "impact": "Battery industry"
+      },
+      {
+        "year": "2011",
+        "title": "CATL formation",
+        "description": "Key executive in Contemporary Amperex Technology.",
+        "impact": "EV supply chain"
+      },
+      {
+        "year": "2018",
+        "title": "CATL IPO wealth",
+        "description": "Executive stake at public listing.",
+        "impact": "Battery billionaire"
+      },
+      {
+        "year": "2020s",
+        "title": "EV battery demand",
+        "description": "CATL supplied global automakers.",
+        "impact": "Clean energy wealth"
+      }
+    ]
+  },
+  {
+    "rank": 85,
+    "name": "John Tu",
+    "netWorth": "27.9B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Computer hardware"
+    ],
+    "sourceOfWealth": "Computer hardware",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Computer hardware in technology.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Co-founded Kingston Technology",
+        "description": "Memory modules with David Sun.",
+        "impact": "Memory pioneer"
+      },
+      {
+        "year": "1996",
+        "title": "Sold 80% to Softbank",
+        "description": "Then bought back company for $450M.",
+        "impact": "Employee-owned model"
+      },
+      {
+        "year": "2010s",
+        "title": "Kingston dominance",
+        "description": "World's largest independent memory maker.",
+        "impact": "Hardware fortune"
+      },
+      {
+        "year": "2020s",
+        "title": "Private company wealth",
+        "description": "No public listing; global memory sales.",
+        "impact": "Taiwanese-American billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 86,
+    "name": "David Sun",
+    "netWorth": "27.9B",
+    "age": null,
+    "country": "United States",
+    "sector": "Technology",
+    "companies": [
+      "Computer hardware"
+    ],
+    "sourceOfWealth": "Computer hardware",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Computer hardware in technology.",
+    "timeline": [
+      {
+        "year": "1987",
+        "title": "Co-founded Kingston Technology",
+        "description": "With John Tu; PC memory modules.",
+        "impact": "Memory modules"
+      },
+      {
+        "year": "1996",
+        "title": "Bought back Kingston",
+        "description": "Repurchased from Softbank; employee ownership.",
+        "impact": "Unique corporate structure"
+      },
+      {
+        "year": "2000s",
+        "title": "USB drives and SSDs",
+        "description": "Expanded beyond DRAM modules.",
+        "impact": "Storage products"
+      },
+      {
+        "year": "2020s",
+        "title": "Kingston scale",
+        "description": "Billions in annual revenue privately held.",
+        "impact": "Co-founder fortune"
+      }
+    ]
+  },
+  {
+    "rank": 87,
+    "name": "Peter Thiel",
+    "netWorth": "27.8B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Facebook",
+      "investments"
+    ],
+    "sourceOfWealth": "Facebook, investments",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Facebook, investments in finance & investments.",
+    "timeline": [
+      {
+        "year": "1998",
+        "title": "Co-founded PayPal",
+        "description": "With Max Levchin and Elon Musk.",
+        "impact": "Online payments"
+      },
+      {
+        "year": "2004",
+        "title": "First Facebook investor",
+        "description": "$500K angel bet for 10% stake.",
+        "impact": "Legendary VC return"
+      },
+      {
+        "year": "2004",
+        "title": "Founded Palantir",
+        "description": "Data analytics for government and enterprise.",
+        "impact": "Defense tech"
+      },
+      {
+        "year": "2010s",
+        "title": "Founders Fund",
+        "description": "Backed SpaceX, Airbnb, and Stripe.",
+        "impact": "Silicon Valley kingmaker"
+      }
+    ]
+  },
+  {
+    "rank": 88,
+    "name": "Vinod Adani",
+    "netWorth": "27.7B",
+    "age": null,
+    "country": "Cyprus",
+    "sector": "Diversified",
+    "companies": [
+      "Infrastructure",
+      "commodities"
+    ],
+    "sourceOfWealth": "Infrastructure, commodities",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Infrastructure, commodities in diversified.",
+    "timeline": [
+      {
+        "year": "1980s",
+        "title": "Adani family trading",
+        "description": "Brother Gautam built Adani Group.",
+        "impact": "Family business"
+      },
+      {
+        "year": "1990s",
+        "title": "Overseas trading operations",
+        "description": "Managed international commodity flows.",
+        "impact": "Global trading arm"
+      },
+      {
+        "year": "2000s",
+        "title": "Adani Group expansion",
+        "description": "Ports, power, and logistics growth.",
+        "impact": "Infrastructure sibling"
+      },
+      {
+        "year": "2020s",
+        "title": "Adani stake wealth",
+        "description": "Significant holdings in group companies.",
+        "impact": "Indian billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 89,
+    "name": "François Pinault & family",
+    "netWorth": "27.6B",
+    "age": null,
+    "country": "France",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Luxury goods"
+    ],
+    "sourceOfWealth": "Luxury goods",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Luxury goods in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1963",
+        "title": "Founded Pinault timber",
+        "description": "Wood and building materials in Brittany.",
+        "impact": "Retail origins"
+      },
+      {
+        "year": "1988",
+        "title": "Shifted to luxury",
+        "description": "Acquired CFAO and luxury brands.",
+        "impact": "Luxury pivot"
+      },
+      {
+        "year": "1999",
+        "title": "Created Kering",
+        "description": "Gucci, Saint Laurent, and Bottega Veneta.",
+        "impact": "Luxury conglomerate"
+      },
+      {
+        "year": "2013",
+        "title": "Christie's ownership",
+        "description": "Auction house added to holdings.",
+        "impact": "Art and luxury empire"
+      }
+    ]
+  },
+  {
+    "rank": 90,
+    "name": "Zheng Shuliang & family",
+    "netWorth": "26.8B",
+    "age": null,
+    "country": "China",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Aluminum products"
+    ],
+    "sourceOfWealth": "Aluminum products",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Aluminum products in metals & mining.",
+    "timeline": [
+      {
+        "year": "1990s",
+        "title": "Founded Weiqiao Pioneering",
+        "description": "Aluminum and textiles in Shandong.",
+        "impact": "Industrial conglomerate"
+      },
+      {
+        "year": "2000s",
+        "title": "Aluminum smelting scale",
+        "description": "Among world's largest aluminum producers.",
+        "impact": "Commodity processing"
+      },
+      {
+        "year": "2010s",
+        "title": "Power self-sufficiency",
+        "description": "Own power plants for smelting operations.",
+        "impact": "Vertical integration"
+      },
+      {
+        "year": "2020s",
+        "title": "Weiqiao Group",
+        "description": "Aluminum, textiles, and power diversified.",
+        "impact": "Chinese industrial fortune"
+      }
+    ]
+  },
+  {
+    "rank": 91,
+    "name": "Reinhold Wuerth & family",
+    "netWorth": "26.6B",
+    "age": null,
+    "country": "Germany",
+    "sector": "Manufacturing",
+    "companies": [
+      "Fasteners"
+    ],
+    "sourceOfWealth": "Fasteners",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Fasteners in manufacturing.",
+    "timeline": [
+      {
+        "year": "1945",
+        "title": "Wuerth screw business",
+        "description": "Father Adolf started wholesale fasteners.",
+        "impact": "Hardware dynasty"
+      },
+      {
+        "year": "1954",
+        "title": "Took over at 19",
+        "description": "Reinhold Wuerth expanded sales force model.",
+        "impact": "Direct sales innovation"
+      },
+      {
+        "year": "1980s",
+        "title": "Global Wuerth expansion",
+        "description": "Assembly and fastening materials worldwide.",
+        "impact": "B2B distribution"
+      },
+      {
+        "year": "2010s",
+        "title": "Wuerth Group scale",
+        "description": "400+ companies in 80 countries.",
+        "impact": "German billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 92,
+    "name": "Jack Ma",
+    "netWorth": "26.4B",
+    "age": null,
+    "country": "China",
+    "sector": "Technology",
+    "companies": [
+      "E-commerce"
+    ],
+    "sourceOfWealth": "E-commerce",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from E-commerce in technology.",
+    "timeline": [
+      {
+        "year": "1999",
+        "title": "Founded Alibaba",
+        "description": "B2B marketplace connecting Chinese suppliers.",
+        "impact": "E-commerce pioneer"
+      },
+      {
+        "year": "2003",
+        "title": "Launched Taobao",
+        "description": "Competed with eBay in China; won market.",
+        "impact": "Consumer e-commerce"
+      },
+      {
+        "year": "2014",
+        "title": "Alibaba IPO",
+        "description": "Largest IPO in history at $25B.",
+        "impact": "China tech icon"
+      },
+      {
+        "year": "2020",
+        "title": "Stepped back from Ant Group IPO",
+        "description": "Regulatory scrutiny ended Ant listing.",
+        "impact": "Fintech and cloud empire"
+      }
+    ]
+  },
+  {
+    "rank": 93,
+    "name": "Cyrus Poonawalla",
+    "netWorth": "26.3B",
+    "age": null,
+    "country": "India",
+    "sector": "Healthcare",
+    "companies": [
+      "Vaccines"
+    ],
+    "sourceOfWealth": "Vaccines",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Vaccines in healthcare.",
+    "timeline": [
+      {
+        "year": "1966",
+        "title": "Founded Serum Institute",
+        "description": "Vaccine production in Pune, India.",
+        "impact": "Vaccine dynasty"
+      },
+      {
+        "year": "1990s",
+        "title": "Affordable vaccines",
+        "description": "Supplied UNICEF and developing nations.",
+        "impact": "Global immunization"
+      },
+      {
+        "year": "2020",
+        "title": "COVID-19 vaccines",
+        "description": "Produced AstraZeneca and Novavax doses at scale.",
+        "impact": "Pandemic response"
+      },
+      {
+        "year": "2020s",
+        "title": "World's largest vaccinemaker",
+        "description": "Billions of doses annually.",
+        "impact": "Healthcare fortune"
+      }
+    ]
+  },
+  {
+    "rank": 94,
+    "name": "Phil Knight & family",
+    "netWorth": "26.2B",
+    "age": null,
+    "country": "United States",
+    "sector": "Fashion & Retail",
+    "companies": [
+      "Nike"
+    ],
+    "sourceOfWealth": "Nike",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Nike in fashion & retail.",
+    "timeline": [
+      {
+        "year": "1964",
+        "title": "Founded Blue Ribbon Sports",
+        "description": "Imported Onitsuka Tiger shoes; became Nike.",
+        "impact": "Athletic footwear"
+      },
+      {
+        "year": "1971",
+        "title": "Nike brand launched",
+        "description": "Swoosh logo and waffle sole innovation.",
+        "impact": "Global sportswear"
+      },
+      {
+        "year": "1988",
+        "title": "Just Do It campaign",
+        "description": "Iconic marketing with Michael Jordan line.",
+        "impact": "Brand dominance"
+      },
+      {
+        "year": "2016",
+        "title": "Stepped down as chairman",
+        "description": "Nike surpassed $30B annual revenue.",
+        "impact": "Sportswear billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 95,
+    "name": "Emmanuel Besnier",
+    "netWorth": "25.8B",
+    "age": null,
+    "country": "France",
+    "sector": "Food & Beverage",
+    "companies": [
+      "Cheese"
+    ],
+    "sourceOfWealth": "Cheese",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from Cheese in food & beverage.",
+    "timeline": [
+      {
+        "year": "1933",
+        "title": "Lactalis founded",
+        "description": "Grandfather André Besnier started cheese dairy.",
+        "impact": "Dairy dynasty"
+      },
+      {
+        "year": "1955",
+        "title": "Father expanded Lactalis",
+        "description": "Michel Besnier grew Président brand.",
+        "impact": "French cheese leader"
+      },
+      {
+        "year": "2000",
+        "title": "CEO of Lactalis",
+        "description": "Emmanuel led global acquisitions.",
+        "impact": "Dairy consolidation"
+      },
+      {
+        "year": "2017",
+        "title": "Acquired Parmalat",
+        "description": "Became world's largest dairy group.",
+        "impact": "Global dairy fortune"
+      }
+    ]
+  },
+  {
+    "rank": 96,
+    "name": "Susanne Klatten",
+    "netWorth": "25.8B",
+    "age": null,
+    "country": "Germany",
+    "sector": "Automotive",
+    "companies": [
+      "BMW",
+      "pharmaceuticals"
+    ],
+    "sourceOfWealth": "BMW, pharmaceuticals",
+    "firstFortuneDecade": "1960s",
+    "summary": "Billionaire whose fortune stems primarily from BMW, pharmaceuticals in automotive.",
+    "timeline": [
+      {
+        "year": "1953",
+        "title": "Quandt family BMW stake",
+        "description": "Mother Johanna Quandt held BMW shares.",
+        "impact": "Auto dynasty"
+      },
+      {
+        "year": "1978",
+        "title": "Inherited Quandt fortune",
+        "description": "After father Herbert Quandt's BMW rescue.",
+        "impact": "German auto wealth"
+      },
+      {
+        "year": "1997",
+        "title": "Altana pharmaceutical",
+        "description": "Built and sold specialty chemicals firm.",
+        "impact": "Diversified holdings"
+      },
+      {
+        "year": "2020s",
+        "title": "BMW and SKW",
+        "description": "Major BMW shareholder and investor.",
+        "impact": "Germany's richest woman"
+      }
+    ]
+  },
+  {
+    "rank": 97,
+    "name": "Israel Englander",
+    "netWorth": "25.8B",
+    "age": null,
+    "country": "United States",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Hedge funds"
+    ],
+    "sourceOfWealth": "Hedge funds",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Hedge funds in finance & investments.",
+    "timeline": [
+      {
+        "year": "1989",
+        "title": "Founded Millennium Management",
+        "description": "Hedge fund after collapse of previous firm.",
+        "impact": "Quant hedge fund"
+      },
+      {
+        "year": "2000s",
+        "title": "Pod shop model",
+        "description": "Hired multiple independent trading teams.",
+        "impact": "Multi-manager pioneer"
+      },
+      {
+        "year": "2008",
+        "title": "Survived financial crisis",
+        "description": "Millennium posted gains while peers fell.",
+        "impact": "Crisis resilience"
+      },
+      {
+        "year": "2020s",
+        "title": "Record AUM",
+        "description": "Among top-performing hedge funds globally.",
+        "impact": "Trading billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 98,
+    "name": "Suleiman Kerimov & family",
+    "netWorth": "25.7B",
+    "age": null,
+    "country": "Russia",
+    "sector": "Finance & Investments",
+    "companies": [
+      "Gold"
+    ],
+    "sourceOfWealth": "Gold",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Gold in finance & investments.",
+    "timeline": [
+      {
+        "year": "1980s",
+        "title": "Started in business",
+        "description": "Economist turned investor in Russia.",
+        "impact": "Oligarch era entry"
+      },
+      {
+        "year": "1990s",
+        "title": "Polyus Gold stake",
+        "description": "Invested in Russia's largest gold miner.",
+        "impact": "Mining fortune"
+      },
+      {
+        "year": "2000s",
+        "title": "Nafta Moscow",
+        "description": "Financial and energy investments.",
+        "impact": "Diversified holdings"
+      },
+      {
+        "year": "2010s",
+        "title": "FC Krasnodar and politics",
+        "description": "Senator and football club owner.",
+        "impact": "Russian billionaire"
+      }
+    ]
+  },
+  {
+    "rank": 99,
+    "name": "Vladimir Lisin",
+    "netWorth": "25.5B",
+    "age": null,
+    "country": "Russia",
+    "sector": "Metals & Mining",
+    "companies": [
+      "Steel",
+      "transport"
+    ],
+    "sourceOfWealth": "Steel, transport",
+    "firstFortuneDecade": "1990s",
+    "summary": "Billionaire whose fortune stems primarily from Steel, transport in metals & mining.",
+    "timeline": [
+      {
+        "year": "1992",
+        "title": "Acquired steel mills",
+        "description": "Privatization of Russian steel assets.",
+        "impact": "Steel consolidation"
+      },
+      {
+        "year": "1995",
+        "title": "Founded NLMK",
+        "description": "Novolipetsk Steel became top producer.",
+        "impact": "Russian steel leader"
+      },
+      {
+        "year": "2000s",
+        "title": "NLMK global expansion",
+        "description": "Plants in Russia, Europe, and U.S.",
+        "impact": "Steel exports"
+      },
+      {
+        "year": "2010s",
+        "title": "Transport and ports",
+        "description": "UCL Holding logistics and shipping.",
+        "impact": "Industrial oligarch"
+      }
+    ]
+  },
+  {
+    "rank": 100,
+    "name": "Dilip Shanghvi",
+    "netWorth": "25.4B",
+    "age": null,
+    "country": "India",
+    "sector": "Healthcare",
+    "companies": [
+      "Pharmaceuticals"
+    ],
+    "sourceOfWealth": "Pharmaceuticals",
+    "firstFortuneDecade": "1980s",
+    "summary": "Billionaire whose fortune stems primarily from Pharmaceuticals in healthcare.",
+    "timeline": [
+      {
+        "year": "1983",
+        "title": "Founded Sun Pharma",
+        "description": "Psychiatry drugs in Mumbai garage.",
+        "impact": "Pharma entrepreneur"
+      },
+      {
+        "year": "1997",
+        "title": "Sun Pharma IPO",
+        "description": "Expanded generic drug manufacturing.",
+        "impact": "India pharma leader"
+      },
+      {
+        "year": "2014",
+        "title": "Acquired Ranbaxy",
+        "description": "$4B deal made Sun India's top drugmaker.",
+        "impact": "Generic consolidation"
+      },
+      {
+        "year": "2020s",
+        "title": "Global generics",
+        "description": "Markets in U.S., India, and emerging economies.",
+        "impact": "Pharmaceutical fortune"
       }
     ]
   }

@@ -1656,9 +1656,48 @@ h3.subheading {
 }
 
 .forbes-count {
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   font-size: 0.8125rem;
   color: var(--text-muted);
+}
+
+.forbes-source-note {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.forbes-source-note code {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+}
+
+.forbes-search-label {
+  display: block;
+  margin: 0 0 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.forbes-search {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.forbes-search:focus {
+  outline: none;
+  border-color: var(--forbes-accent-border);
+  box-shadow: 0 0 0 3px var(--forbes-accent-dim);
 }
 
 .forbes-layout {
@@ -1672,7 +1711,7 @@ h3.subheading {
   display: flex;
   flex-direction: column;
   gap: 0.375rem;
-  max-height: 520px;
+  max-height: min(70vh, 640px);
   overflow-y: auto;
   padding: 0.25rem;
   border: 1px solid var(--border);
