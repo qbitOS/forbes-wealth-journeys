@@ -1,91 +1,844 @@
 {
   "schemaVersion": 1,
   "entities": {
-    "tesla": { "lat": 30.27, "lng": -97.74, "label": "Tesla · Austin" },
-    "spacex": { "lat": 25.99, "lng": -97.15, "label": "SpaceX · Starbase" },
-    "xai": { "lat": 37.78, "lng": -122.42, "label": "xAI · San Francisco" },
-    "neuralink": { "lat": 37.39, "lng": -122.08, "label": "Neuralink · Fremont" },
-    "zip2": { "lat": 37.44, "lng": -122.14, "label": "Zip2 · Palo Alto" },
-    "paypal": { "lat": 37.38, "lng": -121.96, "label": "PayPal · San Jose" },
-    "google": { "lat": 37.42, "lng": -122.08, "label": "Google · Mountain View" },
-    "alphabet": { "lat": 37.42, "lng": -122.08, "label": "Alphabet · Mountain View" },
-    "meta": { "lat": 37.48, "lng": -122.15, "label": "Meta · Menlo Park" },
-    "facebook": { "lat": 37.48, "lng": -122.15, "label": "Meta · Menlo Park" },
-    "amazon": { "lat": 47.62, "lng": -122.34, "label": "Amazon · Seattle" },
-    "microsoft": { "lat": 47.64, "lng": -122.13, "label": "Microsoft · Redmond" },
-    "nvidia": { "lat": 37.37, "lng": -121.97, "label": "NVIDIA · Santa Clara" },
-    "apple": { "lat": 37.33, "lng": -122.01, "label": "Apple · Cupertino" },
-    "oracle": { "lat": 37.53, "lng": -122.27, "label": "Oracle · Austin" },
-    "dell": { "lat": 30.39, "lng": -97.67, "label": "Dell · Round Rock" },
-    "berkshire": { "lat": 41.26, "lng": -95.93, "label": "Berkshire · Omaha" },
-    "lvmh": { "lat": 48.87, "lng": 2.33, "label": "LVMH · Paris" },
-    "loreal": { "lat": 48.88, "lng": 2.24, "label": "L'Oréal · Clichy" },
-    "reliance": { "lat": 19.02, "lng": 72.85, "label": "Reliance · Mumbai" },
-    "adani": { "lat": 23.02, "lng": 72.57, "label": "Adani · Ahmedabad" },
-    "alibaba": { "lat": 30.28, "lng": 120.02, "label": "Alibaba · Hangzhou" },
-    "tencent": { "lat": 22.54, "lng": 114.06, "label": "Tencent · Shenzhen" },
-    "bytedance": { "lat": 39.98, "lng": 116.31, "label": "ByteDance · Beijing" },
-    "softbank": { "lat": 35.68, "lng": 139.76, "label": "SoftBank · Tokyo" },
-    "arm": { "lat": 52.21, "lng": 0.12, "label": "Arm · Cambridge" },
-    "zara": { "lat": 43.36, "lng": -5.85, "label": "Inditex · Arteixo" },
-    "inditex": { "lat": 43.36, "lng": -5.85, "label": "Inditex · Arteixo" },
-    "walmart": { "lat": 36.37, "lng": -94.21, "label": "Walmart · Bentonville" },
-    "saudi-aramco": { "lat": 26.29, "lng": 50.11, "label": "Aramco · Dhahran" },
-    "tsmc": { "lat": 24.78, "lng": 121.01, "label": "TSMC · Hsinchu" }
+    "access": {
+      "lat": 40.761,
+      "lng": -73.975,
+      "label": "Access Industries · New York"
+    },
+    "adani": {
+      "lat": 23.023,
+      "lng": 72.571,
+      "label": "Adani · Ahmedabad"
+    },
+    "alibaba": {
+      "lat": 30.279,
+      "lng": 120.02,
+      "label": "Alibaba · Hangzhou"
+    },
+    "alphabet": {
+      "lat": 37.422,
+      "lng": -122.084,
+      "label": "Alphabet · Mountain View"
+    },
+    "aluminum_products": {
+      "lat": 40.441,
+      "lng": -80.0,
+      "label": "Aluminum · Pittsburgh"
+    },
+    "amazon": {
+      "lat": 47.619,
+      "lng": -122.338,
+      "label": "Amazon · Seattle"
+    },
+    "america-movil": {
+      "lat": 19.432,
+      "lng": -99.133,
+      "label": "América Móvil · Mexico City"
+    },
+    "américa-móvil": {
+      "lat": 19.432,
+      "lng": -99.133,
+      "label": "América Móvil · Mexico City"
+    },
+    "antofagasta": {
+      "lat": 51.507,
+      "lng": -0.128,
+      "label": "Antofagasta · London"
+    },
+    "apple": {
+      "lat": 37.331,
+      "lng": -122.011,
+      "label": "Apple · Cupertino"
+    },
+    "arcelormittal": {
+      "lat": 49.611,
+      "lng": 6.13,
+      "label": "ArcelorMittal · Luxembourg"
+    },
+    "arm": {
+      "lat": 52.205,
+      "lng": 0.121,
+      "label": "Arm · Cambridge"
+    },
+    "asian-paints": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Asian Paints · Mumbai"
+    },
+    "aurobindo": {
+      "lat": 17.494,
+      "lng": 78.399,
+      "label": "Aurobindo Pharma · Hyderabad"
+    },
+    "bajaj-finserv": {
+      "lat": 18.52,
+      "lng": 73.857,
+      "label": "Bajaj Finserv · Pune"
+    },
+    "batteries": {
+      "lat": 30.274,
+      "lng": -97.74,
+      "label": "Battery ops · Austin"
+    },
+    "berkshire": {
+      "lat": 41.256,
+      "lng": -95.934,
+      "label": "Berkshire · Omaha"
+    },
+    "berkshire-hathaway": {
+      "lat": 41.256,
+      "lng": -95.934,
+      "label": "Berkshire · Omaha"
+    },
+    "blackstone": {
+      "lat": 40.761,
+      "lng": -73.975,
+      "label": "Blackstone · New York"
+    },
+    "bloomberg": {
+      "lat": 40.753,
+      "lng": -73.977,
+      "label": "Bloomberg · New York"
+    },
+    "bmw": {
+      "lat": 48.137,
+      "lng": 11.575,
+      "label": "BMW · Munich"
+    },
+    "boring-co": {
+      "lat": 30.11,
+      "lng": -97.32,
+      "label": "Boring Company · Bastrop TX"
+    },
+    "boring-company": {
+      "lat": 30.11,
+      "lng": -97.32,
+      "label": "Boring Company · Bastrop TX"
+    },
+    "brk": {
+      "lat": 41.256,
+      "lng": -95.934,
+      "label": "Berkshire · Omaha"
+    },
+    "bytedance": {
+      "lat": 39.984,
+      "lng": 116.312,
+      "label": "ByteDance · Beijing"
+    },
+    "catl": {
+      "lat": 26.665,
+      "lng": 119.547,
+      "label": "CATL · Ningde"
+    },
+    "cement": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Cement · Mumbai"
+    },
+    "chanel": {
+      "lat": 48.87,
+      "lng": 2.305,
+      "label": "Chanel · Paris"
+    },
+    "cheese": {
+      "lat": 43.769,
+      "lng": 11.256,
+      "label": "Food · Florence"
+    },
+    "chemicals": {
+      "lat": 51.05,
+      "lng": 6.96,
+      "label": "Chemicals · Leverkusen"
+    },
+    "citadel": {
+      "lat": 25.761,
+      "lng": -80.192,
+      "label": "Citadel · Miami"
+    },
+    "ck-hutchison": {
+      "lat": 22.279,
+      "lng": 114.165,
+      "label": "CK Hutchison · Hong Kong"
+    },
+    "commodities": {
+      "lat": 51.507,
+      "lng": -0.128,
+      "label": "Commodities · London"
+    },
+    "computer_hardware": {
+      "lat": 37.387,
+      "lng": -122.083,
+      "label": "Hardware · Silicon Valley"
+    },
+    "cryptocurrency": {
+      "lat": 25.761,
+      "lng": -80.192,
+      "label": "Crypto · Miami"
+    },
+    "cryptocurrency_exchange": {
+      "lat": 25.761,
+      "lng": -80.192,
+      "label": "Crypto exchange · Miami"
+    },
+    "defense_contracting": {
+      "lat": 38.881,
+      "lng": -77.102,
+      "label": "Defense · Washington DC"
+    },
+    "dell": {
+      "lat": 30.395,
+      "lng": -97.671,
+      "label": "Dell · Round Rock"
+    },
+    "discount_brokerage": {
+      "lat": 42.36,
+      "lng": -71.059,
+      "label": "Brokerage · Boston"
+    },
+    "diversified": {
+      "lat": 22.572,
+      "lng": 88.364,
+      "label": "Conglomerate · Kolkata"
+    },
+    "divis-labs": {
+      "lat": 17.494,
+      "lng": 78.399,
+      "label": "Divi's Labs · Hyderabad"
+    },
+    "dr-reddys": {
+      "lat": 17.494,
+      "lng": 78.399,
+      "label": "Dr Reddy's · Hyderabad"
+    },
+    "e_commerce": {
+      "lat": 47.619,
+      "lng": -122.349,
+      "label": "E-commerce · Seattle"
+    },
+    "facebook": {
+      "lat": 37.484,
+      "lng": -122.148,
+      "label": "Meta · Menlo Park"
+    },
+    "fast-retailing": {
+      "lat": 35.695,
+      "lng": 139.691,
+      "label": "Fast Retailing · Tokyo"
+    },
+    "fasteners": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Industrial · Mumbai"
+    },
+    "ferrero": {
+      "lat": 44.801,
+      "lng": 8.035,
+      "label": "Ferrero · Alba"
+    },
+    "fidelity": {
+      "lat": 42.353,
+      "lng": -71.055,
+      "label": "Fidelity · Boston"
+    },
+    "financial_software": {
+      "lat": 40.761,
+      "lng": -73.975,
+      "label": "FinTech · New York"
+    },
+    "gas": {
+      "lat": 29.76,
+      "lng": -95.37,
+      "label": "Energy · Houston"
+    },
+    "gold": {
+      "lat": 46.948,
+      "lng": 7.447,
+      "label": "Gold · Bern"
+    },
+    "google": {
+      "lat": 37.422,
+      "lng": -122.084,
+      "label": "Google · Mountain View"
+    },
+    "google-x": {
+      "lat": 37.422,
+      "lng": -122.084,
+      "label": "Alphabet · Mountain View"
+    },
+    "grupo-mexico": {
+      "lat": 19.432,
+      "lng": -99.133,
+      "label": "Grupo México · Mexico City"
+    },
+    "gvk": {
+      "lat": 17.494,
+      "lng": 78.399,
+      "label": "GVK · Hyderabad"
+    },
+    "hca": {
+      "lat": 36.162,
+      "lng": -86.781,
+      "label": "HCA · Nashville"
+    },
+    "hedge_funds": {
+      "lat": 40.761,
+      "lng": -73.975,
+      "label": "Hedge funds · New York"
+    },
+    "inditex": {
+      "lat": 43.361,
+      "lng": -5.849,
+      "label": "Inditex · Arteixo"
+    },
+    "infrastructure": {
+      "lat": 28.613,
+      "lng": 77.209,
+      "label": "Infrastructure · New Delhi"
+    },
+    "investments": {
+      "lat": 40.761,
+      "lng": -73.975,
+      "label": "Investments · New York"
+    },
+    "jindal": {
+      "lat": 28.613,
+      "lng": 77.209,
+      "label": "Jindal · New Delhi"
+    },
+    "koch": {
+      "lat": 37.687,
+      "lng": -97.33,
+      "label": "Koch · Wichita"
+    },
+    "koch_inc": {
+      "lat": 37.687,
+      "lng": -97.33,
+      "label": "Koch Industries · Wichita"
+    },
+    "kuehne-+-nagel": {
+      "lat": 47.173,
+      "lng": 8.823,
+      "label": "Kuehne+Nagel · Schindellegi"
+    },
+    "kuehne-nagel": {
+      "lat": 47.173,
+      "lng": 8.823,
+      "label": "Kuehne+Nagel · Schindellegi"
+    },
+    "l'oréal": {
+      "lat": 48.892,
+      "lng": 2.238,
+      "label": "L'Oréal · Clichy"
+    },
+    "las-vegas-sands": {
+      "lat": 36.114,
+      "lng": -115.173,
+      "label": "Las Vegas Sands · Las Vegas"
+    },
+    "loreal": {
+      "lat": 48.892,
+      "lng": 2.238,
+      "label": "L'Oréal · Clichy"
+    },
+    "luxury_goods": {
+      "lat": 45.464,
+      "lng": 9.19,
+      "label": "Luxury · Milan"
+    },
+    "lvmh": {
+      "lat": 48.87,
+      "lng": 2.305,
+      "label": "LVMH · Paris"
+    },
+    "lvs": {
+      "lat": 36.114,
+      "lng": -115.173,
+      "label": "Las Vegas Sands · Las Vegas"
+    },
+    "machinery": {
+      "lat": 52.52,
+      "lng": 13.405,
+      "label": "Machinery · Berlin"
+    },
+    "marico": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Marico · Mumbai"
+    },
+    "mars": {
+      "lat": 38.933,
+      "lng": -77.177,
+      "label": "Mars · McLean VA"
+    },
+    "mars-inc": {
+      "lat": 38.933,
+      "lng": -77.177,
+      "label": "Mars · McLean VA"
+    },
+    "meta": {
+      "lat": 37.484,
+      "lng": -122.148,
+      "label": "Meta · Menlo Park"
+    },
+    "microsoft": {
+      "lat": 47.639,
+      "lng": -122.134,
+      "label": "Microsoft · Redmond"
+    },
+    "midea": {
+      "lat": 23.021,
+      "lng": 113.122,
+      "label": "Midea · Foshan"
+    },
+    "msc": {
+      "lat": 46.204,
+      "lng": 6.143,
+      "label": "MSC · Geneva"
+    },
+    "netease": {
+      "lat": 30.274,
+      "lng": 120.155,
+      "label": "NetEase · Hangzhou"
+    },
+    "neuralink": {
+      "lat": 37.548,
+      "lng": -122.059,
+      "label": "Neuralink · Fremont"
+    },
+    "nike": {
+      "lat": 45.52,
+      "lng": -122.837,
+      "label": "Nike · Beaverton"
+    },
+    "nongfu": {
+      "lat": 30.274,
+      "lng": 120.155,
+      "label": "Nongfu Spring · Hangzhou"
+    },
+    "nongfu-spring": {
+      "lat": 30.274,
+      "lng": 120.155,
+      "label": "Nongfu Spring · Hangzhou"
+    },
+    "norilsk-nickel": {
+      "lat": 55.755,
+      "lng": 37.617,
+      "label": "Nornickel · Moscow"
+    },
+    "nvidia": {
+      "lat": 37.371,
+      "lng": -121.966,
+      "label": "NVIDIA · Santa Clara"
+    },
+    "oil": {
+      "lat": 29.76,
+      "lng": -95.37,
+      "label": "Oil & gas · Houston"
+    },
+    "openai": {
+      "lat": 37.792,
+      "lng": -122.404,
+      "label": "OpenAI · San Francisco"
+    },
+    "oracle": {
+      "lat": 30.267,
+      "lng": -97.743,
+      "label": "Oracle · Austin"
+    },
+    "paypal": {
+      "lat": 37.375,
+      "lng": -121.964,
+      "label": "PayPal · San Jose"
+    },
+    "pharmaceuticals": {
+      "lat": 40.058,
+      "lng": -74.405,
+      "label": "Pharma · New Jersey"
+    },
+    "pidilite": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Pidilite · Mumbai"
+    },
+    "pinduoduo": {
+      "lat": 31.23,
+      "lng": 121.474,
+      "label": "Pinduoduo · Shanghai"
+    },
+    "real_estate": {
+      "lat": 40.758,
+      "lng": -73.985,
+      "label": "Real estate · New York"
+    },
+    "red-bull": {
+      "lat": 47.803,
+      "lng": 13.3,
+      "label": "Red Bull · Fuschl am See"
+    },
+    "red_bull": {
+      "lat": 47.803,
+      "lng": 13.3,
+      "label": "Red Bull · Fuschl am See"
+    },
+    "reliance": {
+      "lat": 19.017,
+      "lng": 72.847,
+      "label": "Reliance · Mumbai"
+    },
+    "samsung": {
+      "lat": 37.566,
+      "lng": 126.978,
+      "label": "Samsung · Seoul"
+    },
+    "saudi-aramco": {
+      "lat": 26.295,
+      "lng": 50.114,
+      "label": "Aramco · Dhahran"
+    },
+    "schwarz-group": {
+      "lat": 49.193,
+      "lng": 9.224,
+      "label": "Schwarz Group · Neckarsulm"
+    },
+    "serum-institute": {
+      "lat": 18.52,
+      "lng": 73.857,
+      "label": "Serum Institute · Pune"
+    },
+    "shipping": {
+      "lat": 51.924,
+      "lng": 4.478,
+      "label": "Shipping · Rotterdam"
+    },
+    "softbank": {
+      "lat": 35.68,
+      "lng": 139.769,
+      "label": "SoftBank · Tokyo"
+    },
+    "solarcity": {
+      "lat": 37.548,
+      "lng": -121.989,
+      "label": "SolarCity · Fremont"
+    },
+    "spacex": {
+      "lat": 25.997,
+      "lng": -97.155,
+      "label": "SpaceX · Starbase"
+    },
+    "spacex-hawthorne": {
+      "lat": 33.92,
+      "lng": -118.328,
+      "label": "SpaceX · Hawthorne"
+    },
+    "steel": {
+      "lat": 40.441,
+      "lng": -79.996,
+      "label": "Steel · Pittsburgh"
+    },
+    "sun-pharma": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Sun Pharma · Mumbai"
+    },
+    "sun-pharmaceutical": {
+      "lat": 19.076,
+      "lng": 72.878,
+      "label": "Sun Pharma · Mumbai"
+    },
+    "tencent": {
+      "lat": 22.54,
+      "lng": 114.059,
+      "label": "Tencent · Shenzhen"
+    },
+    "tesla": {
+      "lat": 30.267,
+      "lng": -97.743,
+      "label": "Tesla · Austin"
+    },
+    "the-boring-company": {
+      "lat": 30.11,
+      "lng": -97.32,
+      "label": "Boring Company · Bastrop TX"
+    },
+    "transport": {
+      "lat": 52.367,
+      "lng": 4.904,
+      "label": "Transport · Amsterdam"
+    },
+    "tsmc": {
+      "lat": 24.784,
+      "lng": 121.011,
+      "label": "TSMC · Hsinchu"
+    },
+    "twitter": {
+      "lat": 37.776,
+      "lng": -122.417,
+      "label": "X Corp · San Francisco"
+    },
+    "uniqlo": {
+      "lat": 35.695,
+      "lng": 139.691,
+      "label": "Fast Retailing · Tokyo"
+    },
+    "walmart": {
+      "lat": 36.366,
+      "lng": -94.217,
+      "label": "Walmart · Bentonville"
+    },
+    "x": {
+      "lat": 37.776,
+      "lng": -122.417,
+      "label": "X Corp · San Francisco"
+    },
+    "x-corp": {
+      "lat": 37.776,
+      "lng": -122.417,
+      "label": "X Corp · San Francisco"
+    },
+    "x-corp.": {
+      "lat": 37.776,
+      "lng": -122.417,
+      "label": "X Corp · San Francisco"
+    },
+    "x.ai": {
+      "lat": 37.785,
+      "lng": -122.406,
+      "label": "xAI · San Francisco"
+    },
+    "xai": {
+      "lat": 37.785,
+      "lng": -122.406,
+      "label": "xAI · San Francisco"
+    },
+    "xcorp": {
+      "lat": 37.776,
+      "lng": -122.417,
+      "label": "X Corp · San Francisco"
+    },
+    "zara": {
+      "lat": 43.361,
+      "lng": -5.849,
+      "label": "Inditex · Arteixo"
+    },
+    "zip2": {
+      "lat": 37.444,
+      "lng": -122.149,
+      "label": "Zip2 · Palo Alto"
+    }
   },
   "countries": {
-    "United States": { "lat": 39.83, "lng": -98.58 },
-    "France": { "lat": 46.23, "lng": 2.21 },
-    "India": { "lat": 20.59, "lng": 78.96 },
-    "China": { "lat": 35.86, "lng": 104.19 },
-    "Mexico": { "lat": 23.63, "lng": -102.55 },
-    "Germany": { "lat": 51.16, "lng": 10.45 },
-    "Japan": { "lat": 36.2, "lng": 138.25 },
-    "United Kingdom": { "lat": 55.38, "lng": -3.44 },
-    "Spain": { "lat": 40.46, "lng": -3.75 },
-    "Canada": { "lat": 56.13, "lng": -106.35 },
-    "Italy": { "lat": 41.87, "lng": 12.57 },
-    "Brazil": { "lat": -14.24, "lng": -51.93 },
-    "Russia": { "lat": 61.52, "lng": 105.32 },
-    "Saudi Arabia": { "lat": 23.89, "lng": 45.08 },
-    "South Korea": { "lat": 35.91, "lng": 127.77 },
-    "Taiwan": { "lat": 23.7, "lng": 120.96 },
-    "Singapore": { "lat": 1.35, "lng": 103.82 },
-    "Switzerland": { "lat": 46.82, "lng": 8.23 },
-    "Netherlands": { "lat": 52.13, "lng": 5.29 },
-    "Australia": { "lat": -25.27, "lng": 133.78 },
-    "Israel": { "lat": 31.05, "lng": 34.85 },
-    "Hong Kong": { "lat": 22.32, "lng": 114.17 },
-    "Sweden": { "lat": 60.13, "lng": 18.64 },
-    "Ireland": { "lat": 53.41, "lng": -8.24 },
-    "Denmark": { "lat": 56.26, "lng": 9.5 },
-    "Norway": { "lat": 60.47, "lng": 8.47 },
-    "Indonesia": { "lat": -0.79, "lng": 113.92 },
-    "Thailand": { "lat": 15.87, "lng": 100.99 },
-    "Vietnam": { "lat": 14.06, "lng": 108.28 },
-    "South Africa": { "lat": -30.56, "lng": 22.94 },
-    "UAE": { "lat": 23.42, "lng": 53.85 },
-    "United Arab Emirates": { "lat": 23.42, "lng": 53.85 },
-    "Argentina": { "lat": -38.42, "lng": -63.62 },
-    "Chile": { "lat": -35.68, "lng": -71.54 },
-    "Egypt": { "lat": 26.82, "lng": 30.8 },
-    "Ukraine": { "lat": 48.38, "lng": 31.17 },
-    "Belgium": { "lat": 50.5, "lng": 4.47 },
-    "Austria": { "lat": 47.52, "lng": 14.55 },
-    "Czech Republic": { "lat": 49.82, "lng": 15.47 },
-    "Poland": { "lat": 51.92, "lng": 19.15 },
-    "Turkey": { "lat": 38.96, "lng": 35.24 },
-    "Greece": { "lat": 39.07, "lng": 21.82 },
-    "Portugal": { "lat": 39.4, "lng": -8.22 },
-    "Finland": { "lat": 61.92, "lng": 25.75 },
-    "Philippines": { "lat": 12.88, "lng": 121.77 },
-    "Malaysia": { "lat": 4.21, "lng": 101.98 },
-    "New Zealand": { "lat": -40.9, "lng": 174.89 },
-    "Colombia": { "lat": 4.57, "lng": -74.29 },
-    "Peru": { "lat": -9.19, "lng": -75.02 },
-    "Nigeria": { "lat": 9.08, "lng": 8.68 },
-    "Kenya": { "lat": -0.02, "lng": 37.91 },
-    "Monaco": { "lat": 43.73, "lng": 7.42 },
-    "Luxembourg": { "lat": 49.82, "lng": 6.13 }
+    "United States": {
+      "lat": 39.83,
+      "lng": -98.58
+    },
+    "France": {
+      "lat": 46.23,
+      "lng": 2.21
+    },
+    "India": {
+      "lat": 20.59,
+      "lng": 78.96
+    },
+    "China": {
+      "lat": 35.86,
+      "lng": 104.19
+    },
+    "Mexico": {
+      "lat": 23.63,
+      "lng": -102.55
+    },
+    "Germany": {
+      "lat": 51.16,
+      "lng": 10.45
+    },
+    "Japan": {
+      "lat": 36.2,
+      "lng": 138.25
+    },
+    "United Kingdom": {
+      "lat": 55.38,
+      "lng": -3.44
+    },
+    "Spain": {
+      "lat": 40.46,
+      "lng": -3.75
+    },
+    "Canada": {
+      "lat": 56.13,
+      "lng": -106.35
+    },
+    "Italy": {
+      "lat": 41.87,
+      "lng": 12.57
+    },
+    "Brazil": {
+      "lat": -14.24,
+      "lng": -51.93
+    },
+    "Russia": {
+      "lat": 61.52,
+      "lng": 105.32
+    },
+    "Saudi Arabia": {
+      "lat": 23.89,
+      "lng": 45.08
+    },
+    "South Korea": {
+      "lat": 35.91,
+      "lng": 127.77
+    },
+    "Taiwan": {
+      "lat": 23.7,
+      "lng": 120.96
+    },
+    "Singapore": {
+      "lat": 1.35,
+      "lng": 103.82
+    },
+    "Switzerland": {
+      "lat": 46.82,
+      "lng": 8.23
+    },
+    "Netherlands": {
+      "lat": 52.13,
+      "lng": 5.29
+    },
+    "Australia": {
+      "lat": -25.27,
+      "lng": 133.78
+    },
+    "Israel": {
+      "lat": 31.05,
+      "lng": 34.85
+    },
+    "Hong Kong": {
+      "lat": 22.32,
+      "lng": 114.17
+    },
+    "Sweden": {
+      "lat": 60.13,
+      "lng": 18.64
+    },
+    "Ireland": {
+      "lat": 53.41,
+      "lng": -8.24
+    },
+    "Denmark": {
+      "lat": 56.26,
+      "lng": 9.5
+    },
+    "Norway": {
+      "lat": 60.47,
+      "lng": 8.47
+    },
+    "Indonesia": {
+      "lat": -0.79,
+      "lng": 113.92
+    },
+    "Thailand": {
+      "lat": 15.87,
+      "lng": 100.99
+    },
+    "Vietnam": {
+      "lat": 14.06,
+      "lng": 108.28
+    },
+    "South Africa": {
+      "lat": -30.56,
+      "lng": 22.94
+    },
+    "UAE": {
+      "lat": 23.42,
+      "lng": 53.85
+    },
+    "United Arab Emirates": {
+      "lat": 23.42,
+      "lng": 53.85
+    },
+    "Argentina": {
+      "lat": -38.42,
+      "lng": -63.62
+    },
+    "Chile": {
+      "lat": -35.68,
+      "lng": -71.54
+    },
+    "Egypt": {
+      "lat": 26.82,
+      "lng": 30.8
+    },
+    "Ukraine": {
+      "lat": 48.38,
+      "lng": 31.17
+    },
+    "Belgium": {
+      "lat": 50.5,
+      "lng": 4.47
+    },
+    "Austria": {
+      "lat": 47.52,
+      "lng": 14.55
+    },
+    "Czech Republic": {
+      "lat": 49.82,
+      "lng": 15.47
+    },
+    "Poland": {
+      "lat": 51.92,
+      "lng": 19.15
+    },
+    "Turkey": {
+      "lat": 38.96,
+      "lng": 35.24
+    },
+    "Greece": {
+      "lat": 39.07,
+      "lng": 21.82
+    },
+    "Portugal": {
+      "lat": 39.4,
+      "lng": -8.22
+    },
+    "Finland": {
+      "lat": 61.92,
+      "lng": 25.75
+    },
+    "Philippines": {
+      "lat": 12.88,
+      "lng": 121.77
+    },
+    "Malaysia": {
+      "lat": 4.21,
+      "lng": 101.98
+    },
+    "New Zealand": {
+      "lat": -40.9,
+      "lng": 174.89
+    },
+    "Colombia": {
+      "lat": 4.57,
+      "lng": -74.29
+    },
+    "Peru": {
+      "lat": -9.19,
+      "lng": -75.02
+    },
+    "Nigeria": {
+      "lat": 9.08,
+      "lng": 8.68
+    },
+    "Kenya": {
+      "lat": -0.02,
+      "lng": 37.91
+    },
+    "Monaco": {
+      "lat": 43.73,
+      "lng": 7.42
+    },
+    "Luxembourg": {
+      "lat": 49.82,
+      "lng": 6.13
+    }
   }
 }

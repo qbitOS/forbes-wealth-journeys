@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "source": "Public biographical records · Wikipedia · major press · court filings",
+  "note": "Personal-life markers for the Story wealth journey. Not exhaustive legal history.",
+  "profiles": {
+    "1": [
+      { "year": 1971, "label": "Born · Pretoria, South Africa", "category": "family", "description": "Elon Reeve Musk — emigrated to Canada (1989) and the U.S. for university and founding career." },
+      { "year": 1989, "label": "Moved to Canada", "category": "family", "description": "Left South Africa before attending Queen's University and later Penn." },
+      { "year": 1995, "label": "Dropped out of Stanford PhD", "category": "life", "description": "Left after two days to found Zip2 with his brother Kimbal." },
+      { "year": 2000, "label": "Married Justine Wilson", "category": "marriage", "description": "Met at Queen's University; married in January 2000." },
+      { "year": 2002, "label": "Son Nevada born (died SIDS)", "category": "family", "description": "First child with Justine Wilson; died at 10 weeks." },
+      { "year": 2004, "label": "Twins Griffin & Vivian born", "category": "family", "description": "Born via IVF with Justine Wilson." },
+      { "year": 2006, "label": "Triplets Kai, Saxon & Damian born", "category": "family", "description": "Born via IVF with Justine Wilson." },
+      { "year": 2008, "label": "Divorced Justine Wilson", "category": "divorce", "description": "Public divorce after eight years of marriage." },
+      { "year": 2010, "label": "Married Talulah Riley", "category": "marriage", "description": "British actress; first marriage ceremony in 2010." },
+      { "year": 2012, "label": "Divorced Talulah Riley (1st)", "category": "divorce", "description": "First divorce from Riley; remarried the following year." },
+      { "year": 2013, "label": "Remarried Talulah Riley", "category": "marriage", "description": "Second marriage to Riley in July 2013." },
+      { "year": 2014, "label": "Autopilot-era Tesla scrutiny begins", "category": "lawsuit", "description": "Early product-liability and safety debates foreshadow later NHTSA and shareholder actions." },
+      { "year": 2016, "label": "Divorced Talulah Riley (2nd)", "category": "divorce", "description": "Second and final divorce from Riley." },
+      { "year": 2018, "label": "Dating Grimes (public)", "category": "dating", "description": "Appeared together at the Met Gala; relationship widely reported in press." },
+      { "year": 2018, "label": "SEC \"funding secured\" settlement", "category": "lawsuit", "description": "Settled with SEC over Tesla go-private tweets; CEO/chair roles affected." },
+      { "year": 2019, "label": "Defamation suit vs. Vernon Unsworth", "category": "lawsuit", "description": "Jury found Musk not liable over cave-rescue comments." },
+      { "year": 2020, "label": "Son X Æ A-12 born", "category": "family", "description": "First child with Grimes; name later adjusted to X AE A-Xii." },
+      { "year": 2021, "label": "Split with Grimes reported", "category": "dating", "description": "Couple described as semi-separate while co-parenting." },
+      { "year": 2021, "label": "Daughter Exa Dark Sideræl born", "category": "family", "description": "Via surrogate with Grimes." },
+      { "year": 2022, "label": "Twins with Shivon Zilis born", "category": "family", "description": "Reported via court documents related to a name-change petition." },
+      { "year": 2022, "label": "Twitter acquisition litigation", "category": "lawsuit", "description": "Delaware Chancery proceedings over terminating the Twitter deal." },
+      { "year": 2023, "label": "Third child with Grimes (Techno Mechanicus)", "category": "family", "description": "Disclosed in Musk biography press cycle." },
+      { "year": 2023, "label": "FSD / Autopilot class-action pressure", "category": "lawsuit", "description": "Ongoing shareholder and consumer cases over autonomy marketing." },
+      { "year": 2024, "label": "Custody dispute with Grimes", "category": "lawsuit", "description": "Texas court filings over parental rights for their children." },
+      { "year": 2024, "label": "DEI / X Corp advertiser disputes", "category": "lawsuit", "description": "Multiple suits tied to platform policy and Media Matters countersuits." }
+    ],
+    "2": [
+      { "year": 1973, "label": "Born · East Lansing, Michigan", "category": "family", "description": "Larry Page — Michigan upbringing before Stanford PhD." },
+      { "year": 2007, "label": "Married Lucinda Southworth", "category": "marriage", "description": "Wedding on Necker Island; Southworth is a research scientist." },
+      { "year": 2009, "label": "First child born", "category": "family", "description": "Page and Southworth's first child born." },
+      { "year": 2011, "label": "Second child born", "category": "family", "description": "Second child with Lucinda Southworth." }
+    ],
+    "3": [
+      { "year": 1973, "label": "Born · Moscow, Soviet Union", "category": "family", "description": "Sergey Brin — family emigrated to the U.S. in 1979." },
+      { "year": 2007, "label": "Married Anne Wojcicki", "category": "marriage", "description": "23andMe co-founder; wedding in the Bahamas." },
+      { "year": 2008, "label": "Son Benji born", "category": "family", "description": "First child with Anne Wojcicki." },
+      { "year": 2011, "label": "Daughter Chloe born", "category": "family", "description": "Second child with Wojcicki." },
+      { "year": 2013, "label": "Separated from Wojcicki", "category": "dating", "description": "Public separation after reports of relationship with Google colleague." },
+      { "year": 2015, "label": "Divorced Anne Wojcicki", "category": "divorce", "description": "Divorce finalized after separation." },
+      { "year": 2018, "label": "Married Nicole Shanahan", "category": "marriage", "description": "Legal tech founder; private ceremony reported." },
+      { "year": 2021, "label": "Divorced Nicole Shanahan", "category": "divorce", "description": "Divorce cited in 2022 court filings." }
+    ],
+    "4": [
+      { "year": 1964, "label": "Born · Albuquerque, New Mexico", "category": "family", "description": "Jeff Bezos — raised by mother and stepfather Miguel Bezos." },
+      { "year": 1993, "label": "Married MacKenzie Scott", "category": "marriage", "description": "Met at D.E. Shaw; married before founding Amazon." },
+      { "year": 2000, "label": "Son Prez born", "category": "family", "description": "First child with MacKenzie Scott." },
+      { "year": 2002, "label": "Daughter born", "category": "family", "description": "Second child; three sons and one daughter total with Scott." },
+      { "year": 2019, "label": "Divorced MacKenzie Scott", "category": "divorce", "description": "Largest known divorce settlement at the time; Scott received Amazon stake." },
+      { "year": 2019, "label": "Relationship with Lauren Sánchez public", "category": "dating", "description": "National Enquirer story led to public acknowledgment." },
+      { "year": 2023, "label": "Engaged to Lauren Sánchez", "category": "dating", "description": "Engagement announced after years together." }
+    ],
+    "5": [
+      { "year": 1984, "label": "Born · White Plains, New York", "category": "family", "description": "Mark Zuckerberg — Ardsley/Dobbs Ferry upbringing." },
+      { "year": 2012, "label": "Married Priscilla Chan", "category": "marriage", "description": "Wedding day after Facebook IPO in backyard ceremony." },
+      { "year": 2015, "label": "Daughter Max born", "category": "family", "description": "First child with Priscilla Chan." },
+      { "year": 2017, "label": "Daughter August born", "category": "family", "description": "Second child with Chan." },
+      { "year": 2023, "label": "Daughter Aurelia born", "category": "family", "description": "Third child announced by the couple." },
+      { "year": 2021, "label": "FTC antitrust suit vs. Meta", "category": "lawsuit", "description": "Federal and state cases over Instagram/WhatsApp acquisitions." }
+    ],
+    "6": [
+      { "year": 1949, "label": "Born · Roubaix, France", "category": "family", "description": "Bernard Arnault — LVMH dynasty patriarch." },
+      { "year": 1973, "label": "Married Anne Dewavrin", "category": "marriage", "description": "First marriage; divorced 1990." },
+      { "year": 1990, "label": "Married Hélène Mercier", "category": "marriage", "description": "Concert pianist; marriage continues." },
+      { "year": 1991, "label": "Delphine Arnault born", "category": "family", "description": "Eldest daughter; LVMH executive." },
+      { "year": 1995, "label": "Antoine Arnault born", "category": "family", "description": "Son; Berluti and LVMH image roles." }
+    ],
+    "7": [
+      { "year": 1955, "label": "Born · Seattle, Washington", "category": "family", "description": "Bill Gates — Lakeside School programming start." },
+      { "year": 1994, "label": "Married Melinda French", "category": "marriage", "description": "Wedding in Lanai, Hawaii." },
+      { "year": 1996, "label": "Daughter Jennifer born", "category": "family", "description": "First child with Melinda." },
+      { "year": 1999, "label": "Son Rory born", "category": "family", "description": "Second child." },
+      { "year": 2002, "label": "Daughter Phoebe born", "category": "family", "description": "Third child." },
+      { "year": 2021, "label": "Divorced Melinda French Gates", "category": "divorce", "description": "Joint statement after 27 years of marriage." },
+      { "year": 1998, "label": "U.S. antitrust trial vs. Microsoft", "category": "lawsuit", "description": "Landmark DOJ case over browser bundling." }
+    ],
+    "8": [
+      { "year": 1930, "label": "Born · Omaha, Nebraska", "category": "family", "description": "Warren Buffett — Graham-and-Dodd investing lineage." },
+      { "year": 1952, "label": "Married Susan Thompson", "category": "marriage", "description": "Marriage lasted until her death in 2004; lived apart from 1977." },
+      { "year": 2006, "label": "Married Astrid Menks", "category": "marriage", "description": "Long-time companion; married after Susan's death." },
+      { "year": 1977, "label": "Susan Buffett moves to San Francisco", "category": "dating", "description": "Couple remained close but lived separately for decades." }
+    ],
+    "9": [
+      { "year": 1944, "label": "Born · New York City", "category": "family", "description": "Larry Ellison — adopted and raised in Chicago area." },
+      { "year": 1967, "label": "Married Adda Quinn", "category": "marriage", "description": "First of four marriages." },
+      { "year": 1977, "label": "Married Nancy Wheeler Jenkins", "category": "marriage", "description": "Second marriage; divorced within a year." },
+      { "year": 1983, "label": "Married Barbara Boothe", "category": "marriage", "description": "Former Oracle receptionist; two children." },
+      { "year": 1986, "label": "Children Megan & David born", "category": "family", "description": "Film producer Megan Ellison and David Ellison (Skydance)." },
+      { "year": 2003, "label": "Married Melanie Craft", "category": "marriage", "description": "Novelist; divorced 2010." },
+      { "year": 2010, "label": "Oracle shareholder suits peak", "category": "lawsuit", "description": "Options backdating era litigation across Silicon Valley." }
+    ],
+    "10": [
+      { "year": 1956, "label": "Born · Detroit, Michigan", "category": "family", "description": "Steve Ballmer — Harvard classmate of Bill Gates." },
+      { "year": 1990, "label": "Married Connie Snyder", "category": "marriage", "description": "Wedding after leaving Apple-competitive work at Microsoft." },
+      { "year": 1992, "label": "Son Sam born", "category": "family", "description": "First of three sons with Connie Snyder." },
+      { "year": 1994, "label": "Son Aaron born", "category": "family", "description": "Second son." },
+      { "year": 1999, "label": "Son Peter born", "category": "family", "description": "Third son." }
+    ]
+  }
+}

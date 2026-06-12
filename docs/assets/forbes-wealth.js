@@ -11,7 +11,24 @@
   const HOLDINGS_13F_URL = 'data/13f-top20.json';
   const BUYING_POWER_URL = 'data/buying-power-catalog.json';
   const CONTEXT_URL = 'data/world-context-events.json';
+  const LIFE_EVENTS_URL = 'data/profile-life-events.json';
+  const PHYSIQUE_URL = 'data/profile-physique.json';
   const GEO_LOCATIONS_URL = 'data/entity-locations.json';
+  const PERSONAL_LIFE_CATEGORIES = new Set(['marriage', 'divorce', 'dating', 'family', 'lawsuit', 'life']);
+  const CONTEXT_CHIP_ORDER = {
+    marriage: 1,
+    divorce: 2,
+    dating: 3,
+    family: 4,
+    lawsuit: 5,
+    life: 6,
+    wealth: 7,
+    history: 8,
+    science: 9,
+    space: 10,
+    tribal: 11,
+    migration: 12,
+  };
   const WORLD_GEO_URL = 'https://cdn.jsdelivr.net/npm/echarts@4/map/json/world.json';
   const BREAKDOWN_COLORS = ['#2563eb', '#16a34a', '#d97706', '#7c3aed', '#dc2626', '#0891b2', '#78716c'];
 
@@ -26,6 +43,16 @@
   let breakdownChart = null;
   let historyChart = null;
   let storyWealthChart = null;
+  let storyChartPerson = null;
+  let storyChartOverlays = { life: false, losses: false };
+  const LIFE_CHART_COLORS = {
+    marriage: '#be185d',
+    divorce: '#6b7280',
+    dating: '#db2777',
+    family: '#0f766e',
+    lawsuit: '#b91c1c',
+    life: '#7c3aed',
+  };
   let snowflakeChart = null;
   let worldMapChart = null;
   let worldGeoReady = false;
@@ -33,6 +60,9 @@
   let buyingPowerTargets = [];
   let worldEventsByYear = new Map();
   let sectorEventsBySector = {};
+  let profileLifeByRank = {};
+  let profilePhysiqueByRank = {};
+  let profilePhysiqueMeta = null;
   let ancestoryMeta = null;
   let detailTab = 'story';
   let lastRenderedKey = '';
@@ -218,25 +248,63 @@
 
   function renderWealthInsights(person) {
     renderWorldMap(person);
+    renderPhysiquePanel(person);
     renderSnowflakeChart(person);
     renderBuyingPowerList(person);
   }
 
+  function normalizeEntityKey(raw) {
+    if (!raw) return '';
+    const norm = String(raw).toLowerCase().trim();
+    const aliases = {
+      'the boring company': 'boring-co',
+      'boring company': 'boring-co',
+      'x corp': 'x-corp',
+      'x corp.': 'x-corp',
+      x: 'x-corp',
+      twitter: 'x-corp',
+      xai: 'xai',
+      'x.ai': 'xai',
+      facebook: 'meta',
+      'berkshire hathaway': 'berkshire',
+      "l'oréal": 'loreal',
+      loreal: "loreal",
+      mars: 'mars-inc',
+      'red bull': 'red_bull',
+      'las vegas sands': 'lvs',
+      uniqlo: 'fast-retailing',
+    };
+    if (aliases[norm]) return aliases[norm];
+    return norm.replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  }
+
   function entityLocForKey(key) {
     if (!key) return null;
-    const id = String(key).toLowerCase().trim();
-    return entityLocations.entities?.[id] || null;
+    const id = normalizeEntityKey(key);
+    return entityLocations.entities?.[id] || entityLocations.entities?.[String(key).toLowerCase().trim()] || null;
   }
 
   function entityLocForName(name) {
     if (!name) return null;
-    const norm = String(name).toLowerCase();
-    const direct = entityLocations.entities?.[norm.replace(/\s+/g, '-')];
+    const id = normalizeEntityKey(name);
+    const direct = entityLocations.entities?.[id];
     if (direct) return direct;
-    for (const [id, loc] of Object.entries(entityLocations.entities || {})) {
-      if (norm.includes(id) || id.includes(norm.replace(/[^a-z0-9]/g, ''))) return loc;
+    const norm = String(name).toLowerCase();
+    for (const [entId, loc] of Object.entries(entityLocations.entities || {})) {
+      const label = String(loc.label || entId).toLowerCase();
+      if (norm.includes(entId) || entId.includes(norm.replace(/[^a-z0-9]/g, ''))) return loc;
+      if (label.includes(norm) || norm.includes(label.split('·')[0].trim())) return loc;
     }
     return null;
+  }
+
+  function jitterLngLat(lng, lat, seed, index = 0) {
+    let h = index * 9973;
+    const s = String(seed);
+    for (let i = 0; i < s.length; i += 1) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+    const angle = (h % 360) * (Math.PI / 180);
+    const r = 0.35 + (h % 4) * 0.12;
+    return [lng + Math.cos(angle) * r, lat + Math.sin(angle) * r * 0.55];
   }
 
   function buildVentureMapPoints(person) {
@@ -244,26 +312,30 @@
     const seen = new Set();
 
     const add = (lng, lat, label, meta = {}) => {
-      if (lng == null || lat == null) return;
-      const key = `${lng.toFixed(2)}:${lat.toFixed(2)}:${label}`;
-      if (seen.has(key)) return;
-      seen.add(key);
-      points.push({ name: label, value: [lng, lat], ...meta });
+      if (lng == null || lat == null || !label) return;
+      const idKey = normalizeEntityKey(meta.key || label);
+      if (seen.has(idKey)) return;
+      seen.add(idKey);
+      const [jLng, jLat] = jitterLngLat(lng, lat, idKey, seen.size);
+      points.push({ name: label, value: [jLng, jLat], ...meta, key: idKey });
     };
 
-    (person.entities || []).forEach((ent) => {
-      const loc = entityLocForKey(ent.id);
-      if (loc) add(loc.lng, loc.lat, loc.label || ent.name, { kind: 'venture' });
-    });
+    const addFromKey = (key, label) => {
+      const loc = entityLocForKey(key) || entityLocForName(label || key);
+      if (!loc) return;
+      add(loc.lng, loc.lat, loc.label || label || key, { kind: 'venture', key: key || label });
+    };
 
-    (person.wealthBreakdown || []).forEach((row) => {
-      const loc = entityLocForName(row.entity);
-      if (loc) add(loc.lng, loc.lat, row.entity, { kind: 'venture' });
+    (person.entities || []).forEach((ent) => addFromKey(ent.id, ent.name));
+    (person.timeline || []).forEach((ev) => {
+      if (ev.entityId) addFromKey(ev.entityId, ev.title);
     });
+    (person.wealthBreakdown || []).forEach((row) => addFromKey(row.entity, row.entity));
+    (person.companies || []).forEach((name) => addFromKey(name, name));
 
     const home = entityLocations.countries?.[person.country];
     if (home) {
-      add(home.lng, home.lat, `${person.name} · ${person.country}`, { kind: 'home' });
+      add(home.lng, home.lat, `${person.name} · ${person.country}`, { kind: 'home', key: `home-${person.rank}` });
     }
 
     return points;
@@ -320,11 +392,13 @@
     const ventures = buildVentureMapPoints(person);
     const risks = buildRiskMapPoints(person);
 
+    const ventureCount = ventures.filter((p) => p.kind === 'venture').length;
+
     if (legendEl) {
       legendEl.hidden = false;
       legendEl.innerHTML = `
         <span class="forbes-map-legend-item"><i class="forbes-map-dot is-home"></i> Residence</span>
-        <span class="forbes-map-legend-item"><i class="forbes-map-dot is-venture"></i> Ventures</span>
+        <span class="forbes-map-legend-item"><i class="forbes-map-dot is-venture"></i> Ventures (${ventureCount})</span>
         <span class="forbes-map-legend-item"><i class="forbes-map-dot is-risk"></i> RISK targets (top 5)</span>`;
     }
 
@@ -423,6 +497,133 @@
     }
   }
 
+  async function loadProfileLifeEvents() {
+    try {
+      const resp = await fetch(LIFE_EVENTS_URL);
+      if (!resp.ok) return;
+      const payload = await resp.json();
+      profileLifeByRank = payload.profiles || {};
+    } catch {
+      profileLifeByRank = {};
+    }
+  }
+
+  function sortContextEvents(events) {
+    return [...events].sort((a, b) => {
+      const ao = CONTEXT_CHIP_ORDER[a.category] ?? 99;
+      const bo = CONTEXT_CHIP_ORDER[b.category] ?? 99;
+      if (ao !== bo) return ao - bo;
+      return String(a.label).localeCompare(String(b.label));
+    });
+  }
+
+  function profileLifeForYear(person, year) {
+    const events = profileLifeByRank[String(person.rank)] || [];
+    return events.filter((ev) => ev.year === year);
+  }
+
+  async function loadProfilePhysique() {
+    try {
+      const resp = await fetch(PHYSIQUE_URL);
+      if (!resp.ok) return;
+      const payload = await resp.json();
+      profilePhysiqueByRank = payload.profiles || {};
+      profilePhysiqueMeta = { ancestoryUrl: payload.ancestoryUrl };
+    } catch {
+      profilePhysiqueByRank = {};
+      profilePhysiqueMeta = null;
+    }
+  }
+
+  function physiqueForPerson(person) {
+    const catalog = profilePhysiqueByRank[String(person.rank)];
+    const ancestoryUrl =
+      profilePhysiqueMeta?.ancestoryUrl
+      || ancestoryMeta?.ancestoryUrl
+      || 'https://fornevercollective.github.io/ancestory/';
+    if (catalog) return { ...catalog, ancestoryUrl, isFallback: false };
+
+    return {
+      height: '—',
+      stature: 'Not cataloged',
+      faceShape: 'oval',
+      faceDetail: 'Add face shape in profile-physique.json',
+      hair: '—',
+      eyes: '—',
+      build: '—',
+      heritage: person.country || '—',
+      birthplace: person.country || '—',
+      citizenship: person.country || '—',
+      languages: '—',
+      notes: `Rank #${person.rank} — extend data/profile-physique.json for height, stature, and AnCEstory-style traits.`,
+      tags: [person.sector, person.sourceOfWealth].filter(Boolean).slice(0, 3),
+      ancestoryUrl,
+      isFallback: true,
+    };
+  }
+
+  function faceShapeSvg(shape) {
+    const s = String(shape || 'oval').toLowerCase();
+    const paths = {
+      oval: '<ellipse cx="24" cy="28" rx="15" ry="21" />',
+      round: '<circle cx="24" cy="28" r="17" />',
+      square: '<rect x="9" y="13" width="30" height="32" rx="5" />',
+      angular: '<polygon points="24,9 38,24 34,47 14,47 10,24" />',
+      heart: '<path d="M24 48 C10 36 6 26 12 18 C16 13 24 16 24 16 C24 16 32 13 36 18 C42 26 38 36 24 48 Z" transform="translate(0,-6) scale(0.85) translate(3.6,4)" />',
+    };
+    const inner = paths[s] || paths.oval;
+    return `<svg class="forbes-physique-face-svg" viewBox="0 0 48 56" aria-hidden="true" focusable="false">${inner}</svg>`;
+  }
+
+  function renderPhysiquePanel(person) {
+    const panel = $('#forbes-physique-panel');
+    if (!panel || !person) return;
+
+    const p = physiqueForPerson(person);
+    const tags = (p.tags || [])
+      .map((t) => `<span class="forbes-physique-tag">${escapeHtml(t)}</span>`)
+      .join('');
+    const fields = [
+      ['Height', p.height],
+      ['Stature', p.stature],
+      ['Face', p.faceDetail || p.faceShape],
+      ['Build', p.build],
+      ['Hair', p.hair],
+      ['Eyes', p.eyes],
+      ['Heritage', p.heritage],
+      ['Born', p.birthplace],
+      ['Citizenship', p.citizenship],
+      ['Languages', p.languages],
+    ].filter(([, val]) => val && val !== '—');
+
+    panel.hidden = false;
+    panel.innerHTML = `
+      <h4 class="forbes-worth-physique-title">Physique · AnCEstory profile</h4>
+      <div class="forbes-physique-card${p.isFallback ? ' is-fallback' : ''}">
+        <div class="forbes-physique-visual" aria-hidden="true">
+          ${faceShapeSvg(p.faceShape)}
+          <span class="forbes-physique-face-label">${escapeHtml(p.faceShape || 'oval')}</span>
+        </div>
+        <div class="forbes-physique-body">
+          <dl class="forbes-physique-grid">
+            ${fields
+              .map(
+                ([label, val]) =>
+                  `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(val)}</dd></div>`,
+              )
+              .join('')}
+          </dl>
+          ${p.notes ? `<p class="forbes-physique-notes">${escapeHtml(p.notes)}</p>` : ''}
+          ${tags ? `<div class="forbes-physique-tags">${tags}</div>` : ''}
+          <p class="forbes-physique-source">
+            Public biographical layer · paired with
+            <a href="${escapeHtml(p.ancestoryUrl)}" target="_blank" rel="noopener">AnCEstory</a>
+            life timelines
+          </p>
+        </div>
+      </div>`;
+  }
+
   async function loadBuyingPowerCatalog() {
     try {
       const resp = await fetch(BUYING_POWER_URL);
@@ -453,6 +654,27 @@
 
   function findPerson(key) {
     return billionaires.find((b) => personKey(b) === key);
+  }
+
+  function selectedFilteredIndex() {
+    return filtered.findIndex((b) => personKey(b) === selectedKey);
+  }
+
+  function navigateFilteredRank(delta) {
+    const idx = selectedFilteredIndex();
+    if (idx < 0) return;
+    const nextIdx = idx + delta;
+    if (nextIdx < 0 || nextIdx >= filtered.length) return;
+    selectedKey = personKey(filtered[nextIdx]);
+    renderList($('#forbes-list'));
+    renderDetail($('#forbes-detail'));
+    syncUrl();
+  }
+
+  function updateRankNavButtons() {
+    const idx = selectedFilteredIndex();
+    const nextBtn = $('#forbes-rank-next');
+    if (nextBtn) nextBtn.disabled = idx < 0 || idx >= filtered.length - 1;
   }
 
   function catalogEntry(entity) {
@@ -680,7 +902,11 @@
     const birth = estimateBirthYear(person);
     if (birth == null) return [];
     const out = [];
-    if (year === birth) {
+    const profileLife = profileLifeByRank[String(person.rank)] || [];
+    const hasBirthMarker = profileLife.some(
+      (ev) => ev.year === birth && ev.category === 'family' && /born/i.test(ev.label),
+    );
+    if (year === birth && !hasBirthMarker) {
       out.push({
         year,
         label: `Born · ${person.country || '—'}`,
@@ -713,7 +939,8 @@
     const global = worldEventsByYear.get(year) || [];
     const sector = (sectorEventsBySector[person.sector] || []).filter((ev) => ev.year === year);
     const life = lifeContextForYear(person, year);
-    return [...life, ...global, ...sector];
+    const personal = profileLifeForYear(person, year);
+    return sortContextEvents([...life, ...personal, ...global, ...sector]);
   }
 
   function buildWealthJourneyRows(person) {
@@ -755,7 +982,16 @@
 
   function renderAncestryLayer(events) {
     if (!events?.length) return '';
-    return `<div class="forbes-ancestry-layer" aria-label="Historical and life context">${events.map((ev) => renderAncestryChip(ev)).join('')}</div>`;
+    const personal = events.filter((ev) => PERSONAL_LIFE_CATEGORIES.has(ev.category));
+    const world = events.filter((ev) => !PERSONAL_LIFE_CATEGORIES.has(ev.category));
+    let html = '';
+    if (personal.length) {
+      html += `<div class="forbes-ancestry-layer forbes-ancestry-layer-personal" aria-label="Personal life">${personal.map((ev) => renderAncestryChip(ev)).join('')}</div>`;
+    }
+    if (world.length) {
+      html += `<div class="forbes-ancestry-layer forbes-ancestry-layer-world" aria-label="World and sector context">${world.map((ev) => renderAncestryChip(ev)).join('')}</div>`;
+    }
+    return html;
   }
 
   function renderMilestoneBlock(ev) {
@@ -782,7 +1018,7 @@
 
     return `
       <div class="forbes-ancestry-intro">
-        <p class="forbes-ancestry-lead">World, sector, and life-stage context layered on net worth — inspired by <a href="${escapeHtml(ancestoryMeta?.ancestoryUrl || 'https://fornevercollective.github.io/ancestory/')}" target="_blank" rel="noopener">AnCEstory</a>.</p>
+        <p class="forbes-ancestry-lead">Personal life, world history, and sector context layered on net worth — marriage, family, lawsuits, and milestones alongside <a href="${escapeHtml(ancestoryMeta?.ancestoryUrl || 'https://fornevercollective.github.io/ancestory/')}" target="_blank" rel="noopener">AnCEstory</a>-style markers.</p>
       </div>
       <ol class="forbes-journey forbes-journey-yearly">
         ${rows
@@ -883,16 +1119,34 @@
     }
   }
 
-  function netWorthChartOption(series, { compact = false, markByYear = {} } = {}) {
+  function netWorthChartOption(series, { compact = false, markByYear = {}, extraMarkPoints = [] } = {}) {
     const years = series.map((p) => p.year);
     const values = series.map((p) => p.netWorthB);
-    const markPoints = series
+    const milestonePoints = series
       .filter((p) => markByYear[p.year])
       .map((p) => ({
         name: markByYear[p.year],
         coord: [p.year, p.netWorthB],
         value: markByYear[p.year],
+        symbol: 'pin',
+        symbolSize: compact ? 22 : 42,
+        itemStyle: { color: '#b45309' },
+        label: { show: false },
       }));
+    const markPoints = [...milestonePoints, ...extraMarkPoints];
+    const lossByYear = {};
+    extraMarkPoints
+      .filter((p) => p.kind === 'loss')
+      .forEach((p) => {
+        lossByYear[p.coord[0]] = p.value;
+      });
+    const lifeByYear = {};
+    extraMarkPoints
+      .filter((p) => p.kind === 'life')
+      .forEach((p) => {
+        if (!lifeByYear[p.coord[0]]) lifeByYear[p.coord[0]] = [];
+        lifeByYear[p.coord[0]].push(p.name);
+      });
 
     return {
       backgroundColor: 'transparent',
@@ -901,16 +1155,21 @@
         trigger: 'axis',
         formatter: (params) => {
           const p = params[0];
-          const mark = markByYear[Number(p.name)];
-          return mark
-            ? `${p.name}: $${p.value}B<br/><strong>Milestone:</strong> ${mark}`
-            : `${p.name}: $${p.value}B`;
+          const year = Number(p.name);
+          const parts = [`${p.name}: $${p.value}B`];
+          const milestone = markByYear[year];
+          if (milestone) parts.push(`<strong>Milestone:</strong> ${escapeHtml(milestone)}`);
+          if (lifeByYear[year]?.length) {
+            parts.push(`<strong>Life:</strong> ${lifeByYear[year].map((s) => escapeHtml(s)).join(' · ')}`);
+          }
+          if (lossByYear[year]) parts.push(`<strong>Loss:</strong> ${escapeHtml(lossByYear[year])}`);
+          return parts.join('<br/>');
         },
       },
       grid: {
         left: 8,
         right: compact ? 8 : 16,
-        top: compact ? 8 : 16,
+        top: compact ? (extraMarkPoints.length ? 28 : 8) : 16,
         bottom: compact ? 24 : 32,
         containLabel: true,
       },
@@ -941,9 +1200,6 @@
           data: values,
           markPoint: markPoints.length
             ? {
-                symbol: 'pin',
-                symbolSize: compact ? 28 : 42,
-                itemStyle: { color: '#b45309' },
                 label: { show: false },
                 data: markPoints,
               }
@@ -951,6 +1207,92 @@
         },
       ],
     };
+  }
+
+  function netWorthByYearMap(series) {
+    return Object.fromEntries(series.map((p) => [p.year, p.netWorthB]));
+  }
+
+  function detectMajorLosses(series, thresholdPct = 12) {
+    const losses = [];
+    for (let i = 1; i < series.length; i += 1) {
+      const prev = series[i - 1].netWorthB;
+      const curr = series[i].netWorthB;
+      if (prev <= 0 || curr >= prev) continue;
+      const pct = ((curr - prev) / prev) * 100;
+      if (pct <= -thresholdPct) {
+        losses.push({ year: series[i].year, netWorthB: curr, pct });
+      }
+    }
+    return losses;
+  }
+
+  function buildLifeEventMarkPoints(person, series) {
+    const nwByYear = netWorthByYearMap(series);
+    const events = profileLifeByRank[String(person.rank)] || [];
+    return events
+      .map((ev, idx) => {
+        const val = nwByYear[ev.year];
+        if (val == null) return null;
+        const color = LIFE_CHART_COLORS[ev.category] || '#be185d';
+        return {
+          kind: 'life',
+          name: ev.label,
+          coord: [ev.year, val],
+          value: ev.label,
+          symbol: 'circle',
+          symbolSize: 9,
+          symbolOffset: [idx % 2 ? 6 : -6, -8 - (idx % 3) * 4],
+          itemStyle: { color: '#fff', borderColor: color, borderWidth: 2 },
+          emphasis: { itemStyle: { color, borderColor: color } },
+        };
+      })
+      .filter(Boolean);
+  }
+
+  function buildLossMarkPoints(series) {
+    return detectMajorLosses(series).map((loss, idx) => ({
+      kind: 'loss',
+      name: `${loss.pct.toFixed(0)}% YoY drop`,
+      coord: [loss.year, loss.netWorthB],
+      value: `${loss.pct.toFixed(0)}% YoY`,
+      symbol: 'triangle',
+      symbolRotate: 180,
+      symbolSize: 11,
+      symbolOffset: [idx % 2 ? 5 : -5, 6],
+      itemStyle: { color: '#dc2626', shadowBlur: 4, shadowColor: 'rgba(220,38,38,0.35)' },
+    }));
+  }
+
+  function storyChartExtraMarkPoints(person, series) {
+    const extra = [];
+    if (storyChartOverlays.life) extra.push(...buildLifeEventMarkPoints(person, series));
+    if (storyChartOverlays.losses) extra.push(...buildLossMarkPoints(series));
+    return extra;
+  }
+
+  function syncStoryChartToolbar(visible) {
+    const toolbar = $('#forbes-story-chart-toolbar');
+    const lifeToggle = $('#forbes-story-toggle-life');
+    const lossesToggle = $('#forbes-story-toggle-losses');
+    if (toolbar) toolbar.hidden = !visible;
+    if (lifeToggle) lifeToggle.checked = storyChartOverlays.life;
+    if (lossesToggle) lossesToggle.checked = storyChartOverlays.losses;
+  }
+
+  function bindStoryChartToggles() {
+    if (document.body.dataset.storyChartTogglesBound === '1') return;
+    document.body.dataset.storyChartTogglesBound = '1';
+    document.addEventListener('change', (e) => {
+      if (e.target?.id === 'forbes-story-toggle-life') {
+        storyChartOverlays.life = e.target.checked;
+        if (storyChartPerson) renderStoryWealthChart(storyChartPerson);
+      }
+      if (e.target?.id === 'forbes-story-toggle-losses') {
+        storyChartOverlays.losses = e.target.checked;
+        if (storyChartPerson) renderStoryWealthChart(storyChartPerson);
+      }
+    });
   }
 
   function historicalSeries(rank) {
@@ -992,21 +1334,33 @@
     const emptyEl = $('#forbes-story-wealth-empty');
     if (!el || typeof echarts === 'undefined') return;
 
-    disposeStoryWealthChart();
+    storyChartPerson = person;
     const series = expandHistoricalSeries(historicalSeries(person.rank));
     if (!series.length) {
+      disposeStoryWealthChart();
       el.innerHTML = '';
       el.hidden = true;
+      syncStoryChartToolbar(false);
       if (emptyEl) emptyEl.hidden = false;
       return;
     }
     if (emptyEl) emptyEl.hidden = true;
     el.hidden = false;
-    el.innerHTML = '';
+    syncStoryChartToolbar(true);
 
-    storyWealthChart = echarts.init(el, null, { renderer: 'canvas' });
+    if (!storyWealthChart) {
+      el.innerHTML = '';
+      storyWealthChart = echarts.init(el, null, { renderer: 'canvas' });
+    }
+
+    const extraMarkPoints = storyChartExtraMarkPoints(person, series);
     storyWealthChart.setOption(
-      netWorthChartOption(series, { compact: true, markByYear: milestoneMarkMap(person) }),
+      netWorthChartOption(series, {
+        compact: true,
+        markByYear: milestoneMarkMap(person),
+        extraMarkPoints,
+      }),
+      true,
     );
   }
 
@@ -1303,25 +1657,31 @@
     renderPortfolioTab(person);
     renderEntitiesTab(person);
     renderHistoryTab(person);
+    updateRankNavButtons();
     showTab(tabIndex(detailTab));
   }
 
   function detailShellHtml() {
     return `
       <p id="forbes-detail-empty" class="forbes-empty">Select a person from the rankings.</p>
-      <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="2" hidden>
+      <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="5" hidden>
         <header class="forbes-detail-header">
-          <button
-            type="button"
-            class="forbes-rank-picker"
-            id="forbes-rank-picker"
-            aria-expanded="false"
-            aria-controls="forbes-list-drawer"
-          >
-            <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
-            <span id="forbes-rank-label">Forbes rank</span>
-            <span class="forbes-rank-picker-hint">Browse all</span>
-          </button>
+          <div class="forbes-detail-nav">
+            <button
+              type="button"
+              class="forbes-rank-picker"
+              id="forbes-rank-picker"
+              aria-expanded="false"
+              aria-controls="forbes-list-drawer"
+            >
+              <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
+              <span id="forbes-rank-label">Forbes rank</span>
+              <span class="forbes-rank-picker-hint">Browse all</span>
+            </button>
+            <button type="button" id="forbes-rank-next" class="forbes-rank-nav" aria-label="Next rank">
+              Next →
+            </button>
+          </div>
         </header>
         <h2 id="modalName" class="forbes-detail-name"></h2>
         <div class="forbes-worth-row">
@@ -1333,6 +1693,7 @@
               <div id="forbes-world-map" class="forbes-world-map" role="img" aria-label="World map of ventures and buying-power targets"></div>
               <div id="forbes-map-legend" class="forbes-map-legend" hidden></div>
             </section>
+            <section id="forbes-physique-panel" class="forbes-worth-physique-panel" aria-label="Physique and AnCEstory-style profile" hidden></section>
           </div>
           <aside class="forbes-worth-insights" aria-label="Wealth metrics and buying power">
             <div id="forbes-snowflake-chart" class="forbes-snowflake-chart" role="img" aria-label="Profile metrics radar chart"></div>
@@ -1356,7 +1717,20 @@
               <section class="forbes-panel">
                 <h4 class="forbes-journey-heading">Wealth journey</h4>
                 <p id="forbes-story-wealth-empty" class="forbes-empty" hidden>No yearly net-worth series for this rank.</p>
-                <div id="forbes-story-wealth-chart" class="forbes-story-wealth-chart" role="img" aria-label="Year-by-year net worth chart" hidden></div>
+                <div class="forbes-story-chart-block">
+                  <div id="forbes-story-chart-toolbar" class="forbes-story-chart-toolbar" hidden>
+                    <span class="forbes-story-chart-toolbar-label">Chart overlays</span>
+                    <label class="forbes-story-chart-toggle">
+                      <input type="checkbox" id="forbes-story-toggle-life" />
+                      Life events
+                    </label>
+                    <label class="forbes-story-chart-toggle">
+                      <input type="checkbox" id="forbes-story-toggle-losses" />
+                      Major losses
+                    </label>
+                  </div>
+                  <div id="forbes-story-wealth-chart" class="forbes-story-wealth-chart" role="img" aria-label="Year-by-year net worth chart" hidden></div>
+                </div>
                 <div id="forbes-story-timeline" class="forbes-story-timeline"></div>
               </section>
             </div>
@@ -1389,12 +1763,17 @@
     if (!container) return;
     const modal = $('#modalContent', container);
     if (
-      modal?.dataset.forbesDetailV2 === '2'
+      modal?.dataset.forbesDetailV2 === '5'
       && $('#forbes-story-timeline', container)
       && $('#forbes-story-wealth-chart', container)
+      && $('#forbes-story-chart-toolbar', container)
+      && $('#forbes-rank-next', container)
       && $('#forbes-snowflake-chart', container)
       && $('#forbes-world-map', container)
+      && $('#forbes-physique-panel', container)
     ) return;
+    disposeStoryWealthChart();
+    storyChartPerson = null;
     container.innerHTML = detailShellHtml();
   }
 
@@ -1441,8 +1820,18 @@
     $('#forbes-drawer-close')?.addEventListener('click', () => setListDrawer(false));
 
     detailEl?.addEventListener('click', (e) => {
+      if (e.target.closest('#forbes-rank-next')) return;
       if (e.target.closest('#forbes-rank-picker')) setListDrawer(true);
     });
+
+    if (document.body.dataset.forbesRankNavBound !== '1') {
+      document.body.dataset.forbesRankNavBound = '1';
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('#forbes-rank-next')) return;
+        e.preventDefault();
+        navigateFilteredRank(1);
+      });
+    }
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && listDrawerOpen) {
@@ -1571,6 +1960,8 @@
         load13fHoldings(),
         loadBuyingPowerCatalog(),
         loadWorldContext(),
+        loadProfileLifeEvents(),
+        loadProfilePhysique(),
         loadEntityLocations(),
       ]);
       const resp = await fetch(DATA_URL);
@@ -1591,6 +1982,7 @@
     ensureDetailShell(detailEl);
     bindListDrawer();
     bindDetailTabs();
+    bindStoryChartToggles();
     renderMeta(countEl);
     renderList(listEl);
     renderDetail(detailEl);

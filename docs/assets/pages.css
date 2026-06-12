@@ -2450,7 +2450,7 @@ h3.subheading {
 .forbes-layout {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 0;
   position: relative;
   min-height: min(70vh, 640px);
@@ -2478,6 +2478,9 @@ h3.subheading {
   position: relative;
   visibility: visible;
   pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
   flex: 0 0 22rem;
   width: 22rem;
   height: auto;
@@ -2488,7 +2491,9 @@ h3.subheading {
 .forbes-list-drawer-panel {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
   width: 22rem;
+  min-height: 0;
   height: 100%;
   padding: 1rem;
   border: 1px solid var(--border);
@@ -2610,13 +2615,14 @@ h3.subheading {
 }
 
 .forbes-list-drawer.is-open .forbes-list-drawer-panel {
-  min-height: min(70vh, 640px);
-  max-height: min(85vh, 720px);
+  flex: 1 1 auto;
+  min-height: 100%;
+  max-height: none;
 }
 
 .forbes-detail {
   flex: 1;
-  align-self: flex-start;
+  align-self: stretch;
   min-width: 0;
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--border);
@@ -2633,11 +2639,48 @@ h3.subheading {
   color: var(--forbes-accent);
 }
 
+.forbes-detail-header {
+  margin: 0 0 0.75rem;
+}
+
+.forbes-detail-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+.forbes-rank-nav {
+  flex-shrink: 0;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.forbes-rank-nav:hover:not(:disabled) {
+  border-color: var(--forbes-accent-border);
+  color: var(--forbes-accent);
+  background: var(--forbes-accent-dim);
+}
+
+.forbes-rank-nav:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .forbes-rank-picker {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin: 0 0 0.375rem;
+  margin: 0;
   padding: 0.35rem 0.65rem 0.35rem 0.5rem;
   border: 1px solid var(--forbes-accent-border);
   border-radius: 999px;
@@ -2764,6 +2807,146 @@ h3.subheading {
   font-size: 0.75rem;
   color: var(--text-muted);
   text-align: center;
+}
+
+.forbes-worth-physique-panel {
+  margin-top: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.1));
+  border-radius: 8px;
+  background: var(--surface-raised, rgba(0, 0, 0, 0.02));
+}
+
+.forbes-worth-physique-title {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.forbes-physique-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem 1rem;
+  align-items: start;
+}
+
+.forbes-physique-card.is-fallback {
+  opacity: 0.92;
+}
+
+.forbes-physique-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.5rem 0.25rem;
+  border-radius: 8px;
+  background: var(--surface, #fff);
+  border: 1px solid var(--border);
+  min-width: 4.5rem;
+}
+
+.forbes-physique-face-svg {
+  width: 3rem;
+  height: 3.5rem;
+  fill: rgba(180, 83, 9, 0.12);
+  stroke: var(--forbes-accent, #b45309);
+  stroke-width: 1.5;
+}
+
+.forbes-physique-face-label {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-physique-body {
+  min-width: 0;
+}
+
+.forbes-physique-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 0.75rem;
+  margin: 0;
+}
+
+.forbes-physique-grid div {
+  margin: 0;
+}
+
+.forbes-physique-grid dt {
+  margin: 0;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.forbes-physique-grid dd {
+  margin: 0.1rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.forbes-physique-notes {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.forbes-physique-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.45rem;
+}
+
+.forbes-physique-tag {
+  display: inline-block;
+  padding: 0.12rem 0.4rem;
+  border-radius: 999px;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  color: #78716c;
+  background: rgba(120, 113, 108, 0.1);
+  border: 1px solid rgba(120, 113, 108, 0.18);
+}
+
+.forbes-physique-source {
+  margin: 0.45rem 0 0;
+  font-size: 0.625rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+.forbes-physique-source a {
+  color: var(--forbes-accent, #b45309);
+  font-weight: 600;
+}
+
+@media (max-width: 520px) {
+  .forbes-physique-card {
+    grid-template-columns: 1fr;
+  }
+
+  .forbes-physique-visual {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: fit-content;
+  }
+
+  .forbes-physique-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .forbes-worth-primary {
@@ -2929,16 +3112,65 @@ h3.subheading {
   color: var(--text-muted);
 }
 
-.forbes-story-wealth-chart {
-  width: 100%;
-  height: 180px;
+.forbes-story-chart-block {
   margin-bottom: 0.75rem;
 }
 
+.forbes-story-chart-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.forbes-story-chart-toolbar-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.forbes-story-chart-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.forbes-story-chart-toggle input {
+  accent-color: var(--forbes-accent, #b45309);
+  cursor: pointer;
+}
+
+.forbes-story-wealth-chart {
+  width: 100%;
+  height: 180px;
+}
+
 .forbes-story-timeline {
-  max-height: 480px;
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
-  padding-right: 0.25rem;
+  padding-right: 0.35rem;
+  scrollbar-gutter: stable;
+}
+
+.forbes-ancestry-layer-personal {
+  margin-top: 0.125rem;
+}
+
+.forbes-ancestry-layer-world {
+  margin-top: 0.125rem;
+}
+
+.forbes-ancestry-layer-personal + .forbes-ancestry-layer-world {
+  margin-top: 0.2rem;
 }
 
 .forbes-ancestry-intro {
@@ -3007,6 +3239,36 @@ h3.subheading {
   background: rgba(219, 39, 119, 0.08);
   color: #be185d;
   border-color: rgba(219, 39, 119, 0.18);
+}
+
+.forbes-ancestry-chip[data-category="marriage"] {
+  background: rgba(190, 24, 93, 0.1);
+  color: #9d174d;
+  border-color: rgba(190, 24, 93, 0.22);
+}
+
+.forbes-ancestry-chip[data-category="divorce"] {
+  background: rgba(107, 114, 128, 0.12);
+  color: #4b5563;
+  border-color: rgba(107, 114, 128, 0.25);
+}
+
+.forbes-ancestry-chip[data-category="dating"] {
+  background: rgba(236, 72, 153, 0.1);
+  color: #db2777;
+  border-color: rgba(236, 72, 153, 0.22);
+}
+
+.forbes-ancestry-chip[data-category="family"] {
+  background: rgba(13, 148, 136, 0.1);
+  color: #0f766e;
+  border-color: rgba(13, 148, 136, 0.22);
+}
+
+.forbes-ancestry-chip[data-category="lawsuit"] {
+  background: rgba(220, 38, 38, 0.08);
+  color: #b91c1c;
+  border-color: rgba(220, 38, 38, 0.2);
 }
 
 .forbes-ancestry-chip[data-category="tribal"],
@@ -3347,13 +3609,25 @@ h3.subheading {
 
 .forbes-story-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 38%);
-  gap: 1.25rem;
-  align-items: start;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 340px);
+  gap: 1rem 1.25rem;
+  align-items: stretch;
 }
 
 .forbes-story-main {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: min(72vh, 640px);
+}
+
+.forbes-story-main .forbes-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-bottom: 0;
 }
 
 .forbes-story-aside {
@@ -3361,12 +3635,16 @@ h3.subheading {
   flex-direction: column;
   gap: 0.75rem;
   padding-top: 0.125rem;
+  min-width: 0;
+  max-height: min(72vh, 640px);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 
 @media (min-width: 769px) {
   .forbes-story-aside {
     position: sticky;
-    top: 0.5rem;
+    top: calc(var(--site-header-offset, 5rem) + 0.25rem);
   }
 }
 
@@ -3623,10 +3901,18 @@ h3.subheading {
 
   .forbes-story-layout {
     grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .forbes-story-main,
+  .forbes-story-aside {
+    max-height: none;
   }
 
   .forbes-story-aside {
     order: -1;
+    position: static;
+    overflow: visible;
   }
 
   .market-symbol-grid {

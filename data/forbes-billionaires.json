@@ -16,7 +16,8 @@
       "SpaceX",
       "xAI",
       "Neuralink",
-      "The Boring Company"
+      "The Boring Company",
+      "X Corp"
     ],
     "sourceOfWealth": "Tesla, SpaceX",
     "firstFortuneDecade": "1990s",
@@ -122,6 +123,27 @@
         "id": "xai",
         "name": "xAI",
         "role": "founder",
+        "founded": 2023,
+        "status": "private"
+      },
+      {
+        "id": "neuralink",
+        "name": "Neuralink",
+        "role": "founder",
+        "founded": 2016,
+        "status": "private"
+      },
+      {
+        "id": "boring-co",
+        "name": "The Boring Company",
+        "role": "founder",
+        "founded": 2016,
+        "status": "private"
+      },
+      {
+        "id": "x-corp",
+        "name": "X Corp",
+        "role": "owner",
         "founded": 2023,
         "status": "private"
       }

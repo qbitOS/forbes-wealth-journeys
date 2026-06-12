@@ -6,7 +6,7 @@
   <title>Forbes Wealth Journeys · Billionaire Timelines</title>
   <meta name="description" content="Forbes billionaire wealth journeys mapped to venture milestones — interactive timelines, drill-downs, and source-linked events." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <link rel="stylesheet" href="docs/assets/pages.css?v=20260611k" />
+  <link rel="stylesheet" href="docs/assets/pages.css?v=20260612f" />
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -56,19 +56,24 @@
         </div>
         <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile">
           <p id="forbes-detail-empty" class="forbes-empty">Select a person from the rankings.</p>
-          <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="2" hidden>
+          <div id="modalContent" class="forbes-modal-content" data-forbes-detail-v2="5" hidden>
             <header class="forbes-detail-header">
-              <button
-                type="button"
-                class="forbes-rank-picker"
-                id="forbes-rank-picker"
-                aria-expanded="false"
-                aria-controls="forbes-list-drawer"
-              >
-                <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
-                <span id="forbes-rank-label">Forbes rank</span>
-                <span class="forbes-rank-picker-hint">Browse all</span>
-              </button>
+              <div class="forbes-detail-nav">
+                <button
+                  type="button"
+                  class="forbes-rank-picker"
+                  id="forbes-rank-picker"
+                  aria-expanded="false"
+                  aria-controls="forbes-list-drawer"
+                >
+                  <span class="forbes-rank-picker-icon" aria-hidden="true">☰</span>
+                  <span id="forbes-rank-label">Forbes rank</span>
+                  <span class="forbes-rank-picker-hint">Browse all</span>
+                </button>
+                <button type="button" id="forbes-rank-next" class="forbes-rank-nav" aria-label="Next rank">
+                  Next →
+                </button>
+              </div>
             </header>
             <h2 id="modalName" class="forbes-detail-name"></h2>
             <div class="forbes-worth-row">
@@ -80,6 +85,7 @@
                   <div id="forbes-world-map" class="forbes-world-map" role="img" aria-label="World map of ventures and buying-power targets"></div>
                   <div id="forbes-map-legend" class="forbes-map-legend" hidden></div>
                 </section>
+                <section id="forbes-physique-panel" class="forbes-worth-physique-panel" aria-label="Physique and AnCEstory-style profile" hidden></section>
               </div>
               <aside class="forbes-worth-insights" aria-label="Wealth metrics and buying power">
                 <div id="forbes-snowflake-chart" class="forbes-snowflake-chart" role="img" aria-label="Profile metrics radar chart"></div>
@@ -105,7 +111,20 @@
                   <section class="forbes-panel">
                     <h4 class="forbes-journey-heading">Wealth journey</h4>
                     <p id="forbes-story-wealth-empty" class="forbes-empty" hidden>No yearly net-worth series for this rank.</p>
-                    <div id="forbes-story-wealth-chart" class="forbes-story-wealth-chart" role="img" aria-label="Year-by-year net worth chart" hidden></div>
+                    <div class="forbes-story-chart-block">
+                      <div id="forbes-story-chart-toolbar" class="forbes-story-chart-toolbar" hidden>
+                        <span class="forbes-story-chart-toolbar-label">Chart overlays</span>
+                        <label class="forbes-story-chart-toggle">
+                          <input type="checkbox" id="forbes-story-toggle-life" />
+                          Life events
+                        </label>
+                        <label class="forbes-story-chart-toggle">
+                          <input type="checkbox" id="forbes-story-toggle-losses" />
+                          Major losses
+                        </label>
+                      </div>
+                      <div id="forbes-story-wealth-chart" class="forbes-story-wealth-chart" role="img" aria-label="Year-by-year net worth chart" hidden></div>
+                    </div>
                     <div id="forbes-story-timeline" class="forbes-story-timeline"></div>
                   </section>
                 </div>
@@ -327,7 +346,7 @@
     · forked from <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">grok-repo-template</a>
   </footer>
 
-  <script src="docs/assets/forbes-wealth.js?v=20260611j"></script>
+  <script src="docs/assets/forbes-wealth.js?v=20260612f"></script>
   <script src="docs/assets/crossover-mini-chart.js?v=20260611g"></script>
   <script src="docs/assets/wealth-data-tools.js?v=20260611g"></script>
   <script src="docs/assets/market-crossover.js?v=20260611g"></script>
