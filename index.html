@@ -6,7 +6,7 @@
   <title>Forbes Wealth Journeys · Billionaire Timelines</title>
   <meta name="description" content="Forbes billionaire wealth journeys mapped to venture milestones — interactive timelines, drill-downs, and source-linked events." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <link rel="stylesheet" href="docs/assets/pages.css?v=20260612f" />
+  <link rel="stylesheet" href="docs/assets/pages.css?v=20260612g" />
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -189,6 +189,16 @@
         xAI cluster and IPO roadshow, plus Elon portfolio ventures — switch sections, then drill into a single company for expanded milestones. Dates are approximate (~) where sources differ.
       </p>
       <p id="timeline-profile-context" class="timeline-profile-context" hidden aria-live="polite"></p>
+      <div id="timeline-global-wealth" class="timeline-global-wealth-panel" aria-labelledby="timeline-global-wealth-title">
+        <p class="activity-overview-label" id="timeline-global-wealth-title">Global wealth context</p>
+        <p class="timeline-global-wealth-lead">Combined net worth of every ranked member on this page — mapped by country of residence and compared to world-scale benchmarks.</p>
+        <div class="timeline-global-wealth-stats" id="timeline-global-wealth-stats" aria-live="polite"></div>
+        <div class="timeline-global-wealth-viz">
+          <div id="timeline-global-wealth-map" class="timeline-global-wealth-map" role="img" aria-label="World map of billionaire wealth by country"></div>
+          <div id="timeline-global-wealth-chart" class="timeline-global-wealth-chart" role="img" aria-label="Forbes ranked wealth vs world benchmarks"></div>
+        </div>
+        <p class="timeline-global-wealth-foot" id="timeline-global-wealth-foot"></p>
+      </div>
       <div class="timeline-ranks-section">
         <p class="activity-overview-label">Ranked member timelines</p>
         <p class="timeline-ranks-lead">Each card stacks milestone density (top) and wealth history (bottom) on the same year axis — gold marks where they overlap. Click to open the unified timeline below.</p>
@@ -350,6 +360,6 @@
   <script src="docs/assets/crossover-mini-chart.js?v=20260611g"></script>
   <script src="docs/assets/wealth-data-tools.js?v=20260611g"></script>
   <script src="docs/assets/market-crossover.js?v=20260611g"></script>
-  <script src="docs/assets/pages-configurator.js?v=20260611d"></script>
+  <script src="docs/assets/pages-configurator.js?v=20260612g"></script>
 </body>
 </html>

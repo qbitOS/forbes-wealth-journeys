@@ -1879,6 +1879,256 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   let historicalByRank = {};
   const timelineWealthCharts = {};
 
+  const TIMELINE_WORLD_GEO_URL = 'https://cdn.jsdelivr.net/npm/echarts@4/map/json/world.json';
+  const TIMELINE_GLOBAL_BENCHMARKS_URL = 'data/global-wealth-benchmarks.json';
+  const TIMELINE_GEO_COUNTRY_MAP = {
+    'South Korea': 'Korea',
+    'Czech Republic': 'Czech Rep.',
+    'Hong Kong': 'China',
+  };
+
+  let timelineGlobalGeoReady = false;
+  let timelineGlobalBenchmarks = null;
+  let timelineGlobalMapChart = null;
+  let timelineGlobalBarChart = null;
+
+  function profileNetWorthB(profile) {
+    const nw = profile?.netWorth;
+    if (nw?.value != null) return Number(nw.value);
+    return 0;
+  }
+
+  function formatWealthBillions(billions) {
+    if (billions >= 1000) return `$${(billions / 1000).toFixed(2)}T`;
+    if (billions >= 100) return `$${billions.toFixed(0)}B`;
+    return `$${billions.toFixed(1)}B`;
+  }
+
+  function aggregateWealthByCountry(profiles) {
+    const map = {};
+    profiles.forEach((profile) => {
+      const country = profile.country || 'Unknown';
+      map[country] = (map[country] || 0) + profileNetWorthB(profile);
+    });
+    return map;
+  }
+
+  function countryToGeoName(country) {
+    if (Object.prototype.hasOwnProperty.call(TIMELINE_GEO_COUNTRY_MAP, country)) {
+      return TIMELINE_GEO_COUNTRY_MAP[country];
+    }
+    return country;
+  }
+
+  async function loadTimelineGlobalContext() {
+    if (!timelineGlobalBenchmarks) {
+      try {
+        const resp = await fetch(TIMELINE_GLOBAL_BENCHMARKS_URL);
+        if (resp.ok) timelineGlobalBenchmarks = await resp.json();
+      } catch {
+        timelineGlobalBenchmarks = null;
+      }
+    }
+  }
+
+  async function ensureTimelineGlobalGeo() {
+    if (timelineGlobalGeoReady || typeof echarts === 'undefined') return timelineGlobalGeoReady;
+    try {
+      const resp = await fetch(TIMELINE_WORLD_GEO_URL);
+      if (!resp.ok) return false;
+      const geo = await resp.json();
+      echarts.registerMap('world', geo);
+      timelineGlobalGeoReady = true;
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function buildTimelineGlobalChoropleth(byCountry) {
+    const merged = {};
+    Object.entries(byCountry).forEach(([country, wealthB]) => {
+      const geoName = countryToGeoName(country);
+      if (!geoName) return;
+      merged[geoName] = (merged[geoName] || 0) + wealthB;
+    });
+    return Object.entries(merged).map(([name, value]) => ({ name, value }));
+  }
+
+  async function renderTimelineGlobalWealthMap(byCountry) {
+    const el = $('#timeline-global-wealth-map');
+    if (!el || typeof echarts === 'undefined') return;
+
+    if (timelineGlobalMapChart) {
+      timelineGlobalMapChart.dispose();
+      timelineGlobalMapChart = null;
+    }
+
+    const ready = await ensureTimelineGlobalGeo();
+    if (!ready) {
+      el.innerHTML = '<p class="timeline-global-wealth-empty">Map unavailable — world GeoJSON could not load.</p>';
+      return;
+    }
+
+    const choropleth = buildTimelineGlobalChoropleth(byCountry);
+    const maxWealth = Math.max(...choropleth.map((row) => row.value), 1);
+
+    timelineGlobalMapChart = echarts.init(el, null, { renderer: 'canvas' });
+    timelineGlobalMapChart.setOption({
+      backgroundColor: 'transparent',
+      tooltip: {
+        trigger: 'item',
+        formatter(params) {
+          if (params.value == null) return `${params.name}<br/>No ranked members`;
+          return `${params.name}<br/>${formatWealthBillions(params.value)} combined`;
+        },
+      },
+      visualMap: {
+        min: 0,
+        max: maxWealth,
+        text: ['More', 'Less'],
+        realtime: false,
+        calculable: false,
+        orient: 'horizontal',
+        left: 'center',
+        bottom: 4,
+        itemWidth: 10,
+        itemHeight: 80,
+        textStyle: { fontSize: 10, color: '#64748b' },
+        inRange: { color: ['#fef9c3', '#fbbf24', '#b45309'] },
+      },
+      series: [
+        {
+          name: 'Wealth by country',
+          type: 'map',
+          map: 'world',
+          roam: false,
+          zoom: 1.12,
+          center: [12, 18],
+          data: choropleth,
+          itemStyle: {
+            areaColor: '#eef2f7',
+            borderColor: '#cbd5e1',
+            borderWidth: 0.5,
+          },
+          emphasis: {
+            label: { show: true, fontSize: 10, color: '#334155' },
+            itemStyle: { areaColor: '#fcd34d' },
+          },
+        },
+      ],
+    });
+  }
+
+  function renderTimelineGlobalWealthBars(totalB, benchmarks) {
+    const el = $('#timeline-global-wealth-chart');
+    if (!el || typeof echarts === 'undefined') return;
+
+    if (timelineGlobalBarChart) {
+      timelineGlobalBarChart.dispose();
+      timelineGlobalBarChart = null;
+    }
+
+    const worldGdpT = benchmarks?.worldGdpUsdT ?? 105.4;
+    const householdT = benchmarks?.globalHouseholdWealthUsdT ?? 454;
+    const totalT = totalB / 1000;
+    const gdpShare = ((totalT / worldGdpT) * 100).toFixed(1);
+    const householdShare = ((totalT / householdT) * 100).toFixed(2);
+
+    timelineGlobalBarChart = echarts.init(el, null, { renderer: 'canvas' });
+    timelineGlobalBarChart.setOption({
+      backgroundColor: 'transparent',
+      title: {
+        text: `${gdpShare}% of world GDP`,
+        subtext: `${householdShare}% of global household wealth`,
+        left: 0,
+        top: 0,
+        textStyle: { fontSize: 13, fontWeight: 600, color: '#334155' },
+        subtextStyle: { fontSize: 11, color: '#64748b' },
+      },
+      grid: { left: 8, right: 16, top: 52, bottom: 8, containLabel: true },
+      xAxis: {
+        type: 'value',
+        max: householdT * 1.02,
+        axisLabel: {
+          formatter: (v) => `$${v}T`,
+          fontSize: 10,
+          color: '#64748b',
+        },
+        splitLine: { lineStyle: { color: '#e2e8f0', type: 'dashed' } },
+      },
+      yAxis: {
+        type: 'category',
+        data: ['Global household wealth', 'World GDP (nominal)', 'Forbes ranks (this page)'],
+        axisLabel: { fontSize: 10, color: '#475569' },
+        axisTick: { show: false },
+        axisLine: { show: false },
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter(params) {
+          const row = params[0];
+          if (!row) return '';
+          return `${row.name}<br/><strong>${formatWealthBillions(row.value * 1000)}</strong>`;
+        },
+      },
+      series: [
+        {
+          type: 'bar',
+          data: [
+            { value: householdT, itemStyle: { color: '#e2e8f0' } },
+            { value: worldGdpT, itemStyle: { color: '#94a3b8' } },
+            { value: totalT, itemStyle: { color: '#b45309' } },
+          ],
+          barWidth: 18,
+          label: {
+            show: true,
+            position: 'right',
+            formatter: (p) => formatWealthBillions(p.value * 1000),
+            fontSize: 10,
+            color: '#475569',
+          },
+        },
+      ],
+    });
+  }
+
+  async function renderTimelineGlobalWealth(profiles) {
+    const panel = $('#timeline-global-wealth');
+    const statsEl = $('#timeline-global-wealth-stats');
+    const footEl = $('#timeline-global-wealth-foot');
+    if (!panel || !profiles?.length) return;
+
+    await loadTimelineGlobalContext();
+    const benchmarks = timelineGlobalBenchmarks || {
+      worldGdpUsdT: 105.4,
+      globalHouseholdWealthUsdT: 454,
+      asOf: '2024',
+    };
+
+    const byCountry = aggregateWealthByCountry(profiles);
+    const totalB = profiles.reduce((sum, profile) => sum + profileNetWorthB(profile), 0);
+    const countryCount = Object.keys(byCountry).length;
+    const worldGdpT = benchmarks.worldGdpUsdT;
+    const gdpShare = ((totalB / 1000) / worldGdpT * 100).toFixed(1);
+
+    if (statsEl) {
+      statsEl.innerHTML = `
+        <span class="timeline-global-stat"><strong>${profiles.length}</strong> ranked members</span>
+        <span class="timeline-global-stat"><strong>${formatWealthBillions(totalB)}</strong> combined net worth</span>
+        <span class="timeline-global-stat"><strong>${countryCount}</strong> countries</span>
+        <span class="timeline-global-stat"><strong>${gdpShare}%</strong> of ~$${worldGdpT}T world GDP</span>`;
+    }
+
+    if (footEl) {
+      footEl.textContent = `Benchmarks as of ${benchmarks.asOf || '2024'} · Choropleth sums Forbes net worth by country of residence (Hong Kong rolled into China).`;
+    }
+
+    await renderTimelineGlobalWealthMap(byCountry);
+    renderTimelineGlobalWealthBars(totalB, benchmarks);
+  }
+
   async function loadHistoricalNetWorth() {
     try {
       const resp = await fetch('data/historical-net-worth.json');
@@ -2209,6 +2459,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   function renderTimelineRankGrid(profiles) {
     if (profiles?.length) forbesProfiles = profiles;
+    renderTimelineGlobalWealth(forbesProfiles);
     renderWealthRankGrid('timeline-ranks', { scrollTargetId: 'timeline', crossRef: true });
   }
 
@@ -2820,6 +3071,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     }
     window.addEventListener('resize', () => {
       Object.values(timelineWealthCharts).forEach((chart) => chart?.resize());
+      timelineGlobalMapChart?.resize();
+      timelineGlobalBarChart?.resize();
     });
     if (pendingActivityProfile) {
       syncActivityFromProfile(pendingActivityProfile);

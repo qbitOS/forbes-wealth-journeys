@@ -817,6 +817,81 @@ main {
   font-weight: 600;
 }
 
+.timeline-global-wealth-panel {
+  margin-bottom: 1.25rem;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-raised, rgba(0, 0, 0, 0.02));
+}
+
+.timeline-global-wealth-lead {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.timeline-global-wealth-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-global-stat {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.timeline-global-stat strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.timeline-global-wealth-viz {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.timeline-global-wealth-map,
+.timeline-global-wealth-chart {
+  width: 100%;
+  min-height: 260px;
+  height: 280px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg, #fff);
+}
+
+.timeline-global-wealth-empty {
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.timeline-global-wealth-foot {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 820px) {
+  .timeline-global-wealth-viz {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-global-wealth-map,
+  .timeline-global-wealth-chart {
+    height: 240px;
+    min-height: 240px;
+  }
+}
+
 .timeline-ranks-section {
   margin-bottom: 1.25rem;
 }

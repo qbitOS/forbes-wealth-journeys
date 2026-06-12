@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2024",
+  "worldGdpUsdT": 105.4,
+  "globalHouseholdWealthUsdT": 454,
+  "worldPopulationB": 8.1,
+  "sources": [
+    "IMF World Economic Outlook (world GDP, nominal USD)",
+    "UBS Global Wealth Report (household wealth stock)"
+  ]
+}
