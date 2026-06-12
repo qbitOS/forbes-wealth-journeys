@@ -12,6 +12,13 @@
     "status": "public"
   },
   {
+    "id": "alphabet",
+    "name": "Alphabet",
+    "founded": 2015,
+    "status": "public",
+    "ticker": "GOOGL"
+  },
+  {
     "id": "aluminum_products",
     "name": "Aluminum products",
     "status": "private"
@@ -30,6 +37,13 @@
     "founded": 2000,
     "status": "public",
     "ticker": "AMX"
+  },
+  {
+    "id": "antofagasta",
+    "name": "Antofagasta",
+    "founded": 1980,
+    "status": "public",
+    "ticker": "ANTO.L"
   },
   {
     "id": "arcelormittal",
@@ -52,6 +66,13 @@
     "ticker": "BRK.A"
   },
   {
+    "id": "blackstone",
+    "name": "Blackstone",
+    "founded": 1985,
+    "status": "public",
+    "ticker": "BX"
+  },
+  {
     "id": "bloomberg",
     "name": "Bloomberg LP",
     "founded": 1981,
@@ -66,11 +87,6 @@
     "id": "bytedance",
     "name": "ByteDance",
     "founded": 2012,
-    "status": "private"
-  },
-  {
-    "id": "candy",
-    "name": "Candy",
     "status": "private"
   },
   {
@@ -99,6 +115,12 @@
   {
     "id": "chemicals",
     "name": "chemicals",
+    "status": "private"
+  },
+  {
+    "id": "citadel",
+    "name": "Citadel",
+    "founded": 1990,
     "status": "private"
   },
   {
@@ -194,7 +216,7 @@
     "id": "gas",
     "name": "Gas",
     "status": "private",
-    "ticker": "LVS"
+    "ticker": "ANTO.L"
   },
   {
     "id": "gold",
@@ -302,6 +324,12 @@
     "status": "private"
   },
   {
+    "id": "mars-inc",
+    "name": "Mars Inc.",
+    "founded": 1911,
+    "status": "private"
+  },
+  {
     "id": "meta",
     "name": "Meta",
     "founded": 2004,
@@ -325,9 +353,17 @@
     "ticker": "000333.SZ"
   },
   {
-    "id": "mining",
-    "name": "Mining",
+    "id": "msc",
+    "name": "MSC",
+    "founded": 1970,
     "status": "private"
+  },
+  {
+    "id": "netease",
+    "name": "NetEase",
+    "founded": 1997,
+    "status": "public",
+    "ticker": "NTES"
   },
   {
     "id": "nike",
@@ -362,22 +398,12 @@
     "status": "private"
   },
   {
-    "id": "online_games",
-    "name": "Online games",
-    "status": "private"
-  },
-  {
     "id": "oracle",
     "name": "Oracle",
     "founded": 1977,
     "status": "public",
     "valuationUsdB": 450,
     "ticker": "ORCL"
-  },
-  {
-    "id": "pet_food",
-    "name": "pet food",
-    "status": "private"
   },
   {
     "id": "pharmaceuticals",
@@ -409,14 +435,14 @@
     "ticker": "RELIANCE.NS"
   },
   {
-    "id": "retail",
-    "name": "Retail",
-    "status": "private",
-    "ticker": "9983.T"
-  },
-  {
     "id": "samsung",
     "name": "Samsung",
+    "status": "private"
+  },
+  {
+    "id": "schwarz-group",
+    "name": "Schwarz Group (Lidl)",
+    "founded": 1930,
     "status": "private"
   },
   {

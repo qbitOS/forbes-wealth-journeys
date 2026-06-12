@@ -235,6 +235,11 @@
     const url = new URL(window.location.href);
     url.hash = `forbes?rank=${person.rank}&name=${encodeURIComponent(person.name)}`;
     history.replaceState(null, '', url);
+    notifyProfileSelection(person);
+  }
+
+  function notifyProfileSelection(person) {
+    window.dispatchEvent(new CustomEvent('forbes:select', { detail: { person } }));
   }
 
   function readSelectionFromUrl() {
@@ -302,6 +307,7 @@
     renderMeta(countEl);
     renderList(listEl);
     renderDetail(detailEl);
+    notifyProfileSelection(findPerson(selectedKey));
 
     if (searchEl) {
       searchEl.addEventListener('input', () => {
@@ -310,6 +316,7 @@
         renderMeta(countEl);
         renderList(listEl);
         renderDetail(detailEl);
+        notifyProfileSelection(findPerson(selectedKey));
       });
     }
 
@@ -317,6 +324,7 @@
       readSelectionFromUrl();
       renderList(listEl);
       renderDetail(detailEl);
+      notifyProfileSelection(findPerson(selectedKey));
     });
   }
 

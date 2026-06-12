@@ -1,0 +1,214 @@
+[
+  {
+    "rank": 51,
+    "name": "Eric Schmidt",
+    "netWorth": { "value": 22.5, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/eric-schmidt",
+    "forbesProfile": "https://www.forbes.com/profile/eric-schmidt/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Eric_Schmidt",
+    "wealthBreakdown": [
+      { "entity": "Alphabet", "ticker": "GOOGL", "stakePct": 0.5, "valueUsdB": 20, "type": "public" },
+      { "entity": "Innovation Endeavors", "stakePct": 100, "valueUsdB": 2.5, "type": "private" }
+    ],
+    "entities": [
+      { "id": "alphabet", "name": "Alphabet", "role": "former_ceo", "founded": 2015, "status": "public" }
+    ],
+    "summary": "Former CEO of Google / Alphabet.",
+    "timeline": [
+      { "year": "2001", "type": "leadership", "entityId": "google", "title": "CEO of Google", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Eric_Schmidt" },
+      { "year": "2018", "type": "exit", "entityId": "alphabet", "title": "Stepped down as Executive Chairman", "valuationUsdB": null, "source": "https://abc.xyz" }
+    ]
+  },
+  {
+    "rank": 52,
+    "name": "Stephen Schwarzman",
+    "netWorth": { "value": 21.8, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Finance",
+    "grokipediaLink": "https://grok.x.ai/wiki/stephen-schwarzman",
+    "forbesProfile": "https://www.forbes.com/profile/stephen-schwarzman/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Stephen_A._Schwarzman",
+    "wealthBreakdown": [
+      { "entity": "Blackstone", "ticker": "BX", "stakePct": 23, "valueUsdB": 20, "type": "public" }
+    ],
+    "entities": [
+      { "id": "blackstone", "name": "Blackstone", "role": "co-founder", "founded": 1985, "status": "public" }
+    ],
+    "summary": "Co-founder of Blackstone.",
+    "timeline": [
+      { "year": "1985", "type": "founding", "entityId": "blackstone", "title": "Founded Blackstone", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Stephen_A._Schwarzman" }
+    ]
+  },
+  {
+    "rank": 53,
+    "name": "William Ding",
+    "netWorth": { "value": 21, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "China",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/william-ding",
+    "forbesProfile": "https://www.forbes.com/profile/william-ding/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ding_Lei",
+    "wealthBreakdown": [
+      { "entity": "NetEase", "ticker": "NTES", "stakePct": 45, "valueUsdB": 19.5, "type": "public" }
+    ],
+    "entities": [
+      { "id": "netease", "name": "NetEase", "role": "founder", "founded": 1997, "status": "public" }
+    ],
+    "summary": "Founder of NetEase.",
+    "timeline": [
+      { "year": "1997", "type": "founding", "entityId": "netease", "title": "Founded NetEase", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Ding_Lei" }
+    ]
+  },
+  {
+    "rank": 54,
+    "name": "Iris Fontbona",
+    "netWorth": { "value": 20.5, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Chile",
+    "sector": "Mining",
+    "grokipediaLink": "https://grok.x.ai/wiki/iris-fontbona",
+    "forbesProfile": "https://www.forbes.com/profile/iris-fontbona/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Iris_Fontbona",
+    "wealthBreakdown": [
+      { "entity": "Antofagasta", "ticker": "ANTO.L", "stakePct": 65, "valueUsdB": 19, "type": "public" }
+    ],
+    "entities": [
+      { "id": "antofagasta", "name": "Antofagasta", "role": "major_shareholder", "founded": 1980, "status": "public" }
+    ],
+    "summary": "Mining heiress (Antofagasta).",
+    "timeline": [
+      { "year": "1980s", "type": "inheritance", "entityId": "antofagasta", "title": "Inherited Antofagasta stake", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Iris_Fontbona" }
+    ]
+  },
+  {
+    "rank": 55,
+    "name": "Lukas Walton",
+    "netWorth": { "value": 20, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/lukas-walton",
+    "forbesProfile": "https://www.forbes.com/profile/lukas-walton/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Lukas_Walton",
+    "wealthBreakdown": [
+      { "entity": "Walmart", "ticker": "WMT", "stakePct": 2, "valueUsdB": 19, "type": "public" }
+    ],
+    "entities": [
+      { "id": "walmart", "name": "Walmart", "role": "major_shareholder", "founded": 1962, "status": "public" }
+    ],
+    "summary": "Walmart heir.",
+    "timeline": [
+      { "year": "1962", "type": "founding", "entityId": "walmart", "title": "Walmart founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Lukas_Walton" }
+    ]
+  },
+  {
+    "rank": 56,
+    "name": "Gianluigi Aponte",
+    "netWorth": { "value": 19.5, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Switzerland",
+    "sector": "Shipping",
+    "grokipediaLink": "https://grok.x.ai/wiki/gianluigi-aponte",
+    "forbesProfile": "https://www.forbes.com/profile/gianluigi-aponte/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Gianluigi_Aponte",
+    "wealthBreakdown": [
+      { "entity": "MSC", "stakePct": 100, "valueUsdB": 19, "type": "private" }
+    ],
+    "entities": [
+      { "id": "msc", "name": "MSC", "role": "co-founder", "founded": 1970, "status": "private" }
+    ],
+    "summary": "Co-founder of MSC (Mediterranean Shipping Company).",
+    "timeline": [
+      { "year": "1970", "type": "founding", "entityId": "msc", "title": "Founded MSC", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Gianluigi_Aponte" }
+    ]
+  },
+  {
+    "rank": 57,
+    "name": "Jacqueline Mars",
+    "netWorth": { "value": 19, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Food",
+    "grokipediaLink": "https://grok.x.ai/wiki/jacqueline-mars",
+    "forbesProfile": "https://www.forbes.com/profile/jacqueline-mars/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Jacqueline_Mars",
+    "wealthBreakdown": [
+      { "entity": "Mars Inc.", "stakePct": 33, "valueUsdB": 18, "type": "private" }
+    ],
+    "entities": [
+      { "id": "mars-inc", "name": "Mars Inc.", "role": "major_shareholder", "founded": 1911, "status": "private" }
+    ],
+    "summary": "Mars Inc. heiress.",
+    "timeline": [
+      { "year": "1911", "type": "founding", "entityId": "mars-inc", "title": "Mars Inc. founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Jacqueline_Mars" }
+    ]
+  },
+  {
+    "rank": 58,
+    "name": "John Mars",
+    "netWorth": { "value": 19, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Food",
+    "grokipediaLink": "https://grok.x.ai/wiki/john-mars",
+    "forbesProfile": "https://www.forbes.com/profile/john-mars/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/John_Mars",
+    "wealthBreakdown": [
+      { "entity": "Mars Inc.", "stakePct": 33, "valueUsdB": 18, "type": "private" }
+    ],
+    "entities": [
+      { "id": "mars-inc", "name": "Mars Inc.", "role": "major_shareholder", "founded": 1911, "status": "private" }
+    ],
+    "summary": "Mars Inc. heir.",
+    "timeline": [
+      { "year": "1911", "type": "founding", "entityId": "mars-inc", "title": "Mars Inc. founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/John_Mars" }
+    ]
+  },
+  {
+    "rank": 59,
+    "name": "Dieter Schwarz",
+    "netWorth": { "value": 18.5, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "Germany",
+    "sector": "Retail",
+    "grokipediaLink": "https://grok.x.ai/wiki/dieter-schwarz",
+    "forbesProfile": "https://www.forbes.com/profile/dieter-schwarz/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Dieter_Schwarz",
+    "wealthBreakdown": [
+      { "entity": "Schwarz Group (Lidl)", "stakePct": 100, "valueUsdB": 18, "type": "private" }
+    ],
+    "entities": [
+      { "id": "schwarz-group", "name": "Schwarz Group (Lidl)", "role": "owner", "founded": 1930, "status": "private" }
+    ],
+    "summary": "Owner of Schwarz Group (Lidl).",
+    "timeline": [
+      { "year": "1930", "type": "founding", "entityId": "schwarz-group", "title": "Schwarz Group founded", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Dieter_Schwarz" }
+    ]
+  },
+  {
+    "rank": 60,
+    "name": "Ken Griffin",
+    "netWorth": { "value": 18, "unit": "B", "currency": "USD", "asOf": "2026-06-11" },
+    "age": "—",
+    "country": "United States",
+    "sector": "Finance",
+    "grokipediaLink": "https://grok.x.ai/wiki/ken-griffin",
+    "forbesProfile": "https://www.forbes.com/profile/ken-griffin/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ken_Griffin",
+    "wealthBreakdown": [
+      { "entity": "Citadel", "stakePct": 100, "valueUsdB": 17.5, "type": "private" }
+    ],
+    "entities": [
+      { "id": "citadel", "name": "Citadel", "role": "founder", "founded": 1990, "status": "private" }
+    ],
+    "summary": "Founder of Citadel.",
+    "timeline": [
+      { "year": "1990", "type": "founding", "entityId": "citadel", "title": "Founded Citadel", "valuationUsdB": null, "source": "https://en.wikipedia.org/wiki/Ken_Griffin" }
+    ]
+  }
+]

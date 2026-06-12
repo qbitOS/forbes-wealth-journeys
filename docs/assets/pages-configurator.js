@@ -1718,6 +1718,222 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     pipeline: ACTIVITY_YEARS[ACTIVITY_YEARS.length - 1],
   };
 
+  /** Forbes profile → venture gitgraph branch mapping (entityId). */
+  const ENTITY_BRANCH_MAP = {
+    tesla: { sectionId: 'portfolio', branchId: 'tesla' },
+    spacex: { sectionId: 'portfolio', branchId: 'spacex-ops' },
+    xai: { sectionId: 'cluster', branchId: 'grok' },
+    grok: { sectionId: 'cluster', branchId: 'grok' },
+    colossus: { sectionId: 'cluster', branchId: 'colossus' },
+    terrafab: { sectionId: 'cluster', branchId: 'terrafab' },
+    neuralink: { sectionId: 'portfolio', branchId: 'neuralink' },
+    boring: { sectionId: 'portfolio', branchId: 'boring' },
+    openai: { sectionId: 'portfolio', branchId: 'openai' },
+    'x-corp': { sectionId: 'portfolio', branchId: 'x-corp' },
+    zip2: { sectionId: 'portfolio', branchId: 'tesla' },
+    paypal: { sectionId: 'portfolio', branchId: 'tesla' },
+  };
+
+  let activityProfileState = null;
+  let pendingActivityProfile = null;
+
+  function parseTimelineYears(timeline) {
+    const years = new Set();
+    (timeline || []).forEach((ev) => {
+      const match = String(ev.year || '').match(/\d{4}/);
+      if (match) years.add(Number(match[0]));
+    });
+    return [...years].sort((a, b) => a - b);
+  }
+
+  function resolveProfileBranches(profile) {
+    const branches = [];
+    const seen = new Set();
+    const add = (sectionId, branchId) => {
+      const key = `${sectionId}:${branchId}`;
+      if (!seen.has(key)) {
+        seen.add(key);
+        branches.push({ sectionId, branchId });
+      }
+    };
+
+    (profile.entities || []).forEach((entity) => {
+      const mapped = ENTITY_BRANCH_MAP[entity.id];
+      if (mapped) add(mapped.sectionId, mapped.branchId);
+    });
+
+    (profile.timeline || []).forEach((ev) => {
+      if (!ev.entityId) return;
+      const mapped = ENTITY_BRANCH_MAP[ev.entityId];
+      if (mapped) add(mapped.sectionId, mapped.branchId);
+    });
+
+    (profile.wealthBreakdown || []).forEach((row) => {
+      const name = String(row.entity || '').toLowerCase();
+      if (name.includes('tesla')) add('portfolio', 'tesla');
+      if (name.includes('spacex')) add('portfolio', 'spacex-ops');
+      if (name.includes('xai') || name.includes('grok')) add('cluster', 'grok');
+      if (name.includes('neuralink')) add('portfolio', 'neuralink');
+      if (name.includes('openai')) add('portfolio', 'openai');
+    });
+
+    return branches;
+  }
+
+  function getProfileActivityFilter() {
+    if (!activityProfileState) return null;
+    const branches = resolveProfileBranches(activityProfileState);
+    return {
+      branchIds: branches.map((b) => b.branchId),
+      years: parseTimelineYears(activityProfileState.timeline),
+    };
+  }
+
+  function pickActivityYear(years) {
+    const inRange = years.filter((y) => ACTIVITY_YEARS.includes(y));
+    if (inRange.length) return inRange[inRange.length - 1];
+    if (!years.length) return activityYearState.calendar;
+    const latest = years[years.length - 1];
+    return ACTIVITY_YEARS.reduce((best, y) =>
+      (Math.abs(y - latest) < Math.abs(best - latest) ? y : best));
+  }
+
+  function updateActivityProfileContext(profile, branches) {
+    const el = document.getElementById('activity-profile-context');
+    if (!el) return;
+    if (!profile) {
+      el.hidden = true;
+      el.textContent = '';
+      return;
+    }
+    const branchLabels = branches.map((b) => {
+      const section = TIMELINE_SECTIONS.find((s) => s.id === b.sectionId);
+      const branch = section?.branches.find((br) => br.id === b.branchId);
+      return branch?.label || b.branchId;
+    });
+    const focus = branchLabels.length
+      ? branchLabels.join(', ')
+      : `${profile.sector || 'sector'} · ${parseTimelineYears(profile.timeline).length} milestone years`;
+    el.hidden = false;
+    el.innerHTML = `Viewing <strong>${escapeHtml(profile.name)}</strong> · ${escapeHtml(focus)}`;
+  }
+
+  function renderProfileTimelinePanel(profile) {
+    const panel = document.getElementById('activity-profile-events');
+    if (!panel) return;
+    const events = profile?.timeline || [];
+    if (!events.length) {
+      panel.hidden = true;
+      panel.innerHTML = '';
+      return;
+    }
+    panel.hidden = false;
+    panel.innerHTML = `
+      <header class="activity-profile-events-header">
+        <h3 class="activity-profile-events-title">${escapeHtml(profile.name)} · wealth journey</h3>
+        <p class="activity-profile-events-meta">${events.length} milestone${events.length === 1 ? '' : 's'} from profile</p>
+      </header>
+      <ol class="activity-event-list activity-profile-event-list">
+        ${events.map((ev) => {
+          const approx = String(ev.year).includes('s') ? ' <span class="activity-event-approx">~</span>' : '';
+          const type = ev.type ? `<span class="activity-event-type">${escapeHtml(ev.type)}</span> ` : '';
+          return `<li class="activity-event-item is-profile-event">
+            <span class="activity-event-date">${escapeHtml(ev.year)}</span>
+            ${type}<span>${escapeHtml(ev.title)}</span>${approx}
+          </li>`;
+        }).join('')}
+      </ol>`;
+  }
+
+  function clearProfileActivityHighlight() {
+    document.querySelectorAll('.activity-group, .activity-branch').forEach((el) => {
+      el.classList.remove('is-profile-match', 'is-profile-dim');
+    });
+    document.getElementById('activity')?.classList.remove('has-profile-focus');
+  }
+
+  function highlightActivityForProfile(branches) {
+    clearProfileActivityHighlight();
+    const branchIds = new Set(branches.map((b) => b.branchId));
+    if (!branchIds.size) return;
+
+    document.getElementById('activity')?.classList.add('has-profile-focus');
+
+    document.querySelectorAll('.activity-branch').forEach((branchEl) => {
+      const id = branchEl.dataset.branch;
+      if (branchIds.has(id)) {
+        branchEl.classList.add('is-profile-match');
+        if (!branchEl.open) {
+          branchEl.open = true;
+          const chartEl = branchEl.querySelector('.activity-branch-chart');
+          const section = TIMELINE_SECTIONS.find((s) =>
+            s.branches.some((b) => b.id === id),
+          );
+          if (section && chartEl) {
+            initBranchActivityChart(id, branchEventsFor(section.events, id), chartEl);
+          }
+        }
+      } else {
+        branchEl.classList.add('is-profile-dim');
+      }
+    });
+
+    document.querySelectorAll('.activity-group').forEach((groupEl) => {
+      const hasMatch = groupEl.querySelector('.activity-branch.is-profile-match');
+      if (hasMatch) {
+        groupEl.classList.add('is-profile-match');
+        groupEl.open = true;
+      } else {
+        groupEl.classList.add('is-profile-dim');
+      }
+    });
+  }
+
+  function syncActivityFromProfile(profile) {
+    if (!activitySyncEnabled) {
+      pendingActivityProfile = profile;
+      return;
+    }
+
+    activityProfileState = profile || null;
+
+    if (!profile) {
+      updateActivityProfileContext(null, []);
+      renderProfileTimelinePanel(null);
+      clearProfileActivityHighlight();
+      renderOverviewCalendar(activityYearState.calendar);
+      renderOverviewPipeline(activityYearState.pipeline);
+      return;
+    }
+
+    const branches = resolveProfileBranches(profile);
+    const years = parseTimelineYears(profile.timeline);
+    const targetYear = pickActivityYear(years);
+
+    activityYearState.calendar = targetYear;
+    activityYearState.pipeline = targetYear;
+
+    updateActivityProfileContext(profile, branches);
+    renderProfileTimelinePanel(profile);
+    highlightActivityForProfile(branches);
+    renderOverviewCalendar(targetYear);
+    renderOverviewPipeline(targetYear);
+
+    if (branches.length) {
+      timelineSyncLock = true;
+      const primary = branches[0];
+      const tabIdx = TIMELINE_SECTIONS.findIndex((s) => s.id === primary.sectionId);
+      if (tabIdx >= 0) {
+        if (timelineState.tabIndex !== tabIdx) {
+          setTimelineTab(tabIdx, { syncActivity: false });
+        }
+        setTimelineBranch(primary.sectionId, primary.branchId, { syncActivity: false });
+        syncActivityFromTimeline(primary.sectionId, primary.branchId);
+      }
+      timelineSyncLock = false;
+    }
+  }
+
   let overviewCalendarChart = null;
   let overviewPipelineChart = null;
 
@@ -1759,11 +1975,12 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   const sectorContributionIndex = buildSectorContributionIndex();
 
-  function buildCalendarDataForYear(year) {
+  function buildCalendarDataForYear(year, filter = null) {
     const data = [];
     const branchLabels = Object.fromEntries(
       [...TIMELINE_CLUSTER_BRANCHES, ...TIMELINE_PORTFOLIO_BRANCHES].map((b) => [b.id, b.label]),
     );
+    const allowedBranches = filter?.branchIds?.length ? new Set(filter.branchIds) : null;
 
     for (let m = 0; m < 12; m++) {
       const daysInMonth = new Date(year, m + 1, 0).getDate();
@@ -1771,6 +1988,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         const date = `${year}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
         const hit = sectorContributionIndex.get(date);
         if (hit) {
+          if (allowedBranches && !allowedBranches.has(hit.branch)) continue;
           data.push([date, hit.count, hit.branch]);
           continue;
         }
@@ -1781,7 +1999,11 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
             : year >= 2024
               ? ['grok', 'colossus', 'tesla', 'spacex-ops', 'neuralink']
               : ['tesla', 'openai', 'neuralink', 'boring', 'grok'];
-          const branch = branches[Math.floor(Math.random() * branches.length)];
+          const pool = allowedBranches
+            ? branches.filter((b) => allowedBranches.has(b))
+            : branches;
+          if (!pool.length) continue;
+          const branch = pool[Math.floor(Math.random() * pool.length)];
           data.push([date, 1 + Math.floor(Math.random() * 4), branch]);
         }
       }
@@ -1790,13 +2012,17 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     return { data, branchLabels };
   }
 
-  function buildPipelineDataForYear(year) {
+  function buildPipelineDataForYear(year, filter = null) {
     const stages = ['DVC', 'CI', 'Colossus', 'Grok', 'Vision', 'Agents', 'FT'];
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     const data = [];
     const yearBias = (year - 2023) * 0.6;
+    const allowedBranches = filter?.branchIds?.length ? new Set(filter.branchIds) : null;
 
     stages.forEach((stage, stageIdx) => {
+      const stageBranch = PIPELINE_STAGE_BRANCHES[stage] || 'main';
+      if (allowedBranches && !allowedBranches.has(stageBranch)) return;
+
       months.forEach((_, monthIdx) => {
         const seasonal = 1 + Math.sin((monthIdx + stageIdx) * 0.55) * 0.35;
         const runs = Math.max(
@@ -1812,7 +2038,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   function renderOverviewCalendar(year) {
     if (!overviewCalendarChart) return;
-    const { data, branchLabels } = buildCalendarDataForYear(year);
+    const filter = getProfileActivityFilter();
+    const { data, branchLabels } = buildCalendarDataForYear(year, filter);
     const meta = document.getElementById('calendar-meta');
     if (meta) meta.textContent = String(year);
 
@@ -1840,7 +2067,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
 
   function renderOverviewPipeline(year) {
     if (!overviewPipelineChart) return;
-    const { stages, months, data } = buildPipelineDataForYear(year);
+    const filter = getProfileActivityFilter();
+    const { stages, months, data } = buildPipelineDataForYear(year, filter);
     const stageColors = stages.map((stage) => getBranchCssColor(PIPELINE_STAGE_BRANCHES[stage] || 'main'));
     const meta = document.getElementById('pipeline-meta');
     if (meta) meta.textContent = String(year);
@@ -2109,6 +2337,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
       syncActivityFromTimeline(section.id, timelineState.branchFocus[section.id]);
       timelineSyncLock = false;
     }
+    if (pendingActivityProfile) {
+      syncActivityFromProfile(pendingActivityProfile);
+      pendingActivityProfile = null;
+    }
+    window.addEventListener('forbes:select', (e) => {
+      syncActivityFromProfile(e.detail?.person || null);
+    });
+    window.WealthActivity = { syncFromProfile: syncActivityFromProfile };
     initSiteNav();
     initNavHighlight();
   }

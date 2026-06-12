@@ -1750,69 +1750,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Germany",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/dieter-schwarz",
     "forbesProfile": "https://www.forbes.com/profile/dieter-schwarz/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Dieter_Schwarz",
     "wealthBreakdown": [
       {
-        "entity": "Retail",
-        "stakePct": null,
-        "valueUsdB": 62.3,
+        "entity": "Schwarz Group (Lidl)",
+        "stakePct": 100,
+        "valueUsdB": 18,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "retail",
-        "name": "Retail",
-        "role": "founder",
+        "id": "schwarz-group",
+        "name": "Schwarz Group (Lidl)",
+        "role": "owner",
+        "founded": 1930,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Retail in fashion & retail.",
+    "summary": "Owner of Schwarz Group (Lidl).",
     "timeline": [
       {
         "year": "1930",
         "type": "founding",
-        "entityId": null,
-        "title": "Father founded Lidl",
+        "entityId": "schwarz-group",
+        "title": "Schwarz Group founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Josef Schwarz started discount grocery in Germany.",
-        "impact": "Discount retail roots"
-      },
-      {
-        "year": "1977",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Took over Lidl",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Dieter Schwarz expanded discount supermarket chain.",
-        "impact": "European grocery scale"
-      },
-      {
-        "year": "1970s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Kaufland hypermarkets",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Built second retail banner under Schwarz Group.",
-        "impact": "Dual-brand strategy"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Schwarz Group scale",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Lidl and Kaufland across 30+ countries.",
-        "impact": "Europe's largest retailer"
+        "source": "https://en.wikipedia.org/wiki/Dieter_Schwarz"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -1918,69 +1887,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Finance & Investments",
+    "sector": "Finance",
     "grokipediaLink": "https://grok.x.ai/wiki/ken-griffin",
     "forbesProfile": "https://www.forbes.com/profile/ken-griffin/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Ken_Griffin",
     "wealthBreakdown": [
       {
-        "entity": "Hedge funds",
-        "stakePct": null,
-        "valueUsdB": 50.3,
+        "entity": "Citadel",
+        "stakePct": 100,
+        "valueUsdB": 17.5,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "hedge_funds",
-        "name": "Hedge funds",
+        "id": "citadel",
+        "name": "Citadel",
         "role": "founder",
+        "founded": 1990,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Hedge funds in finance & investments.",
+    "summary": "Founder of Citadel.",
     "timeline": [
       {
-        "year": "1987",
+        "year": "1990",
         "type": "founding",
-        "entityId": null,
+        "entityId": "citadel",
         "title": "Founded Citadel",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Started trading from Harvard dorm room.",
-        "impact": "Quant hedge fund"
-      },
-      {
-        "year": "1990",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Citadel growth",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Multi-strategy hedge fund in Chicago.",
-        "impact": "Trading empire"
-      },
-      {
-        "year": "2002",
-        "type": "founding",
-        "entityId": null,
-        "title": "Founded Citadel Securities",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Market-making arm became top U.S. equity trader.",
-        "impact": "Market structure power"
-      },
-      {
-        "year": "2022",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Citadel record year",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Fund and market-maker posted record revenues.",
-        "impact": "Top hedge fund fortune"
+        "source": "https://en.wikipedia.org/wiki/Ken_Griffin"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -2131,69 +2069,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Chile",
-    "sector": "Metals & Mining",
+    "sector": "Mining",
     "grokipediaLink": "https://grok.x.ai/wiki/iris-fontbona",
     "forbesProfile": "https://www.forbes.com/profile/iris-fontbona/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Iris_Fontbona_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Iris_Fontbona",
     "wealthBreakdown": [
       {
-        "entity": "Mining",
-        "stakePct": null,
-        "valueUsdB": 47.7,
-        "type": "private"
+        "entity": "Antofagasta",
+        "ticker": "ANTO.L",
+        "stakePct": 65,
+        "valueUsdB": 19,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "mining",
-        "name": "Mining",
-        "role": "founder",
-        "status": "private"
+        "id": "antofagasta",
+        "name": "Antofagasta",
+        "role": "major_shareholder",
+        "founded": 1980,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Mining in metals & mining.",
+    "summary": "Mining heiress (Antofagasta).",
     "timeline": [
       {
-        "year": "1950s",
-        "type": "milestone",
-        "entityId": "mining",
-        "title": "Andrónico Luksic mining",
+        "year": "1980s",
+        "type": "inheritance",
+        "entityId": "antofagasta",
+        "title": "Inherited Antofagasta stake",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Husband built mining and beverages fortune in Chile.",
-        "impact": "Family dynasty origin"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Inherited Luksic Group",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "After Andrónico's death; children took control.",
-        "impact": "Mining and banking wealth"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Antofagasta Minerals",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Copper mining operations across Chile.",
-        "impact": "Commodity fortune"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Beverages and banking",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Quiñenco diversified holdings sustained wealth.",
-        "impact": "Chile's richest family"
+        "source": "https://en.wikipedia.org/wiki/Iris_Fontbona"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -2207,29 +2115,31 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Fashion & Retail",
+    "sector": "Retail",
     "grokipediaLink": "https://grok.x.ai/wiki/lukas-walton",
     "forbesProfile": "https://www.forbes.com/profile/lukas-walton/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Lukas_Walton",
     "wealthBreakdown": [
       {
         "entity": "Walmart",
-        "stakePct": null,
-        "valueUsdB": 46.9,
-        "type": "private"
+        "ticker": "WMT",
+        "stakePct": 2,
+        "valueUsdB": 19,
+        "type": "public"
       }
     ],
     "entities": [
       {
         "id": "walmart",
         "name": "Walmart",
-        "role": "founder",
-        "status": "private"
+        "role": "major_shareholder",
+        "founded": 1962,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Walmart in fashion & retail.",
+    "summary": "Walmart heir.",
     "timeline": [
       {
         "year": "1962",
@@ -2237,39 +2147,7 @@
         "entityId": "walmart",
         "title": "Walmart founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Grandson of Sam Walton; family retail dynasty.",
-        "impact": "Inherited fortune"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Inherited after father's death",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "John Walton died; stake passed to Lukas.",
-        "impact": "Generational transfer"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Sustainable investing",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Focus on environment through Walton Family Foundation.",
-        "impact": "Impact investing"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Walton heir",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Among youngest billionaires on Forbes list.",
-        "impact": "Inherited retail wealth"
+        "source": "https://en.wikipedia.org/wiki/Lukas_Walton"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -2283,69 +2161,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "Switzerland",
-    "sector": "Logistics",
+    "sector": "Shipping",
     "grokipediaLink": "https://grok.x.ai/wiki/gianluigi-aponte",
     "forbesProfile": "https://www.forbes.com/profile/gianluigi-aponte/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Gianluigi_Aponte",
     "wealthBreakdown": [
       {
-        "entity": "Shipping",
-        "stakePct": null,
-        "valueUsdB": 45.8,
+        "entity": "MSC",
+        "stakePct": 100,
+        "valueUsdB": 19,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "shipping",
-        "name": "Shipping",
-        "role": "founder",
+        "id": "msc",
+        "name": "MSC",
+        "role": "co-founder",
+        "founded": 1970,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Shipping in logistics.",
+    "summary": "Co-founder of MSC (Mediterranean Shipping Company).",
     "timeline": [
       {
         "year": "1970",
         "type": "founding",
-        "entityId": null,
+        "entityId": "msc",
         "title": "Founded MSC",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Bought first ship with wife Rafaela; Mediterranean Shipping.",
-        "impact": "Shipping origins"
-      },
-      {
-        "year": "1980s",
-        "type": "milestone",
-        "entityId": "shipping",
-        "title": "Container shipping growth",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Expanded fleet across Europe and beyond.",
-        "impact": "Global cargo network"
-      },
-      {
-        "year": "2000s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Second-largest container line",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "MSC rivaled Maersk in global shipping.",
-        "impact": "Logistics empire"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Port investments",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Terminals and logistics infrastructure worldwide.",
-        "impact": "Shipping billionaire"
+        "source": "https://en.wikipedia.org/wiki/Gianluigi_Aponte"
       }
     ],
     "firstFortuneDecade": "1970s"
@@ -2435,81 +2282,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Food & Beverage",
+    "sector": "Food",
     "grokipediaLink": "https://grok.x.ai/wiki/jacqueline-mars",
     "forbesProfile": "https://www.forbes.com/profile/jacqueline-mars/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Jacqueline_Mars",
     "wealthBreakdown": [
       {
-        "entity": "Candy",
-        "stakePct": null,
-        "valueUsdB": 22.6,
-        "type": "private"
-      },
-      {
-        "entity": "pet food",
-        "stakePct": null,
-        "valueUsdB": 22.6,
+        "entity": "Mars Inc.",
+        "stakePct": 33,
+        "valueUsdB": 18,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "candy",
-        "name": "Candy",
-        "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "pet_food",
-        "name": "pet food",
-        "role": "founder",
+        "id": "mars-inc",
+        "name": "Mars Inc.",
+        "role": "major_shareholder",
+        "founded": 1911,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Candy, pet food in food & beverage.",
+    "summary": "Mars Inc. heiress.",
     "timeline": [
       {
         "year": "1911",
         "type": "founding",
-        "entityId": null,
-        "title": "Mars founded",
+        "entityId": "mars-inc",
+        "title": "Mars Inc. founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Frank Mars created candy company in Tacoma.",
-        "impact": "Candy dynasty origin"
-      },
-      {
-        "year": "1941",
-        "type": "founding",
-        "entityId": null,
-        "title": "M&M's launched",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Forrest Mars Sr. created iconic chocolate.",
-        "impact": "Global confectionery"
-      },
-      {
-        "year": "1999",
-        "type": "liquidity",
-        "entityId": null,
-        "title": "Inherited Mars stake",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "With brother John after family generations.",
-        "impact": "Private company wealth"
-      },
-      {
-        "year": "2017",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Acquired VCA pet care",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Mars expanded into veterinary services.",
-        "impact": "Diversified family business"
+        "source": "https://en.wikipedia.org/wiki/Jacqueline_Mars"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -2523,81 +2327,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Food & Beverage",
+    "sector": "Food",
     "grokipediaLink": "https://grok.x.ai/wiki/john-mars",
     "forbesProfile": "https://www.forbes.com/profile/john-mars/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/John_Mars",
     "wealthBreakdown": [
       {
-        "entity": "Candy",
-        "stakePct": null,
-        "valueUsdB": 22.6,
-        "type": "private"
-      },
-      {
-        "entity": "pet food",
-        "stakePct": null,
-        "valueUsdB": 22.6,
+        "entity": "Mars Inc.",
+        "stakePct": 33,
+        "valueUsdB": 18,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "candy",
-        "name": "Candy",
-        "role": "founder",
-        "status": "private"
-      },
-      {
-        "id": "pet_food",
-        "name": "pet food",
-        "role": "founder",
+        "id": "mars-inc",
+        "name": "Mars Inc.",
+        "role": "major_shareholder",
+        "founded": 1911,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Candy, pet food in food & beverage.",
+    "summary": "Mars Inc. heir.",
     "timeline": [
       {
         "year": "1911",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Mars company origins",
+        "type": "founding",
+        "entityId": "mars-inc",
+        "title": "Mars Inc. founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Third generation of Mars candy family.",
-        "impact": "Inherited stake"
-      },
-      {
-        "year": "1941",
-        "type": "milestone",
-        "entityId": null,
-        "title": "M&M's and Snickers scale",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Iconic brands built global presence.",
-        "impact": "Candy empire"
-      },
-      {
-        "year": "1999",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Mars Inc. ownership",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Private company; no public listing.",
-        "impact": "Stealth billionaire"
-      },
-      {
-        "year": "2017",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Pet care expansion",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Mars Petcare became largest division.",
-        "impact": "Consumer goods fortune"
+        "source": "https://en.wikipedia.org/wiki/John_Mars"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -2809,69 +2570,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "China",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/william-ding",
     "forbesProfile": "https://www.forbes.com/profile/william-ding/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/William_Ding",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ding_Lei",
     "wealthBreakdown": [
       {
-        "entity": "Online games",
-        "stakePct": null,
-        "valueUsdB": 41.0,
-        "type": "private"
+        "entity": "NetEase",
+        "ticker": "NTES",
+        "stakePct": 45,
+        "valueUsdB": 19.5,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "online_games",
-        "name": "Online games",
+        "id": "netease",
+        "name": "NetEase",
         "role": "founder",
-        "status": "private"
+        "founded": 1997,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Online games in technology.",
+    "summary": "Founder of NetEase.",
     "timeline": [
       {
         "year": "1997",
         "type": "founding",
-        "entityId": null,
+        "entityId": "netease",
         "title": "Founded NetEase",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Internet portal and gaming in Guangzhou.",
-        "impact": "Chinese gaming pioneer"
-      },
-      {
-        "year": "2001",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Blizzard partnership",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Distributed World of Warcraft in China.",
-        "impact": "Gaming distribution"
-      },
-      {
-        "year": "2014",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Mobile gaming hits",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Fantasy Westward Journey and Onmyoji.",
-        "impact": "Mobile revenue leader"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "NetEase global push",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Studios in U.S. and Japan; music streaming.",
-        "impact": "Diversified tech fortune"
+        "source": "https://en.wikipedia.org/wiki/Ding_Lei"
       }
     ],
     "firstFortuneDecade": "1990s"
@@ -2930,69 +2661,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
-    "sector": "Finance & Investments",
+    "sector": "Finance",
     "grokipediaLink": "https://grok.x.ai/wiki/stephen-schwarzman",
     "forbesProfile": "https://www.forbes.com/profile/stephen-schwarzman/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Stephen_Schwarzman",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Stephen_A._Schwarzman",
     "wealthBreakdown": [
       {
-        "entity": "Investments",
-        "stakePct": null,
-        "valueUsdB": 40.1,
-        "type": "private"
+        "entity": "Blackstone",
+        "ticker": "BX",
+        "stakePct": 23,
+        "valueUsdB": 20,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "investments",
-        "name": "Investments",
-        "role": "founder",
-        "status": "private"
+        "id": "blackstone",
+        "name": "Blackstone",
+        "role": "co-founder",
+        "founded": 1985,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Investments in finance & investments.",
+    "summary": "Co-founder of Blackstone.",
     "timeline": [
       {
         "year": "1985",
         "type": "founding",
-        "entityId": null,
-        "title": "Co-founded Blackstone",
+        "entityId": "blackstone",
+        "title": "Founded Blackstone",
         "valuationUsdB": null,
-        "source": null,
-        "description": "With Pete Peterson; private equity and advisory.",
-        "impact": "PE pioneer"
-      },
-      {
-        "year": "2007",
-        "type": "ipo",
-        "entityId": null,
-        "title": "Blackstone IPO",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Largest PE firm public offering.",
-        "impact": "Alternative asset giant"
-      },
-      {
-        "year": "2015",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Real estate scale",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Acquired Hilton and large property portfolios.",
-        "impact": "Diversified alternatives"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Infrastructure investing",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Major data-center and energy investments.",
-        "impact": "Wall Street billionaire"
+        "source": "https://en.wikipedia.org/wiki/Stephen_A._Schwarzman"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -3006,7 +2707,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grok.x.ai/wiki/eric-schmidt",
@@ -3014,61 +2715,45 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Eric_Schmidt",
     "wealthBreakdown": [
       {
-        "entity": "Google",
-        "stakePct": null,
-        "valueUsdB": 39.6,
+        "entity": "Alphabet",
+        "ticker": "GOOGL",
+        "stakePct": 0.5,
+        "valueUsdB": 20,
+        "type": "public"
+      },
+      {
+        "entity": "Innovation Endeavors",
+        "stakePct": 100,
+        "valueUsdB": 2.5,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "google",
-        "name": "Google",
-        "role": "founder",
-        "status": "private"
+        "id": "alphabet",
+        "name": "Alphabet",
+        "role": "former_ceo",
+        "founded": 2015,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Google in technology.",
+    "summary": "Former CEO of Google / Alphabet.",
     "timeline": [
       {
-        "year": "1983",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Joined Sun Microsystems",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Led software engineering at workstation maker.",
-        "impact": "Silicon Valley career"
-      },
-      {
-        "year": "1997",
-        "type": "milestone",
-        "entityId": null,
-        "title": "CEO of Novell",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Turned around networking software company.",
-        "impact": "Enterprise software"
-      },
-      {
         "year": "2001",
-        "type": "milestone",
+        "type": "leadership",
         "entityId": "google",
         "title": "CEO of Google",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Hired to provide 'adult supervision' with founders.",
-        "impact": "Google scale era"
+        "source": "https://en.wikipedia.org/wiki/Eric_Schmidt"
       },
       {
-        "year": "2011",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Executive chairman",
+        "year": "2018",
+        "type": "exit",
+        "entityId": "alphabet",
+        "title": "Stepped down as Executive Chairman",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Oversaw Android, Chrome, and acquisitions.",
-        "impact": "Alphabet wealth"
+        "source": "https://abc.xyz"
       }
     ],
     "firstFortuneDecade": "1980s"

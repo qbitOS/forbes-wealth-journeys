@@ -181,6 +181,85 @@ main {
   border-top: none;
 }
 
+.activity-profile-context {
+  margin: 0 0 1rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+}
+
+.activity-profile-context strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.activity-section.has-profile-focus .chart-card {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 1px var(--accent-dim);
+}
+
+.activity-profile-events {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.125rem;
+  background: var(--surface);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius);
+}
+
+.activity-profile-events-header {
+  margin-bottom: 0.75rem;
+}
+
+.activity-profile-events-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.activity-profile-events-meta {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.activity-profile-event-list .activity-event-item.is-profile-event {
+  border-left: 2px solid var(--accent);
+  padding-left: 0.625rem;
+}
+
+.activity-event-type {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-radius: 3px;
+}
+
+.activity-group.is-profile-match,
+.activity-branch.is-profile-match {
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 1px var(--accent-dim);
+}
+
+.activity-group.is-profile-dim,
+.activity-branch.is-profile-dim {
+  opacity: 0.45;
+}
+
+.activity-group.is-profile-match > summary,
+.activity-branch.is-profile-match > summary {
+  color: var(--accent);
+}
+
 .activity-overview {
   margin-bottom: 1.75rem;
 }
