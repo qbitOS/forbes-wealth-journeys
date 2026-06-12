@@ -3324,69 +3324,38 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "India",
-    "sector": "Metals & Mining",
+    "sector": "Steel",
     "grokipediaLink": "https://grok.x.ai/wiki/savitri-jindal",
     "forbesProfile": "https://www.forbes.com/profile/savitri-jindal/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Savitri_Jindal_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Savitri_Jindal",
     "wealthBreakdown": [
       {
-        "entity": "Steel",
-        "stakePct": null,
-        "valueUsdB": 37.5,
+        "entity": "Jindal Group",
+        "stakePct": 60,
+        "valueUsdB": 7.5,
         "type": "private"
       }
     ],
     "entities": [
       {
-        "id": "steel",
-        "name": "Steel",
-        "role": "founder",
+        "id": "jindal",
+        "name": "Jindal Group",
+        "role": "matriarch",
+        "founded": 1952,
         "status": "private"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Steel in metals & mining.",
+    "summary": "Jindal Group matriarch.",
     "timeline": [
       {
         "year": "1952",
         "type": "founding",
-        "entityId": "steel",
-        "title": "O.P. Jindal founded steel",
+        "entityId": "jindal",
+        "title": "Jindal Group founded",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Husband built Jindal steel empire in India.",
-        "impact": "Industrial dynasty"
-      },
-      {
-        "year": "2005",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Inherited after O.P. Jindal died",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Savitri Jindal became family matriarch.",
-        "impact": "Steel fortune"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": "steel",
-        "title": "JSW Steel growth",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Sajjan Jindal led expansion and acquisitions.",
-        "impact": "India steel leader"
-      },
-      {
-        "year": "2020s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Diversified Jindal Group",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Power, cement, and infrastructure holdings.",
-        "impact": "Family industrial wealth"
+        "source": "https://en.wikipedia.org/wiki/Savitri_Jindal"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -4485,69 +4454,39 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": null,
+    "age": "—",
     "country": "India",
-    "sector": "Metals & Mining",
+    "sector": "Steel",
     "grokipediaLink": "https://grok.x.ai/wiki/lakshmi-mittal",
     "forbesProfile": "https://www.forbes.com/profile/lakshmi-mittal/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Lakshmi_Mittal",
     "wealthBreakdown": [
       {
-        "entity": "Steel",
-        "stakePct": null,
-        "valueUsdB": 31.3,
-        "type": "private"
+        "entity": "ArcelorMittal",
+        "ticker": "MT",
+        "stakePct": 38,
+        "valueUsdB": 19,
+        "type": "public"
       }
     ],
     "entities": [
       {
-        "id": "steel",
-        "name": "Steel",
-        "role": "founder",
-        "status": "private"
+        "id": "arcelormittal",
+        "name": "ArcelorMittal",
+        "role": "chairman_ceo",
+        "founded": 2006,
+        "status": "public"
       }
     ],
-    "summary": "Billionaire whose fortune stems primarily from Steel in metals & mining.",
+    "summary": "Steel magnate.",
     "timeline": [
       {
         "year": "1976",
         "type": "founding",
-        "entityId": "steel",
-        "title": "Founded Mittal Steel",
+        "entityId": "arcelormittal",
+        "title": "Started in steel",
         "valuationUsdB": null,
-        "source": null,
-        "description": "Steel operations in Indonesia and Trinidad.",
-        "impact": "Global steel roll-up"
-      },
-      {
-        "year": "1989",
-        "type": "milestone",
-        "entityId": null,
-        "title": "Expanded in Mexico",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Acquired steel plants in developing markets.",
-        "impact": "Emerging market steel"
-      },
-      {
-        "year": "2006",
-        "type": "acquisition",
-        "entityId": null,
-        "title": "Merged with Arcelor",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Created ArcelorMittal; world's largest steelmaker.",
-        "impact": "Steel empire"
-      },
-      {
-        "year": "2010s",
-        "type": "milestone",
-        "entityId": null,
-        "title": "India and Europe plants",
-        "valuationUsdB": null,
-        "source": null,
-        "description": "Integrated mining and steel production.",
-        "impact": "Steel magnate"
+        "source": "https://en.wikipedia.org/wiki/Lakshmi_Mittal"
       }
     ],
     "firstFortuneDecade": "1970s"

@@ -42,6 +42,9 @@ NAME_ALIASES: dict[str, str] = {
     "miriam adelson": "Miriam Adelson & family",
     "thomas frist jr": "Thomas Frist Jr & family",
     "he xiangjian": "He Xiangjian & family",
+    "savitri jindal": "Savitri Jindal & family",
+    "k p singh": "K.P. Singh",
+    "n r narayana murthy": "N. R. Narayana Murthy",
 }
 
 

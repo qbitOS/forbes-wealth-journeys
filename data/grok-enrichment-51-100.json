@@ -1,0 +1,1922 @@
+[
+  {
+    "rank": 51,
+    "name": "Kumar Birla",
+    "netWorth": {
+      "value": 22,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/kumar-birla",
+    "forbesProfile": "https://www.forbes.com/profile/kumar-birla/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Kumar_Mangalam_Birla",
+    "wealthBreakdown": [
+      {
+        "entity": "Aditya Birla Group",
+        "stakePct": 40,
+        "valueUsdB": 20,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "aditya-birla",
+        "name": "Aditya Birla Group",
+        "role": "chairman",
+        "founded": 1857,
+        "status": "private"
+      }
+    ],
+    "summary": "Aditya Birla Group chairman.",
+    "timeline": [
+      {
+        "year": "1857",
+        "type": "founding",
+        "entityId": "aditya-birla",
+        "title": "Aditya Birla Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Kumar_Mangalam_Birla"
+      }
+    ]
+  },
+  {
+    "rank": 52,
+    "name": "Lakshmi Mittal",
+    "netWorth": {
+      "value": 21,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Steel",
+    "grokipediaLink": "https://grok.x.ai/wiki/lakshmi-mittal",
+    "forbesProfile": "https://www.forbes.com/profile/lakshmi-mittal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Lakshmi_Mittal",
+    "wealthBreakdown": [
+      {
+        "entity": "ArcelorMittal",
+        "ticker": "MT",
+        "stakePct": 38,
+        "valueUsdB": 19,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "arcelormittal",
+        "name": "ArcelorMittal",
+        "role": "chairman_ceo",
+        "founded": 2006,
+        "status": "public"
+      }
+    ],
+    "summary": "Steel magnate.",
+    "timeline": [
+      {
+        "year": "1976",
+        "type": "founding",
+        "entityId": "arcelormittal",
+        "title": "Started in steel",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Lakshmi_Mittal"
+      }
+    ]
+  },
+  {
+    "rank": 53,
+    "name": "Azim Premji",
+    "netWorth": {
+      "value": 20,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/azim-premji",
+    "forbesProfile": "https://www.forbes.com/profile/azim-premji/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Azim_Premji",
+    "wealthBreakdown": [
+      {
+        "entity": "Wipro",
+        "ticker": "WIPRO.NS",
+        "stakePct": 73,
+        "valueUsdB": 18,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "wipro",
+        "name": "Wipro",
+        "role": "founder",
+        "founded": 1945,
+        "status": "public"
+      }
+    ],
+    "summary": "Wipro founder.",
+    "timeline": [
+      {
+        "year": "1966",
+        "type": "leadership",
+        "entityId": "wipro",
+        "title": "Took over Wipro",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Azim_Premji"
+      }
+    ]
+  },
+  {
+    "rank": 54,
+    "name": "Uday Kotak",
+    "netWorth": {
+      "value": 19,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Finance",
+    "grokipediaLink": "https://grok.x.ai/wiki/uday-kotak",
+    "forbesProfile": "https://www.forbes.com/profile/uday-kotak/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Uday_Kotak",
+    "wealthBreakdown": [
+      {
+        "entity": "Kotak Mahindra Bank",
+        "ticker": "KOTAKBANK.NS",
+        "stakePct": 42,
+        "valueUsdB": 17,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "kotak-bank",
+        "name": "Kotak Mahindra Bank",
+        "role": "founder",
+        "founded": 1985,
+        "status": "public"
+      }
+    ],
+    "summary": "Founder of Kotak Mahindra Bank.",
+    "timeline": [
+      {
+        "year": "1985",
+        "type": "founding",
+        "entityId": "kotak-bank",
+        "title": "Founded Kotak Mahindra",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Uday_Kotak"
+      }
+    ]
+  },
+  {
+    "rank": 55,
+    "name": "Pallonji Mistry",
+    "netWorth": {
+      "value": 18,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "Ireland",
+    "sector": "Construction",
+    "grokipediaLink": "https://grok.x.ai/wiki/pallonji-mistry",
+    "forbesProfile": "https://www.forbes.com/profile/pallonji-mistry/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Pallonji_Mistry",
+    "wealthBreakdown": [
+      {
+        "entity": "Shapoorji Pallonji Group",
+        "stakePct": 100,
+        "valueUsdB": 16,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "shapoorji-pallonji",
+        "name": "Shapoorji Pallonji Group",
+        "role": "major_shareholder",
+        "founded": 1865,
+        "status": "private"
+      }
+    ],
+    "summary": "Tata Sons shareholder.",
+    "timeline": [
+      {
+        "year": "1865",
+        "type": "founding",
+        "entityId": "shapoorji-pallonji",
+        "title": "Shapoorji Pallonji founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Pallonji_Mistry"
+      }
+    ]
+  },
+  {
+    "rank": 56,
+    "name": "Savji Dholakia",
+    "netWorth": {
+      "value": 17,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Diamonds",
+    "grokipediaLink": "https://grok.x.ai/wiki/savji-dholakia",
+    "forbesProfile": "https://www.forbes.com/profile/savji-dholakia/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Savji_Dholakia",
+    "wealthBreakdown": [
+      {
+        "entity": "Hari Krishna Exports",
+        "stakePct": 100,
+        "valueUsdB": 16,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "hari-krishna",
+        "name": "Hari Krishna Exports",
+        "role": "founder",
+        "founded": 1992,
+        "status": "private"
+      }
+    ],
+    "summary": "Diamond billionaire.",
+    "timeline": [
+      {
+        "year": "1992",
+        "type": "founding",
+        "entityId": "hari-krishna",
+        "title": "Founded Hari Krishna Exports",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Savji_Dholakia"
+      }
+    ]
+  },
+  {
+    "rank": 57,
+    "name": "Sanjiv Mehta",
+    "netWorth": {
+      "value": 16,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "FMCG",
+    "grokipediaLink": "https://grok.x.ai/wiki/sanjiv-mehta",
+    "forbesProfile": "https://www.forbes.com/profile/sanjiv-mehta/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Sanjiv_Mehta",
+    "wealthBreakdown": [
+      {
+        "entity": "Hindustan Unilever",
+        "ticker": "HINDUNILVR.NS",
+        "stakePct": 5,
+        "valueUsdB": 15,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "hul",
+        "name": "Hindustan Unilever",
+        "role": "former_ceo",
+        "founded": 1933,
+        "status": "public"
+      }
+    ],
+    "summary": "Former HUL CEO.",
+    "timeline": [
+      {
+        "year": "1980s",
+        "type": "leadership",
+        "entityId": "hul",
+        "title": "Joined HUL",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Sanjiv_Mehta"
+      }
+    ]
+  },
+  {
+    "rank": 58,
+    "name": "Vikram Lal",
+    "netWorth": {
+      "value": 15,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Auto",
+    "grokipediaLink": "https://grok.x.ai/wiki/vikram-lal",
+    "forbesProfile": "https://www.forbes.com/profile/vikram-lal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Vikram_Lal",
+    "wealthBreakdown": [
+      {
+        "entity": "Eicher Motors",
+        "ticker": "EICHERMOT.NS",
+        "stakePct": 35,
+        "valueUsdB": 14,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "eicher",
+        "name": "Eicher Motors",
+        "role": "founder",
+        "founded": 1948,
+        "status": "public"
+      }
+    ],
+    "summary": "Eicher Motors founder.",
+    "timeline": [
+      {
+        "year": "1948",
+        "type": "founding",
+        "entityId": "eicher",
+        "title": "Founded Eicher",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Vikram_Lal"
+      }
+    ]
+  },
+  {
+    "rank": 59,
+    "name": "Pawan Munjal",
+    "netWorth": {
+      "value": 14,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Auto",
+    "grokipediaLink": "https://grok.x.ai/wiki/pawan-munjal",
+    "forbesProfile": "https://www.forbes.com/profile/pawan-munjal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Pawan_Munjal",
+    "wealthBreakdown": [
+      {
+        "entity": "Hero MotoCorp",
+        "ticker": "HEROMOTOCO.NS",
+        "stakePct": 40,
+        "valueUsdB": 13,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "hero-motocorp",
+        "name": "Hero MotoCorp",
+        "role": "chairman",
+        "founded": 1984,
+        "status": "public"
+      }
+    ],
+    "summary": "Hero MotoCorp chairman.",
+    "timeline": [
+      {
+        "year": "1984",
+        "type": "founding",
+        "entityId": "hero-motocorp",
+        "title": "Hero Honda formed",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Pawan_Munjal"
+      }
+    ]
+  },
+  {
+    "rank": 60,
+    "name": "Sunil Mittal",
+    "netWorth": {
+      "value": 13,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Telecom",
+    "grokipediaLink": "https://grok.x.ai/wiki/sunil-mittal",
+    "forbesProfile": "https://www.forbes.com/profile/sunil-mittal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Sunil_Mittal",
+    "wealthBreakdown": [
+      {
+        "entity": "Bharti Airtel",
+        "ticker": "AIRTEL.NS",
+        "stakePct": 52,
+        "valueUsdB": 12,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "bharti-airtel",
+        "name": "Bharti Airtel",
+        "role": "founder",
+        "founded": 1995,
+        "status": "public"
+      }
+    ],
+    "summary": "Founder of Bharti Airtel.",
+    "timeline": [
+      {
+        "year": "1995",
+        "type": "founding",
+        "entityId": "bharti-airtel",
+        "title": "Founded Bharti Airtel",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Sunil_Mittal"
+      }
+    ]
+  },
+  {
+    "rank": 61,
+    "name": "Nandan Nilekani",
+    "netWorth": {
+      "value": 12,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/nandan-nilekani",
+    "forbesProfile": "https://www.forbes.com/profile/nandan-nilekani/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Nandan_Nilekani",
+    "wealthBreakdown": [
+      {
+        "entity": "Infosys",
+        "ticker": "INFY",
+        "stakePct": 2.5,
+        "valueUsdB": 11,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "infosys",
+        "name": "Infosys",
+        "role": "co-founder",
+        "founded": 1981,
+        "status": "public"
+      }
+    ],
+    "summary": "Infosys co-founder.",
+    "timeline": [
+      {
+        "year": "1981",
+        "type": "co-founding",
+        "entityId": "infosys",
+        "title": "Co-founded Infosys",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Nandan_Nilekani"
+      }
+    ]
+  },
+  {
+    "rank": 62,
+    "name": "Kiran Mazumdar-Shaw",
+    "netWorth": {
+      "value": 11,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Biotech",
+    "grokipediaLink": "https://grok.x.ai/wiki/kiran-mazumdar-shaw",
+    "forbesProfile": "https://www.forbes.com/profile/kiran-mazumdar-shaw/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Kiran_Mazumdar-Shaw",
+    "wealthBreakdown": [
+      {
+        "entity": "Biocon",
+        "ticker": "BIOCON.NS",
+        "stakePct": 60,
+        "valueUsdB": 10,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "biocon",
+        "name": "Biocon",
+        "role": "founder",
+        "founded": 1978,
+        "status": "public"
+      }
+    ],
+    "summary": "Founder of Biocon.",
+    "timeline": [
+      {
+        "year": "1978",
+        "type": "founding",
+        "entityId": "biocon",
+        "title": "Founded Biocon",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Kiran_Mazumdar-Shaw"
+      }
+    ]
+  },
+  {
+    "rank": 63,
+    "name": "Benu Gopal Bangur",
+    "netWorth": {
+      "value": 10.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Cement",
+    "grokipediaLink": "https://grok.x.ai/wiki/benu-gopal-bangur",
+    "forbesProfile": "https://www.forbes.com/profile/benu-gopal-bangur/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Benu_Gopal_Bangur",
+    "wealthBreakdown": [
+      {
+        "entity": "Shree Cement",
+        "ticker": "SHREECEM.NS",
+        "stakePct": 55,
+        "valueUsdB": 9.8,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "shree-cement",
+        "name": "Shree Cement",
+        "role": "chairman",
+        "founded": 1979,
+        "status": "public"
+      }
+    ],
+    "summary": "Shree Cement chairman.",
+    "timeline": [
+      {
+        "year": "1979",
+        "type": "founding",
+        "entityId": "shree-cement",
+        "title": "Founded Shree Cement",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Benu_Gopal_Bangur"
+      }
+    ]
+  },
+  {
+    "rank": 64,
+    "name": "Radha Vembu",
+    "netWorth": {
+      "value": 10,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/radha-vembu",
+    "forbesProfile": "https://www.forbes.com/profile/radha-vembu/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Radha_Vembu",
+    "wealthBreakdown": [
+      {
+        "entity": "Zoho",
+        "stakePct": 75,
+        "valueUsdB": 9,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "zoho",
+        "name": "Zoho",
+        "role": "co-founder",
+        "founded": 1996,
+        "status": "private"
+      }
+    ],
+    "summary": "Zoho co-founder.",
+    "timeline": [
+      {
+        "year": "1996",
+        "type": "co-founding",
+        "entityId": "zoho",
+        "title": "Co-founded Zoho",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Radha_Vembu"
+      }
+    ]
+  },
+  {
+    "rank": 65,
+    "name": "Acharya Balkrishna",
+    "netWorth": {
+      "value": 9.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Consumer Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/acharya-balkrishna",
+    "forbesProfile": "https://www.forbes.com/profile/acharya-balkrishna/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Acharya_Balkrishna",
+    "wealthBreakdown": [
+      {
+        "entity": "Patanjali",
+        "stakePct": 98,
+        "valueUsdB": 9,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "patanjali",
+        "name": "Patanjali Ayurved",
+        "role": "co-founder",
+        "founded": 2006,
+        "status": "private"
+      }
+    ],
+    "summary": "Patanjali Ayurved co-founder.",
+    "timeline": [
+      {
+        "year": "2006",
+        "type": "founding",
+        "entityId": "patanjali",
+        "title": "Founded Patanjali",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Acharya_Balkrishna"
+      }
+    ]
+  },
+  {
+    "rank": 66,
+    "name": "Bajrang Lal Gupta",
+    "netWorth": {
+      "value": 9.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "FMCG",
+    "grokipediaLink": "https://grok.x.ai/wiki/bajrang-lal-gupta",
+    "forbesProfile": "https://www.forbes.com/profile/bajrang-lal-gupta/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Bajrang_Lal_Gupta",
+    "wealthBreakdown": [
+      {
+        "entity": "ITC",
+        "ticker": "ITC.NS",
+        "stakePct": 5,
+        "valueUsdB": 9,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "itc",
+        "name": "ITC",
+        "role": "major_shareholder",
+        "founded": 1910,
+        "status": "public"
+      }
+    ],
+    "summary": "ITC major shareholder.",
+    "timeline": [
+      {
+        "year": "1910",
+        "type": "founding",
+        "entityId": "itc",
+        "title": "ITC founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Bajrang_Lal_Gupta"
+      }
+    ]
+  },
+  {
+    "rank": 67,
+    "name": "Hari Menon",
+    "netWorth": {
+      "value": 9,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "E-commerce",
+    "grokipediaLink": "https://grok.x.ai/wiki/hari-menon",
+    "forbesProfile": "https://www.forbes.com/profile/hari-menon/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Hari_Menon",
+    "wealthBreakdown": [
+      {
+        "entity": "BigBasket",
+        "stakePct": 40,
+        "valueUsdB": 8,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "bigbasket",
+        "name": "BigBasket",
+        "role": "co-founder",
+        "founded": 2011,
+        "status": "private"
+      }
+    ],
+    "summary": "BigBasket founder.",
+    "timeline": [
+      {
+        "year": "2011",
+        "type": "founding",
+        "entityId": "bigbasket",
+        "title": "Founded BigBasket",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Hari_Menon"
+      }
+    ]
+  },
+  {
+    "rank": 68,
+    "name": "Sanjiv Puri",
+    "netWorth": {
+      "value": 8.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "FMCG",
+    "grokipediaLink": "https://grok.x.ai/wiki/sanjiv-puri",
+    "forbesProfile": "https://www.forbes.com/profile/sanjiv-puri/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Sanjiv_Puri",
+    "wealthBreakdown": [
+      {
+        "entity": "ITC",
+        "ticker": "ITC.NS",
+        "stakePct": 4,
+        "valueUsdB": 8,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "itc",
+        "name": "ITC",
+        "role": "chairman",
+        "founded": 1910,
+        "status": "public"
+      }
+    ],
+    "summary": "ITC chairman.",
+    "timeline": [
+      {
+        "year": "1910",
+        "type": "founding",
+        "entityId": "itc",
+        "title": "ITC founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Sanjiv_Puri"
+      }
+    ]
+  },
+  {
+    "rank": 69,
+    "name": "K P Singh",
+    "netWorth": {
+      "value": 8.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Real Estate",
+    "grokipediaLink": "https://grok.x.ai/wiki/k-p-singh",
+    "forbesProfile": "https://www.forbes.com/profile/k-p-singh/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/K._P._Singh",
+    "wealthBreakdown": [
+      {
+        "entity": "DLF",
+        "ticker": "DLF.NS",
+        "stakePct": 40,
+        "valueUsdB": 8,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "dlf",
+        "name": "DLF",
+        "role": "founder",
+        "founded": 1946,
+        "status": "public"
+      }
+    ],
+    "summary": "DLF founder.",
+    "timeline": [
+      {
+        "year": "1946",
+        "type": "founding",
+        "entityId": "dlf",
+        "title": "Founded DLF",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/K._P._Singh"
+      }
+    ]
+  },
+  {
+    "rank": 70,
+    "name": "Savitri Jindal",
+    "netWorth": {
+      "value": 8.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Steel",
+    "grokipediaLink": "https://grok.x.ai/wiki/savitri-jindal",
+    "forbesProfile": "https://www.forbes.com/profile/savitri-jindal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Savitri_Jindal",
+    "wealthBreakdown": [
+      {
+        "entity": "Jindal Group",
+        "stakePct": 60,
+        "valueUsdB": 7.5,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "jindal",
+        "name": "Jindal Group",
+        "role": "matriarch",
+        "founded": 1952,
+        "status": "private"
+      }
+    ],
+    "summary": "Jindal Group matriarch.",
+    "timeline": [
+      {
+        "year": "1952",
+        "type": "founding",
+        "entityId": "jindal",
+        "title": "Jindal Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Savitri_Jindal"
+      }
+    ]
+  },
+  {
+    "rank": 71,
+    "name": "Sajjan Jindal",
+    "netWorth": {
+      "value": 8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Steel",
+    "grokipediaLink": "https://grok.x.ai/wiki/sajjan-jindal",
+    "forbesProfile": "https://www.forbes.com/profile/sajjan-jindal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Sajjan_Jindal",
+    "wealthBreakdown": [
+      {
+        "entity": "JSW Steel",
+        "ticker": "JSWSTEEL.NS",
+        "stakePct": 42,
+        "valueUsdB": 7.5,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "jsw-steel",
+        "name": "JSW Steel",
+        "role": "chairman",
+        "founded": 1982,
+        "status": "public"
+      }
+    ],
+    "summary": "JSW Steel chairman.",
+    "timeline": [
+      {
+        "year": "1982",
+        "type": "founding",
+        "entityId": "jsw-steel",
+        "title": "JSW founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Sajjan_Jindal"
+      }
+    ]
+  },
+  {
+    "rank": 72,
+    "name": "Ratan Tata",
+    "netWorth": {
+      "value": 7.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/ratan-tata",
+    "forbesProfile": "https://www.forbes.com/profile/ratan-tata/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ratan_Tata",
+    "wealthBreakdown": [
+      {
+        "entity": "Tata Sons",
+        "stakePct": 66,
+        "valueUsdB": 7,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "tata",
+        "name": "Tata Group",
+        "role": "chairman_emeritus",
+        "founded": 1868,
+        "status": "private"
+      }
+    ],
+    "summary": "Tata Group chairman emeritus.",
+    "timeline": [
+      {
+        "year": "1868",
+        "type": "founding",
+        "entityId": "tata",
+        "title": "Tata Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Ratan_Tata"
+      }
+    ]
+  },
+  {
+    "rank": 73,
+    "name": "N R Narayana Murthy",
+    "netWorth": {
+      "value": 7.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/n-r-narayana-murthy",
+    "forbesProfile": "https://www.forbes.com/profile/n-r-narayana-murthy/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/N._R._Narayana_Murthy",
+    "wealthBreakdown": [
+      {
+        "entity": "Infosys",
+        "ticker": "INFY",
+        "stakePct": 2.3,
+        "valueUsdB": 7,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "infosys",
+        "name": "Infosys",
+        "role": "co-founder",
+        "founded": 1981,
+        "status": "public"
+      }
+    ],
+    "summary": "Infosys co-founder.",
+    "timeline": [
+      {
+        "year": "1981",
+        "type": "co-founding",
+        "entityId": "infosys",
+        "title": "Co-founded Infosys",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/N._R._Narayana_Murthy"
+      }
+    ]
+  },
+  {
+    "rank": 74,
+    "name": "Kris Gopalakrishnan",
+    "netWorth": {
+      "value": 7.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/kris-gopalakrishnan",
+    "forbesProfile": "https://www.forbes.com/profile/kris-gopalakrishnan/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Kris_Gopalakrishnan",
+    "wealthBreakdown": [
+      {
+        "entity": "Infosys",
+        "ticker": "INFY",
+        "stakePct": 2,
+        "valueUsdB": 6.8,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "infosys",
+        "name": "Infosys",
+        "role": "co-founder",
+        "founded": 1981,
+        "status": "public"
+      }
+    ],
+    "summary": "Infosys co-founder.",
+    "timeline": [
+      {
+        "year": "1981",
+        "type": "co-founding",
+        "entityId": "infosys",
+        "title": "Co-founded Infosys",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Kris_Gopalakrishnan"
+      }
+    ]
+  },
+  {
+    "rank": 75,
+    "name": "S D Shibulal",
+    "netWorth": {
+      "value": 7,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/s-d-shibulal",
+    "forbesProfile": "https://www.forbes.com/profile/s-d-shibulal/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/S._D._Shibulal",
+    "wealthBreakdown": [
+      {
+        "entity": "Infosys",
+        "ticker": "INFY",
+        "stakePct": 2,
+        "valueUsdB": 6.5,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "infosys",
+        "name": "Infosys",
+        "role": "co-founder",
+        "founded": 1981,
+        "status": "public"
+      }
+    ],
+    "summary": "Infosys co-founder.",
+    "timeline": [
+      {
+        "year": "1981",
+        "type": "co-founding",
+        "entityId": "infosys",
+        "title": "Co-founded Infosys",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/S._D._Shibulal"
+      }
+    ]
+  },
+  {
+    "rank": 77,
+    "name": "Venu Srinivasan",
+    "netWorth": {
+      "value": 6.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Auto",
+    "grokipediaLink": "https://grok.x.ai/wiki/venu-srinivasan",
+    "forbesProfile": "https://www.forbes.com/profile/venu-srinivasan/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Venu_Srinivasan",
+    "wealthBreakdown": [
+      {
+        "entity": "TVS Motor",
+        "ticker": "TVSMOTOR.NS",
+        "stakePct": 45,
+        "valueUsdB": 6,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "tvs-motor",
+        "name": "TVS Motor",
+        "role": "chairman",
+        "founded": 1911,
+        "status": "public"
+      }
+    ],
+    "summary": "TVS Group chairman.",
+    "timeline": [
+      {
+        "year": "1911",
+        "type": "founding",
+        "entityId": "tvs-motor",
+        "title": "TVS Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Venu_Srinivasan"
+      }
+    ]
+  },
+  {
+    "rank": 78,
+    "name": "Harsh Mariwala",
+    "netWorth": {
+      "value": 6.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Consumer Goods",
+    "grokipediaLink": "https://grok.x.ai/wiki/harsh-mariwala",
+    "forbesProfile": "https://www.forbes.com/profile/harsh-mariwala/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Harsh_Mariwala",
+    "wealthBreakdown": [
+      {
+        "entity": "Marico",
+        "ticker": "MARICO.NS",
+        "stakePct": 35,
+        "valueUsdB": 5.8,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "marico",
+        "name": "Marico",
+        "role": "founder",
+        "founded": 1990,
+        "status": "public"
+      }
+    ],
+    "summary": "Marico founder.",
+    "timeline": [
+      {
+        "year": "1990",
+        "type": "founding",
+        "entityId": "marico",
+        "title": "Founded Marico",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Harsh_Mariwala"
+      }
+    ]
+  },
+  {
+    "rank": 79,
+    "name": "Ashwin Dani",
+    "netWorth": {
+      "value": 6,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Chemicals",
+    "grokipediaLink": "https://grok.x.ai/wiki/ashwin-dani",
+    "forbesProfile": "https://www.forbes.com/profile/ashwin-dani/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Ashwin_Dani",
+    "wealthBreakdown": [
+      {
+        "entity": "Asian Paints",
+        "ticker": "ASIANPAINT.NS",
+        "stakePct": 25,
+        "valueUsdB": 5.5,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "asian-paints",
+        "name": "Asian Paints",
+        "role": "co-founder",
+        "founded": 1942,
+        "status": "public"
+      }
+    ],
+    "summary": "Asian Paints co-founder.",
+    "timeline": [
+      {
+        "year": "1942",
+        "type": "founding",
+        "entityId": "asian-paints",
+        "title": "Asian Paints founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Ashwin_Dani"
+      }
+    ]
+  },
+  {
+    "rank": 80,
+    "name": "M P Ramaswami",
+    "netWorth": {
+      "value": 5.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Textiles",
+    "grokipediaLink": "https://grok.x.ai/wiki/m-p-ramaswami",
+    "forbesProfile": "https://www.forbes.com/profile/m-p-ramaswami/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/M._P._Ramaswami",
+    "wealthBreakdown": [
+      {
+        "entity": "Rajapalayam Mills",
+        "stakePct": 40,
+        "valueUsdB": 5.5,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "rajapalayam-mills",
+        "name": "Rajapalayam Mills",
+        "role": "major_shareholder",
+        "founded": 1938,
+        "status": "public"
+      }
+    ],
+    "summary": "Textile magnate.",
+    "timeline": [
+      {
+        "year": "1938",
+        "type": "founding",
+        "entityId": "rajapalayam-mills",
+        "title": "Rajapalayam Mills founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/M._P._Ramaswami"
+      }
+    ]
+  },
+  {
+    "rank": 81,
+    "name": "P V Ramana",
+    "netWorth": {
+      "value": 5.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Pharmaceuticals",
+    "grokipediaLink": "https://grok.x.ai/wiki/p-v-ramana",
+    "forbesProfile": "https://www.forbes.com/profile/p-v-ramana/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/P._V._Ramana",
+    "wealthBreakdown": [
+      {
+        "entity": "Aurobindo Pharma",
+        "ticker": "AUROPHARMA.NS",
+        "stakePct": 35,
+        "valueUsdB": 5,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "aurobindo",
+        "name": "Aurobindo Pharma",
+        "role": "co-founder",
+        "founded": 1986,
+        "status": "public"
+      }
+    ],
+    "summary": "Aurobindo Pharma co-founder.",
+    "timeline": [
+      {
+        "year": "1986",
+        "type": "founding",
+        "entityId": "aurobindo",
+        "title": "Founded Aurobindo Pharma",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/P._V._Ramana"
+      }
+    ]
+  },
+  {
+    "rank": 82,
+    "name": "K Satish Reddy",
+    "netWorth": {
+      "value": 5.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Pharmaceuticals",
+    "grokipediaLink": "https://grok.x.ai/wiki/k-satish-reddy",
+    "forbesProfile": "https://www.forbes.com/profile/k-satish-reddy/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/K._Satish_Reddy",
+    "wealthBreakdown": [
+      {
+        "entity": "Dr Reddy's Laboratories",
+        "ticker": "DRREDDY.NS",
+        "stakePct": 25,
+        "valueUsdB": 4.8,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "dr-reddys",
+        "name": "Dr Reddy's Laboratories",
+        "role": "chairman",
+        "founded": 1984,
+        "status": "public"
+      }
+    ],
+    "summary": "Dr Reddy's chairman.",
+    "timeline": [
+      {
+        "year": "1984",
+        "type": "founding",
+        "entityId": "dr-reddys",
+        "title": "Founded Dr Reddy's",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/K._Satish_Reddy"
+      }
+    ]
+  },
+  {
+    "rank": 83,
+    "name": "Murali Divi",
+    "netWorth": {
+      "value": 5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Pharmaceuticals",
+    "grokipediaLink": "https://grok.x.ai/wiki/murali-divi",
+    "forbesProfile": "https://www.forbes.com/profile/murali-divi/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Murali_Divi",
+    "wealthBreakdown": [
+      {
+        "entity": "Divi's Laboratories",
+        "ticker": "DIVISLAB.NS",
+        "stakePct": 40,
+        "valueUsdB": 4.7,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "divis-labs",
+        "name": "Divi's Laboratories",
+        "role": "founder",
+        "founded": 1990,
+        "status": "public"
+      }
+    ],
+    "summary": "Divi's Laboratories founder.",
+    "timeline": [
+      {
+        "year": "1990",
+        "type": "founding",
+        "entityId": "divis-labs",
+        "title": "Founded Divi's Laboratories",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Murali_Divi"
+      }
+    ]
+  },
+  {
+    "rank": 84,
+    "name": "G V Sanjay Reddy",
+    "netWorth": {
+      "value": 4.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Infrastructure",
+    "grokipediaLink": "https://grok.x.ai/wiki/g-v-sanjay-reddy",
+    "forbesProfile": "https://www.forbes.com/profile/g-v-sanjay-reddy/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/G._V._Sanjay_Reddy",
+    "wealthBreakdown": [
+      {
+        "entity": "GVK Group",
+        "stakePct": 55,
+        "valueUsdB": 4.5,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "gvk",
+        "name": "GVK Group",
+        "role": "chairman",
+        "founded": 1990,
+        "status": "private"
+      }
+    ],
+    "summary": "GVK Group chairman.",
+    "timeline": [
+      {
+        "year": "1990s",
+        "type": "founding",
+        "entityId": "gvk",
+        "title": "GVK Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/G._V._Sanjay_Reddy"
+      }
+    ]
+  },
+  {
+    "rank": 85,
+    "name": "Rajiv Jain",
+    "netWorth": {
+      "value": 4.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Chemicals",
+    "grokipediaLink": "https://grok.x.ai/wiki/rajiv-jain",
+    "forbesProfile": "https://www.forbes.com/profile/rajiv-jain/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Rajiv_Jain",
+    "wealthBreakdown": [
+      {
+        "entity": "Pidilite Industries",
+        "ticker": "PIDILITIND.NS",
+        "stakePct": 30,
+        "valueUsdB": 4.2,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "pidilite",
+        "name": "Pidilite Industries",
+        "role": "chairman",
+        "founded": 1959,
+        "status": "public"
+      }
+    ],
+    "summary": "Pidilite chairman.",
+    "timeline": [
+      {
+        "year": "1959",
+        "type": "founding",
+        "entityId": "pidilite",
+        "title": "Pidilite founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Rajiv_Jain"
+      }
+    ]
+  },
+  {
+    "rank": 86,
+    "name": "Sanjiv Bajaj",
+    "netWorth": {
+      "value": 4.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Finance",
+    "grokipediaLink": "https://grok.x.ai/wiki/sanjiv-bajaj",
+    "forbesProfile": "https://www.forbes.com/profile/sanjiv-bajaj/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Sanjiv_Bajaj",
+    "wealthBreakdown": [
+      {
+        "entity": "Bajaj Finserv",
+        "ticker": "BAJAJFINSV.NS",
+        "stakePct": 35,
+        "valueUsdB": 4,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "bajaj-finserv",
+        "name": "Bajaj Finserv",
+        "role": "chairman",
+        "founded": 2007,
+        "status": "public"
+      }
+    ],
+    "summary": "Bajaj Group chairman.",
+    "timeline": [
+      {
+        "year": "1926",
+        "type": "founding",
+        "entityId": "bajaj-finserv",
+        "title": "Bajaj Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Sanjiv_Bajaj"
+      }
+    ]
+  },
+  {
+    "rank": 87,
+    "name": "Niraj Bajaj",
+    "netWorth": {
+      "value": 4,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/niraj-bajaj",
+    "forbesProfile": "https://www.forbes.com/profile/niraj-bajaj/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Niraj_Bajaj",
+    "wealthBreakdown": [
+      {
+        "entity": "Bajaj Group",
+        "stakePct": 20,
+        "valueUsdB": 3.8,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "bajaj",
+        "name": "Bajaj Group",
+        "role": "major_shareholder",
+        "founded": 1926,
+        "status": "private"
+      }
+    ],
+    "summary": "Bajaj Group member.",
+    "timeline": [
+      {
+        "year": "1926",
+        "type": "founding",
+        "entityId": "bajaj",
+        "title": "Bajaj Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Niraj_Bajaj"
+      }
+    ]
+  },
+  {
+    "rank": 88,
+    "name": "Rahul Bajaj",
+    "netWorth": {
+      "value": 3.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Diversified",
+    "grokipediaLink": "https://grok.x.ai/wiki/rahul-bajaj",
+    "forbesProfile": "https://www.forbes.com/profile/rahul-bajaj/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Rahul_Bajaj",
+    "wealthBreakdown": [
+      {
+        "entity": "Bajaj Group",
+        "stakePct": 15,
+        "valueUsdB": 3.5,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "bajaj",
+        "name": "Bajaj Group",
+        "role": "patriarch",
+        "founded": 1926,
+        "status": "private"
+      }
+    ],
+    "summary": "Bajaj Group patriarch.",
+    "timeline": [
+      {
+        "year": "1926",
+        "type": "founding",
+        "entityId": "bajaj",
+        "title": "Bajaj Group founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Rahul_Bajaj"
+      }
+    ]
+  },
+  {
+    "rank": 89,
+    "name": "Pankaj Patel",
+    "netWorth": {
+      "value": 3.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Pharmaceuticals",
+    "grokipediaLink": "https://grok.x.ai/wiki/pankaj-patel",
+    "forbesProfile": "https://www.forbes.com/profile/pankaj-patel/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Pankaj_Patel",
+    "wealthBreakdown": [
+      {
+        "entity": "Zydus Lifesciences",
+        "ticker": "ZYDUSLIFE.NS",
+        "stakePct": 45,
+        "valueUsdB": 3.2,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "zydus",
+        "name": "Zydus Lifesciences",
+        "role": "chairman",
+        "founded": 1952,
+        "status": "public"
+      }
+    ],
+    "summary": "Zydus Lifesciences chairman.",
+    "timeline": [
+      {
+        "year": "1952",
+        "type": "founding",
+        "entityId": "zydus",
+        "title": "Zydus founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Pankaj_Patel"
+      }
+    ]
+  },
+  {
+    "rank": 90,
+    "name": "Samir Jain",
+    "netWorth": {
+      "value": 3.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Media",
+    "grokipediaLink": "https://grok.x.ai/wiki/samir-jain",
+    "forbesProfile": "https://www.forbes.com/profile/samir-jain/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Samir_Jain",
+    "wealthBreakdown": [
+      {
+        "entity": "Times Group",
+        "stakePct": 30,
+        "valueUsdB": 3,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "times-group",
+        "name": "Times Group",
+        "role": "vice-chairman",
+        "founded": 1838,
+        "status": "private"
+      }
+    ],
+    "summary": "Times Group vice chairman.",
+    "timeline": [
+      {
+        "year": "1838",
+        "type": "founding",
+        "entityId": "times-group",
+        "title": "Times of India founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Samir_Jain"
+      }
+    ]
+  },
+  {
+    "rank": 91,
+    "name": "Vineet Jain",
+    "netWorth": {
+      "value": 3,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Media",
+    "grokipediaLink": "https://grok.x.ai/wiki/vineet-jain",
+    "forbesProfile": "https://www.forbes.com/profile/vineet-jain/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Vineet_Jain",
+    "wealthBreakdown": [
+      {
+        "entity": "Times Group",
+        "stakePct": 25,
+        "valueUsdB": 2.8,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "times-group",
+        "name": "Times Group",
+        "role": "managing_director",
+        "founded": 1838,
+        "status": "private"
+      }
+    ],
+    "summary": "Times Group managing director.",
+    "timeline": [
+      {
+        "year": "1838",
+        "type": "founding",
+        "entityId": "times-group",
+        "title": "Times of India founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Vineet_Jain"
+      }
+    ]
+  },
+  {
+    "rank": 92,
+    "name": "Indu Jain",
+    "netWorth": {
+      "value": 2.8,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Media",
+    "grokipediaLink": "https://grok.x.ai/wiki/indu-jain",
+    "forbesProfile": "https://www.forbes.com/profile/indu-jain/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Indu_Jain",
+    "wealthBreakdown": [
+      {
+        "entity": "Times Group",
+        "stakePct": 20,
+        "valueUsdB": 2.6,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "times-group",
+        "name": "Times Group",
+        "role": "chairman",
+        "founded": 1838,
+        "status": "private"
+      }
+    ],
+    "summary": "Times Group chairman.",
+    "timeline": [
+      {
+        "year": "1838",
+        "type": "founding",
+        "entityId": "times-group",
+        "title": "Times of India founded",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Indu_Jain"
+      }
+    ]
+  },
+  {
+    "rank": 93,
+    "name": "Sudha Murty",
+    "netWorth": {
+      "value": 2.5,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/sudha-murty",
+    "forbesProfile": "https://www.forbes.com/profile/sudha-murty/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Sudha_Murty",
+    "wealthBreakdown": [
+      {
+        "entity": "Infosys",
+        "ticker": "INFY",
+        "stakePct": 1.5,
+        "valueUsdB": 2.3,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "infosys",
+        "name": "Infosys",
+        "role": "co-founder",
+        "founded": 1981,
+        "status": "public"
+      }
+    ],
+    "summary": "Infosys co-founder.",
+    "timeline": [
+      {
+        "year": "1981",
+        "type": "co-founding",
+        "entityId": "infosys",
+        "title": "Co-founded Infosys",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Sudha_Murty"
+      }
+    ]
+  },
+  {
+    "rank": 94,
+    "name": "Rohan Murty",
+    "netWorth": {
+      "value": 2.2,
+      "unit": "B",
+      "currency": "USD",
+      "asOf": "2026-06-11"
+    },
+    "age": "\u2014",
+    "country": "India",
+    "sector": "Technology",
+    "grokipediaLink": "https://grok.x.ai/wiki/rohan-murty",
+    "forbesProfile": "https://www.forbes.com/profile/rohan-murty/",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Rohan_Murty",
+    "wealthBreakdown": [
+      {
+        "entity": "Infosys",
+        "ticker": "INFY",
+        "stakePct": 1.2,
+        "valueUsdB": 2,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "infosys",
+        "name": "Infosys",
+        "role": "heir",
+        "founded": 1981,
+        "status": "public"
+      }
+    ],
+    "summary": "Infosys heir.",
+    "timeline": [
+      {
+        "year": "1981",
+        "type": "co-founding",
+        "entityId": "infosys",
+        "title": "Co-founded Infosys",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Rohan_Murty"
+      }
+    ]
+  }
+]
