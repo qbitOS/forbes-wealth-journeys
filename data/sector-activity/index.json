@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-06-12T04:31:49.369008+00:00",
+  "window": {
+    "start": "2025-12-14",
+    "end": "2026-06-12",
+    "months": 6
+  },
+  "sectors": [
+    {
+      "sector": "Agentic",
+      "slug": "agentic",
+      "symbolCount": 1,
+      "eventCount": 51,
+      "file": "agentic.json"
+    },
+    {
+      "sector": "China",
+      "slug": "china",
+      "symbolCount": 299,
+      "eventCount": 1542,
+      "file": "china.json"
+    },
+    {
+      "sector": "Cryptos to Watch",
+      "slug": "cryptos-to-watch",
+      "symbolCount": 4,
+      "eventCount": 279,
+      "file": "cryptos-to-watch.json"
+    },
+    {
+      "sector": "ETFs",
+      "slug": "etfs",
+      "symbolCount": 2831,
+      "eventCount": 1600,
+      "file": "etfs.json"
+    },
+    {
+      "sector": "Energy & Water",
+      "slug": "energy-water",
+      "symbolCount": 5,
+      "eventCount": 321,
+      "file": "energy-water.json"
+    },
+    {
+      "sector": "IPO Access",
+      "slug": "ipo-access",
+      "symbolCount": 23,
+      "eventCount": 616,
+      "file": "ipo-access.json"
+    },
+    {
+      "sector": "M",
+      "slug": "m",
+      "symbolCount": 1,
+      "eventCount": 86,
+      "file": "m.json"
+    },
+    {
+      "sector": "Manufacturing & Materials",
+      "slug": "manufacturing-materials",
+      "symbolCount": 1235,
+      "eventCount": 1600,
+      "file": "manufacturing-materials.json"
+    },
+    {
+      "sector": "Market Indexes",
+      "slug": "market-indexes",
+      "symbolCount": 7,
+      "eventCount": 493,
+      "file": "market-indexes.json"
+    },
+    {
+      "sector": "My First List",
+      "slug": "my-first-list",
+      "symbolCount": 46,
+      "eventCount": 952,
+      "file": "my-first-list.json"
+    },
+    {
+      "sector": "Technology",
+      "slug": "technology",
+      "symbolCount": 892,
+      "eventCount": 1600,
+      "file": "technology.json"
+    }
+  ]
+}

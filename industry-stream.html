@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industry Stream · Forbes Wealth + Crossover</title>
+  <meta name="description" content="Unified industry timeline — Forbes billionaire milestones, Grok venture branches, and crossover MACD/Bollinger flip signals on one page." />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <link rel="stylesheet" href="docs/assets/industry-stream.css?v=20260612h" />
+</head>
+<body class="unified-page stream-drawer-open">
+  <header class="unified-header">
+    <div class="unified-header-inner">
+      <div class="unified-brand">
+        <h1>Industry Stream</h1>
+        <p>Forbes wealth journeys × crossover flip board · unified timeline</p>
+      </div>
+      <nav class="unified-nav" aria-label="Page links">
+        <button type="button" id="stream-drawer-header-toggle" class="stream-drawer-header-toggle" aria-expanded="true" aria-controls="industry-stream" title="Toggle activity feed">
+          <span class="stream-drawer-header-icon" aria-hidden="true"></span>
+          <span>Feed</span>
+        </button>
+        <a href="index.html">Wealth Journeys</a>
+        <a href="industry-stream.html" class="active">Industry Stream</a>
+        <a href="#through-line">Through line</a>
+        <a href="#compression">BB compression</a>
+        <a href="#interplay">Interplay</a>
+        <a href="#industry-stream" class="stream-nav-link">Stream</a>
+        <a href="#flip-wall-chart">Overlay</a>
+        <a href="#sector-activity">Sector</a>
+        <a href="https://fornevercollective.github.io/crossover/" target="_blank" rel="noopener">Crossover</a>
+        <a href="https://github.com/qbitOS/forbes-wealth-journeys" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="unified-shell">
+    <aside id="industry-stream" class="stream-drawer" aria-label="Unified activity feed">
+      <header class="stream-drawer-head">
+        <div class="stream-drawer-title-row">
+          <div class="stream-drawer-title">
+            <span class="unified-section-label">Industry stream</span>
+            <h2>Unified activity feed</h2>
+          </div>
+          <button type="button" id="stream-drawer-toggle" class="stream-drawer-toggle" aria-expanded="true" aria-controls="stream-feed" title="Hide activity feed">
+            <span class="stream-drawer-toggle-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Hide feed</span>
+          </button>
+        </div>
+        <p class="stream-drawer-lead">
+          Sector flips, wealth milestones, Grok branches, and world context — one scrollable feed.
+        </p>
+        <div class="stream-toolbar">
+          <div id="stream-filters" class="stream-filters" aria-label="Grok branch filters"></div>
+          <span id="stream-filter-label" class="stream-filter-label">All events</span>
+          <button type="button" id="stream-filter-clear" class="stream-filter-clear">Clear filter</button>
+        </div>
+      </header>
+      <div id="stream-feed" class="stream-feed stream-drawer-feed" aria-label="Unified industry stream"></div>
+    </aside>
+
+    <div id="stream-drawer-backdrop" class="stream-drawer-backdrop" hidden aria-hidden="true"></div>
+
+    <div class="unified-content">
+  <main class="unified-main">
+    <section class="unified-section" id="flip-wall-chart">
+      <span class="unified-section-label">Forbes overlay</span>
+      <h2>Multi-symbol price overlay · flip walls</h2>
+      <p class="unified-lead">
+        Normalized Forbes-linked tickers with chart data — vertical walls at Q/M/W/D flip events from flip-board timelines.
+      </p>
+      <p id="flip-overlay-meta" class="unified-meta"></p>
+      <div class="flip-overlay-toolbar">
+        <div id="flip-overlay-intervals" class="flip-overlay-chips" aria-label="Interval filters"></div>
+        <div id="flip-overlay-modes" class="flip-overlay-modes" aria-label="Chart mode"></div>
+        <button type="button" id="flip-overlay-walls-toggle" class="flip-overlay-walls-toggle active">Walls on</button>
+      </div>
+      <div id="flip-overlay-chart" class="flip-overlay-chart" role="img" aria-label="Forbes multi-symbol overlay chart"></div>
+      <div id="flip-overlay-legend" class="flip-overlay-legend" aria-label="Flip legend"></div>
+    </section>
+
+    <section class="unified-section" id="sector-activity">
+      <span class="unified-section-label">Sector activity</span>
+      <h2>Agentic flip board · sector heatmaps</h2>
+      <p class="unified-lead">
+        Q/M/W/D hierarchy from crossover sector-activity — Agentic list embedded locally.
+      </p>
+      <p id="sector-meta" class="unified-meta"></p>
+      <div id="sector-chips" class="sector-activity-chips" aria-label="Sector list chips"></div>
+      <div id="sector-branches" class="sector-branches" aria-label="Sector flip heatmaps"></div>
+    </section>
+
+    <section class="unified-section" id="through-line">
+      <details class="tl-through-line" open>
+        <summary>
+          <span class="tl-through-line-title-wrap">
+            <span class="tl-through-line-label">Through line</span>
+            <span class="tl-through-line-heading">Connecting narrative</span>
+          </span>
+          <span id="through-line-meta" class="tl-through-line-meta" aria-live="polite">Loading…</span>
+        </summary>
+        <div class="tl-through-line-body">
+          <p class="unified-lead">
+            Lifecycle ↔ flip alignments and cross-theme narratives linking Forbes holdings to Grok industry branches.
+          </p>
+          <p id="through-line-summary" class="through-line-summary" aria-live="polite"></p>
+          <div id="through-line-cards" class="through-line" aria-label="Through-line narrative hooks"></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="unified-section" id="compression">
+      <details class="tl-compression" open>
+        <summary>
+          <span class="tl-compression-title-wrap">
+            <span class="tl-compression-label">Bollinger compression</span>
+            <span class="tl-compression-heading">Multi-timeframe squeeze · Q / M / W / D</span>
+            <span class="tl-compression-lead">
+              Forbes-linked public tickers ranked by squeeze score — flip labels and MACD bias per horizon from flip-board rows.
+            </span>
+          </span>
+          <span id="compression-meta" class="tl-compression-meta" aria-live="polite"></span>
+        </summary>
+        <div class="tl-compression-body">
+          <div id="compression-grid" class="compression-grid" aria-label="BB compression panel"></div>
+        </div>
+      </details>
+    </section>
+
+    <section class="unified-section" id="interplay">
+      <details class="tl-interplay" open>
+        <summary>
+          <span class="tl-interplay-title-wrap">
+            <span class="tl-interplay-label">Interplay</span>
+            <span class="tl-interplay-heading">Forbes rank ↔ entity ↔ sector</span>
+            <span class="tl-interplay-lead">
+              Billionaire holdings linked to rollercoaster branches (Colossus, Terrafab, Grok, SpaceX IPO) and crossover signals.
+            </span>
+          </span>
+          <span id="interplay-meta" class="tl-interplay-meta" aria-live="polite"></span>
+        </summary>
+        <div class="tl-interplay-body">
+          <div id="interplay-rows" class="interplay-rows" aria-label="Forbes entity interplay"></div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="unified-footer">
+    Apache-2.0 ·
+    <a href="https://github.com/qbitOS/forbes-wealth-journeys">qbitOS/forbes-wealth-journeys</a>
+    · crossover from
+    <a href="https://github.com/fornevercollective/crossover">fornevercollective/crossover</a>
+    · rebuild:
+    <code>python3 scripts/build_industry_stream.py</code>
+  </footer>
+    </div>
+  </div>
+
+  <script src="docs/assets/fwj-color.js?v=20260612h"></script>
+  <script src="docs/assets/timeline-cluster.js?v=20260612h"></script>
+  <script src="docs/assets/flip-overlay-chart.js?v=20260612h"></script>
+  <script src="docs/assets/industry-stream.js?v=20260612h"></script>
+</body>
+</html>

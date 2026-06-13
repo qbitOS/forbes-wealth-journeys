@@ -49,6 +49,12 @@ Grok template wizard retained from upstream — domains, infra, connectors, and 
 
 ![Markets configurator wizard](docs/screenshots/markets-configurator.png)
 
+### Industry stream (unified view)
+
+Single-page merge of Forbes wealth journeys + [crossover](https://fornevercollective.github.io/crossover/) flip-board: unified activity feed, Q/M/W/D BB compression, through-line narratives, and Forbes↔entity interplay.
+
+**Live:** [unified.html](https://qbitos.github.io/forbes-wealth-journeys/unified.html)
+
 ---
 
 ## What this is
@@ -126,7 +132,30 @@ python -m http.server 8080
 # open http://localhost:8080/
 ```
 
-Navigate to **Forbes** for billionaire profiles, **Ventures** for the gitgraph, **Activity** for heatmaps.
+Navigate to **Forbes** for billionaire profiles, **Ventures** for the gitgraph, **Activity** for heatmaps, or **Industry Stream** at `http://localhost:8080/unified.html`.
+
+### Rebuild industry stream data
+
+Requires local [robinhood-agentic](https://github.com/qbitOS/robinhood-agentic) with flip-board rows:
+
+```bash
+# 1. Flip-board (in robinhood-agentic)
+cd ../robinhood-agentic
+python3 scripts/build_flip_board.py focus
+
+# 2. Forbes market crossover join
+cd ../forbes-wealth-journeys
+python3 scripts/build_market_crossover.py ../robinhood-agentic/data/flip-board/rows.json
+
+# 3. Optional — richer lifecycle↔flip alignments
+cd ../robinhood-agentic && python3 scripts/forbes_crossover.py build
+
+# 4. Unified stream JSON
+cd ../forbes-wealth-journeys
+python3 scripts/build_industry_stream.py ../robinhood-agentic/data/flip-board/rows.json
+```
+
+Commit `data/industry-stream.json` (and `data/market-crossover.json` if refreshed) before pushing — GitHub Pages serves static files only.
 
 ---
 
@@ -152,6 +181,10 @@ flowchart LR
 | Path | Role |
 |------|------|
 | [`index.html`](index.html) | Landing page — Forbes, Ventures, Activity, Configurator |
+| [`unified.html`](unified.html) | Unified industry stream — Forbes × crossover merge |
+| [`data/industry-stream.json`](data/industry-stream.json) | Merged stream payload (build script output) |
+| [`docs/assets/industry-stream.js`](docs/assets/industry-stream.js) | Industry stream UI |
+| [`docs/assets/industry-stream.css`](docs/assets/industry-stream.css) | Dark crossover theme for industry stream |
 | [`data/forbes-billionaires.json`](data/forbes-billionaires.json) | Ranked billionaire profiles + wealth journey timelines |
 | [`docs/assets/forbes-wealth.js`](docs/assets/forbes-wealth.js) | Forbes list/detail UI, loads JSON via fetch |
 | [`docs/assets/pages-configurator.js`](docs/assets/pages-configurator.js) | Venture timeline data, gitgraph renderer, template wizard |

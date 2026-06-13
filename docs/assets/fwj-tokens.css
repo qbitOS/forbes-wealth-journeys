@@ -1,0 +1,109 @@
+/**
+ * Forbes Wealth Journeys — shared color tokens (--fwj-*)
+ * Dark terminal theme for crossover / industry-stream surfaces.
+ * See docs/color-system.md for rationale and contrast notes.
+ */
+:root {
+  /* ── Surfaces (terminal density, Carbon Gray 100 tier) ── */
+  --fwj-bg: #0f1114;
+  --fwj-bg-elevated: #12151a;
+  --fwj-surface: #171a1f;
+  --fwj-surface-raised: #1e2229;
+  --fwj-border: #2a3038;
+  --fwj-border-strong: #3d4654;
+  --fwj-overlay: rgba(8, 10, 12, 0.55);
+  --fwj-header: rgba(15, 17, 20, 0.92);
+
+  /* ── Typography (WCAG AA 4.5:1 on --fwj-bg) ── */
+  --fwj-text: #e8eaed;
+  --fwj-text-secondary: #b8bcc4;
+  --fwj-text-muted: #9aa0a6;
+  --fwj-text-inverse: #0f1114;
+
+  /* ── Semantic market (diverging pair — not sole signal; pair with labels) ── */
+  --fwj-bull: #42d392;
+  --fwj-bull-dim: rgba(66, 211, 146, 0.14);
+  --fwj-bear: #f07178;
+  --fwj-bear-dim: rgba(240, 113, 120, 0.14);
+  --fwj-neutral: #8b939e;
+  --fwj-neutral-dim: rgba(139, 147, 158, 0.2);
+
+  /* ── Accent & highlight ── */
+  --fwj-accent: #78a9ff;
+  --fwj-accent-dim: rgba(120, 169, 255, 0.12);
+  --fwj-accent-subtle: rgba(120, 169, 255, 0.08);
+  --fwj-gold: #e6c068;
+  --fwj-gold-dim: rgba(230, 192, 104, 0.15);
+  --fwj-violet: #c6a0f6;
+  --fwj-violet-dim: rgba(198, 160, 246, 0.12);
+
+  /* ── Timeframe categorical (equidistant hues, warm + cool balance) ── */
+  --fwj-tf-quarter: #e6c068;
+  --fwj-tf-month: #78a9ff;
+  --fwj-tf-week: #42d392;
+  --fwj-tf-day: #c6a0f6;
+  --fwj-tf-5h: #ff8389;
+  --fwj-tf-1h: #42beaa;
+
+  /* ── Grok / venture branch colors (IPO cluster + portfolio) ── */
+  --fwj-branch-colossus: #42d392;
+  --fwj-branch-terrafab: #ffb366;
+  --fwj-branch-grok: #78a9ff;
+  --fwj-branch-spacex: #be95ff;
+  --fwj-branch-tesla: #ff8389;
+  --fwj-branch-spacex-ops: #a6c8ff;
+  --fwj-branch-x-corp: #c6c6c6;
+  --fwj-branch-neuralink: #33b1ff;
+  --fwj-branch-boring: #a8a29e;
+  --fwj-branch-openai: #3ddbd9;
+
+  /* ── Flip signal types (MACD / BB / squeeze) ── */
+  --fwj-flip-macd-bull: #42d392;
+  --fwj-flip-macd-bear: #f07178;
+  --fwj-flip-hist-bull: #42d392;
+  --fwj-flip-hist-bear: #f07178;
+  --fwj-flip-bb-upper: #78a9ff;
+  --fwj-flip-bb-lower: #f07178;
+  --fwj-flip-bb-reentry: #9aa0a6;
+  --fwj-flip-sma: #e6c068;
+  --fwj-flip-squeeze-on: #f07178;
+  --fwj-flip-squeeze-release: #42d392;
+
+  /* ── Bollinger compression / squeeze tiers (sequential) ── */
+  --fwj-squeeze-high: #42d392;
+  --fwj-squeeze-mid: #e6c068;
+  --fwj-squeeze-low: #9aa0a6;
+
+  /* ── Stream feed kinds (categorical + left rail) ── */
+  --fwj-kind-flip: #c6a0f6;
+  --fwj-kind-grok: #e6c068;
+  --fwj-kind-milestone: #42d392;
+  --fwj-kind-world: #78a9ff;
+
+  /* ── Heatmap sequential scale (low → high activity) ── */
+  --fwj-heatmap-empty: #1a1f28;
+  --fwj-heatmap-track: #12151a;
+  --fwj-heatmap-axis: #9aa0a6;
+  --fwj-heatmap-grid: #2a3140;
+
+  /* ── Chart series palette (Carbon-inspired 14, dark-theme curated) ── */
+  --fwj-chart-1: #78a9ff;
+  --fwj-chart-2: #42d392;
+  --fwj-chart-3: #c6a0f6;
+  --fwj-chart-4: #e6c068;
+  --fwj-chart-5: #ff8389;
+  --fwj-chart-6: #42beaa;
+  --fwj-chart-7: #ffb366;
+  --fwj-chart-8: #82cfff;
+  --fwj-chart-9: #be95ff;
+  --fwj-chart-10: #3ddbd9;
+  --fwj-chart-11: #ff7eb6;
+  --fwj-chart-12: #08bdba;
+  --fwj-chart-13: #f9e2af;
+  --fwj-chart-14: #d4bbff;
+
+  /* ── Layout (shared with pages) ── */
+  --fwj-max-width: 1100px;
+  --fwj-font: ui-sans-serif, system-ui, sans-serif;
+  --fwj-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}

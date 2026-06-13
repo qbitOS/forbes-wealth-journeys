@@ -9,8 +9,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_ROWS = Path("/Volumes/qbitOS/00.dev/cursor/robinhood-agentic/data/flip-board/rows.json")
-DEFAULT_CHARTS = Path("/Volumes/qbitOS/00.dev/cursor/robinhood-agentic/data/flip-board/charts")
+DEFAULT_ROWS = Path.home() / "Projects/robinhood-agentic/data/flip-board/rows.json"
+DEFAULT_CHARTS = Path.home() / "Projects/robinhood-agentic/data/flip-board/charts"
 PROFILES_PATH = ROOT / "data/forbes-billionaires.json"
 ENTITIES_PATH = ROOT / "data/entities.json"
 OUT_PATH = ROOT / "data/market-crossover.json"

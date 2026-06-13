@@ -1,0 +1,546 @@
+{
+  "source": "https://fornevercollective.github.io/grok-repo-template/docs/assets/pages-configurator.js",
+  "extractedAt": "2026-06-12T00:30:58.137952+00:00",
+  "clusterEvents": [
+    {
+      "sort": "2023-07",
+      "date": "Jul 2023",
+      "branch": "grok",
+      "id": "xai-founded",
+      "title": "xAI announced",
+      "approx": false
+    },
+    {
+      "sort": "2023-11",
+      "date": "Nov 2023",
+      "branch": "grok",
+      "id": "grok-preview",
+      "title": "Grok preview on X Premium+",
+      "approx": false
+    },
+    {
+      "sort": "2023-11",
+      "date": "Nov 2023",
+      "branch": "grok",
+      "id": "grok-1",
+      "title": "Grok-1 \u00b7 314B MoE",
+      "approx": false
+    },
+    {
+      "sort": "2024-03",
+      "date": "Mar 2024",
+      "branch": "grok",
+      "id": "grok-1-oss",
+      "title": "Grok-1 open source (Apache)",
+      "approx": false
+    },
+    {
+      "sort": "2024-03",
+      "date": "Mar 2024",
+      "branch": "colossus",
+      "id": "memphis-start",
+      "title": "Colossus build starts \u00b7 Memphis",
+      "approx": true
+    },
+    {
+      "sort": "2024-05",
+      "date": "May 2024",
+      "branch": "grok",
+      "id": "series-b",
+      "title": "$6B Series B",
+      "approx": false
+    },
+    {
+      "sort": "2024-06",
+      "date": "Jun 5 2024",
+      "branch": "colossus",
+      "id": "colossus-announce",
+      "title": "Colossus announced \u00b7 100K H100 target",
+      "approx": false
+    },
+    {
+      "sort": "2024-08",
+      "date": "Aug 2024",
+      "branch": "colossus",
+      "id": "colossus-live",
+      "title": "Colossus live \u00b7 122-day build",
+      "approx": false
+    },
+    {
+      "sort": "2024-08",
+      "date": "Aug 2024",
+      "branch": "grok",
+      "id": "grok-2",
+      "title": "Grok-2 released",
+      "approx": false
+    },
+    {
+      "sort": "2024-12",
+      "date": "Dec 2024",
+      "branch": "grok",
+      "id": "aurora",
+      "title": "Aurora image model",
+      "approx": false
+    },
+    {
+      "sort": "2024-12",
+      "date": "Dec 2024",
+      "branch": "colossus",
+      "id": "100k-gpus",
+      "title": "100K GPUs operational",
+      "approx": true
+    },
+    {
+      "sort": "2025-02",
+      "date": "Feb 2025",
+      "branch": "grok",
+      "id": "grok-3",
+      "title": "Grok 3 launched",
+      "approx": false
+    },
+    {
+      "sort": "2025-02",
+      "date": "Feb 2025",
+      "branch": "colossus",
+      "id": "scale-200k",
+      "title": "Scaled to 200K GPUs \u00b7 92 days",
+      "approx": false
+    },
+    {
+      "sort": "2025-03",
+      "date": "Mar 2025",
+      "branch": "colossus",
+      "id": "colossus-2",
+      "title": "Colossus 2 site \u00b7 1M sq ft",
+      "approx": false
+    },
+    {
+      "sort": "2025-07",
+      "date": "Jul 2025",
+      "branch": "grok",
+      "id": "grok-4",
+      "title": "Grok 4 \u00b7 multi-agent",
+      "approx": false
+    },
+    {
+      "sort": "2025-08",
+      "date": "Aug 2025",
+      "branch": "grok",
+      "id": "grok-imagine",
+      "title": "Grok Imagine video \u00b7 480p",
+      "approx": false
+    },
+    {
+      "sort": "2025-11",
+      "date": "Nov 2025",
+      "branch": "grok",
+      "id": "grok-4-1",
+      "title": "Grok 4.1 \u00b7 EQ-Bench lead",
+      "approx": false
+    },
+    {
+      "sort": "2026-01",
+      "date": "Jan 2026",
+      "branch": "colossus",
+      "id": "colossus-2-gw",
+      "title": "Colossus 2 \u00b7 ~1 GW online",
+      "approx": true
+    },
+    {
+      "sort": "2026-02",
+      "date": "Feb 17 2026",
+      "branch": "grok",
+      "id": "grok-4-20",
+      "title": "Grok 4.20 \u00b7 4-agent beta",
+      "approx": false
+    },
+    {
+      "sort": "2026-02",
+      "date": "Feb 2026",
+      "branch": "spacex",
+      "id": "xai-merge",
+      "title": "SpaceX acquires xAI \u00b7 ~$1.25T",
+      "approx": true,
+      "merge": true
+    },
+    {
+      "sort": "2026-03",
+      "date": "Mar 21 2026",
+      "branch": "terrafab",
+      "id": "terrafab-launch",
+      "title": "Terafab announced \u00b7 Austin proto",
+      "approx": false
+    },
+    {
+      "sort": "2026-03",
+      "date": "Mar 2026",
+      "branch": "colossus",
+      "id": "555k-target",
+      "title": "555K GPU target \u00b7 $659M permit",
+      "approx": true
+    },
+    {
+      "sort": "2026-04",
+      "date": "Apr 1 2026",
+      "branch": "spacex",
+      "id": "sec-confidential",
+      "title": "Confidential SEC filing",
+      "approx": false
+    },
+    {
+      "sort": "2026-04",
+      "date": "Apr 7 2026",
+      "branch": "terrafab",
+      "id": "intel-joins",
+      "title": "Intel joins \u00b7 18A foundry",
+      "approx": false
+    },
+    {
+      "sort": "2026-04",
+      "date": "Apr 2026",
+      "branch": "terrafab",
+      "id": "supermicro",
+      "title": "Supermicro infra partner",
+      "approx": false
+    },
+    {
+      "sort": "2026-04",
+      "date": "Apr 17 2026",
+      "branch": "grok",
+      "id": "grok-4-3",
+      "title": "Grok 4.3 beta \u00b7 2M context",
+      "approx": false
+    },
+    {
+      "sort": "2026-05",
+      "date": "May 14 2026",
+      "branch": "grok",
+      "id": "grok-build",
+      "title": "Grok Build CLI shipped",
+      "approx": false
+    },
+    {
+      "sort": "2026-05",
+      "date": "May 20 2026",
+      "branch": "spacex",
+      "id": "s-1-public",
+      "title": "Public S-1 filed",
+      "approx": false
+    },
+    {
+      "sort": "2026-05",
+      "date": "May 2026",
+      "branch": "terrafab",
+      "id": "55b-filing",
+      "title": "$55B phase \u00b7 up to $119B",
+      "approx": true
+    },
+    {
+      "sort": "2026-05",
+      "date": "May 2026",
+      "branch": "colossus",
+      "id": "anthropic-lease",
+      "title": "Anthropic leases Colossus 1",
+      "approx": true
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 3 2026",
+      "branch": "spacex",
+      "id": "ipo-price",
+      "title": "$135 \u00b7 $1.77T \u00b7 $75B raise",
+      "approx": false
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 3 2026",
+      "branch": "terrafab",
+      "id": "tax-abate",
+      "title": "Grimes County tax abatement",
+      "approx": false
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 4 2026",
+      "branch": "spacex",
+      "id": "roadshow",
+      "title": "IPO roadshow \u00b7 oversubscribed",
+      "approx": false
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 11 2026",
+      "branch": "spacex",
+      "id": "ipo-priced",
+      "title": "IPO priced \u00b7 555.6M shares",
+      "approx": false
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 12 2026",
+      "branch": "spacex",
+      "id": "spcx-trade",
+      "title": "SPCX lists \u00b7 Nasdaq + Texas",
+      "approx": false
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 13 2026",
+      "branch": "spacex",
+      "id": "msci-inclusion",
+      "title": "MSCI World inclusion T+1",
+      "approx": false
+    }
+  ],
+  "portfolioEvents": [
+    {
+      "sort": "2010-06",
+      "date": "Jun 2010",
+      "branch": "tesla",
+      "id": "tsla-ipo",
+      "title": "Tesla IPO \u00b7 $17/share",
+      "approx": false
+    },
+    {
+      "sort": "2015-12",
+      "date": "Dec 2015",
+      "branch": "openai",
+      "id": "openai-founded",
+      "title": "OpenAI co-founded",
+      "approx": false
+    },
+    {
+      "sort": "2016-07",
+      "date": "Jul 2016",
+      "branch": "neuralink",
+      "id": "neuralink-founded",
+      "title": "Neuralink founded",
+      "approx": true
+    },
+    {
+      "sort": "2017-01",
+      "date": "Jan 2017",
+      "branch": "boring",
+      "id": "boring-founded",
+      "title": "Boring Company founded",
+      "approx": false
+    },
+    {
+      "sort": "2018-02",
+      "date": "Feb 2018",
+      "branch": "openai",
+      "id": "openai-exit",
+      "title": "Leaves OpenAI board",
+      "approx": false
+    },
+    {
+      "sort": "2018-12",
+      "date": "Dec 2018",
+      "branch": "boring",
+      "id": "hawthorne-tunnel",
+      "title": "Hawthorne test tunnel opens",
+      "approx": false
+    },
+    {
+      "sort": "2019-05",
+      "date": "May 2019",
+      "branch": "boring",
+      "id": "vegas-loop",
+      "title": "Vegas Loop \u00b7 $48.7M contract",
+      "approx": false
+    },
+    {
+      "sort": "2022-04",
+      "date": "Apr 2022",
+      "branch": "x-corp",
+      "id": "twitter-bid",
+      "title": "$44B Twitter bid",
+      "approx": false
+    },
+    {
+      "sort": "2022-10",
+      "date": "Oct 2022",
+      "branch": "x-corp",
+      "id": "twitter-close",
+      "title": "Twitter acquisition closes",
+      "approx": false
+    },
+    {
+      "sort": "2023-04",
+      "date": "Apr 2023",
+      "branch": "spacex-ops",
+      "id": "starship-ift1",
+      "title": "Starship IFT-1 first test",
+      "approx": false
+    },
+    {
+      "sort": "2023-07",
+      "date": "Jul 2023",
+      "branch": "x-corp",
+      "id": "rebrand-x",
+      "title": "Rebranded to X",
+      "approx": false
+    },
+    {
+      "sort": "2023-05",
+      "date": "May 2023",
+      "branch": "neuralink",
+      "id": "fda-prime",
+      "title": "FDA PRIME trial approved",
+      "approx": false
+    },
+    {
+      "sort": "2024-01",
+      "date": "Jan 2024",
+      "branch": "neuralink",
+      "id": "first-implant",
+      "title": "First human implant \u00b7 Noland",
+      "approx": false
+    },
+    {
+      "sort": "2024-06",
+      "date": "Jun 2024",
+      "branch": "spacex-ops",
+      "id": "ift4-reentry",
+      "title": "IFT-4 \u00b7 controlled reentry",
+      "approx": false
+    },
+    {
+      "sort": "2024-10",
+      "date": "Oct 2024",
+      "branch": "spacex-ops",
+      "id": "mechazilla",
+      "title": "Mechazilla booster catch \u00b7 IFT-5",
+      "approx": false
+    },
+    {
+      "sort": "2024-12",
+      "date": "Dec 2024",
+      "branch": "tesla",
+      "id": "tsla-ath-480",
+      "title": "TSLA ~$480 \u00b7 post-election",
+      "approx": true
+    },
+    {
+      "sort": "2024-12",
+      "date": "Dec 2024",
+      "branch": "spacex-ops",
+      "id": "falcon-134",
+      "title": "134 Falcon launches in 2024",
+      "approx": false
+    },
+    {
+      "sort": "2025-03",
+      "date": "Mar 28 2025",
+      "branch": "x-corp",
+      "id": "xai-acquires-x",
+      "title": "xAI acquires X \u00b7 $80B val",
+      "approx": false,
+      "merge": true
+    },
+    {
+      "sort": "2025-06",
+      "date": "Jun 2025",
+      "branch": "neuralink",
+      "id": "series-e",
+      "title": "$650M Series E \u00b7 ~$9B val",
+      "approx": true
+    },
+    {
+      "sort": "2025-07",
+      "date": "Jul 2025",
+      "branch": "neuralink",
+      "id": "dual-implant",
+      "title": "Two implants in one day",
+      "approx": false
+    },
+    {
+      "sort": "2025-10",
+      "date": "Oct 2025",
+      "branch": "spacex-ops",
+      "id": "ift11-block2",
+      "title": "IFT-11 \u00b7 final Block 2 flight",
+      "approx": false
+    },
+    {
+      "sort": "2025-12",
+      "date": "Dec 22 2025",
+      "branch": "tesla",
+      "id": "tsla-ath-498",
+      "title": "TSLA ATH $498.83",
+      "approx": false
+    },
+    {
+      "sort": "2025-12",
+      "date": "Dec 2025",
+      "branch": "neuralink",
+      "id": "high-volume",
+      "title": "High-volume production \u00b7 2026",
+      "approx": false
+    },
+    {
+      "sort": "2025-12",
+      "date": "Dec 2025",
+      "branch": "spacex-ops",
+      "id": "starlink-11b",
+      "title": "Starlink ~$11.4B revenue",
+      "approx": true
+    },
+    {
+      "sort": "2026-01",
+      "date": "Jan 2026",
+      "branch": "tesla",
+      "id": "robotaxi-austin",
+      "title": "Unsupervised robotaxi \u00b7 Austin",
+      "approx": false
+    },
+    {
+      "sort": "2026-01",
+      "date": "Jan 2026",
+      "branch": "neuralink",
+      "id": "21-patients",
+      "title": "21 patients globally",
+      "approx": true
+    },
+    {
+      "sort": "2026-02",
+      "date": "Feb 2026",
+      "branch": "tesla",
+      "id": "cybercab-line",
+      "title": "First Cybercab \u00b7 Giga Texas",
+      "approx": false
+    },
+    {
+      "sort": "2026-02",
+      "date": "Feb 2026",
+      "branch": "spacex-ops",
+      "id": "starlink-10m",
+      "title": "10M+ Starlink subscribers",
+      "approx": true
+    },
+    {
+      "sort": "2026-03",
+      "date": "Mar 2026",
+      "branch": "x-corp",
+      "id": "imagine-paywall",
+      "title": "Imagine \u2192 SuperGrok paywall",
+      "approx": false
+    },
+    {
+      "sort": "2026-05",
+      "date": "May 22 2026",
+      "branch": "spacex-ops",
+      "id": "starship-v3",
+      "title": "Starship V3 \u00b7 Flight 12 \u00b7 Pad 2",
+      "approx": false
+    },
+    {
+      "sort": "2026-06",
+      "date": "Jun 11 2026",
+      "branch": "tesla",
+      "id": "tsla-snapshot",
+      "title": "TSLA ~$394 \u00b7 SpaceX rotation",
+      "approx": true
+    }
+  ]
+}

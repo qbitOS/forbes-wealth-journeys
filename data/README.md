@@ -85,6 +85,18 @@ python3 scripts/build_market_crossover.py
 python3 scripts/build_market_crossover.py /path/to/robinhood-agentic/data/flip-board/rows.json
 ```
 
+[`industry-stream.json`](industry-stream.json) — unified stream for `unified.html` (flips + milestones + Grok branches + world context + Q/M/W/D compression). Rebuild after market-crossover:
+
+```bash
+python3 scripts/build_industry_stream.py /path/to/robinhood-agentic/data/flip-board/rows.json
+```
+
+[`grok-branch-events.json`](grok-branch-events.json) — Grok cluster/portfolio timeline events (source for industry stream). Sync from robinhood-agentic when pages-configurator events change:
+
+```bash
+cp ../robinhood-agentic/data/grok-template-timeline-raw.json data/grok-branch-events.json
+```
+
 [`historical-net-worth.json`](historical-net-worth.json) — estimated net worth by year for all **100** Forbes ranks, keyed by rank (`"1"` … `"100"`). Loaded in the Story tab line chart:
 
 ```json
