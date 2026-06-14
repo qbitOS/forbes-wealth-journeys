@@ -1360,35 +1360,40 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     });
   }
 
+  function applyTimelineDeepLink(hashInput) {
+    const hash = (hashInput || window.location.hash || '').slice(1);
+    if (!hash.startsWith('timeline-')) return false;
+
+    const rest = hash.slice('timeline-'.length);
+    let sectionId = 'cluster';
+    let branchId = 'all';
+
+    if (rest.startsWith('portfolio')) {
+      sectionId = 'portfolio';
+      const suffix = rest.slice('portfolio'.length);
+      branchId = suffix.startsWith('-') ? suffix.slice(1) : 'all';
+    } else if (rest.startsWith('cluster')) {
+      sectionId = 'cluster';
+      const suffix = rest.slice('cluster'.length);
+      branchId = suffix.startsWith('-') ? suffix.slice(1) : 'all';
+    }
+
+    const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
+    if (!section) return false;
+
+    const valid = branchId === 'all' || section.branches.some((b) => b.id === branchId);
+    if (!valid) branchId = 'all';
+
+    timelineState.branchFocus[sectionId] = branchId;
+    TIMELINE_SECTIONS.forEach((s) => renderTimelineCompanyPills(s));
+    setTimelineBranch(sectionId, branchId, { syncActivity: false });
+    return true;
+  }
+
   function initUnifiedTimeline() {
     TIMELINE_SECTIONS.forEach((section) => renderTimelineCompanyPills(section));
 
-    const hash = window.location.hash.slice(1);
-    if (hash.startsWith('timeline-')) {
-      const rest = hash.slice('timeline-'.length);
-      let sectionId = 'cluster';
-      let branchId = 'all';
-
-      if (rest.startsWith('portfolio')) {
-        sectionId = 'portfolio';
-        const suffix = rest.slice('portfolio'.length);
-        branchId = suffix.startsWith('-') ? suffix.slice(1) : 'all';
-      } else if (rest.startsWith('cluster')) {
-        sectionId = 'cluster';
-        const suffix = rest.slice('cluster'.length);
-        branchId = suffix.startsWith('-') ? suffix.slice(1) : 'all';
-      }
-
-      const section = TIMELINE_SECTIONS.find((s) => s.id === sectionId);
-      if (section) {
-        const valid = branchId === 'all' || section.branches.some((b) => b.id === branchId);
-        if (!valid) branchId = 'all';
-        timelineState.branchFocus[sectionId] = branchId;
-        TIMELINE_SECTIONS.forEach((s) => renderTimelineCompanyPills(s));
-        setTimelineBranch(sectionId, branchId, { syncActivity: false });
-        return;
-      }
-    }
+    if (applyTimelineDeepLink()) return;
 
     renderUnifiedVentureView(forbesProfiles.find((p) => p.rank === 1));
   }
@@ -3012,18 +3017,36 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
         const href = link.getAttribute('href');
         if (!href || href === '#') return;
         const id = href.slice(1);
-        const target = document.getElementById(id);
+        let target = document.getElementById(id);
+        if (!target) {
+          if (id.startsWith('timeline-portfolio')) {
+            target = document.getElementById('timeline-portfolio') || document.getElementById('timeline');
+          } else if (id.startsWith('timeline-cluster')) {
+            target = document.getElementById('timeline-block-cluster') || document.getElementById('timeline');
+          } else if (id.startsWith('timeline-')) {
+            target = document.getElementById('timeline');
+          }
+        }
         if (!target) return;
         e.preventDefault();
         const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
         window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+        // Preserve the full sub-hash (e.g. #timeline-portfolio-neuralink) so deep link parsers pick the lane/branch
         updateHashWithoutScroll(`#${id}`);
+        // Apply focus/branch immediately for in-page nav (e.g. top menu Portfolio button)
+        if (id.startsWith('timeline-')) {
+          applyTimelineDeepLink(`#${id}`);
+        }
       });
     });
 
     window.addEventListener('hashchange', () => {
       const y = history.state?.scrollY;
       if (typeof y === 'number') window.scrollTo(0, y);
+      const h = window.location.hash;
+      if (h.startsWith('#timeline-')) {
+        applyTimelineDeepLink(h);
+      }
     });
   }
 
