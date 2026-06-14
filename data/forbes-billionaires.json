@@ -366,20 +366,48 @@
     "age": 82,
     "country": "United States",
     "sector": "Technology",
-    "companies": [
-      "Oracle"
-    ],
-    "sourceOfWealth": "Oracle",
     "firstFortuneDecade": "1970s",
-    "summary": "Co-founder and chairman of Oracle Corporation.",
+    "summary": "Co-founder and longtime CEO of Oracle Corporation; major investor in other tech.",
     "timeline": [
       {
         "year": "1977",
         "type": "founding",
         "entityId": "oracle",
-        "title": "Founded Oracle",
+        "title": "Co-founded Oracle (as Software Development Labs)",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Larry_Ellison"
+      },
+      {
+        "year": "1986",
+        "type": "ipo",
+        "entityId": "oracle",
+        "title": "Oracle IPO",
         "valuationUsdB": null,
         "source": "https://en.wikipedia.org/wiki/Oracle_Corporation"
+      },
+      {
+        "year": "2000",
+        "type": "milestone",
+        "entityId": "oracle",
+        "title": "Wealth peak ~$47B (dot-com era Oracle boom)",
+        "valuationUsdB": 47,
+        "source": "historical Forbes lists"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "oracle",
+        "title": "Wealth ~$28B post acquisitions era",
+        "valuationUsdB": 28,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires_2010"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "oracle",
+        "title": "AI/cloud resurgence drives wealth surge",
+        "valuationUsdB": 130,
+        "source": "Forbes"
       }
     ],
     "grokipediaLink": "https://grokipedia.com/page/Larry_Ellison",
@@ -389,8 +417,8 @@
       {
         "entity": "Oracle",
         "ticker": "ORCL",
-        "stakePct": 42,
-        "valueUsdB": 220,
+        "stakePct": 40,
+        "valueUsdB": 120,
         "type": "public"
       }
     ],
@@ -398,9 +426,10 @@
       {
         "id": "oracle",
         "name": "Oracle",
-        "role": "co-founder",
+        "role": "co-founder_ceo",
         "founded": 1977,
-        "status": "public"
+        "status": "public",
+        "ticker": "ORCL"
       }
     ]
   },
@@ -413,7 +442,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Michael_Dell",
@@ -423,29 +452,62 @@
       {
         "entity": "Dell Technologies",
         "ticker": "DELL",
-        "stakePct": 52,
-        "valueUsdB": 110,
+        "stakePct": 12,
+        "valueUsdB": 80,
         "type": "public"
       }
     ],
     "entities": [
       {
         "id": "dell",
-        "name": "Dell Technologies",
+        "name": "Dell",
         "role": "founder",
         "founded": 1984,
-        "status": "public"
+        "status": "public",
+        "ticker": "DELL"
       }
     ],
-    "summary": "Founder of Dell Technologies.",
+    "summary": "Founder of Dell Technologies; pioneered direct-to-consumer PC model.",
     "timeline": [
       {
         "year": "1984",
         "type": "founding",
         "entityId": "dell",
-        "title": "Founded Dell",
+        "title": "Founded Dell Computer (PC's Limited) from dorm",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Michael_Dell"
+      },
+      {
+        "year": "1988",
+        "type": "ipo",
+        "entityId": "dell",
+        "title": "Dell IPO",
         "valuationUsdB": null,
         "source": "https://en.wikipedia.org/wiki/Dell"
+      },
+      {
+        "year": "1999",
+        "type": "milestone",
+        "entityId": "dell",
+        "title": "Peak wealth era as Dell became top PC maker; ~$15B+ est",
+        "valuationUsdB": 15,
+        "source": "historical reports"
+      },
+      {
+        "year": "2013",
+        "type": "milestone",
+        "entityId": "dell",
+        "title": "Took Dell private in $24.4B deal",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Dell"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "dell",
+        "title": "Re-IPO and AI server boom; wealth recovery to $100B+",
+        "valuationUsdB": 120,
+        "source": "Forbes"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -517,7 +579,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Jensen_Huang",
@@ -571,7 +633,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "France",
     "sector": "Luxury Goods",
     "grokipediaLink": "https://grokipedia.com/page/Bernard_Arnault_&_family",
@@ -582,7 +644,7 @@
         "entity": "LVMH",
         "ticker": "MC.PA",
         "stakePct": 48,
-        "valueUsdB": 160,
+        "valueUsdB": 150,
         "type": "public"
       }
     ],
@@ -592,18 +654,43 @@
         "name": "LVMH",
         "role": "chairman_ceo",
         "founded": 1987,
-        "status": "public"
+        "status": "public",
+        "ticker": "MC.PA"
       }
     ],
-    "summary": "Chairman and CEO of LVMH.",
+    "summary": "Chairman and CEO of LVMH; built world's largest luxury goods conglomerate (Louis Vuitton, Dior, etc).",
     "timeline": [
       {
-        "year": "1987",
-        "type": "merger",
+        "year": "1989",
+        "type": "milestone",
         "entityId": "lvmh",
-        "title": "LVMH formed",
+        "title": "Took control of LVMH via merger/buildup",
         "valuationUsdB": null,
-        "source": "https://en.wikipedia.org/wiki/LVMH"
+        "source": "https://en.wikipedia.org/wiki/Bernard_Arnault"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Wealth ~$27.5B",
+        "valuationUsdB": 27.5,
+        "source": "Forbes 2010 list"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Luxury goods boom; LVMH leader",
+        "valuationUsdB": null,
+        "source": "Forbes"
+      },
+      {
+        "year": "2023",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Briefly world's richest via LVMH surge",
+        "valuationUsdB": 200,
+        "source": "Forbes"
       }
     ],
     "firstFortuneDecade": "1980s"
@@ -617,7 +704,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Finance",
     "grokipediaLink": "https://grokipedia.com/page/Warren_Buffett",
@@ -671,7 +758,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Spain",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Amancio_Ortega",
@@ -717,7 +804,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Rob_Walton_&_family",
@@ -763,7 +850,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Jim_Walton_&_family",
@@ -809,7 +896,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Alice_Walton",
@@ -819,8 +906,8 @@
       {
         "entity": "Walmart",
         "ticker": "WMT",
-        "stakePct": 13,
-        "valueUsdB": 72,
+        "stakePct": 0.6,
+        "valueUsdB": 35,
         "type": "public"
       }
     ],
@@ -828,20 +915,37 @@
       {
         "id": "walmart",
         "name": "Walmart",
-        "role": "major_shareholder",
+        "role": "heir",
         "founded": 1962,
-        "status": "public"
+        "status": "public",
+        "ticker": "WMT"
       }
     ],
-    "summary": "Walmart heir.",
+    "summary": "Heiress to Walmart fortune; one of the wealthiest women via retail empire stake.",
     "timeline": [
       {
         "year": "1962",
         "type": "founding",
         "entityId": "walmart",
-        "title": "Walmart founded",
+        "title": "Walmart founded by father Sam Walton (family wealth origin)",
         "valuationUsdB": null,
         "source": "https://en.wikipedia.org/wiki/Walmart"
+      },
+      {
+        "year": "1970",
+        "type": "ipo",
+        "entityId": "walmart",
+        "title": "Walmart IPO; family stake builds",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Walmart"
+      },
+      {
+        "year": "1992",
+        "type": "milestone",
+        "entityId": "walmart",
+        "title": "Sam Walton passes; family inherits/holds vast stake",
+        "valuationUsdB": null,
+        "source": "Forbes"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -855,7 +959,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Mexico",
     "sector": "Telecom",
     "grokipediaLink": "https://grokipedia.com/page/Carlos_Slim_Helu_&_family",
@@ -863,31 +967,63 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Carlos_Slim",
     "wealthBreakdown": [
       {
-        "entity": "Am\u00e9rica M\u00f3vil",
+        "entity": "América Móvil",
         "ticker": "AMX",
-        "stakePct": 55,
-        "valueUsdB": 80,
+        "stakePct": 17,
+        "valueUsdB": 20,
         "type": "public"
+      },
+      {
+        "entity": "Grupo Carso / other",
+        "ticker": null,
+        "stakePct": null,
+        "valueUsdB": 30,
+        "type": "mixed"
       }
     ],
     "entities": [
       {
-        "id": "america-movil",
-        "name": "Am\u00e9rica M\u00f3vil",
-        "role": "major_shareholder",
-        "founded": 2000,
-        "status": "public"
+        "id": "telmex",
+        "name": "Telmex / América Móvil",
+        "role": "majority_owner",
+        "founded": 1947,
+        "status": "public",
+        "ticker": "AMX"
       }
     ],
-    "summary": "Owner of Am\u00e9rica M\u00f3vil.",
+    "summary": "Mexican business magnate; controls América Móvil, Grupo Carso; dominated 2010s wealth lists via telecom and diversified holdings.",
     "timeline": [
       {
-        "year": "1980s",
-        "type": "acquisition",
-        "entityId": "america-movil",
-        "title": "Acquired telecom assets",
+        "year": "1990",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "Acquired Telmex in privatization; built telecom empire",
         "valuationUsdB": null,
         "source": "https://en.wikipedia.org/wiki/Carlos_Slim"
+      },
+      {
+        "year": "2005",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "Wealth ~$23.8B",
+        "valuationUsdB": 23.8,
+        "source": "Forbes historical"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "World's richest person, $53.5B (Forbes)",
+        "valuationUsdB": 53.5,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires_2010"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "Wealth $77.1B, still top tier",
+        "valuationUsdB": 77.1,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires_2015"
       }
     ],
     "firstFortuneDecade": "1960s"
@@ -901,7 +1037,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Steve_Ballmer",
@@ -955,7 +1091,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Media",
     "grokipediaLink": "https://grokipedia.com/page/Michael_Bloomberg",
@@ -1076,7 +1212,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Bill_Gates",
@@ -1086,9 +1222,16 @@
       {
         "entity": "Microsoft",
         "ticker": "MSFT",
-        "stakePct": 1.3,
-        "valueUsdB": 110,
+        "stakePct": 1.0,
+        "valueUsdB": 50,
         "type": "public"
+      },
+      {
+        "entity": "Other investments / Cascade",
+        "ticker": null,
+        "stakePct": null,
+        "valueUsdB": 50,
+        "type": "mixed"
       }
     ],
     "entities": [
@@ -1097,18 +1240,59 @@
         "name": "Microsoft",
         "role": "co-founder",
         "founded": 1975,
-        "status": "public"
+        "status": "public",
+        "ticker": "MSFT"
       }
     ],
-    "summary": "Co-founder of Microsoft; major philanthropist.",
+    "summary": "Co-founder of Microsoft; dominated global wealth rankings for much of 1995-2017 via software empire and investments. Philanthropy via Gates Foundation.",
     "timeline": [
       {
         "year": "1975",
         "type": "founding",
         "entityId": "microsoft",
-        "title": "Co-founded Microsoft",
+        "title": "Co-founded Microsoft with Paul Allen",
         "valuationUsdB": null,
-        "source": "https://en.wikipedia.org/wiki/Microsoft"
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "1986",
+        "type": "ipo",
+        "entityId": "microsoft",
+        "title": "Microsoft IPO",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "1987",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "Youngest self-made billionaire (Forbes first list, $1.25B)",
+        "valuationUsdB": 1.25,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "1995",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "First #1 on Forbes World's Billionaires ($12.5B+)",
+        "valuationUsdB": 12.5,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires"
+      },
+      {
+        "year": "1999",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "Peak ~$90B during dot-com (first centibillionaire briefly)",
+        "valuationUsdB": 90,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "2000",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "US antitrust case peak; wealth ~$60B post-bubble start",
+        "valuationUsdB": 60,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires"
       }
     ],
     "firstFortuneDecade": "1970s"
@@ -1198,7 +1382,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "France",
     "sector": "Luxury Goods",
     "grokipediaLink": "https://grokipedia.com/page/Francoise_Bettencourt_Meyers_&_family",
@@ -1206,7 +1390,7 @@
     "wikipediaLink": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers",
     "wealthBreakdown": [
       {
-        "entity": "L'Or\u00e9al",
+        "entity": "L'Oréal",
         "ticker": "OR.PA",
         "stakePct": 33,
         "valueUsdB": 90,
@@ -1216,19 +1400,19 @@
     "entities": [
       {
         "id": "loreal",
-        "name": "L'Or\u00e9al",
+        "name": "L'Oréal",
         "role": "major_shareholder",
         "founded": 1909,
         "status": "public"
       }
     ],
-    "summary": "Heiress of L'Or\u00e9al.",
+    "summary": "Heiress of L'Oréal.",
     "timeline": [
       {
         "year": "1950s",
         "type": "inheritance",
         "entityId": "loreal",
-        "title": "Inherited L'Or\u00e9al stake",
+        "title": "Inherited L'Oréal stake",
         "valuationUsdB": null,
         "source": "https://en.wikipedia.org/wiki/Fran%C3%A7oise_Bettencourt_Meyers"
       }
@@ -1320,7 +1504,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "India",
     "sector": "Diversified",
     "grokipediaLink": "https://grokipedia.com/page/Mukesh_Ambani",
@@ -1366,7 +1550,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "India",
     "sector": "Diversified",
     "grokipediaLink": "https://grokipedia.com/page/Gautam_Adani",
@@ -1411,7 +1595,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Diversified",
     "grokipediaLink": "https://grokipedia.com/page/Julia_Koch_&_family",
@@ -1456,7 +1640,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Japan",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Masayoshi_Son",
@@ -1502,7 +1686,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Diversified",
     "grokipediaLink": "https://grokipedia.com/page/Charles_Koch_&_family",
@@ -1547,7 +1731,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Zhang_Yiming",
@@ -1592,7 +1776,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Japan",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Tadashi_Yanai_&_family",
@@ -1719,22 +1903,22 @@
   },
   {
     "rank": 31,
-    "name": "Germ\u00e1n Larrea Mota Velasco & family",
+    "name": "Germán Larrea Mota Velasco & family",
     "netWorth": {
       "value": 63.1,
       "unit": "B",
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Mexico",
     "sector": "Mining",
-    "grokipediaLink": "https://grokipedia.com/page/Germ\u00e1n_Larrea_Mota_Velasco_&_family",
+    "grokipediaLink": "https://grokipedia.com/page/Germán_Larrea_Mota_Velasco_&_family",
     "forbesProfile": "https://www.forbes.com/profile/germ%C3%A1n-larrea-mota-velasco/",
     "wikipediaLink": "https://en.wikipedia.org/wiki/Germ%C3%A1n_Larrea_Mota-Velasco",
     "wealthBreakdown": [
       {
-        "entity": "Grupo M\u00e9xico",
+        "entity": "Grupo México",
         "ticker": "GMEXICOB.MX",
         "stakePct": 65,
         "valueUsdB": 55,
@@ -1744,7 +1928,7 @@
     "entities": [
       {
         "id": "grupo-mexico",
-        "name": "Grupo M\u00e9xico",
+        "name": "Grupo México",
         "role": "major_shareholder",
         "founded": 1978,
         "status": "public"
@@ -1772,7 +1956,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Germany",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Dieter_Schwarz",
@@ -1817,7 +2001,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "Beverages",
     "grokipediaLink": "https://grokipedia.com/page/Zhong_Shanshan",
@@ -1863,7 +2047,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "Batteries",
     "grokipediaLink": "https://grokipedia.com/page/Robin_Zeng",
@@ -1909,7 +2093,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Finance",
     "grokipediaLink": "https://grokipedia.com/page/Ken_Griffin",
@@ -1954,7 +2138,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Ma_Huateng",
@@ -2000,7 +2184,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Hong Kong",
     "sector": "Diversified",
     "grokipediaLink": "https://grokipedia.com/page/Li_Ka-shing",
@@ -2046,7 +2230,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Italy",
     "sector": "Food",
     "grokipediaLink": "https://grokipedia.com/page/Giovanni_Ferrero",
@@ -2091,7 +2275,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Chile",
     "sector": "Mining",
     "grokipediaLink": "https://grokipedia.com/page/Iris_Fontbona_&_family",
@@ -2137,7 +2321,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Retail",
     "grokipediaLink": "https://grokipedia.com/page/Lukas_Walton",
@@ -2183,7 +2367,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Switzerland",
     "sector": "Shipping",
     "grokipediaLink": "https://grokipedia.com/page/Gianluigi_Aponte",
@@ -2304,7 +2488,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Food",
     "grokipediaLink": "https://grokipedia.com/page/Jacqueline_Mars",
@@ -2349,7 +2533,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Food",
     "grokipediaLink": "https://grokipedia.com/page/John_Mars",
@@ -2546,7 +2730,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Germany",
     "sector": "Logistics",
     "grokipediaLink": "https://grokipedia.com/page/Klaus-Michael_Kuehne",
@@ -2592,7 +2776,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/William_Ding",
@@ -2638,7 +2822,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Finance",
     "grokipediaLink": "https://grokipedia.com/page/Abigail_Johnson",
@@ -2683,7 +2867,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Finance",
     "grokipediaLink": "https://grokipedia.com/page/Stephen_Schwarzman",
@@ -2729,7 +2913,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/Eric_Schmidt",
@@ -2789,7 +2973,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "France",
     "sector": "Luxury Goods",
     "grokipediaLink": "https://grokipedia.com/page/Alain_Wertheimer",
@@ -2834,7 +3018,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "France",
     "sector": "Luxury Goods",
     "grokipediaLink": "https://grokipedia.com/page/Gerard_Wertheimer",
@@ -3031,7 +3215,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "India",
     "sector": "Steel",
     "grokipediaLink": "https://grokipedia.com/page/Savitri_Jindal_&_family",
@@ -3316,7 +3500,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Casinos",
     "grokipediaLink": "https://grokipedia.com/page/Miriam_Adelson_&_family",
@@ -3362,7 +3546,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "Appliances",
     "grokipediaLink": "https://grokipedia.com/page/He_Xiangjian_&_family",
@@ -3496,7 +3680,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Diversified",
     "grokipediaLink": "https://grokipedia.com/page/Len_Blavatnik",
@@ -4161,7 +4345,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "India",
     "sector": "Steel",
     "grokipediaLink": "https://grokipedia.com/page/Lakshmi_Mittal",
@@ -4207,7 +4391,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Technology",
     "grokipediaLink": "https://grokipedia.com/page/MacKenzie_Scott",
@@ -4329,7 +4513,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "United States",
     "sector": "Healthcare",
     "grokipediaLink": "https://grokipedia.com/page/Thomas_Frist_Jr_&_family",
@@ -4603,7 +4787,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "Russia",
     "sector": "Metals",
     "grokipediaLink": "https://grokipedia.com/page/Vladimir_Potanin",
@@ -4801,7 +4985,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "China",
     "sector": "E-commerce",
     "grokipediaLink": "https://grokipedia.com/page/Colin_Huang",
@@ -5332,7 +5516,7 @@
   },
   {
     "rank": 89,
-    "name": "Fran\u00e7ois Pinault & family",
+    "name": "François Pinault & family",
     "netWorth": {
       "value": 27.6,
       "unit": "B",
@@ -5342,9 +5526,9 @@
     "age": null,
     "country": "France",
     "sector": "Fashion & Retail",
-    "grokipediaLink": "https://grokipedia.com/page/Fran\u00e7ois_Pinault_&_family",
+    "grokipediaLink": "https://grokipedia.com/page/François_Pinault_&_family",
     "forbesProfile": "https://www.forbes.com/profile/fran-ois-pinault/",
-    "wikipediaLink": "https://en.wikipedia.org/wiki/Fran\u00e7ois_Pinault_&_family",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/François_Pinault_&_family",
     "wealthBreakdown": [
       {
         "entity": "Luxury goods",
@@ -5643,7 +5827,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "India",
     "sector": "Pharmaceuticals",
     "grokipediaLink": "https://grokipedia.com/page/Cyrus_Poonawalla",
@@ -5795,7 +5979,7 @@
         "title": "Lactalis founded",
         "valuationUsdB": null,
         "source": null,
-        "description": "Grandfather Andr\u00e9 Besnier started cheese dairy.",
+        "description": "Grandfather André Besnier started cheese dairy.",
         "impact": "Dairy dynasty"
       },
       {
@@ -5805,7 +5989,7 @@
         "title": "Father expanded Lactalis",
         "valuationUsdB": null,
         "source": null,
-        "description": "Michel Besnier grew Pr\u00e9sident brand.",
+        "description": "Michel Besnier grew Président brand.",
         "impact": "French cheese leader"
       },
       {
@@ -6168,7 +6352,7 @@
       "currency": "USD",
       "asOf": "2026-06-11"
     },
-    "age": "\u2014",
+    "age": "—",
     "country": "India",
     "sector": "Pharmaceuticals",
     "grokipediaLink": "https://grokipedia.com/page/Dilip_Shanghvi",

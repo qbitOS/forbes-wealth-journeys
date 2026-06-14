@@ -44,7 +44,7 @@
     },
     {
       "year": 2004,
-      "netWorthB": 5
+      "netWorthB": 4.0
     },
     {
       "year": 2010,
@@ -74,7 +74,7 @@
     },
     {
       "year": 2004,
-      "netWorthB": 5
+      "netWorthB": 3.8
     },
     {
       "year": 2010,
@@ -103,24 +103,48 @@
       "netWorthB": 0.5
     },
     {
+      "year": 1998,
+      "netWorthB": 1.0
+    },
+    {
+      "year": 1999,
+      "netWorthB": 10.1
+    },
+    {
+      "year": 2000,
+      "netWorthB": 6.1
+    },
+    {
+      "year": 2001,
+      "netWorthB": 2.0
+    },
+    {
+      "year": 2002,
+      "netWorthB": 1.5
+    },
+    {
       "year": 2005,
-      "netWorthB": 8
+      "netWorthB": 8.0
     },
     {
       "year": 2010,
-      "netWorthB": 20
+      "netWorthB": 12.6
+    },
+    {
+      "year": 2014,
+      "netWorthB": 30.5
     },
     {
       "year": 2015,
-      "netWorthB": 60
+      "netWorthB": 60.0
     },
     {
       "year": 2020,
-      "netWorthB": 130
+      "netWorthB": 130.0
     },
     {
       "year": 2025,
-      "netWorthB": 200
+      "netWorthB": 200.0
     },
     {
       "year": 2026,
@@ -130,27 +154,43 @@
   "5": [
     {
       "year": 1986,
-      "netWorthB": 2
+      "netWorthB": 2.0
+    },
+    {
+      "year": 1987,
+      "netWorthB": 0.5
+    },
+    {
+      "year": 1990,
+      "netWorthB": 1.5
+    },
+    {
+      "year": 1995,
+      "netWorthB": 5.0
     },
     {
       "year": 2000,
-      "netWorthB": 15
+      "netWorthB": 47.0
+    },
+    {
+      "year": 2005,
+      "netWorthB": 18.0
     },
     {
       "year": 2010,
-      "netWorthB": 28
+      "netWorthB": 28.0
     },
     {
       "year": 2015,
-      "netWorthB": 50
+      "netWorthB": 54.3
     },
     {
       "year": 2020,
-      "netWorthB": 70
+      "netWorthB": 70.0
     },
     {
       "year": 2025,
-      "netWorthB": 150
+      "netWorthB": 150.0
     },
     {
       "year": 2026,
@@ -159,28 +199,40 @@
   ],
   "6": [
     {
+      "year": 1990,
+      "netWorthB": 0.3
+    },
+    {
+      "year": 1995,
+      "netWorthB": 2.0
+    },
+    {
+      "year": 1999,
+      "netWorthB": 15.0
+    },
+    {
       "year": 2004,
       "netWorthB": 0.1
     },
     {
       "year": 2010,
-      "netWorthB": 5
+      "netWorthB": 5.0
     },
     {
       "year": 2015,
-      "netWorthB": 45
+      "netWorthB": 45.0
     },
     {
       "year": 2020,
-      "netWorthB": 80
+      "netWorthB": 80.0
     },
     {
       "year": 2025,
-      "netWorthB": 170
+      "netWorthB": 170.0
     },
     {
       "year": 2026,
-      "netWorthB": 222
+      "netWorthB": 222.0
     }
   ],
   "7": [
@@ -189,24 +241,40 @@
       "netWorthB": 0.5
     },
     {
+      "year": 2008,
+      "netWorthB": 0.2
+    },
+    {
       "year": 2010,
-      "netWorthB": 2
+      "netWorthB": 2.0
+    },
+    {
+      "year": 2011,
+      "netWorthB": 1.0
+    },
+    {
+      "year": 2012,
+      "netWorthB": 1.5
+    },
+    {
+      "year": 2013,
+      "netWorthB": 9.0
     },
     {
       "year": 2015,
-      "netWorthB": 8
+      "netWorthB": 8.0
     },
     {
       "year": 2020,
-      "netWorthB": 25
+      "netWorthB": 25.0
     },
     {
       "year": 2025,
-      "netWorthB": 120
+      "netWorthB": 120.0
     },
     {
       "year": 2026,
-      "netWorthB": 182
+      "netWorthB": 182.0
     }
   ],
   "8": [
@@ -250,7 +318,7 @@
     },
     {
       "year": 2010,
-      "netWorthB": 12
+      "netWorthB": 27.5
     },
     {
       "year": 2015,
@@ -272,31 +340,43 @@
   "10": [
     {
       "year": 1987,
-      "netWorthB": 5
+      "netWorthB": 2.0
+    },
+    {
+      "year": 1990,
+      "netWorthB": 3.5
+    },
+    {
+      "year": 1995,
+      "netWorthB": 10.0
     },
     {
       "year": 2000,
-      "netWorthB": 15
+      "netWorthB": 25.6
+    },
+    {
+      "year": 2005,
+      "netWorthB": 44.0
     },
     {
       "year": 2010,
-      "netWorthB": 30
+      "netWorthB": 47.0
     },
     {
       "year": 2015,
-      "netWorthB": 40
+      "netWorthB": 72.7
     },
     {
       "year": 2020,
-      "netWorthB": 100
+      "netWorthB": 100.0
     },
     {
       "year": 2025,
-      "netWorthB": 150
+      "netWorthB": 150.0
     },
     {
       "year": 2026,
-      "netWorthB": 174
+      "netWorthB": 174.0
     }
   ],
   "11": [
@@ -318,7 +398,7 @@
     },
     {
       "year": 2015,
-      "netWorthB": 70
+      "netWorthB": 64.5
     },
     {
       "year": 2020,
@@ -429,12 +509,16 @@
       "netWorthB": 0.1
     },
     {
+      "year": 2005,
+      "netWorthB": 23.8
+    },
+    {
       "year": 2010,
-      "netWorthB": 2
+      "netWorthB": 53.5
     },
     {
       "year": 2015,
-      "netWorthB": 10
+      "netWorthB": 77.1
     },
     {
       "year": 2020,
@@ -557,32 +641,52 @@
       "netWorthB": 0.1
     },
     {
-      "year": 1980,
-      "netWorthB": 5
+      "year": 1987,
+      "netWorthB": 1.25
+    },
+    {
+      "year": 1995,
+      "netWorthB": 12.5
+    },
+    {
+      "year": 1999,
+      "netWorthB": 90.0
     },
     {
       "year": 2000,
-      "netWorthB": 20
+      "netWorthB": 60.0
+    },
+    {
+      "year": 2001,
+      "netWorthB": 58.7
+    },
+    {
+      "year": 2005,
+      "netWorthB": 46.5
+    },
+    {
+      "year": 2007,
+      "netWorthB": 56.0
     },
     {
       "year": 2010,
-      "netWorthB": 30
+      "netWorthB": 53.0
     },
     {
       "year": 2015,
-      "netWorthB": 40
+      "netWorthB": 79.2
     },
     {
       "year": 2020,
-      "netWorthB": 60
+      "netWorthB": 60.0
     },
     {
       "year": 2025,
-      "netWorthB": 75
+      "netWorthB": 75.0
     },
     {
       "year": 2026,
-      "netWorthB": 80
+      "netWorthB": 80.0
     }
   ],
   "20": [
@@ -702,7 +806,7 @@
     },
     {
       "year": 2010,
-      "netWorthB": 28
+      "netWorthB": 29.0
     },
     {
       "year": 2015,
@@ -834,7 +938,7 @@
     },
     {
       "year": 2015,
-      "netWorthB": 30
+      "netWorthB": 42.9
     },
     {
       "year": 2020,
@@ -2203,8 +2307,12 @@
       "netWorthB": 5
     },
     {
+      "year": 2005,
+      "netWorthB": 25.0
+    },
+    {
       "year": 2010,
-      "netWorthB": 6
+      "netWorthB": 28.7
     },
     {
       "year": 2015,

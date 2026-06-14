@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T22:19:18.620617+00:00",
+  "generatedAt": "2026-06-14T18:35:11.867901+00:00",
   "forbesLists": {
     "400": {
       "firstYear": 1982,
@@ -44,30 +44,35 @@
       "1976": 1,
       "1978": 1,
       "1979": 1,
-      "1980": 44,
+      "1980": 43,
       "1981": 13,
       "1982": 1,
       "1983": 1,
       "1984": 3,
       "1985": 1,
       "1986": 3,
-      "1987": 2,
-      "1990": 17,
+      "1987": 4,
+      "1990": 20,
       "1993": 1,
       "1994": 2,
-      "1995": 1,
+      "1995": 5,
       "1996": 2,
       "1997": 2,
-      "1998": 4,
-      "1999": 1,
-      "2000": 81,
-      "2001": 1,
+      "1998": 5,
+      "1999": 4,
+      "2000": 82,
+      "2001": 3,
+      "2002": 1,
       "2004": 3,
-      "2005": 2,
+      "2005": 7,
       "2006": 1,
+      "2007": 1,
+      "2008": 1,
       "2010": 95,
-      "2011": 2,
-      "2012": 1,
+      "2011": 3,
+      "2012": 2,
+      "2013": 1,
+      "2014": 1,
       "2015": 100,
       "2020": 100,
       "2025": 100,
@@ -76,6 +81,4378 @@
     "note": "100 modern profiles with estimated net-worth series \u2014 not official Forbes rank archives."
   },
   "rankSnapshotsByYear": {
+    "1987": [
+      {
+        "yearRank": 1,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 11.15
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 10.25
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 10.25
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 9.55
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 9.55
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 8.55
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 8.5
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 8.5
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 8.5
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 8.5
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 8.5
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 8.02
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 7.2
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 6.75
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 6.75
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 6.75
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 4.8
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 4.1
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 4.1
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 4.1
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 4.1
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 3.53
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 3.05
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 3.05
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 3.05
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 3.05
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 3.05
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 2.87
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 2.7
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 2.7
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 2.7
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 2.59
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 2.35
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 2.35
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 2.35
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 2.35
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 2.35
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 2.0
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 1.96
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 1.82
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 1.72
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 1.65
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 1.65
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 1.62
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 1.59
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 1.43
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 1.43
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 1.43
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 1.35
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 1.35
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 1.35
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 1.25
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 1.25
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 1.02
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 0.78
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 0.75
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 0.75
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 0.7
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 0.7
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 0.7
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 0.7
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 0.68
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 0.63
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 0.5
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 0.46
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 0.45
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 0.38
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 0.38
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 0.38
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 0.38
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 0.38
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 0.38
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 0.24
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 0.1
+      }
+    ],
+    "1990": [
+      {
+        "yearRank": 1,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 15.5
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 11.5
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 11.5
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 10.5
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 9.0
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 5.47
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 4.05
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 3.84
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 3.81
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 2.55
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 2.42
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 2.42
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 2.12
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 1.94
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 1.73
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 1.0
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 1.0
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 1.0
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 1.0
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 0.94
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 0.81
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 0.75
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 0.64
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 0.53
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 0.53
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 0.53
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 0.53
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 0.53
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 0.53
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 0.3
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 0.17
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 0.1
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 0.1
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 0.1
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 0.1
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 0.1
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 0.1
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 0.1
+      }
+    ],
+    "1995": [
+      {
+        "yearRank": 1,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 35.0
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 22.75
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 16.25
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 16.25
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 14.75
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 14.75
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 13.75
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 12.0
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 8.75
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 8.75
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 8.75
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 8.0
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 6.91
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 6.5
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 6.5
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 6.5
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 6.5
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 6.03
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 5.92
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 4.25
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 4.25
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 4.25
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 4.25
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 4.25
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 3.78
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 3.71
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 3.71
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 3.56
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 3.47
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 3.37
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 3.25
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 2.75
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 2.75
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 2.75
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 2.75
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 2.75
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 2.55
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 2.55
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 2.0
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 2.0
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 1.75
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 1.75
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 1.75
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 1.47
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 1.41
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 1.32
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 1.05
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 1.05
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 1.05
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 1.05
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 0.88
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 0.76
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 0.76
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 0.76
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 0.76
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 0.76
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 0.76
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 36,
+        "name": "Ma Huateng",
+        "netWorthB": 0.68
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 0.55
+      },
+      {
+        "yearRank": 83,
+        "profileRank": 48,
+        "name": "William Ding",
+        "netWorthB": 0.41
+      },
+      {
+        "yearRank": 84,
+        "profileRank": 61,
+        "name": "He Xiangjian & family",
+        "netWorthB": 0.41
+      },
+      {
+        "yearRank": 85,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 0.3
+      }
+    ],
+    "2000": [
+      {
+        "yearRank": 1,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 60
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 60.0
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 47.0
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 25.6
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 18
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 18
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 17
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 12.02
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 15,
+        "name": "Carlos Slim Helu & family",
+        "netWorthB": 10.63
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 4,
+        "name": "Jeff Bezos",
+        "netWorthB": 6.1
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 36,
+        "name": "Ma Huateng",
+        "netWorthB": 2.12
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 48,
+        "name": "William Ding",
+        "netWorthB": 1.94
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 61,
+        "name": "He Xiangjian & family",
+        "netWorthB": 1.94
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 2,
+        "name": "Larry Page",
+        "netWorthB": 1.4
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 3,
+        "name": "Sergey Brin",
+        "netWorthB": 1.33
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 53,
+        "name": "#53",
+        "netWorthB": 1.23
+      },
+      {
+        "yearRank": 83,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 84,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 85,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 86,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 87,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 88,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 89,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 90,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 91,
+        "profileRank": 29,
+        "name": "Tadashi Yanai & family",
+        "netWorthB": 0.92
+      },
+      {
+        "yearRank": 92,
+        "profileRank": 64,
+        "name": "Idan Ofer",
+        "netWorthB": 0.64
+      },
+      {
+        "yearRank": 93,
+        "profileRank": 14,
+        "name": "Alice Walton",
+        "netWorthB": 0.58
+      },
+      {
+        "yearRank": 94,
+        "profileRank": 7,
+        "name": "Mark Zuckerberg",
+        "netWorthB": 0.47
+      }
+    ],
+    "2005": [
+      {
+        "yearRank": 1,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 57.5
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 46.5
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 44.0
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 40.0
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 30.0
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 25.0
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 25.0
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 25.0
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 15,
+        "name": "Carlos Slim Helu & family",
+        "netWorthB": 23.8
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 23.5
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 23.0
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 22.0
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 20.0
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 20.0
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 20.0
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 18.0
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 17.75
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 17.5
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 17.5
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 17.5
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 17.5
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 15.0
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 13.0
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 12.5
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 11.5
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 11.0
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 11.0
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 11.0
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 10.0
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 4,
+        "name": "Jeff Bezos",
+        "netWorthB": 8.0
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 6.0
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 2,
+        "name": "Larry Page",
+        "netWorthB": 5.83
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 3,
+        "name": "Sergey Brin",
+        "netWorthB": 5.5
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 5.5
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 4.0
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 36,
+        "name": "Ma Huateng",
+        "netWorthB": 3.56
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 48,
+        "name": "William Ding",
+        "netWorthB": 3.47
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 61,
+        "name": "He Xiangjian & family",
+        "netWorthB": 3.47
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 3.25
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 3.25
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 3.25
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 53,
+        "name": "#53",
+        "netWorthB": 3.12
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 3.0
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 29,
+        "name": "Tadashi Yanai & family",
+        "netWorthB": 2.96
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 51,
+        "name": "Eric Schmidt",
+        "netWorthB": 2.28
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 2.25
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 2.25
+      },
+      {
+        "yearRank": 83,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 2.25
+      },
+      {
+        "yearRank": 84,
+        "profileRank": 14,
+        "name": "Alice Walton",
+        "netWorthB": 1.79
+      },
+      {
+        "yearRank": 85,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 86,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 87,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 1.4
+      },
+      {
+        "yearRank": 88,
+        "profileRank": 64,
+        "name": "Idan Ofer",
+        "netWorthB": 1.32
+      },
+      {
+        "yearRank": 89,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 1.3
+      },
+      {
+        "yearRank": 90,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 1.2
+      },
+      {
+        "yearRank": 91,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 1.1
+      },
+      {
+        "yearRank": 92,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 1.0
+      },
+      {
+        "yearRank": 93,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 1.0
+      },
+      {
+        "yearRank": 94,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 0.92
+      },
+      {
+        "yearRank": 95,
+        "profileRank": 7,
+        "name": "Mark Zuckerberg",
+        "netWorthB": 0.3
+      }
+    ],
+    "2010": [
+      {
+        "yearRank": 1,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 55
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 15,
+        "name": "Carlos Slim Helu & family",
+        "netWorthB": 53.5
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 53.0
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 50
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 47.0
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 40
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 29.0
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 28.7
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 28.0
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 28
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 27.5
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 27
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 18
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 2,
+        "name": "Larry Page",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 3,
+        "name": "Sergey Brin",
+        "netWorthB": 14
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 4,
+        "name": "Jeff Bezos",
+        "netWorthB": 12.6
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 5.0
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 29,
+        "name": "Tadashi Yanai & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 36,
+        "name": "Ma Huateng",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 48,
+        "name": "William Ding",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 51,
+        "name": "Eric Schmidt",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 53,
+        "name": "#53",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 61,
+        "name": "He Xiangjian & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 3.5
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 14,
+        "name": "Alice Walton",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 83,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 84,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 85,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 2.5
+      },
+      {
+        "yearRank": 86,
+        "profileRank": 7,
+        "name": "Mark Zuckerberg",
+        "netWorthB": 2.0
+      },
+      {
+        "yearRank": 87,
+        "profileRank": 64,
+        "name": "Idan Ofer",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 88,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 89,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 90,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 1.8
+      },
+      {
+        "yearRank": 91,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 1.6
+      },
+      {
+        "yearRank": 92,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 1.4
+      },
+      {
+        "yearRank": 93,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 1.2
+      },
+      {
+        "yearRank": 94,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 95,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 96,
+        "profileRank": 65,
+        "name": "Aliko Dangote",
+        "netWorthB": 0.94
+      }
+    ],
+    "2015": [
+      {
+        "yearRank": 1,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 80
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 79.2
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 15,
+        "name": "Carlos Slim Helu & family",
+        "netWorthB": 77.1
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 72.7
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 64.5
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 4,
+        "name": "Jeff Bezos",
+        "netWorthB": 60.0
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 60
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 54.3
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 50
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 45.0
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 42.9
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 40
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 40
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 38
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 38
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 37
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 2,
+        "name": "Larry Page",
+        "netWorthB": 35
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 35
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 35
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 35
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 3,
+        "name": "Sergey Brin",
+        "netWorthB": 32
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 18
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 29,
+        "name": "Tadashi Yanai & family",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 14
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 12
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 36,
+        "name": "Ma Huateng",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 48,
+        "name": "William Ding",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 51,
+        "name": "Eric Schmidt",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 53,
+        "name": "#53",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 61,
+        "name": "He Xiangjian & family",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 7,
+        "name": "Mark Zuckerberg",
+        "netWorthB": 8.0
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 6
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 5.5
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 5.5
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 14,
+        "name": "Alice Walton",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 30,
+        "name": "Jeff Yass",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 4.2
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 64,
+        "name": "Idan Ofer",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 83,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 3.8
+      },
+      {
+        "yearRank": 84,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 3.7
+      },
+      {
+        "yearRank": 85,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 3.2
+      },
+      {
+        "yearRank": 86,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 2.8
+      },
+      {
+        "yearRank": 87,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 2.8
+      },
+      {
+        "yearRank": 88,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 2.7
+      },
+      {
+        "yearRank": 89,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 2.2
+      },
+      {
+        "yearRank": 90,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 2.1
+      },
+      {
+        "yearRank": 91,
+        "profileRank": 42,
+        "name": "#42",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 92,
+        "profileRank": 65,
+        "name": "Aliko Dangote",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 93,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 94,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 1.7
+      },
+      {
+        "yearRank": 95,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 96,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 1.2
+      },
+      {
+        "yearRank": 97,
+        "profileRank": 67,
+        "name": "Andreas von Bechtolsheim & family",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 98,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 99,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 100,
+        "profileRank": 37,
+        "name": "Li Ka-shing",
+        "netWorthB": 0.1
+      }
+    ],
+    "2020": [
+      {
+        "yearRank": 1,
+        "profileRank": 1,
+        "name": "Elon Musk",
+        "netWorthB": 150
+      },
+      {
+        "yearRank": 2,
+        "profileRank": 4,
+        "name": "Jeff Bezos",
+        "netWorthB": 130.0
+      },
+      {
+        "yearRank": 3,
+        "profileRank": 10,
+        "name": "Warren Buffett",
+        "netWorthB": 100.0
+      },
+      {
+        "yearRank": 4,
+        "profileRank": 12,
+        "name": "Rob Walton & family",
+        "netWorthB": 100
+      },
+      {
+        "yearRank": 5,
+        "profileRank": 6,
+        "name": "Michael Dell",
+        "netWorthB": 80.0
+      },
+      {
+        "yearRank": 6,
+        "profileRank": 11,
+        "name": "Amancio Ortega",
+        "netWorthB": 80
+      },
+      {
+        "yearRank": 7,
+        "profileRank": 2,
+        "name": "Larry Page",
+        "netWorthB": 70
+      },
+      {
+        "yearRank": 8,
+        "profileRank": 5,
+        "name": "Larry Ellison",
+        "netWorthB": 70.0
+      },
+      {
+        "yearRank": 9,
+        "profileRank": 16,
+        "name": "Steve Ballmer",
+        "netWorthB": 70
+      },
+      {
+        "yearRank": 10,
+        "profileRank": 17,
+        "name": "Michael Bloomberg",
+        "netWorthB": 70
+      },
+      {
+        "yearRank": 11,
+        "profileRank": 3,
+        "name": "Sergey Brin",
+        "netWorthB": 65
+      },
+      {
+        "yearRank": 12,
+        "profileRank": 13,
+        "name": "Jim Walton & family",
+        "netWorthB": 60
+      },
+      {
+        "yearRank": 13,
+        "profileRank": 18,
+        "name": "Changpeng Zhao",
+        "netWorthB": 60
+      },
+      {
+        "yearRank": 14,
+        "profileRank": 19,
+        "name": "Bill Gates",
+        "netWorthB": 60.0
+      },
+      {
+        "yearRank": 15,
+        "profileRank": 20,
+        "name": "Thomas Peterffy",
+        "netWorthB": 58
+      },
+      {
+        "yearRank": 16,
+        "profileRank": 21,
+        "name": "Francoise Bettencourt Meyers & family",
+        "netWorthB": 57
+      },
+      {
+        "yearRank": 17,
+        "profileRank": 22,
+        "name": "Giancarlo Devasini",
+        "netWorthB": 55
+      },
+      {
+        "yearRank": 18,
+        "profileRank": 23,
+        "name": "Mukesh Ambani",
+        "netWorthB": 53
+      },
+      {
+        "yearRank": 19,
+        "profileRank": 9,
+        "name": "Bernard Arnault & family",
+        "netWorthB": 50
+      },
+      {
+        "yearRank": 20,
+        "profileRank": 25,
+        "name": "Julia Koch & family",
+        "netWorthB": 50
+      },
+      {
+        "yearRank": 21,
+        "profileRank": 24,
+        "name": "Gautam Adani",
+        "netWorthB": 45
+      },
+      {
+        "yearRank": 22,
+        "profileRank": 27,
+        "name": "Charles Koch & family",
+        "netWorthB": 45
+      },
+      {
+        "yearRank": 23,
+        "profileRank": 28,
+        "name": "Zhang Yiming",
+        "netWorthB": 45
+      },
+      {
+        "yearRank": 24,
+        "profileRank": 8,
+        "name": "Jensen Huang",
+        "netWorthB": 40
+      },
+      {
+        "yearRank": 25,
+        "profileRank": 26,
+        "name": "Masayoshi Son",
+        "netWorthB": 40
+      },
+      {
+        "yearRank": 26,
+        "profileRank": 33,
+        "name": "Zhong Shanshan",
+        "netWorthB": 38
+      },
+      {
+        "yearRank": 27,
+        "profileRank": 34,
+        "name": "Robin Zeng",
+        "netWorthB": 38
+      },
+      {
+        "yearRank": 28,
+        "profileRank": 32,
+        "name": "Dieter Schwarz",
+        "netWorthB": 35
+      },
+      {
+        "yearRank": 29,
+        "profileRank": 29,
+        "name": "Tadashi Yanai & family",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 30,
+        "profileRank": 31,
+        "name": "Germ\u00e1n Larrea Mota Velasco & family",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 31,
+        "profileRank": 35,
+        "name": "Ken Griffin",
+        "netWorthB": 30
+      },
+      {
+        "yearRank": 32,
+        "profileRank": 40,
+        "name": "Lukas Walton",
+        "netWorthB": 28
+      },
+      {
+        "yearRank": 33,
+        "profileRank": 7,
+        "name": "Mark Zuckerberg",
+        "netWorthB": 25.0
+      },
+      {
+        "yearRank": 34,
+        "profileRank": 38,
+        "name": "Giovanni Ferrero",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 35,
+        "profileRank": 39,
+        "name": "Iris Fontbona & family",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 36,
+        "profileRank": 41,
+        "name": "Rafaela Aponte-Diamant",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 37,
+        "profileRank": 44,
+        "name": "#44",
+        "netWorthB": 25
+      },
+      {
+        "yearRank": 38,
+        "profileRank": 47,
+        "name": "Klaus-Michael Kuehne",
+        "netWorthB": 22
+      },
+      {
+        "yearRank": 39,
+        "profileRank": 15,
+        "name": "Carlos Slim Helu & family",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 40,
+        "profileRank": 30,
+        "name": "Jeff Yass",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 41,
+        "profileRank": 36,
+        "name": "Ma Huateng",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 42,
+        "profileRank": 43,
+        "name": "John Mars",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 43,
+        "profileRank": 45,
+        "name": "Mark Mateschitz",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 44,
+        "profileRank": 46,
+        "name": "Andrea Pignataro",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 45,
+        "profileRank": 49,
+        "name": "Abigail Johnson",
+        "netWorthB": 20
+      },
+      {
+        "yearRank": 46,
+        "profileRank": 50,
+        "name": "Stephen Schwarzman",
+        "netWorthB": 18
+      },
+      {
+        "yearRank": 47,
+        "profileRank": 52,
+        "name": "Gerard Wertheimer",
+        "netWorthB": 18
+      },
+      {
+        "yearRank": 48,
+        "profileRank": 55,
+        "name": "#55",
+        "netWorthB": 17
+      },
+      {
+        "yearRank": 49,
+        "profileRank": 56,
+        "name": "Savitri Jindal & family",
+        "netWorthB": 17
+      },
+      {
+        "yearRank": 50,
+        "profileRank": 57,
+        "name": "Alexey Mordashov & family",
+        "netWorthB": 17
+      },
+      {
+        "yearRank": 51,
+        "profileRank": 58,
+        "name": "Jay Y. Lee",
+        "netWorthB": 17
+      },
+      {
+        "yearRank": 52,
+        "profileRank": 59,
+        "name": "Henry Samueli",
+        "netWorthB": 16
+      },
+      {
+        "yearRank": 53,
+        "profileRank": 48,
+        "name": "William Ding",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 54,
+        "profileRank": 51,
+        "name": "Eric Schmidt",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 55,
+        "profileRank": 53,
+        "name": "#53",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 56,
+        "profileRank": 54,
+        "name": "Paolo Ardoino",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 57,
+        "profileRank": 60,
+        "name": "Miriam Adelson & family",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 58,
+        "profileRank": 61,
+        "name": "He Xiangjian & family",
+        "netWorthB": 15
+      },
+      {
+        "yearRank": 59,
+        "profileRank": 37,
+        "name": "Li Ka-shing",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 60,
+        "profileRank": 42,
+        "name": "#42",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 61,
+        "profileRank": 62,
+        "name": "Eyal Ofer",
+        "netWorthB": 10
+      },
+      {
+        "yearRank": 62,
+        "profileRank": 63,
+        "name": "Len Blavatnik",
+        "netWorthB": 9
+      },
+      {
+        "yearRank": 63,
+        "profileRank": 66,
+        "name": "Marilyn Simons & family",
+        "netWorthB": 9
+      },
+      {
+        "yearRank": 64,
+        "profileRank": 68,
+        "name": "Chen Tianshi",
+        "netWorthB": 8.5
+      },
+      {
+        "yearRank": 65,
+        "profileRank": 69,
+        "name": "Lyndal Stephens Greth & family",
+        "netWorthB": 8.2
+      },
+      {
+        "yearRank": 66,
+        "profileRank": 14,
+        "name": "Alice Walton",
+        "netWorthB": 8
+      },
+      {
+        "yearRank": 67,
+        "profileRank": 70,
+        "name": "Robert Pera",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 68,
+        "profileRank": 72,
+        "name": "Lakshmi Mittal",
+        "netWorthB": 7.5
+      },
+      {
+        "yearRank": 69,
+        "profileRank": 64,
+        "name": "Idan Ofer",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 70,
+        "profileRank": 71,
+        "name": "Eduardo Saverin",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 71,
+        "profileRank": 73,
+        "name": "MacKenzie Scott",
+        "netWorthB": 7
+      },
+      {
+        "yearRank": 72,
+        "profileRank": 74,
+        "name": "Elaine Marshall & family",
+        "netWorthB": 6.8
+      },
+      {
+        "yearRank": 73,
+        "profileRank": 75,
+        "name": "Thomas Frist Jr & family",
+        "netWorthB": 6.5
+      },
+      {
+        "yearRank": 74,
+        "profileRank": 76,
+        "name": "Pham Nhat Vuong",
+        "netWorthB": 6.5
+      },
+      {
+        "yearRank": 75,
+        "profileRank": 77,
+        "name": "Michal Strnad",
+        "netWorthB": 6.2
+      },
+      {
+        "yearRank": 76,
+        "profileRank": 79,
+        "name": "Vladimir Potanin",
+        "netWorthB": 5.8
+      },
+      {
+        "yearRank": 77,
+        "profileRank": 80,
+        "name": "Vagit Alekperov",
+        "netWorthB": 5.6
+      },
+      {
+        "yearRank": 78,
+        "profileRank": 78,
+        "name": "Melinda French Gates",
+        "netWorthB": 5.5
+      },
+      {
+        "yearRank": 79,
+        "profileRank": 65,
+        "name": "Aliko Dangote",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 80,
+        "profileRank": 81,
+        "name": "Wang Weixiu & family",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 81,
+        "profileRank": 82,
+        "name": "Colin Huang",
+        "netWorthB": 5
+      },
+      {
+        "yearRank": 82,
+        "profileRank": 83,
+        "name": "Leonid Mikhelson & family",
+        "netWorthB": 4.8
+      },
+      {
+        "yearRank": 83,
+        "profileRank": 84,
+        "name": "Huang Shilin",
+        "netWorthB": 4.5
+      },
+      {
+        "yearRank": 84,
+        "profileRank": 85,
+        "name": "John Tu",
+        "netWorthB": 4.4
+      },
+      {
+        "yearRank": 85,
+        "profileRank": 86,
+        "name": "David Sun",
+        "netWorthB": 4.1
+      },
+      {
+        "yearRank": 86,
+        "profileRank": 67,
+        "name": "Andreas von Bechtolsheim & family",
+        "netWorthB": 4
+      },
+      {
+        "yearRank": 87,
+        "profileRank": 87,
+        "name": "Peter Thiel",
+        "netWorthB": 3.9
+      },
+      {
+        "yearRank": 88,
+        "profileRank": 88,
+        "name": "Vinod Adani",
+        "netWorthB": 3.8
+      },
+      {
+        "yearRank": 89,
+        "profileRank": 89,
+        "name": "Fran\u00e7ois Pinault & family",
+        "netWorthB": 3.4
+      },
+      {
+        "yearRank": 90,
+        "profileRank": 90,
+        "name": "Zheng Shuliang & family",
+        "netWorthB": 3
+      },
+      {
+        "yearRank": 91,
+        "profileRank": 91,
+        "name": "Reinhold Wuerth & family",
+        "netWorthB": 2.9
+      },
+      {
+        "yearRank": 92,
+        "profileRank": 92,
+        "name": "Jack Ma",
+        "netWorthB": 2.8
+      },
+      {
+        "yearRank": 93,
+        "profileRank": 93,
+        "name": "Cyrus Poonawalla",
+        "netWorthB": 2.4
+      },
+      {
+        "yearRank": 94,
+        "profileRank": 94,
+        "name": "Phil Knight & family",
+        "netWorthB": 2.2
+      },
+      {
+        "yearRank": 95,
+        "profileRank": 95,
+        "name": "Emmanuel Besnier",
+        "netWorthB": 2
+      },
+      {
+        "yearRank": 96,
+        "profileRank": 96,
+        "name": "Susanne Klatten",
+        "netWorthB": 1.8
+      },
+      {
+        "yearRank": 97,
+        "profileRank": 97,
+        "name": "Israel Englander",
+        "netWorthB": 1.5
+      },
+      {
+        "yearRank": 98,
+        "profileRank": 98,
+        "name": "Suleiman Kerimov & family",
+        "netWorthB": 1.2
+      },
+      {
+        "yearRank": 99,
+        "profileRank": 99,
+        "name": "Vladimir Lisin",
+        "netWorthB": 1
+      },
+      {
+        "yearRank": 100,
+        "profileRank": 100,
+        "name": "Dilip Shanghvi",
+        "netWorthB": 1
+      }
+    ],
     "2023": [
       {
         "yearRank": 1,
@@ -1297,7 +5674,7 @@
         "yearRank": 3,
         "profileRank": 4,
         "name": "Jeff Bezos",
-        "netWorthB": 200
+        "netWorthB": 200.0
       },
       {
         "yearRank": 4,
@@ -1309,25 +5686,25 @@
         "yearRank": 5,
         "profileRank": 6,
         "name": "Michael Dell",
-        "netWorthB": 170
+        "netWorthB": 170.0
       },
       {
         "yearRank": 6,
         "profileRank": 5,
         "name": "Larry Ellison",
-        "netWorthB": 150
+        "netWorthB": 150.0
       },
       {
         "yearRank": 7,
         "profileRank": 10,
         "name": "Warren Buffett",
-        "netWorthB": 150
+        "netWorthB": 150.0
       },
       {
         "yearRank": 8,
         "profileRank": 7,
         "name": "Mark Zuckerberg",
-        "netWorthB": 120
+        "netWorthB": 120.0
       },
       {
         "yearRank": 9,
@@ -1387,7 +5764,7 @@
         "yearRank": 18,
         "profileRank": 19,
         "name": "Bill Gates",
-        "netWorthB": 75
+        "netWorthB": 75.0
       },
       {
         "yearRank": 19,
@@ -1917,19 +6294,19 @@
         "yearRank": 6,
         "profileRank": 6,
         "name": "Michael Dell",
-        "netWorthB": 222
+        "netWorthB": 222.0
       },
       {
         "yearRank": 7,
         "profileRank": 7,
         "name": "Mark Zuckerberg",
-        "netWorthB": 182
+        "netWorthB": 182.0
       },
       {
         "yearRank": 8,
         "profileRank": 10,
         "name": "Warren Buffett",
-        "netWorthB": 174
+        "netWorthB": 174.0
       },
       {
         "yearRank": 9,
@@ -1995,7 +6372,7 @@
         "yearRank": 19,
         "profileRank": 19,
         "name": "Bill Gates",
-        "netWorthB": 80
+        "netWorthB": 80.0
       },
       {
         "yearRank": 20,

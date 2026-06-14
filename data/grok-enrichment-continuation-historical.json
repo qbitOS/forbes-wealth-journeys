@@ -1,0 +1,388 @@
+[
+  {
+    "rank": 19,
+    "name": "Bill Gates",
+    "timeline": [
+      {
+        "year": "1975",
+        "type": "founding",
+        "entityId": "microsoft",
+        "title": "Co-founded Microsoft with Paul Allen",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "1986",
+        "type": "ipo",
+        "entityId": "microsoft",
+        "title": "Microsoft IPO",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "1987",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "Youngest self-made billionaire (Forbes first list, $1.25B)",
+        "valuationUsdB": 1.25,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "1995",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "First #1 on Forbes World's Billionaires ($12.5B+)",
+        "valuationUsdB": 12.5,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires"
+      },
+      {
+        "year": "1999",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "Peak ~$90B during dot-com (first centibillionaire briefly)",
+        "valuationUsdB": 90,
+        "source": "https://en.wikipedia.org/wiki/Bill_Gates"
+      },
+      {
+        "year": "2000",
+        "type": "milestone",
+        "entityId": "microsoft",
+        "title": "US antitrust case peak; wealth ~$60B post-bubble start",
+        "valuationUsdB": 60,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires"
+      }
+    ],
+    "summary": "Co-founder of Microsoft; dominated global wealth rankings for much of 1995-2017 via software empire and investments. Philanthropy via Gates Foundation.",
+    "wealthBreakdown": [
+      {
+        "entity": "Microsoft",
+        "ticker": "MSFT",
+        "stakePct": 1.0,
+        "valueUsdB": 50,
+        "type": "public"
+      },
+      {
+        "entity": "Other investments / Cascade",
+        "ticker": null,
+        "stakePct": null,
+        "valueUsdB": 50,
+        "type": "mixed"
+      }
+    ],
+    "entities": [
+      {
+        "id": "microsoft",
+        "name": "Microsoft",
+        "role": "co-founder",
+        "founded": 1975,
+        "status": "public",
+        "ticker": "MSFT"
+      }
+    ]
+  },
+  {
+    "rank": 5,
+    "name": "Larry Ellison",
+    "timeline": [
+      {
+        "year": "1977",
+        "type": "founding",
+        "entityId": "oracle",
+        "title": "Co-founded Oracle (as Software Development Labs)",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Larry_Ellison"
+      },
+      {
+        "year": "1986",
+        "type": "ipo",
+        "entityId": "oracle",
+        "title": "Oracle IPO",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Oracle_Corporation"
+      },
+      {
+        "year": "2000",
+        "type": "milestone",
+        "entityId": "oracle",
+        "title": "Wealth peak ~$47B (dot-com era Oracle boom)",
+        "valuationUsdB": 47,
+        "source": "historical Forbes lists"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "oracle",
+        "title": "Wealth ~$28B post acquisitions era",
+        "valuationUsdB": 28,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires_2010"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "oracle",
+        "title": "AI/cloud resurgence drives wealth surge",
+        "valuationUsdB": 130,
+        "source": "Forbes"
+      }
+    ],
+    "summary": "Co-founder and longtime CEO of Oracle Corporation; major investor in other tech.",
+    "wealthBreakdown": [
+      {
+        "entity": "Oracle",
+        "ticker": "ORCL",
+        "stakePct": 40,
+        "valueUsdB": 120,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "oracle",
+        "name": "Oracle",
+        "role": "co-founder_ceo",
+        "founded": 1977,
+        "status": "public",
+        "ticker": "ORCL"
+      }
+    ]
+  },
+  {
+    "rank": 6,
+    "name": "Michael Dell",
+    "timeline": [
+      {
+        "year": "1984",
+        "type": "founding",
+        "entityId": "dell",
+        "title": "Founded Dell Computer (PC's Limited) from dorm",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Michael_Dell"
+      },
+      {
+        "year": "1988",
+        "type": "ipo",
+        "entityId": "dell",
+        "title": "Dell IPO",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Dell"
+      },
+      {
+        "year": "1999",
+        "type": "milestone",
+        "entityId": "dell",
+        "title": "Peak wealth era as Dell became top PC maker; ~$15B+ est",
+        "valuationUsdB": 15,
+        "source": "historical reports"
+      },
+      {
+        "year": "2013",
+        "type": "milestone",
+        "entityId": "dell",
+        "title": "Took Dell private in $24.4B deal",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Dell"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "dell",
+        "title": "Re-IPO and AI server boom; wealth recovery to $100B+",
+        "valuationUsdB": 120,
+        "source": "Forbes"
+      }
+    ],
+    "summary": "Founder of Dell Technologies; pioneered direct-to-consumer PC model.",
+    "wealthBreakdown": [
+      {
+        "entity": "Dell Technologies",
+        "ticker": "DELL",
+        "stakePct": 12,
+        "valueUsdB": 80,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "dell",
+        "name": "Dell",
+        "role": "founder",
+        "founded": 1984,
+        "status": "public",
+        "ticker": "DELL"
+      }
+    ]
+  },
+  {
+    "rank": 15,
+    "name": "Carlos Slim Helu & family",
+    "timeline": [
+      {
+        "year": "1990",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "Acquired Telmex in privatization; built telecom empire",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Carlos_Slim"
+      },
+      {
+        "year": "2005",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "Wealth ~$23.8B",
+        "valuationUsdB": 23.8,
+        "source": "Forbes historical"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "World's richest person, $53.5B (Forbes)",
+        "valuationUsdB": 53.5,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires_2010"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "telmex",
+        "title": "Wealth $77.1B, still top tier",
+        "valuationUsdB": 77.1,
+        "source": "https://en.wikipedia.org/wiki/The_World%27s_Billionaires_2015"
+      }
+    ],
+    "summary": "Mexican business magnate; controls Am\u00e9rica M\u00f3vil, Grupo Carso; dominated 2010s wealth lists via telecom and diversified holdings.",
+    "wealthBreakdown": [
+      {
+        "entity": "Am\u00e9rica M\u00f3vil",
+        "ticker": "AMX",
+        "stakePct": 17,
+        "valueUsdB": 20,
+        "type": "public"
+      },
+      {
+        "entity": "Grupo Carso / other",
+        "ticker": null,
+        "stakePct": null,
+        "valueUsdB": 30,
+        "type": "mixed"
+      }
+    ],
+    "entities": [
+      {
+        "id": "telmex",
+        "name": "Telmex / Am\u00e9rica M\u00f3vil",
+        "role": "majority_owner",
+        "founded": 1947,
+        "status": "public",
+        "ticker": "AMX"
+      }
+    ]
+  },
+  {
+    "rank": 9,
+    "name": "Bernard Arnault & family",
+    "timeline": [
+      {
+        "year": "1989",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Took control of LVMH via merger/buildup",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Bernard_Arnault"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Wealth ~$27.5B",
+        "valuationUsdB": 27.5,
+        "source": "Forbes 2010 list"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Luxury goods boom; LVMH leader",
+        "valuationUsdB": null,
+        "source": "Forbes"
+      },
+      {
+        "year": "2023",
+        "type": "milestone",
+        "entityId": "lvmh",
+        "title": "Briefly world's richest via LVMH surge",
+        "valuationUsdB": 200,
+        "source": "Forbes"
+      }
+    ],
+    "summary": "Chairman and CEO of LVMH; built world's largest luxury goods conglomerate (Louis Vuitton, Dior, etc).",
+    "wealthBreakdown": [
+      {
+        "entity": "LVMH",
+        "ticker": "MC.PA",
+        "stakePct": 48,
+        "valueUsdB": 150,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "lvmh",
+        "name": "LVMH",
+        "role": "chairman_ceo",
+        "founded": 1987,
+        "status": "public",
+        "ticker": "MC.PA"
+      }
+    ]
+  },
+  {
+    "rank": 14,
+    "name": "Alice Walton",
+    "timeline": [
+      {
+        "year": "1962",
+        "type": "founding",
+        "entityId": "walmart",
+        "title": "Walmart founded by father Sam Walton (family wealth origin)",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Walmart"
+      },
+      {
+        "year": "1970",
+        "type": "ipo",
+        "entityId": "walmart",
+        "title": "Walmart IPO; family stake builds",
+        "valuationUsdB": null,
+        "source": "https://en.wikipedia.org/wiki/Walmart"
+      },
+      {
+        "year": "1992",
+        "type": "milestone",
+        "entityId": "walmart",
+        "title": "Sam Walton passes; family inherits/holds vast stake",
+        "valuationUsdB": null,
+        "source": "Forbes"
+      }
+    ],
+    "summary": "Heiress to Walmart fortune; one of the wealthiest women via retail empire stake.",
+    "wealthBreakdown": [
+      {
+        "entity": "Walmart",
+        "ticker": "WMT",
+        "stakePct": 0.6,
+        "valueUsdB": 35,
+        "type": "public"
+      }
+    ],
+    "entities": [
+      {
+        "id": "walmart",
+        "name": "Walmart",
+        "role": "heir",
+        "founded": 1962,
+        "status": "public",
+        "ticker": "WMT"
+      }
+    ]
+  }
+]
