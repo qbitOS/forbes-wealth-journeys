@@ -132,7 +132,7 @@ python -m http.server 8080
 # open http://localhost:8080/
 ```
 
-Navigate to **Forbes** for billionaire profiles, **Ventures** for the gitgraph, **Activity** for heatmaps, or **Industry Stream** at `http://localhost:8080/unified.html`.
+Navigate to **Forbes** (year slider re-sorts by estimated wealth), **Ventures**, **Activity**, **Markets**, or **Industry Stream** — flip overlay, through-line, and crossover are embedded on `index.html#industry-stream`. Standalone: `industry-stream.html`.
 
 ### Rebuild industry stream data
 
@@ -153,9 +153,12 @@ cd ../robinhood-agentic && python3 scripts/forbes_crossover.py build
 # 4. Unified stream JSON
 cd ../forbes-wealth-journeys
 python3 scripts/build_industry_stream.py ../robinhood-agentic/data/flip-board/rows.json
+
+# 5. Forbes list years, timeline anchors, coverage gaps (year slider)
+python3 scripts/build_forbes_historical_index.py
 ```
 
-Commit `data/industry-stream.json` (and `data/market-crossover.json` if refreshed) before pushing — GitHub Pages serves static files only.
+Commit `data/industry-stream.json`, `data/forbes-historical-index.json`, and `data/market-crossover.json` (if refreshed) before pushing — GitHub Pages serves static files only.
 
 ---
 
@@ -180,8 +183,9 @@ flowchart LR
 
 | Path | Role |
 |------|------|
-| [`index.html`](index.html) | Landing page — Forbes, Ventures, Activity, Configurator |
-| [`unified.html`](unified.html) | Unified industry stream — Forbes × crossover merge |
+| [`index.html`](index.html) | Landing page — Forbes, Ventures, Activity, Markets, Industry Stream tab |
+| [`industry-stream.html`](industry-stream.html) | Standalone industry stream (same widgets as `#industry-stream` on index) |
+| [`data/forbes-historical-index.json`](data/forbes-historical-index.json) | Forbes list years, market anchors, data gaps (powers year slider) |
 | [`data/industry-stream.json`](data/industry-stream.json) | Merged stream payload (build script output) |
 | [`docs/assets/industry-stream.js`](docs/assets/industry-stream.js) | Industry stream UI |
 | [`docs/assets/industry-stream.css`](docs/assets/industry-stream.css) | Dark crossover theme for industry stream |

@@ -8,6 +8,7 @@
   const DATA_URL = 'data/forbes-billionaires.json';
   const ENTITIES_URL = 'data/entities.json';
   const HISTORICAL_URL = 'data/historical-net-worth.json';
+  const HISTORICAL_INDEX_URL = 'data/forbes-historical-index.json';
   const HOLDINGS_13F_URL = 'data/13f-top20.json';
   const BUYING_POWER_URL = 'data/buying-power-catalog.json';
   const CONTEXT_URL = 'data/world-context-events.json';
@@ -38,6 +39,8 @@
   let searchQuery = '';
   let entityCatalog = new Map();
   let historicalByRank = {};
+  let historicalIndex = null;
+  let listSnapshotYear = 2026;
   let holdings13fByRank = {};
   let holdings13fMeta = null;
   let breakdownChart = null;
@@ -691,14 +694,103 @@
     };
   }
 
+  function netWorthAtYear(rank, year) {
+    const expanded = expandHistoricalSeries(historicalByRank[String(rank)] || []);
+    const pt = expanded.find((p) => p.year === year);
+    return pt?.netWorthB ?? null;
+  }
+
+  function listYearBounds() {
+    const cov = historicalIndex?.dataCoverage || {};
+    return { min: cov.sliderMinYear || 1982, max: cov.sliderMaxYear || 2026 };
+  }
+
+  function renderContextRail() {
+    const root = $('#forbes-context-rail');
+    if (!root || !historicalIndex?.timelineAnchors?.length) return;
+    const year = listSnapshotYear;
+    const anchors = historicalIndex.timelineAnchors.filter((a) => a.year <= year);
+    const visible = anchors.slice(-8);
+    root.innerHTML = `
+      <p class="context-rail-label">Market &amp; Forbes context · through ${year}${year < 1982 ? ' (pre-Forbes list)' : ''}</p>
+      <ol class="context-rail-list">
+        ${visible.map((a) => `<li class="context-rail-item context-rail-${escapeHtml(a.era || 'other')}"><span class="context-rail-year">${a.year}</span> ${escapeHtml(a.label)}</li>`).join('')}
+      </ol>`;
+  }
+
+  function updateYearNote() {
+    const note = $('#forbes-year-note');
+    if (!note) return;
+    const { min, max } = listYearBounds();
+    const coverage = historicalIndex?.dataCoverage?.ranksWithYear?.[String(listSnapshotYear)] || 0;
+    const gap = (historicalIndex?.gaps || []).find((g) => g.id === 'rank-snapshot-coverage');
+    const preForbes = listSnapshotYear < 1982;
+    note.textContent = preForbes
+      ? 'Before Forbes 400 (1982): timeline context only — no official rich-list ranks for these profiles.'
+      : listSnapshotYear === max
+        ? `${billionaires.length} profiles · current snapshot · ${historicalIndex?.dataCoverage?.historicalRanksCount || 100} with estimated historical series.`
+        : `${coverage} profiles with wealth data @ ${listSnapshotYear} · sorted by interpolated estimate (not official Forbes rank). ${gap?.impact || ''}`;
+  }
+
   function applyFilter() {
     const q = searchQuery.trim().toLowerCase();
     filtered = q
       ? billionaires.filter((b) => personHaystack(b).includes(q))
       : [...billionaires];
+    const { max } = listYearBounds();
+    if (listSnapshotYear < max) {
+      filtered.sort((a, b) => {
+        const nwA = netWorthAtYear(a.rank, listSnapshotYear) ?? 0;
+        const nwB = netWorthAtYear(b.rank, listSnapshotYear) ?? 0;
+        if (nwB !== nwA) return nwB - nwA;
+        return a.rank - b.rank;
+      });
+    } else {
+      filtered.sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name));
+    }
     if (!filtered.some((b) => personKey(b) === selectedKey) && filtered.length) {
       selectedKey = personKey(filtered[0]);
     }
+  }
+
+  function snapshotWorthLabel(person) {
+    const { max } = listYearBounds();
+    if (listSnapshotYear >= max) return formatNetWorth(person.netWorth);
+    const snap = netWorthAtYear(person.rank, listSnapshotYear);
+    return snap != null ? `$${snap}B <span class="forbes-snap-year">@${listSnapshotYear}</span>` : '—';
+  }
+
+  function bindYearControls() {
+    const slider = $('#forbes-list-year');
+    const output = $('#forbes-list-year-value');
+    const marks = $('#forbes-year-marks');
+    if (!slider) return;
+    const { min, max } = listYearBounds();
+    slider.min = String(min);
+    slider.max = String(max);
+    slider.value = String(listSnapshotYear);
+    if (output) output.textContent = String(listSnapshotYear);
+    if (marks && historicalIndex?.timelineAnchors) {
+      marks.innerHTML = historicalIndex.timelineAnchors
+        .filter((a) => a.year >= min && a.year <= max)
+        .map((a) => `<option value="${a.year}" label="${a.year}"></option>`)
+        .join('');
+    }
+    slider.addEventListener('input', () => {
+      listSnapshotYear = Number(slider.value);
+      if (output) output.textContent = String(listSnapshotYear);
+      applyFilter();
+      renderContextRail();
+      updateYearNote();
+      renderMeta($('#forbes-count'));
+      renderList($('#forbes-list'));
+      renderDetail($('#forbes-detail'));
+      window.dispatchEvent(new CustomEvent('forbes:listYear', { detail: { year: listSnapshotYear } }));
+      if (window.IndustryStream?.setListYear) window.IndustryStream.setListYear(listSnapshotYear);
+      if (window.FlipOverlayChart?.setListYearHighlight) {
+        window.FlipOverlayChart.setListYearHighlight(listSnapshotYear);
+      }
+    });
   }
 
   function renderList(container) {
@@ -723,7 +815,7 @@
           <strong class="forbes-name">${escapeHtml(b.name)}</strong>
           <span class="forbes-meta">${escapeHtml(b.sector)} · ${escapeHtml(b.country)}</span>
         </span>
-        <span class="forbes-worth">${formatNetWorth(b.netWorth)}</span>
+        <span class="forbes-worth">${snapshotWorthLabel(b)}</span>
       </button>`;
       })
       .join('');
@@ -1987,11 +2079,19 @@
 
   async function loadHistoricalNetWorth() {
     try {
-      const resp = await fetch(HISTORICAL_URL);
-      if (!resp.ok) return;
-      historicalByRank = await resp.json();
+      const [histResp, indexResp] = await Promise.all([
+        fetch(HISTORICAL_URL),
+        fetch(HISTORICAL_INDEX_URL),
+      ]);
+      if (histResp.ok) historicalByRank = await histResp.json();
+      if (indexResp.ok) {
+        historicalIndex = await indexResp.json();
+        const { max } = listYearBounds();
+        listSnapshotYear = max;
+      }
     } catch {
       historicalByRank = {};
+      historicalIndex = null;
     }
   }
 
@@ -2041,6 +2141,9 @@
     bindListDrawer();
     bindDetailTabs();
     bindStoryChartToggles();
+    bindYearControls();
+    renderContextRail();
+    updateYearNote();
     renderMeta(countEl);
     renderList(listEl);
     renderDetail(detailEl);

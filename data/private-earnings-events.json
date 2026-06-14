@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-13T00:00:00Z",
+  "description": "Proxy earnings / disclosure events for Forbes private entities. Not quarterly EPS — funding rounds, revenue leaks, SEC filings, IPO milestones.",
+  "sources": [
+    "sec-edgar",
+    "forbes-billionaires.json",
+    "grok-branch-events.json",
+    "entities.json"
+  ],
+  "entities": [
+    {
+      "entityId": "spacex",
+      "name": "SpaceX",
+      "status": "ipo_transition",
+      "publicTicker": "SPCX",
+      "secCik": "0001181412",
+      "earningsAvailable": "partial",
+      "notes": "S-1 filed May 2026; SPCX listed Jun 2026. Future 10-K/Q will carry formal earnings. Pre-IPO: Form D + revenue estimates only.",
+      "events": [
+        {
+          "id": "spacex-founded",
+          "date": "2002-06-01",
+          "sortKey": "2002-06-01",
+          "eventType": "founding",
+          "kind": "milestone",
+          "title": "SpaceX founded",
+          "source": "forbes-billionaires",
+          "confidence": "high"
+        },
+        {
+          "id": "spacex-form-d-2020",
+          "date": "2020-08-18",
+          "sortKey": "2020-08-18",
+          "eventType": "funding",
+          "kind": "sec_filing",
+          "title": "Form D · Reg D offering",
+          "form": "D",
+          "secCik": "0001181412",
+          "source": "sec-edgar",
+          "confidence": "high"
+        },
+        {
+          "id": "spacex-form-d-2021",
+          "date": "2021-12-29",
+          "sortKey": "2021-12-29",
+          "eventType": "funding",
+          "kind": "sec_filing",
+          "title": "Form D · Reg D offering",
+          "form": "D",
+          "secCik": "0001181412",
+          "source": "sec-edgar",
+          "confidence": "high"
+        },
+        {
+          "id": "starlink-revenue-est-2025",
+          "date": "2025-12-01",
+          "sortKey": "2025-12-01",
+          "eventType": "revenue_estimate",
+          "kind": "proxy_leak",
+          "title": "Starlink ~$11.4B revenue (est.)",
+          "metricUsdB": 11.4,
+          "metricLabel": "Starlink segment revenue",
+          "approx": true,
+          "source": "grok-branch-events",
+          "confidence": "medium"
+        },
+        {
+          "id": "spacex-s1-2026",
+          "date": "2026-05-20",
+          "sortKey": "2026-05-20",
+          "eventType": "ipo_filing",
+          "kind": "sec_filing",
+          "title": "S-1 filed · IPO registration",
+          "form": "S-1",
+          "secCik": "0001181412",
+          "source": "sec-edgar",
+          "confidence": "high"
+        },
+        {
+          "id": "spcx-ipo-price-2026",
+          "date": "2026-06-03",
+          "sortKey": "2026-06-03",
+          "eventType": "ipo_pricing",
+          "kind": "milestone",
+          "title": "$135 · $1.77T · $75B raise",
+          "valuationUsdB": 1770,
+          "source": "grok-branch-events",
+          "confidence": "high"
+        },
+        {
+          "id": "spcx-listing-2026",
+          "date": "2026-06-11",
+          "sortKey": "2026-06-11",
+          "eventType": "ipo_listing",
+          "kind": "market_event",
+          "title": "SPCX lists · Nasdaq + Texas",
+          "ticker": "SPCX",
+          "source": "grok-branch-events",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "entityId": "xai",
+      "name": "xAI",
+      "status": "private",
+      "publicTicker": null,
+      "earningsAvailable": "none",
+      "notes": "No standalone earnings. Form D filings are secondary-market fund vehicles, not corporate 10-Q. Merged into SpaceX Feb 2026 per Grok branch timeline.",
+      "events": [
+        {
+          "id": "xai-founded",
+          "date": "2023-07-01",
+          "sortKey": "2023-07-01",
+          "eventType": "founding",
+          "kind": "milestone",
+          "title": "xAI announced",
+          "valuationUsdB": 50,
+          "source": "forbes-billionaires",
+          "confidence": "high"
+        },
+        {
+          "id": "xai-series-b-2025",
+          "date": "2025-05-01",
+          "sortKey": "2025-05-01",
+          "eventType": "funding",
+          "kind": "milestone",
+          "title": "xAI $6B Series B",
+          "valuationUsdB": 50,
+          "source": "forbes-billionaires",
+          "confidence": "high"
+        },
+        {
+          "id": "xai-form-d-hiive-2025",
+          "date": "2025-06-04",
+          "sortKey": "2025-06-04",
+          "eventType": "secondary_market",
+          "kind": "sec_filing",
+          "title": "Form D · Hiive xAI secondary fund",
+          "form": "D",
+          "secCik": "0002071159",
+          "source": "sec-edgar",
+          "confidence": "medium"
+        },
+        {
+          "id": "xai-acquires-x-2025",
+          "date": "2025-03-01",
+          "sortKey": "2025-03-01",
+          "eventType": "acquisition",
+          "kind": "milestone",
+          "title": "xAI acquires X · $80B val",
+          "valuationUsdB": 80,
+          "approx": true,
+          "source": "grok-branch-events",
+          "confidence": "medium"
+        },
+        {
+          "id": "xai-spacex-merge-2026",
+          "date": "2026-02-01",
+          "sortKey": "2026-02-01",
+          "eventType": "merger",
+          "kind": "milestone",
+          "title": "SpaceX acquires xAI · ~$1.25T",
+          "valuationUsdB": 1250,
+          "approx": true,
+          "source": "grok-branch-events",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "entityId": "bytedance",
+      "name": "ByteDance",
+      "status": "private",
+      "publicTicker": null,
+      "earningsAvailable": "none",
+      "notes": "Cayman/China domicile — no US 10-K. Only secondary-market Form D (MW LSVC Bytedance LLC). Revenue from press/Forbes estimates only.",
+      "events": [
+        {
+          "id": "bytedance-founded",
+          "date": "2012-03-01",
+          "sortKey": "2012-03-01",
+          "eventType": "founding",
+          "kind": "milestone",
+          "title": "Founded ByteDance",
+          "source": "forbes-billionaires",
+          "confidence": "high"
+        },
+        {
+          "id": "bytedance-form-d-2025",
+          "date": "2025-04-29",
+          "sortKey": "2025-04-29",
+          "eventType": "secondary_market",
+          "kind": "sec_filing",
+          "title": "Form D · MW LSVC Bytedance secondary fund",
+          "form": "D",
+          "secCik": "0002064623",
+          "source": "sec-edgar",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

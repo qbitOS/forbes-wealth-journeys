@@ -4122,3 +4122,95 @@ h3.subheading {
   font-size: 0.75rem;
   color: var(--text-muted);
 }
+
+/* Forbes list snapshot year filter */
+.forbes-year-controls {
+  margin: 0.75rem 0 1rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.forbes-year-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.forbes-year-value {
+  font-family: var(--mono);
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.forbes-year-slider {
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+.forbes-year-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.forbes-snap-year {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.forbes-context-rail {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+}
+
+.forbes-context-rail .context-rail-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.forbes-context-rail .context-rail-item {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.forbes-context-rail .context-rail-year {
+  font-weight: 600;
+  font-family: var(--mono);
+  margin-right: 0.2rem;
+}
+
+.forbes-context-rail .context-rail-markets { border-left: 2px solid #2563eb; padding-left: 0.35rem; }
+.forbes-context-rail .context-rail-internet { border-left: 2px solid #7c3aed; padding-left: 0.35rem; }
+.forbes-context-rail .context-rail-forbes { border-left: 2px solid var(--accent); padding-left: 0.35rem; }
+.forbes-context-rail .context-rail-tech { border-left: 2px solid #0891b2; padding-left: 0.35rem; }
+
+/* Industry stream section on index — wider layout */
+.section.industry-stream-section {
+  max-width: none;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section.industry-stream-section > h2,
+.section.industry-stream-section > .section-lead,
+.section.industry-stream-section > .section-label,
+.section.industry-stream-section > .industry-stream-subnav {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}

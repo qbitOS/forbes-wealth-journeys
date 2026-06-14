@@ -12,3 +12,4 @@ Entrypoint scripts for training, inference, DVC stages, and Colossus launch.
 | `colossus/colossus-job.sh` | SLURM job |
 | `build_market_crossover.py` | Join Forbes holdings to flip-board crossover rows |
 | `build_industry_stream.py` | Merge stream JSON for industry-stream.html |
+| `build_forbes_historical_index.py` | Forbes list years, timeline anchors, coverage gaps |

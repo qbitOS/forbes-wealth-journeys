@@ -108,6 +108,14 @@ cp ../robinhood-agentic/data/grok-template-timeline-raw.json data/grok-branch-ev
 }
 ```
 
+[`forbes-historical-index.json`](forbes-historical-index.json) — manifest for Forbes list years, market/internet timeline anchors (NYSE 1792, ARPANET 1969, Forbes 400 1982, etc.), data coverage, and documented gaps. Powers the **list snapshot year** slider on the Forbes tab and through-line Forbes panel. Rebuild:
+
+```bash
+python3 scripts/build_forbes_historical_index.py
+```
+
+**Historical vs aspirational:** The year slider re-sorts the current 100 profiles by *interpolated* net-worth estimates — not official Forbes rank archives by year. Pre-1982 shows timeline context only (no Forbes list). Full historical Forbes 400/500 expansion is aspirational (see `gaps` in the index JSON).
+
 [`13f-top20.json`](13f-top20.json) — public 13F / insider holdings for enriched profiles (ticker, shares, valueUsdB, pctPortfolio). Rank keys match `forbes-billionaires.json`. Shown under **Portfolio**:
 
 ```json

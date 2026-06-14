@@ -6,7 +6,8 @@
   <title>Forbes Wealth Journeys · Billionaire Timelines</title>
   <meta name="description" content="Forbes billionaire wealth journeys mapped to venture milestones — interactive timelines, drill-downs, and source-linked events." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <link rel="stylesheet" href="docs/assets/pages.css?v=20260612h" />
+  <link rel="stylesheet" href="docs/assets/pages.css?v=20260613a" />
+  <link rel="stylesheet" href="docs/assets/industry-stream.css?v=20260613zc" />
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -18,12 +19,12 @@
         <p class="tagline">Billionaire timelines · venture milestones · qbitOS/forbes-wealth-journeys</p>
       </div>
       <nav class="site-nav" aria-label="Page sections">
-        <a href="industry-stream.html">Industry Stream</a>
         <a href="#forbes" data-section="forbes">Forbes</a>
         <a href="#quick-start" data-section="quick-start">Details</a>
         <a href="#timeline" data-section="timeline">Ventures</a>
         <a href="#activity" data-section="activity">Activity</a>
         <a href="#configurator" data-section="configurator">Markets</a>
+        <a href="#industry-stream" data-section="industry-stream">Industry Stream</a>
         <a href="https://github.com/qbitOS/forbes-wealth-journeys" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -38,6 +39,18 @@
         Select a profile to explore their journey. Net worth figures are point-in-time snapshots, not live Forbes data.
       </p>
       <p id="forbes-count" class="forbes-count" aria-live="polite"></p>
+      <div id="forbes-year-controls" class="forbes-year-controls" aria-label="Forbes list snapshot year">
+        <label class="forbes-year-label" for="forbes-list-year">
+          <span>List snapshot year</span>
+          <span id="forbes-list-year-value" class="forbes-year-value">2026</span>
+        </label>
+        <input type="range" id="forbes-list-year" class="forbes-year-slider" min="1982" max="2026" value="2026" step="1" list="forbes-year-marks" />
+        <datalist id="forbes-year-marks"></datalist>
+        <p id="forbes-year-note" class="forbes-year-note" aria-live="polite">
+          100 modern profiles · net worth re-sorted by estimated wealth at selected year (interpolated between anchors).
+        </p>
+      </div>
+      <aside id="forbes-context-rail" class="forbes-context-rail" aria-label="Market and Forbes timeline context"></aside>
       <p class="forbes-source-note">
         Source:
         <a href="https://grok.com/share/bGVnYWN5LWNvcHk_90513d22-f9d1-4544-87f7-ca5db3b07748" target="_blank" rel="noopener">Grok Forbes 500 thread</a>
@@ -353,6 +366,227 @@
         </div>
       </div>
     </section>
+
+    <section id="industry-stream" class="section industry-stream-section">
+      <span class="section-label">Industry stream</span>
+      <h2>Flip overlay · through-line · crossover</h2>
+      <p class="section-lead">
+        Unified Forbes wealth × crossover signals — multi-symbol flip walls, sector heatmaps, and the through-line narrative.
+        Rebuild with <code>python3 scripts/build_industry_stream.py</code>.
+        <a href="industry-stream.html">Open standalone view →</a>
+      </p>
+      <nav class="industry-stream-subnav" aria-label="Industry stream sections">
+        <button type="button" id="stream-drawer-header-toggle" class="stream-drawer-header-toggle" aria-expanded="true" aria-controls="stream-drawer-panel" title="Toggle activity feed">
+          <span class="stream-drawer-header-icon" aria-hidden="true"></span>
+          <span>Feed</span>
+        </button>
+        <a href="#flip-wall-chart">Overlay</a>
+        <a href="#sector-activity">Sector</a>
+        <a href="#through-line">Through line</a>
+        <a href="#compression">Compression</a>
+      </nav>
+      <div class="unified-shell stream-embedded">
+        <aside id="stream-drawer-panel" class="stream-drawer" aria-label="Unified activity feed">
+          <header class="stream-drawer-head">
+            <div class="stream-drawer-title-row">
+              <div class="stream-drawer-title">
+                <span class="unified-section-label">Industry stream</span>
+                <h3>Unified activity feed</h3>
+              </div>
+              <button type="button" id="stream-drawer-toggle" class="stream-drawer-toggle" aria-expanded="true" aria-controls="stream-feed" title="Hide activity feed">
+                <span class="stream-drawer-toggle-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Hide feed</span>
+              </button>
+            </div>
+            <p class="stream-drawer-lead">
+              Sector flips, wealth milestones, Grok branches, and world context — one scrollable feed.
+            </p>
+            <div class="stream-toolbar">
+              <div id="stream-filters" class="stream-filters" aria-label="Grok branch filters"></div>
+              <span id="stream-filter-label" class="stream-filter-label">All events</span>
+              <button type="button" id="stream-filter-clear" class="stream-filter-clear">Clear filter</button>
+            </div>
+          </header>
+          <div id="stream-feed" class="stream-feed stream-drawer-feed" aria-label="Unified industry stream"></div>
+        </aside>
+
+        <div id="stream-drawer-backdrop" class="stream-drawer-backdrop" hidden aria-hidden="true"></div>
+
+        <div class="unified-content">
+          <div class="unified-main">
+            <section class="unified-section" id="flip-wall-chart">
+              <span class="unified-section-label">Forbes overlay</span>
+              <h3>Multi-symbol price overlay · flip walls</h3>
+              <p class="unified-lead">
+                Normalized Forbes-linked tickers — switch All Time / Year / Quarter / Month / Week views; vertical walls at Q/M/W/D flip events. All Time spans NYSE 1792→now with milestone rails; price lines begin when tape data exists.
+              </p>
+              <div id="flip-overlay-legend" class="flip-overlay-legend" aria-label="Flip legend"></div>
+              <p id="flip-overlay-meta" class="unified-meta"></p>
+              <div class="flip-overlay-symbol-bar">
+                <button type="button" id="flip-overlay-focus-back" class="flip-overlay-focus-back" hidden aria-label="Back to multi-symbol overlay">← Back</button>
+                <div id="flip-overlay-symbol-sort" class="flip-overlay-symbol-sort" role="toolbar" aria-label="Symbol filter and sort"></div>
+                <button type="button" id="flip-overlay-expand" class="flip-overlay-expand" hidden>Expand all</button>
+                <p id="flip-overlay-perf-warn" class="flip-overlay-perf-warn" hidden role="status">Large overlay — rendering every line may feel slower.</p>
+              </div>
+              <div class="flip-overlay-toolbar">
+                <div class="flip-overlay-toolbar-group">
+                  <span class="flip-overlay-toolbar-label">View</span>
+                  <div id="flip-overlay-views" class="flip-overlay-views" role="toolbar" aria-label="Chart view"></div>
+                </div>
+                <div class="flip-overlay-toolbar-group">
+                  <span class="flip-overlay-toolbar-label">Walls</span>
+                  <div id="flip-overlay-intervals" class="flip-overlay-chips" aria-label="Wall interval filters"></div>
+                </div>
+                <div class="flip-overlay-toolbar-group">
+                  <span class="flip-overlay-toolbar-label">Mode</span>
+                  <div id="flip-overlay-modes" class="flip-overlay-modes" aria-label="Chart mode"></div>
+                  <button type="button" id="flip-overlay-walls-toggle" class="flip-overlay-walls-toggle active">Walls on</button>
+                </div>
+              </div>
+              <div class="flip-overlay-body">
+                <div class="flip-overlay-chart-wrap">
+                  <div id="flip-overlay-chart" class="flip-overlay-chart" role="img" aria-label="Forbes multi-symbol overlay chart"></div>
+                  <div class="flip-overlay-range-group">
+                    <span class="flip-overlay-toolbar-label">Range</span>
+                    <div id="flip-overlay-range" class="flip-overlay-range" role="toolbar" aria-label="Date range presets"></div>
+                    <div class="flip-overlay-date-inputs">
+                      <label class="flip-overlay-date-label">
+                        <span class="visually-hidden">Start date</span>
+                        <input type="date" id="flip-overlay-start" class="flip-overlay-date-input" aria-label="Start date" />
+                      </label>
+                      <span class="flip-overlay-date-sep" aria-hidden="true">→</span>
+                      <label class="flip-overlay-date-label">
+                        <span class="visually-hidden">End date</span>
+                        <input type="date" id="flip-overlay-end" class="flip-overlay-date-input" aria-label="End date" />
+                      </label>
+                    </div>
+                    <button type="button" id="flip-overlay-date-order" class="flip-overlay-date-order" aria-pressed="false" title="Toggle chart date order">Date ↑</button>
+                  </div>
+                </div>
+                <div class="flip-overlay-scrub-col">
+                  <aside id="flip-overlay-scrub" class="flip-overlay-scrub" aria-live="polite" aria-label="Chart scrub details">
+                    <div class="flip-overlay-scrub-slot">
+                      <p class="flip-overlay-scrub-hint">Move across the chart to inspect values at each date.</p>
+                      <div id="flip-overlay-scrub-content" class="flip-overlay-scrub-content" hidden>
+                        <div class="flip-overlay-scrub-head">
+                          <div id="flip-overlay-scrub-date" class="flip-overlay-scrub-date"></div>
+                          <div id="flip-overlay-scrub-sort" class="flip-overlay-scrub-sort" role="toolbar" aria-label="Sort symbols"></div>
+                        </div>
+                        <div id="flip-overlay-scrub-symbols" class="flip-overlay-scrub-symbols"></div>
+                        <div id="flip-overlay-scrub-walls" class="flip-overlay-scrub-walls"></div>
+                      </div>
+                    </div>
+                  </aside>
+                  <hr class="flip-overlay-scrub-divider" role="separator" aria-hidden="true" />
+                </div>
+              </div>
+              <hr class="flip-overlay-section-divider" role="separator" aria-label="Overlay section end" />
+            </section>
+
+            <section class="unified-section" id="sector-activity">
+              <span class="unified-section-label">Sector activity</span>
+              <h3>Agentic flip board · sector heatmaps</h3>
+              <p class="unified-lead">
+                Q/M/W/D hierarchy from crossover sector-activity — Agentic list embedded locally.
+              </p>
+              <p id="sector-meta" class="unified-meta"></p>
+              <div id="sector-chips" class="sector-activity-chips" aria-label="Sector list chips"></div>
+              <div id="sector-branches" class="sector-branches" aria-label="Sector flip heatmaps"></div>
+            </section>
+
+            <section class="unified-section" id="through-line">
+              <details class="tl-through-line" open>
+                <summary>
+                  <span class="tl-through-line-title-wrap">
+                    <span class="tl-through-line-label">Through line</span>
+                    <span class="tl-through-line-heading">Connecting narrative</span>
+                  </span>
+                  <span id="through-line-meta" class="tl-through-line-meta" aria-live="polite">Loading…</span>
+                </summary>
+                <div class="tl-through-line-body">
+                  <p id="through-line-lead" class="unified-lead">
+                    All Forbes billionaire companies — activity % over the last year, aggregate tape heatmap (Jan 2023 onward), and weekly velocity.
+                  </p>
+                  <p id="through-line-summary" class="through-line-summary" aria-live="polite"></p>
+                  <div class="through-line-toolbar">
+                    <div class="through-line-toolbar-left">
+                      <label class="through-line-filter-label">
+                        <span class="visually-hidden">Filter companies</span>
+                        <input type="search" id="through-line-filter" class="through-line-filter" placeholder="Filter companies or tickers…" autocomplete="off" />
+                      </label>
+                      <span id="through-line-universe-count" class="through-line-universe-count" aria-live="polite"></span>
+                      <div class="through-line-year-filter" aria-label="Forbes list snapshot year">
+                        <label for="through-line-list-year" class="through-line-year-label">List year</label>
+                        <input type="range" id="through-line-list-year" min="1982" max="2026" value="2026" step="1" />
+                        <output id="through-line-list-year-value" for="through-line-list-year">2026</output>
+                      </div>
+                      <div id="through-line-sort-toolbar" class="through-line-sort-toolbar" role="toolbar" aria-label="Sort companies">
+                        <span class="through-line-sort-label">Sort</span>
+                        <div class="through-line-sort-chips">
+                          <button type="button" class="through-line-sort-chip active" data-sort="pct-desc" aria-pressed="true">% high → low</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="pct-asc" aria-pressed="false">% low → high</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="name-asc" aria-pressed="false">Name A–Z</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="ticker-asc" aria-pressed="false">Ticker A–Z</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="rank-asc" aria-pressed="false">Forbes rank</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="type-us" aria-pressed="false">US first</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="type-foreign" aria-pressed="false">Foreign first</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="type-private" aria-pressed="false">Private first</button>
+                          <button type="button" class="through-line-sort-chip" data-sort="days-desc" aria-pressed="false">Active days</button>
+                        </div>
+                      </div>
+                    </div>
+                    <aside id="through-line-forbes-users" class="through-line-forbes-users" aria-label="Forbes billionaires"></aside>
+                  </div>
+                  <aside id="through-line-context-rail" class="through-line-context-rail" aria-label="Market timeline context"></aside>
+                  <div id="through-line-universe" class="through-line-universe" aria-label="All Forbes companies with activity percent"></div>
+                  <div class="through-line-charts">
+                    <section class="through-line-chart-panel" aria-label="Year activity heatmap">
+                      <h4 class="through-line-chart-title">Year activity</h4>
+                      <div class="through-line-heatmap-head">
+                        <button type="button" id="through-line-heatmap-prev" class="through-line-heatmap-nav" aria-label="Previous year">← Year</button>
+                        <p id="through-line-heatmap-lead" class="through-line-chart-lead muted" aria-live="polite">Aggregate symbol-days across tradable Forbes holdings</p>
+                        <button type="button" id="through-line-heatmap-next" class="through-line-heatmap-nav" aria-label="Next year">Year →</button>
+                      </div>
+                      <div id="through-line-heatmap" class="through-line-chart-host"></div>
+                    </section>
+                    <section class="through-line-chart-panel" aria-label="Active days velocity">
+                      <h4 class="through-line-chart-title">Active days velocity</h4>
+                      <p id="through-line-speed-meta" class="through-line-chart-lead muted" aria-live="polite">4-week rolling symbol-days per week</p>
+                      <div id="through-line-speed" class="through-line-chart-host through-line-speed-host"></div>
+                      <div id="through-line-events-list" class="through-line-events-list" aria-label="Holidays and market events in view"></div>
+                      <p id="through-line-speed-footer" class="through-line-chart-foot muted" aria-live="polite"></p>
+                    </section>
+                  </div>
+                  <details class="through-line-narratives" open>
+                    <summary class="through-line-narratives-summary">Narrative hooks</summary>
+                    <div id="through-line-cards" class="through-line" aria-label="Through-line narrative hooks"></div>
+                  </details>
+                </div>
+              </details>
+            </section>
+
+            <section class="unified-section" id="compression">
+              <details class="tl-compression" open>
+                <summary>
+                  <span class="tl-compression-title-wrap">
+                    <span class="tl-compression-label">Bollinger compression</span>
+                    <span class="tl-compression-heading">Multi-timeframe squeeze · Q / M / W / D</span>
+                    <span class="tl-compression-lead">
+                      All Forbes billionaire holdings with inline sparklines and Q/M/W/D squeeze — active trading days first within each rank.
+                    </span>
+                  </span>
+                  <span id="compression-meta" class="tl-compression-meta" aria-live="polite"></span>
+                </summary>
+                <div class="tl-compression-body">
+                  <div id="compression-year-nav" class="compression-toolbar" aria-label="Compression year"></div>
+                  <div id="compression-grid" class="compression-grid" aria-label="Forbes holdings and BB compression"></div>
+                </div>
+              </details>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -360,10 +594,14 @@
     · forked from <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">grok-repo-template</a>
   </footer>
 
-  <script src="docs/assets/forbes-wealth.js?v=20260612h"></script>
+  <script src="docs/assets/forbes-wealth.js?v=20260613a"></script>
   <script src="docs/assets/crossover-mini-chart.js?v=20260611g"></script>
   <script src="docs/assets/wealth-data-tools.js?v=20260611g"></script>
   <script src="docs/assets/market-crossover.js?v=20260611g"></script>
-  <script src="docs/assets/pages-configurator.js?v=20260612g"></script>
+  <script src="docs/assets/pages-configurator.js?v=20260613a"></script>
+  <script src="docs/assets/fwj-color.js?v=20260613a"></script>
+  <script src="docs/assets/timeline-cluster.js?v=20260613b"></script>
+  <script src="docs/assets/flip-overlay-chart.js?v=20260613z"></script>
+  <script src="docs/assets/industry-stream.js?v=20260613s"></script>
 </body>
 </html>

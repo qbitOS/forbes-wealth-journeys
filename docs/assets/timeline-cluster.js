@@ -60,6 +60,97 @@
     return branchColorValue(branchId, branch);
   }
 
+  function escapeHtml(str) {
+    if (str == null) return "";
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderGroupContextHtml(context) {
+    if (!context) return { summary: "", banner: "" };
+
+    const sector = context.sector;
+    const symbols = context.symbols || [];
+    const filterTicker = context.filterTicker;
+    let primaryName = "";
+    let primaryTicker = "";
+    const secondaryParts = [];
+
+    if (filterTicker) {
+      const match = symbols.find((s) => s.ticker === filterTicker) || {
+        ticker: filterTicker,
+        name: filterTicker,
+      };
+      const displayName = match.entity || match.name || match.ticker;
+      primaryName = displayName;
+      primaryTicker = match.ticker;
+      if (match.forbesRank != null && match.forbesName) {
+        secondaryParts.push({ kind: "forbes", rank: match.forbesRank, name: match.forbesName });
+      }
+      if (sector) secondaryParts.push({ kind: "text", text: sector });
+    } else if (symbols.length === 1) {
+      const s = symbols[0];
+      primaryName = s.entity || s.name || s.ticker;
+      primaryTicker = s.ticker;
+      if (s.forbesRank != null && s.forbesName) {
+        secondaryParts.push({ kind: "forbes", rank: s.forbesRank, name: s.forbesName });
+      }
+      if (sector) secondaryParts.push({ kind: "text", text: sector });
+    } else if (symbols.length > 1) {
+      primaryName = sector || "Sector";
+      primaryTicker = `${symbols.length} symbols`;
+      const top = symbols
+        .slice(0, 4)
+        .map((s) => s.ticker)
+        .join(" · ");
+      if (top) secondaryParts.push({ kind: "text", text: top });
+      if (context.totalSymbolCount > symbols.length) {
+        secondaryParts.push({
+          kind: "text",
+          text: `${context.totalSymbolCount} in list`,
+        });
+      }
+    } else if (sector) {
+      primaryName = sector;
+      if (context.totalSymbolCount) {
+        primaryTicker = `${context.totalSymbolCount} symbols`;
+      }
+    }
+
+    if (!primaryName && !primaryTicker) return { summary: "", banner: "" };
+
+    const nameHtml =
+      primaryName && primaryName !== primaryTicker
+        ? `<span class="tl-group-context-name">${escapeHtml(primaryName)}</span>`
+        : "";
+    const tickerHtml = primaryTicker
+      ? `<span class="tl-group-context-ticker">${escapeHtml(primaryTicker)}</span>`
+      : "";
+
+    const summary = `<span class="tl-group-context-compact">${nameHtml}${tickerHtml}</span>`;
+
+    const secondaryHtml = secondaryParts.length
+      ? `<div class="tl-group-context-secondary">${secondaryParts
+          .map((part) => {
+            if (part.kind === "forbes") {
+              return `<button type="button" class="tl-group-context-forbes" data-rank="${part.rank}" title="Filter by #${escapeHtml(part.rank)} ${escapeHtml(part.name)}">#${escapeHtml(part.rank)} ${escapeHtml(part.name)}</button>`;
+            }
+            return `<span class="tl-group-context-meta">${escapeHtml(part.text)}</span>`;
+          })
+          .join("")}</div>`
+      : "";
+
+    const banner = `<div class="tl-group-context" aria-label="Company context">
+        <div class="tl-group-context-primary">${nameHtml}${tickerHtml}</div>
+        ${secondaryHtml}
+      </div>`;
+
+    return { summary, banner };
+  }
+
   function heatmapScale(color) {
     return FWJColor.heatmapScale(color);
   }
@@ -329,9 +420,11 @@
     renderGroupsInto(data, root);
   }
 
-  function renderGroupsInto(data, root) {
+  function renderGroupsInto(data, root, options = {}) {
     if (!root) return;
     state.charts = [];
+
+    const groupContext = options.groupContext;
 
     const groups = (data.groups || []).map((group, index) => ({
       ...group,
@@ -341,6 +434,11 @@
 
     root.innerHTML = groups
       .map((group) => {
+        const ctx =
+          group.id === "timeframes" && groupContext
+            ? renderGroupContextHtml(groupContext)
+            : { summary: "", banner: "" };
+
         const branchPanels = group.branches
           .map((branch) => {
             const events = branch.events || [];
@@ -373,11 +471,13 @@
         <details class="tl-group" data-group="${group.id}"${openAttr}>
           <summary>
             <span class="tl-group-title-wrap">
+              ${ctx.summary}
               <span class="tl-group-swatches">${swatches}</span>
               <span>${group.label}</span>
             </span>
             <span class="tl-group-meta">${group.meta}</span>
           </summary>
+          ${ctx.banner}
           <div class="tl-branch-list">${branchPanels}</div>
         </details>`;
       })

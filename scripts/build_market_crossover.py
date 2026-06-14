@@ -14,7 +14,7 @@ DEFAULT_CHARTS = Path.home() / "Projects/robinhood-agentic/data/flip-board/chart
 PROFILES_PATH = ROOT / "data/forbes-billionaires.json"
 ENTITIES_PATH = ROOT / "data/entities.json"
 OUT_PATH = ROOT / "data/market-crossover.json"
-CHART_POINT_LIMIT = 90
+CHART_WINDOW_START = "2023-01-01"
 
 
 def load_json(path: Path):
@@ -69,7 +69,11 @@ def compute_bollinger(closes: list[float], period: int = 20, mult: float = 2.0) 
     return out
 
 
-def compact_chart_payload(ticker: str, charts_dir: Path, limit: int = CHART_POINT_LIMIT) -> dict | None:
+def compact_chart_payload(
+    ticker: str,
+    charts_dir: Path,
+    window_start: str = CHART_WINDOW_START,
+) -> dict | None:
     path = charts_dir / f"{ticker}.json"
     if not path.is_file():
         return None
@@ -77,34 +81,42 @@ def compact_chart_payload(ticker: str, charts_dir: Path, limit: int = CHART_POIN
     daily = raw.get("daily") or {}
     dates = daily.get("d") or []
     closes = daily.get("c") or []
+    volumes = daily.get("v") or []
     if len(closes) < 26 or len(dates) != len(closes):
         return None
+    has_volume = len(volumes) == len(closes)
 
     macd = compute_macd(closes)
     bb = compute_bollinger(closes)
-    start = max(0, len(closes) - limit)
+    start = 0
+    for i, d in enumerate(dates):
+        if d >= window_start:
+            start = i
+            break
     points = []
     for i in range(start, len(closes)):
         m = macd[i]
         b = bb[i]
-        points.append(
-            {
-                "date": dates[i],
-                "close": round(closes[i], 4),
-                "bbU": round(b["bbU"], 4) if b["bbU"] is not None else None,
-                "bbM": round(b["bbM"], 4) if b["bbM"] is not None else None,
-                "bbL": round(b["bbL"], 4) if b["bbL"] is not None else None,
-                "macd": round(m["macd"], 4),
-                "signal": round(m["signal"], 4),
-                "hist": round(m["hist"], 4),
-            }
-        )
+        pt: dict = {
+            "date": dates[i],
+            "close": round(closes[i], 4),
+            "bbU": round(b["bbU"], 4) if b["bbU"] is not None else None,
+            "bbM": round(b["bbM"], 4) if b["bbM"] is not None else None,
+            "bbL": round(b["bbL"], 4) if b["bbL"] is not None else None,
+            "macd": round(m["macd"], 4),
+            "signal": round(m["signal"], 4),
+            "hist": round(m["hist"], 4),
+        }
+        if has_volume:
+            vol = volumes[i]
+            if vol is not None and float(vol) > 0:
+                pt["volume"] = int(float(vol))
+        points.append(pt)
 
-    window_start = dates[start]
+    series_start = dates[start]
     flips = []
-    last_flip = None
     for i in range(1, len(closes)):
-        if dates[i] < window_start:
+        if dates[i] < series_start:
             continue
         prev_m = macd[i - 1]
         cur_m = macd[i]
@@ -114,7 +126,12 @@ def compact_chart_payload(ticker: str, charts_dir: Path, limit: int = CHART_POIN
             flips.append({"date": dates[i], "type": "macd_bullish", "indicator": "macd"})
         elif prev_m["macd"] >= prev_m["signal"] and cur_m["macd"] < cur_m["signal"]:
             flips.append({"date": dates[i], "type": "macd_bearish", "indicator": "macd"})
-        if cur_b["bbL"] is not None:
+        if (
+            cur_b["bbL"] is not None
+            and cur_b["bbU"] is not None
+            and prev_b["bbL"] is not None
+            and prev_b["bbU"] is not None
+        ):
             if closes[i - 1] >= prev_b["bbL"] and closes[i] < cur_b["bbL"]:
                 flips.append({"date": dates[i], "type": "bb_lower_breakdown", "indicator": "bollinger"})
             elif closes[i - 1] <= prev_b["bbU"] and closes[i] > cur_b["bbU"]:
@@ -125,7 +142,7 @@ def compact_chart_payload(ticker: str, charts_dir: Path, limit: int = CHART_POIN
         "asOf": dates[-1],
         "close": round(closes[-1], 4),
         "points": points,
-        "flips": flips[-8:],
+        "flips": flips,
     }
 
 
