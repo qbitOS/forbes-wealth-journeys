@@ -168,7 +168,12 @@ def main() -> None:
 
     ranks_with_year = {str(y): year_counts[y] for y in sorted(year_counts)}
 
-    snapshot_years = [y for y in range(2023, latest_data + 1) if y <= latest_data]
+    # Extended historical snapshot years for richer "historical lists" in UI (precomputed re-sorts by estimated wealth).
+    # Includes major Forbes list eras + recent. build_rank_snapshots will produce partial lists for years with sparser coverage.
+    snapshot_years = sorted(set(
+        [1987, 1990, 1995, 2000, 2005, 2010, 2015, 2020] +
+        list(range(2023, latest_data + 1))
+    ))
     rank_snapshots = build_rank_snapshots(historical, profiles, snapshot_years)
 
     payload = {
