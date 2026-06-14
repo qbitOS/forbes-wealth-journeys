@@ -790,7 +790,11 @@
       root.innerHTML = '<p class="muted">No Forbes rankings</p>';
       return;
     }
-    root.innerHTML = people
+    let html = '';
+    if (state.filterRank != null) {
+      html += `<button type="button" class="tl-forbes-clear-chip" data-action="clear-forbes" aria-label="Clear Forbes filter and show full list">← All</button>`;
+    }
+    html += people
       .map((person) => {
         const active = state.filterRank === person.rank ? ' active' : '';
         const href = forbesProfileHref(person);
@@ -803,6 +807,7 @@
         </a>`;
       })
       .join('');
+    root.innerHTML = html;
     root.querySelectorAll('.tl-forbes-user-chip').forEach((chip) => {
       chip.addEventListener('click', (e) => {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
@@ -810,6 +815,20 @@
         selectForbesPerson(Number(chip.dataset.rank));
       });
     });
+    const clear = root.querySelector('[data-action="clear-forbes"]');
+    if (clear) {
+      clear.addEventListener('click', () => {
+        state.filterRank = null;
+        state.filterTicker = null;
+        state.filterEntityId = null;
+        updateFilterLabel();
+        renderThroughLineForbesUsers();
+        renderThroughLineUniverse();
+        renderCompression();
+        renderStream();
+        renderSectorBranches();
+      });
+    }
   }
 
   function renderThroughLineUniverse() {

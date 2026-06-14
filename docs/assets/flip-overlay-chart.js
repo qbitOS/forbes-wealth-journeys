@@ -2292,7 +2292,7 @@
               const fmText = fm
                 ? ` · ${fm.type === "ipo" ? "IPO" : "Founded"} ${fm.iso.slice(0, 4)} (${escapeHtml(fm.label)})`
                 : "";
-              return `<p class="flip-overlay-highlight flip-overlay-focus-banner">Focus <strong>${escapeHtml(state.focusTicker)}</strong>${fmText} · flip walls for this symbol · <button type="button" class="flip-overlay-clear" id="flip-overlay-clear">← Back</button></p>`;
+              return `<p class="flip-overlay-highlight flip-overlay-focus-banner">Focus <strong>${escapeHtml(state.focusTicker)}</strong>${fmText} · flip walls for this symbol · <button type="button" class="flip-overlay-clear" id="flip-overlay-clear" title="Return to multi-symbol overlay">← Back to symbols</button></p>`;
             })()
           : state.highlightTicker
             ? (() => {

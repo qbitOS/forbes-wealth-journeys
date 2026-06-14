@@ -1113,6 +1113,28 @@ body.unified-page {
   background: color-mix(in srgb, var(--fwj-accent) 16%, var(--panel));
 }
 
+.tl-forbes-clear-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  padding: 3px 8px;
+  border: 1px dashed var(--accent);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 0.625rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.tl-forbes-clear-chip:hover {
+  background: var(--fwj-accent-subtle);
+  border-style: solid;
+}
+
 .tl-forbes-user-rank {
   flex-shrink: 0;
   font-family: var(--mono);
@@ -2709,6 +2731,7 @@ body.stream-drawer-open .stream-drawer-backdrop:not([hidden]) {
   color: var(--accent);
   cursor: pointer;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .flip-overlay-focus-back:hover {
