@@ -2705,6 +2705,7 @@
   }
 
   function readSelectionFromUrl() {
+    if (!billionaires.length) return;
     const hash = window.location.hash;
     const nameMatch = hash.match(/[?&]name=([^&]+)/);
     const rankMatch = hash.match(/[?&]rank=(\d+)/);
@@ -2715,7 +2716,7 @@
     }
 
     if (nameMatch) {
-      const name = decodeURIComponent(nameMatch[1]);
+      const name = decodeURIComponent(nameMatch[1].replace(/\+/g, ' '));
       const byName = billionaires.find((b) => b.name === name);
       if (byName) {
         selectedKey = personKey(byName);
@@ -2728,7 +2729,11 @@
       const tied = billionaires.filter((b) => b.rank === rank);
       if (tied.length === 1) {
         selectedKey = personKey(tied[0]);
-      } else if (tied.length > 1 && !nameMatch) {
+      } else if (tied.length > 1 && nameMatch) {
+        const name = decodeURIComponent(nameMatch[1].replace(/\+/g, ' '));
+        const byBoth = tied.find((b) => b.name === name);
+        selectedKey = personKey(byBoth || tied[0]);
+      } else if (tied.length > 1) {
         selectedKey = personKey(tied[0]);
       }
     }
@@ -2833,6 +2838,7 @@
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       billionaires = await resp.json();
       billionaires.sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name));
+      readSelectionFromUrl();
       if (!selectedKey && billionaires.length) {
         selectedKey = personKey(billionaires[0]);
       }
@@ -2842,7 +2848,6 @@
       return;
     }
 
-    readSelectionFromUrl();
     if (window.location.hash.includes('forbes')) {
       window.fwjScrollToSection?.('forbes', { behavior: 'auto' });
     }
