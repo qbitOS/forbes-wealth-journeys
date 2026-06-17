@@ -1516,7 +1516,7 @@
               const note = item.note || item.description || '';
               const related =
                 item.relatedRank && item.relatedName
-                  ? `<div class="forbes-catalog-related-wrap"><span class="forbes-catalog-related">${escapeHtml(item.relatedNote || 'Related profile')}: ${renderProfileRankLink(item.relatedRank, item.relatedName)}</span></div>`
+                  ? `<footer class="forbes-catalog-related-wrap"><span class="forbes-catalog-related">${escapeHtml(item.relatedNote || 'Related profile')}: ${renderProfileRankLink(item.relatedRank, item.relatedName)}</span></footer>`
                   : '';
               const body = `
               ${year ? `<span class="forbes-catalog-year">${escapeHtml(String(year))}</span>` : ''}
@@ -1524,9 +1524,10 @@
               <strong class="forbes-catalog-title">${escapeHtml(item.title)}</strong>
               ${meta ? `<span class="forbes-catalog-meta">${escapeHtml(meta)}</span>` : ''}
               ${note ? `<span class="forbes-catalog-note">${escapeHtml(note)}</span>` : ''}`;
-              return item.url
-                ? `<li class="forbes-catalog-card"><a class="forbes-catalog-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${body}</a>${related}</li>`
-                : `<li class="forbes-catalog-card">${body}${related}</li>`;
+              const inner = item.url
+                ? `<a class="forbes-catalog-link forbes-lawsuit-main" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${body}</a>${related}`
+                : `${body}${related}`;
+              return `<li class="forbes-catalog-card forbes-lawsuit-card"><article class="forbes-lawsuit-card-inner">${inner}</article></li>`;
             })
             .join('')}
         </ul>
@@ -1611,10 +1612,6 @@
     if (!showcase) return sections;
 
     if (showcase.filmCollabs) add('films', () => renderFilmCollabsSection(showcase.filmCollabs));
-    if (showcase.lawsuits?.items?.length) add('lawsuits', () => renderLawsuitsSection(showcase.lawsuits));
-    if (showcase.relatedProfiles?.items?.length) {
-      add('related-profiles', () => renderRelatedProfilesSection(showcase.relatedProfiles));
-    }
     if (showcase.worksCatalog?.length) {
       add('works', () =>
         renderCatalogSection(showcase.worksCatalog, showcase.worksTitle || 'Selected works', { ariaLabel: 'Paintings and works' }),
@@ -1637,6 +1634,10 @@
           ariaLabel: 'Publications and press',
         }),
       );
+    }
+    if (showcase.lawsuits?.items?.length) add('lawsuits', () => renderLawsuitsSection(showcase.lawsuits));
+    if (showcase.relatedProfiles?.items?.length) {
+      add('related-profiles', () => renderRelatedProfilesSection(showcase.relatedProfiles));
     }
     if (showcase.thqCredits?.length) add('thq', () => renderThqCreditsSection(showcase.thqCredits, showcase.thqTitle));
     if (showcase.youtubeChannel) add('youtube', () => renderYoutubeChannel(showcase.youtubeChannel));

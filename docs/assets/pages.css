@@ -3842,13 +3842,41 @@ html.forbes-drawer-scroll-lock body {
   color: var(--forbes-muted, #666);
 }
 
+.forbes-lawsuits-section {
+  margin-bottom: 2rem;
+}
+
+.forbes-lawsuit-card-inner {
+  display: grid;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+  overflow: hidden;
+}
+
+.forbes-lawsuit-main {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.forbes-lawsuit-main:hover {
+  border: none;
+  box-shadow: none;
+  background: rgba(180, 83, 9, 0.04);
+}
+
 .forbes-catalog-related-wrap {
-  padding: 0 0.75rem 0.625rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem 0.625rem;
+  border-top: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: rgba(180, 83, 9, 0.03);
 }
 
 .forbes-catalog-related {
+  display: block;
   font-size: 0.75rem;
-  line-height: 1.4;
+  line-height: 1.45;
   color: var(--forbes-muted, #666);
 }
 
@@ -4210,10 +4238,16 @@ html.forbes-drawer-scroll-lock body {
 
 .forbes-lazy-section {
   min-height: 3.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .forbes-lazy-section.is-loaded {
   min-height: 0;
+  margin-bottom: 0;
+}
+
+.forbes-lazy-section.is-loaded .forbes-showcase-section {
+  margin-bottom: 1.75rem;
 }
 
 .forbes-lazy-skeleton {
