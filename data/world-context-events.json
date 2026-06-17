@@ -73,6 +73,13 @@
     "Diversified": [
       { "year": 1991, "label": "India economic liberalization", "category": "history", "description": "Conglomerate fortunes expand post-license Raj." },
       { "year": 2014, "label": "Modi election / India growth narrative", "category": "history", "description": "Domestic champions scale nationally." }
+    ],
+    "Contemporary Art": [
+      { "year": 2004, "label": "Mehretu Stadia II · Whitney Biennial", "category": "science", "description": "Large-scale abstract painting enters major museum biennial circuit." },
+      { "year": 2008, "label": "Lehman collapse · art-market contraction", "category": "wealth", "description": "Contemporary auction volumes and primary sales dip globally." },
+      { "year": 2009, "label": "Deutsche Guggenheim Grey Area", "category": "science", "description": "Mehretu museum commission cycle — Berlin premiere to Guggenheim NY." },
+      { "year": 2015, "label": "Mehretu U.S. Medal of Arts", "category": "history", "description": "Federal recognition for contemporary painting at national scale." },
+      { "year": 2023, "label": "Mehretu $10.7M auction record", "category": "wealth", "description": "Walkers With the Dawn and Morning — Sotheby's contemporary sale peak." }
     ]
   }
 }

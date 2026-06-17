@@ -6388,5 +6388,2726 @@
       }
     ],
     "firstFortuneDecade": "1980s"
+  },
+  {
+    "rank": 101,
+    "name": "Julie Mehretu",
+    "netWorth": {
+      "value": 75,
+      "unit": "M",
+      "currency": "USD",
+      "asOf": "2026-06-15"
+    },
+    "age": 55,
+    "country": "United States",
+    "sector": "Contemporary Art",
+    "companies": [
+      "Marian Goodman Gallery",
+      "White Cube"
+    ],
+    "sourceOfWealth": "Contemporary painting, commissions, gallery sales",
+    "firstFortuneDecade": "2000s",
+    "summary": "Ethiopian-born American contemporary artist specializing in large-scale abstract paintings built from layered acrylic washes, ink drawings, and gestural marks evoking architectural blueprints and urban maps. MacArthur Fellow (2005); U.S. Medal of Arts (2015); auction record $10.7M for Walkers With the Dawn and Morning (2023).",
+    "timeline": [
+      {
+        "year": "1970",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Born in Addis Ababa, Ethiopia",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "1977",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Family immigrates to East Lansing, Michigan",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "1992",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "BA from Kalamazoo College",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "1997",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "MFA in painting and printmaking, RISD",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "1999",
+        "type": "founding",
+        "entityId": "julie-mehretu-studio",
+        "title": "Established studio practice in New York City",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2000",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Renegade Delirium — breakthrough large-scale painting at Project, New York",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2002",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Relocates primary studio to Berlin; Exponent series",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2003",
+        "type": "milestone",
+        "entityId": "walker-art-center",
+        "title": "Solo museum debut: Drawing into Painting at Walker Art Center",
+        "valuationUsdB": null,
+        "source": "https://walkerart.org/collections/artists/julie-mehretu"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "MacArthur Fellowship; Stadia series begins",
+        "image": "docs/assets/art/mehretu/stadia-ii.png",
+        "imageAlt": "Julie Mehretu, Stadia II (2004)",
+        "valuationUsdB": null,
+        "source": "https://www.macfound.org/fellows/julie-mehretu"
+      },
+      {
+        "year": "2005",
+        "type": "lawsuit",
+        "entityId": "project-worldwide",
+        "title": "Lehmann v. The Project Worldwide — collector suit over Mehretu first-refusal contract",
+        "description": "Jean-Pierre Lehmann sued dealer Christian Haye for selling roughly 40 Mehretu paintings to Walker Art Center, Jeanne Greenberg Rohatyn, Thomas Dane, and other buyers despite a $75,000 interest-free gallery loan granting Lehmann right of first refusal. Mehretu testified in Manhattan Supreme Court (January 2005) that she was unaware of Lehmann before the trial. Judge awarded $1.736M in damages; confidential settlement November 2005.",
+        "valuationUsdB": 0.001736,
+        "source": "https://www.theartnewspaper.com/2005/03/01/collector-sues-gallery-over-right-to-first-choice-of-artists-work"
+      },
+      {
+        "year": "2007",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Black City — landmark architectural abstraction",
+        "image": "docs/assets/art/mehretu/black-city-architectural.png",
+        "imageAlt": "Black City (2007)",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2009",
+        "type": "milestone",
+        "entityId": "goldman-sachs-mural",
+        "title": "Completed Mural — 80 × 23 ft commission for Goldman Sachs HQ ($5M)",
+        "image": "docs/assets/art/mehretu/mural-interior-hallway.png",
+        "imageAlt": "Mural (2009) in Goldman Sachs headquarters lobby",
+        "valuationUsdB": 0.005,
+        "source": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "guggenheim",
+        "title": "Grey Area series exhibition at Deutsche Guggenheim / Guggenheim New York",
+        "image": "docs/assets/art/mehretu/grey-area-explosive.png",
+        "imageAlt": "Grey Area series large-scale painting",
+        "valuationUsdB": null,
+        "source": "https://www.guggenheim.org/artwork/artist/julie-mehretu"
+      },
+      {
+        "year": "2012",
+        "type": "milestone",
+        "entityId": "documenta",
+        "title": "Documenta 13 — Kassel, Germany",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2013",
+        "type": "milestone",
+        "entityId": "carnegie-museum",
+        "title": "Carnegie International — Pittsburgh",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2013",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Liminal Squared — Marian Goodman Gallery, New York",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/exhibitions/julie-mehretu-liminal-squared"
+      },
+      {
+        "year": "2014",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Co-produced Difret — sold painting to finance Amharic feature (Angelina Jolie presenter)",
+        "valuationUsdB": null,
+        "source": "https://www.vogue.com/article/julie-mehretu-difret"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "U.S. Department of State Medal of Arts Lifetime Achievement Award",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2016",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Conjured Parts — Ferguson protest paintings at Marian Goodman",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2019",
+        "type": "milestone",
+        "entityId": "lacma",
+        "title": "LACMA mid-career survey — Los Angeles",
+        "valuationUsdB": null,
+        "source": "https://www.lacma.org/art/exhibition/julie-mehretu"
+      },
+      {
+        "year": "2020",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Walkers With the Dawn and Morning — monumental diptych completed",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2021",
+        "type": "milestone",
+        "entityId": "whitney-museum",
+        "title": "Mid-career retrospective at Whitney Museum of American Art",
+        "valuationUsdB": null,
+        "source": "https://whitney.org/exhibitions/julie-mehretu"
+      },
+      {
+        "year": "2022",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Treatises on the Executed — series on state violence and migration",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2023",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Auction record: Walkers With the Dawn and Morning sells for $10.7M at Sotheby's New York",
+        "valuationUsdB": 0.0107,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "bmw-art-car",
+        "title": "BMW Art Car #20 — 24 Hours of Le Mans",
+        "valuationUsdB": null,
+        "source": "https://www.press.bmwgroup.com/global/article/detail/T0438222EN"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "palazzo-grassi",
+        "title": "Ensemble — Palazzo Grassi, Venice (group exhibition)",
+        "valuationUsdB": null,
+        "source": "https://www.palazzograssi.it/en/exhibitions/ensemble/"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "obama-presidential-center",
+        "title": "Uprising of the Sun — 83-ft painted glass installation at Obama Presidential Center",
+        "valuationUsdB": null,
+        "source": "https://grokipedia.com/page/Julie_Mehretu"
+      },
+      {
+        "year": "2025",
+        "type": "milestone",
+        "entityId": "kairos-k21",
+        "title": "KAIROS — solo exhibition at K21, Düsseldorf",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2025",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Officer of the Ordre des Arts et des Lettres (France)",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2026",
+        "type": "milestone",
+        "entityId": "art-basel",
+        "title": "Art Basel Awards medalist",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "year": "2026",
+        "type": "milestone",
+        "entityId": "julie-mehretu",
+        "title": "Our Days, Like a Shadow — Marian Goodman, New York",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu"
+      }
+    ],
+    "grokipediaLink": "https://grokipedia.com/page/Julie_Mehretu",
+    "forbesProfile": "https://www.mariangoodman.com/artists/julie-mehretu",
+    "wikipediaLink": "https://en.wikipedia.org/wiki/Julie_Mehretu",
+    "wealthBreakdown": [
+      {
+        "entity": "Primary market (Marian Goodman / White Cube)",
+        "stakePct": 100,
+        "valueUsdB": 0.04,
+        "type": "private"
+      },
+      {
+        "entity": "Auction secondary market (cumulative)",
+        "stakePct": 100,
+        "valueUsdB": 0.02,
+        "type": "private"
+      },
+      {
+        "entity": "Public commissions (Mural, Obama Center, SFMOMA)",
+        "stakePct": 100,
+        "valueUsdB": 0.015,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "julie-mehretu-studio",
+        "name": "Julie Mehretu Studio",
+        "role": "principal_artist",
+        "founded": 1999,
+        "status": "private"
+      },
+      {
+        "id": "walker-art-center",
+        "name": "Walker Art Center",
+        "role": "exhibitor",
+        "founded": 1927,
+        "status": "institution"
+      },
+      {
+        "id": "guggenheim",
+        "name": "Solomon R. Guggenheim Museum",
+        "role": "exhibitor",
+        "founded": 1939,
+        "status": "institution"
+      },
+      {
+        "id": "goldman-sachs-mural",
+        "name": "Mural (Goldman Sachs HQ)",
+        "role": "commission",
+        "founded": 2009,
+        "status": "permanent_installation",
+        "valuationUsdB": 0.005
+      },
+      {
+        "id": "whitney-museum",
+        "name": "Whitney Museum of American Art",
+        "role": "exhibitor",
+        "founded": 1930,
+        "status": "institution"
+      },
+      {
+        "id": "obama-presidential-center",
+        "name": "Obama Presidential Center",
+        "role": "commission",
+        "founded": 2024,
+        "status": "permanent_installation"
+      },
+      {
+        "id": "project-worldwide",
+        "name": "The Project / Project Worldwide",
+        "role": "former_us_gallery",
+        "founded": 1998,
+        "status": "defunct"
+      }
+    ],
+    "buyingPowerTargets": [
+      {
+        "id": "mural-commission",
+        "label": "Goldman Sachs Mural-scale commission",
+        "type": "commission",
+        "costUsdB": 0.005,
+        "emoji": "🏛️",
+        "lat": 40.715,
+        "lng": -74.015
+      },
+      {
+        "id": "gallery-roster",
+        "label": "Marian Goodman roster buy-in",
+        "type": "art",
+        "costUsdB": 0.05,
+        "emoji": "🎨",
+        "lat": 40.761,
+        "lng": -73.975
+      },
+      {
+        "id": "guggenheim-suite",
+        "label": "Deutsche Guggenheim Grey Area suite",
+        "type": "institution",
+        "costUsdB": 0.015,
+        "emoji": "🏛️",
+        "lat": 52.52,
+        "lng": 13.405
+      },
+      {
+        "id": "studio-footprint",
+        "label": "Berlin + NYC studio footprint",
+        "type": "infrastructure",
+        "costUsdB": 0.025,
+        "emoji": "🖌️",
+        "lat": 40.748,
+        "lng": -73.985
+      },
+      {
+        "id": "museum-endowment",
+        "label": "Museum endowment naming rights",
+        "type": "institution",
+        "costUsdB": 0.1,
+        "emoji": "🏦",
+        "lat": 40.782,
+        "lng": -73.965
+      }
+    ],
+    "galleryTitle": "Notable works & installations",
+    "gallery": [
+      {
+        "src": "docs/assets/art/mehretu/stadia-ii.png",
+        "alt": "Julie Mehretu, Stadia II (2004)",
+        "caption": "Stadia II (2004) — ink and acrylic on canvas",
+        "year": "2004"
+      },
+      {
+        "src": "docs/assets/art/mehretu/stadia-series-detail.png",
+        "alt": "Stadia series detail with flag motifs",
+        "caption": "Stadia series — architectural stadium plans with gestural overlays",
+        "year": "2004"
+      },
+      {
+        "src": "docs/assets/art/mehretu/black-city-architectural.png",
+        "alt": "Black City architectural abstraction",
+        "caption": "Black City (2007) — layered urban mapping",
+        "year": "2007"
+      },
+      {
+        "src": "docs/assets/art/mehretu/grey-area-explosive.png",
+        "alt": "Grey Area series explosive gestural composition",
+        "caption": "Grey Area series (2007–2009)",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-interior-hallway.png",
+        "alt": "Mural installed in Goldman Sachs lobby hallway",
+        "caption": "Mural (2009) — Goldman Sachs HQ, New York",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-through-glass.png",
+        "alt": "Mural viewed through building glass facade",
+        "caption": "Mural (2009) — exterior view, 200 West Street",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-city-reflection.png",
+        "alt": "Mural with Manhattan skyline reflected in glass",
+        "caption": "Mural (2009) — lobby installation with city backdrop",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-with-people.png",
+        "alt": "Mural scale with people walking in lobby",
+        "caption": "Mural (2009) — monumental scale in corporate lobby",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-panorama.png",
+        "alt": "Panoramic view of Mural installation",
+        "caption": "Mural (2009) — full-length panorama",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/gallery-three-paintings.png",
+        "alt": "Gallery installation of three Mehretu paintings",
+        "caption": "Museum gallery installation",
+        "year": "2010"
+      },
+      {
+        "src": "docs/assets/art/mehretu/gallery-two-paintings.png",
+        "alt": "Gallery with two large Mehretu abstractions",
+        "caption": "Large-scale abstractions in museum setting",
+        "year": "2010"
+      },
+      {
+        "src": "docs/assets/art/mehretu/detail-layered-composition.png",
+        "alt": "Close-up of layered ink and acrylic marks",
+        "caption": "Layered ink, acrylic, and architectural line work",
+        "year": "—"
+      },
+      {
+        "src": "docs/assets/art/mehretu/detail-geometric-layers.png",
+        "alt": "Geometric color layers over architectural drawing",
+        "caption": "Detail — geometric overlays on architectural base",
+        "year": "—"
+      },
+      {
+        "src": "docs/assets/art/mehretu/architectural-white-composition.png",
+        "alt": "Pale architectural abstraction with fine line networks",
+        "caption": "Architectural white-field composition",
+        "year": "—"
+      },
+      {
+        "src": "docs/assets/art/mehretu/studio-scissor-lift.png",
+        "alt": "Julie Mehretu on scissor lift in front of large canvas",
+        "caption": "Studio process — large-scale canvas in progress",
+        "year": "—"
+      }
+    ],
+    "additionalLinks": [
+      {
+        "label": "Marian Goodman Gallery",
+        "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+      },
+      {
+        "label": "White Cube",
+        "url": "https://whitecube.com/artists/julie_mehretu"
+      },
+      {
+        "label": "Art21 — Julie Mehretu",
+        "url": "https://art21.org/artist/julie-mehretu/"
+      },
+      {
+        "label": "Whitney retrospective (2021)",
+        "url": "https://whitney.org/exhibitions/julie-mehretu"
+      },
+      {
+        "label": "LACMA survey (2019)",
+        "url": "https://www.lacma.org/art/exhibition/julie-mehretu"
+      },
+      {
+        "label": "Walker Art Center collection",
+        "url": "https://walkerart.org/collections/artists/julie-mehretu"
+      }
+    ],
+    "wikiInfoboxExtra": "<dl>\n  <dt>Education</dt>\n  <dd>Kalamazoo College (BA, 1992) · Rhode Island School of Design (MFA, 1997)</dd>\n  <dt>Galleries</dt>\n  <dd><a href=\"https://www.mariangoodman.com/artists/julie-mehretu\">Marian Goodman</a> (New York, Paris, London) · <a href=\"https://whitecube.com/artists/julie_mehretu\">White Cube</a> (London)</dd>\n  <dt>Studios</dt>\n  <dd>New York City · Berlin</dd>\n  <dt>Major awards</dt>\n  <dd>MacArthur Fellowship (2005) · U.S. Medal of Arts (2015) · Officer, Ordre des Arts et des Lettres (2025) · Art Basel Awards medalist (2026)</dd>\n  <dt>Auction record</dt>\n  <dd><em>Walkers With the Dawn and Morning</em> — $10.7M, Sotheby's New York (2023)</dd>\n  <dt>Notable commissions</dt>\n  <dd><em>Mural</em> (Goldman Sachs HQ, 2009) · <em>Uprising of the Sun</em> (Obama Presidential Center, 2024) · BMW Art Car #20 (2024)</dd>\n</dl>",
+    "profileShowcase": {
+      "worksTitle": "Selected paintings & series",
+      "worksCatalog": [
+        {
+          "year": "2000",
+          "title": "Renegade Delirium",
+          "type": "Painting",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Breakthrough large-scale work — architectural stadium plans with gestural overlays",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2002",
+          "title": "Exponent",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Early Berlin-studio abstractions",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2004",
+          "title": "Stadia I",
+          "type": "Painting",
+          "medium": "Ink and acrylic on canvas, 108 × 144 in.",
+          "note": "Stadium architecture and national iconography",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2004",
+          "title": "Stadia II",
+          "type": "Painting",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Companion to Stadia I — local gallery image available",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2007",
+          "title": "Black City",
+          "type": "Painting",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Layered urban mapping — landmark mid-career work",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2007–09",
+          "title": "Grey Area",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Berliner Plätze, Notations, Plover's Wing, and related works — Deutsche Guggenheim",
+          "url": "https://www.guggenheim.org/artwork/artist/julie-mehretu"
+        },
+        {
+          "year": "2009",
+          "title": "Mural",
+          "type": "Commission",
+          "medium": "Ink and acrylic on canvas, 80 × 23 ft",
+          "note": "Goldman Sachs HQ, 200 West Street, New York — $5M commission",
+          "url": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+        },
+        {
+          "year": "2013",
+          "title": "Liminal Squared",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Marian Goodman solo — architectural compression and erasure",
+          "url": "https://www.mariangoodman.com/exhibitions/julie-mehretu-liminal-squared"
+        },
+        {
+          "year": "2014–18",
+          "title": "A Love Supreme",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Named for Coltrane — layered marks over cartographic bases",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2015",
+          "title": "Ghostcupsule",
+          "type": "Painting",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Dense gestural field over erased architectural drawing",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2016",
+          "title": "Conjured Parts (Ferguson)",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Response to Ferguson protests — state violence and public space",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2016",
+          "title": "Hoodnyx, Voodoo and Stelae",
+          "type": "Painting",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Monumental work from Conjured Parts exhibition",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2019–20",
+          "title": "Conversion (S.M. del Popolo)",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Rome church floor plans and baroque architecture as source material",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2020",
+          "title": "Walkers With the Dawn and Morning",
+          "type": "Painting",
+          "medium": "Diptych, ink and acrylic on canvas",
+          "note": "Auction record $10.7M at Sotheby's (2023)",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2020",
+          "title": "Beloved (Beirut)",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Response to 2020 Beirut port explosion",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2020",
+          "title": "Retopistics",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "Cartographic re-mapping during pandemic studio period",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2022",
+          "title": "Treatises on the Executed",
+          "type": "Series",
+          "medium": "Ink and acrylic on canvas",
+          "note": "State execution, migration, and border violence",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2022",
+          "title": "Codex Monotypes",
+          "type": "Prints",
+          "medium": "Monotype",
+          "note": "Editioned works on paper — architectural erasure studies",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2024",
+          "title": "BMW Art Car #20",
+          "type": "Commission",
+          "medium": "Paint on BMW M Hybrid V8",
+          "note": "24 Hours of Le Mans — first Art Car by a Black woman artist",
+          "url": "https://www.press.bmwgroup.com/global/article/detail/T0438222EN"
+        },
+        {
+          "year": "2024",
+          "title": "Uprising of the Sun",
+          "type": "Commission",
+          "medium": "Painted glass, 83 ft",
+          "note": "Obama Presidential Center, Chicago",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        }
+      ],
+      "exhibitionsTitle": "Solo & major group exhibitions",
+      "exhibitions": [
+        {
+          "year": "2003",
+          "title": "Drawing into Painting",
+          "type": "Solo",
+          "venue": "Walker Art Center, Minneapolis",
+          "dates": "2003",
+          "url": "https://walkerart.org/collections/artists/julie-mehretu"
+        },
+        {
+          "year": "2005",
+          "title": "Julie Mehretu",
+          "type": "Solo",
+          "venue": "Marian Goodman Gallery, New York",
+          "dates": "2005",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2010",
+          "title": "Grey Area",
+          "type": "Solo",
+          "venue": "Deutsche Guggenheim, Berlin / Solomon R. Guggenheim Museum, New York",
+          "dates": "2010",
+          "url": "https://www.guggenheim.org/artwork/artist/julie-mehretu"
+        },
+        {
+          "year": "2012",
+          "title": "Documenta 13",
+          "type": "Group",
+          "venue": "Kassel, Germany",
+          "dates": "2012",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "year": "2013",
+          "title": "Liminal Squared",
+          "type": "Solo",
+          "venue": "Marian Goodman Gallery, New York",
+          "dates": "2013",
+          "url": "https://www.mariangoodman.com/exhibitions/julie-mehretu-liminal-squared"
+        },
+        {
+          "year": "2013",
+          "title": "2013 Carnegie International",
+          "type": "Group",
+          "venue": "Carnegie Museum of Art, Pittsburgh",
+          "dates": "2013",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "year": "2016",
+          "title": "Conjured Parts",
+          "type": "Solo",
+          "venue": "Marian Goodman Gallery, New York",
+          "dates": "2016",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2019",
+          "title": "Julie Mehretu",
+          "type": "Solo",
+          "venue": "Los Angeles County Museum of Art (LACMA)",
+          "dates": "2019",
+          "url": "https://www.lacma.org/art/exhibition/julie-mehretu"
+        },
+        {
+          "year": "2019",
+          "title": "May You Live in Interesting Times",
+          "type": "Group",
+          "venue": "58th Venice Biennale",
+          "dates": "2019",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "year": "2021",
+          "title": "Julie Mehretu",
+          "type": "Solo",
+          "venue": "Whitney Museum of American Art, New York",
+          "dates": "2021",
+          "url": "https://whitney.org/exhibitions/julie-mehretu"
+        },
+        {
+          "year": "2021",
+          "title": "Julie Mehretu (touring)",
+          "type": "Solo",
+          "venue": "High Museum of Art, Atlanta · Walker Art Center · Musée d'art contemporain de Montréal",
+          "dates": "2021–22",
+          "url": "https://whitney.org/exhibitions/julie-mehretu"
+        },
+        {
+          "year": "2024",
+          "title": "Ensemble",
+          "type": "Group",
+          "venue": "Palazzo Grassi, Venice",
+          "dates": "2024",
+          "url": "https://www.palazzograssi.it/en/exhibitions/ensemble/"
+        },
+        {
+          "year": "2024",
+          "title": "Julie Mehretu",
+          "type": "Solo",
+          "venue": "Museum of Contemporary Art Australia, Sydney",
+          "dates": "2024",
+          "url": "https://www.mca.com.au/"
+        },
+        {
+          "year": "2025",
+          "title": "KAIROS",
+          "type": "Solo",
+          "venue": "K21 Kunstsammlung Nordrhein-Westfalen, Düsseldorf",
+          "dates": "2025",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2026",
+          "title": "Our Days, Like a Shadow",
+          "type": "Solo",
+          "venue": "Marian Goodman Gallery, New York",
+          "dates": "14 April – 6 June 2026",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        }
+      ],
+      "videoTitle": "Art21 films & studio documentation",
+      "videos": [
+        {
+          "year": 2005,
+          "title": "Systems",
+          "source": "Art21 Season 5 · PBS",
+          "description": "Berlin studio, Deutsche Guggenheim Grey Area paintings, and Mural in production.",
+          "url": "https://art21.org/watch/season-5-julie-mehretu-systems-segment/"
+        },
+        {
+          "year": 2009,
+          "title": "Mural (SHORT)",
+          "source": "Art21 Extended Play",
+          "description": "Goldman Sachs commission — finishing and on-site installation at 200 West Street.",
+          "url": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+        },
+        {
+          "year": 2010,
+          "title": "Studio Assistants",
+          "source": "Art21 Extended Play",
+          "description": "Berlin studio — division of labor, printmaking, and large-scale painting process.",
+          "url": "https://art21.org/watch/extended-play/julie-mehretu-studio-assistants-short/"
+        },
+        {
+          "year": 2010,
+          "title": "Painting Conservator Luca Bonetti",
+          "source": "Art21 Extended Play",
+          "description": "Mural (2009) installation team and conservation at Goldman Sachs HQ.",
+          "url": "https://art21.org/watch/extended-play/julie-mehretu-painting-conservator-luca-bonetti-short/"
+        },
+        {
+          "year": 2021,
+          "title": "Whitney retrospective walkthrough",
+          "source": "Whitney Museum",
+          "description": "Mid-career survey spanning Drawing into Painting through Conjured Parts.",
+          "url": "https://whitney.org/exhibitions/julie-mehretu"
+        }
+      ],
+      "newsTitle": "News, awards & commissions",
+      "news": [
+        {
+          "date": "2026",
+          "title": "Art Basel Awards medalist",
+          "category": "Award",
+          "source": "Art Basel / Marian Goodman",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "date": "2026",
+          "title": "Our Days, Like a Shadow opens at Marian Goodman, New York",
+          "category": "Exhibition",
+          "source": "Marian Goodman Gallery",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "date": "2025",
+          "title": "Officer of the Ordre des Arts et des Lettres",
+          "category": "Award",
+          "source": "French Ministry of Culture",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "date": "2025",
+          "title": "KAIROS solo exhibition at K21, Düsseldorf",
+          "category": "Exhibition",
+          "source": "Kunstsammlung NRW",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "date": "2024",
+          "title": "BMW Art Car #20 debuts at 24 Hours of Le Mans",
+          "category": "Commission",
+          "source": "BMW Group",
+          "url": "https://www.press.bmwgroup.com/global/article/detail/T0438222EN"
+        },
+        {
+          "date": "2024",
+          "title": "Uprising of the Sun unveiled at Obama Presidential Center",
+          "category": "Commission",
+          "source": "Obama Foundation",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "date": "2024",
+          "title": "Ensemble — Palazzo Grassi, Venice",
+          "category": "Exhibition",
+          "source": "Palazzo Grassi",
+          "url": "https://www.palazzograssi.it/en/exhibitions/ensemble/"
+        },
+        {
+          "date": "2024",
+          "title": "MCA Australia survey opens in Sydney",
+          "category": "Exhibition",
+          "source": "MCA Australia",
+          "url": "https://www.mca.com.au/"
+        },
+        {
+          "date": "2023",
+          "title": "Walkers With the Dawn and Morning sets auction record at $10.7M",
+          "category": "Market",
+          "source": "Sotheby's New York",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "date": "2022",
+          "title": "Art for Justice Fund — criminal justice reform philanthropy",
+          "category": "Philanthropy",
+          "source": "Art for Justice Fund",
+          "url": "https://artforjusticefund.org/"
+        },
+        {
+          "date": "2021",
+          "title": "Whitney retrospective opens — largest survey to date",
+          "category": "Exhibition",
+          "source": "Whitney Museum",
+          "url": "https://whitney.org/exhibitions/julie-mehretu"
+        },
+        {
+          "date": "2020",
+          "title": "Beloved (Beirut) series — response to port explosion",
+          "category": "Work",
+          "source": "Marian Goodman Gallery",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "date": "2019",
+          "title": "Nina Simone childhood home preservation effort",
+          "category": "Philanthropy",
+          "source": "National Trust for Historic Preservation",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "date": "2016",
+          "title": "Conjured Parts — Ferguson protest paintings",
+          "category": "Work",
+          "source": "Marian Goodman Gallery",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "date": "2015",
+          "title": "U.S. Department of State Medal of Arts",
+          "category": "Award",
+          "source": "U.S. State Department",
+          "url": "https://grokipedia.com/page/Julie_Mehretu"
+        },
+        {
+          "date": "2005",
+          "title": "MacArthur Fellowship",
+          "category": "Award",
+          "source": "MacArthur Foundation",
+          "url": "https://www.macfound.org/fellows/julie-mehretu"
+        },
+        {
+          "date": "2005",
+          "title": "Lehmann v. The Project — $1.736M damages over Mehretu first-refusal breach",
+          "category": "Litigation",
+          "source": "The Art Newspaper",
+          "url": "https://www.theartnewspaper.com/2005/03/01/collector-sues-gallery-over-right-to-first-choice-of-artists-work"
+        }
+      ],
+      "publicationsTitle": "Catalogues & press",
+      "publications": [
+        {
+          "year": "2021",
+          "title": "Julie Mehretu (Whitney retrospective catalogue)",
+          "type": "Catalogue",
+          "publisher": "Whitney Museum / Yale University Press",
+          "url": "https://whitney.org/exhibitions/julie-mehretu"
+        },
+        {
+          "year": "2019",
+          "title": "Julie Mehretu (LACMA survey catalogue)",
+          "type": "Catalogue",
+          "publisher": "LACMA / DelMonico Books",
+          "url": "https://www.lacma.org/art/exhibition/julie-mehretu"
+        },
+        {
+          "year": "2017",
+          "title": "Grey Paintings",
+          "type": "Catalogue",
+          "publisher": "Marian Goodman Gallery",
+          "url": "https://www.mariangoodman.com/artists/julie-mehretu"
+        },
+        {
+          "year": "2013",
+          "title": "Liminal Squared",
+          "type": "Catalogue",
+          "publisher": "Marian Goodman Gallery",
+          "url": "https://www.mariangoodman.com/exhibitions/julie-mehretu-liminal-squared"
+        },
+        {
+          "year": "2010",
+          "title": "Julie Mehretu: Grey Area",
+          "type": "Catalogue",
+          "publisher": "Deutsche Guggenheim / Guggenheim Museum",
+          "url": "https://www.guggenheim.org/artwork/artist/julie-mehretu"
+        },
+        {
+          "year": "2007",
+          "title": "Freeing the Line",
+          "type": "Catalogue",
+          "publisher": "LACMA / DelMonico Books",
+          "url": "https://www.lacma.org/"
+        },
+        {
+          "year": "2023",
+          "title": "Julie Mehretu's $10.7 Million Painting Sets Auction Record",
+          "type": "Press",
+          "publisher": "Forbes",
+          "url": "https://www.forbes.com/"
+        },
+        {
+          "year": "2021",
+          "title": "Julie Mehretu: A Decade of Paintings That Map the Chaos of Our Times",
+          "type": "Press",
+          "publisher": "The New York Times",
+          "url": "https://www.nytimes.com/"
+        },
+        {
+          "year": "2021",
+          "title": "Julie Mehretu at the Whitney",
+          "type": "Press",
+          "publisher": "Artforum",
+          "url": "https://www.artforum.com/"
+        },
+        {
+          "year": "2016",
+          "title": "Julie Mehretu's Conjured Parts",
+          "type": "Press",
+          "publisher": "The New Yorker",
+          "url": "https://www.newyorker.com/"
+        },
+        {
+          "year": "2010",
+          "title": "Julie Mehretu: Grey Area at Deutsche Guggenheim",
+          "type": "Press",
+          "publisher": "Art in America",
+          "url": "https://www.artnews.com/art-in-america/"
+        },
+        {
+          "year": "2005",
+          "title": "Systems — Art21 Season 5 publication",
+          "type": "Publication",
+          "publisher": "Art21",
+          "url": "https://art21.org/artist/julie-mehretu/"
+        },
+        {
+          "year": "2018",
+          "title": "She Can't Be Bought: Julie Mehretu (Lehmann trial profile)",
+          "type": "Press",
+          "publisher": "Christopher Mason / New York Magazine",
+          "url": "https://www.christopher-mason.com/journalism-articles/2018/7/27/she-cant-be-bought-julie-mehretu"
+        }
+      ],
+      "filmCollabs": {
+        "title": "Film collaborations",
+        "description": "Sold a painting from her collection to finance Difret (2014) — Amharic for \"courage\" — a feature on marriage-by-abduction in Ethiopia, co-presented by Angelina Jolie after Sundance Audience Award. Subject of Checkerboard's Julie Mehretu: Palimpsest (2021).",
+        "filmsLabel": "Produced & featured",
+        "films": [
+          {
+            "title": "Difret",
+            "year": "2014",
+            "poster": "docs/assets/art/mehretu/film-posters/difret.jpg",
+            "url": "https://en.wikipedia.org/wiki/Difret"
+          },
+          {
+            "title": "Julie Mehretu: Palimpsest",
+            "year": "2021",
+            "url": "https://checkerboardfilms.org/films/show/n/julie-mehretu/"
+          },
+          {
+            "title": "Systems",
+            "year": "2005",
+            "url": "https://art21.org/watch/season-5-julie-mehretu-systems-segment/"
+          },
+          {
+            "title": "Mural (SHORT)",
+            "year": "2009",
+            "url": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+          }
+        ]
+      },
+      "lawsuits": {
+        "title": "Gallery litigation",
+        "description": "Landmark collector–dealer dispute over access to Mehretu primary-market paintings at The Project (Christian Haye).",
+        "items": [
+          {
+            "year": "2005",
+            "title": "Lehmann v. The Project Worldwide Inc.",
+            "type": "Breach of contract",
+            "venue": "New York Supreme Court, Manhattan",
+            "note": "Collector Jean-Pierre Lehmann lent $75,000 to The Project in 2001 for a 30% discount and right of first refusal on roster works. Haye sold sought-after Mehretu paintings to museums and other collectors instead. Mehretu testified on her square-footage pricing formula; damages set at $1.736M before a confidential November 2005 settlement.",
+            "url": "https://www.theartnewspaper.com/2005/12/01/collector-settles-suit-with-project-gallery-over-violation-of-first-refusal-agreement",
+            "relatedRank": 102,
+            "relatedName": "Erika Fortner",
+            "relatedNote": "Discussed in Mehretu studio during Fortner's Pratt BFA years and early finish-consultant tenure"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "rank": 102,
+    "name": "Erika Fortner",
+    "netWorth": {
+      "value": 56,
+      "unit": "M",
+      "currency": "USD",
+      "asOf": "2026-06-15"
+    },
+    "age": 46,
+    "country": "United States",
+    "sector": "Contemporary Art",
+    "companies": [
+      "Keven Craft Rituals",
+      "Blackthorn Mercantile",
+      "Queen Meb",
+      "The House of Twigs",
+      "Ritual ROI"
+    ],
+    "sourceOfWealth": "Studio finishing & fabrication, independent art practice, artisanal retail, ritual education, financial-astrology research",
+    "firstFortuneDecade": "2000s",
+    "summary": "American artist, studio collaborator, and entrepreneur. Raised in Ventura County; Buena High School Bulldogs (classmate of Zachary \"Pugh\" Levi; Kevin Costner alumnus). Pratt BFA (2008) after THQ game testing, Venice printmaking, and LindArt Lendava (Slovenia) residency. Sole Finish Consultant for Julie Mehretu's studio (2004–2015) across Stadia, Black City, Grey Area (Deutsche Guggenheim/Guggenheim NY), Mural (Goldman Sachs), Documenta 13, and Liminal Squared (Marian Goodman / White Cube). Eugene → Portland arc: Keven Craft Rituals wholesale in 200+ stockists; Blackthorn Mercantile homestore at 3954 N Williams; tarot educator since 1995. Founder of Ritual ROI — historical financial alignment research (entertainment only).",
+    "wikiInfoboxExtra": [
+      {
+        "label": "Education",
+        "value": "Buena High School (Bulldogs), Ventura, CA · Pratt Institute BFA Painting (2008)"
+      },
+      {
+        "label": "Bulldogs notable alumni",
+        "value": "Kevin Costner (attended, did not graduate) · Zachary \"Pugh\" Levi (classmate, Buena 1994–1998; drama w/ Mary Hill)",
+        "links": [
+          {
+            "label": "History of Buena — 1995–1999",
+            "url": "https://sites.google.com/venturaedu.org/historyofbuena/narrative-history/1995-1999"
+          },
+          {
+            "label": "Exceptional Bulldogs alumni",
+            "url": "https://sites.google.com/venturaedu.org/historyofbuena/digital-archive/exceptional-bulldogs"
+          },
+          {
+            "label": "Zachary Levi — Ventura to Shazam (Foothill Dragon Press)",
+            "url": "https://foothilldragonpress.org/268408/feature-stories/actor-zachary-levis-emotional-journey-from-ventura-local-to-superhero-stardom/"
+          }
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1980",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Born in Ventura, California",
+        "description": "Raised in an evangelical household in Ventura County; childhood spent in the family high-end cabinet-making and fine-finishing shop.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "1992",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Family cabinet shop — fine finishing & woodworking apprenticeship",
+        "description": "Trains alongside family in high-end cabinet making, staining, and surface finishing — skills later applied to Mehretu studio fabrication.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "1995",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Begins tarot, channeling, and eclectic solitary witchcraft practice",
+        "description": "Specializing in tarot and psychopomp work; eclectic energy healing and Reiki-informed practice that later anchors Queen Meb and THoT.",
+        "valuationUsdB": null,
+        "source": "https://kevencraftrituals.com/pages/about-us"
+      },
+      {
+        "year": "1996",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "CalArts CSSSA honors program — painting and ceramics (state top-artist selection)",
+        "valuationUsdB": null,
+        "source": "https://www.saatchiart.com/efortner"
+      },
+      {
+        "year": "1997",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Buena High School (Bulldogs), Ventura — class photo era",
+        "image": "docs/assets/art/erika-fortner/buena-bulldogs-class-photo-circled.png",
+        "imageAlt": "Buena High School class photo — Erika Fortner circled, late 1990s",
+        "description": "Ventura Unified (5670 Telegraph Rd). Classmate Zachary \"Pugh\" Levi attended 1994–1998 per Buena narrative history; drama dept (Frankenstein, Oklahoma! at McConnell Theatre). Kevin Costner alumnus. Erika appears in late-90s Bulldogs group photo (circled). Sister Mahala Fortner graduated Buena 1996.",
+        "valuationUsdB": null,
+        "source": "https://sites.google.com/venturaedu.org/historyofbuena/narrative-history/1995-1999"
+      },
+      {
+        "year": "1998",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Dental casting foundry — lab technician (precision mold & cast work)",
+        "description": "Fine-detail casting and mold work bridging cabinet finishing skills toward Pratt sculpture and painting surfaces.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "1998",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Hair salon — stylist assistant (pre-college trade work)",
+        "description": "Customer-facing service work between finishing-shop training and formal art school.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "1999",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Digital animation degree — Technology Development Center, Ventura",
+        "valuationUsdB": null,
+        "source": "https://www.saatchiart.com/efortner"
+      },
+      {
+        "year": "2000",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Enrolls at Pratt Institute of Art — BFA Painting, Brooklyn",
+        "description": "Studies under Jos. A. Smith, Mickalene Thomas, and Peggy Cyphers while building independent studio practice.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "2002",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "THQ — quality assurance lead & senior game tester (Agoura Hills / LA)",
+        "description": "MobyGames credits on 10 THQ titles (2002–2004): SpongeBob Battle for Bikini Bottom (Test Lead), Fairly OddParents: Breakin' da Rules (QA Lead), Rugrats Go Wild, Power Rangers: Ninja Storm, Evil Dead: A Fistful of Boomstick, Scooby-Doo 2, Sabre Wulf, WWE SmackDown!, Summoner 2, MX Superfly — while attending Pratt.",
+        "valuationUsdB": null,
+        "source": "https://www.mobygames.com/person/112474/erika-fortner/"
+      },
+      {
+        "year": "2003",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Tarot reader for Psychic Friends Network, Brooklyn — later leaves over company ethos",
+        "valuationUsdB": null,
+        "source": "https://thatwitchlife.com/2019/05/20/episode-10-magickal-herbs/"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Equality Now group show — Domestic Affairs, Locus Media Gallery",
+        "valuationUsdB": null,
+        "source": "https://www.saatchiart.com/efortner"
+      },
+      {
+        "year": "2004",
+        "type": "leadership",
+        "entityId": "julie-mehretu-studio",
+        "title": "Joins Julie Mehretu studio as sole Finish Consultant & ground preparator",
+        "image": "docs/assets/art/mehretu/stadia-ii.png",
+        "imageAlt": "Stadia II — studio tenure begins",
+        "description": "Develops custom translucent wax-like surface systems; works with MOMA, Guggenheim, White Cube, Marian Goodman, Carlier Gebauer, Christie’s, and Sotheby’s conservators on stretch, scrape, sand, and polish protocols for museum loans and private collections.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Stadia I (2004) — surface finishing",
+        "description": "Ink and acrylic on canvas; inaugural Stadia suite painting for Whitney Biennial 2004 / Carnegie International 2004. Dealer context: The Project, New York; Carlier Gebauer, Berlin.",
+        "valuationUsdB": null,
+        "source": "https://www.guggenheim.org/artwork/artist/julie-mehretu"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Stadia II (2004) — surface finishing",
+        "image": "docs/assets/art/mehretu/stadia-ii.png",
+        "imageAlt": "Stadia II finishing",
+        "description": "108 × 144 in. (274.3 × 365.8 cm), ink and acrylic on canvas. Acquired by Carnegie Museum of Art, Pittsburgh (gift of collectors Jeanne Greenberg Rohatyn & Nicolas Rohatyn, A.W. Mellon Acquisition Endowment Fund). Exhibited Whitney Biennial 2004; later Whitney retrospective 2021. White Cube / Guggenheim collection references.",
+        "valuationUsdB": null,
+        "source": "https://smarthistory.org/julie-mehretu-stadia-ii/"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Stadia III (2004) — surface finishing",
+        "description": "Monumental ink-and-acrylic canvas from Stadia suite (~9 × 12 ft class); fabricated for Whitney Biennial 2004 and L&M Arts Back to Paint survey. Museum loan prep with Guggenheim conservators.",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Stadia IV (2004) — surface finishing",
+        "description": "Fourth Stadia canvas; stadium-architecture lexicon at exhibition scale. Suite toured Carnegie International 2004–05 and entered major U.S. museum collections via Marian Goodman / White Cube sales channels.",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2004",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Whitney Biennial 2004 — Stadia suite installed",
+        "description": "Carnegie International 2004–05 and Back to Paint (L&M Arts). Stadia II (108 × 144 in.) later enters Carnegie Museum of Art via collectors Jeanne Greenberg Rohatyn & Nicolas Rohatyn.",
+        "valuationUsdB": null,
+        "source": "https://whitney.org/exhibitions/2004-biennial"
+      },
+      {
+        "year": "2005",
+        "type": "media",
+        "entityId": "julie-mehretu-studio",
+        "title": "Filmed for Art21 Season 5: Systems (PBS) — Berlin studio & early large-scale commissions",
+        "description": "On-screen interview; documents Deutsche Guggenheim-era paintings and Goldman Sachs Mural in production.",
+        "valuationUsdB": null,
+        "source": "https://art21.org/watch/season-5-julie-mehretu-systems-segment/"
+      },
+      {
+        "year": "2005",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Lehmann v. Project gallery lawsuit — discussed in Mehretu studio during Pratt BFA years",
+        "description": "While enrolled at Pratt Institute and working as finish consultant in Julie Mehretu's studio, Fortner heard studio discussion of collector Jean-Pierre Lehmann's breach-of-contract suit against The Project (Christian Haye) over first-refusal rights to Mehretu paintings. Mehretu testified January 2005; damages awarded March 2005; confidential settlement November 2005.",
+        "source": "https://www.christopher-mason.com/journalism-articles/2018/7/27/she-cant-be-bought-julie-mehretu"
+      },
+      {
+        "year": "2005",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Pratt Merit Award Competition; Fall Group Show, Fine Arts Office",
+        "valuationUsdB": null,
+        "source": "https://www.saatchiart.com/efortner"
+      },
+      {
+        "year": "2005",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Remote Viewing (2005) — Whitney Museum paintings fabricated",
+        "description": "Remote Viewing: Invented Worlds in Recent Painting and Drawing — monumental canvases for Whitney Museum group survey.",
+        "valuationUsdB": null,
+        "source": "https://whitney.org/collections/works/19389"
+      },
+      {
+        "year": "2006",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Black City suite (2006–2007) — fabrication for touring museum exhibition",
+        "image": "docs/assets/art/mehretu/black-city-architectural.png",
+        "imageAlt": "Black City era layered surfaces",
+        "description": "Touring exhibition: Museo de Arte Contemporáneo de Castilla y León (MUSAC); Kunstverein Hannover; Louisiana Museum of Modern Art (Humlebæk, Denmark). Hatje Cantz catalog documents seven large canvases exploring stadiums, architecture, and psychogeography. Market context: White Cube London / Carlier Gebauer Berlin primary sales; works enter European museum and private collections.",
+        "valuationUsdB": null,
+        "source": "https://www.artbook.com/catalog--art--monographs--mehretu--julie.html"
+      },
+      {
+        "year": "2006",
+        "type": "publication",
+        "entityId": "julie-mehretu-studio",
+        "title": "Catalog — Julie Mehretu: Black City (Hatje Cantz)",
+        "description": "Museum exhibition monograph documenting Black City paintings finished in studio.",
+        "valuationUsdB": null,
+        "source": "https://www.artbook.com/catalog--art--monographs--mehretu--julie.html"
+      },
+      {
+        "year": "2006",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Pratt in Venice — painting, printmaking, and art history (Università Internazionale dell'Arte)",
+        "description": "Summer study in Venice, Italy; Scuola Internazionale di Grafica printmaking; Pratt in Venice group show and Medium NYC at Emergency Arts, Chelsea.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "2007",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Berlin studio opened — Grey Area suite conceived (American Academy residency era)",
+        "description": "City Sitings (Detroit Institute of Arts) and Reflexive Drawings works; begins Middle Grey and Atlantic Wall substrates.",
+        "valuationUsdB": null,
+        "source": "https://artmap.com/deutscheguggenheim/exhibition/julie-mehretu-2009"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "BFA in Painting, Pratt Institute — Quadraphonic solo show",
+        "valuationUsdB": null,
+        "source": "https://www.saatchiart.com/efortner"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "First solo exhibition: Erika Fortner: New Paintings, Terra Gallery, Columbus, OH",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Atlantic Wall (2008–09) finishing",
+        "image": "docs/assets/art/mehretu/grey-area-explosive.png",
+        "imageAlt": "Grey Area Atlantic Wall era",
+        "description": "120 × 168 in., ink and acrylic on canvas. References WWII Atlantic Wall bunkers; pale pink-green opalescent ground under architectural tracery. Full six-painting suite commissioned by Deutsche Bank AG with Solomon R. Guggenheim Foundation.",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Believer's Palace (2008–09) finishing",
+        "description": "120 × 168 in., ink and acrylic on canvas. References Saddam Hussein's partially destroyed Baghdad bunker palace; among six Deutsche Guggenheim commissions later shown at Guggenheim Museum NY (May–Oct 2010).",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Berliner Plätze (2008–09) finishing",
+        "description": "120 × 168 in. (304.8 × 426.7 cm), ink and acrylic on canvas. Deutsche Bank / Guggenheim commission; depicts pre-WWI Berlin streetscapes. Traveled Deutsche Guggenheim Berlin (2009) → Solomon R. Guggenheim Museum NY (2010).",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Fragment (2008–09) finishing",
+        "description": "120 × 168 in. (10 × 14 ft suite scale), ink and acrylic on canvas. Explores urban fragmentation and Berlin memory; Deutsche Guggenheim commission No. 15 in series (after Kapoor, Kentridge, Richter).",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Middle Grey (2007–09) finishing",
+        "description": "120 × 168 in. (304.8 × 426.7 cm), ink and acrylic on canvas. Most chromatically intense Grey Area canvas — steely blue and eggplant fields over architectural drawing. Commissioned for Deutsche Guggenheim; Guggenheim Museum NY 2010 centerpiece.",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2008",
+        "type": "milestone",
+        "entityId": "goldman-sachs-mural",
+        "title": "Mural (2009) — Berlin fabrication begins; spray room built & surface layers applied",
+        "description": "Leads morning shift (~7–10 artists); mixes, sprays, sands, and polishes panel sections before Mehretu drawing passes.",
+        "valuationUsdB": null,
+        "source": "https://www.linkedin.com/in/erika-fortner-95024b83"
+      },
+      {
+        "year": "2009",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Art residency — LindArt co-operate vol. 3, Lendava, Slovenia (with Véronique Paquet)",
+        "description": "International painter exchange documented at gml.si; portfolio at efortner.com. Continued Mehretu studio finishing and independent painting.",
+        "valuationUsdB": null,
+        "source": "https://www.gml.si/lindart-online/page2009/erika-verionik.html"
+      },
+      {
+        "year": "2009",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Deutsche Guggenheim Grey Area — key fabricator (Berlin, Oct 2009–Jan 2010)",
+        "description": "Scratch, projection transfer, tape, spray, embed, polish, and prep for Mehretu drawing layers across full Grey Area suite.",
+        "valuationUsdB": null,
+        "source": "https://www.linkedin.com/in/erika-fortner-95024b83"
+      },
+      {
+        "year": "2009",
+        "type": "media",
+        "entityId": "goldman-sachs-mural",
+        "title": "Filmed for Art21 Extended Play: Julie Mehretu — Mural (SHORT)",
+        "description": "On-site finishing with Mehretu; credited in production thanks.",
+        "valuationUsdB": null,
+        "source": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+      },
+      {
+        "year": "2009",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Notations (2009) finishing",
+        "description": "120 × 168 in. suite painting; title references musical/graphic notation. Deutsche Guggenheim premiere Oct 2009; related Notations After The Ring installed Metropolitan Opera House, NYC (2010).",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2009",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Grey Area — Plover's Wing (2009) finishing",
+        "description": "120 × 168 in., ink and acrylic on canvas. Sixth Grey Area commission; completes Berlin studio cycle before Guggenheim Museum NY transfer (Deutsche Bank Series, May 14–Oct 6, 2010).",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2009",
+        "type": "milestone",
+        "entityId": "goldman-sachs-mural",
+        "title": "Mural (2009) completed — Goldman Sachs HQ, New York (~80 × 23 ft, ~$5M)",
+        "image": "docs/assets/art/mehretu/mural-with-people.png",
+        "imageAlt": "Goldman Sachs Mural — finishing contribution",
+        "valuationUsdB": 0.005,
+        "source": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+      },
+      {
+        "year": "2010",
+        "type": "publication",
+        "entityId": "julie-mehretu-studio",
+        "title": "Art21 Magazine — Julie Mehretu: Studio Assistants (essay & episode notes)",
+        "valuationUsdB": null,
+        "source": "https://magazine.art21.org/2010/03/12/julie-mehretu-studio-assistants/"
+      },
+      {
+        "year": "2010",
+        "type": "publication",
+        "entityId": "guggenheim",
+        "title": "Catalog — Julie Mehretu: Grey Area (Guggenheim / Deutsche Bank; essays Joan Young & Brian Dillon)",
+        "description": "Studio-process photographs trace Berlin fabrication of Grey Area suite.",
+        "valuationUsdB": null,
+        "source": "https://www.artbook.com/9780892073962.html"
+      },
+      {
+        "year": "2010",
+        "type": "media",
+        "entityId": "julie-mehretu-studio",
+        "title": "Filmed for Art21 Extended Play: Painting Conservator Luca Bonetti — Mural install at Goldman Sachs",
+        "description": "Luca Bonetti coordinates Mural (2009) installation at 200 West Street with studio assistants; Fortner among Goldman Sachs install team.",
+        "valuationUsdB": null,
+        "source": "https://art21.org/watch/extended-play/julie-mehretu-painting-conservator-luca-bonetti-short/"
+      },
+      {
+        "year": "2010",
+        "type": "media",
+        "entityId": "julie-mehretu-studio",
+        "title": "Filmed for Art21 Extended Play: Studio Assistants (Episode #097, Berlin)",
+        "image": "docs/assets/art/mehretu/studio-scissor-lift.png",
+        "imageAlt": "Art21 Studio Assistants filming",
+        "description": "Interviewed with Sarah Rentz, Damien Young, and Harmony Murphy on wax-like surfaces and division of studio labor.",
+        "valuationUsdB": null,
+        "source": "https://art21.org/watch/extended-play/julie-mehretu-studio-assistants-short/"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "guggenheim",
+        "title": "Grey Area — Solomon R. Guggenheim Museum, New York (May–Oct 2010)",
+        "description": "Deutsche Bank commission paintings travel from Berlin; install support and on-site touch-ups.",
+        "valuationUsdB": null,
+        "source": "https://magazine.art21.org/2010/03/12/julie-mehretu-studio-assistants/"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Joins Saatchi Art — independent painting and digital works (Berlin-based practice)",
+        "valuationUsdB": null,
+        "source": "https://www.saatchiart.com/efortner"
+      },
+      {
+        "year": "2010",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Notations After The Ring — Metropolitan Opera House, New York",
+        "valuationUsdB": null,
+        "source": "https://white-cube.files.svdcdn.com/production/uploads/CVs/Julie-Mehretu/Julie-Mehretu-CV-July-2025.pdf"
+      },
+      {
+        "year": "2011",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "In Praise of Doubt — Punta della Dogana, Venice (on-site install touch-ups)",
+        "description": "Francois Pinault Collection group exhibition at Punta della Dogana (2011). Stretch, substrate, and surface repair during install for collector Pinault’s Venice museum holdings.",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2012",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Documenta 13, Kassel — studio-fabricated paintings installed",
+        "description": "Monumental canvases for Documenta (13) (2012), including Mogamma-scaled works. Precedes Liminal Squared dual-gallery launch; works later enter Marian Goodman / White Cube inventory and museum loans (e.g., Baltimore Museum of Art Generations, 2019).",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2013",
+        "type": "publication",
+        "entityId": "julie-mehretu-studio",
+        "title": "Catalog — Excavations: The Prints of Julie Mehretu (touring print survey)",
+        "valuationUsdB": null,
+        "source": "https://white-cube.files.svdcdn.com/production/uploads/CVs/Julie-Mehretu/Julie-Mehretu-CV-July-2025.pdf"
+      },
+      {
+        "year": "2013",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Liminal Squared — Marian Goodman Gallery NY & White Cube London",
+        "source": "https://www.mariangoodman.com/exhibitions/96-julie-mehretu-liminal-squared/"
+      },
+      {
+        "year": "2014",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Half a Shadow & Myriads Only By Dark — Carlier Gebauer / Gemini G.E.L. editions",
+        "valuationUsdB": null,
+        "source": "https://white-cube.files.svdcdn.com/production/uploads/CVs/Julie-Mehretu/Julie-Mehretu-CV-July-2025.pdf"
+      },
+      {
+        "year": "2014",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "The Forever Now — Museum of Modern Art, New York (group painting survey)",
+        "valuationUsdB": null,
+        "source": "https://white-cube.files.svdcdn.com/production/uploads/CVs/Julie-Mehretu/Julie-Mehretu-CV-July-2025.pdf"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Relocates to Eugene, Oregon",
+        "description": "Pacific Northwest reset after New York/Berlin studio years; begins building artisan product lines before Portland brick-and-mortar.",
+        "valuationUsdB": null,
+        "source": "https://cargocollective.com/efortner/About"
+      },
+      {
+        "year": "2015",
+        "type": "milestone",
+        "entityId": "julie-mehretu-studio",
+        "title": "Transitions out of Mehretu studio (Jul 2004–Jun 2015) — 11 years sole finisher & ground preparator",
+        "description": "Stadia suite (Whitney 2004; Stadia II → Carnegie Museum via Rohatyn collectors), Black City (MUSAC/Hannover/Louisiana), Grey Area six-painting Deutsche Guggenheim commission (120 × 168 in. each), Mural (Goldman Sachs permanent), Documenta 13, Liminal Squared (Marian Goodman/White Cube; Christie's market comparables). Art21 Systems, Mural SHORT, Studio Assistants films.",
+        "valuationUsdB": null,
+        "source": "https://www.mariangoodman.com/artists/julie-mehretu/"
+      },
+      {
+        "year": "2016",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Birth of daughter Freya",
+        "description": "Born ~July 2016 per Eugene Weekly profile; family chapter in Eugene live-work space with partner Tad Ericson before Portland brick-and-mortar expansion.",
+        "valuationUsdB": null,
+        "source": "https://eugeneweekly.com/2016/08/25/art-craft/"
+      },
+      {
+        "year": "2016",
+        "type": "media",
+        "entityId": "keven-craft-rituals",
+        "title": "Eugene Weekly Art & Craft — Brooklyn transplants open modern apothecary",
+        "description": "Alex V. Cipolle profiles Keven Craft Rituals at 268 W. 7th Ave: Goldman Sachs Mural assistant backstory, Julie Mehretu silica dermatitis → skincare origin, gallery programming with Joslyn Alana and Cayla Davis.",
+        "valuationUsdB": null,
+        "source": "https://eugeneweekly.com/2016/08/25/art-craft/"
+      },
+      {
+        "year": "2016",
+        "type": "founding",
+        "entityId": "keven-craft-rituals",
+        "title": "Founded Keven Craft Rituals — artisan skincare, brooms, ceramics, and ritual goods",
+        "description": "Opens live-work shop at 268 W. 7th Ave, Eugene (across from WOW Hall). New Age apothecary + gallery; skincare line born from Mehretu studio silica exposure. Partner Tad Ericson (Urban Outfitters display design) builds interiors from St. Vinnies upcycled wood.",
+        "valuationUsdB": null,
+        "source": "https://eugeneweekly.com/2016/08/25/art-craft/"
+      },
+      {
+        "year": "2016",
+        "type": "publication",
+        "entityId": "keven-craft-rituals",
+        "title": "Medium essays — lunaception, infant loss, Eugene art scene",
+        "description": "kevencraftrituals Medium: Reclaiming Your Hormones with Lunaception (Feb 2016); Loss, Trauma, and the Walk Between Life and Death (Oct 2016); Dying Art Scene in Small Towns series.",
+        "valuationUsdB": null,
+        "source": "https://medium.com/@kevencraftrituals"
+      },
+      {
+        "year": "2017",
+        "type": "milestone",
+        "entityId": "erika-fortner",
+        "title": "Relocates to Portland, Oregon",
+        "description": "Establishes long-term base for Queen Meb boutique, THoT school, and Keven Craft Rituals wholesale; Northeast Broadway witch-shop corridor.",
+        "valuationUsdB": null,
+        "source": "https://www.wweek.com/culture/2022/07/13/the-founder-of-queen-meb-is-at-the-forefront-of-the-wiccan-revival/"
+      },
+      {
+        "year": "2017",
+        "type": "media",
+        "entityId": "queen-meb",
+        "title": "The Outerknown Podcast — The Art and Business of Witchcraft",
+        "description": "Lane Collins conversation on becoming a witch, tarot since 1995, divine encounters, motherhood, and growing Queen Meb + THoT.",
+        "valuationUsdB": null,
+        "source": "https://www.outerknownpod.com/episodes/the-art-and-business-of-witchcraft-with-erika-fortner"
+      },
+      {
+        "year": "2018",
+        "type": "founding",
+        "entityId": "queen-meb",
+        "title": "Launched Queen Meb boutique and The House of Twigs (THoT: School of Ritual)",
+        "description": "Northeast Portland brick-and-mortar — tarot, herbs, brooms, and virtual ritual classes. Instagram @q.mebpdx; blog The House of Twigs.",
+        "valuationUsdB": null,
+        "source": "https://kevencraftrituals.com/pages/press"
+      },
+      {
+        "year": "2019",
+        "type": "milestone",
+        "entityId": "queen-meb",
+        "title": "KOIN 6 Questions — Interview with a Witch (Queen Meb, Portland)",
+        "description": "Emily Burris interviews Erika on witchcraft misconceptions, tarot, and Portland as home for alternative religions.",
+        "valuationUsdB": null,
+        "source": "https://www.koin.com/podcasts/6-questions/6-questions-interview-with-a-witch/"
+      },
+      {
+        "year": "2019",
+        "type": "media",
+        "entityId": "queen-meb",
+        "title": "MagikCool Podcast — There's a place for you in this witchy world",
+        "description": "Spotify episode on 25 years of tarot, online witchcraft school, and building community at Queen Meb.",
+        "valuationUsdB": null,
+        "source": "https://open.spotify.com/episode/485symEk7t5mT99GHgVObR"
+      },
+      {
+        "year": "2019",
+        "type": "milestone",
+        "entityId": "queen-meb",
+        "title": "That Witch Life podcast — Episode 10: Magickal Herbs",
+        "valuationUsdB": null,
+        "source": "https://thatwitchlife.com/2019/05/20/episode-10-magickal-herbs/"
+      },
+      {
+        "year": "2019",
+        "type": "media",
+        "entityId": "queen-meb",
+        "title": "The Witches of End Times — Episode 16",
+        "description": "Lenormand history, protester defense magick, Fae symbiosis, queer deities, psychopomps, and the internal witch compass.",
+        "valuationUsdB": null,
+        "source": "https://open.spotify.com/episode/557o0iCWBrJLEYNVRve6va"
+      },
+      {
+        "year": "2019",
+        "type": "milestone",
+        "entityId": "queen-meb",
+        "title": "Willamette Week Finder 2019–2020 — featured Portland witch shop",
+        "description": "Print and digital WW Finder listing for Queen Meb metaphysical boutique.",
+        "valuationUsdB": null,
+        "source": "https://kevencraftrituals.com/pages/press"
+      },
+      {
+        "year": "2022",
+        "type": "milestone",
+        "entityId": "keven-craft-rituals",
+        "title": "Wholesale stockists network — 200+ brick-and-mortar & online partners",
+        "description": "Verified kevencraftrituals.com/pages/stockists: US regions (NE, SE, SW, Midwest, PNW), Canada, Europe, Australia, Asia. PNW anchors: Blackthorn Mercantile (Portland homestore), People's Food Co-op, Paxton Gate SF, Ritualcravt Denver, Feral Beauty Eugene. Faire wholesale at kevencraftritual.faire.com.",
+        "valuationUsdB": null,
+        "source": "https://kevencraftrituals.com/pages/stockists"
+      },
+      {
+        "year": "2022",
+        "type": "milestone",
+        "entityId": "queen-meb",
+        "title": "Willamette Week Best of Portland — Queen Meb at forefront of Wiccan revival",
+        "description": "Profiled as founder of Northeast Broadway boutique blending tarot, herbs, handmade goods, and curated grimoires.",
+        "valuationUsdB": null,
+        "source": "https://www.wweek.com/culture/2022/07/13/the-founder-of-queen-meb-is-at-the-forefront-of-the-wiccan-revival/"
+      },
+      {
+        "year": "2023",
+        "type": "milestone",
+        "entityId": "queen-meb",
+        "title": "That Witch Life podcast — Episode 177: Trance Magick & scrying",
+        "description": "Returns to discuss trance work, ancestral discovery, and divination incorporated into ritual practice.",
+        "valuationUsdB": null,
+        "source": "https://thatwitchlife.com/2023/02/19/episode-177-trance-magick-w-erika-fortner/"
+      },
+      {
+        "year": "2024",
+        "type": "milestone",
+        "entityId": "blackthorn-mercantile",
+        "title": "Blackthorn Mercantile — Portland homestore absorbs Queen Meb footprint",
+        "description": "Short-term merge: Keven Craft Rituals LLC operates at 3954 N Williams Ave as Blackthorn Mercantile (aka homestore). Women-owned, LGBTQ+ friendly; workshops and local artisan curation.",
+        "valuationUsdB": null,
+        "source": "https://blackthornpdx.com"
+      },
+      {
+        "year": "2025",
+        "type": "milestone",
+        "entityId": "keven-craft-rituals",
+        "title": "Google / Wheree listing — Keven Craft Rituals LLC (formerly Queen Meb)",
+        "description": "3954 N Williams Ave, Portland OR 97227. Wheree aggregates 8.4/10 AI review summary (customer service 9.3, product variety 9) from Google/Yelp-style sources; 0 direct Wheree user reviews as of Jun 2026. Yelp queen-meb-portland legacy reviews inform Portland reputation.",
+        "valuationUsdB": null,
+        "source": "https://keven-craft-rituals-llc-formerly-queen-meb.wheree.com"
+      },
+      {
+        "year": "2025",
+        "type": "founding",
+        "entityId": "ritual-roi",
+        "title": "Launches Ritual ROI — genesis-anchored mood engine for historical financial alignment research",
+        "description": "Financial astrology desk at roi.kevencraftrituals.com: IPO listing genesis charts, watchlist mood scans, and market geometry tensors — entertainment only, not investment advice.",
+        "valuationUsdB": null,
+        "source": "https://roi.kevencraftrituals.com"
+      }
+    ],
+    "forbesProfile": "https://cargocollective.com/efortner/About",
+    "ritualRoiLink": "https://roi.kevencraftrituals.com",
+    "additionalLinks": [
+      {
+        "label": "Press",
+        "url": "https://kevencraftrituals.com/pages/press"
+      },
+      {
+        "label": "Stockists",
+        "url": "https://kevencraftrituals.com/pages/stockists"
+      },
+      {
+        "label": "Fine Art IG",
+        "url": "https://www.instagram.com/erikafortnerfineart/"
+      },
+      {
+        "label": "Keven IG",
+        "url": "https://www.instagram.com/kevencraftritual/"
+      },
+      {
+        "label": "Keven PDX",
+        "url": "https://www.instagram.com/kevenpdx/"
+      },
+      {
+        "label": "Facebook Art",
+        "url": "https://www.facebook.com/erikafortnerfineart/"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/channel/UCDZ0BETczwITiVZszYZONXA"
+      },
+      {
+        "label": "Buena History",
+        "url": "https://sites.google.com/venturaedu.org/historyofbuena/narrative-history/1995-1999"
+      },
+      {
+        "label": "Blackthorn",
+        "url": "https://blackthornpdx.com"
+      },
+      {
+        "label": "Wheree",
+        "url": "https://keven-craft-rituals-llc-formerly-queen-meb.wheree.com"
+      }
+    ],
+    "stockists": {
+      "verifiedAsOf": "2026-06-15",
+      "source": "https://kevencraftrituals.com/pages/stockists",
+      "totalApprox": 200,
+      "regions": [
+        "Online US/International (Spirit Nest, Persephone's Panopticon, Into the Black AUS, etc.)",
+        "US Northeast (Modern Magic Salem, Ritual Cape Cod, Raven and Crow Co. ME, etc.)",
+        "US Southeast (Phoenix and Dragon Atlanta, Sassy Magick NOLA, etc.)",
+        "US Southwest (Ritualcravt Denver, Thorn and Moon Houston, Bad Moon Apothecary Santa Fe, etc.)",
+        "US Midwest (Huge Witch Chicago, Hall of Hekate St. Paul, Coven Cleveland, etc.)",
+        "PNW / West Coast (Blackthorn Mercantile Portland, Paxton Gate SF, Feral Beauty Eugene, Radiance Herbs Olympia, etc.)",
+        "Canada (Divine Mine Calgary, Witch Chest Ottawa, LVNEA Montreal, etc.)",
+        "Europe (Black Moon Botanica Edinburgh, Wicca's Atelier Museum Shop Switzerland, etc.)",
+        "Australia & Asia (Shambalaa Tribe Kiama NSW, Purple Moon Hong Kong)"
+      ],
+      "pnwAnchors": [
+        {
+          "name": "Blackthorn Mercantile (homestore)",
+          "location": "Portland, OR",
+          "url": "https://blackthornpdx.com"
+        },
+        {
+          "name": "The People's Food Co-op",
+          "location": "Portland, OR",
+          "url": "https://www.peoples.coop/"
+        },
+        {
+          "name": "Feral Beauty",
+          "location": "Eugene, OR",
+          "url": "https://feralbeauty.studio"
+        },
+        {
+          "name": "Paxton Gate",
+          "location": "San Francisco, CA",
+          "url": "https://paxtongate.com"
+        },
+        {
+          "name": "Radiance Herbs & Massage",
+          "location": "Olympia, WA",
+          "url": "https://www.radianceherbs.com"
+        }
+      ]
+    },
+    "buyingPowerTargets": [
+      {
+        "id": "pnw-rollup",
+        "label": "PNW metaphysical retail rollup",
+        "type": "retail",
+        "costUsdB": 0.045,
+        "emoji": "🏪",
+        "lat": 45.549,
+        "lng": -122.666
+      },
+      {
+        "id": "wholesale-scale",
+        "label": "National artisan skincare wholesale",
+        "type": "retail",
+        "costUsdB": 0.06,
+        "emoji": "🧴",
+        "lat": 45.523,
+        "lng": -122.676
+      },
+      {
+        "id": "stockist-network",
+        "label": "200-stockist fulfillment network",
+        "type": "infrastructure",
+        "costUsdB": 0.035,
+        "emoji": "📦",
+        "lat": 39.739,
+        "lng": -104.99
+      },
+      {
+        "id": "museum-studio",
+        "label": "Museum-track studio endowment",
+        "type": "art",
+        "costUsdB": 0.08,
+        "emoji": "🎨",
+        "lat": 40.761,
+        "lng": -73.975
+      },
+      {
+        "id": "thot-platform",
+        "label": "Ritual education platform (THoT)",
+        "type": "institution",
+        "costUsdB": 0.02,
+        "emoji": "🔮",
+        "lat": 45.523,
+        "lng": -122.676
+      }
+    ],
+    "ventureMap": [
+      {
+        "id": "ventura-born",
+        "name": "Ventura, CA",
+        "label": "Born · Ventura County",
+        "lat": 34.274,
+        "lng": -119.229
+      },
+      {
+        "id": "pratt-brooklyn",
+        "name": "Pratt Institute",
+        "label": "Pratt BFA · Brooklyn",
+        "lat": 40.691,
+        "lng": -73.964
+      },
+      {
+        "id": "mehretu-berlin",
+        "name": "Mehretu Studio",
+        "label": "Finish Consultant · Berlin studio",
+        "lat": 52.52,
+        "lng": 13.405
+      },
+      {
+        "id": "terra-columbus",
+        "name": "Terra Gallery",
+        "label": "First solo · Terra Gallery, Columbus OH",
+        "lat": 39.961,
+        "lng": -82.999
+      },
+      {
+        "id": "lindart-lendava",
+        "name": "LindArt Lendava",
+        "label": "Residency · Lendava, Slovenia",
+        "lat": 46.565,
+        "lng": 16.456
+      },
+      {
+        "id": "gs-mural",
+        "name": "Goldman Sachs Mural",
+        "label": "Mural install · 200 West St, NYC",
+        "lat": 40.715,
+        "lng": -74.015
+      },
+      {
+        "id": "eugene-shop",
+        "name": "Eugene shop",
+        "label": "Keven Craft · 268 W 7th Ave, Eugene",
+        "lat": 44.052,
+        "lng": -123.087
+      },
+      {
+        "id": "portland-base",
+        "name": "Portland",
+        "label": "Blackthorn homestore · N Williams, Portland",
+        "lat": 45.554,
+        "lng": -122.666
+      }
+    ],
+    "stockistMap": [
+      {
+        "name": "Blackthorn Mercantile",
+        "city": "Portland, OR",
+        "lat": 45.554,
+        "lng": -122.666,
+        "region": "PNW"
+      },
+      {
+        "name": "People's Food Co-op",
+        "city": "Portland, OR",
+        "lat": 45.517,
+        "lng": -122.652,
+        "region": "PNW"
+      },
+      {
+        "name": "Feral Beauty",
+        "city": "Eugene, OR",
+        "lat": 44.052,
+        "lng": -123.087,
+        "region": "PNW"
+      },
+      {
+        "name": "Radiance Herbs",
+        "city": "Olympia, WA",
+        "lat": 47.045,
+        "lng": -122.902,
+        "region": "PNW"
+      },
+      {
+        "name": "Paxton Gate",
+        "city": "San Francisco, CA",
+        "lat": 37.759,
+        "lng": -122.419,
+        "region": "West Coast"
+      },
+      {
+        "name": "Ritualcravt",
+        "city": "Denver, CO",
+        "lat": 39.739,
+        "lng": -104.99,
+        "region": "Southwest"
+      },
+      {
+        "name": "Thorn and Moon",
+        "city": "Houston, TX",
+        "lat": 29.76,
+        "lng": -95.37,
+        "region": "Southwest"
+      },
+      {
+        "name": "Bad Moon Apothecary",
+        "city": "Santa Fe, NM",
+        "lat": 35.687,
+        "lng": -105.938,
+        "region": "Southwest"
+      },
+      {
+        "name": "Modern Magic",
+        "city": "Salem, MA",
+        "lat": 42.519,
+        "lng": -70.896,
+        "region": "Northeast"
+      },
+      {
+        "name": "Raven and Crow Co.",
+        "city": "Portland, ME",
+        "lat": 43.659,
+        "lng": -70.256,
+        "region": "Northeast"
+      },
+      {
+        "name": "Phoenix and Dragon",
+        "city": "Atlanta, GA",
+        "lat": 33.849,
+        "lng": -84.373,
+        "region": "Southeast"
+      },
+      {
+        "name": "Sassy Magick",
+        "city": "New Orleans, LA",
+        "lat": 29.951,
+        "lng": -90.071,
+        "region": "Southeast"
+      },
+      {
+        "name": "Huge Witch",
+        "city": "Chicago, IL",
+        "lat": 41.878,
+        "lng": -87.63,
+        "region": "Midwest"
+      },
+      {
+        "name": "Hall of Hekate",
+        "city": "St. Paul, MN",
+        "lat": 44.953,
+        "lng": -93.09,
+        "region": "Midwest"
+      },
+      {
+        "name": "Coven",
+        "city": "Cleveland, OH",
+        "lat": 41.499,
+        "lng": -81.694,
+        "region": "Midwest"
+      },
+      {
+        "name": "Divine Mine",
+        "city": "Calgary, AB",
+        "lat": 51.045,
+        "lng": -114.072,
+        "region": "Canada"
+      },
+      {
+        "name": "Witch Chest",
+        "city": "Ottawa, ON",
+        "lat": 45.421,
+        "lng": -75.697,
+        "region": "Canada"
+      },
+      {
+        "name": "LVNEA",
+        "city": "Montreal, QC",
+        "lat": 45.501,
+        "lng": -73.567,
+        "region": "Canada"
+      },
+      {
+        "name": "Black Moon Botanica",
+        "city": "Edinburgh, UK",
+        "lat": 55.953,
+        "lng": -3.188,
+        "region": "Europe"
+      },
+      {
+        "name": "Wicca's Atelier",
+        "city": "Switzerland",
+        "lat": 46.948,
+        "lng": 7.447,
+        "region": "Europe"
+      },
+      {
+        "name": "Shambalaa Tribe",
+        "city": "Kiama, NSW",
+        "lat": -34.671,
+        "lng": 150.854,
+        "region": "Australia"
+      },
+      {
+        "name": "Purple Moon",
+        "city": "Hong Kong",
+        "lat": 22.319,
+        "lng": 114.169,
+        "region": "Asia"
+      },
+      {
+        "name": "Into the Black",
+        "city": "Australia (online)",
+        "lat": -33.868,
+        "lng": 151.209,
+        "region": "Australia"
+      },
+      {
+        "name": "Spirit Nest",
+        "city": "US (online)",
+        "lat": 40.712,
+        "lng": -74.006,
+        "region": "Online"
+      }
+    ],
+    "wikipediaLink": "https://www.imdb.com/name/nm3657766/",
+    "worthAttribution": {
+      "summaryLabel": "Freelance finish-consultant wages vs attributed appreciation",
+      "methodology": "Freelance finish-consultant wages vs attributed appreciation of Mehretu studio-era works",
+      "period": "2004–2015",
+      "contractorEarningsUsdM": 1.1,
+      "initialPrimarySalesUsdM": 35,
+      "currentMarketUsdM": 280,
+      "attributedStakePct": 20,
+      "contractorToInitialSalePct": 3.1,
+      "initialToCurrentGrowthPct": 700,
+      "contractorToAttributedMultiple": 51,
+      "notes": "Initial-sale baseline: Mural $5M commission, Deutsche Guggenheim Grey Area suite, Marian Goodman / White Cube primary sales. Current market: Sotheby's Walkers With the Dawn $10.7M (2023), Christie's Liminal Squared comps, institutional holdings (MOMA, Guggenheim, Carnegie, Pinault). Contractor wages modeled at ~$100K/yr over 11 years.",
+      "sources": [
+        "https://art21.org/watch/short/julie-mehretu-mural-short/",
+        "https://www.artnews.com/art-news/news/records-for-julie-mehretu-barkley-hendricks-sothebys-310-m-contemporary-sale-november-2023-1234686971/",
+        "https://www.mariangoodman.com/artists/julie-mehretu/"
+      ]
+    },
+    "wealthBreakdown": [
+      {
+        "entity": "Attributed finishing contribution (Mehretu studio era, 2004–2015)",
+        "stakePct": 20,
+        "valueUsdB": 0.056,
+        "type": "private"
+      },
+      {
+        "entity": "Independent art practice (Saatchi Art)",
+        "stakePct": 100,
+        "valueUsdB": 0.002,
+        "type": "private"
+      },
+      {
+        "entity": "Keven Craft Rituals",
+        "stakePct": 100,
+        "valueUsdB": 0.001,
+        "type": "private"
+      },
+      {
+        "entity": "Ritual ROI (mood engine research)",
+        "stakePct": 100,
+        "valueUsdB": 0.0005,
+        "type": "private"
+      }
+    ],
+    "entities": [
+      {
+        "id": "julie-mehretu-studio",
+        "name": "Julie Mehretu Studio",
+        "role": "finish_consultant",
+        "founded": 2004,
+        "status": "private"
+      },
+      {
+        "id": "goldman-sachs-mural",
+        "name": "Mural (Goldman Sachs HQ)",
+        "role": "fabricator",
+        "founded": 2009,
+        "status": "permanent_installation",
+        "valuationUsdB": 0.005
+      },
+      {
+        "id": "keven-craft-rituals",
+        "name": "Keven Craft Rituals",
+        "role": "founder",
+        "founded": 2016,
+        "status": "private"
+      },
+      {
+        "id": "queen-meb",
+        "name": "Queen Meb / The House of Twigs",
+        "role": "founder",
+        "founded": 2018,
+        "status": "merged_into_blackthorn"
+      },
+      {
+        "id": "blackthorn-mercantile",
+        "name": "Blackthorn Mercantile (Keven Craft homestore)",
+        "role": "founder",
+        "founded": 2024,
+        "status": "private"
+      },
+      {
+        "id": "ritual-roi",
+        "name": "Ritual ROI",
+        "role": "founder",
+        "founded": 2025,
+        "status": "private"
+      },
+      {
+        "id": "erika-fortner",
+        "name": "Erika Fortner (independent practice)",
+        "role": "artist",
+        "founded": 2008,
+        "status": "private"
+      }
+    ],
+    "galleryTitle": "Studio collaborations (2004–2015)",
+    "profileShowcase": {
+      "buenaBulldogs": {
+        "title": "Buena High School Bulldogs — Ventura (1995–1999)",
+        "description": "Erika Fortner (circled) in a late-1990s Bulldogs class photo alongside Ventura peers. Zachary Levi's Buena era is documented on the official school history site with yearbook and drama photos from the same period.",
+        "classPhoto": {
+          "src": "docs/assets/art/erika-fortner/buena-bulldogs-class-photo-circled.png",
+          "alt": "Buena High School group class photo — Erika Fortner circled in white",
+          "caption": "Erika Fortner circled — late-1990s Buena Bulldogs class photo, Ventura CA",
+          "year": "~1998"
+        },
+        "classmates": [
+          {
+            "name": "Zachary \"Pugh\" Levi",
+            "years": "Buena 1994–1998",
+            "note": "Drama dept — Frankenstein, Oklahoma!; grew up barefoot in Ventura per Foothill Dragon Press profile",
+            "filmsLabel": "Movies & shows",
+            "films": [
+              {
+                "title": "Shazam!",
+                "year": "2019",
+                "poster": "docs/assets/art/erika-fortner/film-posters/shazam.jpg",
+                "url": "https://en.wikipedia.org/wiki/Shazam!_(film)"
+              },
+              {
+                "title": "Chuck",
+                "year": "2007–2012",
+                "poster": "docs/assets/art/erika-fortner/film-posters/chuck.jpg",
+                "url": "https://en.wikipedia.org/wiki/Chuck_(TV_series)"
+              },
+              {
+                "title": "Shazam! Fury of the Gods",
+                "year": "2023",
+                "poster": "docs/assets/art/erika-fortner/film-posters/shazam-fury-of-the-gods.jpg",
+                "url": "https://en.wikipedia.org/wiki/Shazam!_Fury_of_the_Gods"
+              },
+              {
+                "title": "Tangled",
+                "year": "2010",
+                "poster": "docs/assets/art/erika-fortner/film-posters/tangled.jpg",
+                "url": "https://en.wikipedia.org/wiki/Tangled"
+              },
+              {
+                "title": "American Underdog",
+                "year": "2021",
+                "poster": "docs/assets/art/erika-fortner/film-posters/american-underdog.jpg",
+                "url": "https://en.wikipedia.org/wiki/American_Underdog"
+              },
+              {
+                "title": "Thor: The Dark World",
+                "year": "2013",
+                "poster": "docs/assets/art/erika-fortner/film-posters/thor-the-dark-world.jpg",
+                "url": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World"
+              }
+            ]
+          },
+          {
+            "name": "Kevin Costner",
+            "years": "Buena alumnus",
+            "note": "Attended; left after sophomore year before graduating",
+            "filmsLabel": "Movies & shows",
+            "films": [
+              {
+                "title": "Dances with Wolves",
+                "year": "1990",
+                "poster": "docs/assets/art/erika-fortner/film-posters/dances-with-wolves.jpg",
+                "url": "https://en.wikipedia.org/wiki/Dances_with_Wolves"
+              },
+              {
+                "title": "The Bodyguard",
+                "year": "1992",
+                "poster": "docs/assets/art/erika-fortner/film-posters/the-bodyguard.jpg",
+                "url": "https://en.wikipedia.org/wiki/The_Bodyguard_(1992_film)"
+              },
+              {
+                "title": "Field of Dreams",
+                "year": "1989",
+                "poster": "docs/assets/art/erika-fortner/film-posters/field-of-dreams.jpg",
+                "url": "https://en.wikipedia.org/wiki/Field_of_Dreams"
+              },
+              {
+                "title": "Bull Durham",
+                "year": "1988",
+                "poster": "docs/assets/art/erika-fortner/film-posters/bull-durham.jpg",
+                "url": "https://en.wikipedia.org/wiki/Bull_Durham"
+              },
+              {
+                "title": "Yellowstone",
+                "year": "2018–",
+                "poster": "docs/assets/art/erika-fortner/film-posters/yellowstone.jpg",
+                "url": "https://en.wikipedia.org/wiki/Yellowstone_(American_TV_series)"
+              },
+              {
+                "title": "Wyatt Earp",
+                "year": "1994",
+                "poster": "docs/assets/art/erika-fortner/film-posters/wyatt-earp.jpg",
+                "url": "https://en.wikipedia.org/wiki/Wyatt_Earp_(film)"
+              }
+            ]
+          }
+        ]
+      },
+      "thqTitle": "THQ — game testing credits (2002–2004)",
+      "thqCredits": [
+        {
+          "year": 2002,
+          "title": "MX Superfly Featuring Ricky Carmichael",
+          "role": "Tester"
+        },
+        {
+          "year": 2002,
+          "title": "Summoner 2",
+          "role": "Tester"
+        },
+        {
+          "year": 2002,
+          "title": "WWE SmackDown! Shut Your Mouth",
+          "role": "Tester"
+        },
+        {
+          "year": 2003,
+          "title": "SpongeBob SquarePants: Battle for Bikini Bottom",
+          "role": "Test Lead"
+        },
+        {
+          "year": 2003,
+          "title": "Rugrats Go Wild",
+          "role": "Senior Tester"
+        },
+        {
+          "year": 2003,
+          "title": "Evil Dead: A Fistful of Boomstick",
+          "role": "Tester"
+        },
+        {
+          "year": 2003,
+          "title": "Power Rangers: Ninja Storm",
+          "role": "Senior Tester"
+        },
+        {
+          "year": 2003,
+          "title": "The Fairly OddParents!: Breakin' da Rules",
+          "role": "QA Lead / Senior Tester"
+        },
+        {
+          "year": 2004,
+          "title": "Scooby-Doo 2: Monsters Unleashed",
+          "role": "Lead Tester"
+        },
+        {
+          "year": 2004,
+          "title": "Sabre Wulf",
+          "role": "Lead Tester"
+        }
+      ],
+      "videoTitle": "Art21 films & appearances",
+      "videos": [
+        {
+          "year": 2010,
+          "title": "Studio Assistants",
+          "source": "Art21 Extended Play",
+          "description": "Berlin studio — Erika Fortner on furniture polishing, printmaking, and division of studio labor.",
+          "url": "https://art21.org/watch/extended-play/julie-mehretu-studio-assistants-short/"
+        },
+        {
+          "year": 2010,
+          "title": "Painting Conservator Luca Bonetti",
+          "source": "Art21 Extended Play",
+          "description": "Mural (2009) installation at Goldman Sachs HQ — studio assistant install team.",
+          "url": "https://art21.org/watch/extended-play/julie-mehretu-painting-conservator-luca-bonetti-short/"
+        },
+        {
+          "year": 2009,
+          "title": "Mural (SHORT)",
+          "source": "Art21 Extended Play",
+          "description": "Goldman Sachs commission finishing and on-site documentation.",
+          "url": "https://art21.org/watch/short/julie-mehretu-mural-short/"
+        },
+        {
+          "year": 2005,
+          "title": "Systems",
+          "source": "Art21 Season 5 · PBS",
+          "description": "Berlin studio, Deutsche Guggenheim paintings, and Mural in production.",
+          "url": "https://art21.org/watch/season-5-julie-mehretu-systems-segment/"
+        }
+      ],
+      "youtubeChannel": {
+        "title": "Keven Craft Rituals — YouTube",
+        "label": "Keven Craft Rituals",
+        "description": "Ritual goods, skincare tutorials, and shop updates.",
+        "url": "https://www.youtube.com/channel/UCDZ0BETczwITiVZszYZONXA"
+      },
+      "personalArt": {
+        "title": "Personal art",
+        "description": "Independent painting, photography, and digital works — Saatchi Art portfolio, Terra Gallery solo (2008), and LindArt Lendava residency (2009). Placeholder gallery expanding.",
+        "worksLabel": "Saatchi Art — selected works",
+        "works": [
+          {
+            "title": "First Nations",
+            "year": "Digital",
+            "src": "https://images.saatchiart.com/saatchi/70537/art/1205477/553800-HSC00002-6.jpg",
+            "url": "https://www.saatchiart.com/art/Photography-First-Nations/70537/1009837/view"
+          },
+          {
+            "title": "Luck of the Kombai",
+            "year": "Digital",
+            "src": "https://images.saatchiart.com/saatchi/70537/art/1205483/554775-HSC00002-6.jpg",
+            "url": "https://www.saatchiart.com/art/Photography-Luck-of-the-Kombai/70537/1009843/view"
+          },
+          {
+            "title": "We Grew Up In A Vortex",
+            "year": "2007",
+            "src": "https://images.saatchiart.com/saatchi/70537/art/1205484/554779-HSC00002-6.jpg",
+            "url": "https://www.saatchiart.com/art/Photography-We-Grew-Up-In-A-Vortex/70537/1009844/view"
+          },
+          {
+            "title": "Tempesta Elementare",
+            "year": "Digital",
+            "src": "https://images.saatchiart.com/saatchi/70537/art/1205485/555563-HSC00002-6.jpg",
+            "url": "https://www.saatchiart.com/art/Photography-Tempesta-Elementare/70537/1009845/view"
+          },
+          {
+            "title": "Fire Breathing Lips",
+            "year": "Digital",
+            "src": "https://images.saatchiart.com/saatchi/70537/art/1205487/553808-HSC00002-6.jpg",
+            "url": "https://www.saatchiart.com/art/Photography-Fire-Breathing-Lips/70537/1009847/view"
+          },
+          {
+            "title": "I want to kill..",
+            "year": "Digital",
+            "src": "https://images.saatchiart.com/saatchi/70537/art/1205489/555999-HSC00002-6.jpg",
+            "url": "https://www.saatchiart.com/art/Photography-I-want-to-kill/70537/1009849/view"
+          }
+        ],
+        "link": "https://www.saatchiart.com/efortner",
+        "linkLabel": "Saatchi Art portfolio →"
+      },
+      "ownersPortfolio": {
+        "title": "Owner's portfolio",
+        "description": "Curated owner holdings — studio-era documentation, independent works, and Keven Craft product archive. Placeholder gallery expanding.",
+        "worksLabel": "Owner holdings — preview",
+        "works": [
+          {
+            "title": "Goldman Sachs Mural",
+            "year": "Studio · 2009",
+            "src": "docs/assets/art/mehretu/mural-panorama.png",
+            "alt": "Goldman Sachs Mural panorama — studio finishing documentation",
+            "url": "https://art21.org/watch/extended-play/julie-mehretu-painting-conservator-luca-bonetti-short/"
+          },
+          {
+            "title": "Studio fabrication",
+            "year": "Studio · 2004–15",
+            "src": "docs/assets/art/mehretu/studio-scissor-lift.png",
+            "alt": "Large-scale studio fabrication on scissor lift",
+            "url": "https://art21.org/watch/extended-play/julie-mehretu-studio-assistants-short/"
+          },
+          {
+            "title": "Buena Bulldogs",
+            "year": "Ventura · 1994–98",
+            "src": "docs/assets/art/erika-fortner/buena-bulldogs-class-photo-circled.png",
+            "alt": "Buena High School class photo — Zachary Levi classmate",
+            "url": "https://sites.google.com/venturaedu.org/historyofbuena/narrative-history/1995-1999"
+          },
+          {
+            "title": "Venice printmaking",
+            "year": "Italy · 2006",
+            "src": "docs/assets/art/erika-fortner/owner-portfolio/venice-printmaking.jpg",
+            "alt": "Scuola Internazionale di Grafica print shop — Pratt in Venice summer",
+            "url": "https://www.scuolagrafica.it/arte/"
+          },
+          {
+            "title": "LindArt Lendava",
+            "year": "Slovenia · 2009",
+            "url": "https://www.gml.si/lindart-online/page2009/erika-verionik.html"
+          },
+          {
+            "title": "Lilith's Creation Broom",
+            "year": "Keven Craft",
+            "src": "docs/assets/art/erika-fortner/owner-portfolio/liliths-creation-broom.jpg",
+            "alt": "Lilith's Creation Broom with coyote bone — handmade besom",
+            "url": "https://kevencraftrituals.com/products/liliths-fire-broom-w-coyote-bone"
+          },
+          {
+            "title": "Opium Den incense",
+            "year": "Moon Water",
+            "src": "docs/assets/art/erika-fortner/owner-portfolio/opium-den-incense.jpg",
+            "alt": "Opium Den frankincense and orange blossom — Moon Water apothecary line",
+            "url": "https://kevencraftrituals.com/products/opium-den-frankincense-orange-blossom"
+          },
+          {
+            "title": "Keven Craft Rituals shop",
+            "year": "Eugene · 2016",
+            "src": "docs/assets/art/erika-fortner/owner-portfolio/keven-craft-eugene-shop.jpg",
+            "alt": "Keven Craft Rituals live-work shop — 268 W 7th Ave, Eugene OR",
+            "url": "https://kevencraftrituals.com/pages/about-us"
+          },
+          {
+            "title": "Blackthorn homestore",
+            "year": "Portland",
+            "src": "docs/assets/art/erika-fortner/owner-portfolio/blackthorn-homestore.jpg",
+            "alt": "Blackthorn Mercantile homestore — N Williams, Portland",
+            "url": "https://blackthornpdx.com"
+          },
+          {
+            "title": "Queen Meb archive",
+            "year": "Placeholder",
+            "url": "https://blackthornpdx.com"
+          },
+          {
+            "title": "THoT curriculum",
+            "year": "Placeholder",
+            "url": "https://thehouseoftwigs.com"
+          }
+        ],
+        "link": "https://kevencraftrituals.com/",
+        "linkLabel": "Keven Craft Rituals →"
+      },
+      "formulaTitle": "Proprietary recipes & formulas",
+      "formulas": [
+        {
+          "name": "Paint",
+          "column": "left",
+          "note": "Studio surface systems & independent painting media"
+        },
+        {
+          "name": "Ink",
+          "column": "right",
+          "note": "Printmaking & drawing formulations"
+        },
+        {
+          "name": "Perfume",
+          "column": "left",
+          "note": "Artisan fragrance & ritual oil blends"
+        },
+        {
+          "name": "Incense",
+          "column": "right",
+          "note": "Resin, herb, and wood-base incense"
+        },
+        {
+          "name": "Brooms",
+          "column": "left",
+          "note": "Hand-tied besom & handbroom construction"
+        },
+        {
+          "name": "Wood",
+          "column": "right",
+          "note": "Cabinet finishing & surface prep protocols"
+        },
+        {
+          "name": "Pottery",
+          "column": "left",
+          "note": "Custom ceramics & glaze recipes"
+        },
+        {
+          "name": "Soap",
+          "column": "right",
+          "note": "Cold-process ritual soap & skincare bases"
+        },
+        {
+          "name": "Food",
+          "column": "left",
+          "note": "Herbal teas & edible ritual ingredients"
+        },
+        {
+          "name": "Drinks",
+          "column": "right",
+          "note": "Tinctures, elixirs & ceremonial brews"
+        }
+      ],
+      "relatedProfiles": {
+        "title": "Mehretu studio · Pratt era",
+        "description": "Cross-links to Julie Mehretu (Forbes #101) — primary-market artist while Fortner was finish consultant (2004–2015).",
+        "items": [
+          {
+            "year": "2005",
+            "title": "Lehmann v. The Project Worldwide",
+            "type": "Lawsuit",
+            "rank": 101,
+            "name": "Julie Mehretu",
+            "profileLabel": "Julie Mehretu · rank #101",
+            "note": "Collector sued gallery over first-refusal on Mehretu paintings — discussed in studio while Fortner was a Pratt BFA student and early studio assistant.",
+            "url": "https://www.theartnewspaper.com/2005/03/01/collector-sues-gallery-over-right-to-first-choice-of-artists-work"
+          },
+          {
+            "year": "2004–15",
+            "title": "Julie Mehretu studio — finish consultant",
+            "type": "Studio",
+            "rank": 101,
+            "name": "Julie Mehretu",
+            "profileLabel": "Julie Mehretu · rank #101",
+            "note": "Stadia, Black City, Grey Area, Mural, Documenta 13, Liminal Squared — Art21 Systems & Studio Assistants films."
+          }
+        ]
+      }
+    },
+    "gallery": [
+      {
+        "src": "docs/assets/art/mehretu/stadia-ii.png",
+        "alt": "Stadia II — finishing work during early studio tenure",
+        "caption": "Stadia II (2004) — surface preparation and finishing",
+        "year": "2004"
+      },
+      {
+        "src": "docs/assets/art/mehretu/black-city-architectural.png",
+        "alt": "Black City era layered surfaces",
+        "caption": "Black City / Grey Area era — Berlin studio period",
+        "year": "2007"
+      },
+      {
+        "src": "docs/assets/art/mehretu/grey-area-explosive.png",
+        "alt": "Grey Area series gestural composition",
+        "caption": "Grey Area series — multi-stage sanding and wash layers",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-with-people.png",
+        "alt": "Goldman Sachs Mural at monumental scale",
+        "caption": "Mural (2009) — key finishing on $5M commission",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-interior-hallway.png",
+        "alt": "Mural installed in Goldman Sachs lobby",
+        "caption": "Mural (2009) — translucent wax-like finish in situ",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/mural-panorama.png",
+        "alt": "Full-length Goldman Sachs Mural panorama",
+        "caption": "Mural (2009) — 80 ft installation panorama",
+        "year": "2009"
+      },
+      {
+        "src": "docs/assets/art/mehretu/detail-geometric-layers.png",
+        "alt": "Detail of precise geometric color layers",
+        "caption": "Finishing detail — geometric overlays on architectural base",
+        "year": "—"
+      },
+      {
+        "src": "docs/assets/art/mehretu/studio-scissor-lift.png",
+        "alt": "Large-scale studio fabrication on scissor lift",
+        "caption": "Studio process — large-scale fabrication and finishing",
+        "year": "—"
+      },
+      {
+        "src": "docs/assets/art/mehretu/gallery-three-paintings.png",
+        "alt": "Museum gallery of Mehretu paintings from studio era",
+        "caption": "Exhibition-scale works from studio tenure",
+        "year": "—"
+      }
+    ]
   }
 ]

@@ -77,6 +77,8 @@ python3 scripts/merge_grok_enrichment.py data/grok-enrichment-7-20.json
 python3 scripts/build_entities.py
 ```
 
+[`compliance-trading-paths.json`](compliance-trading-paths.json) — zero-knowledge → compliant trading bot path, regulatory agencies, exams, Forbes ticker crosswalk. Rendered in the **Compliance** section on GitHub Pages.
+
 [`market-crossover.json`](market-crossover.json) — Forbes rank holdings joined to crossover flip-board rows. Rebuild from local robinhood-agentic data:
 
 ```bash

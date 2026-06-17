@@ -355,7 +355,8 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
     $('#btn-prev').disabled = n === 1;
     $('#btn-next').textContent = n === 4 ? 'Finish' : 'Next';
     if (n === 4) refreshOutputs();
-    window.scrollTo({ top: $('#configurator').offsetTop - 20, behavior: 'smooth' });
+    const panel = document.getElementById('configurator');
+    if (panel) panel.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function init() {
@@ -1267,10 +1268,31 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   }
 
   function updateHashWithoutScroll(hash) {
+    if (typeof window.fwjUpdateHashWithoutScroll === 'function') {
+      window.fwjUpdateHashWithoutScroll(hash);
+      return;
+    }
     const y = window.scrollY;
     const url = hash ? `${window.location.pathname}${window.location.search}${hash}` : `${window.location.pathname}${window.location.search}`;
     history.replaceState(null, '', url);
     requestAnimationFrame(() => window.scrollTo(0, y));
+  }
+
+  function scrollToSectionElement(el, { behavior = 'smooth' } = {}) {
+    if (!el) return;
+    if (typeof window.fwjScrollToSection === 'function' && el.classList.contains('site-panel')) {
+      window.fwjScrollToSection(el.id, { behavior });
+      return;
+    }
+    const panelId = typeof window.fwjResolvePanelId === 'function' ? window.fwjResolvePanelId(el.id) : null;
+    if (panelId && typeof window.fwjScrollToSection === 'function') {
+      window.fwjScrollToSection(panelId, { behavior });
+      if (el.id !== panelId) {
+        requestAnimationFrame(() => el.scrollIntoView({ behavior, block: 'start' }));
+      }
+      return;
+    }
+    el.scrollIntoView({ behavior, block: 'start' });
   }
 
   function setTimelineTab(index, { syncActivity = true } = {}) {
@@ -2449,7 +2471,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
           history.replaceState(null, '', hash);
         }
         window.dispatchEvent(new CustomEvent('forbes:select', { detail: { person: profile } }));
-        document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        scrollToSectionElement(document.getElementById(scrollTargetId), { behavior: 'smooth' });
       });
     });
 
@@ -3009,40 +3031,14 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   }
 
   function initSiteNav() {
-    const header = document.getElementById('site-header');
-    const headerOffset = () => (header?.offsetHeight || 72) + 8;
-
-    document.querySelectorAll('.site-nav a[href^="#"], .site-brand-link[href^="#"]').forEach((link) => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (!href || href === '#') return;
-        const id = href.slice(1);
-        let target = document.getElementById(id);
-        if (!target) {
-          if (id.startsWith('timeline-portfolio')) {
-            target = document.getElementById('timeline-portfolio') || document.getElementById('timeline');
-          } else if (id.startsWith('timeline-cluster')) {
-            target = document.getElementById('timeline-block-cluster') || document.getElementById('timeline');
-          } else if (id.startsWith('timeline-')) {
-            target = document.getElementById('timeline');
-          }
-        }
-        if (!target) return;
-        e.preventDefault();
-        const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
-        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-        // Preserve the full sub-hash (e.g. #timeline-portfolio-neuralink) so deep link parsers pick the lane/branch
-        updateHashWithoutScroll(`#${id}`);
-        // Apply focus/branch immediately for in-page nav (e.g. top menu Portfolio button)
-        if (id.startsWith('timeline-')) {
-          applyTimelineDeepLink(`#${id}`);
-        }
-      });
+    window.addEventListener('fwj:panel-nav', (e) => {
+      const id = e.detail?.id || '';
+      if (id.startsWith('timeline-')) {
+        applyTimelineDeepLink(`#${id}`);
+      }
     });
 
     window.addEventListener('hashchange', () => {
-      const y = history.state?.scrollY;
-      if (typeof y === 'number') window.scrollTo(0, y);
       const h = window.location.hash;
       if (h.startsWith('#timeline-')) {
         applyTimelineDeepLink(h);
@@ -3051,29 +3047,7 @@ git clone ${REPO_BASE}.git my-grok-project && cd my-grok-project && cp .env.exam
   }
 
   function initNavHighlight() {
-    const navLinks = document.querySelectorAll('.site-nav a[data-section]');
-    if (!navLinks.length) return;
-
-    const sections = [...navLinks]
-      .map((link) => document.getElementById(link.dataset.section))
-      .filter(Boolean);
-
-    const header = document.getElementById('site-header');
-    const offset = () => (header?.offsetHeight || 72) + 24;
-
-    const sync = () => {
-      const scrollY = window.scrollY + offset();
-      let current = sections[0]?.id;
-      sections.forEach((section) => {
-        if (section.offsetTop <= scrollY) current = section.id;
-      });
-      navLinks.forEach((link) => {
-        link.classList.toggle('is-active', link.dataset.section === current);
-      });
-    };
-
-    window.addEventListener('scroll', sync, { passive: true });
-    sync();
+    window.fwjSyncNavHighlight?.();
   }
 
   async function boot() {

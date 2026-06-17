@@ -100,6 +100,38 @@
       { "year": 1992, "label": "Son Sam born", "category": "family", "description": "First of three sons with Connie Snyder." },
       { "year": 1994, "label": "Son Aaron born", "category": "family", "description": "Second son." },
       { "year": 1999, "label": "Son Peter born", "category": "family", "description": "Third son." }
+    ],
+    "101": [
+      { "year": 1970, "label": "Born · Addis Ababa, Ethiopia", "category": "family", "description": "Ethiopian-born American artist; family immigrated to Michigan in 1977." },
+      { "year": 1977, "label": "Family immigrates to Michigan", "category": "family", "description": "East Lansing upbringing after leaving Addis Ababa." },
+      { "year": 1992, "label": "BA · Kalamazoo College", "category": "life", "description": "Undergraduate degree before RISD MFA." },
+      { "year": 1997, "label": "MFA · RISD", "category": "life", "description": "Painting and printmaking — Providence graduate program." },
+      { "year": 1999, "label": "NYC studio established", "category": "life", "description": "Professional studio practice begins in New York City." },
+      { "year": 2002, "label": "Berlin studio", "category": "life", "description": "Relocates primary studio to Berlin while maintaining NYC ties." },
+      { "year": 2005, "label": "MacArthur Fellowship", "category": "life", "description": "Genius grant during Stadia and Grey Area period." },
+      { "year": 2005, "label": "Lehmann v. The Project Worldwide", "category": "lawsuit", "description": "Collector Jean-Pierre Lehmann sued dealer Christian Haye for breaching first-refusal on Mehretu paintings; artist testified Jan 2005; $1.736M damages; settled Nov 2005." },
+      { "year": 2015, "label": "U.S. Medal of Arts", "category": "life", "description": "State Department lifetime achievement recognition." },
+      { "year": 2023, "label": "Auction record $10.7M", "category": "life", "description": "Walkers With the Dawn and Morning at Sotheby's New York." }
+    ],
+    "102": [
+      { "year": 1980, "label": "Born · Ventura, California", "category": "family", "description": "Evangelical upbringing; family cabinet-making and fine-finishing shop in Ventura County." },
+      { "year": 1992, "label": "Cabinet shop apprenticeship", "category": "life", "description": "Fine woodworking and finishing training in the family trade." },
+      { "year": 1995, "label": "Begins tarot & ritual practice", "category": "life", "description": "Eclectic solitary witchcraft, channeling, and energy work — foundation for later Queen Meb and THoT teaching." },
+      { "year": 1996, "label": "CSSSA honors art program", "category": "life", "description": "CalArts Innerspark — state-selected honors painting and ceramics." },
+      { "year": 1997, "label": "Buena High School Bulldogs", "category": "life", "description": "Class photo era (~1997); classmate Zachary Levi (Buena 1994–1998); Ventura USD history archive." },
+      { "year": 1998, "label": "Hair salon & dental foundry jobs", "category": "life", "description": "Pre-Pratt trade work — stylist assistant and dental casting lab technician." },
+      { "year": 2000, "label": "Enrolls at Pratt Institute", "category": "life", "description": "BFA Painting track in Brooklyn while working THQ QA and Mehretu studio." },
+      { "year": 2002, "label": "THQ game tester", "category": "life", "description": "QA lead on SpongeBob, Fairly OddParents, Rugrats Go Wild, and other THQ titles." },
+      { "year": 2003, "label": "Psychic Friends Network, Brooklyn", "category": "life", "description": "Tarot guide during Pratt era; left over discomfort with corporate psychic-industry ethos." },
+      { "year": 2004, "label": "Joins Julie Mehretu studio", "category": "life", "description": "Finish consultant & ground preparator while enrolled at Pratt Institute." },
+      { "year": 2005, "label": "Lehmann v. Project — studio discussion", "category": "lawsuit", "description": "Collector suit against The Project gallery over Mehretu first-refusal rights — discussed in Mehretu studio during Pratt BFA years." },
+      { "year": 2006, "label": "Studies in Venice, Italy", "category": "life", "description": "Pratt in Venice — painting, printmaking, and art history abroad." },
+      { "year": 2008, "label": "Pratt BFA · Terra Gallery solo", "category": "life", "description": "BFA Painting (Pratt 2008); first solo exhibition Erika Fortner: New Paintings, Terra Gallery, Columbus, OH." },
+      { "year": 2009, "label": "LindArt Lendava residency", "category": "life", "description": "Slovenia co-operate vol. 3 exchange with Véronique Paquet — gml.si page2009." },
+      { "year": 2015, "label": "Relocates to Eugene, Oregon", "category": "family", "description": "Leaves Mehretu studio; Pacific Northwest reset before Portland ventures." },
+      { "year": 2016, "label": "Keven Craft Rituals · Eugene shop", "category": "life", "description": "268 W. 7th Ave apothecary/gallery; Eugene Weekly profile." },
+      { "year": 2016, "label": "Birth of daughter Freya", "category": "family", "description": "Family chapter with partner Tad Ericson in Eugene." },
+      { "year": 2017, "label": "Relocates to Portland, Oregon", "category": "family", "description": "Long-term base for Queen Meb, Keven Craft Rituals, and THoT." }
     ]
   }
 }

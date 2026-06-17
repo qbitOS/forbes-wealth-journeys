@@ -6,7 +6,7 @@
   <title>Industry Stream · Forbes Wealth + Crossover</title>
   <meta name="description" content="Unified industry timeline — Forbes billionaire milestones, Grok venture branches, and crossover MACD/Bollinger flip signals on one page." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <link rel="stylesheet" href="docs/assets/industry-stream.css?v=20260613zc" />
+  <link rel="stylesheet" href="docs/assets/industry-stream.css?v=20260615e" />
 </head>
 <body class="unified-page stream-drawer-open">
   <header class="unified-header">
@@ -42,9 +42,9 @@
             <span class="unified-section-label">Industry stream</span>
             <h2>Unified activity feed</h2>
           </div>
-          <button type="button" id="stream-drawer-toggle" class="stream-drawer-toggle" aria-expanded="true" aria-controls="stream-feed" title="Hide activity feed">
+          <button type="button" id="stream-drawer-toggle" class="stream-drawer-toggle stream-drawer-close-btn" aria-expanded="true" aria-controls="stream-feed" title="Close activity feed">
             <span class="stream-drawer-toggle-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Hide feed</span>
+            <span class="stream-drawer-close-label">Close</span>
           </button>
         </div>
         <p class="stream-drawer-lead">
@@ -59,7 +59,9 @@
       <div id="stream-feed" class="stream-feed stream-drawer-feed" aria-label="Unified industry stream"></div>
     </aside>
 
-    <div id="stream-drawer-backdrop" class="stream-drawer-backdrop" hidden aria-hidden="true"></div>
+    <div id="stream-drawer-backdrop" class="stream-drawer-backdrop" hidden aria-hidden="true">
+      <button type="button" id="stream-drawer-backdrop-close" class="stream-drawer-backdrop-close" aria-label="Close activity feed">Close feed</button>
+    </div>
 
     <div class="unified-content">
   <main class="unified-main">
@@ -248,6 +250,6 @@
   <script src="docs/assets/fwj-color.js?v=20260612h"></script>
   <script src="docs/assets/timeline-cluster.js?v=20260613b"></script>
   <script src="docs/assets/flip-overlay-chart.js?v=20260613z"></script>
-  <script src="docs/assets/industry-stream.js?v=20260613s"></script>
+  <script src="docs/assets/industry-stream.js?v=20260615e"></script>
 </body>
 </html>

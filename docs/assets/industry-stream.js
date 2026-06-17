@@ -2534,18 +2534,63 @@
     return window.matchMedia('(max-width: 767px)').matches;
   }
 
+  function ensureDrawerPortal() {
+    const backdrop = $('#stream-drawer-backdrop');
+    const closeBtn = $('#stream-drawer-backdrop-close');
+    if (backdrop && backdrop.parentElement !== document.body) {
+      document.body.appendChild(backdrop);
+    }
+    if (closeBtn && closeBtn.parentElement !== document.body) {
+      document.body.appendChild(closeBtn);
+    }
+  }
+
+  function bindDrawerControl(el, onActivate) {
+    if (!el || el.dataset.drawerBound === 'true') return;
+    el.dataset.drawerBound = 'true';
+    let lastTouch = 0;
+    const run = (e) => {
+      if (e.type === 'click' && Date.now() - lastTouch < 500) return;
+      if (e.type === 'touchend') lastTouch = Date.now();
+      e.preventDefault();
+      e.stopPropagation();
+      onActivate();
+    };
+    el.addEventListener('click', run);
+    el.addEventListener('touchend', run, { passive: false });
+  }
+
   function setDrawerOpen(open) {
     const body = document.body;
     const toggle = $('#stream-drawer-toggle');
     const headerToggle = $('#stream-drawer-header-toggle');
     const backdrop = $('#stream-drawer-backdrop');
+    const backdropClose = $('#stream-drawer-backdrop-close');
+    const mobile = isDrawerMobile();
+    const showBackdrop = open && mobile;
+    ensureDrawerPortal();
     body.classList.toggle('stream-drawer-open', open);
     body.classList.toggle('stream-drawer-closed', !open);
-    if (toggle) toggle.setAttribute('aria-expanded', String(open));
-    if (headerToggle) headerToggle.setAttribute('aria-expanded', String(open));
+    body.classList.toggle('stream-drawer-mobile', showBackdrop);
+    document.documentElement.classList.toggle('stream-drawer-scroll-lock', showBackdrop);
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.title = open ? 'Close activity feed' : 'Open activity feed';
+    }
+    if (headerToggle) {
+      headerToggle.setAttribute('aria-expanded', String(open));
+      const feedLabel = headerToggle.querySelector('span:not(.stream-drawer-header-icon)');
+      if (feedLabel) feedLabel.textContent = open && mobile ? 'Close' : 'Feed';
+    }
     if (backdrop) {
-      backdrop.hidden = !open || !isDrawerMobile();
-      backdrop.setAttribute('aria-hidden', String(!open || !isDrawerMobile()));
+      backdrop.hidden = !showBackdrop;
+      backdrop.classList.toggle('is-active', showBackdrop);
+      backdrop.setAttribute('aria-hidden', String(!showBackdrop));
+    }
+    if (backdropClose) {
+      backdropClose.hidden = !showBackdrop;
+      backdropClose.classList.toggle('is-active', showBackdrop);
+      backdropClose.setAttribute('aria-hidden', String(!showBackdrop));
     }
     try {
       localStorage.setItem(DRAWER_STORAGE_KEY, open ? 'open' : 'closed');
@@ -2554,10 +2599,18 @@
     }
   }
 
+  function closeDrawerFromBackdrop(e) {
+    if (e?.cancelable) e.preventDefault();
+    e?.stopPropagation?.();
+    setDrawerOpen(false);
+  }
+
   function bindDrawer() {
+    ensureDrawerPortal();
     const toggle = $('#stream-drawer-toggle');
     const headerToggle = $('#stream-drawer-header-toggle');
     const backdrop = $('#stream-drawer-backdrop');
+    const backdropClose = $('#stream-drawer-backdrop-close');
     let saved = null;
     try {
       saved = localStorage.getItem(DRAWER_STORAGE_KEY);
@@ -2565,15 +2618,31 @@
       /* ignore */
     }
 
-    if (saved === 'open') setDrawerOpen(true);
-    else if (saved === 'closed') setDrawerOpen(false);
-    else setDrawerOpen(!isDrawerMobile());
-
     const flip = () => setDrawerOpen(!document.body.classList.contains('stream-drawer-open'));
 
-    toggle?.addEventListener('click', flip);
-    headerToggle?.addEventListener('click', flip);
-    backdrop?.addEventListener('click', () => setDrawerOpen(false));
+    if (isDrawerMobile()) {
+      setDrawerOpen(false);
+    } else if (saved === 'open') {
+      setDrawerOpen(true);
+    } else if (saved === 'closed') {
+      setDrawerOpen(false);
+    } else {
+      setDrawerOpen(true);
+    }
+
+    bindDrawerControl(toggle, flip);
+    bindDrawerControl(headerToggle, flip);
+    bindDrawerControl(backdropClose, closeDrawerFromBackdrop);
+    bindDrawerControl(backdrop, (e) => {
+      if (e.target === backdrop) closeDrawerFromBackdrop(e);
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.body.classList.contains('stream-drawer-open')) {
+        e.preventDefault();
+        setDrawerOpen(false);
+      }
+    });
 
     document.querySelectorAll('a.stream-nav-link, a[href="#stream-drawer-panel"]').forEach((link) => {
       link.addEventListener('click', (e) => {
@@ -2586,10 +2655,24 @@
 
     window.addEventListener('resize', () => {
       const open = document.body.classList.contains('stream-drawer-open');
+      const mobile = isDrawerMobile();
+      const showBackdrop = open && mobile;
+      document.body.classList.toggle('stream-drawer-mobile', showBackdrop);
+      document.documentElement.classList.toggle('stream-drawer-scroll-lock', showBackdrop);
       if (backdrop) {
-        backdrop.hidden = !open || !isDrawerMobile();
-        backdrop.setAttribute('aria-hidden', String(!open || !isDrawerMobile()));
+        backdrop.hidden = !showBackdrop;
+        backdrop.classList.toggle('is-active', showBackdrop);
+        backdrop.setAttribute('aria-hidden', String(!showBackdrop));
       }
+      const backdropClose = $('#stream-drawer-backdrop-close');
+      if (backdropClose) {
+        backdropClose.hidden = !showBackdrop;
+        backdropClose.classList.toggle('is-active', showBackdrop);
+        backdropClose.setAttribute('aria-hidden', String(!showBackdrop));
+      }
+      const feedLabel = headerToggle?.querySelector('span:not(.stream-drawer-header-icon)');
+      if (feedLabel) feedLabel.textContent = open && mobile ? 'Close' : 'Feed';
+      if (mobile && open) ensureDrawerPortal();
     });
   }
 
@@ -2644,7 +2727,9 @@
     if (!hasIndustryStreamShell()) return;
     const embedded = Boolean($('#industry-stream.industry-stream-section'));
     if (embedded) {
-      document.body.classList.add('stream-embedded', 'stream-drawer-open');
+      document.body.classList.add('stream-embedded');
+      document.body.classList.remove('stream-drawer-open');
+      document.body.classList.add('stream-drawer-closed');
     }
     try {
       await loadHistoricalData();

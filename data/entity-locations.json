@@ -625,6 +625,46 @@
       "lat": 37.444,
       "lng": -122.149,
       "label": "Zip2 · Palo Alto"
+    },
+    "keven-craft-rituals": {
+      "lat": 45.549,
+      "lng": -122.666,
+      "label": "Keven Craft Rituals · Portland"
+    },
+    "blackthorn-mercantile": {
+      "lat": 45.554,
+      "lng": -122.666,
+      "label": "Blackthorn Mercantile · N Williams, Portland"
+    },
+    "queen-meb": {
+      "lat": 45.523,
+      "lng": -122.676,
+      "label": "Queen Meb · Portland"
+    },
+    "the-house-of-twigs": {
+      "lat": 45.523,
+      "lng": -122.676,
+      "label": "The House of Twigs · Portland"
+    },
+    "ritual-roi": {
+      "lat": 45.523,
+      "lng": -122.676,
+      "label": "Ritual ROI · Portland"
+    },
+    "julie-mehretu-studio": {
+      "lat": 52.52,
+      "lng": 13.405,
+      "label": "Julie Mehretu Studio · Berlin"
+    },
+    "goldman-sachs-mural": {
+      "lat": 40.715,
+      "lng": -74.015,
+      "label": "Mural (Goldman Sachs) · New York"
+    },
+    "erika-fortner": {
+      "lat": 45.549,
+      "lng": -122.666,
+      "label": "Erika Fortner · Portland"
     }
   },
   "countries": {

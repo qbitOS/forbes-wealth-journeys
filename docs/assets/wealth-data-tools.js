@@ -53,7 +53,7 @@
     sector: '',
     country: '',
     rankMin: 1,
-    rankMax: 100,
+    rankMax: 110,
     enrichedOnly: false,
     fields: new Set(['profile', 'wealthBreakdown', 'entities', 'timeline']),
   };
@@ -646,7 +646,10 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
     if (next) next.textContent = n === 4 ? 'Done' : 'Next';
     if (n === 3 || n === 4) refreshExportPanels();
     const cfg = $('#configurator');
-    if (cfg) window.scrollTo({ top: cfg.offsetTop - 80, behavior: 'smooth' });
+    if (cfg) {
+      const panel = cfg.closest('.site-panel') || cfg;
+      panel.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   }
 
   function initConfigurator() {
@@ -687,7 +690,7 @@ ${rows.map((e) => `- [${e.rank}] ${e.name} — ${e.sector}, ${e.country}`).join(
       if (!el) return;
       el.addEventListener('input', () => {
         state.rankMin = Math.max(1, Number(rankMin.value) || 1);
-        state.rankMax = Math.min(100, Number(rankMax.value) || 100);
+        state.rankMax = Math.min(110, Number(rankMax.value) || 110);
         if (state.step >= 3) refreshExportPanels();
       });
     });

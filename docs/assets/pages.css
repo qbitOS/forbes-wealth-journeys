@@ -136,6 +136,119 @@ main {
   padding: 2rem 1.5rem 4rem;
 }
 
+html:has(body.site-panels-layout) {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Horizontal panel layout — one section per tab, swipe left/right */
+body.site-panels-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+body.site-panels-layout .site-header {
+  flex-shrink: 0;
+}
+
+body.site-panels-layout .site-panels {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+body.site-panels-layout .site-panels::-webkit-scrollbar {
+  height: 6px;
+}
+
+body.site-panels-layout .site-panels::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 999px;
+}
+
+body.site-panels-layout .site-panels-track {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+}
+
+body.site-panels-layout .site-panel {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: contain;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  padding: 1.5rem 1.5rem 1.25rem;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.site-panels-layout .site-panel.section {
+  margin-bottom: 0;
+  scroll-margin-top: 0;
+}
+
+body.site-panels-layout .site-panel:not(.industry-stream-section) > :not(script) {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+body.site-panels-layout .site-footer {
+  flex-shrink: 0;
+  padding: 0.625rem 1.5rem;
+  font-size: 0.6875rem;
+}
+
+body.site-panels-layout .forbes-layout {
+  min-height: 0;
+}
+
+body.site-panels-layout .forbes-story-main,
+body.site-panels-layout .forbes-story-aside {
+  max-height: none;
+}
+
+body.site-panels-layout .forbes-story-aside {
+  position: static;
+  overflow: visible;
+}
+
+body.site-panels-layout .site-panel.industry-stream-section,
+body.site-panels-layout .site-panel.industry-stream-section .unified-shell {
+  min-height: 0;
+}
+
+body.site-panels-layout .site-nav a.is-active {
+  font-weight: 600;
+}
+
 /* Section pattern */
 .section {
   margin-bottom: 3.5rem;
@@ -2596,9 +2709,10 @@ h3.subheading {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
+  gap: 0.35rem;
+  min-width: 2rem;
   height: 2rem;
-  padding: 0;
+  padding: 0 0.5rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   background: var(--bg);
@@ -2607,6 +2721,76 @@ h3.subheading {
   line-height: 1;
   cursor: pointer;
   transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.forbes-drawer-close-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.forbes-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: var(--fwj-overlay, rgba(8, 10, 12, 0.55));
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: opacity 0.22s ease;
+}
+
+.forbes-drawer-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.forbes-drawer-backdrop-close {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+  right: max(0.75rem, env(safe-area-inset-right, 0.75rem));
+  z-index: 200;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(12, 14, 18, 0.92);
+  color: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  touch-action: manipulation;
+  pointer-events: auto;
+}
+
+body > .forbes-drawer-backdrop-close {
+  z-index: 200;
+}
+
+.forbes-drawer-backdrop-close[hidden] {
+  display: none !important;
+}
+
+body.forbes-drawer-mobile .forbes-detail {
+  position: relative;
+  z-index: 150;
+}
+
+body.forbes-drawer-mobile .forbes-rank-picker {
+  position: relative;
+  z-index: 151;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.forbes-drawer-scroll-lock {
+  overflow: hidden;
+}
+
+html.forbes-drawer-scroll-lock body {
+  overflow: hidden;
 }
 
 .forbes-drawer-close:hover {
@@ -2807,6 +2991,69 @@ h3.subheading {
   color: var(--text);
 }
 
+.forbes-detail-worth-clarifier {
+  margin: 0.35rem 0 0;
+}
+
+.forbes-worth-clarifier {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-muted, #525252);
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  border-radius: 8px;
+  background: rgba(180, 83, 9, 0.03);
+  overflow: hidden;
+}
+
+.forbes-worth-clarifier-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  padding: 0.5rem 0.625rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.forbes-worth-clarifier-summary::-webkit-details-marker {
+  display: none;
+}
+
+.forbes-worth-clarifier-summary::before {
+  content: "▸";
+  font-size: 0.75rem;
+  color: var(--forbes-accent, #b45309);
+  transition: transform 0.15s ease;
+}
+
+.forbes-worth-clarifier[open] .forbes-worth-clarifier-summary::before {
+  transform: rotate(90deg);
+}
+
+.forbes-worth-clarifier-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.forbes-worth-clarifier-period {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-muted, #737373);
+}
+
+.forbes-worth-clarifier-body {
+  padding: 0 0.625rem 0.625rem;
+  border-top: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.15));
+}
+
+.forbes-worth-clarifier-body strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
 .forbes-worth-row {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
@@ -2869,6 +3116,10 @@ h3.subheading {
 
 .forbes-map-dot.is-venture {
   background: #2563eb;
+}
+
+.forbes-map-dot.is-stockist {
+  background: #7c3aed;
 }
 
 .forbes-map-dot.is-risk {
@@ -3423,6 +3674,594 @@ h3.subheading {
   background: rgba(180, 83, 9, 0.04);
 }
 
+.forbes-journey-image {
+  margin: 0.5rem 0 0;
+}
+
+.forbes-journey-image img {
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 6px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+}
+
+.forbes-art-gallery {
+  margin-bottom: 1.5rem;
+}
+
+.forbes-art-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.875rem;
+}
+
+.forbes-art-card {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+}
+
+.forbes-art-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.forbes-art-card figcaption {
+  padding: 0.5rem 0.625rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-art-year {
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-showcase-section {
+  margin-bottom: 1.5rem;
+}
+
+.forbes-thq-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.625rem;
+}
+
+.forbes-thq-card {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+}
+
+.forbes-thq-year {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+  font-variant-numeric: tabular-nums;
+}
+
+.forbes-thq-title {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+.forbes-thq-role {
+  font-size: 0.75rem;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-catalog-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.625rem;
+}
+
+.forbes-catalog-card {
+  margin: 0;
+  padding: 0;
+}
+
+.forbes-catalog-link {
+  display: grid;
+  gap: 0.2rem;
+  height: 100%;
+  padding: 0.625rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.forbes-catalog-link:hover {
+  border-color: var(--forbes-accent, #b45309);
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.1);
+}
+
+.forbes-catalog-card:not(:has(.forbes-catalog-link)) {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+}
+
+.forbes-catalog-year {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+  font-variant-numeric: tabular-nums;
+}
+
+.forbes-catalog-type {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted, #737373);
+}
+
+.forbes-catalog-title {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+.forbes-catalog-meta {
+  font-size: 0.75rem;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-catalog-note {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-lawsuits-lead,
+.forbes-related-lead {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-catalog-related-wrap {
+  padding: 0 0.75rem 0.625rem;
+}
+
+.forbes-catalog-related {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-profile-link {
+  color: var(--forbes-accent, #b45309);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.forbes-profile-link:hover {
+  text-decoration: underline;
+}
+
+.forbes-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.forbes-video-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.625rem;
+  align-items: start;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.forbes-video-card:hover {
+  border-color: var(--forbes-accent, #b45309);
+  box-shadow: 0 2px 8px rgba(180, 83, 9, 0.12);
+}
+
+.forbes-video-play {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(180, 83, 9, 0.12);
+  color: var(--forbes-accent, #b45309);
+  font-size: 0.75rem;
+}
+
+.forbes-video-body {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.forbes-video-year {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-video-title {
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.forbes-video-source,
+.forbes-video-desc {
+  font-size: 0.75rem;
+  color: var(--forbes-muted, #666);
+  line-height: 1.4;
+}
+
+.forbes-youtube-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+  color: inherit;
+  text-decoration: none;
+}
+
+.forbes-youtube-card:hover {
+  border-color: var(--forbes-accent, #b45309);
+}
+
+.forbes-youtube-icon {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.forbes-youtube-body {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.8125rem;
+}
+
+.forbes-youtube-body strong {
+  font-size: 0.9375rem;
+}
+
+.forbes-placeholder-panel {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed var(--forbes-accent-border, rgba(180, 83, 9, 0.35));
+  background: rgba(180, 83, 9, 0.04);
+}
+
+.forbes-placeholder-copy {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-placeholder-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-art-thumb-carousel {
+  margin-top: 0.75rem;
+}
+
+.forbes-art-thumb-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted, #737373);
+}
+
+.forbes-art-thumb-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.forbes-art-thumb-card {
+  flex: 0 0 5.5rem;
+  display: grid;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: inherit;
+  scroll-snap-align: start;
+}
+
+.forbes-art-thumb-card:hover .forbes-art-thumb-title {
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-art-thumb-img {
+  display: block;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: rgba(180, 83, 9, 0.06);
+}
+
+.forbes-art-thumb-img--placeholder {
+  display: block;
+  border-style: dashed;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(180, 83, 9, 0.04),
+    rgba(180, 83, 9, 0.04) 6px,
+    rgba(180, 83, 9, 0.08) 6px,
+    rgba(180, 83, 9, 0.08) 12px
+  );
+}
+
+.forbes-art-thumb-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.forbes-art-thumb-year {
+  font-size: 0.625rem;
+  color: var(--forbes-muted, #666);
+  font-variant-numeric: tabular-nums;
+}
+
+.forbes-formula-deck {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.forbes-formula-col {
+  display: grid;
+  gap: 0.625rem;
+  align-content: start;
+}
+
+.forbes-formula-card {
+  margin: 0;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px dashed var(--forbes-accent-border, rgba(180, 83, 9, 0.3));
+  background: var(--forbes-panel-bg, #fff);
+}
+
+.forbes-formula-card.is-placeholder {
+  background: rgba(180, 83, 9, 0.03);
+}
+
+.forbes-formula-name {
+  margin: 0 0 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.forbes-formula-note {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--forbes-muted, #666);
+}
+
+@media (max-width: 640px) {
+  .forbes-formula-deck {
+    grid-template-columns: 1fr;
+  }
+}
+
+.forbes-buena-lead {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-buena-photo {
+  margin: 0 0 0.875rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+}
+
+.forbes-buena-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.forbes-buena-classmates {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.forbes-buena-classmate {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: var(--forbes-panel-bg, #fff);
+  font-size: 0.8125rem;
+}
+
+.forbes-buena-classmate-head {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.forbes-film-carousel {
+  margin-top: 0.15rem;
+}
+
+.forbes-film-carousel-label {
+  margin: 0 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-muted, #737373);
+}
+
+.forbes-film-track {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.forbes-film-card {
+  flex: 0 0 4.75rem;
+  display: grid;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: inherit;
+  scroll-snap-align: start;
+}
+
+.forbes-film-card:hover .forbes-film-title {
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-film-poster {
+  display: block;
+  width: 4.75rem;
+  height: 7.125rem;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--forbes-accent-border, rgba(180, 83, 9, 0.2));
+  background: rgba(180, 83, 9, 0.06);
+}
+
+.forbes-film-poster--placeholder {
+  display: block;
+}
+
+.forbes-film-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.forbes-film-year {
+  font-size: 0.625rem;
+  color: var(--forbes-muted, #666);
+  font-variant-numeric: tabular-nums;
+}
+
+.forbes-film-collabs-lead {
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--forbes-muted, #666);
+}
+
+.forbes-lazy-section {
+  min-height: 3.5rem;
+}
+
+.forbes-lazy-section.is-loaded {
+  min-height: 0;
+}
+
+.forbes-lazy-skeleton {
+  height: 3.5rem;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(180, 83, 9, 0.06) 0%,
+    rgba(180, 83, 9, 0.12) 45%,
+    rgba(180, 83, 9, 0.06) 90%
+  );
+  background-size: 200% 100%;
+  animation: forbes-lazy-shimmer 1.2s ease-in-out infinite;
+}
+
+.forbes-lazy-skeleton--chart {
+  height: 12rem;
+}
+
+.forbes-lazy-hint {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 0.75rem;
+  color: var(--forbes-muted, #666);
+  text-align: center;
+}
+
+@keyframes forbes-lazy-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.forbes-buena-years {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+}
+
+.forbes-buena-note {
+  font-size: 0.75rem;
+  color: var(--forbes-muted, #666);
+  line-height: 1.4;
+}
+
 .forbes-journey {
   list-style: none;
   margin: 0;
@@ -3840,6 +4679,27 @@ h3.subheading {
   color: var(--text);
 }
 
+.forbes-wiki-infobox-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.forbes-wiki-inline-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--forbes-accent, #b45309);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+.forbes-wiki-inline-link:hover {
+  text-decoration: underline;
+}
+
 .forbes-wiki-section {
   margin-bottom: 0.875rem;
 }
@@ -3980,16 +4840,24 @@ h3.subheading {
   }
 
   .forbes-list-drawer.is-open {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 130;
     flex: 0 0 auto;
     width: 100%;
     margin-right: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    max-height: min(78vh, 620px);
   }
 
   .forbes-list-drawer.is-open .forbes-list-drawer-panel {
     width: 100%;
     min-height: min(50vh, 480px);
-    max-height: min(70vh, 560px);
+    max-height: min(78vh, 620px);
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35);
   }
 
   .forbes-story-layout {
@@ -4006,6 +4874,12 @@ h3.subheading {
     order: -1;
     position: static;
     overflow: visible;
+  }
+
+  .forbes-drawer-backdrop.is-active {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(0, 0, 0, 0.42);
   }
 
   .market-symbol-grid {
@@ -4199,11 +5073,12 @@ h3.subheading {
 .forbes-context-rail .context-rail-forbes { border-left: 2px solid var(--accent); padding-left: 0.35rem; }
 .forbes-context-rail .context-rail-tech { border-left: 2px solid #0891b2; padding-left: 0.35rem; }
 
-/* Industry stream section on index — wider layout */
+/* Industry stream section on index — wider layout, inherits site background */
 .section.industry-stream-section {
   max-width: none;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  background: transparent;
 }
 
 .section.industry-stream-section > h2,
@@ -4213,4 +5088,219 @@ h3.subheading {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Compliance trading paths */
+.compliance-trading-section {
+  --ct-accent: #1d4ed8;
+  --ct-border: rgba(29, 78, 216, 0.2);
+}
+
+.compliance-trading-root {
+  margin-top: 1rem;
+}
+
+.compliance-disclaimer {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--ct-border);
+  background: rgba(29, 78, 216, 0.05);
+  font-size: 0.875rem;
+  color: var(--text-muted, #555);
+}
+
+.compliance-block {
+  margin-top: 2rem;
+}
+
+.compliance-block-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.compliance-block-lead {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--text-muted, #555);
+}
+
+.compliance-phase-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.compliance-phase-tab {
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--ct-border);
+  background: #fff;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.compliance-phase-tab.active {
+  background: var(--ct-accent);
+  color: #fff;
+  border-color: var(--ct-accent);
+}
+
+.compliance-phase-panel {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--ct-border);
+  background: #fafbff;
+}
+
+.compliance-phase-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.compliance-phase-summary {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.compliance-subheading {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.compliance-topic-list,
+.compliance-resource-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.compliance-agency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.compliance-agency-card {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--ct-border);
+  background: #fff;
+  font-size: 0.82rem;
+}
+
+.compliance-agency-name {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+}
+
+.compliance-agency-role {
+  margin: 0 0 0.35rem;
+  color: var(--ct-accent);
+  font-weight: 500;
+}
+
+.compliance-agency-scope,
+.compliance-agency-forbes {
+  margin: 0.25rem 0 0;
+  color: var(--text-muted, #555);
+}
+
+.compliance-cert-table,
+.compliance-rules-table,
+.compliance-crosswalk-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.compliance-cert-table th,
+.compliance-rules-table th,
+.compliance-crosswalk-table th,
+.compliance-cert-table td,
+.compliance-rules-table td,
+.compliance-crosswalk-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--ct-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compliance-cert-table th,
+.compliance-rules-table th,
+.compliance-crosswalk-table th {
+  background: rgba(29, 78, 216, 0.06);
+  font-weight: 600;
+}
+
+.compliance-crosswalk-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted, #555);
+  margin-bottom: 0.5rem;
+}
+
+.compliance-ticker {
+  display: inline-block;
+  margin: 0.1rem 0.2rem 0.1rem 0;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(29, 78, 216, 0.08);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.compliance-badge {
+  display: inline-block;
+  margin-right: 0.25rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: rgba(180, 83, 9, 0.12);
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.compliance-checklist {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.compliance-check-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--ct-border);
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.compliance-check-cat {
+  font-size: 0.7rem;
+  color: var(--text-muted, #888);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.compliance-check-progress {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.compliance-empty,
+.compliance-loading {
+  color: var(--text-muted, #666);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .compliance-crosswalk-table {
+    display: block;
+    overflow-x: auto;
+  }
 }

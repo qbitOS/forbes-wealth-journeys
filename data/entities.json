@@ -33,13 +33,6 @@
     "ticker": "AMZN"
   },
   {
-    "id": "america-movil",
-    "name": "América Móvil",
-    "founded": 2000,
-    "status": "public",
-    "ticker": "AMX"
-  },
-  {
     "id": "antofagasta",
     "name": "Antofagasta",
     "founded": 1980,
@@ -99,6 +92,12 @@
     "status": "public",
     "valuationUsdB": 180,
     "ticker": "BX"
+  },
+  {
+    "id": "blackthorn-mercantile",
+    "name": "Blackthorn Mercantile (Keven Craft homestore)",
+    "founded": 2024,
+    "status": "private"
   },
   {
     "id": "bloomberg",
@@ -229,6 +228,12 @@
     "status": "private"
   },
   {
+    "id": "erika-fortner",
+    "name": "Erika Fortner (independent practice)",
+    "founded": 2008,
+    "status": "private"
+  },
+  {
     "id": "facebook",
     "name": "Facebook",
     "status": "private"
@@ -336,6 +341,18 @@
     "ticker": null
   },
   {
+    "id": "julie-mehretu-studio",
+    "name": "Julie Mehretu Studio",
+    "founded": 1999,
+    "status": "private"
+  },
+  {
+    "id": "keven-craft-rituals",
+    "name": "Keven Craft Rituals",
+    "founded": 2016,
+    "status": "private"
+  },
+  {
     "id": "koch_inc",
     "name": "Koch Inc.",
     "status": "private"
@@ -436,12 +453,25 @@
     "ticker": null
   },
   {
+    "id": "goldman-sachs-mural",
+    "name": "Mural (Goldman Sachs HQ)",
+    "founded": 2009,
+    "status": "permanent_installation",
+    "valuationUsdB": 0.005
+  },
+  {
     "id": "netease",
     "name": "NetEase",
     "founded": 1997,
     "status": "public",
     "valuationUsdB": 80,
     "ticker": "NTES"
+  },
+  {
+    "id": "neuralink",
+    "name": "Neuralink",
+    "founded": 2016,
+    "status": "private"
   },
   {
     "id": "nike",
@@ -470,6 +500,12 @@
     "status": "public",
     "valuationUsdB": 3200,
     "ticker": "NVDA"
+  },
+  {
+    "id": "obama-presidential-center",
+    "name": "Obama Presidential Center",
+    "founded": 2024,
+    "status": "permanent_installation"
   },
   {
     "id": "oil",
@@ -506,6 +542,12 @@
     "ticker": "PDD"
   },
   {
+    "id": "queen-meb",
+    "name": "Queen Meb / The House of Twigs",
+    "founded": 2018,
+    "status": "merged_into_blackthorn"
+  },
+  {
     "id": "rajapalayam-mills",
     "name": "Rajapalayam Mills",
     "founded": 1938,
@@ -529,6 +571,12 @@
     "founded": 1966,
     "status": "public",
     "ticker": "RELIANCE.NS"
+  },
+  {
+    "id": "ritual-roi",
+    "name": "Ritual ROI",
+    "founded": 2025,
+    "status": "private"
   },
   {
     "id": "samsung",
@@ -570,6 +618,12 @@
     "ticker": "9984.T"
   },
   {
+    "id": "guggenheim",
+    "name": "Solomon R. Guggenheim Museum",
+    "founded": 1939,
+    "status": "institution"
+  },
+  {
     "id": "spacex",
     "name": "SpaceX",
     "founded": 2002,
@@ -596,6 +650,13 @@
     "ticker": "SUNPHARMA.NS"
   },
   {
+    "id": "telmex",
+    "name": "Telmex / América Móvil",
+    "founded": 1947,
+    "status": "public",
+    "ticker": "AMX"
+  },
+  {
     "id": "tencent",
     "name": "Tencent",
     "founded": 1998,
@@ -609,6 +670,12 @@
     "status": "public",
     "valuationUsdB": 1200,
     "ticker": "TSLA"
+  },
+  {
+    "id": "boring-co",
+    "name": "The Boring Company",
+    "founded": 2016,
+    "status": "private"
   },
   {
     "id": "times-group",
@@ -637,6 +704,12 @@
     "ticker": "TVSMOTOR.NS"
   },
   {
+    "id": "walker-art-center",
+    "name": "Walker Art Center",
+    "founded": 1927,
+    "status": "institution"
+  },
+  {
     "id": "walmart",
     "name": "Walmart",
     "founded": 1962,
@@ -645,8 +718,20 @@
     "ticker": "WMT"
   },
   {
+    "id": "whitney-museum",
+    "name": "Whitney Museum of American Art",
+    "founded": 1930,
+    "status": "institution"
+  },
+  {
     "id": "wireless_networking",
     "name": "Wireless networking",
+    "status": "private"
+  },
+  {
+    "id": "x-corp",
+    "name": "X Corp",
+    "founded": 2023,
     "status": "private"
   },
   {

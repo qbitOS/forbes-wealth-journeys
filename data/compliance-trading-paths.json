@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-06-15",
+  "disclaimer": "Educational overview only — not legal, tax, or investment advice. Consult licensed counsel and your broker's compliance team before deploying any trading system.",
+  "phases": [
+    {
+      "id": "foundations",
+      "step": 1,
+      "title": "Foundations — securities & market structure",
+      "summary": "Understand what a security is, how U.S. markets are organized, and who regulates each layer before you touch capital or code.",
+      "topics": [
+        "Stocks, bonds, ETFs, options, futures — and which agency governs each",
+        "Primary vs secondary market; exchanges (NYSE, Nasdaq) vs ATS/dark pools",
+        "Market participants: retail investor, accredited investor, institution, broker-dealer, RIA",
+        "Key laws: Securities Act 1933, Exchange Act 1934, Investment Advisers Act 1940"
+      ],
+      "resources": [
+        { "label": "SEC — U.S. Securities and Exchange Commission", "url": "https://www.sec.gov" },
+        { "label": "Investor.gov — SEC investor education", "url": "https://www.investor.gov" },
+        { "label": "Investopedia — U.S. regulatory agencies overview", "url": "https://www.investopedia.com/ask/answers/063015/what-are-some-major-regulatory-agencies-responsible-overseeing-financial-institutions-us.asp" }
+      ]
+    },
+    {
+      "id": "personal-trading",
+      "step": 2,
+      "title": "Personal trading — accounts, rules & taxes",
+      "summary": "Open a brokerage account, learn order types, pattern-day-trader limits, and tax reporting before automating anything.",
+      "topics": [
+        "Brokerage account types: cash, margin, IRA, 401(k) — each has different rules",
+        "FINRA margin & Pattern Day Trader (PDT) rule — 4+ day trades in 5 days on margin",
+        "Order types: market, limit, stop, stop-limit; time-in-force (DAY, GTC)",
+        "Wash-sale rule (IRS), cost basis, Form 1099-B, capital gains short vs long term",
+        "SIPC protection — what it covers (securities in brokerage failure, not investment loss)"
+      ],
+      "resources": [
+        { "label": "FINRA — For Investors", "url": "https://www.finra.org/investors" },
+        { "label": "FINRA BrokerCheck — verify brokers & firms", "url": "https://brokercheck.finra.org" },
+        { "label": "SIPC — Securities Investor Protection Corp", "url": "https://www.sipc.org" }
+      ]
+    },
+    {
+      "id": "research-data",
+      "step": 3,
+      "title": "Research & market data — EDGAR, 13F, insider filings",
+      "summary": "Use public filings to understand Forbes-list company stakes, insider activity, and institutional positioning — the data layer your bot will consume.",
+      "topics": [
+        "SEC EDGAR — 10-K, 10-Q, 8-K, proxy (DEF 14A), S-1 IPO filings",
+        "Form 4 — insider buys/sells within 2 business days (Section 16)",
+        "Schedule 13D/13G — 5%+ beneficial ownership",
+        "Form 13F — institutional managers with $100M+ AUM (quarterly holdings)",
+        "Reg FD — no selective disclosure; use only public information for algo signals"
+      ],
+      "resources": [
+        { "label": "SEC EDGAR full-text search", "url": "https://www.sec.gov/edgar/search/" },
+        { "label": "SEC — Form 13F FAQ", "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/form-13f-frequently-asked-questions" },
+        { "label": "Stanford Securities Class Action Clearinghouse", "url": "https://securities.stanford.edu" }
+      ]
+    },
+    {
+      "id": "algo-basics",
+      "step": 4,
+      "title": "Algorithmic trading — architecture & market rules",
+      "summary": "Design bots with audit trails, kill switches, and awareness of market-structure rules before going live.",
+      "topics": [
+        "Paper trading & backtesting — never skip; document assumptions and slippage",
+        "Market manipulation prohibitions: spoofing, layering, wash trades (SEC Rule 10b-5, CFTC)",
+        "Reg NMS — order protection, best execution obligations (broker responsibility)",
+        "Reg SCI — systems compliance for exchanges and large market participants",
+        "Algo audit trail: order logs, timestamps, strategy version, config hash",
+        "API rate limits, circuit breakers, and exchange halts (LULD)"
+      ],
+      "resources": [
+        { "label": "SEC — Algorithmic Trading (FinHub)", "url": "https://www.sec.gov/finhub" },
+        { "label": "CFTC — automated trading / DCM rules", "url": "https://www.cftc.gov" },
+        { "label": "FINRA — Algorithmic Trading", "url": "https://www.finra.org/rules-guidance/key-topics/algorithmic-trading" }
+      ]
+    },
+    {
+      "id": "licensing",
+      "step": 5,
+      "title": "Licensing & registration — when you need exams",
+      "summary": "Trading your own account needs no license; managing others' money or acting as a broker-dealer requires registration and exams.",
+      "topics": [
+        "No license needed: personal account, your own capital, no advice to others",
+        "SIE (Securities Industry Essentials) — gateway exam for industry roles",
+        "Series 7 — general securities representative (broker-dealer)",
+        "Series 63 — state securities law (often paired with 7 or 65)",
+        "Series 65/66 — investment adviser representative (RIA channel)",
+        "RIA registration: Form ADV with SEC (>$100M AUM) or state (<$100M)",
+        "Broker-dealer registration: FINRA member firm + SEC registration"
+      ],
+      "resources": [
+        { "label": "FINRA — Qualification Exams (SIE, Series 7)", "url": "https://www.finra.org/registration-exams-ce/qualification-exams" },
+        { "label": "SEC — Investment Adviser Registration", "url": "https://www.sec.gov/investment-adviser-registration" },
+        { "label": "NASAA — state securities regulators", "url": "https://www.nasaa.org" }
+      ]
+    },
+    {
+      "id": "compliant-bot",
+      "step": 6,
+      "title": "Compliant trading bot — production checklist",
+      "summary": "Cross every T before live capital: recordkeeping, supervision, AML, cybersecurity, and Forbes-lister-specific filing awareness.",
+      "topics": [
+        "Recordkeeping: SEC Rule 17a-4 (3-6 year retention for broker-dealers); keep bot logs regardless",
+        "Supervision: FINRA Rule 3110 if operating through a BD; written supervisory procedures",
+        "AML/BSA: FinCEN if handling client funds; SAR filing for suspicious activity",
+        "OFAC sanctions screening on counterparties and jurisdictions",
+        "Cybersecurity: SEC cybersecurity disclosure rules; CISA guidance for financial infrastructure",
+        "Marketing compliance: no guaranteed returns; performance claims need disclaimers (SEC Marketing Rule)",
+        "Forbes lister crosswalk: map each ticker to insider (Form 4), 13F, and material-event (8-K) obligations"
+      ],
+      "resources": [
+        { "label": "FinCEN — BSA / AML", "url": "https://www.fincen.gov" },
+        { "label": "OFAC — sanctions lists", "url": "https://ofac.treasury.gov" },
+        { "label": "Luthor — regulatory agencies guide (finance)", "url": "https://www.luthor.ai/resources/regulatory-agencies" }
+      ]
+    }
+  ],
+  "agencyGroups": [
+    {
+      "id": "regulators",
+      "title": "Federal regulators",
+      "description": "Congressional mandates — rulemaking, examination, enforcement.",
+      "agencies": [
+        {
+          "id": "sec",
+          "name": "Securities and Exchange Commission (SEC)",
+          "role": "Primary U.S. securities regulator",
+          "scope": "Exchanges, broker-dealers, RIAs, mutual funds, disclosure, anti-fraud",
+          "forbesRelevance": "EDGAR filings, insider trading, 13F, IPO/S-1 for public Forbes companies",
+          "url": "https://www.sec.gov"
+        },
+        {
+          "id": "finra",
+          "name": "Financial Industry Regulatory Authority (FINRA)",
+          "role": "Self-regulatory organization (SRO) — broker-dealers",
+          "scope": "Registration, exams, supervision, arbitration, BrokerCheck",
+          "forbesRelevance": "Any bot executing through a U.S. brokerage is governed by FINRA member rules",
+          "url": "https://www.finra.org"
+        },
+        {
+          "id": "cftc",
+          "name": "Commodity Futures Trading Commission (CFTC)",
+          "role": "Derivatives regulator",
+          "scope": "Futures, options on futures, swaps; works alongside SEC",
+          "forbesRelevance": "Commodity-linked ETFs, futures strategies on indices tied to Forbes sectors",
+          "url": "https://www.cftc.gov"
+        },
+        {
+          "id": "fed",
+          "name": "Federal Reserve System",
+          "role": "Monetary policy & bank holding company supervision",
+          "scope": "Interest rates, bank holding companies, financial stability",
+          "forbesRelevance": "Macro signals affecting all public Forbes holdings; bank-sector listers",
+          "url": "https://www.federalreserve.gov"
+        },
+        {
+          "id": "cfpb",
+          "name": "Consumer Financial Protection Bureau (CFPB)",
+          "role": "Consumer finance protection",
+          "scope": "Lending, disclosures, UDAAP",
+          "forbesRelevance": "Fintech bots offering credit or payment products",
+          "url": "https://www.consumerfinance.gov"
+        },
+        {
+          "id": "fincen",
+          "name": "Financial Crimes Enforcement Network (FinCEN)",
+          "role": "AML / BSA enforcement (Treasury)",
+          "scope": "Money laundering, SARs, CTRs, beneficial ownership",
+          "forbesRelevance": "Bots moving client funds; RIAs now under AML rules",
+          "url": "https://www.fincen.gov"
+        },
+        {
+          "id": "fsoc",
+          "name": "Financial Stability Oversight Council (FSOC)",
+          "role": "Systemic risk identification",
+          "scope": "Cross-agency coordination, SIFI designation",
+          "forbesRelevance": "Systemic events affecting mega-cap Forbes holdings",
+          "url": "https://home.treasury.gov/policy-issues/financial-markets-financial-institutions-and-fiscal-service/fsoc"
+        }
+      ]
+    },
+    {
+      "id": "sros",
+      "title": "Self-regulating organizations & exchanges",
+      "description": "Industry bodies authorized by Congress or operating registered markets.",
+      "agencies": [
+        {
+          "id": "nasaa",
+          "name": "North American Securities Administrators Association (NASAA)",
+          "role": "State securities regulators coordination",
+          "scope": "State-level registration, enforcement, investor protection",
+          "forbesRelevance": "State RIA registration; blue-sky laws for offerings",
+          "url": "https://www.nasaa.org"
+        },
+        {
+          "id": "nyse",
+          "name": "New York Stock Exchange (NYSE) / ICE",
+          "role": "Registered national securities exchange",
+          "scope": "Listing standards, market operations, circuit breakers",
+          "forbesRelevance": "Many Forbes companies listed on NYSE (WMT, JPM, etc.)",
+          "url": "https://www.nyse.com"
+        },
+        {
+          "id": "nfa",
+          "name": "National Futures Association (NFA)",
+          "role": "SRO for derivatives industry",
+          "scope": "Futures/FX registration, CFTC rule enforcement",
+          "forbesRelevance": "Futures bots and commodity strategies",
+          "url": "https://www.nfa.futures.org"
+        }
+      ]
+    },
+    {
+      "id": "advocates",
+      "title": "Investor protection & industry advocates",
+      "description": "Liquidation, advocacy, and international coordination.",
+      "agencies": [
+        {
+          "id": "sipc",
+          "name": "Securities Investor Protection Corporation (SIPC)",
+          "role": "Broker-dealer liquidation insurance",
+          "scope": "Customer asset recovery when BD fails (not market loss)",
+          "forbesRelevance": "Verify brokerage is SIPC member before bot deployment",
+          "url": "https://www.sipc.org"
+        },
+        {
+          "id": "sifma",
+          "name": "Securities Industry and Financial Markets Association (SIFMA)",
+          "role": "Industry advocacy",
+          "scope": "Policy voice for broker-dealers, banks, asset managers",
+          "forbesRelevance": "Industry best-practice guidance",
+          "url": "https://www.sifma.org"
+        },
+        {
+          "id": "iosco",
+          "name": "International Organization of Securities Commissions (IOSCO)",
+          "role": "Global securities standards",
+          "scope": "Cross-border regulation harmonization",
+          "forbesRelevance": "Forbes listers with ADRs or global operations",
+          "url": "https://www.iosco.org"
+        }
+      ]
+    },
+    {
+      "id": "academic",
+      "title": "Academic & research resources",
+      "description": "Universities and clearinghouses for case law and governance research.",
+      "agencies": [
+        {
+          "id": "uci-securities",
+          "name": "UCI Law — Securities Law & Regulation guide",
+          "role": "Research guide",
+          "scope": "Agencies, laws, practice tools, filings search",
+          "forbesRelevance": "Comprehensive agency map with primary sources",
+          "url": "https://libguides.law.uci.edu/securities/agencies"
+        },
+        {
+          "id": "stanford-securities",
+          "name": "Stanford Securities Class Action Clearinghouse",
+          "role": "Litigation database",
+          "scope": "Federal securities fraud class actions",
+          "forbesRelevance": "Check litigation history for Forbes tickers you trade",
+          "url": "https://securities.stanford.edu"
+        },
+        {
+          "id": "harvard-srp",
+          "name": "Harvard Shareholder Rights Project",
+          "role": "Corporate governance research",
+          "scope": "Institutional investor governance efforts",
+          "forbesRelevance": "Proxy fights and governance at large-cap Forbes firms",
+          "url": "https://corpgov.law.harvard.edu/shareholder-rights-project"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    { "exam": "SIE", "name": "Securities Industry Essentials", "requiredFor": "Prerequisite for most FINRA series exams", "url": "https://www.finra.org/registration-exams-ce/qualification-exams/securities-industry-essentials-exam-sie" },
+    { "exam": "Series 7", "name": "General Securities Representative", "requiredFor": "Broker-dealer registered reps — trade most securities", "url": "https://www.finra.org/registration-exams-ce/qualification-exams/series7" },
+    { "exam": "Series 63", "name": "Uniform Securities Agent State Law", "requiredFor": "State registration (with Series 7 or 6)", "url": "https://www.finra.org/registration-exams-ce/qualification-exams/series63" },
+    { "exam": "Series 65", "name": "Uniform Investment Adviser Law", "requiredFor": "RIA investment adviser reps (no broker-dealer)", "url": "https://www.nasaa.org/exams/exam-faqs/" },
+    { "exam": "Series 66", "name": "Uniform Combined State Law", "requiredFor": "Combined 63+65 for IA reps at dually registered firms", "url": "https://www.finra.org/registration-exams-ce/qualification-exams/series66" }
+  ],
+  "forbesRules": [
+    {
+      "id": "form-4",
+      "title": "Form 4 — insider transactions",
+      "agency": "SEC",
+      "trigger": "Officer, director, or 10%+ owner buys/sells company stock",
+      "filing": "Within 2 business days via EDGAR",
+      "botImpact": "Do not trade on non-public insider knowledge; monitor public Form 4s as signals only",
+      "url": "https://www.sec.gov/files/form4.pdf"
+    },
+    {
+      "id": "form-13f",
+      "title": "Form 13F — institutional holdings",
+      "agency": "SEC",
+      "trigger": "Investment manager with >$100M in qualifying assets",
+      "filing": "Quarterly — 45 days after quarter end",
+      "botImpact": "Track which institutions hold Forbes tickers; your bot may need 13F if AUM threshold met",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-investment-management-frequently-asked-questions/form-13f-frequently-asked-questions"
+    },
+    {
+      "id": "schedule-13d-g",
+      "title": "Schedule 13D / 13G — 5%+ ownership",
+      "agency": "SEC",
+      "trigger": "Beneficial ownership crosses 5% of any class of equity",
+      "filing": "13D within 10 days (activist); 13G for passive/QIU",
+      "botImpact": "Aggregated bot + personal holdings may trigger if controlling stake",
+      "url": "https://www.sec.gov/files/schedule13d.pdf"
+    },
+    {
+      "id": "rule-10b5",
+      "title": "Rule 10b-5 — anti-fraud / insider trading",
+      "agency": "SEC",
+      "trigger": "Trading on material non-public information (MNPI)",
+      "filing": "N/A — prohibition",
+      "botImpact": "Bot data feeds must be public-only; no MNPI in signal pipeline",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/trading-securities-material-nonpublic-information"
+    },
+    {
+      "id": "finra-3110",
+      "title": "FINRA Rule 3110 — supervision",
+      "agency": "FINRA",
+      "trigger": "Broker-dealer member firm deploying algo strategies",
+      "filing": "Written supervisory procedures (WSPs)",
+      "botImpact": "BD must supervise algo; retail API users inherit BD compliance",
+      "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/3110"
+    },
+    {
+      "id": "rule-17a4",
+      "title": "SEC Rule 17a-4 — record retention",
+      "agency": "SEC",
+      "trigger": "Broker-dealers and certain advisers",
+      "filing": "3-6 year retention in non-rewriteable format",
+      "botImpact": "Keep immutable bot logs, order history, config versions",
+      "url": "https://www.sec.gov/rules-regulations/staff-guidance/division-trading-markets-frequently-asked-questions/recordkeeping-requirements"
+    },
+    {
+      "id": "pdt",
+      "title": "Pattern Day Trader rule",
+      "agency": "FINRA",
+      "trigger": "4+ day trades in 5 business days in margin account under $25K",
+      "filing": "N/A — account restriction",
+      "botImpact": "High-frequency retail bots may trigger PDT freeze",
+      "url": "https://www.finra.org/investors/investing/investment-products/stocks/day-trading"
+    },
+    {
+      "id": "form-adv",
+      "title": "Form ADV — investment adviser registration",
+      "agency": "SEC / state",
+      "trigger": "Providing investment advice for compensation",
+      "filing": "Initial + annual amendment",
+      "botImpact": "Bot giving signals to paying subscribers may require RIA registration",
+      "url": "https://www.sec.gov/investment-adviser-registration"
+    }
+  ],
+  "botChecklist": [
+    { "id": "paper", "label": "Paper-trade ≥ 30 days with logged results", "category": "testing" },
+    { "id": "kill", "label": "Kill switch & max-loss circuit breaker implemented", "category": "risk" },
+    { "id": "logs", "label": "Immutable audit log (orders, signals, config hash)", "category": "recordkeeping" },
+    { "id": "public-data", "label": "Data pipeline uses only public sources (no MNPI)", "category": "compliance" },
+    { "id": "brokercheck", "label": "Broker verified via FINRA BrokerCheck + SIPC member", "category": "counterparty" },
+    { "id": "pdt", "label": "PDT / margin requirements understood for strategy frequency", "category": "account" },
+    { "id": "tax", "label": "Tax reporting workflow (1099-B, wash sales) configured", "category": "tax" },
+    { "id": "ofac", "label": "OFAC / sanctions screening if international counterparties", "category": "aml" },
+    { "id": "13f", "label": "13F obligation assessed if AUM > $100M", "category": "filings" },
+    { "id": "adv", "label": "RIA registration assessed if advising others for fee", "category": "registration" },
+    { "id": "marketing", "label": "No guaranteed-return claims; performance disclaimers ready", "category": "marketing" },
+    { "id": "forbes-map", "label": "Forbes ticker crosswalk completed for each held symbol", "category": "forbes" }
+  ]
+}

@@ -5,9 +5,18 @@
 (function (global) {
   'use strict';
 
+  function colorRoot() {
+    if (typeof document === 'undefined') return null;
+    if (document.body?.classList.contains('stream-embedded')) {
+      return document.querySelector('.industry-stream-section') || document.documentElement;
+    }
+    return document.documentElement;
+  }
+
   function token(name, fallback) {
     if (typeof document === 'undefined') return fallback;
-    const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    const root = colorRoot();
+    const value = getComputedStyle(root).getPropertyValue(name).trim();
     return value || fallback;
   }
 
@@ -67,6 +76,7 @@
   ];
 
   global.FWJColor = {
+    colorRoot,
     token,
     timeframe(id) {
       return token(TIMEFRAME_KEYS[id] || '--fwj-accent', '#78a9ff');

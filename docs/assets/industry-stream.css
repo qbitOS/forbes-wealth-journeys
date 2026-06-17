@@ -1,8 +1,8 @@
-/* Industry stream page — crossover dark theme (scoped to avoid bleeding into Forbes sections) */
+/* Industry stream — dark theme on standalone page only; embedded index uses site light theme */
 @import url("fwj-tokens.css");
 
 body.unified-page,
-.industry-stream-section {
+body.industry-stream-page {
   /* Legacy aliases → --fwj-* tokens (see docs/color-system.md) */
   --bg: var(--fwj-bg);
   --panel: var(--fwj-surface);
@@ -22,9 +22,10 @@ body.unified-page,
   --unified-header-h: 3.25rem;
 }
 
-.industry-stream-section {
-  background: var(--fwj-bg);
-  color: var(--fwj-text);
+body.unified-page,
+body.industry-stream-page {
+  --drawer-width: 340px;
+  --unified-header-h: 3.25rem;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -2351,6 +2352,10 @@ body.unified-page {
   min-height: calc(100vh - var(--unified-header-h));
 }
 
+body.site-panels-layout .unified-shell {
+  min-height: 0;
+}
+
 .unified-content {
   flex: 1;
   min-width: 0;
@@ -2490,17 +2495,93 @@ body.stream-drawer-open .stream-drawer-header-toggle {
   position: fixed;
   inset: 0;
   top: var(--unified-header-h);
-  z-index: 44;
+  z-index: 120;
   background: var(--fwj-overlay);
-  backdrop-filter: blur(2px);
   opacity: 0;
   pointer-events: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: opacity 0.22s ease;
 }
 
+body > .stream-drawer-backdrop {
+  z-index: 120;
+}
+
+.stream-drawer-backdrop.is-active,
 body.stream-drawer-open .stream-drawer-backdrop:not([hidden]) {
   opacity: 1;
   pointer-events: auto;
+}
+
+.stream-drawer-backdrop-close {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top, 0.75rem));
+  right: max(0.75rem, env(safe-area-inset-right, 0.75rem));
+  z-index: 200;
+  padding: 0.55rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background: rgba(12, 14, 18, 0.92);
+  color: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  touch-action: manipulation;
+  pointer-events: auto;
+}
+
+body > .stream-drawer-backdrop-close {
+  z-index: 200;
+}
+
+.stream-drawer-backdrop-close[hidden] {
+  display: none !important;
+}
+
+.stream-drawer-backdrop-close:hover,
+.stream-drawer-backdrop-close:focus-visible {
+  background: rgba(24, 28, 34, 0.98);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.stream-drawer-close-btn {
+  gap: 0.35rem;
+}
+
+.stream-drawer-close-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+body.stream-drawer-open .industry-stream-subnav {
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  isolation: isolate;
+  background: var(--bg, #fff);
+  padding: 0.35rem 0;
+}
+
+body.stream-drawer-mobile .stream-drawer-header-toggle,
+body.stream-drawer-mobile .stream-drawer-toggle {
+  position: relative;
+  z-index: 151;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.stream-drawer-scroll-lock {
+  overflow: hidden;
+}
+
+html.stream-drawer-scroll-lock body {
+  overflow: hidden;
 }
 
 .unified-fold {
@@ -2558,10 +2639,38 @@ body.stream-drawer-open .stream-drawer-backdrop:not([hidden]) {
 
   .stream-drawer-backdrop {
     top: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(0, 0, 0, 0.42);
   }
 
-  body.stream-drawer-open .stream-drawer-backdrop:not([hidden]) {
+  body.stream-drawer-mobile .industry-stream-section .stream-drawer {
+    z-index: 130;
+  }
+
+  body.stream-embedded.stream-drawer-mobile .stream-drawer-backdrop {
+    top: var(--unified-header-h);
+  }
+
+  body.stream-embedded.stream-drawer-mobile .stream-drawer-backdrop-close {
+    top: max(calc(var(--unified-header-h) + 0.5rem), calc(env(safe-area-inset-top, 0.75rem) + 3.5rem));
+  }
+
+  body.stream-drawer-open .stream-drawer-backdrop:not([hidden]),
+  body.stream-drawer-open .stream-drawer-backdrop.is-active {
     display: block;
+  }
+
+  .stream-drawer-close-btn {
+    width: auto;
+    min-width: 2rem;
+    height: auto;
+    min-height: 2rem;
+    padding: 0.4rem 0.65rem;
+  }
+
+  .stream-drawer-toggle-icon {
+    display: none;
   }
 }
 
@@ -3582,11 +3691,104 @@ body.stream-embedded .industry-stream-section {
 }
 
 body.stream-embedded .industry-stream-section .unified-shell {
-  min-height: auto;
+  min-height: 0;
 }
 
 body.stream-embedded .industry-stream-section .unified-main {
   max-width: var(--max-width);
+}
+
+/* Embedded in index.html — match site light theme (pages.css) */
+body.stream-embedded .industry-stream-section {
+  --bg: #ffffff;
+  --panel: var(--surface, #f8f9fa);
+  --panel2: var(--surface-raised, #f1f3f5);
+  --border: var(--border, rgba(0, 0, 0, 0.08));
+  --text: var(--text, #1a1a1a);
+  --muted: var(--text-muted, #737373);
+  --bull: #16a34a;
+  --bear: #dc2626;
+  --neutral: #737373;
+  --accent: var(--accent, #16a34a);
+  --gold: #b45309;
+  --fwj-bg: #ffffff;
+  --fwj-bg-elevated: #f8f9fa;
+  --fwj-surface: #f8f9fa;
+  --fwj-surface-raised: #f1f3f5;
+  --fwj-border: rgba(0, 0, 0, 0.08);
+  --fwj-border-strong: rgba(0, 0, 0, 0.14);
+  --fwj-text: #1a1a1a;
+  --fwj-text-secondary: #525252;
+  --fwj-text-muted: #737373;
+  --fwj-accent: #16a34a;
+  --fwj-accent-subtle: rgba(22, 163, 74, 0.08);
+  --fwj-accent-dim: rgba(22, 163, 74, 0.12);
+  --fwj-bull: #16a34a;
+  --fwj-bull-dim: rgba(22, 163, 74, 0.1);
+  --fwj-bear: #dc2626;
+  --fwj-bear-dim: rgba(220, 38, 38, 0.1);
+  --fwj-gold: #b45309;
+  --fwj-gold-dim: rgba(180, 83, 9, 0.1);
+  --fwj-header: rgba(255, 255, 255, 0.94);
+  --fwj-overlay: rgba(0, 0, 0, 0.32);
+  --fwj-heatmap-empty: #f1f3f5;
+  --fwj-heatmap-track: #f8f9fa;
+  --fwj-heatmap-grid: rgba(0, 0, 0, 0.06);
+  --fwj-heatmap-axis: #737373;
+  background: transparent;
+  color: inherit;
+}
+
+body.stream-embedded .industry-stream-section .unified-shell,
+body.stream-embedded .industry-stream-section .unified-content,
+body.stream-embedded .industry-stream-section .unified-main {
+  background: transparent;
+}
+
+body.stream-embedded .industry-stream-section .stream-drawer {
+  background: var(--surface, #f8f9fa);
+  border-right-color: var(--border);
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.06);
+}
+
+body.stream-embedded .industry-stream-section .stream-drawer-head {
+  background: var(--surface-raised, #f1f3f5);
+}
+
+body.stream-embedded .industry-stream-section .stream-feed,
+body.stream-embedded .industry-stream-section .stream-item,
+body.stream-embedded .industry-stream-section .unified-fold,
+body.stream-embedded .industry-stream-section .tl-through-line,
+body.stream-embedded .industry-stream-section .tl-compression,
+body.stream-embedded .industry-stream-section .tl-interplay,
+body.stream-embedded .industry-stream-section .flip-overlay-scrub,
+body.stream-embedded .industry-stream-section .through-line-forbes-users {
+  background: var(--surface, #f8f9fa);
+}
+
+body.stream-embedded .industry-stream-section .stream-drawer-toggle,
+body.stream-embedded .industry-stream-section .stream-drawer-header-toggle {
+  background: var(--bg, #fff);
+  color: var(--text-secondary, #525252);
+}
+
+body.stream-embedded .industry-stream-section .unified-section h2,
+body.stream-embedded .industry-stream-section .unified-section h3 {
+  color: var(--text, #1a1a1a);
+}
+
+body.stream-embedded .industry-stream-section a {
+  color: var(--text-secondary, #525252);
+}
+
+body.stream-embedded .industry-stream-section a:hover {
+  color: var(--accent, #16a34a);
+}
+
+@media (max-width: 767px) {
+  body.stream-embedded .industry-stream-section .stream-drawer {
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .industry-stream-subnav {

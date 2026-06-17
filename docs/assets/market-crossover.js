@@ -14,7 +14,7 @@
 
   const state = {
     rankMin: 1,
-    rankMax: 100,
+    rankMax: 110,
     crossoverOnly: false,
     publicOnly: false,
   };
@@ -306,7 +306,7 @@
 
     const refresh = () => {
       state.rankMin = Math.max(1, Number(rankMin?.value) || 1);
-      state.rankMax = Math.min(100, Number(rankMax?.value) || 100);
+      state.rankMax = Math.min(110, Number(rankMax?.value) || 110);
       state.crossoverOnly = Boolean(crossoverOnly?.checked);
       state.publicOnly = Boolean(publicOnly?.checked);
       updateCount();

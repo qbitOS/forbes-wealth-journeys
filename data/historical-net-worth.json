@@ -3218,5 +3218,26 @@
       "year": 2026,
       "netWorthB": 0.95
     }
+  ],
+  "101": [
+    { "year": 1995, "netWorthB": 0.00005 },
+    { "year": 2000, "netWorthB": 0.0005 },
+    { "year": 2005, "netWorthB": 0.005 },
+    { "year": 2009, "netWorthB": 0.015 },
+    { "year": 2015, "netWorthB": 0.025 },
+    { "year": 2020, "netWorthB": 0.04 },
+    { "year": 2023, "netWorthB": 0.06 },
+    { "year": 2026, "netWorthB": 0.075 }
+  ],
+  "102": [
+    { "year": 2000, "netWorthB": 0.000001 },
+    { "year": 2004, "netWorthB": 0.00001 },
+    { "year": 2008, "netWorthB": 0.00002 },
+    { "year": 2009, "netWorthB": 0.00003 },
+    { "year": 2015, "netWorthB": 0.001 },
+    { "year": 2017, "netWorthB": 0.002 },
+    { "year": 2020, "netWorthB": 0.01 },
+    { "year": 2023, "netWorthB": 0.03 },
+    { "year": 2026, "netWorthB": 0.056 }
   ]
 }

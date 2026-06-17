@@ -6,10 +6,10 @@
   <title>Forbes Wealth Journeys · Billionaire Timelines</title>
   <meta name="description" content="Forbes billionaire wealth journeys mapped to venture milestones — interactive timelines, drill-downs, and source-linked events." />
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <link rel="stylesheet" href="docs/assets/pages.css?v=20260613a" />
-  <link rel="stylesheet" href="docs/assets/industry-stream.css?v=20260613zc" />
+  <link rel="stylesheet" href="docs/assets/pages.css?v=20260616p" />
+  <link rel="stylesheet" href="docs/assets/industry-stream.css?v=20260615g" />
 </head>
-<body>
+<body class="site-panels-layout">
   <header class="site-header" id="site-header">
     <div class="site-header-inner">
       <div class="site-brand">
@@ -25,14 +25,16 @@
         <a href="#timeline-portfolio-neuralink" data-section="timeline">Portfolio</a>
         <a href="#activity" data-section="activity">Activity</a>
         <a href="#configurator" data-section="configurator">Markets</a>
+        <a href="#compliance-trading" data-section="compliance-trading">Compliance</a>
         <a href="#industry-stream" data-section="industry-stream">Industry Stream</a>
         <a href="https://github.com/qbitOS/forbes-wealth-journeys" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section id="forbes" class="section forbes-section">
+  <main id="site-panels" class="site-panels" tabindex="-1">
+    <div id="site-panels-track" class="site-panels-track">
+    <section id="forbes" class="site-panel section forbes-section">
       <span class="section-label">Forbes 500</span>
       <h2>Wealth journeys</h2>
       <p class="section-lead">
@@ -62,12 +64,18 @@
           <div class="forbes-list-drawer-panel" role="region" aria-label="Forbes billionaire rankings">
             <header class="forbes-list-drawer-head">
               <h3 class="forbes-list-drawer-title">Rankings</h3>
-              <button type="button" id="forbes-drawer-close" class="forbes-drawer-close" aria-label="Close rankings">×</button>
+              <button type="button" id="forbes-drawer-close" class="forbes-drawer-close" aria-label="Close rankings">
+                <span aria-hidden="true">×</span>
+                <span class="forbes-drawer-close-label">Close</span>
+              </button>
             </header>
             <label class="forbes-search-label" for="forbes-search">Search by name, country, or sector</label>
             <input id="forbes-search" class="forbes-search" type="search" placeholder="e.g. Musk, France, Technology…" autocomplete="off" spellcheck="false" />
             <aside id="forbes-list" class="forbes-list" aria-label="Forbes billionaire rankings"></aside>
           </div>
+        </div>
+        <div id="forbes-drawer-backdrop" class="forbes-drawer-backdrop" hidden aria-hidden="true">
+          <button type="button" id="forbes-drawer-backdrop-close" class="forbes-drawer-backdrop-close">Close rankings</button>
         </div>
         <article id="forbes-detail" class="forbes-detail" aria-label="Selected billionaire profile">
           <p id="forbes-detail-empty" class="forbes-empty">Select a person from the rankings.</p>
@@ -94,6 +102,7 @@
             <div class="forbes-worth-row">
               <div class="forbes-worth-primary">
                 <p id="forbes-detail-worth" class="forbes-detail-worth"></p>
+                <div id="forbes-detail-worth-clarifier" class="forbes-detail-worth-clarifier" hidden></div>
                 <p id="forbes-detail-summary" class="forbes-detail-summary"></p>
                 <section class="forbes-worth-map-panel" aria-label="Global venture footprint and RISK targets">
                   <h4 class="forbes-worth-map-title">Global footprint · RISK map</h4>
@@ -180,7 +189,7 @@
       </p>
     </section>
 
-    <section id="quick-start" class="section wealth-tools-section member-details-section">
+    <section id="quick-start" class="site-panel section wealth-tools-section member-details-section">
       <span class="section-label">Member details</span>
       <header class="member-details-header">
         <div class="member-details-title-wrap">
@@ -200,7 +209,7 @@
       <button id="copy-quick-cmd" type="button">Copy</button>
     </section>
 
-    <section id="timeline" class="section timeline-section">
+    <section id="timeline" class="site-panel section timeline-section">
       <span class="section-label">Public timeline</span>
       <h2 id="timeline-heading">Venture timeline</h2>
       <p class="section-lead" id="timeline-lead">
@@ -266,7 +275,7 @@
       </p>
     </section>
 
-    <section id="activity" class="section activity-section">
+    <section id="activity" class="site-panel section activity-section">
       <span class="section-label">Activity</span>
       <h2>Milestone activity</h2>
       <p class="section-lead">Wealth-journey event density aligned to venture timeline branches (Colossus, Tesla, SpaceX, etc.).</p>
@@ -309,7 +318,7 @@
       <div id="activity-branches" class="activity-branches" aria-label="Per-company activity by timeline branch"></div>
     </section>
 
-    <section id="configurator" class="section market-crossover-section" data-mode="market">
+    <section id="configurator" class="site-panel section market-crossover-section" data-mode="market">
       <span class="section-label">Market crossover</span>
       <h2>Ranked holdings · crossover signals</h2>
       <p class="section-lead">
@@ -330,11 +339,11 @@
         <div class="filter-grid market-filter-grid">
           <label class="filter-field">
             <span>Rank min</span>
-            <input id="market-rank-min" type="number" min="1" max="100" value="1" />
+            <input id="market-rank-min" type="number" min="1" max="110" value="1" />
           </label>
           <label class="filter-field">
             <span>Rank max</span>
-            <input id="market-rank-max" type="number" min="1" max="100" value="100" />
+            <input id="market-rank-max" type="number" min="1" max="110" value="110" />
           </label>
           <label class="filter-field filter-check">
             <input id="market-crossover-only" type="checkbox" />
@@ -368,7 +377,24 @@
       </div>
     </section>
 
-    <section id="industry-stream" class="section industry-stream-section">
+    <section id="compliance-trading" class="site-panel section compliance-trading-section">
+      <span class="section-label">Compliance</span>
+      <h2>Trading paths · regulatory overview</h2>
+      <p class="section-lead">
+        Zero knowledge → compliant trading bot — regulatory agencies, exams, filings, and a Forbes-lister ticker crosswalk
+        so every public stake maps to SEC, FINRA, and EDGAR obligations. Sources:
+        <a href="https://www.sec.gov" target="_blank" rel="noopener">SEC</a>,
+        <a href="https://www.investor.gov" target="_blank" rel="noopener">Investor.gov</a>,
+        <a href="https://www.finra.org" target="_blank" rel="noopener">FINRA</a>,
+        <a href="https://libguides.law.uci.edu/securities/agencies" target="_blank" rel="noopener">UCI Law guide</a>.
+        Not legal advice.
+      </p>
+      <div id="compliance-trading-root" class="compliance-trading-root" aria-live="polite">
+        <p class="compliance-loading">Loading compliance paths…</p>
+      </div>
+    </section>
+
+    <section id="industry-stream" class="site-panel section industry-stream-section">
       <span class="section-label">Industry stream</span>
       <h2>Flip overlay · through-line · crossover</h2>
       <p class="section-lead">
@@ -377,7 +403,7 @@
         <a href="industry-stream.html">Open standalone view →</a>
       </p>
       <nav class="industry-stream-subnav" aria-label="Industry stream sections">
-        <button type="button" id="stream-drawer-header-toggle" class="stream-drawer-header-toggle" aria-expanded="true" aria-controls="stream-drawer-panel" title="Toggle activity feed">
+        <button type="button" id="stream-drawer-header-toggle" class="stream-drawer-header-toggle" aria-expanded="false" aria-controls="stream-drawer-panel" title="Toggle activity feed">
           <span class="stream-drawer-header-icon" aria-hidden="true"></span>
           <span>Feed</span>
         </button>
@@ -394,9 +420,9 @@
                 <span class="unified-section-label">Industry stream</span>
                 <h3>Unified activity feed</h3>
               </div>
-              <button type="button" id="stream-drawer-toggle" class="stream-drawer-toggle" aria-expanded="true" aria-controls="stream-feed" title="Hide activity feed">
+              <button type="button" id="stream-drawer-toggle" class="stream-drawer-toggle stream-drawer-close-btn" aria-expanded="false" aria-controls="stream-feed" title="Open activity feed">
                 <span class="stream-drawer-toggle-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Hide feed</span>
+                <span class="stream-drawer-close-label">Close</span>
               </button>
             </div>
             <p class="stream-drawer-lead">
@@ -411,7 +437,9 @@
           <div id="stream-feed" class="stream-feed stream-drawer-feed" aria-label="Unified industry stream"></div>
         </aside>
 
-        <div id="stream-drawer-backdrop" class="stream-drawer-backdrop" hidden aria-hidden="true"></div>
+        <div id="stream-drawer-backdrop" class="stream-drawer-backdrop" hidden aria-hidden="true">
+          <button type="button" id="stream-drawer-backdrop-close" class="stream-drawer-backdrop-close" aria-label="Close activity feed">Close feed</button>
+        </div>
 
         <div class="unified-content">
           <div class="unified-main">
@@ -588,6 +616,7 @@
         </div>
       </div>
     </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -595,14 +624,16 @@
     · forked from <a href="https://github.com/fornevercollective/grok-repo-template" target="_blank" rel="noopener">grok-repo-template</a>
   </footer>
 
-  <script src="docs/assets/forbes-wealth.js?v=20260613a"></script>
+  <script src="docs/assets/site-panels.js?v=20260616m"></script>
+  <script src="docs/assets/forbes-wealth.js?v=20260616p"></script>
   <script src="docs/assets/crossover-mini-chart.js?v=20260611g"></script>
-  <script src="docs/assets/wealth-data-tools.js?v=20260611g"></script>
+  <script src="docs/assets/wealth-data-tools.js?v=20260615f"></script>
   <script src="docs/assets/market-crossover.js?v=20260611g"></script>
-  <script src="docs/assets/pages-configurator.js?v=20260613a"></script>
-  <script src="docs/assets/fwj-color.js?v=20260613a"></script>
+  <script src="docs/assets/pages-configurator.js?v=20260615f"></script>
+  <script src="docs/assets/fwj-color.js?v=20260615d"></script>
   <script src="docs/assets/timeline-cluster.js?v=20260613b"></script>
   <script src="docs/assets/flip-overlay-chart.js?v=20260613z"></script>
-  <script src="docs/assets/industry-stream.js?v=20260613s"></script>
+  <script src="docs/assets/compliance-trading.js?v=20260615b"></script>
+  <script src="docs/assets/industry-stream.js?v=20260615e"></script>
 </body>
 </html>

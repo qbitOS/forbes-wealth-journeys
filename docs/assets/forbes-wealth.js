@@ -70,6 +70,46 @@
   let detailTab = 'story';
   let lastRenderedKey = '';
   let listDrawerOpen = false;
+  let lazyMountObserver = null;
+  const lazyMountCallbacks = new WeakMap();
+
+  function ensureLazyMountObserver() {
+    if (lazyMountObserver) return lazyMountObserver;
+    lazyMountObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const cb = lazyMountCallbacks.get(el);
+          if (!cb || el.dataset.lazyMounted === '1') return;
+          el.dataset.lazyMounted = '1';
+          cb();
+          lazyMountObserver.unobserve(el);
+          lazyMountCallbacks.delete(el);
+        });
+      },
+      { root: null, rootMargin: '320px 0px', threshold: 0.01 },
+    );
+    return lazyMountObserver;
+  }
+
+  function observeLazyMount(el, callback) {
+    if (!el) return;
+    if (el.dataset.lazyMounted === '1') {
+      callback();
+      return;
+    }
+    lazyMountCallbacks.set(el, callback);
+    ensureLazyMountObserver().observe(el);
+  }
+
+  function resetLazyMounts(root = document) {
+    root.querySelectorAll('[data-lazy-mounted="1"]').forEach((el) => {
+      delete el.dataset.lazyMounted;
+      delete el.dataset.lazyLoaded;
+      el.classList.remove('is-loaded');
+    });
+  }
 
   function $(sel, root = document) {
     return root.querySelector(sel);
@@ -77,6 +117,15 @@
 
   function personKey(b) {
     return `${b.rank}::${b.name}`;
+  }
+
+  function forbesProfileHash(rank, name) {
+    return `#forbes?rank=${rank}&name=${encodeURIComponent(name)}`;
+  }
+
+  function renderProfileRankLink(rank, name, label) {
+    if (!rank || !name) return '';
+    return `<a class="forbes-profile-link" href="${forbesProfileHash(rank, name)}">${escapeHtml(label || name)}</a>`;
   }
 
   function escapeHtml(str) {
@@ -98,6 +147,75 @@
     return s.endsWith('B') || s.endsWith('M') ? `$${s}` : `$${s}B`;
   }
 
+  function formatUsdCompact(valueUsdM) {
+    if (valueUsdM == null || Number.isNaN(Number(valueUsdM))) return '—';
+    const n = Number(valueUsdM);
+    if (n >= 1000) return `$${(n / 1000).toFixed(1)}B`;
+    if (n >= 1) return `$${n.toFixed(1)}M`;
+    return `$${(n * 1000).toFixed(0)}K`;
+  }
+
+  function renderWorthClarifier(person) {
+    const el = $('#forbes-detail-worth-clarifier');
+    if (!el) return;
+
+    const attr = person?.worthAttribution;
+    if (!attr) {
+      el.hidden = true;
+      el.innerHTML = '';
+      return;
+    }
+
+    const contractor = Number(attr.contractorEarningsUsdM);
+    const initial = Number(attr.initialPrimarySalesUsdM);
+    const current = Number(attr.currentMarketUsdM);
+    const stake = Number(attr.attributedStakePct);
+    const contractorPct =
+      attr.contractorToInitialSalePct != null
+        ? Number(attr.contractorToInitialSalePct)
+        : initial > 0
+          ? (contractor / initial) * 100
+          : null;
+    const growthPct =
+      attr.initialToCurrentGrowthPct != null
+        ? Number(attr.initialToCurrentGrowthPct)
+        : initial > 0
+          ? ((current - initial) / initial) * 100
+          : null;
+    const wageMultiple =
+      attr.contractorToAttributedMultiple != null
+        ? Number(attr.contractorToAttributedMultiple)
+        : contractor > 0 && person?.netWorth?.value != null
+          ? Number(person.netWorth.value) / contractor
+          : null;
+
+    const period = attr.period ? escapeHtml(attr.period) : '';
+    const method = attr.methodology ? escapeHtml(attr.methodology) : 'Attributed wealth model';
+    const summaryLabel = escapeHtml(
+      attr.summaryLabel ||
+        (attr.methodology ? String(attr.methodology).replace(/\s+of\s+.+$/i, '').trim() : 'Attribution model'),
+    );
+
+    el.hidden = false;
+    el.innerHTML = `
+      <details class="forbes-worth-clarifier">
+        <summary class="forbes-worth-clarifier-summary">
+          <span class="forbes-worth-clarifier-title">${summaryLabel}</span>
+          ${period ? `<span class="forbes-worth-clarifier-period">${period}</span>` : ''}
+        </summary>
+        <div class="forbes-worth-clarifier-body">
+          ${method}: <strong>${formatUsdCompact(contractor)}</strong> freelance contractor wages captured
+          <strong>${contractorPct != null ? `${contractorPct.toFixed(1)}%` : '—'}</strong> of
+          <strong>${formatUsdCompact(initial)}</strong> initial primary-sale / commission value on finished works.
+          Attributed <strong>${stake}%</strong> finish stake on
+          <strong>${formatUsdCompact(current)}</strong> current market baseline →
+          <strong>${formatUsdCompact(Number(person.netWorth?.value))}${person.netWorth?.unit === 'M' ? 'M' : person.netWorth?.unit === 'B' ? 'B' : ''}</strong> attributed net worth —
+          <strong>${growthPct != null ? `${Math.round(growthPct)}%` : '—'}</strong> appreciation from initial-sale era to current auction & institutional comps
+          ${wageMultiple != null ? `(<strong>${wageMultiple.toFixed(0)}×</strong> contractor wages).` : '.'}
+        </div>
+      </details>`;
+  }
+
   function formatUsdB(val) {
     if (val == null || val === '') return '—';
     return `$${val}B`;
@@ -105,7 +223,14 @@
 
   function netWorthUsdB(person) {
     const nw = person?.netWorth;
-    if (nw && typeof nw === 'object' && nw.value != null) return Number(nw.value);
+    if (nw && typeof nw === 'object' && nw.value != null) {
+      const value = Number(nw.value);
+      if (!Number.isFinite(value)) return 0;
+      const unit = String(nw.unit || 'B').toUpperCase();
+      if (unit === 'M') return value / 1000;
+      if (unit === 'K') return value / 1_000_000;
+      return value;
+    }
     return 0;
   }
 
@@ -159,6 +284,17 @@
     if (pct >= 50) return 'Major bloc control';
     if (pct >= 25) return 'Strategic stake potential';
     return 'Influence tier';
+  }
+
+  function buyingPowerCatalogFor(person) {
+    if (person?.buyingPowerTargets?.length) return person.buyingPowerTargets;
+    return buyingPowerTargets;
+  }
+
+  function formatBuyingPowerPct(pct) {
+    if (pct >= 10) return pct.toFixed(0);
+    if (pct >= 1) return pct.toFixed(1);
+    return pct.toFixed(2);
   }
 
   function topBuyingPowerTargets(nw, targets, limit = 5) {
@@ -233,7 +369,7 @@
       return;
     }
 
-    const top = topBuyingPowerTargets(nw, buyingPowerTargets);
+    const top = topBuyingPowerTargets(nw, buyingPowerCatalogFor(person));
     list.innerHTML = top
       .map(
         (t, i) => `
@@ -241,8 +377,8 @@
         <span class="forbes-buying-power-rank">${i + 1}</span>
         <span class="forbes-buying-power-body">
           <span class="forbes-buying-power-label">${t.emoji || '🎯'} ${escapeHtml(t.label)}</span>
-          <span class="forbes-buying-power-meta">${escapeHtml(t.type)} · $${t.costUsdB}B target</span>
-          <span class="forbes-buying-power-verdict${t.pct >= 100 ? ' is-full' : ''}">${t.pct.toFixed(0)}% · ${escapeHtml(buyingPowerVerdict(t.pct))}</span>
+          <span class="forbes-buying-power-meta">${escapeHtml(t.type)} · ${t.costUsdB < 0.001 ? `$${(t.costUsdB * 1000).toFixed(1)}M` : `$${t.costUsdB}B`} target</span>
+          <span class="forbes-buying-power-verdict${t.pct >= 100 ? ' is-full' : ''}">${formatBuyingPowerPct(t.pct)}% · ${escapeHtml(buyingPowerVerdict(t.pct))}</span>
         </span>
       </li>`,
       )
@@ -250,10 +386,20 @@
   }
 
   function renderWealthInsights(person) {
-    renderWorldMap(person);
-    renderPhysiquePanel(person);
-    renderSnowflakeChart(person);
     renderBuyingPowerList(person);
+    renderPhysiquePanel(person);
+    const mapEl = $('#forbes-world-map');
+    const snowEl = $('#forbes-snowflake-chart');
+    if (mapEl) {
+      delete mapEl.dataset.lazyMounted;
+      mapEl.innerHTML = '<p class="forbes-map-empty forbes-lazy-hint">Loading map…</p>';
+      observeLazyMount(mapEl, () => renderWorldMap(person));
+    }
+    if (snowEl) {
+      delete snowEl.dataset.lazyMounted;
+      snowEl.innerHTML = '<div class="forbes-lazy-skeleton forbes-lazy-skeleton--chart" aria-hidden="true"></div>';
+      observeLazyMount(snowEl, () => renderSnowflakeChart(person));
+    }
   }
 
   function normalizeEntityKey(raw) {
@@ -335,6 +481,9 @@
     });
     (person.wealthBreakdown || []).forEach((row) => addFromKey(row.entity, row.entity));
     (person.companies || []).forEach((name) => addFromKey(name, name));
+    (person.ventureMap || []).forEach((point) => {
+      add(point.lng, point.lat, point.label || point.name, { kind: point.kind || 'venture', key: point.id || point.name });
+    });
 
     const home = entityLocations.countries?.[person.country];
     if (home) {
@@ -344,12 +493,24 @@
     return points;
   }
 
+  function buildStockistMapPoints(person) {
+    const points = (person.stockistMap || person.stockists?.mapPoints || [])
+      .filter((s) => s.lat != null && s.lng != null)
+      .map((s) => ({
+        name: `${s.name}${s.city ? ` · ${s.city}` : ''}`,
+        value: [s.lng, s.lat],
+        kind: 'stockist',
+        region: s.region || '',
+      }));
+    return points;
+  }
+
   function buildRiskMapPoints(person) {
     const nw = netWorthUsdB(person);
-    return topBuyingPowerTargets(nw, buyingPowerTargets)
+    return topBuyingPowerTargets(nw, buyingPowerCatalogFor(person))
       .filter((t) => t.lat != null && t.lng != null)
       .map((t) => ({
-        name: `${t.emoji || '🎯'} ${t.label} · ${t.pct.toFixed(0)}%`,
+        name: `${t.emoji || '🎯'} ${t.label} · ${formatBuyingPowerPct(t.pct)}%`,
         value: [t.lng, t.lat, t.pct],
         pct: t.pct,
         kind: 'risk',
@@ -393,6 +554,7 @@
     }
 
     const ventures = buildVentureMapPoints(person);
+    const stockists = buildStockistMapPoints(person);
     const risks = buildRiskMapPoints(person);
 
     const ventureCount = ventures.filter((p) => p.kind === 'venture').length;
@@ -402,6 +564,7 @@
       legendEl.innerHTML = `
         <span class="forbes-map-legend-item"><i class="forbes-map-dot is-home"></i> Residence</span>
         <span class="forbes-map-legend-item"><i class="forbes-map-dot is-venture"></i> Ventures (${ventureCount})</span>
+        ${stockists.length ? `<span class="forbes-map-legend-item"><i class="forbes-map-dot is-stockist"></i> Stockists (${stockists.length})</span>` : ''}
         <span class="forbes-map-legend-item"><i class="forbes-map-dot is-risk"></i> RISK targets (top 5)</span>`;
     }
 
@@ -437,6 +600,15 @@
           data: ventures.filter((p) => p.kind === 'venture'),
           symbolSize: 11,
           itemStyle: { color: '#2563eb', shadowBlur: 6, shadowColor: 'rgba(37,99,235,0.35)' },
+          z: 3,
+        },
+        {
+          name: 'Stockists',
+          type: 'scatter',
+          coordinateSystem: 'geo',
+          data: stockists,
+          symbolSize: 7,
+          itemStyle: { color: '#7c3aed', shadowBlur: 4, shadowColor: 'rgba(124,58,237,0.35)' },
           z: 3,
         },
         {
@@ -1055,15 +1227,24 @@
         .sort((a, b) => a.year - b.year);
     }
 
-    return expanded.map((point) => ({
-      year: point.year,
-      yearLabel: String(point.year),
-      netWorthB: point.netWorthB,
-      interpolated: Boolean(point.interpolated),
-      anchor: Boolean(point.anchor),
-      milestones: byYear.get(point.year) || [],
-      context: worldContextForYear(person, point.year),
-    }));
+    const expandedByYear = new Map(expanded.map((point) => [point.year, point]));
+    const allYears = new Set(expanded.map((point) => point.year));
+    for (const year of byYear.keys()) allYears.add(year);
+
+    return [...allYears]
+      .sort((a, b) => a - b)
+      .map((year) => {
+        const point = expandedByYear.get(year);
+        return {
+          year,
+          yearLabel: String(year),
+          netWorthB: point?.netWorthB ?? null,
+          interpolated: Boolean(point?.interpolated),
+          anchor: Boolean(point?.anchor),
+          milestones: byYear.get(year) || [],
+          context: worldContextForYear(person, year),
+        };
+      });
   }
 
   function renderAncestryChip(ev) {
@@ -1086,6 +1267,12 @@
     return html;
   }
 
+  function renderMilestoneImage(ev) {
+    if (!ev.image) return '';
+    const alt = ev.imageAlt || ev.title || '';
+    return `<figure class="forbes-journey-image"><img src="${escapeHtml(ev.image)}" alt="${escapeHtml(alt)}" loading="lazy" /></figure>`;
+  }
+
   function renderMilestoneBlock(ev) {
     const type = ev.type ? `<span class="forbes-event-type">${escapeHtml(ev.type)}</span>` : '';
     const val = ev.valuationUsdB != null ? `<p class="forbes-journey-val">Valuation ${formatUsdB(ev.valuationUsdB)}</p>` : '';
@@ -1094,12 +1281,412 @@
       <div class="forbes-journey-milestone">
         ${type}
         <strong class="forbes-journey-title">${escapeHtml(ev.title)}</strong>
+        ${renderMilestoneImage(ev)}
         ${ev.entityId ? `<p class="forbes-journey-entity">${escapeHtml(ev.entityId)}</p>` : ''}
         ${ev.description ? `<p class="forbes-journey-desc">${escapeHtml(ev.description)}</p>` : ''}
         ${ev.impact ? `<p class="forbes-journey-impact"><span>Impact</span> ${escapeHtml(ev.impact)}</p>` : ''}
         ${val}
         ${src}
       </div>`;
+  }
+
+  function renderProfileGallery(person) {
+    const items = person.gallery;
+    if (!items?.length) return '';
+    return `
+      <section class="forbes-art-gallery" aria-label="Major works">
+        <h4 class="forbes-journey-heading">${escapeHtml(person.galleryTitle || 'Major works')}</h4>
+        <div class="forbes-art-gallery-grid">
+          ${items
+            .map(
+              (item) => `
+            <figure class="forbes-art-card">
+              <img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt || item.caption || '')}" loading="lazy" />
+              ${
+                item.caption
+                  ? `<figcaption>${item.year ? `<span class="forbes-art-year">${escapeHtml(item.year)}</span> · ` : ''}${escapeHtml(item.caption)}</figcaption>`
+                  : ''
+              }
+            </figure>`,
+            )
+            .join('')}
+        </div>
+      </section>`;
+  }
+
+  function renderThqCreditsSection(credits, title) {
+    if (!credits?.length) return '';
+    return `
+      <section class="forbes-showcase-section forbes-thq-section" aria-label="THQ game credits">
+        <h4 class="forbes-journey-heading">${escapeHtml(title || 'THQ — QA credits')}</h4>
+        <ul class="forbes-thq-grid">
+          ${credits
+            .map(
+              (game) => `
+            <li class="forbes-thq-card">
+              <span class="forbes-thq-year">${escapeHtml(String(game.year || ''))}</span>
+              <strong class="forbes-thq-title">${escapeHtml(game.title)}</strong>
+              ${game.role ? `<span class="forbes-thq-role">${escapeHtml(game.role)}</span>` : ''}
+            </li>`,
+            )
+            .join('')}
+        </ul>
+      </section>`;
+  }
+
+  function renderVideoSection(videos, title) {
+    if (!videos?.length) return '';
+    return `
+      <section class="forbes-showcase-section forbes-video-section" aria-label="Film and video">
+        <h4 class="forbes-journey-heading">${escapeHtml(title || 'Films & video')}</h4>
+        <div class="forbes-video-grid">
+          ${videos
+            .map(
+              (video) => `
+            <a class="forbes-video-card" href="${escapeHtml(video.url)}" target="_blank" rel="noopener">
+              <span class="forbes-video-play" aria-hidden="true">▶</span>
+              <span class="forbes-video-body">
+                ${video.year ? `<span class="forbes-video-year">${escapeHtml(String(video.year))}</span>` : ''}
+                <strong class="forbes-video-title">${escapeHtml(video.title)}</strong>
+                ${video.source ? `<span class="forbes-video-source">${escapeHtml(video.source)}</span>` : ''}
+                ${video.description ? `<span class="forbes-video-desc">${escapeHtml(video.description)}</span>` : ''}
+              </span>
+            </a>`,
+            )
+            .join('')}
+        </div>
+      </section>`;
+  }
+
+  function renderYoutubeChannel(channel) {
+    if (!channel?.url) return '';
+    return `
+      <section class="forbes-showcase-section forbes-youtube-section" aria-label="YouTube channel">
+        <h4 class="forbes-journey-heading">${escapeHtml(channel.title || 'YouTube')}</h4>
+        <a class="forbes-youtube-card" href="${escapeHtml(channel.url)}" target="_blank" rel="noopener">
+          <span class="forbes-youtube-icon" aria-hidden="true">▶</span>
+          <span class="forbes-youtube-body">
+            <strong>${escapeHtml(channel.label || 'Watch on YouTube')}</strong>
+            ${channel.description ? `<span>${escapeHtml(channel.description)}</span>` : ''}
+          </span>
+        </a>
+      </section>`;
+  }
+
+  function renderArtThumbnailTrack(items, label) {
+    if (!items?.length) return '';
+    return `
+      <div class="forbes-art-thumb-carousel" aria-label="${escapeHtml(label || 'Works')}">
+        ${label ? `<p class="forbes-art-thumb-label">${escapeHtml(label)}</p>` : ''}
+        <div class="forbes-art-thumb-track" role="list">
+          ${items
+            .map(
+              (item) => `
+            <a class="forbes-art-thumb-card" role="listitem" href="${escapeHtml(item.url || '#')}" target="_blank" rel="noopener"${item.url ? '' : ' aria-disabled="true" tabindex="-1"'}>
+              ${
+                item.src
+                  ? `<img class="forbes-art-thumb-img" src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt || item.title || 'Artwork')}" loading="lazy" />`
+                  : `<span class="forbes-art-thumb-img forbes-art-thumb-img--placeholder" aria-hidden="true"></span>`
+              }
+              <span class="forbes-art-thumb-title">${escapeHtml(item.title || 'Untitled')}</span>
+              ${item.year ? `<span class="forbes-art-thumb-year">${escapeHtml(String(item.year))}</span>` : ''}
+            </a>`,
+            )
+            .join('')}
+        </div>
+      </div>`;
+  }
+
+  function renderPlaceholderPanel(panel) {
+    if (!panel) return '';
+    const link = panel.link
+      ? `<a class="forbes-placeholder-link" href="${escapeHtml(panel.link)}" target="_blank" rel="noopener">${escapeHtml(panel.linkLabel || 'View portfolio →')}</a>`
+      : '';
+    const thumbs = renderArtThumbnailTrack(panel.works, panel.worksLabel);
+    return `
+      <section class="forbes-showcase-section forbes-placeholder-section" aria-label="${escapeHtml(panel.title || 'Portfolio')}">
+        <h4 class="forbes-journey-heading">${escapeHtml(panel.title || 'Portfolio')}</h4>
+        <div class="forbes-placeholder-panel">
+          <p class="forbes-placeholder-copy">${escapeHtml(panel.description || 'Portfolio coming soon.')}</p>
+          ${thumbs}
+          ${link}
+        </div>
+      </section>`;
+  }
+
+  function renderFormulaDeck(formulas, title) {
+    if (!formulas?.length) return '';
+    const left = formulas.filter((f) => f.column === 'left');
+    const right = formulas.filter((f) => f.column !== 'left');
+
+    const renderCol = (items) =>
+      items
+        .map(
+          (item) => `
+        <article class="forbes-formula-card is-placeholder">
+          <h5 class="forbes-formula-name">${escapeHtml(item.name)}</h5>
+          <p class="forbes-formula-note">${escapeHtml(item.note || 'Proprietary formula — placeholder')}</p>
+        </article>`,
+        )
+        .join('');
+
+    return `
+      <section class="forbes-showcase-section forbes-formula-section" aria-label="Proprietary recipes and formulas">
+        <h4 class="forbes-journey-heading">${escapeHtml(title || 'Proprietary recipes & formulas')}</h4>
+        <div class="forbes-formula-deck">
+          <div class="forbes-formula-col forbes-formula-col--left">${renderCol(left)}</div>
+          <div class="forbes-formula-col forbes-formula-col--right">${renderCol(right)}</div>
+        </div>
+      </section>`;
+  }
+
+  function renderFilmCarousel(films, label) {
+    if (!films?.length) return '';
+    return `
+      <div class="forbes-film-carousel" aria-label="${escapeHtml(label || 'Movies and shows')}">
+        ${label ? `<p class="forbes-film-carousel-label">${escapeHtml(label)}</p>` : ''}
+        <div class="forbes-film-track" role="list">
+          ${films
+            .map(
+              (film) => `
+            <a class="forbes-film-card" role="listitem" href="${escapeHtml(film.url || '#')}" target="_blank" rel="noopener"${film.url ? '' : ' aria-disabled="true" tabindex="-1"'}>
+              ${
+                film.poster
+                  ? `<img class="forbes-film-poster" src="${escapeHtml(film.poster)}" alt="${escapeHtml(film.title)} poster" loading="lazy" />`
+                  : `<span class="forbes-film-poster forbes-film-poster--placeholder" aria-hidden="true"></span>`
+              }
+              <span class="forbes-film-title">${escapeHtml(film.title)}</span>
+              <span class="forbes-film-year">${escapeHtml(String(film.year || ''))}</span>
+            </a>`,
+            )
+            .join('')}
+        </div>
+      </div>`;
+  }
+
+  function renderBuenaBulldogsSection(buena) {
+    if (!buena) return '';
+    const photo = buena.classPhoto;
+    const photoHtml = photo?.src
+      ? `
+        <figure class="forbes-buena-photo">
+          <img src="${escapeHtml(photo.src)}" alt="${escapeHtml(photo.alt || 'Buena High School class photo')}" loading="lazy" />
+          ${
+            photo.caption
+              ? `<figcaption>${photo.year ? `<span class="forbes-art-year">${escapeHtml(String(photo.year))}</span> · ` : ''}${escapeHtml(photo.caption)}</figcaption>`
+              : ''
+          }
+        </figure>`
+      : '';
+    const classmates = (buena.classmates || [])
+      .map(
+        (c) => `
+        <li class="forbes-buena-classmate">
+          <div class="forbes-buena-classmate-head">
+            <strong>${escapeHtml(c.name)}</strong>
+            ${c.years ? `<span class="forbes-buena-years">${escapeHtml(c.years)}</span>` : ''}
+            ${c.note ? `<span class="forbes-buena-note">${escapeHtml(c.note)}</span>` : ''}
+          </div>
+          ${renderFilmCarousel(c.films, c.filmsLabel || 'Movies & shows')}
+        </li>`,
+      )
+      .join('');
+
+    return `
+      <section class="forbes-showcase-section forbes-buena-section" aria-label="Buena High School Bulldogs">
+        <h4 class="forbes-journey-heading">${escapeHtml(buena.title || 'Buena High School Bulldogs')}</h4>
+        ${buena.description ? `<p class="forbes-buena-lead">${escapeHtml(buena.description)}</p>` : ''}
+        ${photoHtml}
+        ${classmates ? `<ul class="forbes-buena-classmates">${classmates}</ul>` : ''}
+      </section>`;
+  }
+
+  function renderLawsuitsSection(lawsuits) {
+    if (!lawsuits?.items?.length) return '';
+    return `
+      <section class="forbes-showcase-section forbes-lawsuits-section" aria-label="${escapeHtml(lawsuits.title || 'Litigation')}">
+        <h4 class="forbes-journey-heading">${escapeHtml(lawsuits.title || 'Litigation')}</h4>
+        ${lawsuits.description ? `<p class="forbes-lawsuits-lead">${escapeHtml(lawsuits.description)}</p>` : ''}
+        <ul class="forbes-catalog-grid">
+          ${lawsuits.items
+            .map((item) => {
+              const year = item.year || '';
+              const type = item.type || 'Lawsuit';
+              const meta = item.venue || item.court || '';
+              const note = item.note || item.description || '';
+              const related =
+                item.relatedRank && item.relatedName
+                  ? `<div class="forbes-catalog-related-wrap"><span class="forbes-catalog-related">${escapeHtml(item.relatedNote || 'Related profile')}: ${renderProfileRankLink(item.relatedRank, item.relatedName)}</span></div>`
+                  : '';
+              const body = `
+              ${year ? `<span class="forbes-catalog-year">${escapeHtml(String(year))}</span>` : ''}
+              <span class="forbes-catalog-type">${escapeHtml(type)}</span>
+              <strong class="forbes-catalog-title">${escapeHtml(item.title)}</strong>
+              ${meta ? `<span class="forbes-catalog-meta">${escapeHtml(meta)}</span>` : ''}
+              ${note ? `<span class="forbes-catalog-note">${escapeHtml(note)}</span>` : ''}`;
+              return item.url
+                ? `<li class="forbes-catalog-card"><a class="forbes-catalog-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${body}</a>${related}</li>`
+                : `<li class="forbes-catalog-card">${body}${related}</li>`;
+            })
+            .join('')}
+        </ul>
+      </section>`;
+  }
+
+  function renderRelatedProfilesSection(block) {
+    if (!block?.items?.length) return '';
+    return `
+      <section class="forbes-showcase-section forbes-related-profiles-section" aria-label="${escapeHtml(block.title || 'Related profiles')}">
+        <h4 class="forbes-journey-heading">${escapeHtml(block.title || 'Related profiles')}</h4>
+        ${block.description ? `<p class="forbes-related-lead">${escapeHtml(block.description)}</p>` : ''}
+        <ul class="forbes-catalog-grid">
+          ${block.items
+            .map((item) => {
+              const year = item.year || '';
+              const type = item.type || 'Profile';
+              const note = item.note || item.description || '';
+              const profileLink = item.rank && item.name ? renderProfileRankLink(item.rank, item.name, item.profileLabel || item.name) : '';
+              const inner = `
+              ${year ? `<span class="forbes-catalog-year">${escapeHtml(String(year))}</span>` : ''}
+              ${type ? `<span class="forbes-catalog-type">${escapeHtml(type)}</span>` : ''}
+              <strong class="forbes-catalog-title">${escapeHtml(item.title)}</strong>
+              ${profileLink ? `<span class="forbes-catalog-meta">${profileLink}</span>` : ''}
+              ${note ? `<span class="forbes-catalog-note">${escapeHtml(note)}</span>` : ''}`;
+              return item.url
+                ? `<li class="forbes-catalog-card"><a class="forbes-catalog-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${inner}</a></li>`
+                : `<li class="forbes-catalog-card">${inner}</li>`;
+            })
+            .join('')}
+        </ul>
+      </section>`;
+  }
+
+  function renderCatalogSection(items, title, options = {}) {
+    if (!items?.length) return '';
+    const aria = options.ariaLabel || title;
+    return `
+      <section class="forbes-showcase-section forbes-catalog-section" aria-label="${escapeHtml(aria)}">
+        <h4 class="forbes-journey-heading">${escapeHtml(title)}</h4>
+        <ul class="forbes-catalog-grid">
+          ${items
+            .map((item) => {
+              const year = item.year || item.date || '';
+              const type = item.type || item.category || '';
+              const meta = item.venue || item.publisher || item.source || item.dates || '';
+              const note = item.note || item.description || item.medium || '';
+              const inner = `
+              ${year ? `<span class="forbes-catalog-year">${escapeHtml(String(year))}</span>` : ''}
+              ${type ? `<span class="forbes-catalog-type">${escapeHtml(type)}</span>` : ''}
+              <strong class="forbes-catalog-title">${escapeHtml(item.title)}</strong>
+              ${meta ? `<span class="forbes-catalog-meta">${escapeHtml(meta)}</span>` : ''}
+              ${note ? `<span class="forbes-catalog-note">${escapeHtml(note)}</span>` : ''}`;
+              return item.url
+                ? `<li class="forbes-catalog-card"><a class="forbes-catalog-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${inner}</a></li>`
+                : `<li class="forbes-catalog-card">${inner}</li>`;
+            })
+            .join('')}
+        </ul>
+      </section>`;
+  }
+
+  function renderFilmCollabsSection(filmCollabs) {
+    if (!filmCollabs) return '';
+    const carousel = renderFilmCarousel(filmCollabs.films, filmCollabs.filmsLabel || 'Films');
+    if (!carousel && !filmCollabs.description) return '';
+    return `
+      <section class="forbes-showcase-section forbes-film-collabs-section" aria-label="${escapeHtml(filmCollabs.title || 'Film collaborations')}">
+        <h4 class="forbes-journey-heading">${escapeHtml(filmCollabs.title || 'Film collaborations')}</h4>
+        ${filmCollabs.description ? `<p class="forbes-film-collabs-lead">${escapeHtml(filmCollabs.description)}</p>` : ''}
+        ${carousel}
+      </section>`;
+  }
+
+  function buildProfileShowcaseSections(person) {
+    const showcase = person.profileShowcase;
+    const sections = [];
+    const add = (id, render) => sections.push({ id, render });
+
+    if (showcase?.buenaBulldogs) add('buena', () => renderBuenaBulldogsSection(showcase.buenaBulldogs));
+    add('gallery', () => renderProfileGallery(person));
+    if (!showcase) return sections;
+
+    if (showcase.filmCollabs) add('films', () => renderFilmCollabsSection(showcase.filmCollabs));
+    if (showcase.lawsuits?.items?.length) add('lawsuits', () => renderLawsuitsSection(showcase.lawsuits));
+    if (showcase.relatedProfiles?.items?.length) {
+      add('related-profiles', () => renderRelatedProfilesSection(showcase.relatedProfiles));
+    }
+    if (showcase.worksCatalog?.length) {
+      add('works', () =>
+        renderCatalogSection(showcase.worksCatalog, showcase.worksTitle || 'Selected works', { ariaLabel: 'Paintings and works' }),
+      );
+    }
+    if (showcase.exhibitions?.length) {
+      add('exhibitions', () =>
+        renderCatalogSection(showcase.exhibitions, showcase.exhibitionsTitle || 'Exhibitions', { ariaLabel: 'Exhibitions' }),
+      );
+    }
+    if (showcase.videos?.length) add('videos', () => renderVideoSection(showcase.videos, showcase.videoTitle));
+    if (showcase.news?.length) {
+      add('news', () =>
+        renderCatalogSection(showcase.news, showcase.newsTitle || 'News & awards', { ariaLabel: 'News and awards' }),
+      );
+    }
+    if (showcase.publications?.length) {
+      add('publications', () =>
+        renderCatalogSection(showcase.publications, showcase.publicationsTitle || 'Publications & press', {
+          ariaLabel: 'Publications and press',
+        }),
+      );
+    }
+    if (showcase.thqCredits?.length) add('thq', () => renderThqCreditsSection(showcase.thqCredits, showcase.thqTitle));
+    if (showcase.youtubeChannel) add('youtube', () => renderYoutubeChannel(showcase.youtubeChannel));
+    if (showcase.personalArt) add('personal-art', () => renderPlaceholderPanel(showcase.personalArt));
+    if (showcase.ownersPortfolio) add('owners-portfolio', () => renderPlaceholderPanel(showcase.ownersPortfolio));
+    if (showcase.formulas?.length) add('formulas', () => renderFormulaDeck(showcase.formulas, showcase.formulaTitle));
+    return sections;
+  }
+
+  function mountLazyStoryTimeline(person, container) {
+    if (!container) return;
+    const showcaseSections = buildProfileShowcaseSections(person);
+    const builders = [
+      ...showcaseSections,
+      { id: 'wealth-journey', render: () => renderWealthJourney(person) },
+    ];
+    const EAGER_COUNT = 2;
+    const eagerHtml = builders
+      .slice(0, EAGER_COUNT)
+      .map((b) => b.render())
+      .filter(Boolean)
+      .join('');
+    const lazyHtml = builders
+      .slice(EAGER_COUNT)
+      .map(
+        (b) => `
+      <div class="forbes-lazy-section" data-lazy-section="${escapeHtml(b.id)}">
+        <div class="forbes-lazy-skeleton" aria-hidden="true"></div>
+      </div>`,
+      )
+      .join('');
+    container.innerHTML = `${eagerHtml}${lazyHtml}`;
+
+    const sectionMap = Object.fromEntries(builders.map((b) => [b.id, b.render]));
+    container.querySelectorAll('[data-lazy-section]').forEach((el) => {
+      observeLazyMount(el, () => {
+        const id = el.dataset.lazySection;
+        const html = sectionMap[id]?.() || '';
+        el.innerHTML = html;
+        el.dataset.lazyLoaded = '1';
+        el.classList.add('is-loaded');
+      });
+    });
+  }
+
+  function renderProfileShowcase(person) {
+    return buildProfileShowcaseSections(person)
+      .map((s) => s.render())
+      .filter(Boolean)
+      .join('');
   }
 
   function renderWealthJourney(person) {
@@ -1178,6 +1765,7 @@
             <div class="forbes-journey-body">
               ${type}
               <strong class="forbes-journey-title">${escapeHtml(ev.title)}</strong>
+              ${renderMilestoneImage(ev)}
               ${ev.entityId ? `<p class="forbes-journey-entity">${escapeHtml(ev.entityId)}</p>` : ''}
               ${ev.description ? `<p class="forbes-journey-desc">${escapeHtml(ev.description)}</p>` : ''}
               ${ev.impact ? `<p class="forbes-journey-impact"><span>Impact</span> ${escapeHtml(ev.impact)}</p>` : ''}
@@ -1579,7 +2167,7 @@
 
     if (idx === 1) {
       requestAnimationFrame(() => {
-        renderBreakdownChart(person);
+        renderPortfolioTab(person);
         breakdownChart?.resize();
       });
     }
@@ -1622,6 +2210,12 @@
     const links = [
       ['Forbes', person.forbesProfile],
       ['Wikipedia', person.wikipediaLink],
+      ['Ritual ROI', person.ritualRoiLink],
+      ...(Array.isArray(person.additionalLinks)
+        ? person.additionalLinks
+            .filter((item) => item && item.url)
+            .map((item) => [item.label || 'Link', item.url])
+        : []),
     ].filter(([, url]) => url);
 
     if (!links.length) {
@@ -1660,6 +2254,21 @@
     const forbesUrl = person.forbesProfile;
     const companies = (person.companies || []).slice(0, 6);
     const milestones = (person.timeline || []).slice(0, 4);
+    const extraInfobox = (person.wikiInfoboxExtra || [])
+      .filter((row) => row && row.label && row.value)
+      .map((row) => {
+        const linksHtml = (row.links || [])
+          .filter((l) => l?.url)
+          .map(
+            (l) =>
+              `<a class="forbes-wiki-inline-link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener">${escapeHtml(l.label)}</a>`,
+          )
+          .join('');
+        return `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}${
+          linksHtml ? `<div class="forbes-wiki-infobox-links">${linksHtml}</div>` : ''
+        }</dd></div>`;
+      })
+      .join('');
     const birthYear = estimateBirthYear(person);
 
     aside.innerHTML = `
@@ -1676,6 +2285,7 @@
           <div><dt>Sector</dt><dd>${escapeHtml(person.sector || '—')}</dd></div>
           <div><dt>Source of wealth</dt><dd>${escapeHtml(person.sourceOfWealth || '—')}</dd></div>
           <div><dt>First fortune</dt><dd>${escapeHtml(person.firstFortuneDecade || '—')}</dd></div>
+          ${extraInfobox}
         </dl>
         ${
           companies.length
@@ -1719,11 +2329,15 @@
   }
 
   function renderStoryTab(person) {
-    renderStoryWealthChart(person);
-    const timelineEl = $('#forbes-story-timeline');
-    if (timelineEl) {
-      timelineEl.innerHTML = renderWealthJourney(person);
+    const chartBlock = $('.forbes-story-chart-block');
+    if (chartBlock) {
+      delete chartBlock.dataset.lazyMounted;
+      observeLazyMount(chartBlock, () => renderStoryWealthChart(person));
+    } else {
+      renderStoryWealthChart(person);
     }
+    const timelineEl = $('#forbes-story-timeline');
+    if (timelineEl) mountLazyStoryTimeline(person, timelineEl);
     updateGrokipediaBtn(person);
   }
 
@@ -1765,12 +2379,18 @@
     if (selectedKey !== lastRenderedKey) {
       detailTab = 'story';
       lastRenderedKey = selectedKey;
+      resetLazyMounts(container);
+      ['#forbes-world-map', '#forbes-snowflake-chart', '.forbes-story-chart-block'].forEach((sel) => {
+        const el = $(sel, container);
+        if (el) delete el.dataset.lazyMounted;
+      });
     }
 
     disposeBreakdownChart();
     disposeHistoryChart();
     disposeStoryWealthChart();
     disposeWorldMapChart();
+    disposeSnowflakeChart();
 
     if (emptyEl) emptyEl.hidden = true;
     if (modal) modal.hidden = false;
@@ -1784,6 +2404,8 @@
     const worthEl = $('#forbes-detail-worth');
     if (worthEl) worthEl.innerHTML = formatNetWorth(person.netWorth);
 
+    renderWorthClarifier(person);
+
     const summaryEl = $('#forbes-detail-summary');
     if (summaryEl) summaryEl.textContent = person.summary || '';
 
@@ -1793,11 +2415,14 @@
     renderGrokipediaBar(person);
     updateTabLabels(person);
     renderStoryTab(person);
-    renderPortfolioTab(person);
-    renderEntitiesTab(person);
-    renderHistoryTab(person);
+
+    const activeIdx = tabIndex(detailTab);
+    if (activeIdx === 1) renderPortfolioTab(person);
+    else if (activeIdx === 2) renderEntitiesTab(person);
+    else if (activeIdx === 3) renderHistoryTab(person);
+
     updateRankNavButtons();
-    showTab(tabIndex(detailTab));
+    showTab(activeIdx);
   }
 
   function detailShellHtml() {
@@ -1826,6 +2451,7 @@
         <div class="forbes-worth-row">
           <div class="forbes-worth-primary">
             <p id="forbes-detail-worth" class="forbes-detail-worth"></p>
+            <div id="forbes-detail-worth-clarifier" class="forbes-detail-worth-clarifier" hidden></div>
             <p id="forbes-detail-summary" class="forbes-detail-summary"></p>
             <section class="forbes-worth-map-panel" aria-label="Global venture footprint and RISK targets">
               <h4 class="forbes-worth-map-title">Global footprint · RISK map</h4>
@@ -1931,15 +2557,63 @@
     });
   }
 
+  function isListDrawerMobile() {
+    return window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  function ensureForbesDrawerPortal() {
+    const backdrop = $('#forbes-drawer-backdrop');
+    const closeBtn = $('#forbes-drawer-backdrop-close');
+    if (backdrop && backdrop.parentElement !== document.body) {
+      document.body.appendChild(backdrop);
+    }
+    if (closeBtn && closeBtn.parentElement !== document.body) {
+      document.body.appendChild(closeBtn);
+    }
+  }
+
+  function bindForbesDrawerControl(el, onActivate) {
+    if (!el || el.dataset.drawerBound === 'true') return;
+    el.dataset.drawerBound = 'true';
+    let lastTouch = 0;
+    const run = (e) => {
+      if (e.type === 'click' && Date.now() - lastTouch < 500) return;
+      if (e.type === 'touchend') lastTouch = Date.now();
+      e.preventDefault();
+      e.stopPropagation();
+      onActivate();
+    };
+    el.addEventListener('click', run);
+    el.addEventListener('touchend', run, { passive: false });
+  }
+
   function setListDrawer(open) {
     listDrawerOpen = open;
     const drawer = $('#forbes-list-drawer');
     const picker = $('#forbes-rank-picker');
+    const backdrop = $('#forbes-drawer-backdrop');
+    const backdropClose = $('#forbes-drawer-backdrop-close');
+    const mobile = isListDrawerMobile();
+    const showBackdrop = open && mobile;
+    ensureForbesDrawerPortal();
     if (!drawer) return;
+
+    document.body.classList.toggle('forbes-drawer-mobile', showBackdrop);
+    document.documentElement.classList.toggle('forbes-drawer-scroll-lock', showBackdrop);
 
     drawer.classList.toggle('is-open', open);
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     if (picker) picker.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (backdrop) {
+      backdrop.hidden = !showBackdrop;
+      backdrop.classList.toggle('is-active', showBackdrop);
+      backdrop.setAttribute('aria-hidden', String(!showBackdrop));
+    }
+    if (backdropClose) {
+      backdropClose.hidden = !showBackdrop;
+      backdropClose.classList.toggle('is-active', showBackdrop);
+      backdropClose.setAttribute('aria-hidden', String(!showBackdrop));
+    }
 
     if (open) {
       requestAnimationFrame(() => {
@@ -1955,17 +2629,26 @@
     }
   }
 
+  function closeForbesDrawerFromBackdrop(e) {
+    if (e?.cancelable) e.preventDefault();
+    setListDrawer(false);
+    $('#forbes-rank-picker')?.focus();
+  }
+
   function bindListDrawer() {
     const drawer = $('#forbes-list-drawer');
-    const detailEl = $('#forbes-detail');
     if (!drawer || drawer.dataset.bound === 'true') return;
     drawer.dataset.bound = 'true';
 
-    $('#forbes-drawer-close')?.addEventListener('click', () => setListDrawer(false));
+    ensureForbesDrawerPortal();
 
-    detailEl?.addEventListener('click', (e) => {
-      if (e.target.closest('#forbes-rank-next')) return;
-      if (e.target.closest('#forbes-rank-picker')) setListDrawer(true);
+    bindForbesDrawerControl($('#forbes-drawer-close'), () => setListDrawer(false));
+    bindForbesDrawerControl($('#forbes-drawer-backdrop-close'), closeForbesDrawerFromBackdrop);
+    bindForbesDrawerControl($('#forbes-rank-picker'), () => setListDrawer(!listDrawerOpen));
+
+    const backdrop = $('#forbes-drawer-backdrop');
+    bindForbesDrawerControl(backdrop, (e) => {
+      if (e.target === backdrop) closeForbesDrawerFromBackdrop(e);
     });
 
     if (document.body.dataset.forbesRankNavBound !== '1') {
@@ -1983,6 +2666,27 @@
         setListDrawer(false);
         $('#forbes-rank-picker')?.focus();
       }
+    });
+
+    window.addEventListener('resize', () => {
+      if (!listDrawerOpen) return;
+      const mobile = isListDrawerMobile();
+      const showBackdrop = mobile;
+      document.body.classList.toggle('forbes-drawer-mobile', showBackdrop);
+      document.documentElement.classList.toggle('forbes-drawer-scroll-lock', showBackdrop);
+      const backdropEl = $('#forbes-drawer-backdrop');
+      const backdropClose = $('#forbes-drawer-backdrop-close');
+      if (backdropEl) {
+        backdropEl.hidden = !showBackdrop;
+        backdropEl.classList.toggle('is-active', showBackdrop);
+        backdropEl.setAttribute('aria-hidden', String(!showBackdrop));
+      }
+      if (backdropClose) {
+        backdropClose.hidden = !showBackdrop;
+        backdropClose.classList.toggle('is-active', showBackdrop);
+        backdropClose.setAttribute('aria-hidden', String(!showBackdrop));
+      }
+      if (mobile) ensureForbesDrawerPortal();
     });
   }
 
@@ -2095,6 +2799,19 @@
     }
   }
 
+  async function loadAuxiliaryData() {
+    await Promise.all([
+      loadEntityCatalog(),
+      loadHistoricalNetWorth(),
+      load13fHoldings(),
+      loadBuyingPowerCatalog(),
+      loadWorldContext(),
+      loadProfileLifeEvents(),
+      loadProfilePhysique(),
+      loadEntityLocations(),
+    ]);
+  }
+
   async function initForbesWealth() {
     const root = $('#forbes-wealth');
     const listEl = $('#forbes-list');
@@ -2112,16 +2829,6 @@
     });
 
     try {
-      await Promise.all([
-        loadEntityCatalog(),
-        loadHistoricalNetWorth(),
-        load13fHoldings(),
-        loadBuyingPowerCatalog(),
-        loadWorldContext(),
-        loadProfileLifeEvents(),
-        loadProfilePhysique(),
-        loadEntityLocations(),
-      ]);
       const resp = await fetch(DATA_URL);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       billionaires = await resp.json();
@@ -2136,6 +2843,9 @@
     }
 
     readSelectionFromUrl();
+    if (window.location.hash.includes('forbes')) {
+      window.fwjScrollToSection?.('forbes', { behavior: 'auto' });
+    }
     applyFilter();
     ensureDetailShell(detailEl);
     bindListDrawer();
@@ -2149,6 +2859,12 @@
     renderDetail(detailEl);
     notifyProfileSelection(findPerson(selectedKey));
 
+    void loadAuxiliaryData().then(() => {
+      renderDetail(detailEl);
+      renderList(listEl);
+      notifyProfileSelection(findPerson(selectedKey));
+    });
+
     if (searchEl) {
       searchEl.addEventListener('input', () => {
         searchQuery = searchEl.value;
@@ -2161,10 +2877,22 @@
     }
 
     window.addEventListener('hashchange', () => {
+      if (window.location.hash.includes('forbes')) {
+        window.fwjScrollToSection?.('forbes');
+      }
       readSelectionFromUrl();
       renderList(listEl);
       renderDetail(detailEl);
       notifyProfileSelection(findPerson(selectedKey));
+    });
+
+    detailEl?.addEventListener('click', (e) => {
+      const link = e.target.closest('a.forbes-profile-link');
+      if (!link || !detailEl.contains(link)) return;
+      e.preventDefault();
+      const href = link.getAttribute('href') || '';
+      if (!href.startsWith('#forbes')) return;
+      window.location.hash = href.slice(1);
     });
   }
 
